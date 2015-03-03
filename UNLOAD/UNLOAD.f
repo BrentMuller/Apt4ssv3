@@ -109,8 +109,9 @@ C.... AND OPEN NEW FILE
               CLOSE (UNIT=OUTFIL)
              ENDIF
            IF (LIST) THEN
-            OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW',
-     +            CARRIAGECONTROL='LIST')
+c            OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW',
+            open (unit=outfil,file=filnam(1:ifn),status='new')
+c     +            CARRIAGECONTROL='LIST')
            ELSE
             OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW')
            ENDIF
@@ -157,8 +158,9 @@ C.... AND OPEN NEW FILE
               CLOSE (UNIT=OUTFIL)
              ENDIF
           IF (LIST) THEN
-            OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW',
-     +            CARRIAGECONTROL='LIST')
+c            OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW',
+            open (unit=outfil,file=filnam(1:ifn),status='new')
+c     +            CARRIAGECONTROL='LIST')
           ELSE
             OPEN (UNIT=OUTFIL,FILE=FILNAM(1:IFN),STATUS='NEW')
           ENDIF
@@ -259,6 +261,7 @@ C
 C
       LOGICAL VB,SEQ
 C
+      integer uinc 
       DATA UINC/4/,QUOTE/''''/
 C
       IF (RLEN.GT.0) THEN
