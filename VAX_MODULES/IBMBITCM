@@ -1,0 +1,64 @@
+**** SOURCE FILE : M0006723.IBM   ***
+*
+C
+C PURPOSE      TO INITIALIZE THE LABELLED COMMON AREAS
+C              MODULI , BITCOM AND SYMFIL.
+C
+      BLOCK DATA BDBITC
+C
+      IMPLICIT INTEGER (A-Z)
+C
+C          5.      CLASS CODE MODULI
+C
+      COMMON/MODULI/MODULO
+C
+C          4.    BIT COMBINATION TABLE
+C
+      COMMON/BITCOM/BIT
+      DIMENSION BIT(32)
+      DIMENSION LOBIT(16),HIBIT(16)
+      EQUIVALENCE (LOBIT(1),BIT(1)),(HIBIT(1),BIT(17))
+C
+C          6.    SYMBOLIC FILE DEFINITIONS
+C
+      COMMON/SYMFIL/ BPFILE,NTFILE,GPFILE,ELFILE,LCDATA,VLFILE
+C
+C     DATA STATEMENTS
+C
+C
+C          5.      CLASS CODE MODULI
+C
+      DATA MODULO/1000/
+C
+C          4.    BIT COMBINATION TABLE
+C
+      DATA LOBIT( 1),LOBIT( 2),LOBIT( 3),LOBIT( 4),
+     1     LOBIT( 5),LOBIT( 6),LOBIT( 7),LOBIT( 8),
+     2     LOBIT( 9),LOBIT(10),LOBIT(11),LOBIT(12),
+     3     LOBIT(13),LOBIT(14),LOBIT(15),LOBIT(16)
+C    4    /Z80000000,Z40000000,Z20000000,Z10000000,
+     4     /Z80000000,1073741824,536870912,268435456,
+C    5     Z 8000000,Z 4000000,Z 2000000,Z 1000000,
+     5     134217728, 67108864, 33554432, 16777216,
+C    6     Z  800000,Z  400000,Z  200000,Z  100000,
+     6       8388608,  4194304,  2097152,  1048576,
+C    7     Z   80000,Z   40000,Z   20000,Z   10000/
+     7        524288,   262144,   131072,    65536/
+      DATA HIBIT( 1),HIBIT( 2),HIBIT( 3),HIBIT( 4),
+     1     HIBIT( 5),HIBIT( 6),HIBIT( 7),HIBIT( 8),
+     2     HIBIT( 9),HIBIT(10),HIBIT(11),HIBIT(12),
+     3     HIBIT(13),HIBIT(14),HIBIT(15),HIBIT(16)
+C    4    /Z    8000,Z    4000,Z    2000,Z    1000,
+     4    /    32768,    16384,     8192,     4096,
+C    5     Z     800,Z     400,Z     200,Z     100,
+     5          2048,     1024,      512,      256,
+C    6     Z      80,Z      40,Z      20,Z      10,
+     6           128,       64,       32,       16,
+C    7     Z       8,Z       4,Z       2,Z       1/
+     7             8,        4,        2,        1/
+C
+C          6.    SYMBOLIC FILE DEFINITIONS
+C
+      DATA           BPFILE,NTFILE,GPFILE,ELFILE,LCDATA,VLFILE/
+     1                    1,     2,     3,     4,     5,     6/
+      END

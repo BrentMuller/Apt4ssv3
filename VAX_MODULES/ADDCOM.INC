@@ -1,0 +1,11 @@
+C...  21. ADDCOM BLOCK
+C
+        DIMENSION       ADDCOM  (25)
+        COMMON /ADDCOM/ ADDCOM
+C
+        EQUIVALENCE     (ELMAX  ,ADDCOM(  1))
+        EQUIVALENCE     (CLNGTH ,ADDCOM(  2))
+        EQUIVALENCE     (IBTFLG ,ADDCOM( 23))
+        EQUIVALENCE     (JLIN   ,ADDCOM( 24))
+        EQUIVALENCE     (KDYNFL ,ADDCOM( 25))
+C

@@ -1,0 +1,18 @@
+C
+C   ***  4.  DSHARE BLOCK 4  ***
+C
+      DOUBLE PRECISION A,B,C,CENDIS,CMOVE(3),COM1,COM4,DIR(3),DP,DPE,
+     +                 DPCNT,DPI,DPL,DP1,D1,D2A,FLIPCK,FWD(3),OGLE(3),
+     +                 P1(3),P2(3),RDRN,REFPNT(3),TANGL,TES(3),TEW(3),
+     +                 UVEC(3),U2(3),V(3),VL,ZL,ZLNORM(3),ZLPNT(3),ZL1,
+     +                 PARAM(6),R(6),SAVPAR(4),SEG(9),SLOPE,SQROOT,UNN,
+     +                 UPP,VINT,VNN,VPP
+C
+      COMMON/DSHAR4/A,B,C,CENDIS,CMOVE,COM1,COM4,DIR,DP,DPE,DPCNT,
+     +              DPI,DPL,DP1,D1,D2A,FLIPCK,FWD,OGLE,P1,P2,RDRN,
+     +              REFPNT,TANGL,TES,TEW,UVEC,U2,V,VL,ZL,ZLNORM,
+     +              ZLPNT,ZL1,PARAM,R,SAVPAR,SEG,SLOPE,SQROOT,UNN,
+     +              UPP,VINT,VNN,VPP
+C
+      SAVE /DSHAR4/
+C
