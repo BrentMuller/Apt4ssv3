@@ -1,0 +1,37 @@
+*
+C.....FORTRAN SUBROUTINE                   APT310
+C PURPOSE      TO COMPARE A BCD WORD WITH THE CONTENTS OF A
+C              HOLERITH ARRAY TO DETERMINE THE PROCESSING TO
+C              BE PERFORMED.
+C LINKAGE      CALL APT310  (RESULT, BCD)
+C ARGUMENTS    RESULT    INTEGER VARIABLE TO CONTAIN THE
+C                        SUBSCRIPT OF THE HOLERITH ARRAY
+C                        INDICATING THE ELEMENT OF THE ARRAY
+C                        THAT MATCHES THE INPUT WORD.
+C              BCD       THE INPUT WORD TO BE COMPARED WITH
+C                        THE HOLERITH ARRAY.
+C SUBSIDIARIES NONE
+      SUBROUTINE APT310 (RESULT,BCD )
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION (O-Z)
+C     THIS ROUTINE COMPARES A BCD WORD WITH THE CONTENTS OF A HOLERITH
+C     ARRAY TO DETERMINE THE PROCESSING TO BE PERFORMED
+      CHARACTER*6 HOLARR(25),TEST
+       INTEGER RESULT
+      DATA  HOLARR      /'CAMERA','CLDATA','AERR  ','COPY  ','DYNDMP',
+C                            1         2      3         4        5
+     1 'FINI  ','INDEX ','INSERT','LETTER','MULTAX','OVPLOT','PARTNO',
+C        6         7         8        9       10        11       12
+     2 'PLOT  ','PPRINT','TRANS ','VTLAXS','GERR  ','TRACUT','ARLEM ',
+C        13        14       15       16       17        18       19
+     3 'HOLDPP','CLDAT ','MACHIN','CLPRNT','CUT   ','DNTCUT'/
+C         20       21       22       23       24        25
+               KNT = 26
+      CALL HOLFRM(BCD,TEST,1,6,NWD)
+           DO 25 I = 1,25
+      IF (TEST .EQ. HOLARR(I)) GO TO 50
+   25  CONTINUE
+      RESULT =KNT
+      GO TO 100
+   50 RESULT = I
+  100 RETURN
+       END

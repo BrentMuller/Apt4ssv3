@@ -1,0 +1,164 @@
+*
+C
+C...FORTRAN SUBROUTINES TLLFT,TLRGT,TLON,TLONPS,TLOFPS... 5/9/72
+C
+C
+      SUBROUTINE TLLFT
+C
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (LDEF)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+C
+C.... TOOL IS LEFT OF DS
+C
+      I = 1
+      J = 1
+      K = 1
+      L = IDS
+C
+C
+      MOTMOD = I
+      ISFTYP(L) = J
+      IF(ITLON(L).EQ.K) GO TO 10
+      ITLON(L) = K
+      JENT(L) = 1
+   10 RETURN
+      END
+C
+C
+C
+C
+C
+      SUBROUTINE TLRGT
+C
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (LDEF)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+C
+C
+C.... TOOL IS RIGHT OF DS
+C
+      I = 2
+      J = 1
+      K = 1
+      L = IDS
+C
+C
+      MOTMOD = I
+      ISFTYP(L) = J
+      IF(ITLON(L).EQ.K) GO TO 10
+      ITLON(L) = K
+      JENT(L) = 1
+   10 RETURN
+      END
+C
+C
+C
+C
+C
+      SUBROUTINE TLON
+C
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (LDEF)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+C
+C
+C.... TOOL END IS ON DS
+C
+      I = 3
+      J = 3
+      K = 0
+      L = IDS
+C
+C
+      MOTMOD = I
+      ISFTYP(L) = J
+      IF(ITLON(L).EQ.K) GO TO 10
+      ITLON(L) = K
+      JENT(L) = 1
+   10 RETURN
+      END
+C
+C
+C
+C
+C
+      SUBROUTINE TLONPS
+C
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (LDEF)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+C
+C
+C.... TOOL END IS ON PS
+C
+      J = 3
+      K = 0
+      L = IPS
+C
+C
+      ISFTYP(L) = J
+      IF(ITLON(L).EQ.K) GO TO 10
+      ITLON(L) = K
+      JENT(L) = 1
+   10 RETURN
+      END
+C
+C
+C
+C
+C
+      SUBROUTINE TLOFPS
+C
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (LDEF)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+C
+C
+C.... TOOL IS TANGENT TO PS
+C
+      J = 1
+      K = 1
+      L = IPS
+C
+C
+      ISFTYP(L) = J
+      IF(ITLON(L).EQ.K) GO TO 10
+      ITLON(L) = K
+      JENT(L) = 1
+   10 RETURN
+      END
+C
+C
+C
+C

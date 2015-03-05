@@ -91,6 +91,6 @@ read -e FORM
 clear
 printf "$TYPE\n$SEQ\n$INCTYPE\n$FORM" | tr "[:lower:]" "[:upper:]" > FORT.2
 mv $FILNAME FORT.1
-UNLOAD
+#ddd ./UNLOAD
 exit 0
 

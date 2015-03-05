@@ -38,9 +38,12 @@ C
       INTEGER COMIN,INFIL,OUTFIL
       LOGICAL OD,MODULE,SEQ,VB,VAX,IBM,NOINC,LIST,COPY
 C
-      INFIL=1
+      INFIL=1 
       COMIN=2
       OUTFIL=3
+      open(infil,file='FILE02',status='old')
+      open(comin,file='FORT.2',status='old')
+      open(outfil,file='OUT')
 C
 C.... READ INSTRUCTIONS FROM COMIN
 C

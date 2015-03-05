@@ -1,0 +1,216 @@
+*
+C.....FORTRAN SUBROUTINE  ....CHECK          8/68                 PH,HG
+C
+      SUBROUTINE CHECK
+      IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (DSHAR4)
+      INCLUDE (FXCOR)
+      INCLUDE (SV)
+      INCLUDE (ZNUMBR)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+      INCLUDE (ISHR18)
+      INCLUDE (KNUMBR)
+      INCLUDE (CHEKFL)
+C
+      DIMENSION TIOLD(3)
+      DIMENSION TNHELP(3)
+C
+C
+C
+      IF(ISFTYP(IS).GE.K4) GO TO 401
+      ITANG=0
+      TEMP(8)=Z10*DPMAX
+      IF (JENT(IS).NE.K1) THEN
+        CALL DOTF(DTISN,TI,SN(1,IS))
+        IF (ABS(DTISN).LT.0.05D0) THEN
+          ITANG=1
+          J21(IS)=K1
+          GOTO 401
+        ENDIF
+      ENDIF
+      TN(1,IS)=PAST(IS)*TI(1)
+      TN(2,IS)=PAST(IS)*TI(2)
+      TN(3,IS)=PAST(IS)*TI(3)
+  401 IF(J20(IS)-K1)1,8,3
+    1 JWR=0
+      STCK(IS)=Z1E6
+      CSD(IS)=Z0
+      J20(IS)=K1
+      J21(IS)=K1
+      J22(IS)=0
+      JENT(IS)=K1
+    2 IOPSET(IS)=0
+      JTN(IS)=K1
+      JU1(IS)=K1
+      JIOPS(IS)=0
+      GO TO 9
+    3 IF(TIK(1)*(TEE(1,IS)-TEK(1))+TIK(2)*(TEE(2,IS)-TEK(2))+TIK(3)
+     1*(TEE(3,IS)-TEK(3))-EPS1(IS))4,4,66
+    4 CALL AERR(-24201,'CHECK   ')
+      S(IS)=Z3*DP
+      CSD(IS)=Z0
+      GOTO11
+   66 J21(IS)=0
+      CMOVE(1)=TEE(1,IS)-TEK(1)
+      TEMP(1)=TE(1)-TEK(1)
+      CMOVE(2)=TEE(2,IS)-TEK(2)
+      TEMP(2)=TE(2)-TEK(2)
+      CMOVE(3)=TEE(3,IS)-TEK(3)
+      TEMP(3)=TE(3)-TEK(3)
+      CALL VNORM(CMOVE,TEM)
+      CSD(IS)=VTEM
+      CALL VNORM(TEMP,TEMP)
+      IF(DABS(ZL).LT.Z1EM9) ZL=Z1EM9
+      CSD(IS)=(CSD(IS)-VTEM)*(DPI/ZL)*Z11EM1
+      IF(CSD(IS)-EPS1(IS))7,7,16
+    7 TE(1)=TEE(1,IS)
+      TE(2)=TEE(2,IS)
+      TE(3)=TEE(3,IS)
+      GO TO 18
+ 8    IF(ISFTYP(IS)-4)85,84,84
+ 84   IF(JPH(IS))11,9,11
+   85 S(IS) = S(IS) - DP
+      IF ((S(IS).LT.Z5).OR.(S(IS).LT.Z5*DP)) GOTO 9
+ 86   IF(TI(1)*TIOLD(1)+TI(2)*TIOLD(2)+TI(3)*TIOLD(3)-0.9)9,11,11
+    9 CONTINUE
+      ITRY=0
+      ICHEKF=1
+  901 DO 98 I=1,3
+        TNHELP(I)=TN(I,IS)
+   98 CONTINUE
+      ITRY=ITRY+1
+      JMINR=K1
+   99 CALL AMIND
+      ICHEKF=0
+      JMINR=K0
+      DO 87 I=1,3
+        TIOLD(I) = TI(I)
+   87 CONTINUE
+      IF(IAERR)17,91,17
+   91 IF(JMIN)10,19,10
+   10 IF (ITRY.EQ.1) GOTO 901
+      S(IS)=Z0
+   11 J21(IS)=0
+   12 IF(CSD(IS)-EPS1(IS))13,15,15
+   13 IF(ISTRUP)14,14,16
+   14 CSD(IS)=Z2*DPMX1(IS)
+   15 IF(STCK(IS).LE.Z0) GOTO 18
+      IF ( (ITANG.EQ.K1) .AND. (TEMP(8).LT.DP)
+     +  .AND.  (STCK(IS).LT.Z2*TAU(IS)) ) GOTO 18
+   16 JCKR=0
+   17 CONTINUE
+      JPH(IS) = K0
+      RETURN
+   18 J50(IS)=K1
+      J51(IS)=K1
+      PLND1(IS)=Z0
+      NOTAN(IS)=0
+      JCKR=K1
+      GO TO 17
+   19 IF(ISFTYP(IS)-K4)190,22,22
+  190 IF(J23(IS))20,21,20
+   20 IF(DABS(S(IS)).LT.Z1EM9) GO TO 2001
+      STCK1(IS)=DSIGN(Z1,Z(IS)*S(IS))
+      J23(IS) = 0
+      GO TO 22
+ 2001 J20(IS) = 0
+      GO TO 16
+   21 STCK(IS)=STCK1(IS)*Z(IS)*S(IS)
+ 22   COS1(IS)=TN(1,IS)*TI(1)+TN(2,IS)*TI(2)+TN(3,IS)*TI(3)
+C
+      IF(ISFTYP(IS)-K2 )23,30,39
+   23 IF(COS1(IS))24,25,25
+   24 TN(1,IS)=-TN(1,IS)
+      TN(2,IS)=-TN(2,IS)
+      TN(3,IS)=-TN(3,IS)
+      RC(IS)=-RC(IS)
+      J23(IS)=K1
+      GO TO 99
+   25 IF (TAU(IS).GT.S(IS)) GOTO 32
+      IF ( (ITANG.EQ.K1).AND.(Z5*TAU(IS).GT.S(IS))) GOTO 32
+   26 IF(COS1(IS))27,28,27
+   27 CSD(IS)=DABS(S(IS)/COS1(IS))
+      GO TO 29
+   28 CSD(IS)=DABS(S(IS))+TAU(IS)
+   29 IF(DP-CSD(IS))11,201,201
+  201 IF ( CSD(IS).GT.Z9EM1*DP ) THEN
+        IF ( DP.GT.(DPMAX*TAU(IS))) THEN
+          DP=0.75D0*DP
+          GOTO 11
+        ENDIF
+      ENDIF
+      IF(J50(IS))202,18,18
+  202 IF(TAU(IS)-CSD(IS))11,18,18
+   30 IF(COS1(IS))31,31,24
+   31 IF(TAU(IS)-S(IS)) 32,32,26
+   32 IF(J21(IS))301,301,33
+  301 IF(IPDPL)15,15,18
+   33 DO 37 K=1,3
+      TEMP(K)=TP(K,IS)
+      TEMP(K+3)=TN(K,IS)
+      TP(K,IS)=SP(K,IS)+TAU(IS)*TI(K)
+   37 TN(K,IS)=TI(K)
+      IOP(IS)=K1
+      TEMP(7)=S(IS)
+      IF(LIMFL(IS))34,35,34
+   34 CALL DDLIM
+      GO TO 36
+   35 ICHEKF=1
+      CALL DDST
+      ICHEKF=0
+   36 DO 361 K=1,3
+      TP(K,IS)=TEMP(K)
+      TN(K,IS)=TEMP(K+3)
+  361 CONTINUE
+      IF(IER)38,55,38
+   38 CSD(IS)=0
+      S(IS)=Z5*DP
+      GO TO 12
+   39 IF(K3-ISFTYP(IS))40,23,40
+   40 CPTST(IS)=Z0
+      CPLFL(IS)=Z0
+      CALL CPLAN
+      IT=IT
+      IF(JCPR) 41,45,41
+   41 CALL AERR(-24202,'CHECK   ')
+      GO TO 11
+   45 IF (PLNCS(IS)) 24,46,46
+   46 TEMP(1)=PLNV(1,IS)*TI(1)+PLNV(2,IS)*TI(2)+PLNV(3,IS)*TI(3)
+      IF (TEMP(1)) 47,48,47
+   47 CSD(IS) =DABS(PLND(IS)/TEMP(1))
+   48 TEMP(1) = (SP(1,IS)-SP(1,IT))*TN(1,IS)
+     1         +(SP(2,IS)-SP(2,IT))*TN(2,IS)
+     1         +(SP(3,IS)-SP(3,IT))*TN(3,IS)
+      TEMP(1) = TEMP(1)*(TN(1,IS)*TI(1)+TN(2,I)*TI(2)+TN(3,IS)*TI(3))
+      IF (J22(IS))607,51,607
+  607 STCKN(IS) = STCK2(IS)*TEMP(1)
+C                   STPCK IF SURFACE PASSED
+      IF (STCKN(IS)) 18,6071,6071
+C                   STPCK IF SURFACE NEARBY
+ 6071 IF(DABS(PLND(IS)) - Z2*DP) 6072,6072,11
+ 6072 IF(DABS(S(IS))-DP) 18,18,11
+   51 STCK2(IS) = TEMP(1)
+      IF (STCK2(IS)) 11,502,502
+  502 J22(IS) = K1
+      GO TO 11
+   52 IF(CSD(IS)-Z2*DP)53,12,12
+   53 DO 54 I=1,3
+      CMOVE(I)=TEMP(8)*TI(I)
+   54 TE(I)=TE(I)+CMOVE(I)
+      GO TO 18
+   55 CSD(IS)=DABS(TEMP(7)/COS1(IS)+S(IS)+TAU(IS))
+      TEMP(8)=S(IS)
+      IF(CSD(IS)-Z5*DP)101,102,102
+  101 S(IS)=CSD(IS)
+      GO TO 152
+  102 S(IS)=Z5*DP
+  152 IF(S(IS)-DABS(TEMP(7)))153,52,52
+  153 S(IS)=DABS(TEMP(7))
+      GOTO52
+       END
