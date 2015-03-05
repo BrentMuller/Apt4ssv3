@@ -1,0 +1,63 @@
+PARTNO TEST13  TEST TO BE USED IN COMPARING XYZ AND XYPLAN  (MESH)
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+PARTNO   COMPARISON OF XYPLAN AND XYZ MESH FOR SIZE AND SPEED
+PPRINT TEST 13
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  13-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 06-JUL-1982
+$$               AND SSV2 - 01-OCT-1986
+$$
+CLPRNT
+RESERV/P,50,PL,12
+P(1)=POINT/0,0,0
+GENP=MACRO/IL,JL
+J=0
+ ID1) J=J+1
+      IF(J-JL) ID2,ID2,ID3
+      ID2) Y=J-1
+      I=0
+      ID4) I=I+1
+      IF(I-IL) ID5,ID5,ID1
+      ID5) X=I-1
+      IC=I+IL*(J-1)
+      Z=X**2/20+Y**3/75
+      P(IC)=POINT/X,Y,Z
+      JUMPTO/ID4
+      ID3) TERMAC
+CALL/GENP,IL=5,JL=5
+      S=SSURF/SMESH,   XYZ,SPLINE,P(1,THRU,5),SPLINE,P(6,THRU,10),$
+      SPLINE,P(11,THRU,15),SPLINE,P(16,THRU,20),SPLINE,P(21,THRU,25)
+I=0
+      ID6) I=I+1
+      IF(I-10) ID7,ID7,ID8
+       ID7) A=(I-1)*4/10
+      PL(I)=LINE/      A,0,A,1
+      JUMPTO/ID6
+       ID8) DUMMY=0
+       YLOW=LINE/0,-1,1,-1
+       YHI=LINE/0,5,1,5
+INTOL/.002
+OUTTOL/.002
+CUTTER/0,0,0,0,0,0,0
+FROM/-.5,0,0
+GO/PL(1),S,YLOW
+INDIRV/0,1,0
+GOFWD/PL(1),YHI
+   IC=1
+      ID10) IC=IC+1
+      IF(IC-10) ID13,ID13,ID20
+      ID13) INDIRV/1,0,0
+      GOFWD/YHI,PL(IC)
+      GORGT/PL(IC),YLOW
+      IC=IC+1
+      IF(IC-10) ID11,ID11,ID20
+      ID11) INDIRV/1,0,0
+      GOFWD/YLOW,PL(IC)
+      GOLFT/PL(IC),YHI
+      JUMPTO/ID10
+      ID20) DUMMY=0
+      FINI

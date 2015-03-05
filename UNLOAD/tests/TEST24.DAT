@@ -1,0 +1,213 @@
+PARTNO TEST BUDDA   SS WITH TRUE SWEEPS AND BUDSUR  PT,  E CHELIUS,BUDD
+REMARK
+REMARK   DSN IS BUDDA
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  15-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 07-JUL-1982
+$$     LARGELY OK IN SSV2 - 01-OCT-1986
+$$                          RESTART DIAGNOSTIC 25403 ISN 166 FROM DDSSRF
+$$                          WHILST PROCESSING GORGT/T2,TO,PLX(8)
+$$
+         CLPRNT
+         MACHIN/BUDTRL,19,LINEAR
+         MCHTOL/.002
+         TOLER/.001
+         RESERV/P,18,X,18,Y,18,Z,18,TSY,6,TSZ,6,V,18,PLX,10,PLY,6
+         I=0
+         P(I=I+1) = POINT/118.157,66.475,25.04
+         P(I=I+1) = POINT/117.758,64.106,25.233
+         P(I=I+1) = POINT/115.637,50.000,25.685
+         P(I=I+1) = POINT/125.000,68.302,25.441
+         P(I=I+1) = POINT/125.000,65.655,25.813
+         P(I=I+1) = POINT/125.000,50.000,26.523
+         P(I=I+1) = POINT/135.000,70.946,25.771
+         P(I=I+1) = POINT/135.000,67.926,26.231
+         P(I=I+1) = POINT/135.000,50.000,27.107
+         P(I=I+1) = POINT/145.000,73.555,25.946
+         P(I=I+1) = POINT/145.000,70.175,26.486
+         P(I=I+1) = POINT/145.000,50.000,27.477
+         P(I=I+1) = POINT/155.000,76.132,26.028
+         P(I=I+1) = POINT/155.000,72.413,26.593
+         P(I=I+1) = POINT/155.000,50.000,27.698
+         P(I=I+1) = POINT/172.840,80.662,25.943
+         P(I=I+1) = POINT/171.080,76.495,26.484
+         P(I=I+1) = POINT/166.828,50.000,27.798
+         I=0
+         TSY(I=I+1)=8
+         TSY(I=I+1)=1
+         TSY(I=I+1)=1
+         TSY(I=I+1)=1
+         TSY(I=I+1)=1
+         TSY(I=I+1)=44
+         I=0
+         TSZ(I=I+1)=11
+         TSZ(I=I+1)=13
+         TSZ(I=I+1)=12
+         TSZ(I=I+1)=12
+         TSZ(I=I+1)=12
+         TSZ(I=I+1)=11
+         I=0
+         LOOPST
+BEG)      I=I+1
+          OBTAIN,POINT/P(I),X(I),Y(I),Z(I)
+          IF(I-18)BEG,ND,ND
+ND)       LOOPND
+         A=0
+         B=0
+         I=0
+         LOOPST
+STR)     NY=TSY(B=B+1)
+         NZ=TSZ(B)
+         X1=X(I=I+1)
+         Y1=Y(I)
+         Z1=Z(I)
+         X2=X(I=I+1)
+         Y2=Y(I)
+         Z2=Z(I)
+         X3=X(I=I+1)
+         Y3=Y(I)
+         Z3=Z(I)
+         DX=X2-X3
+         DY=Y2-Y3
+         DZ=Z2-Z3
+         XP=(X3+X2)/2
+         YP=(Y3+Y2)/2
+         ZP=(Z3+Z2)/2
+         IF(DX)OK1,CON1,OK1
+OK1)     RY=3600/NY+NY/16
+         DISY=SQRTF(DX**2+DY**2)
+         LY=SQRTF(RY**2-(DISY/2)**2)
+         C1H=XP+((DY/DISY)*LY)
+         C1K=YP-((DX/DISY)*LY)
+         TAN2=(C1K-Y2)/(X2-C1H)
+         JUMPTO/PAS1
+CON1)    TAN2=0
+PAS1)    RZ=3600/NZ+NZ/16
+         DISZ=SQRTF(DY**2+DZ**2)
+         LZ=SQRTF(RZ**2-(DISZ/2)**2)
+         C2H=YP+((DZ/DISZ)*LZ)
+         C2K=ZP-((DY/DISZ)*LZ)
+         V5=(C2K-Z2)/RZ
+         V6=(Y2-C2H)/RZ
+         V4=TAN2*V5
+         D2=SQRTF(V4**2+V5**2+V6**2)
+         XB=V4/D2
+         YB=V5/D2
+         ZB=V6/D2
+         V1=X2-X1
+         V2=Y2-Y1
+         V3=Z2-Z1
+         D1=SQRTF(V1**2+V2**2+V3**2)
+         SCL=(XB*(V1/D1)+YB*(V2/D1)+ZB*(V3/D1))*2
+         XA=SCL*(V1/D1)-XB
+         YA=SCL*(V2/D1)-YB
+         ZA=SCL*(V3/D1)-ZB
+         IF(DX)OK2,CON2,OK2
+OK2)     TAN3=(C1K-Y3)/(X3-C1H)
+         JUMPTO/PAS2
+CON2)    TAN3=0
+PAS2)    V8=(C2K-Z3)/RZ
+         V9=(Y3-C2H)/RZ
+         V7=TAN3*V8
+         D3=SQRTF(V7**2+V8**2+V9**2)
+         XC=V7/D3
+         YC=V8/D3
+         ZC=V9/D3
+         V(A=A+1)=VECTOR/XA,YA,ZA
+         V(A=A+1)=VECTOR/XB,YB,ZB
+         V(A=A+1)=VECTOR/XC,YC,ZC
+         IF(A-18)STR,STP,STP
+STP)     LOOPND
+         PRINT/3,V(1,THRU,18)
+P1     = POINT/118.157,66.475,25.04
+P2     = POINT/117.758,64.106,25.233
+P3     = POINT/117.374,61.756,25.357
+P4     = POINT/117.000,59.415,25.455
+P5     = POINT/116.640,57.065,25.538
+P6     = POINT/116.296,54.704,25.603
+P7     = POINT/115.962,52.351,25.653
+P8     = POINT/115.637,50.000,25.685
+P9     = POINT/125.000,68.302,25.441
+P10    = POINT/135.000,70.946,25.771
+P11    = POINT/145.000,73.555,25.946
+P12    = POINT/155.000,76.132,26.028
+P13    = POINT/172.840,80.662,25.943
+P14    = POINT/171.080,76.495,26.484
+P15    = POINT/169.783,72.197,26.854
+P16    = POINT/168.719,67.825,27.155
+P17    = POINT/167.884,63.381,27.407
+P18    = POINT/167.298,58.972,27.598
+P19    = POINT/166.948,54.494,27.728
+P20    = POINT/166.828,50.000,27.798
+T1     = TABCYL/NOZ,SPLINE,P1,P9,P10,P11,P12,P13
+T2     = TABCYL/NOZ,SPLINE,P(2),P(5),P(8),P(11),P(14),P(17)
+TF     = TABCYL/NOZ,SPLINE,P8,P7,P6,P5,P4,P3,P2,P1
+TC     = TABCYL/NOZ,SPLINE,P13,P14,P15,P16,P17,P18,P19,P20
+PLC    = PLANE/0,1,0,50
+SP     = POINT/119,51,30
+SS1    = SSURF/SMESH,XYZ,SPLINE,P(17),CRSSPL,V(17),P(14),CRSSPL,V(14), $
+               P(11),CRSSPL,V(11),P(8),CRSSPL,V(8),P(5),CRSSPL,V(5), $
+               P(2),CRSSPL,V(2),SPLINE,P(18),CRSSPL,V(18),P(15),    $
+               CRSSPL,V(15),P(12),CRSSPL,V(12),P(9),CRSSPL,V(9),    $
+               P(6),CRSSPL,V(6),P(3),CRSSPL,V(3)
+SS2    = SSURF/SMESH,XYZ,SPLINE,P(16),CRSSPL,V(16),P(13),CRSSPL,V(13), $
+               P(10),CRSSPL,V(10),P(7),CRSSPL,V(7),P(4),CRSSPL,V(4), $
+               P(1),CRSSPL,V(1),SPLINE,P(17),CRSSPL,V(17),P(14),     $
+               CRSSPL,V(14),P(11),CRSSPL,V(11),P(8),CRSSPL,V(8),     $
+               P(5),CRSSPL,V(5),P(2),CRSSPL,V(2)
+$$
+$$
+         I=0
+         D=120
+         LOOPST
+AGN)     PLX(I=I+1) = PLANE/1,0,0,D
+         D=D+5
+         IF(I-10)AGN,NDD,NDD
+NDD)     LOOPND
+         I=0
+         D=5
+         LOOPST
+STRT)    PLY(I=I+1) = PLANE/PARLEL,PLC,YLARGE,D
+         D=D+5
+         IF(I-6)STRT,DN,DN
+DN)      LOOPND
+         CUTTER/0,0,0,0,0,0,.1
+         FROM/SP,20
+         INDIRP/120,50,25.5
+         I=0
+          LOOPST
+         GO/PLX(I=I+1),SS1,PLC
+BEGN)    GOLFT/PLX(I),T2
+          GORGT/T2,PLX(I=I+1)
+         GORGT/PLX(I),PLC
+         IF(I-10)OK,STPT,STPT
+OK)      GOLFT/PLC,PLX(I=I+1)
+         JUMPTO/BEGN
+STPT)    LOOPND
+         GOTO/SP
+         INDIRP/116,50,25.5
+         GO/PLC,SS1,TF
+         GOBACK/PLC,TC
+         GOLFT/TC,PLY(1)
+         GOLFT/PLY(1),TF
+         GORGT/TF,PLY(2)
+         GORGT/PLY(2),TC
+         GOLFT/TC,PLY(3)
+         GOLFT/PLY(3),T2
+         GOBACK/T2,PLY(4)
+         GOFWD/PLY(4),TC
+          GOFWD/TC,PLY(5)
+          GOBACK/PLY(5),T2
+          GOTO/SP
+          INDIRP/116,50,25.5
+          GO/PLC,SS1,TF
+          GORGT/TF,T2
+          GOFWD/T2,TC
+          GOBACK/TC,PLC
+          GOTO/SP
+          STOP,END
+          FINI

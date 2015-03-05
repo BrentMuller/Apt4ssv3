@@ -1,0 +1,54 @@
+PARTNO  TEST17  EXTRA LARGE SURFACE TEST  REQUIRES UPDATED SS SYSTEM
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+$$  NOTE THIS TEST SHOULD NOW RUN ON THE SSX3 SYSTEM
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  13-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 06-JUL-1982
+$$               AND SSV2 - 01-OCT-1986
+$$
+NOPOST
+CLPRNT
+RESERV/P,88
+CUTTER/0,0,0,0,0,0,0
+INTOL/.005
+OUTTOL/.005
+P(1)=POINT/0,0,0
+NY=8
+NX=11
+IY=0
+ID1) IY=IY+1
+IF(IY-NY) ID3,ID3,ID2
+ID3) Y=IY-1
+IX=0
+ID4) IX=IX+1
+IF(IX-NX) ID5,ID5,ID1
+ID5) X=IX-1
+ICT=NX*(IY-1)+IX
+Z=X*X/(NX*NX)+Y**3/(NY*NY*NY)
+P(ICT)=POINT/X,Y,Z
+JUMPTO/ID4
+ID2) A=0
+S=SSURF/SMESH,XYPLAN,SPLINE,P(1,THRU,11),$
+                    SPLINE,P(12,THRU,22),$
+                    SPLINE,P(23,THRU,33),$
+                    SPLINE,P(34,THRU,44),$
+                    SPLINE,P(45,THRU,55),$
+                    SPLINE,P(56,THRU,66),$
+                    SPLINE,P(67,THRU,77),$
+                    SPLINE,P(78,THRU,88)
+YLAW=LINE/0,0,1,0
+YHI=LINE/0,NY,1,NY
+XLAW=LINE/0,0,0,1
+XHI=LINE/NX,0,NX,1
+FROM/.5,.5,1
+GO/XLAW,S,YLAW
+INDIRV/0,1,0
+GOFWD/XLAW,YHI
+GORGT/YHI,XHI
+GORGT/XHI,YLAW
+GORGT/YLAW,XLAW
+FINI

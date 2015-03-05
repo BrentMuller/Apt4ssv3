@@ -1,0 +1,18 @@
+*
+      integer*4 function cputim
+      integer*2 w_len1,w_cod1
+      integer*4 l_add1,l_lenadd1
+      integer*4 status,sys$getjpi
+      parameter (jpi$_cputim='0407'X)
+      common/jpi_params/w_len1,w_cod1,l_add1,l_lenadd1
+      data w_len1,w_cod1/4,jpi$_cputim/
+      data l_lenadd1/0/,istart/0/
+      l_add1=%loc(cputim)
+      status=sys$getjpi(,,,w_len1,,,)
+      if(.not.status)then
+            write(6,*)'*** Error in getting cpu time ***'
+            cputim=0
+            return
+      end if
+      return
+      end

@@ -1,0 +1,24 @@
+PARTNO SSREV TEST
+REMARK    TEST ON THE ANGULAR ROTATION OF SURFACES OF REVOLUTION
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  15-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 07-JUL-1982
+$$               AND SSV2 - 07-NOV-1986
+$$
+CLPRNT
+PA=POINT/0,.5,0
+PB=POINT/2,1,0
+PC=POINT/3,1,0
+C=SCURV/SPLINE,PA,PB,PC
+P1=POINT/0,0,0
+P2=POINT/1,0,0
+S1=SSURF/REVOLV,C,AXIS,P1,P2,CLW,0,360
+S2=SSURF/REVOLV,C,AXIS,P1,P2,CCLW,0,360
+S3=SSURF/REVOLV,C,AXIS,P1,P2,CCLW,270,90
+S4=SSURF/REVOLV,C,AXIS,P1,P2,CLW,270,90
+S5=SSURF/REVOLV,C,AXIS,P1,P2,CLW,90,270
+FINI

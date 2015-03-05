@@ -1,0 +1,124 @@
+*
+C
+C              FORTRAN SUBROUTINE NAME
+C
+C LINKAGE       CALL    NAME  (STR)
+C
+C          SUBSIDIARIES                  CALLED FROM
+C          TYPE          ENTRY           TYPE          ENTRY
+C          SUBROUTINE    HELP            SUBROUTINE    LOADG
+C                                        SUBROUTINE    LOADM
+C                                        SUBROUTINE    LOADN
+C                                        SUBROUTINE    LOADP
+C                                        SUBROUTINE    INPUT
+C
+      INTEGER  FUNCTION  NAME  (STR)
+C
+      IMPLICIT INTEGER (A-Z)
+C
+C        1.    NAME TABLE AND TABLE LIMITS
+C
+      INCLUDE (NAMETB)
+C  NAMEST:     NAMTBL INDEX OF BEGIN OF THE PART PROGRAM NAME  SECTION
+C  NAMMAX:     NAMTBL INDEX OF END OF THE PART PROGRAM NAME SECTION
+C  NAMTBL:     INTEGER CODE CORRESPONDING TO NAME TABLE ENTRY
+C  CNAMTB:     NAME TABLE OR DICTIONARY
+C
+C        6.    SYMBOLIC FILE DEFINITIONS
+C
+      COMMON/SYMFIL/SYMFIL
+      DIMENSION SYMFIL(6)
+C  VLFILE:     VERIFICATION LISTING FILE
+      EQUIVALENCE (VLFILE,SYMFIL(6))
+C*
+C PURPOSE      TO FIND THE POSITION IN NAMTBL OF A BCD NAME,
+C              AND TO PUT THE NAME INTO NAMTBL IF IT IS NOT
+C              ALREADY THERE.
+C ARGUMENTS    STR     CHARACTER STRING CONTAINING THE
+C              SYMBOLIC NAME.
+C NOTES        THE NAMTBL IS SEARCHED USING A HASH TECHNIQUE.
+C
+C LOCAL                                INITIAL
+C VARIABLES    NAME   DIMENSION  TYPE  VALUE   DESCRIPTION
+C              STR                C            ARGUMENT OF FUNCTION =
+C                                              SYMBOLIC NAME
+C              BCD                I            BCD OF NAME
+C              I                  I            INDEX OF DO LOOP
+C              J                  I            MASK TABLE SEARCH
+C                                              STARTING POINT
+C              NAME               I            FUNCTION NAME
+C
+      CHARACTER*6 STR
+C**
+C**   CALCULATE BCD
+C
+      BCD=BCDF(STR(1:4))
+C
+C...     FIND STARTING PLACE IN TABLE.
+C
+   10 J=MOD(BCD,NAMMAX-NAMEST)
+      IF (J.LT.0) THEN
+        J=J+NAMMAX
+      ELSE
+        J=J+NAMEST
+      ENDIF
+C
+C...     SEARCH FROM THERE UP TO TOP OF TABLE.
+C
+      DO 20 I = J,NAMMAX
+C
+C...     IS THERE AN ENTRY AT THIS LOCATION
+C
+      IF (NAMTBL(I).EQ.0) GOTO 40
+C
+C...     YES. IS IT THIS NAME
+C
+      IF(CNAMTB(I).EQ.STR)GOTO 100
+C
+C...     NO. CONTINUE SEARCH.
+C
+   20 CONTINUE
+C
+C...     NOT IN THAT PART OF TABLE - SEARCH FROM BOTTOM TO STARTING PT.
+C
+      DO 30 I = NAMEST,J
+C
+C...     IS THERE AN ENTRY AT THIS LOCATION
+C
+      IF (NAMTBL(I).EQ.0) GOTO 40
+C
+C...     YES. IS IT THIS NAME
+C
+      IF(CNAMTB(I).EQ.STR)GOTO 100
+C
+C...     NO. CONTINUE SEARCH.
+C
+   30 CONTINUE
+C
+C...     TABLE FULL - ISSUE DIAGNOSTIC
+C
+      WRITE(VLFILE,999)
+  999 FORMAT (1H ,54HERROR NO. 3001 IN SUBROUTINE NAME. NAME TABLE OVERF
+     *LOW)
+      CALL HELP
+      RETURN
+C
+C...     NAME IS NOT IN TABLE - PUT IT IN
+C
+   40 CNAMTB(I) = STR
+C
+C...     ENTRY IF NAME FOUND.
+C...     IS THIS A SYNONYM
+C
+  100 IF (NAMTBL(I).LT.0) GOTO 110
+C
+C...     NO. RETURN INDEX.
+C
+      NAME = I
+      RETURN
+C
+C...     YES. RETURN INDEX OF SYNONYM
+C
+  110 NAME = -NAMTBL(I)
+      RETURN
+       END

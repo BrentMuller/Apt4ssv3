@@ -1,0 +1,57 @@
+*
+      SUBROUTINE CRBLEN(U,SC,CV,MODE)
+C---     CALLING ARGUMENTS ARE ANALAGOUS TO THOSE OF CNCURV
+C---     HOWEVER , THE BLEND FORMULA IS DESIGNED TO PRSERVE
+C---     DIRECTIONALITY OF POINTS AS A FUNCTION OF THE NATURAL
+C---     FLOW PARAMETER
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION SC(*),CV(*)
+      INCLUDE (DARRAY)
+      DIMENSION FU(12),PA(3),PB(3),TA(3),TB(3)
+      DATA ONE,ZERO,SMAL/1.0D0,0.0D0,1.0D-15/
+C
+      CALL BLENDF(U,FU)
+      A=SC(1)*SC(1)+SC(5)*SC(5)+SC(9)*SC(9)
+      B=SC(2)*SC(2)+SC(6)*SC(6)+SC(10)*SC(10)
+      A=DSQRT(A)+SMAL
+      B=DSQRT(B)+SMAL
+C
+      K=0
+      DO 10 I=1,9,4
+      K=K+1
+      PA(K)=SC(I)/A
+      PB(K)=SC(I+1)/B
+      TA(K)=SC(I+2)/A
+      TB(K)=SC(I+3)/B
+   10 CONTINUE
+C
+      W=FU(1)*A+FU(2)*B
+      WP=FU(5)*A+FU(6)*B
+      WPP=FU(9)*A+FU(10)*B
+C
+      DO 20 I=1,3
+      TEMP1=FU(1)*PA(I)+FU(2)*PB(I)+FU(3)*TA(I)+FU(4)*TB(I)
+      CV(I)=W*TEMP1
+      IF(MODE.LT.1) GO TO 20
+      TEMP2=FU(5)*PA(I)+FU(6)*PB(I)+FU(7)*TA(I)+FU(8)*TB(I)
+      CV(I+4)=TEMP1*WP+TEMP2*W
+      CV(I+8)=WPP*TEMP1+2.*TEMP2*WP+W*(FU(9)*PA(I)+FU(10)*PB(I)+
+     X         FU(11)*TA(I)+FU(12)*TB(I))
+   20 CONTINUE
+      CV(4)=ONE
+      CV(8)=ZERO
+      CV(12)=ZERO
+      CV(16)=ZERO
+      IF(MODE.LT.1) GO TO 999
+      CV(8)=ONE
+      CV(12)=ONE
+      GO TO 999
+C
+  998 CONTINUE
+      CALL CFORM(' ERROR IN CRBLEN',DARRAY,0,16)
+      CALL CPRINT(DARRAY)
+      GO TO 999
+C
+  999 CONTINUE
+      RETURN
+      END

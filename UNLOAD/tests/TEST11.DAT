@@ -1,0 +1,108 @@
+PARTNO TEST11 ELLIPTIC COKE BOTTLE
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+$$ *********************************************
+$$ *                                           *
+$$ *   THIS TEST OK IN SSV3  -  12-JUN-1989    *
+$$ *                                           *
+$$ *      THOUGH NOW GIVES WARNING 24007       *
+$$ * 'NEGATIVE DISTANCE TO CS AT START OF CUT' *
+$$ *                                           *
+$$ *  INTRODUCED AS PART OF VW ARELEM UPDATES  *
+$$ *                                           *
+$$ *********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 02-JUL-1982
+$$               AND SSV2 - 01-OCT-1986
+$$
+      RESERV/P,30,RADV,6
+CLPRNT
+$$      DEFINE THE CROSS SECTION
+$$      RADII VALUES FOR THE PROFILE FOLLOW
+      RADV(1)=1.2
+      RADV(2)=1.0
+      RADV(3)=1.3
+      RADV(4)=1.2
+      RADV(5)=0.9
+      RADV(6)=0.7
+$$  CAV IS DEFINED BY PARAMETRIC EQUATIONS
+$$  THE CAV MACRO COMPUTES X,Y,Z COORDINATES OF A SURFACE POINT
+$$      FROM AN INPUT  ROTATIONAL ANGLE -ANG  AND A STATION VALUE XVAL
+      CAV=MACRO/RAD0,ANGLE,XVAL
+      T=ANGLE
+      IF(T) CAV1,CAV2,CAV2
+      CAV1) T=T+360
+      JUMPTO/CAV4
+      CAV2) IF(360-T) CAV3,CAV4,CAV4
+      CAV3) T=T-360
+      CAV4) X=XVAL
+      Y=-RAD0*COSF(T)
+      Z=-RAD0*SINF(T)/1.62
+      TERMAC
+$$   IN THIS SET OF LOOPS , A MESH OF POINTS P IS DEFINED BY A SET OF
+$$      CALLS TO THE MACRO CAV
+      KANG=0
+      KX=0
+      NANG=5
+      NX=6
+      PCT=0
+      KANG=0
+      AR1) KANG=KANG+1
+      IF(KANG-NANG) ARCON,ARCON,AREND
+      ARCON)  AN=180*(KANG-1)/(NANG-1)
+      KX=0
+      AR2) KX=KX+1
+      IF(KX-NX) AR3,AR3,AR1
+      AR3) XN=5*(KX-1)/(NX-1)
+      PCT=PCT+1
+      RTEMP=RADV(KX)
+      CALL/CAV,RAD0=RTEMP,ANGLE=AN,XVAL=XN
+      P(PCT)=POINT/X,Y,Z
+      JUMPTO/AR2
+      AREND) DUMMY=0
+$$      DEFINE THE CAVITY BY A SCULPTURED MESH FROM THE POINTS P
+      I=0
+  S=SSURF/SMESH,XYZ,SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1)$
+              ,P(I=I+1),$
+   SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+   SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+   SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+   SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1)
+$$   3/4  BALL END MILL
+      CUTTER/0.75,0.375,0,0,0,0,0.375
+      INTOL/.002
+      OUTTOL/.002
+      CENLIN=LINE/0,0,1,0
+      ZFLAT=PLANE/0,0,1,0
+$$   PART LIES IN FRAME Y=-1.5 TO 1.5, X=0 TO 5, Z= -1.0 TO 0.0
+$$   YAXIS IS THE AXIS OF THE CAVITY
+$$   CUTTER STARTS 3 IN ABOVE BOTTOM CENTER OF PART
+      SETPT=POINT/0.4,0,3.0
+      FROM/SETPT
+$$   PLUNGE INTO BOTTOM CENTER OF CAVITY
+      GOTO/0.4,0,-0.7
+      XDRV=LINE/0,0,0,1
+      GO/XDRV,S,CENLIN
+      INDIRV/0,1,0
+$$    GOBACK AND FORTH ALONG THE BOTTOM OF THE CAVITY
+$$   TO CLEAR AN INITIAL PATH
+      GOFWD/XDRV,TO,ZFLAT
+      GOBACK/XDRV,TO,ZFLAT
+      GOBACK/XDRV,TO,ZFLAT
+      IX=8
+       CL1) IX=IX+1
+      IF(IX-48) CL2,CL2,CL3
+      CL2) INDIRV/1,0,0
+      XVL=(IX-1)/10
+      XDRVA=LINE/XVL,0,XVL,1
+      GOFWD/ZFLAT,TO,XDRVA
+      INDIRV/0,-1,-1
+           GOFWD/XDRVA,TO,ZFLAT
+      IX=IX+1
+      XVL=(IX-1)/10
+      XDRVB=LINE/XVL,0,XVL,1
+      INDIRV/1,0,0
+      GOFWD/ZFLAT,TO,XDRVB
+          GODOWN/XDRVB,TO,ZFLAT
+      JUMPTO/CL1
+      CL3) GOTO/SETPT
+      FINI

@@ -1,0 +1,12 @@
+*
+      SUBROUTINE CLOSPE(ID,IRET)
+C
+      INTEGER ID,IRET
+C
+      CLOSE (UNIT=ID,ERR=10,STATUS='KEEP')
+      IRET=0
+      RETURN
+C
+  10  IRET=1
+      RETURN
+      END

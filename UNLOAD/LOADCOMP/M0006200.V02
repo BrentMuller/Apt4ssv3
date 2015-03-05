@@ -1,0 +1,42 @@
+*
+      SUBROUTINE SORT(F,L,N,IS,IL)
+      INTEGER F(L,N),TEMP
+      LOGICAL EQULTY
+C    'N' RECORDS OF LENGTH 'L' IN ARRAY 'F' ARE SORTED IN ASCENDING
+C    ORDER ACCORDING TO THE VALUE OF 'IL' ITEMS STARTING FROM THE
+C    'IS'TH IN EACH RECORD)
+C    INDEX FOR LAST WORD TO BE SORTED ON
+      IT=IS+IL-1
+C    FOR EACH RECORD EXCEPT THE LAST
+      NM1=N-1
+      DO 1 I=1,NM1
+      IP1=I+1
+C    RECORD WITH LOWEST CHARACTER-STRING VALUE
+      IK=I
+      DO 2 J=IP1,N
+        EQULTY=.TRUE.
+        DO 3 K=IS,IT
+          IF (EQULTY) THEN
+            IF (F(K,IK).GT.F(K,J)) THEN
+              IK=J
+              EQULTY=.FALSE.
+            ELSE IF (F(K,IK).LT.F(K,J)) THEN
+              EQULTY=.FALSE.
+            ELSE
+              EQULTY=.TRUE.
+            ENDIF
+          ENDIF
+    3   CONTINUE
+    2 CONTINUE
+      IF (IK.NE.I) THEN
+C   INTERCHANGE RECORDS
+        DO 4 J=1,L
+          TEMP=F(J,IK)
+          F(J,IK)=F(J,I)
+          F(J,I)=TEMP
+    4   CONTINUE
+      ENDIF
+C
+    1 CONTINUE
+      RETURN
+      END
