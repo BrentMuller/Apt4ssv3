@@ -1,0 +1,3 @@
+C
+      COMMON/LOKAL/PASTIS
+C
