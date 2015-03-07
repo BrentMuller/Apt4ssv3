@@ -1,0 +1,32 @@
+cat file04      afile04
+$ !
+$ ! PROCEDURE TO RUN UNLOAD PROGRAM
+$ !
+$ SET NOVERIFY
+$ INQUIRE FILNAM "Name of Concatenated File to be Unloaded "
+$ INQUIRE TYPE "Unload by MODULE or FILE"
+$ INQUIRE SEQ "Sequence number specification: SEQ , NOSEQ or VB"
+$ INQUIRE INCTYP "Include File Format : VAX , IBM or NOINC"
+$ INQUIRE FORM "File Format : FORT or LIST"
+$ OPEN/WRITE OUTPUT_FILE FOR002
+$ WRITE OUTPUT_FILE TYPE
+$ WRITE OUTPUT_FILE SEQ
+$ WRITE OUTPUT_FILE INCTYP
+$ WRITE OUTPUT_FILE FORM
+$ CLOSE OUTPUT_FILE
+$ ASS 'FILNAM' FOR001
+$ RUN UNLOAD
+$ LOC := 'F$LOCATE("FILE",TYPE)
+$ IF LOC.EQ.0 THEN GOTO FIN
+$ RENAME *.DAT *.FOR
+$ FIN:
+$ DEASS FOR001
+$ DEL FOR002.*;*
+
+
+
+
+
+
+
+(uafhcx) 157% 
