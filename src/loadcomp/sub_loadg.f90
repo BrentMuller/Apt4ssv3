@@ -50,6 +50,7 @@
 !                                                                       
 !  MODULO:     NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS    
       COMMON/MODULI/MODULO 
+
 !                                                                       
 !        6.    SYMBOLIC FILE DEFINITIONS                                
 !                                                                       

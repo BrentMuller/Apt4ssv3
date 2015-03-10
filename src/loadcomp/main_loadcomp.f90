@@ -1,4 +1,4 @@
-Program loadcomp  
+      Program loadcomp  
 ! Modified to .f90 from M0007342.F                                    
 !********************************************************************                                                                      
 !                                                                       
@@ -10,11 +10,11 @@ Program loadcomp
 !          SUBROUTINE    LOADM                                          
 !          SUBROUTINE    LOADP                                          
 !                                                                       
-    IMPLICIT INTEGER (A-Z) 
+      IMPLICIT INTEGER (A-Z) 
 !                                                                       
 !        1.    NAME TABLE AND TABLE LIMITS                              
 !                                                                       
-    INCLUDE 'NAMETB.INC' 
+      INCLUDE 'NAMETB.INC' 
 !  NUMBST:     INDEX OF BEGINNING OF NUMBER SECTION OF CNUMTB           
 !  NUMBND:     INDEX OF END OF NUMBER SECTION OF CNUMTB                 
 !  NAMTBL:     INTEGER CODE CORRESPONDING TO NAME TABLE ENTRY           
@@ -23,16 +23,16 @@ Program loadcomp
 !                                                                       
 !        6.    SYMBOLIC FILE DEFINITIONS                                
 !                                                                       
-    COMMON/SYMFIL/SYMFIL 
-    DIMENSION SYMFIL(6) 
+      COMMON/SYMFIL/SYMFIL 
+      DIMENSION SYMFIL(6) 
 !  LCDATA:     INPUT FILE NUMBER OF PRODUCTION TABLES SEQUEN. MODE      
-    EQUIVALENCE (LCDATA,SYMFIL(5)) 
+      EQUIVALENCE (LCDATA,SYMFIL(5)) 
 !  VLFILE:     VERIFICATION LISTING FILE                                
-    EQUIVALENCE (VLFILE,SYMFIL(6)) 
+      EQUIVALENCE (VLFILE,SYMFIL(6)) 
 !                                                                       
 !        8.    CONTROL FLAGS AND POINTERS                               
 !                                                                       
-    INCLUDE 'LDSCOM.INC' 
+      INCLUDE 'LDSCOM.INC' 
 !  IBKPNT:     NAMTBL INDEX OF BRKPNT                                   
 !*                                                                      
 !     PURPOSE      TO READ A CONTROL CARD AND DECIDE WHICH BLOCK        
@@ -55,44 +55,44 @@ Program loadcomp
 !                  POINTERS TO THE NAME TABLE, AND GEOMETRIC            
 !                  PRODUCTIONS TO BE PRODUCED.                          
 !                                                                       
-    CHARACTER*6 BKPNT 
-    CHARACTER*4 IG,IG1,IP,IP1 
-    DATA  IP1,IG1/'PROC','GEOM'/,BKPNT/'BRKPNT'/ 
-    !**                                                                     
-    !...     CLEAR NUMBER TABLE                                             
-    !                                                                       
-    DO 1 I=NUMBST,NUMBND 
+      CHARACTER*6 BKPNT 
+      CHARACTER*4 IG,IG1,IP,IP1 
+      DATA  IP1,IG1/'PROC','GEOM'/,BKPNT/'BRKPNT'/ 
+!**                                                                     
+!...     CLEAR NUMBER TABLE                                             
+!                                                                       
+      DO 1 I=NUMBST,NUMBND 
         CNUMTB(I)=' ' 
-  1 END DO
-    !                                                                       
-    !...     READ CONTROL CARD.                                             
-    !                                                                       
-    READ(LCDATA,2) IP,IG 
-  2 FORMAT (1A4,6X,1A4) 
-    !                                                                       
-    !...     CALL LOADM TO READ META-CLASSES.                               
-    !                                                                       
-    IF ((IP .NE. IP1) .AND. (IG .NE. IG1))  GO TO 5 
-    CALL LOADM 
-    !                                                                       
-    IBKPNT = NAME(BKPNT) 
-    NAMTBL(IBKPNT) = 99000 
-    !                                                                       
-    !...     IS BASIC PRODUCTION TABLE PROCESSING REQUIRED                  
-    !                                                                       
-  3 IF(IP.EQ.IP1)CALL LOADP 
-    !                                                                       
-    !...     IS GEOMETRIC PRODUCTION TABLE PROCESSING REQUIRED              
-    !                                                                       
-  4 IF(IG.EQ.IG1)CALL LOADG 
-    !                                                                       
-    STOP 
-    !                                                                       
-    !...  CONTROL CARD ERROR                                                
-    !                                                                       
-  5 WRITE (VLFILE,6) 
-  6 FORMAT (1H ,90HERROR 7002 IN MAIN.  FIRST INPUT CARD DOES NOT CONT&
-         &AIN GEOM OR PROC.  NO OUTPUT GENERATED.)                          
-    STOP 
-End Program loadcomp
+    1 END DO
+!                                                                       
+!...     READ CONTROL CARD.                                             
+!                                                                       
+      READ(LCDATA,2) IP,IG 
+  2   FORMAT (1A4,6X,1A4) 
+!                                                                       
+!...     CALL LOADM TO READ META-CLASSES.                               
+!                                                                       
+      IF ((IP .NE. IP1) .AND. (IG .NE. IG1))  GO TO 5 
+      CALL LOADM 
+!                                                                       
+      IBKPNT = NAME(BKPNT) 
+      NAMTBL(IBKPNT) = 99000 
+!                                                                       
+!...     IS BASIC PRODUCTION TABLE PROCESSING REQUIRED                  
+!                                                                       
+  3   IF(IP.EQ.IP1)CALL LOADP 
+!                                                                       
+!...     IS GEOMETRIC PRODUCTION TABLE PROCESSING REQUIRED              
+!                                                                       
+  4   IF(IG.EQ.IG1)CALL LOADG 
+!                                                                       
+      STOP 
+!                                                                       
+!...  CONTROL CARD ERROR                                                
+!                                                                       
+  5   WRITE (VLFILE,6) 
+    6 FORMAT (1H ,90HERROR 7002 IN MAIN.  FIRST INPUT CARD DOES NOT CONT
+     *AIN GEOM OR PROC.  NO OUTPUT GENERATED.)
+      STOP 
+      End Program loadcomp
 

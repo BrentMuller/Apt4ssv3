@@ -1,22 +1,19 @@
 
-AM_FFLAGS = -I$(top_srcdir)/src/include
+AM_FCFLAGS = -I$(top_srcdir)/src/include -ffixed-form
 
+#SUFFIXES = .f
+#.f.o:
+#	$(F77) -c $(AM_FFLAGS) $(INCLUDES) $<
 
-SUFFIXES = .f
-.f.o:
-	$(F77) -c $(AM_FFLAGS) $(INCLUDES) $<
-
+#SUFFIXES = .f90
+#.f.o:
+#	$(F77) -c $(AM_FFLAGS) $(INCLUDES) $<
 
 bin_PROGRAMS=loadcomp
 
-loadcomp_FFLAGS = -I$(top_srcdir)/src/include
+#loadcomp_FFLAGS = -I$(top_srcdir)/src/include
 
-loadcomp_SOURCES= block_data.f90
-	fun_bcdf.f90\
-	fun_hex.f90\
-	fun_name.f90\
-	fun_orf.f90\
-	main_loadcomp.f90\
+loadcomp_SOURCES= block_data.f90 fun_bcdf.f90 fun_hex.f90 fun_name.f90 fun_orf.f90\
 	sub_bcdbin.f90\
 	sub_binbcd.f90\
 	sub_cform.f90\
@@ -38,4 +35,7 @@ loadcomp_SOURCES= block_data.f90
 	sub_read.f90\
 	sub_shift.f90\
 	sub_sort.f90\
-	sub_spill.f90
+	sub_spill.f90\
+	main_loadcomp.f90\
+	../vaxbitcm/vaxbitcm.f90
+
