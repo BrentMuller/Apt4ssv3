@@ -1,5 +1,5 @@
 
-AM_FCFLAGS = -I$(top_srcdir)/src/include -ffixed-form
+AM_FCFLAGS = -I$(top_srcdir)/src/include -ffixed-form -O0
 
 #SUFFIXES = .f
 #.f.o:
