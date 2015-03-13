@@ -1044,6 +1044,7 @@ C*
       DIMENSION LGSTK(50)
       LOGICAL BOLFLG
       DATA KK/20000/,LASTMN/-1/
+      external alarm
 C**
       IF(PROD.GT.0)GOTO 5
       IF(LASTMN.NE.WHCHMN) GOTO 300
@@ -1525,6 +1526,7 @@ C                  THRU N(M+1))
 C                  N(M+1)+1)    NTH BRANCH LABEL.  NEGATIVE IF
 C                               ONLY NORMAL VALUES USED.
 C
+      external alarm
       CHARACTER*6 I297
       DATA I297,J297/'APT297',19206/
 C**
@@ -1969,6 +1971,7 @@ C
       DATA NUMREC/1,5,4,3,2/
       DATA KOMIT /64/, KRETAI /65/, KINVER /35/, KZIGZA /61/
       DATA HDOLSC,HDOLPC /'$SCRTH','$PCRTH'/
+      external alarm
 C**
 C......             INITIALIZE
 C
@@ -2511,6 +2514,7 @@ C                   REAL      INCR
 C
       DATA HPERI/'PERI'/, HDOLSC/'$SCRTH'/,XLANK/'    '/
       DATA DECPT/'.'/
+      external alarm
 C**
 C
 C.......                      IF FIRST TIME THROUGH FOR THIS DEFINITION,
@@ -3170,6 +3174,7 @@ C
       CHARACTER NCALL*6
       LOGICAL ERRFLG
       DATA NCALL/'CALL  '/,ERRFLG/.FALSE./
+      external alarm
 C**
 C
 C...     BRANCH IF MACRO TEXT REQUIRED.
@@ -3547,6 +3552,7 @@ C ESTACK:      INPUT STATEMENT ERROR POSITION WHEN DETECTED IN STACK
 C**
       CHARACTER IBUFF*15,IHBLK*4
       DATA IHBLK/'    '/
+      external alarm
 C
 C...     CHECK FOR SPACE IN STACK
 C
@@ -3759,6 +3765,7 @@ C*
       DIMENSION     LABARY(2,150)
       LOGICAL    PRTER
       DATA ISEQ,LABCNT,LABARY/302*0/,LABDM/151/
+      external alarm
 C**
       IF(ILHLT)GOTO 150
       L=IABS(K)
@@ -4051,6 +4058,7 @@ C
       DIMENSION BIGSTK(12)
       CHARACTER*6 NORMAL
       DATA  NORMAL /'NORMAL'/
+      external alarm
 C
 C***********************************************************************
 C
@@ -4681,6 +4689,7 @@ C              BIGCNT  NUMBER OF CALLS TO LCANON FOR THIS DEFINITION
 C
       CHARACTER IBUFF*15,IHBLK*4
       DATA IHBLK/'    '/
+      external alarm
 C**
 C...       IF FIRST CALL, INITIALIZE
 C
@@ -4998,6 +5007,7 @@ C                             6     PRODUCED LABEL
 C                             7     VALUE FOR PRODUCING LABEL
 C
 C
+      external alarm
       DIMENSION LABSAV(7,10),ISTCK(5)
       DATA ISTCK/7,5,3,1,9/
 C**
@@ -5256,6 +5266,7 @@ C...
       DATA CHARAC/ '0','1','2','3','4','5','6','7','8','9','Z','$'/
       DATA COUNT /0/
       DATA TABL/1800*0/
+      external alarm
 C...      INITIALIZE FIND WITH BLANKS
       FIND=BLK
 C...      IF ARGUMENT PAIR ISIIN TABLE THEN BRANCH - RETURN NAMTBL INDEX
@@ -5592,6 +5603,7 @@ C   MACRO-SPEZIAL-STACK FUER 50 MACROVARIABLE
       INTEGER ICNUM,BCDF
       DATA HCALL/'CALL  '/,MRGTOP/0/,IMRGDM/150/
       DATA I296,J296/'APT296',19205/
+      external alarm
 C**
       K = TOP
       GO TO(4100,4200,4300,4400,4500,4600,4700,4800,
@@ -6234,6 +6246,7 @@ C**
       LOGICAL EXTERN
       DATA LBRCH/0/
       DATA EXTERN/.FALSE./
+      external alarm
       IF (NUMARG .EQ. 0) GO TO 7
 C
 C...     ENTRY=.TRUE. IF MATCH IS BEING ENTERED AGAIN FOR SAME
@@ -6675,6 +6688,7 @@ C NNDX:        CONVERSION BETWEEN ABS. AND VIRTUAL NUMBER TABLE POINTER
       EQUIVALENCE (NNDX,NTBL(3))
 C NLAST:       LAST NEW BLOCK NUMBER OF NUMBER TABLE ON THE EXTERN FILE
       EQUIVALENCE (NLAST,NTBL(4))
+      external alarm
 C*
 C ARGUMENTS    IBR     SET TO 1 FOR STORE, 2 FOR RETRIEVE
 C              INDEX   POINTER TO REFERENCED MACRO TEXT WORD
@@ -6933,6 +6947,7 @@ C
 C..... LOCAL ARRAY TO KEEP TRACK OF ASSIGNED VARIABLES TO AVOID
 C      CORRUPTING NAME AND NUMBER TABLES
        DIMENSION IASV(6000)
+       external alarm
 C**
 C...     LARGMV KEEPS COUNT OF NUMBER OF MACRO VARIABLES AND LINKAGE
 C...     CELLS NEEDED FOR ALL MACROS OF CURRENT LEVEL.
@@ -7490,6 +7505,7 @@ C NLAST:       LAST NEW BLOCK NUMBER OF NUMBER TABLE ON THE EXTERN FILE
 C
       CHARACTER*6 ITANTO
       DATA ITANTO/'TANTO '/
+      external alarm
 C**
 C...     GOFWD, GOBACK, GOUP, GODOWN, GOLFT, OR GORGT / ......
 C...     INITIALISE CHECK SURFACE COUNT.
@@ -7717,6 +7733,7 @@ C*
 C ARGUMENTS    STR     A CHARACTER STRING CONTAINING THE ALPHA
 C                      NUMERIC CHARACTERS OF THE SYMBOL.
 C
+      external alarm
       CHARACTER*6 STR
 C**
    10 J=MOD(BCDF(STR),NAMMAX-NAMEST)
@@ -7855,6 +7872,7 @@ C TPNTRX:      POINTER TO LAST TEXTIN ENTRY
       EQUIVALENCE (TPNTRX,ILTEXT(3))
 C TEXTIN:      STORAGE FOR CURRENTLY GENERATED I.L. COMMAND ARGUM.LIST
       EQUIVALENCE (TEXTIN(1),ILTEXT(5))
+      external alarm
 C*
 C ARGUMENTS    I       NAME TABLE (NAMTBL) INDEX OF ARGUMENT
 C**
@@ -7926,6 +7944,7 @@ C OPTEXT:      CONTAINS COMMAND CODE FOR CURRENT I.L. COMMAND
 C*
 C ARGUMENTS    I     INTEGER CODE FOR CURRENT I.L. COMMAND
 C**
+      external alarm
       IF(COMFIN)CALL ALARM(4,0,8,'OPCODE  ')
       OPTEXT = I
       LENGTH = 0
@@ -8293,6 +8312,7 @@ C
       DIMENSION  JLIST(11)
       CHARACTER*6 NODER,DERIV
       DATA NODER/'NODER'/,DERIV/'DERIV'/
+      external alarm
 C**
       K = STACK(1,TOP-1)
       IF(K.GT.NAMMAX)GO TO 50
@@ -8783,6 +8803,7 @@ C ICF               (205)          (210)          (215)          (220)
 C ICF               (225)          (230)          (235)
      A     9, 6, 7, 8, 6, 7, 5, 6, 6, 6, 7, 7, 6, 7, 7, 7, 8, 8,62* -1 /
 C     PRODUKTION NICHT GEFUNDEN
+      external alarm
       ERRPT=-ERRP
       IF(ERRPT.GE.0)ERRPT=-1
       IF(I.EQ.200) GOTO 999
@@ -9947,6 +9968,7 @@ C
       DATA HALL,HON,HOFF,HAT,HPS/'ALL   ','ON    ','OFF   ','AT    ',
      1     'PS    '/
       DATA HOUT,HIN,GOLO,PLOT/'OUT   ','IN    ','GOLOFT','PLOTFT'/
+      external alarm
 C*********************************************************************
       K=STACK(1,TOP-1)
       IF(INTMED.NE.1)GO TO 6052
@@ -11234,6 +11256,7 @@ C
       DATA ITBPRT/20130/
       DATA ILBPRT/20160/
       DATA HDOLPC/'$PCRTH'/
+      external alarm
 C
 C*********************************************************************
 C              SYN  PRINT POCKET  PUNCH   CALL   READ
@@ -12267,6 +12290,7 @@ C                 j   k   l   m   n   o   p   q   r
 C                 s   t   u   v   w   x   y   z
      8           40, 41, 42, 43, 44, 45, 46, 47/
 C**
+      external alarm
       IF(.NOT.DLRFLG)INLIN=0
       IF(.NOT.READFG) GO TO 110
       NUMCHR = 72
@@ -12904,6 +12928,7 @@ C      IMPLEMENTATION DEPENDENT  NAME $21T$1                       ..CD.
       DATA STRCNT /0/,ON/'ON  '/,OFF/'OFF '/
       DATA ICD21/'$21T$1'/
       DATA ZERO/'  0'/
+      external alarm
 C**
       SEQNUM=ISEQ1
       MNMBND=NUMBST
@@ -13925,6 +13950,7 @@ C
       CHARACTER*6 PPOINT
       DATA CANFLG/.FALSE./,STMTYP,CANDAT/2*0/
       DATA PPOINT /'POINT'/
+      external alarm
 C**
       INDEX=I-40
       GO TO(4100,4200,4300,4400,4500,4600,4700,4800,4900),INDEX
@@ -14384,6 +14410,7 @@ C REFSYS:      NAMTBL POINTER FOR XECUTION SUBROUTINE REFSYS
 C**
       CHARACTER*6 CNMORE
       DATA CNMORE/'NOMORE'/
+      external alarm
       EP=-1
       IF(ARGTOP-1)20,40,30
    20 EP=TOP
@@ -14518,6 +14545,7 @@ C ESTACK:      INPUT STATEMENT ERROR POSITION WHEN DETECTED IN STACK
       EQUIVALENCE (ESTACK(1),ERRPOS(103))
 C ERGSTK:      INPUT STATEMENT ERROR POSITION WHEN DETECTED IN ARGSTK
       EQUIVALENCE (ERGSTK(1),ERRPOS(203))
+      external alarm
 C**
       K = STACK(1,TOP-1)
       MAJWRD=STACK(1,TOP-3)
@@ -14630,6 +14658,7 @@ C              FOR 25 ENTRIES (4 WORDS PER ENTRY).
 C
 C...       CHECK FOR END OF TABLE
 C**
+      external alarm
       IF(MOD(ARGTOP,2).NE.0)GOTO 98
       II=ARGSTK(ARGTOP)
    10 IF(RNGPT.GE.401)GO TO 90
@@ -14760,6 +14789,7 @@ C
       DIMENSION NTBL(6)
 C NLAST:       LAST NEW BLOCK NUMBER OF NUMBER TABLE ON THE EXTERN FILE
       EQUIVALENCE (NLAST,NTBL(4))
+      external alarm
 C**
       CHARACTER*6 NAM1,NAM2,BLA*1
       INTEGER INP(20)
@@ -15636,6 +15666,7 @@ C                PATCH  SMESH  COMBIN GENCUR REVOLV RULED
 C                TRANSL SCALE  XYROT  YZROT  ZXROT
      *               83,    86,    84,    87,    98/
 C**
+      external alarm
       IRET=1
       IND=1
       IF(BIGCNT.NE.1)GOTO 10
@@ -16453,6 +16484,7 @@ C ARGUMENTS    TPX       WORKING STACK (STACK) INDEX WHICH
 C                        POINTS TO THE VARIABLE NAME OF A
 C**                      SUBSCRIPTED VARIABLE.
 C
+      external alarm
 C     GET RESULT CELL
       RSLT=GETTMP(SUBSCR)
       NAMTBL(RSLT)=TEMP(1)+SUBSCR
@@ -17253,6 +17285,7 @@ C*
       DIMENSION LOC(4),ARG(5)
       DATA DPS,BLANK,OFFSET /'DS  ','PS  ','    ',25/
       DATA SMIL /'SCON  ','SMIL  ','GOMILL','GCLEAR','INTSEC','AVCTRL'/
+      external alarm
 C**
 C     PREPARE MODES AND PERMANENT IDENTIFIERS OF THE ARGSTK ARGUMENTS
 C          AND MOVE THEM TO STACK(2,TOP+1) AND HIGHER ADDR.
@@ -17712,6 +17745,7 @@ C                        ARGUMENT J.  COULD BE A NAME
 C                        TABLE (NAMTBL) INDEX OF NUMBER.
 C              J         NAME TABLE (NAMTBL) INDEX OF
 C**                      ARGUMENT.
+      external alarm
       IF (COMFIN) GOTO 10
       IERROR=3
       GO TO 90

@@ -16,7 +16,7 @@ AC_PROG_F77
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-                 src/loadcomp/Makefile 
+                 src/loadcomp/Makefile
 		 src/Makefile src/include/Makefile])
 AC_OUTPUT
 AM_INIT_AUTOMAKE
