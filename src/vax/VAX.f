@@ -53,23 +53,28 @@ C
       END
 **** SOURCE FILE : CPUTIM.ORG   ***
 *
-      integer*4 function cputim
-      integer*2 w_len1,w_cod1
-      integer*4 l_add1,l_lenadd1
-      integer*4 status,sys$getjpi
-      parameter (jpi$_cputim='0407'X)
-      common/jpi_params/w_len1,w_cod1,l_add1,l_lenadd1
-      data w_len1,w_cod1/4,jpi$_cputim/
-      data l_lenadd1/0/,istart/0/
-      l_add1=%loc(cputim)
-      status=sys$getjpi(,,,w_len1,,,)
-      if(.not.status)then
-            write(6,*)'*** Error in getting cpu time ***'
-            cputim=0
-            return
-      end if
-      return
-      end
+c original code in this source file lower-case; made 
+c upper-case to distinguish my changes
+c     INTEGER*4 FUNCTION CPUTIM
+c     INTEGER*2 W_LEN1,W_COD1
+c     INTEGER*4 L_ADD1,L_LENADD1
+c      INTEGER*4 STATUS,SYS$GETJPI
+c     integer*4 sys$getjpi
+c     logical status
+c     PARAMETER (JPI$_CPUTIM='0407'X)
+c     COMMON/JPI_PARAMS/W_LEN1,W_COD1,L_ADD1,L_LENADD1
+c     DATA W_LEN1,W_COD1/4,JPI$_CPUTIM/
+c     DATA L_LENADD1/0/,ISTART/0/
+c      L_ADD1=%LOC(CPUTIM)
+c      STATUS=SYS$GETJPI(,,,W_LEN1,,,)
+c     status =0
+c     IF(.NOT.STATUS)THEN
+c           WRITE(6,*)'*** ERROR IN GETTING CPU TIME ***'
+c           CPUTIM=0
+c           RETURN
+c     END IF
+c     RETURN
+c     END
 **** SOURCE FILE : FILOPN00.ORG   ***
 *
 *
@@ -124,9 +129,14 @@ C
       CHARACTER*80 DARRAY
       DATA DARRAY/' '/
 C
-      OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
-     1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
-     2      FORM=FILFMT(NO),RECL=RL(NO))
+c     gfortran doesn't like an option in this open statement
+c      OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
+c     1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
+c     2      FORM=FILFMT(NO),RECL=RL(NO))
+      open (unit=u(no),file=filnam(no),iostat=iret,err=90,
+c     1      status=opstat(no),access=filacc(no),
+     1      access=filacc(no),
+     2      form=filfmt(no),recl=rl(no))
 C
       RETURN
 C
@@ -399,7 +409,376 @@ C.....APTLIB DOES NOT EXIST
       RETURN
       END
 **** SOURCE FILE : M0002726.W02   ***
+c moved this function to an external function to remove compile error
 *
+C
+C
+C.....FORTRAN INTEGER FUNCTION  ...APT211    8/68              HG,DE,PH
+C
+C.....MODIFIED FOR VAX 11 IMPLEMENTATION   02.06.82   E.MCLELLAN
+C
+C.....MODIFICATION TO PERMIT RESTART PROCEDURE USING
+C     VAX CONDITION HANDLING FACILITIES
+C
+C
+c      INTEGER FUNCTION APT211(ADRESS,HDRECT,IAEEE)
+cC
+c      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
+c      DIMENSION ADRESS(*)
+cC
+c      INCLUDE 'TOTAL.INC'
+c      INCLUDE 'DSHAR4.INC'
+c      INCLUDE 'FXCOR.INC'
+c      INCLUDE 'HOLRTH.INC'
+c      INCLUDE 'SV.INC'
+c      INCLUDE 'ZNUMBR.INC'
+c      INCLUDE 'LDEF.INC'
+c      INCLUDE 'ISV.INC'
+c      INCLUDE 'IFXCOR.INC'
+c      INCLUDE 'KNUMBR.INC'
+cC
+cC...            SYSTEM I/O FILE NAMES
+cC
+c      INCLUDE 'SYMFIL.INC'
+cC
+c      CHARACTER*8 TEST,HNOCS
+c      INTEGER BCDF,TDS(2)
+c      LOGICAL FIRST
+c      SAVE FIRST,HOLDPP,TDS
+c      CHARACTER*8 HOLRTH(6)
+c      EQUIVALENCE (HOLRTH(1),HLFT)
+cC
+c      INTEGER Z4E
+c      PARAMETER (Z4E=1308622848)
+c      INTEGER HOLDPP
+c      DIMENSION HOLDPP(8)
+cC
+c      COMMON /HOLD/ JHLDFG,ITHCNT,ITABH(100)
+c      COMMON /HSAVE/ SAVEH(50)
+c      COMMON/SQNC/ LSEQNO
+cC
+cC++++ FLAG TO ALLOW A SECOND TRY WITHOUT CHECKING TA TO OVERCOME
+cC++++ ERROR 20106
+c      INTEGER I20106
+cC
+cC
+c      LOGICAL KCS
+cC
+c      INCLUDE 'BLANKCOM.INC'
+cC
+c      DIMENSION MODTYP(3,6)
+c      DIMENSION CSSAVE(10)
+cC
+c      DATA HOLDPP/0,0,Z4E,1,Z4E,1,Z4E,1/
+c      DATA HNOCS/'NOCS    '/
+c      DATA MODTYP/1,2,3,2,1,3,6*4,1,2,3,2,1,3/
+c      DATA ZLIT2/.0349D0/
+c      DATA FIRST/.TRUE./
+cC
+c      IF (FIRST)THEN
+c        HOLDPP(1) = BCDF('HOLD')
+c        HOLDPP(2) = BCDF('PP  ')
+c        TDS(1) = BCDF(HDS(1:4))
+c        TDS(2) = BCDF(HDS(5:8))
+c        FIRST=.FALSE.
+c      ENDIF
+cC
+c      CALL HOLFRM(HDRECT,TEST,1,8,NWD)
+c      IF (IAEEE .EQ. 1) GO TO 8010
+c      IF(IAERR.EQ.1) GO TO 1000
+c      IF(TEST.EQ.HNOCS) GO TO 8000
+c      IF(IGOTO+ICTDEF)1,1,3000
+c    1 DO 4001 I=1,6
+c      IF(TEST.EQ.HOLRTH(I)) GO TO 4002
+c 4001 CONTINUE
+c      CALL AERR(20104,'APT211  ')
+c      GO TO 1000
+c 4002 ISAV=I
+c      IF(.NOT.JDS)GO TO 4000
+c      KSEQNO = LSEQNO
+c      LSEQNO = JSEQNO
+c      KCSCNT=ICSCNT
+c      KCS=JCS
+c      LSAV=ISFTYP(IDS)
+c      ISFTYP(IDS)=MSAV
+c      ICSCNT=0
+c      KIPL=IPL(ICS)
+c      KLMFL=LIMFL(ICS)
+c      KUNFL=IUNFL(ICS)
+c      KFIDN=ISFIDN(ICS)
+c      KSTYP=ISFTYP(ICS)
+c      KTLON=ITLON(ICS)
+c      SPAST=PAST(ICS)
+c      KCAN=ICANON(ICS)
+c      KFL4=IFL4(ICS)
+c      KFAR=IFAR(ICS)
+c      DO 1530 IIT = 1,10
+c 1530 CSSAVE(IIT) = CANON(IIT+20)
+c      CALL APT200(TDS,ADRESS,Z1)
+c      IF(IAERR.NE.0)GO TO 1000
+c      IF(MOTMOD.EQ.0)GO TO 4004
+c      ISFTYP(ICS)=MODTYP(MOTMOD,ISAV)
+c      IF(ISFTYP(ICS).EQ.2) PAST(ICS)=-K1
+c      IS=IDS
+c      GO TO 9200
+c 4000 MODFER=TEST
+c      IGO=ISAV
+c      MSAV=ISFTYP(IDS)
+c      IS=IDS
+c      CALL APT234(TDS,ADRESS)
+c      IF(IAERR.NE.0)GO TO 1000
+c      IF(JCS)GO TO 9200
+c      JSEQNO = LSEQNO
+c      JDS=.TRUE.
+cC     INTEG.ON EXFILE DP. 1ST WD UNNORM POWER,2ND INTEG VALUE
+c      NR=0
+c      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
+c      JHLDFG=1
+c      GO TO 9999
+c 4004 CALL AERR(20109,'APT211  ')
+c      GO TO 1000
+c 9200 CALL APT235
+c      IF(IAERR)6000,6000,1000
+c 6000 CALL APT240 (NUMDIM)
+c   14 ICL = K2
+c      NW = 0
+c   19 IF (CUTDAT(6).EQ.0.)GO TO 32
+c      NUMDIM = K1
+c      GO TO 32
+c   72 CALL APT236
+c      IF(IAERR.NE.0)GO TO 4006
+c      IF(JDS)GO TO 4005
+c 4006 CONTINUE
+c      JHLDFG=0
+c      ITHCNT=1
+c      JCS=.FALSE.
+c      JDS=.FALSE.
+c      GO TO 9999
+c 4005 JCS=KCS
+c      JHLDFG=0
+c      GO TO 9500
+c 9600 CONTINUE
+c      NR=0
+c      HOLDPP(8)=K2
+c      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
+c      HOLDPP(8)=K1
+c      ISFTYP(IDS)=LSAV
+c      LSEQNO = KSEQNO
+c      IF(.NOT.JCS)GO TO 4000
+c      IPL(ICS)=KIPL
+c      LIMFL(ICS)=KLMFL
+c      ISFIDN(ICS)=KFIDN
+c      ISFTYP(ICS)=KSTYP
+c      ITLON(ICS)=KTLON
+c      PAST(ICS)=SPAST
+c      ICANON(ICS)=KCAN
+c      IFL4(ICS)=KFL4
+c      IFAR(ICS)=KFAR
+c      ICSCNT=KCSCNT
+c      JDS=.FALSE.
+c      DO 1531 IIT = 1,10
+c 1531 CANON(IIT+20) = CSSAVE(IIT)
+c      GO TO 4000
+c   32 J6 = 0
+c      IS=IPS
+cC  INITIALIZE VARIABLES FOR AMIND
+c   33 IF (JENT(IS)) 301,302,301
+c  301 JTN(IS) = K0
+c      IOPSET(IS)=0
+c      JU1(IS)=0
+c      JIOPS(IS)=0
+c  302 JAP = K1
+c  201 CALL AMIND
+c      IF(IAERR)1000,2000,1000
+c 2000 IF(IPL(IS))141,140,141
+c  141 IF(S(IS))142,39,143
+c  142 IF (S(IS)-TAU2(IS)+1.D-4) 36,39,39
+c  143 IF (S(IS)-TAU1(IS)-1.D-4) 39,39,36
+c  140 IF(RC(IS)*S(IS))34,39,35
+c   34 IF(DABS(S(IS))-Z9EM1*TAU(IS)-1.D-4) 39,39,36
+c   35 IF(DABS(S(IS))-EPS1(IS)-1.D-2) 39,39,36
+c   36 GO TO(505,508,504,204),JAP
+c  505 IF (IPL(IS)) 506,202,506
+c  202 IF (ISFTYP(IS)-K3) 504,507,504
+c  504 RC(IS)=-RC(IS)
+c      JAP = JAP + K1
+c      GO TO 201
+c  506 IF (TH(IS)) 510,510,204
+c  507 JAP = K4
+c  203 Z(IS)=-Z(IS)
+c      GO TO 201
+c  510 IF (IAFL(IS)) 507,511,507
+c  511 JENT(IS)= -K1
+c      JAP = K4
+c      GO TO 201
+c  508 IF (TH(IS)) 509,204,204
+c  509 JAP = JAP + K1
+c      GO TO 203
+c  204 IF(J6)38,37,38
+cC  CUTTER NOT WITHIN TOLERANCE OF DRIVE SURFACE AT START OF CUT SEQUENCE
+c   38 CALL AERR (20102,'APT211  ')
+c      GO TO 1000
+cC  CUTTER NOT WITHIN TOLERANCE OF PART SURFACE AT START OF CUT SEQUENCE
+c   37 CALL AERR (20103,'APT211  ')
+c      GO TO 1000
+c   40 J6=K1
+c      IS=IDS
+c      GO TO 33
+c   39 IF (JAP-K1) 480,481,480
+c  480 TPK(1,IS)=TP(1,IS)
+c      TPK(2,IS)=TP(2,IS)
+c      TPK(3,IS)=TP(3,IS)
+c      SNK(1,IS)=SN(1,IS)
+c      SNK(2,IS)=SN(2,IS)
+c      SNK(3,IS)=SN(3,IS)
+c      SK(1,IS) = S(IS)
+c  481 IF(J6)41,40,41
+cC  DETERMINE GENERAL DIRECTION OF FIRST CUT VECTOR AND STORE IN FWD
+c   41 DO 42 K=1,3
+c   42 FWD(K)=TE(K)-TEK(K)
+c 2001 CALL VNORM(FWD,FWD)
+cC  IGO =1 IF LFT, =2 IF RGT, =3 IF FWD, =4 IF BACK, =5 IF UP, =6 IF DOWN
+cC  RELATIVE TO LAST COMMAND
+c      IF(K4-IGO)43,45,45
+c   43 DO 44 K=1,3
+c   44 FWD(K)=TA(K)
+c      GO TO 50
+c   45 CALL CROSS(FWD,TA,FWD)
+c      CALL VNORM(FWD,FWD)
+c      IF (VTEM.GT.Z1EM6)GO TO 48
+c   46 CALL CROSS(PMOVE,TA,FWD)
+c      CALL VNORM(FWD,FWD)
+c      IF(IER)47,48,47
+cC  FWD DIRECTION CANNOT BE DETERMINED
+c   47 CALL AERR (20105,'APT211  ')
+c      GO TO 1000
+c   48 IF(K3-IGO)49,49,50
+c   49 CALL CROSS(TA,FWD,FWD)
+c      CALL VNORM(FWD,FWD)
+c      IF(IER)147,50,147
+c  147 GO TO 47
+c   50 GO TO (52,54,54,52,54,52),IGO
+c   52 DO 53 K=1,3
+c   53 FWD(K)=-FWD(K)
+cC  CALCULATE TI VECTOR PERPENDICULAR TO BOTH PART AND DRIVE SURFACE
+cC  NORMALS
+c   54 CALL CROSS(SN(1,IPS),SN(1,IDS),TI)
+c      CALL VNORM(TI,TI)
+c      IF(IER)58,60,58
+c   58 DO 59 K=1,3
+c   59 TI(K)=FWD(K)
+c      GO TO 67
+cC  TI VECTOR AND FWD VECTOR SHOULD NOT BE ORTHOGONAL. IF SO CALL AERR
+c   60 TEM(1)= TI(1)*FWD(1) +TI(2)*FWD(2)+TI(3)*FWD(3)
+c      IF(DABS(TEM(1)) - ZLIT2) 64,64,63
+c   64 IF (I20106.EQ.0) THEN
+cC++++ HAVE SECOND TRY WITHOUT CHECKING TA TO AVOID ERROR 20106
+c        I20106=1
+c        CALL OUTMSG('*** WARNING: ERROR 20106 IN APT201 ***')
+c        CALL OUTMSG('*** TRY WITHOUT CHECKING TA        ***')
+c        DO 641 K=1,3
+c          FWD(K)=TE(K)-TEK(K)
+c  641   CONTINUE
+c        CALL VNORM(FWD,FWD)
+c        GOTO 50
+c      ELSE
+c        CALL AERR (20106,'APT211  ')
+c        GO TO 1000
+c      ENDIF
+c   63 IF(TEM(1)) 65,65,67
+c   65 DO 66 K=1,3
+c   66 TI(K)=-TI(K)
+c   67 IF(NUMDIM)68,68,73
+cC  ICSCNT = NUMBER OF CHECK SURFACES. IF MORE THAN ONE CHECK SURFACE 3D
+cC  ROUTES USED
+c 68   CONTINUE
+c  168 IF(I3DFLG-K1)130,73,130
+c  130 IF(ICSCNT-K2)69,73,73
+cC  IF THICKNESS OF PART, DRIVE, AND CHECK SURFACE NOT ZERO 3D ROUTES
+cC  FOLLOWED
+c   69 IF(TH(IPS))173,70,173
+c  173 GO TO 73
+c   70 IF(TH(IDS))174,71,174
+c  174 GO TO 73
+c   71 IF(TH(ICS))73,76,73
+c   73 CONTINUE
+cC  ENTRY FOR 3D CALCULATIONS
+c  732 CALL ARLM3
+c      APT211=TEMP(1)+0.5
+c  101 IF(IAERR)1000,72,1000
+c   76 IS=ICS
+c      IF(ISFIDN(IDS)-K3)80,86,86
+c   80 IF(ISFIDN(ICS)-K3)82,81,81
+cC  LINE TO LINE CASE
+c   82 JBR=K3
+c      GO TO 83
+cC  CIRCLE TO LINE OR CIRCLE TO CIRCLE CASE
+c   86 JBR=K1
+cC  ENTRY FOR 2D CALCULATIONS
+c   83 CALL ARLM2
+c      APT211=Z1
+c      GO TO 101
+cC  LINE TO CIRCLE CASE
+c   81 JBR=K2
+c      GOTO83
+c 6001 IF(IGOTO)3001,3001,3002
+c 3001 CALL AERR (20107,'APT211  ')
+c      GO TO 1000
+c 3002 CALL AERR (20108,'APT211  ')
+c 1000 CONTINUE
+c 6002 APT211=Z1
+c      GO TO 72
+c 3000 IF(ISRCH)6001,6001,6002
+c 9999 CONTINUE
+c      RETURN
+c 9500 JJ=0
+c 9510 JJ=JJ+1
+c      IF(JJ.EQ.ITHCNT) GO TO 9590
+c      KK=ITABH(JJ)
+c      GO TO (9510,9510,9510,9504,9505,9506,9507,9508,9509,
+c     C 9550,9511,9512,9513),KK
+c 9504 CALL TOLERH
+c      GO TO 9510
+c 9505 CALL CUTTEH
+c      GO TO 9510
+c 9506 CALL CUTH
+c      GO TO 9510
+c 9507 CALL DNTCUH
+c      GO TO 9510
+c 9508 CALL INTOLH
+c      GO TO 9510
+c 9509 CALL OUTTOH
+c      GO TO 9510
+c 9550 CALL MAXDPH
+c      GO TO 9510
+c 9511 CALL INDRVH
+c      GO TO 9510
+c 9512 CALL INDRPH
+c      GO TO 9510
+c 9513 CALL THICKH
+c      GO TO 9510
+c 9590 ITHCNT=1
+c      IF(IAEEE.EQ.1) GO TO 8020
+c      GO TO 9600
+c 8000 KSEQNO = LSEQNO
+c      LSEQNO = JSEQNO
+c      CALL APT235
+c      IAEEE = 1
+c      CALL AERR(20110,'APT211  ')
+c 8010 IAERR = 0
+c      GO TO 9500
+c 8020 IAERR = 1
+c      NR = 0
+c      HOLDPP(8) = K2
+c      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
+c      HOLDPP(8) = K1
+c      LSEQNO = KSEQNO
+cC....   RETURN TO CALLER
+c      GO TO 1000
+c      END
+c
+
+
 C
 C.....FORTRAN INTEGER FUNCTION  ...APT201
 C
@@ -427,371 +806,6 @@ C...REVERT TO DEFAULT CONDITION HANDLER
       END
 C
 C
-C
-C
-C.....FORTRAN INTEGER FUNCTION  ...APT211    8/68              HG,DE,PH
-C
-C.....MODIFIED FOR VAX 11 IMPLEMENTATION   02.06.82   E.MCLELLAN
-C
-C.....MODIFICATION TO PERMIT RESTART PROCEDURE USING
-C     VAX CONDITION HANDLING FACILITIES
-C
-C
-      INTEGER FUNCTION APT211(ADRESS,HDRECT,IAEEE)
-C
-      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION(O-Z)
-      DIMENSION ADRESS(*)
-C
-      INCLUDE 'TOTAL.INC'
-      INCLUDE 'DSHAR4.INC'
-      INCLUDE 'FXCOR.INC'
-      INCLUDE 'HOLRTH.INC'
-      INCLUDE 'SV.INC'
-      INCLUDE 'ZNUMBR.INC'
-      INCLUDE 'LDEF.INC'
-      INCLUDE 'ISV.INC'
-      INCLUDE 'IFXCOR.INC'
-      INCLUDE 'KNUMBR.INC'
-C
-C...            SYSTEM I/O FILE NAMES
-C
-      INCLUDE 'SYMFIL.INC'
-C
-      CHARACTER*8 TEST,HNOCS
-      INTEGER BCDF,TDS(2)
-      LOGICAL FIRST
-      SAVE FIRST,HOLDPP,TDS
-      CHARACTER*8 HOLRTH(6)
-      EQUIVALENCE (HOLRTH(1),HLFT)
-C
-      INTEGER Z4E
-      PARAMETER (Z4E=1308622848)
-      INTEGER HOLDPP
-      DIMENSION HOLDPP(8)
-C
-      COMMON /HOLD/ JHLDFG,ITHCNT,ITABH(100)
-      COMMON /HSAVE/ SAVEH(50)
-      COMMON/SQNC/ LSEQNO
-C
-C++++ FLAG TO ALLOW A SECOND TRY WITHOUT CHECKING TA TO OVERCOME
-C++++ ERROR 20106
-      INTEGER I20106
-C
-C
-      LOGICAL KCS
-C
-      INCLUDE 'BLANKCOM.INC'
-C
-      DIMENSION MODTYP(3,6)
-      DIMENSION CSSAVE(10)
-C
-      DATA HOLDPP/0,0,Z4E,1,Z4E,1,Z4E,1/
-      DATA HNOCS/'NOCS    '/
-      DATA MODTYP/1,2,3,2,1,3,6*4,1,2,3,2,1,3/
-      DATA ZLIT2/.0349D0/
-      DATA FIRST/.TRUE./
-C
-      IF (FIRST)THEN
-        HOLDPP(1) = BCDF('HOLD')
-        HOLDPP(2) = BCDF('PP  ')
-        TDS(1) = BCDF(HDS(1:4))
-        TDS(2) = BCDF(HDS(5:8))
-        FIRST=.FALSE.
-      ENDIF
-C
-      CALL HOLFRM(HDRECT,TEST,1,8,NWD)
-      IF (IAEEE .EQ. 1) GO TO 8010
-      IF(IAERR.EQ.1) GO TO 1000
-      IF(TEST.EQ.HNOCS) GO TO 8000
-      IF(IGOTO+ICTDEF)1,1,3000
-    1 DO 4001 I=1,6
-      IF(TEST.EQ.HOLRTH(I)) GO TO 4002
- 4001 CONTINUE
-      CALL AERR(20104,'APT211  ')
-      GO TO 1000
- 4002 ISAV=I
-      IF(.NOT.JDS)GO TO 4000
-      KSEQNO = LSEQNO
-      LSEQNO = JSEQNO
-      KCSCNT=ICSCNT
-      KCS=JCS
-      LSAV=ISFTYP(IDS)
-      ISFTYP(IDS)=MSAV
-      ICSCNT=0
-      KIPL=IPL(ICS)
-      KLMFL=LIMFL(ICS)
-      KUNFL=IUNFL(ICS)
-      KFIDN=ISFIDN(ICS)
-      KSTYP=ISFTYP(ICS)
-      KTLON=ITLON(ICS)
-      SPAST=PAST(ICS)
-      KCAN=ICANON(ICS)
-      KFL4=IFL4(ICS)
-      KFAR=IFAR(ICS)
-      DO 1530 IIT = 1,10
- 1530 CSSAVE(IIT) = CANON(IIT+20)
-      CALL APT200(TDS,ADRESS,Z1)
-      IF(IAERR.NE.0)GO TO 1000
-      IF(MOTMOD.EQ.0)GO TO 4004
-      ISFTYP(ICS)=MODTYP(MOTMOD,ISAV)
-      IF(ISFTYP(ICS).EQ.2) PAST(ICS)=-K1
-      IS=IDS
-      GO TO 9200
- 4000 MODFER=TEST
-      IGO=ISAV
-      MSAV=ISFTYP(IDS)
-      IS=IDS
-      CALL APT234(TDS,ADRESS)
-      IF(IAERR.NE.0)GO TO 1000
-      IF(JCS)GO TO 9200
-      JSEQNO = LSEQNO
-      JDS=.TRUE.
-C     INTEG.ON EXFILE DP. 1ST WD UNNORM POWER,2ND INTEG VALUE
-      NR=0
-      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
-      JHLDFG=1
-      GO TO 9999
- 4004 CALL AERR(20109,'APT211  ')
-      GO TO 1000
- 9200 CALL APT235
-      IF(IAERR)6000,6000,1000
- 6000 CALL APT240 (NUMDIM)
-   14 ICL = K2
-      NW = 0
-   19 IF (CUTDAT(6).EQ.0.)GO TO 32
-      NUMDIM = K1
-      GO TO 32
-   72 CALL APT236
-      IF(IAERR.NE.0)GO TO 4006
-      IF(JDS)GO TO 4005
- 4006 CONTINUE
-      JHLDFG=0
-      ITHCNT=1
-      JCS=.FALSE.
-      JDS=.FALSE.
-      GO TO 9999
- 4005 JCS=KCS
-      JHLDFG=0
-      GO TO 9500
- 9600 CONTINUE
-      NR=0
-      HOLDPP(8)=K2
-      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
-      HOLDPP(8)=K1
-      ISFTYP(IDS)=LSAV
-      LSEQNO = KSEQNO
-      IF(.NOT.JCS)GO TO 4000
-      IPL(ICS)=KIPL
-      LIMFL(ICS)=KLMFL
-      ISFIDN(ICS)=KFIDN
-      ISFTYP(ICS)=KSTYP
-      ITLON(ICS)=KTLON
-      PAST(ICS)=SPAST
-      ICANON(ICS)=KCAN
-      IFL4(ICS)=KFL4
-      IFAR(ICS)=KFAR
-      ICSCNT=KCSCNT
-      JDS=.FALSE.
-      DO 1531 IIT = 1,10
- 1531 CANON(IIT+20) = CSSAVE(IIT)
-      GO TO 4000
-   32 J6 = 0
-      IS=IPS
-C  INITIALIZE VARIABLES FOR AMIND
-   33 IF (JENT(IS)) 301,302,301
-  301 JTN(IS) = K0
-      IOPSET(IS)=0
-      JU1(IS)=0
-      JIOPS(IS)=0
-  302 JAP = K1
-  201 CALL AMIND
-      IF(IAERR)1000,2000,1000
- 2000 IF(IPL(IS))141,140,141
-  141 IF(S(IS))142,39,143
-  142 IF (S(IS)-TAU2(IS)+1.D-4) 36,39,39
-  143 IF (S(IS)-TAU1(IS)-1.D-4) 39,39,36
-  140 IF(RC(IS)*S(IS))34,39,35
-   34 IF(DABS(S(IS))-Z9EM1*TAU(IS)-1.D-4) 39,39,36
-   35 IF(DABS(S(IS))-EPS1(IS)-1.D-2) 39,39,36
-   36 GO TO(505,508,504,204),JAP
-  505 IF (IPL(IS)) 506,202,506
-  202 IF (ISFTYP(IS)-K3) 504,507,504
-  504 RC(IS)=-RC(IS)
-      JAP = JAP + K1
-      GO TO 201
-  506 IF (TH(IS)) 510,510,204
-  507 JAP = K4
-  203 Z(IS)=-Z(IS)
-      GO TO 201
-  510 IF (IAFL(IS)) 507,511,507
-  511 JENT(IS)= -K1
-      JAP = K4
-      GO TO 201
-  508 IF (TH(IS)) 509,204,204
-  509 JAP = JAP + K1
-      GO TO 203
-  204 IF(J6)38,37,38
-C  CUTTER NOT WITHIN TOLERANCE OF DRIVE SURFACE AT START OF CUT SEQUENCE
-   38 CALL AERR (20102,'APT211  ')
-      GO TO 1000
-C  CUTTER NOT WITHIN TOLERANCE OF PART SURFACE AT START OF CUT SEQUENCE
-   37 CALL AERR (20103,'APT211  ')
-      GO TO 1000
-   40 J6=K1
-      IS=IDS
-      GO TO 33
-   39 IF (JAP-K1) 480,481,480
-  480 TPK(1,IS)=TP(1,IS)
-      TPK(2,IS)=TP(2,IS)
-      TPK(3,IS)=TP(3,IS)
-      SNK(1,IS)=SN(1,IS)
-      SNK(2,IS)=SN(2,IS)
-      SNK(3,IS)=SN(3,IS)
-      SK(1,IS) = S(IS)
-  481 IF(J6)41,40,41
-C  DETERMINE GENERAL DIRECTION OF FIRST CUT VECTOR AND STORE IN FWD
-   41 DO 42 K=1,3
-   42 FWD(K)=TE(K)-TEK(K)
- 2001 CALL VNORM(FWD,FWD)
-C  IGO =1 IF LFT, =2 IF RGT, =3 IF FWD, =4 IF BACK, =5 IF UP, =6 IF DOWN
-C  RELATIVE TO LAST COMMAND
-      IF(K4-IGO)43,45,45
-   43 DO 44 K=1,3
-   44 FWD(K)=TA(K)
-      GO TO 50
-   45 CALL CROSS(FWD,TA,FWD)
-      CALL VNORM(FWD,FWD)
-      IF (VTEM.GT.Z1EM6)GO TO 48
-   46 CALL CROSS(PMOVE,TA,FWD)
-      CALL VNORM(FWD,FWD)
-      IF(IER)47,48,47
-C  FWD DIRECTION CANNOT BE DETERMINED
-   47 CALL AERR (20105,'APT211  ')
-      GO TO 1000
-   48 IF(K3-IGO)49,49,50
-   49 CALL CROSS(TA,FWD,FWD)
-      CALL VNORM(FWD,FWD)
-      IF(IER)147,50,147
-  147 GO TO 47
-   50 GO TO (52,54,54,52,54,52),IGO
-   52 DO 53 K=1,3
-   53 FWD(K)=-FWD(K)
-C  CALCULATE TI VECTOR PERPENDICULAR TO BOTH PART AND DRIVE SURFACE
-C  NORMALS
-   54 CALL CROSS(SN(1,IPS),SN(1,IDS),TI)
-      CALL VNORM(TI,TI)
-      IF(IER)58,60,58
-   58 DO 59 K=1,3
-   59 TI(K)=FWD(K)
-      GO TO 67
-C  TI VECTOR AND FWD VECTOR SHOULD NOT BE ORTHOGONAL. IF SO CALL AERR
-   60 TEM(1)= TI(1)*FWD(1) +TI(2)*FWD(2)+TI(3)*FWD(3)
-      IF(DABS(TEM(1)) - ZLIT2) 64,64,63
-   64 IF (I20106.EQ.0) THEN
-C++++ HAVE SECOND TRY WITHOUT CHECKING TA TO AVOID ERROR 20106
-        I20106=1
-        CALL OUTMSG('*** WARNING: ERROR 20106 IN APT201 ***')
-        CALL OUTMSG('*** TRY WITHOUT CHECKING TA        ***')
-        DO 641 K=1,3
-          FWD(K)=TE(K)-TEK(K)
-  641   CONTINUE
-        CALL VNORM(FWD,FWD)
-        GOTO 50
-      ELSE
-        CALL AERR (20106,'APT211  ')
-        GO TO 1000
-      ENDIF
-   63 IF(TEM(1)) 65,65,67
-   65 DO 66 K=1,3
-   66 TI(K)=-TI(K)
-   67 IF(NUMDIM)68,68,73
-C  ICSCNT = NUMBER OF CHECK SURFACES. IF MORE THAN ONE CHECK SURFACE 3D
-C  ROUTES USED
- 68   CONTINUE
-  168 IF(I3DFLG-K1)130,73,130
-  130 IF(ICSCNT-K2)69,73,73
-C  IF THICKNESS OF PART, DRIVE, AND CHECK SURFACE NOT ZERO 3D ROUTES
-C  FOLLOWED
-   69 IF(TH(IPS))173,70,173
-  173 GO TO 73
-   70 IF(TH(IDS))174,71,174
-  174 GO TO 73
-   71 IF(TH(ICS))73,76,73
-   73 CONTINUE
-C  ENTRY FOR 3D CALCULATIONS
-  732 CALL ARLM3
-      APT211=TEMP(1)+0.5
-  101 IF(IAERR)1000,72,1000
-   76 IS=ICS
-      IF(ISFIDN(IDS)-K3)80,86,86
-   80 IF(ISFIDN(ICS)-K3)82,81,81
-C  LINE TO LINE CASE
-   82 JBR=K3
-      GO TO 83
-C  CIRCLE TO LINE OR CIRCLE TO CIRCLE CASE
-   86 JBR=K1
-C  ENTRY FOR 2D CALCULATIONS
-   83 CALL ARLM2
-      APT211=Z1
-      GO TO 101
-C  LINE TO CIRCLE CASE
-   81 JBR=K2
-      GOTO83
- 6001 IF(IGOTO)3001,3001,3002
- 3001 CALL AERR (20107,'APT211  ')
-      GO TO 1000
- 3002 CALL AERR (20108,'APT211  ')
- 1000 CONTINUE
- 6002 APT211=Z1
-      GO TO 72
- 3000 IF(ISRCH)6001,6001,6002
- 9999 CONTINUE
-      RETURN
- 9500 JJ=0
- 9510 JJ=JJ+1
-      IF(JJ.EQ.ITHCNT) GO TO 9590
-      KK=ITABH(JJ)
-      GO TO (9510,9510,9510,9504,9505,9506,9507,9508,9509,
-     C 9550,9511,9512,9513),KK
- 9504 CALL TOLERH
-      GO TO 9510
- 9505 CALL CUTTEH
-      GO TO 9510
- 9506 CALL CUTH
-      GO TO 9510
- 9507 CALL DNTCUH
-      GO TO 9510
- 9508 CALL INTOLH
-      GO TO 9510
- 9509 CALL OUTTOH
-      GO TO 9510
- 9550 CALL MAXDPH
-      GO TO 9510
- 9511 CALL INDRVH
-      GO TO 9510
- 9512 CALL INDRPH
-      GO TO 9510
- 9513 CALL THICKH
-      GO TO 9510
- 9590 ITHCNT=1
-      IF(IAEEE.EQ.1) GO TO 8020
-      GO TO 9600
- 8000 KSEQNO = LSEQNO
-      LSEQNO = JSEQNO
-      CALL APT235
-      IAEEE = 1
-      CALL AERR(20110,'APT211  ')
- 8010 IAERR = 0
-      GO TO 9500
- 8020 IAERR = 1
-      NR = 0
-      HOLDPP(8) = K2
-      CALL EWRITE(EXFILE,NR,HOLDPP,8,IR)
-      HOLDPP(8) = K1
-      LSEQNO = KSEQNO
-C....   RETURN TO CALLER
-      GO TO 1000
-      END
 **** SOURCE FILE : M0002827.W01   ***
 *
 C
@@ -1843,7 +1857,7 @@ C
       INCLUDE 'IFXCOR.INC'
 C
       DIMENSION ADRESS(*)
-      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
+c      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
 C-IBM-      CALL APT241
       IF(IAERR.EQ.1)GO TO 10
 C-VAX-ESTABLISH CONDITION HANDLER
@@ -1871,7 +1885,8 @@ C-VAX- REVERT TO DEFAULT CONDITION HANDLER
 *              X  VARIABLE WHOSE ADDRESS IS TO BE RETURNED
 *
       DOUBLE PRECISION X
-      ADDRSS=%LOC(X)
+c      ADDRSS=%LOC(X)
+      addrss=loc(x)
 C
       RETURN
       END
@@ -1893,12 +1908,14 @@ C
 C
       INTEGER FUNCTION HANDL(S,M)
       INTEGER S(3),M(5)
-      INCLUDE 'SYS$LIBRARY:SIGDEF'
+c      INCLUDE 'SYS$LIBRARY:SIGDEF'
       HANDL=SS$_RESIGNAL
       IF (S(2).EQ.SS$_UNWIND) THEN
       RETURN
       END IF
-      CALL SYS$UNWIND(,)
+c      CALL SYS$UNWIND(,)
+c   i don't know what to replace this with right now, so..
+      call abort
       RETURN
       END
 **** SOURCE FILE : OUTSET00.ORG   ***
@@ -1924,47 +1941,98 @@ C
 C
 C...BYTE VARIABLES IN THIS VAX IMPLEMENTATION MIGHT BE ABLE TO BE LOGICA
 C...ON OTHER SYSTEMS
-      BYTE PUNCOD(128)
-      BYTE NAS943(128),ISO(128),ASCII(128)
+c      BYTE PUNCOD(128)
+      integer*8 puncod(128)
+c      BYTE NAS943(128),ISO(128),ASCII(128)
+      integer*8 nas943(128),iso(128),ascii(128)
 *
 ******  NAS943 ODD PARITY COLUMN BINARY
 *
-      DATA NAS943/
+      data nas943/
 *      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F
-     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z3E,ZEE,ZEE,ZEE,Z80,ZEE,ZEE,
-     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
-     2Z10,ZEE,ZEE,Z7F,Z80,Z0B,Z70,ZEE,Z0B,Z2A,Z3E,Z70,Z3B,Z40,Z6B,Z31,
-     3Z20,Z01,Z02,Z13,Z04,Z15,Z16,Z07,Z08,Z19,Z7C,Z7A,ZEE,Z7F,ZEE,ZEE,
-     4Z0E,Z61,Z62,Z73,Z64,Z75,Z76,Z67,Z68,Z79,Z51,Z52,Z43,Z54,Z45,Z46,
-     5Z57,Z58,Z49,Z32,Z23,Z34,Z25,Z26,Z37,Z38,Z29,ZEE,ZEE,ZEE,ZEE,ZEE,
-     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
-     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE/
+c     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z3E,ZEE,ZEE,ZEE,Z80,ZEE,ZEE,
+     *z'00',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'3e',z'ee'
+     *,z'ee',z'ee',z'80',z'ee',z'ee',
+c     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
+     1z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     1,z'ee',z'ee',z'ee',z'ee',z'ee',
+c     2Z10,ZEE,ZEE,Z7F,Z80,Z0B,Z70,ZEE,Z0B,Z2A,Z3E,Z70,Z3B,Z40,Z6B,Z31,
+     2z'10',z'ee',z'ee',z'7f',z'80',z'0b',z'70',z'ee',z'0b',z'2a',z'3e'
+     2,z'70',z'3b',z'40',z'6b',z'31',
+c     3Z20,Z01,Z02,Z13,Z04,Z15,Z16,Z07,Z08,Z19,Z7C,Z7A,ZEE,Z7F,ZEE,ZEE,
+     3z'20',z'01',z'02',z'13',z'04',z'15',z'16',z'07',z'08',z'19',z'7c'
+     3,z'7a',z'ee',z'7f',z'ee',z'ee',
+c     4Z0E,Z61,Z62,Z73,Z64,Z75,Z76,Z67,Z68,Z79,Z51,Z52,Z43,Z54,Z45,Z46,
+     4z'0e',z'61',z'62',z'73',z'64',z'75',z'76',z'67',z'68',z'79',z'51'
+     4,z'52',z'43',z'54',z'45',z'46',
+c     5Z57,Z58,Z49,Z32,Z23,Z34,Z25,Z26,Z37,Z38,Z29,ZEE,ZEE,ZEE,ZEE,ZEE,
+     5z'57',z'58',z'49',z'32',z'23',z'34',z'25',z'26',z'37',z'38',z'29'
+     5,z'ee',z'ee',z'ee',z'ee',z'ee',
+c     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
+     6z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     6,z'ee',z'ee',z'ee',z'ee',z'ee',
+c     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE/
+     7z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     7,z'ee',z'ee',z'ee',z'ee',z'ee'/
 *
 ******  ISO/
 *
       DATA ISO/
 *      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F
-     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z8D,ZEE,ZEE,
-     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
-     2ZA0,ZEE,ZEE,ZA3,Z24,ZA5,ZA6,Z27,Z28,ZA9,ZAA,Z2B,ZAC,Z2D,Z2E,ZAF,
-     3Z30,ZB1,ZB2,Z33,ZB4,Z35,Z36,ZB7,ZB8,Z39,Z3A,ZEE,ZEE,ZEE,ZEE,ZEE,
-     4ZC0,Z41,Z42,ZC3,Z44,ZC5,ZC6,Z47,Z48,ZC9,ZCA,Z4B,ZCC,Z4D,Z4E,ZCF,
-     5Z50,ZD1,ZD2,Z53,ZD4,Z55,Z56,ZD7,ZD8,Z59,Z5A,ZEE,ZEE,ZEE,ZEE,ZEE,
-     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
-     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZFF/
+c     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z8D,ZEE,ZEE,
+c     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
+c     2ZA0,ZEE,ZEE,ZA3,Z24,ZA5,ZA6,Z27,Z28,ZA9,ZAA,Z2B,ZAC,Z2D,Z2E,ZAF,
+c     3Z30,ZB1,ZB2,Z33,ZB4,Z35,Z36,ZB7,ZB8,Z39,Z3A,ZEE,ZEE,ZEE,ZEE,ZEE,
+c     4ZC0,Z41,Z42,ZC3,Z44,ZC5,ZC6,Z47,Z48,ZC9,ZCA,Z4B,ZCC,Z4D,Z4E,ZCF,
+c     5Z50,ZD1,ZD2,Z53,ZD4,Z55,Z56,ZD7,ZD8,Z59,Z5A,ZEE,ZEE,ZEE,ZEE,ZEE,
+c     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
+c     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZFF/
+
+     *z'00',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'09',z'0a'
+     *,z'ee',z'ee',z'8d',z'ee',z'ee',
+     1z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     1,z'ee',z'ee',z'ee',z'ee',z'ee',
+     2z'a0',z'ee',z'ee',z'a3',z'24',z'a5',z'a6',z'27',z'28',z'a9',z'aa'
+     2,z'2b',z'ac',z'2d',z'2e',z'af',
+     3z'30',z'b1',z'b2',z'33',z'b4',z'35',z'36',z'b7',z'b8',z'39',z'3a'
+     3,z'ee',z'ee',z'ee',z'ee',z'ee',
+     4z'c0',z'41',z'42',z'c3',z'44',z'c5',z'c6',z'47',z'48',z'c9',z'ca'
+     4,z'4b',z'cc',z'4d',z'4e',z'cf',
+     5z'50',z'd1',z'd2',z'53',z'd4',z'55',z'56',z'd7',z'd8',z'59',z'5a'
+     5,z'ee',z'ee',z'ee',z'ee',z'ee',
+     6z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     6,z'ee',z'ee',z'ee',z'ee',z'ee',
+     7z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     7,z'ee',z'ee',z'ee',z'ee',z'ff'/
 *
 ******  ASCII 7 BIT NO PARITY
 *
-      DATA ASCII/
+      data ascii/
 *      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F
-     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z0D,ZEE,ZEE,
-     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
-     2Z20,Z21,Z22,Z23,Z24,Z25,Z26,Z27,Z28,Z29,Z2A,Z2B,Z2C,Z2D,Z2E,Z2F,
-     3Z30,Z31,Z32,Z33,Z34,Z35,Z36,Z37,Z38,Z39,Z3A,Z3B,Z3C,Z3D,Z3E,Z3F,
-     4Z40,Z41,Z42,Z43,Z44,Z45,Z46,Z47,Z48,Z49,Z4A,Z4B,Z4C,Z4D,Z4E,Z4F,
-     5Z50,Z51,Z52,Z53,Z54,Z55,Z56,Z57,Z58,Z59,Z5A,Z5B,Z5C,Z5D,Z5E,Z5F,
-     6Z60,Z61,Z62,Z63,Z64,Z65,Z66,Z67,Z68,Z69,Z6A,Z6B,Z6C,Z6D,Z6E,Z6F,
-     7Z70,Z71,Z72,Z73,Z74,Z75,Z76,Z77,Z78,Z79,Z7A,ZEE,ZEE,ZEE,ZEE,Z7F/
+c     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z0D,ZEE,ZEE,
+c     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,
+c     2Z20,Z21,Z22,Z23,Z24,Z25,Z26,Z27,Z28,Z29,Z2A,Z2B,Z2C,Z2D,Z2E,Z2F,
+c     3Z30,Z31,Z32,Z33,Z34,Z35,Z36,Z37,Z38,Z39,Z3A,Z3B,Z3C,Z3D,Z3E,Z3F,
+c     4Z40,Z41,Z42,Z43,Z44,Z45,Z46,Z47,Z48,Z49,Z4A,Z4B,Z4C,Z4D,Z4E,Z4F,
+c     5Z50,Z51,Z52,Z53,Z54,Z55,Z56,Z57,Z58,Z59,Z5A,Z5B,Z5C,Z5D,Z5E,Z5F,
+c     6Z60,Z61,Z62,Z63,Z64,Z65,Z66,Z67,Z68,Z69,Z6A,Z6B,Z6C,Z6D,Z6E,Z6F,
+c     7Z70,Z71,Z72,Z73,Z74,Z75,Z76,Z77,Z78,Z79,Z7A,ZEE,ZEE,ZEE,ZEE,Z7F/
+     *z'00',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'09',z'0a'
+     *,z'ee',z'ee',z'0d',z'ee',z'ee',
+     1z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee',z'ee'
+     1,z'ee',z'ee',z'ee',z'ee',z'ee',
+     2z'20',z'21',z'22',z'23',z'24',z'25',z'26',z'27',z'28',z'29',z'2a'
+     2,z'2b',z'2c',z'2d',z'2e',z'2f',
+     3z'30',z'31',z'32',z'33',z'34',z'35',z'36',z'37',z'38',z'39',z'3a'
+     3,z'3b',z'3c',z'3d',z'3e',z'3f',
+     4z'40',z'41',z'42',z'43',z'44',z'45',z'46',z'47',z'48',z'49',z'4a'
+     4,z'4b',z'4c',z'4d',z'4e',z'4f',
+     5z'50',z'51',z'52',z'53',z'54',z'55',z'56',z'57',z'58',z'59',z'5a'
+     5,z'5b',z'5c',z'5d',z'5e',z'5f',
+     6z'60',z'61',z'62',z'63',z'64',z'65',z'66',z'67',z'68',z'69',z'6a'
+     6,z'6b',z'6c',z'6d',z'6e',z'6f',
+     7z'70',z'71',z'72',z'73',z'74',z'75',z'76',z'77',z'78',z'79',z'7a'
+     7,z'ee',z'ee',z'ee',z'ee',z'7f'/
 *
       IF (J.EQ.1) THEN
          DO 100 I=1,128
@@ -2030,209 +2098,411 @@ C
 *
 ******   TABLE FOR 5X7 MATRIX OUTPUT , ODD PARITY , COLUMN BINARY
 *
-      DATA TBO1/
+c      DATA TBO1/
 *              BLANK                      !
-     1Z80,Z80,Z80,Z80,Z80,Z80, Z80,Z80,Z5E,Z80,Z80,Z80,
-*                "                        #
-     2Z80,Z07,Z80,Z07,Z80,Z80, Z94,Z3E,Z94,Z3E,Z94,Z80,
-*                $                        %
-     3ZAE,Z2A,Z7F,Z2A,ZAE,Z80, ZE3,Z13,Z08,Z34,ZE3,Z80,
-*                &                        `
-     4ZFB,Z45,Z6B,Z10,Z68,Z80, Z80,Z80,Z07,Z80,Z80,Z80,
-*                (                        )
-     5Z80,Z1C,ZA2,ZC1,ZC1,Z80, Z80,ZC1,ZC1,ZA2,Z1C,Z80,
-*                *                        +
-     6Z08,Z2A,Z1C,Z2A,Z08,Z80, Z08,Z08,Z3E,Z08,Z08,Z80,
-*                ,                        -
-     7Z80,Z80,ZD0,ZB0,Z80,Z80, Z08,Z08,Z08,Z08,Z08,Z80,
-*                .                        /
-     8Z80,Z80,ZE0,ZE0,Z80,Z80, Z20,Z10,Z08,Z04,Z02,Z80,
-*                0                        1
-     9Z3E,ZC1,ZC1,ZC1,Z3E,Z80, Z80,Z02,Z7F,Z80,Z80,Z80,
-*                2                        3
-     AZC2,Z61,Z51,Z49,Z46,Z80, ZA1,ZC1,Z49,ZCD,ZB3,Z80,
-*                4                        5
-     BZ98,Z94,Z92,Z7F,Z10,Z80, ZA7,Z45,Z45,Z45,ZB9,Z80,
-*                6                        7
-     CZBC,ZC2,Z49,Z49,ZB0,Z80, Z01,Z01,Z79,Z85,Z83,Z80,
-*                8                        9
-     DZB6,Z49,Z49,Z49,ZB6,Z80, Z86,Z49,Z49,ZA1,Z9E,Z80,
-*                :                        ;
-     EZ80,Z80,ZB6,ZB6,Z80,Z80, Z80,Z80,ZD6,ZB6,Z80,Z80,
-*                <                        =
-     FZ08,Z94,ZA2,ZC1,Z80,Z80, ZA2,ZA2,ZA2,ZA2,ZA2,Z80,
-*                >                        ?
-     GZ80,ZC1,ZA2,Z94,Z08,Z80, Z02,Z01,ZD9,Z85,Z02,Z80/
-      DATA TBO2/
-*                @                        A
-     1Z3E,ZC1,Z5D,ZD5,Z5E,Z80, ZFE,Z91,Z91,Z91,ZFE,Z80,
-*                B                        C
-     2Z7F,Z49,Z49,Z49,ZB6,Z80, Z3E,ZC1,ZC1,ZC1,ZA2,Z80,
-*                D                        E
-     3Z7F,ZC1,ZC1,ZC1,ZE3,Z80, Z7F,Z49,Z49,Z49,ZC1,Z80,
-*                F                        G
-     4Z7F,Z89,Z89,Z89,Z01,Z80, ZE3,ZC1,ZC1,Z49,Z79,Z80,
-*                H                        I
-     5Z7F,Z08,Z08,Z08,Z7F,Z80, Z80,ZC1,Z7F,ZC1,Z80,Z80,
-*                J                        K
-     6Z20,Z40,Z40,ZBF,Z80,Z80, Z7F,Z08,Z94,ZA2,ZC1,Z80,
-*                L                        M
-     7Z7F,Z40,Z40,Z40,Z40,Z80, Z7F,Z02,Z8C,Z02,Z7F,Z80,
-*                N                        O
-     8Z7F,Z02,Z04,Z08,Z7F,Z80, Z3E,Z51,Z49,Z45,Z3E,Z80,
-*                P                        Q
-     9Z7F,Z89,Z89,Z89,Z86,Z80, Z3E,ZC1,Z51,ZA1,Z5E,Z80,
-*                R                        S
-     AZ7F,Z89,Z19,Z29,Z46,Z80, Z46,Z49,Z49,Z49,Z31,Z80,
-*                T                        U
-     BZ01,Z01,Z7F,Z01,Z01,Z80, ZBF,Z40,Z40,Z40,ZBF,Z80,
-*                V                        W
-     CZ8F,ZB0,Z40,ZB0,Z8F,Z80, ZBF,Z40,ZBC,Z40,ZBF,Z80,
-*                X                        Y
-     DZE3,Z94,Z08,Z94,ZE3,Z80, Z07,Z08,Z70,Z08,Z07,Z80,
-*                Z                        [
-     EZ61,Z51,Z49,Z45,Z43,Z80, Z7F,Z7F,ZC1,ZC1,ZC1,Z80,
-*                \                        ]
-     FZ02,Z04,Z08,Z20,Z40,Z80, ZC1,ZC1,ZC1,Z7F,Z7F,Z80,
-*                ^                        _
-     GZ04,Z02,Z01,Z02,Z04,Z80, Z40,Z40,Z40,Z40,Z40,Z80/
-******   TABLE FOR 5X7 MATRIX OUTPUT ,EVEN PARITY , COLUMN BINARY
-*
-      DATA TBE1/
-*              BLANK                      !
-     1ZC0,ZC0,ZC0,ZC0,ZC0,ZC0, ZC0,ZC0,Z2F,ZC0,ZC0,ZC0,
-*                "                        #
-     2ZC0,Z87,ZC0,Z87,ZC0,ZC0, Z14,ZBE,Z14,ZBE,Z14,ZC0,
-*                $                        %
-     3Z2E,ZAA,ZFF,ZAA,Z3A,ZC0, Z63,Z93,Z88,ZE4,Z63,ZC0,
-*                &                        `
-     4Z7B,ZC5,ZEB,Z90,ZE9,ZC0, ZC0,ZC0,Z87,ZC0,ZC0,ZC0,
-*                (                        )
-     5ZC0,Z9C,Z22,Z41,Z41,ZC0, ZC0,Z41,Z41,Z22,Z9C,ZC0,
-*                *                        +
-     6Z88,ZAA,Z9C,ZAA,Z88,ZC0, Z88,Z88,ZBE,Z88,Z88,ZC0,
-*                ,                        -
-     7ZC0,ZC0,Z50,Z30,ZC0,ZC0, Z88,Z88,Z88,Z88,Z88,ZC0,
-*                .                        /
-     8ZC0,ZC0,Z60,Z60,ZC0,ZC0, ZA0,Z90,Z88,Z84,Z82,ZC0,
-*                0                        1
-     9ZBE,Z31,Z31,Z31,ZBE,ZC0, ZC0,Z82,ZFF,ZC0,ZC0,ZC0,
-*                2                        3
-     AZ42,ZE1,ZD1,ZC9,ZC6,ZC0, Z21,Z41,ZC9,Z4D,Z33,ZC0,
-*                4                        5
-     6Z18,Z14,Z12,ZFF,Z90,ZC0, Z27,ZCB,ZC5,ZC5,Z39,ZC0,
-*                6                        7
-     CZ3C,Z42,ZC9,ZC9,Z30,ZC0, Z81,Z81,ZF9,Z05,Z03,ZC0,
-*                8                        9
-     DZ36,ZC9,ZC9,ZC9,Z36,ZC0, Z06,ZC9,ZC9,Z21,Z1E,ZC0,
-*                :                        ;
-     EZC0,ZC0,Z1B,Z1B,ZC0,ZC0, ZC0,ZC0,Z2B,Z1B,ZC0,ZC0,
-*                <                        =
-     FZ88,Z14,Z22,Z41,ZC0,ZC0, Z22,Z22,Z22,Z22,Z22,ZC0,
-*                >                        ?
-     GZC0,Z41,Z22,Z14,Z88,ZC0, Z82,Z81,Z59,Z05,Z82,ZC0/
-      DATA TBE2/
-*                @                        A
-     1ZBE,Z41,ZDD,Z55,ZDF,ZC0, Z7E,Z11,Z11,Z11,Z7E,ZC0,
-*                B                        C
-     2ZFF,ZC9,ZC9,ZC9,Z36,ZC0, ZBE,Z41,Z41,Z41,Z22,ZC0,
-*                D                        E
-     3ZFF,Z41,Z41,Z41,ZBE,ZC0, ZFF,ZC9,ZC9,ZC9,Z41,ZC0,
-*                F                        G
-     4ZFF,Z09,Z09,Z09,Z81,ZC0, ZBE,Z41,Z41,ZC9,ZF9,ZC0,
-*                H                        I
-     5ZFF,Z88,Z88,Z88,ZFF,ZC0, ZC0,Z41,ZFF,Z41,ZC0,ZC0,
-*                J                        K
-     6ZA0,ZC0,ZC0,Z3F,ZC0,ZC0, ZFF,Z88,Z14,Z22,Z41,ZC0,
-*                L                        M
-     7ZFF,ZC0,ZC0,ZC0,ZC0,ZC0, ZFF,Z82,Z0C,Z82,ZFF,ZC0,
-*              BLANK                      O
-     8ZFF,Z82,Z84,Z88,ZFF,ZC0, ZBE,ZD1,ZC9,ZC5,ZBE,ZC0,
-*                P                        Q
-     9ZFF,Z09,Z09,Z09,Z06,ZC0, ZBE,Z41,ZD1,Z21,ZDE,ZC0,
-*                R                        S
-     AZFF,Z09,Z99,ZA9,ZC6,ZC0, ZC6,ZC9,ZC9,ZC9,ZB1,ZC0,
-*                T                        U
-     BZ81,Z81,ZFF,Z81,Z81,ZC0, Z3F,ZC0,ZC0,ZC0,Z3F,ZC0,
-*                V                        W
-     CZ0F,Z30,ZC0,Z30,Z0F,ZC0, Z3F,ZC0,Z3C,ZC0,Z3F,ZC0,
-*                X                        Y
-     DZ63,Z14,Z88,Z14,Z63,ZC0, Z87,Z88,ZF0,Z88,Z87,ZC0,
-*                Z                        [
-     EZE1,ZD1,ZC9,ZC5,ZC3,ZC0, ZFF,ZFF,Z41,Z41,Z41,ZC0,
-*                \                        ]
-     FZ82,Z84,Z88,Z90,ZA0,ZC0, Z41,Z41,Z41,ZFF,ZFF,ZC0,
-*                ^                        _
-     GZ84,Z82,Z81,Z82,Z84,ZC0, Z60,Z60,Z60,Z60,Z60,ZC0/
-******   TABLE FOR 5X6 MATRIX OUTPUT , NO PARITY , COLUMN BINARY
-*
-      DATA TB561/
-*                N                        !
-     1Z00,Z00,Z00,Z00,Z00,Z00, Z00,Z00,Z5E,Z00,Z00,Z00,
-*                "                        #
-     2Z00,Z0E,Z00,Z0E,Z00,Z00, Z14,Z3E,Z14,Z3E,Z14,Z00,
-*                $                        %
-     3Z2E,Z2A,Z7E,Z2A,Z3A,Z00, Z26,Z16,Z08,Z64,Z62,Z00,
-*                &                        `
-     4Z76,Z4A,Z56,Z20,Z50,Z00, Z00,Z00,Z0E,Z00,Z00,Z00,
-*                (                        )
-     5Z00,Z00,Z00,Z3C,Z42,Z00, Z00,Z42,Z3C,Z00,Z00,Z00,
-*                *                        +
-     6Z10,Z54,Z38,Z54,Z10,Z00, Z10,Z10,Z7C,Z10,Z10,Z00,
-*                ,                        -
-     7Z00,Z00,Z50,Z30,Z00,Z00, Z10,Z10,Z10,Z10,Z10,Z00,
-*                .                        /
-     8Z00,Z60,Z60,Z00,Z00,Z00, Z40,Z20,Z10,Z08,Z04,Z00,
-*                0                        1
-     9Z3C,Z42,Z42,Z42,Z3C,Z00, Z00,Z44,Z7E,Z40,Z00,Z00,
-*                2                        3
-     AZ64,Z52,Z4A,Z4A,Z44,Z00, Z22,Z4A,Z4A,Z4E,Z32,Z00,
-*                4                        5
-     BZ0E,Z08,Z08,Z7E,Z08,Z00, Z2E,Z4A,Z4A,Z4A,Z32,Z00,
-*                6                        7
-     CZ3C,Z4A,Z4A,Z4A,Z30,Z00, Z02,Z02,Z72,Z0A,Z06,Z00,
-*                8                        9
-     DZ34,Z4A,Z4A,Z4A,Z34,Z00, Z04,Z4A,Z4A,Z4A,Z3C,Z00,
-*                :                        ;
-     EZ00,Z00,Z36,Z36,Z00,Z00, Z00,Z00,Z56,Z36,Z00,Z00,
-*                <                        =
-     FZ10,Z28,Z44,Z00,Z00,Z00, Z28,Z28,Z28,Z28,Z28,Z00,
-*                >                        ?
-     GZ00,Z00,Z44,Z28,Z10,Z00, Z04,Z02,Z52,Z0A,Z04,Z00/
-      DATA TB562/
-*                @                        A
-     1Z3C,Z42,Z5A,Z5A,Z4C,Z00, Z78,Z14,Z12,Z14,Z78,Z00,
-*                B                        C
-     2Z7E,Z4A,Z4A,Z4A,Z34,Z00, Z3C,Z42,Z42,Z42,Z24,Z00,
-*                D                        E
-     3Z7E,Z42,Z42,Z42,Z3C,Z00, Z7E,Z4A,Z4A,Z42,Z42,Z00,
-*                F                        G
-     4Z7E,Z0A,Z0A,Z02,Z02,Z00, Z3C,Z42,Z42,Z52,Z72,Z00,
-*                H                        I
-     5Z7E,Z08,Z08,Z08,Z7E,Z00, Z00,Z42,Z74,Z42,Z00,Z00,
-*                J                        K
-     6Z20,Z40,Z40,Z40,Z3E,Z00, Z7E,Z08,Z10,Z24,Z42,Z00,
-*                L                        M
-     7Z7E,Z40,Z40,Z40,Z40,Z00, Z7E,Z04,Z08,Z04,Z7E,Z00,
-*                N                        O
-     8Z7E,Z04,Z08,Z30,Z7E,Z00, Z3C,Z42,Z42,Z42,Z3C,Z00,
-*                P                        Q
-     9Z7E,Z0A,Z0A,Z0A,Z04,Z00, Z3C,Z42,Z52,Z22,Z5C,Z00,
-*                R                        S
-     AZ7E,Z0A,Z1A,Z2A,Z44,Z00, Z44,Z4A,Z4A,Z4A,Z32,Z00,
-*                T                        U
-     BZ02,Z02,Z7E,Z02,Z02,Z00, Z3E,Z40,Z40,Z40,Z3E,Z00,
-*                V                        W
-     CZ1E,Z20,Z40,Z20,Z1E,Z00, Z7E,Z20,Z18,Z20,Z7E,Z00,
-*                X                        Y
-     DZ66,Z10,Z08,Z10,Z66,Z00, Z06,Z08,Z70,Z08,Z06,Z00,
-*                Z                        [
-     EZ62,Z52,Z4A,Z42,Z46,Z00, Z7E,Z42,Z42,Z00,Z00,Z00,
-*                \                        ]
-     FZ02,Z04,Z08,Z10,Z20,Z00, Z00,Z00,Z42,Z42,Z7E,Z00,
-*                ^                        _
-     GZ08,Z04,Z02,Z04,Z08,Z00, Z40,Z40,Z40,Z40,Z40,Z00/
+c     1Z80,Z80,Z80,Z80,Z80,Z80, Z80,Z80,Z5E,Z80,Z80,Z80,
+c*                "                        #
+c     2Z80,Z07,Z80,Z07,Z80,Z80, Z94,Z3E,Z94,Z3E,Z94,Z80,
+c*                $                        %
+c     3ZAE,Z2A,Z7F,Z2A,ZAE,Z80, ZE3,Z13,Z08,Z34,ZE3,Z80,
+c*                &                        `
+c     4ZFB,Z45,Z6B,Z10,Z68,Z80, Z80,Z80,Z07,Z80,Z80,Z80,
+c*                (                        )
+c     5Z80,Z1C,ZA2,ZC1,ZC1,Z80, Z80,ZC1,ZC1,ZA2,Z1C,Z80,
+c*                *                        +
+c     6Z08,Z2A,Z1C,Z2A,Z08,Z80, Z08,Z08,Z3E,Z08,Z08,Z80,
+c*                ,                        -
+c     7Z80,Z80,ZD0,ZB0,Z80,Z80, Z08,Z08,Z08,Z08,Z08,Z80,
+c*                .                        /
+c     8Z80,Z80,ZE0,ZE0,Z80,Z80, Z20,Z10,Z08,Z04,Z02,Z80,
+c*                0                        1
+c     9Z3E,ZC1,ZC1,ZC1,Z3E,Z80, Z80,Z02,Z7F,Z80,Z80,Z80,
+c*                2                        3
+c     AZC2,Z61,Z51,Z49,Z46,Z80, ZA1,ZC1,Z49,ZCD,ZB3,Z80,
+c*                4                        5
+c     BZ98,Z94,Z92,Z7F,Z10,Z80, ZA7,Z45,Z45,Z45,ZB9,Z80,
+c*                6                        7
+c     CZBC,ZC2,Z49,Z49,ZB0,Z80, Z01,Z01,Z79,Z85,Z83,Z80,
+c*                8                        9
+c     DZB6,Z49,Z49,Z49,ZB6,Z80, Z86,Z49,Z49,ZA1,Z9E,Z80,
+c*                :                        ;
+c     EZ80,Z80,ZB6,ZB6,Z80,Z80, Z80,Z80,ZD6,ZB6,Z80,Z80,
+c*                <                        =
+c     FZ08,Z94,ZA2,ZC1,Z80,Z80, ZA2,ZA2,ZA2,ZA2,ZA2,Z80,
+c*                >                        ?
+c     GZ80,ZC1,ZA2,Z94,Z08,Z80, Z02,Z01,ZD9,Z85,Z02,Z80/
+c      DATA TBO2/
+c*                @                        A
+c     1Z3E,ZC1,Z5D,ZD5,Z5E,Z80, ZFE,Z91,Z91,Z91,ZFE,Z80,
+c*                B                        C
+c     2Z7F,Z49,Z49,Z49,ZB6,Z80, Z3E,ZC1,ZC1,ZC1,ZA2,Z80,
+c*                D                        E
+c     3Z7F,ZC1,ZC1,ZC1,ZE3,Z80, Z7F,Z49,Z49,Z49,ZC1,Z80,
+c*                F                        G
+c     4Z7F,Z89,Z89,Z89,Z01,Z80, ZE3,ZC1,ZC1,Z49,Z79,Z80,
+c*                H                        I
+c     5Z7F,Z08,Z08,Z08,Z7F,Z80, Z80,ZC1,Z7F,ZC1,Z80,Z80,
+c*                J                        K
+c     6Z20,Z40,Z40,ZBF,Z80,Z80, Z7F,Z08,Z94,ZA2,ZC1,Z80,
+c*                L                        M
+c     7Z7F,Z40,Z40,Z40,Z40,Z80, Z7F,Z02,Z8C,Z02,Z7F,Z80,
+c*                N                        O
+c     8Z7F,Z02,Z04,Z08,Z7F,Z80, Z3E,Z51,Z49,Z45,Z3E,Z80,
+c*                P                        Q
+c     9Z7F,Z89,Z89,Z89,Z86,Z80, Z3E,ZC1,Z51,ZA1,Z5E,Z80,
+c*                R                        S
+c     AZ7F,Z89,Z19,Z29,Z46,Z80, Z46,Z49,Z49,Z49,Z31,Z80,
+c*                T                        U
+c     BZ01,Z01,Z7F,Z01,Z01,Z80, ZBF,Z40,Z40,Z40,ZBF,Z80,
+c*                V                        W
+c     CZ8F,ZB0,Z40,ZB0,Z8F,Z80, ZBF,Z40,ZBC,Z40,ZBF,Z80,
+c*                X                        Y
+c     DZE3,Z94,Z08,Z94,ZE3,Z80, Z07,Z08,Z70,Z08,Z07,Z80,
+c*                Z                        [
+c     EZ61,Z51,Z49,Z45,Z43,Z80, Z7F,Z7F,ZC1,ZC1,ZC1,Z80,
+c*                \                        ]
+c     FZ02,Z04,Z08,Z20,Z40,Z80, ZC1,ZC1,ZC1,Z7F,Z7F,Z80,
+c*                ^                        _
+c     GZ04,Z02,Z01,Z02,Z04,Z80, Z40,Z40,Z40,Z40,Z40,Z80/
+c******   TABLE FOR 5X7 MATRIX OUTPUT ,EVEN PARITY , COLUMN BINARY
+c*
+c      DATA TBE1/
+c*              BLANK                      !
+c     1ZC0,ZC0,ZC0,ZC0,ZC0,ZC0, ZC0,ZC0,Z2F,ZC0,ZC0,ZC0,
+c*                "                        #
+c     2ZC0,Z87,ZC0,Z87,ZC0,ZC0, Z14,ZBE,Z14,ZBE,Z14,ZC0,
+c*                $                        %
+c     3Z2E,ZAA,ZFF,ZAA,Z3A,ZC0, Z63,Z93,Z88,ZE4,Z63,ZC0,
+c*                &                        `
+c     4Z7B,ZC5,ZEB,Z90,ZE9,ZC0, ZC0,ZC0,Z87,ZC0,ZC0,ZC0,
+c*                (                        )
+c     5ZC0,Z9C,Z22,Z41,Z41,ZC0, ZC0,Z41,Z41,Z22,Z9C,ZC0,
+c*                *                        +
+c     6Z88,ZAA,Z9C,ZAA,Z88,ZC0, Z88,Z88,ZBE,Z88,Z88,ZC0,
+c*                ,                        -
+c     7ZC0,ZC0,Z50,Z30,ZC0,ZC0, Z88,Z88,Z88,Z88,Z88,ZC0,
+c*                .                        /
+c     8ZC0,ZC0,Z60,Z60,ZC0,ZC0, ZA0,Z90,Z88,Z84,Z82,ZC0,
+c*                0                        1
+c     9ZBE,Z31,Z31,Z31,ZBE,ZC0, ZC0,Z82,ZFF,ZC0,ZC0,ZC0,
+c*                2                        3
+c     AZ42,ZE1,ZD1,ZC9,ZC6,ZC0, Z21,Z41,ZC9,Z4D,Z33,ZC0,
+c*                4                        5
+c     6Z18,Z14,Z12,ZFF,Z90,ZC0, Z27,ZCB,ZC5,ZC5,Z39,ZC0,
+c*                6                        7
+c     CZ3C,Z42,ZC9,ZC9,Z30,ZC0, Z81,Z81,ZF9,Z05,Z03,ZC0,
+c*                8                        9
+c     DZ36,ZC9,ZC9,ZC9,Z36,ZC0, Z06,ZC9,ZC9,Z21,Z1E,ZC0,
+c*                :                        ;
+c     EZC0,ZC0,Z1B,Z1B,ZC0,ZC0, ZC0,ZC0,Z2B,Z1B,ZC0,ZC0,
+c*                <                        =
+c     FZ88,Z14,Z22,Z41,ZC0,ZC0, Z22,Z22,Z22,Z22,Z22,ZC0,
+c*                >                        ?
+c     GZC0,Z41,Z22,Z14,Z88,ZC0, Z82,Z81,Z59,Z05,Z82,ZC0/
+c      DATA TBE2/
+c*                @                        A
+c     1ZBE,Z41,ZDD,Z55,ZDF,ZC0, Z7E,Z11,Z11,Z11,Z7E,ZC0,
+c*                B                        C
+c     2ZFF,ZC9,ZC9,ZC9,Z36,ZC0, ZBE,Z41,Z41,Z41,Z22,ZC0,
+c*                D                        E
+c     3ZFF,Z41,Z41,Z41,ZBE,ZC0, ZFF,ZC9,ZC9,ZC9,Z41,ZC0,
+c*                F                        G
+c     4ZFF,Z09,Z09,Z09,Z81,ZC0, ZBE,Z41,Z41,ZC9,ZF9,ZC0,
+c*                H                        I
+c     5ZFF,Z88,Z88,Z88,ZFF,ZC0, ZC0,Z41,ZFF,Z41,ZC0,ZC0,
+c*                J                        K
+c     6ZA0,ZC0,ZC0,Z3F,ZC0,ZC0, ZFF,Z88,Z14,Z22,Z41,ZC0,
+c*                L                        M
+c     7ZFF,ZC0,ZC0,ZC0,ZC0,ZC0, ZFF,Z82,Z0C,Z82,ZFF,ZC0,
+c*              BLANK                      O
+c     8ZFF,Z82,Z84,Z88,ZFF,ZC0, ZBE,ZD1,ZC9,ZC5,ZBE,ZC0,
+c*                P                        Q
+c     9ZFF,Z09,Z09,Z09,Z06,ZC0, ZBE,Z41,ZD1,Z21,ZDE,ZC0,
+c*                R                        S
+c     AZFF,Z09,Z99,ZA9,ZC6,ZC0, ZC6,ZC9,ZC9,ZC9,ZB1,ZC0,
+c*                T                        U
+c     BZ81,Z81,ZFF,Z81,Z81,ZC0, Z3F,ZC0,ZC0,ZC0,Z3F,ZC0,
+c*                V                        W
+c     CZ0F,Z30,ZC0,Z30,Z0F,ZC0, Z3F,ZC0,Z3C,ZC0,Z3F,ZC0,
+c*                X                        Y
+c     DZ63,Z14,Z88,Z14,Z63,ZC0, Z87,Z88,ZF0,Z88,Z87,ZC0,
+c*                Z                        [
+c     EZE1,ZD1,ZC9,ZC5,ZC3,ZC0, ZFF,ZFF,Z41,Z41,Z41,ZC0,
+c*                \                        ]
+c     FZ82,Z84,Z88,Z90,ZA0,ZC0, Z41,Z41,Z41,ZFF,ZFF,ZC0,
+c*                ^                        _
+c     GZ84,Z82,Z81,Z82,Z84,ZC0, Z60,Z60,Z60,Z60,Z60,ZC0/
+c******   TABLE FOR 5X6 MATRIX OUTPUT , NO PARITY , COLUMN BINARY
+c*
+c      DATA TB561/
+c*                N                        !
+c     1Z00,Z00,Z00,Z00,Z00,Z00, Z00,Z00,Z5E,Z00,Z00,Z00,
+c*                "                        #
+c     2Z00,Z0E,Z00,Z0E,Z00,Z00, Z14,Z3E,Z14,Z3E,Z14,Z00,
+c*                $                        %
+c     3Z2E,Z2A,Z7E,Z2A,Z3A,Z00, Z26,Z16,Z08,Z64,Z62,Z00,
+c*                &                        `
+c     4Z76,Z4A,Z56,Z20,Z50,Z00, Z00,Z00,Z0E,Z00,Z00,Z00,
+c*                (                        )
+c     5Z00,Z00,Z00,Z3C,Z42,Z00, Z00,Z42,Z3C,Z00,Z00,Z00,
+c*                *                        +
+c     6Z10,Z54,Z38,Z54,Z10,Z00, Z10,Z10,Z7C,Z10,Z10,Z00,
+c*                ,                        -
+c     7Z00,Z00,Z50,Z30,Z00,Z00, Z10,Z10,Z10,Z10,Z10,Z00,
+c*                .                        /
+c     8Z00,Z60,Z60,Z00,Z00,Z00, Z40,Z20,Z10,Z08,Z04,Z00,
+c*                0                        1
+c     9Z3C,Z42,Z42,Z42,Z3C,Z00, Z00,Z44,Z7E,Z40,Z00,Z00,
+c*                2                        3
+c     AZ64,Z52,Z4A,Z4A,Z44,Z00, Z22,Z4A,Z4A,Z4E,Z32,Z00,
+c*                4                        5
+c     BZ0E,Z08,Z08,Z7E,Z08,Z00, Z2E,Z4A,Z4A,Z4A,Z32,Z00,
+c*                6                        7
+c     CZ3C,Z4A,Z4A,Z4A,Z30,Z00, Z02,Z02,Z72,Z0A,Z06,Z00,
+c*                8                        9
+c     DZ34,Z4A,Z4A,Z4A,Z34,Z00, Z04,Z4A,Z4A,Z4A,Z3C,Z00,
+c*                :                        ;
+c     EZ00,Z00,Z36,Z36,Z00,Z00, Z00,Z00,Z56,Z36,Z00,Z00,
+c*                <                        =
+c     FZ10,Z28,Z44,Z00,Z00,Z00, Z28,Z28,Z28,Z28,Z28,Z00,
+c*                >                        ?
+c     GZ00,Z00,Z44,Z28,Z10,Z00, Z04,Z02,Z52,Z0A,Z04,Z00/
+c      DATA TB562/
+c*                @                        A
+c     1Z3C,Z42,Z5A,Z5A,Z4C,Z00, Z78,Z14,Z12,Z14,Z78,Z00,
+c*                B                        C
+c     2Z7E,Z4A,Z4A,Z4A,Z34,Z00, Z3C,Z42,Z42,Z42,Z24,Z00,
+c*                D                        E
+c     3Z7E,Z42,Z42,Z42,Z3C,Z00, Z7E,Z4A,Z4A,Z42,Z42,Z00,
+c*                F                        G
+c     4Z7E,Z0A,Z0A,Z02,Z02,Z00, Z3C,Z42,Z42,Z52,Z72,Z00,
+c*                H                        I
+c     5Z7E,Z08,Z08,Z08,Z7E,Z00, Z00,Z42,Z74,Z42,Z00,Z00,
+c*                J                        K
+c     6Z20,Z40,Z40,Z40,Z3E,Z00, Z7E,Z08,Z10,Z24,Z42,Z00,
+c*                L                        M
+c     7Z7E,Z40,Z40,Z40,Z40,Z00, Z7E,Z04,Z08,Z04,Z7E,Z00,
+c*                N                        O
+c     8Z7E,Z04,Z08,Z30,Z7E,Z00, Z3C,Z42,Z42,Z42,Z3C,Z00,
+c*                P                        Q
+c     9Z7E,Z0A,Z0A,Z0A,Z04,Z00, Z3C,Z42,Z52,Z22,Z5C,Z00,
+c*                R                        S
+c     AZ7E,Z0A,Z1A,Z2A,Z44,Z00, Z44,Z4A,Z4A,Z4A,Z32,Z00,
+c*                T                        U
+c     BZ02,Z02,Z7E,Z02,Z02,Z00, Z3E,Z40,Z40,Z40,Z3E,Z00,
+c*                V                        W
+c     CZ1E,Z20,Z40,Z20,Z1E,Z00, Z7E,Z20,Z18,Z20,Z7E,Z00,
+c*                X                        Y
+c     DZ66,Z10,Z08,Z10,Z66,Z00, Z06,Z08,Z70,Z08,Z06,Z00,
+c*                Z                        [
+c     EZ62,Z52,Z4A,Z42,Z46,Z00, Z7E,Z42,Z42,Z00,Z00,Z00,
+c*                \                        ]
+c     FZ02,Z04,Z08,Z10,Z20,Z00, Z00,Z00,Z42,Z42,Z7E,Z00,
+c*                ^                        _
+c     GZ08,Z04,Z02,Z04,Z08,Z00, Z40,Z40,Z40,Z40,Z40,Z00/
 C
+c*******************************************************      
+      data tbo1/
+     1z'80',z'80',z'80',z'80',z'80',z'80', z'80',z'80',z'5e',z'80',z'80'
+     1,z'80',
+     2z'80',z'07',z'80',z'07',z'80',z'80', z'94',z'3e',z'94',z'3e',z'94'
+     2,z'80',
+     3z'ae',z'2a',z'7f',z'2a',z'ae',z'80', z'e3',z'13',z'08',z'34',z'e3'
+     3,z'80',
+     4z'fb',z'45',z'6b',z'10',z'68',z'80', z'80',z'80',z'07',z'80',z'80'
+     4,z'80',
+     5z'80',z'1c',z'a2',z'c1',z'c1',z'80', z'80',z'c1',z'c1',z'a2',z'1c'
+     5,z'80',
+     6z'08',z'2a',z'1c',z'2a',z'08',z'80', z'08',z'08',z'3e',z'08',z'08'
+     6,z'80',
+     7z'80',z'80',z'd0',z'b0',z'80',z'80', z'08',z'08',z'08',z'08',z'08'
+     7,z'80',
+     8z'80',z'80',z'e0',z'e0',z'80',z'80', z'20',z'10',z'08',z'04',z'02'
+     8,z'80',
+     9z'3e',z'c1',z'c1',z'c1',z'3e',z'80', z'80',z'02',z'7f',z'80',z'80'
+     9,z'80',
+     az'c2',z'61',z'51',z'49',z'46',z'80', z'a1',z'c1',z'49',z'cd',z'b3'
+     a,z'80',
+     bz'98',z'94',z'92',z'7f',z'10',z'80', z'a7',z'45',z'45',z'45',z'b9'
+     b,z'80',
+     cz'bc',z'c2',z'49',z'49',z'b0',z'80', z'01',z'01',z'79',z'85',z'83'
+     c,z'80',
+     dz'b6',z'49',z'49',z'49',z'b6',z'80', z'86',z'49',z'49',z'a1',z'9e'
+     d,z'80',
+     ez'80',z'80',z'b6',z'b6',z'80',z'80', z'80',z'80',z'd6',z'b6',z'80'
+     e,z'80',
+     fz'08',z'94',z'a2',z'c1',z'80',z'80', z'a2',z'a2',z'a2',z'a2',z'a2'
+     f,z'80',
+     gz'80',z'c1',z'a2',z'94',z'08',z'80', z'02',z'01',z'd9',z'85',z'02'
+     g,z'80'/
+      data tbo2/
+     1z'3e',z'c1',z'5d',z'd5',z'5e',z'80', z'fe',z'91',z'91',z'91',z'fe'
+     1,z'80',
+     2z'7f',z'49',z'49',z'49',z'b6',z'80', z'3e',z'c1',z'c1',z'c1',z'a2'
+     2,z'80',
+     3z'7f',z'c1',z'c1',z'c1',z'e3',z'80', z'7f',z'49',z'49',z'49',z'c1'
+     3,z'80',
+     4z'7f',z'89',z'89',z'89',z'01',z'80', z'e3',z'c1',z'c1',z'49',z'79'
+     4,z'80',
+     5z'7f',z'08',z'08',z'08',z'7f',z'80', z'80',z'c1',z'7f',z'c1',z'80'
+     5,z'80',
+     6z'20',z'40',z'40',z'bf',z'80',z'80', z'7f',z'08',z'94',z'a2',z'c1'
+     6,z'80',
+     7z'7f',z'40',z'40',z'40',z'40',z'80', z'7f',z'02',z'8c',z'02',z'7f'
+     7,z'80',
+     8z'7f',z'02',z'04',z'08',z'7f',z'80', z'3e',z'51',z'49',z'45',z'3e'
+     8,z'80',
+     9z'7f',z'89',z'89',z'89',z'86',z'80', z'3e',z'c1',z'51',z'a1',z'5e'
+     9,z'80',
+     az'7f',z'89',z'19',z'29',z'46',z'80', z'46',z'49',z'49',z'49',z'31'
+     a,z'80',
+     bz'01',z'01',z'7f',z'01',z'01',z'80', z'bf',z'40',z'40',z'40',z'bf'
+     b,z'80',
+     cz'8f',z'b0',z'40',z'b0',z'8f',z'80', z'bf',z'40',z'bc',z'40',z'bf'
+     c,z'80',
+     dz'e3',z'94',z'08',z'94',z'e3',z'80', z'07',z'08',z'70',z'08',z'07'
+     d,z'80',
+     ez'61',z'51',z'49',z'45',z'43',z'80', z'7f',z'7f',z'c1',z'c1',z'c1'
+     e,z'80',
+     fz'02',z'04',z'08',z'20',z'40',z'80', z'c1',z'c1',z'c1',z'7f',z'7f'
+     f,z'80',
+     gz'04',z'02',z'01',z'02',z'04',z'80', z'40',z'40',z'40',z'40',z'40'
+     g,z'80'/
+******   table for 5x7 matrix output ,even parity , column binary
+      data tbe1/
+     1z'c0',z'c0',z'c0',z'c0',z'c0',z'c0', z'c0',z'c0',z'2f',z'c0',z'c0'
+     1,z'c0',
+     2z'c0',z'87',z'c0',z'87',z'c0',z'c0', z'14',z'be',z'14',z'be',z'14'
+     2,z'c0',
+     3z'2e',z'aa',z'ff',z'aa',z'3a',z'c0', z'63',z'93',z'88',z'e4',z'63'
+     3,z'c0',
+     4z'7b',z'c5',z'eb',z'90',z'e9',z'c0', z'c0',z'c0',z'87',z'c0',z'c0'
+     4,z'c0',
+     5z'c0',z'9c',z'22',z'41',z'41',z'c0', z'c0',z'41',z'41',z'22',z'9c'
+     5,z'c0',
+     6z'88',z'aa',z'9c',z'aa',z'88',z'c0', z'88',z'88',z'be',z'88',z'88'
+     6,z'c0',
+     7z'c0',z'c0',z'50',z'30',z'c0',z'c0', z'88',z'88',z'88',z'88',z'88'
+     7,z'c0',
+     8z'c0',z'c0',z'60',z'60',z'c0',z'c0', z'a0',z'90',z'88',z'84',z'82'
+     8,z'c0',
+     9z'be',z'31',z'31',z'31',z'be',z'c0', z'c0',z'82',z'ff',z'c0',z'c0'
+     9,z'c0',
+     az'42',z'e1',z'd1',z'c9',z'c6',z'c0', z'21',z'41',z'c9',z'4d',z'33'
+     a,z'c0',
+     6z'18',z'14',z'12',z'ff',z'90',z'c0', z'27',z'cb',z'c5',z'c5',z'39'
+     6,z'c0',
+     cz'3c',z'42',z'c9',z'c9',z'30',z'c0', z'81',z'81',z'f9',z'05',z'03'
+     c,z'c0',
+     dz'36',z'c9',z'c9',z'c9',z'36',z'c0', z'06',z'c9',z'c9',z'21',z'1e'
+     d,z'c0',
+     ez'c0',z'c0',z'1b',z'1b',z'c0',z'c0', z'c0',z'c0',z'2b',z'1b',z'c0'
+     e,z'c0',
+     fz'88',z'14',z'22',z'41',z'c0',z'c0', z'22',z'22',z'22',z'22',z'22'
+     f,z'c0',
+     gz'c0',z'41',z'22',z'14',z'88',z'c0', z'82',z'81',z'59',z'05',z'82'
+     g,z'c0'/
+      data tbe2/
+     1z'be',z'41',z'dd',z'55',z'df',z'c0', z'7e',z'11',z'11',z'11',z'7e'
+     1,z'c0',
+     2z'ff',z'c9',z'c9',z'c9',z'36',z'c0', z'be',z'41',z'41',z'41',z'22'
+     2,z'c0',
+     3z'ff',z'41',z'41',z'41',z'be',z'c0', z'ff',z'c9',z'c9',z'c9',z'41'
+     3,z'c0',
+     4z'ff',z'09',z'09',z'09',z'81',z'c0', z'be',z'41',z'41',z'c9',z'f9'
+     4,z'c0',
+     5z'ff',z'88',z'88',z'88',z'ff',z'c0', z'c0',z'41',z'ff',z'41',z'c0'
+     5,z'c0',
+     6z'a0',z'c0',z'c0',z'3f',z'c0',z'c0', z'ff',z'88',z'14',z'22',z'41'
+     6,z'c0',
+     7z'ff',z'c0',z'c0',z'c0',z'c0',z'c0', z'ff',z'82',z'0c',z'82',z'ff'
+     7,z'c0',
+     8z'ff',z'82',z'84',z'88',z'ff',z'c0', z'be',z'd1',z'c9',z'c5',z'be'
+     8,z'c0',
+     9z'ff',z'09',z'09',z'09',z'06',z'c0', z'be',z'41',z'd1',z'21',z'de'
+     9,z'c0',
+     az'ff',z'09',z'99',z'a9',z'c6',z'c0', z'c6',z'c9',z'c9',z'c9',z'b1'
+     a,z'c0',
+     bz'81',z'81',z'ff',z'81',z'81',z'c0', z'3f',z'c0',z'c0',z'c0',z'3f'
+     b,z'c0',
+     cz'0f',z'30',z'c0',z'30',z'0f',z'c0', z'3f',z'c0',z'3c',z'c0',z'3f'
+     c,z'c0',
+     dz'63',z'14',z'88',z'14',z'63',z'c0', z'87',z'88',z'f0',z'88',z'87'
+     d,z'c0',
+     ez'e1',z'd1',z'c9',z'c5',z'c3',z'c0', z'ff',z'ff',z'41',z'41',z'41'
+     e,z'c0',
+     fz'82',z'84',z'88',z'90',z'a0',z'c0', z'41',z'41',z'41',z'ff',z'ff'
+     f,z'c0',
+     gz'84',z'82',z'81',z'82',z'84',z'c0', z'60',z'60',z'60',z'60',z'60'
+     g,z'c0'/
+******   table for 5x6 matrix output , no parity , column binary
+*
+      data tb561/
+     1z'00',z'00',z'00',z'00',z'00',z'00', z'00',z'00',z'5e',z'00',z'00'
+     1,z'00',
+     2z'00',z'0e',z'00',z'0e',z'00',z'00', z'14',z'3e',z'14',z'3e',z'14'
+     2,z'00',
+     3z'2e',z'2a',z'7e',z'2a',z'3a',z'00', z'26',z'16',z'08',z'64',z'62'
+     3,z'00',
+     4z'76',z'4a',z'56',z'20',z'50',z'00', z'00',z'00',z'0e',z'00',z'00'
+     4,z'00',
+     5z'00',z'00',z'00',z'3c',z'42',z'00', z'00',z'42',z'3c',z'00',z'00'
+     5,z'00',
+     6z'10',z'54',z'38',z'54',z'10',z'00', z'10',z'10',z'7c',z'10',z'10'
+     6,z'00',
+     7z'00',z'00',z'50',z'30',z'00',z'00', z'10',z'10',z'10',z'10',z'10'
+     7,z'00',
+     8z'00',z'60',z'60',z'00',z'00',z'00', z'40',z'20',z'10',z'08',z'04'
+     8,z'00',
+     9z'3c',z'42',z'42',z'42',z'3c',z'00', z'00',z'44',z'7e',z'40',z'00'
+     9,z'00',
+     az'64',z'52',z'4a',z'4a',z'44',z'00', z'22',z'4a',z'4a',z'4e',z'32'
+     a,z'00',
+     bz'0e',z'08',z'08',z'7e',z'08',z'00', z'2e',z'4a',z'4a',z'4a',z'32'
+     b,z'00',
+     cz'3c',z'4a',z'4a',z'4a',z'30',z'00', z'02',z'02',z'72',z'0a',z'06'
+     c,z'00',
+     dz'34',z'4a',z'4a',z'4a',z'34',z'00', z'04',z'4a',z'4a',z'4a',z'3c'
+     d,z'00',
+     ez'00',z'00',z'36',z'36',z'00',z'00', z'00',z'00',z'56',z'36',z'00'
+     e,z'00',
+     fz'10',z'28',z'44',z'00',z'00',z'00', z'28',z'28',z'28',z'28',z'28'
+     f,z'00',
+     gz'00',z'00',z'44',z'28',z'10',z'00', z'04',z'02',z'52',z'0a',z'04'
+     g,z'00'/
+      data tb562/
+     1z'3c',z'42',z'5a',z'5a',z'4c',z'00', z'78',z'14',z'12',z'14',z'78'
+     1,z'00',
+     2z'7e',z'4a',z'4a',z'4a',z'34',z'00', z'3c',z'42',z'42',z'42',z'24'
+     2,z'00',
+     3z'7e',z'42',z'42',z'42',z'3c',z'00', z'7e',z'4a',z'4a',z'42',z'42'
+     3,z'00',
+     4z'7e',z'0a',z'0a',z'02',z'02',z'00', z'3c',z'42',z'42',z'52',z'72'
+     4,z'00',
+     5z'7e',z'08',z'08',z'08',z'7e',z'00', z'00',z'42',z'74',z'42',z'00'
+     5,z'00',
+     6z'20',z'40',z'40',z'40',z'3e',z'00', z'7e',z'08',z'10',z'24',z'42'
+     6,z'00',
+     7z'7e',z'40',z'40',z'40',z'40',z'00', z'7e',z'04',z'08',z'04',z'7e'
+     7,z'00',
+     8z'7e',z'04',z'08',z'30',z'7e',z'00', z'3c',z'42',z'42',z'42',z'3c'
+     8,z'00',
+     9z'7e',z'0a',z'0a',z'0a',z'04',z'00', z'3c',z'42',z'52',z'22',z'5c'
+     9,z'00',
+     az'7e',z'0a',z'1a',z'2a',z'44',z'00', z'44',z'4a',z'4a',z'4a',z'32'
+     a,z'00',
+     bz'02',z'02',z'7e',z'02',z'02',z'00', z'3e',z'40',z'40',z'40',z'3e'
+     b,z'00',
+     cz'1e',z'20',z'40',z'20',z'1e',z'00', z'7e',z'20',z'18',z'20',z'7e'
+     c,z'00',
+     dz'66',z'10',z'08',z'10',z'66',z'00', z'06',z'08',z'70',z'08',z'06'
+     d,z'00',
+     ez'62',z'52',z'4a',z'42',z'46',z'00', z'7e',z'42',z'42',z'00',z'00'
+     e,z'00',
+     fz'02',z'04',z'08',z'10',z'20',z'00', z'00',z'00',z'42',z'42',z'7e'
+     f,z'00',
+     gz'08',z'04',z'02',z'04',z'08',z'00', z'40',z'40',z'40',z'40',z'40'
+     g,z'00'/
       IF (J.EQ.0) THEN
 C
 C.....5*7 MATRIX, ODD PARITY, COLUMN BINARY
@@ -2340,7 +2610,8 @@ C
 C
       INCLUDE 'DARRAY.INC'
 C
-      DATA ILEGAL/ZEE/
+c      DATA ILEGAL/ZEE/
+      data ilegal/z'ee'/
 C
 C
       ENTRY PUNCHB(N,A,J,K)
@@ -2426,7 +2697,8 @@ C
 C
       INCLUDE 'DARRAY.INC'
 C
-      DATA ILEGAL/ZEE/
+c      DATA ILEGAL/ZEE/
+      data ilegal/z'ee'/
 C
 C
       ENTRY PUNCHD(N,A,J,K)

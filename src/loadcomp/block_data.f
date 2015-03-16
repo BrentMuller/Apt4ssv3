@@ -108,67 +108,68 @@
 !                                                                       
 !...       1.      NAME TABLE AND TABLE LIMITS                          
 !                                                                       
-      DATA   CHARST /  1/,  CHARND / 56/ ,                              &
-     &       INAMST / 57/,  INAMND /169/,                               &
-     &       NAMEST /170/,  NAMMAX /3000/,                              &
-     &       IFIXST/ 1/,  IFIXND /13/,                                  &
-     &       NUMBST/14/,  NUMBND /3000/                                 
-      DATA ALPHA(1),CALPHA(1)/    0,' '/,                               &
-     &     ALPHA(2),CALPHA(2)/10000,'0'/,                               &
-     &     ALPHA(3),CALPHA(3)/10000,'1'/,                               &
-     &     ALPHA(4),CALPHA(4)/10000,'2'/,                               &
-     &     ALPHA(5),CALPHA(5)/10000,'3'/,                               &
-     &     ALPHA(6),CALPHA(6)/10000,'4'/,                               &
-     &     ALPHA(7),CALPHA(7)/10000,'5'/,                               &
-     &     ALPHA(8),CALPHA(8)/10000,'6'/,                               &
-     &     ALPHA(9),CALPHA(9)/10000,'7'/,                               &
-     &     ALPHA(10),CALPHA(10)/10000,'8'/                              
-      DATA ALPHA(11),CALPHA(11)/10000,'9'/,                             &
-     &     ALPHA(12),CALPHA(12)/ 8000,'='/,                             &
-     &     ALPHA(13),CALPHA(13)/12000,''''/,                            &
-     &     ALPHA(14),CALPHA(14)/ 7000,'+'/,                             &
-     &     ALPHA(15),CALPHA(15)/11000,'A'/,                             &
-     &     ALPHA(16),CALPHA(16)/11000,'B'/,                             &
-     &     ALPHA(17),CALPHA(17)/11000,'C'/,                             &
-     &     ALPHA(18),CALPHA(18)/11000,'D'/,                             &
-     &     ALPHA(19),CALPHA(19)/11000,'E'/,                             &
-     &     ALPHA(20),CALPHA(20)/11000,'F'/                              
-      DATA ALPHA(21),CALPHA(21)/11000,'G'/,                             &
-     &     ALPHA(22),CALPHA(22)/11000,'H'/,                             &
-     &     ALPHA(23),CALPHA(23)/11000,'I'/,                             &
-     &     ALPHA(24),CALPHA(24)/21000,'.'/,                             &
-     &     ALPHA(25),CALPHA(25)/ 3000,')'/,                             &
-     &     ALPHA(26),CALPHA(26)/ 6000,'-'/,                             &
-     &     ALPHA(27),CALPHA(27)/11000,'J'/,                             &
-     &     ALPHA(28),CALPHA(28)/11000,'K'/,                             &
-     &     ALPHA(29),CALPHA(29)/11000,'L'/,                             &
-     &     ALPHA(30),CALPHA(30)/11000,'M'/                              
-      DATA ALPHA(31),CALPHA(31)/11000,'N'/,                             &
-     &     ALPHA(32),CALPHA(32)/11000,'O'/,                             &
-     &     ALPHA(33),CALPHA(33)/11000,'P'/,                             &
-     &     ALPHA(34),CALPHA(34)/11000,'Q'/,                             &
-     &     ALPHA(35),CALPHA(35)/11000,'R'/,                             &
-     &     ALPHA(36),CALPHA(36)/15000,'$'/,                             &
-     &     ALPHA(37),CALPHA(37)/ 9000,'*'/,                             &
-     &     ALPHA(38),CALPHA(38)/13000,' '/,                             &
-     &     ALPHA(39),CALPHA(39)/ 5000,'/'/,                             &
-     &     ALPHA(40),CALPHA(40)/11000,'S'/                              
-      DATA ALPHA(41),CALPHA(41)/11000,'T'/,                             &
-     &     ALPHA(42),CALPHA(42)/11000,'U'/,                             &
-     &     ALPHA(43),CALPHA(43)/11000,'V'/,                             &
-     &     ALPHA(44),CALPHA(44)/11000,'W'/,                             &
-     &     ALPHA(45),CALPHA(45)/11000,'X'/,                             &
-     &     ALPHA(46),CALPHA(46)/11000,'Y'/,                             &
-     &     ALPHA(47),CALPHA(47)/11000,'Z'/,                             &
-     &     ALPHA(48),CALPHA(48)/ 1000,','/,                             &
-     &     ALPHA(49),CALPHA(49)/ 2000,'('/,                             &
-     &     ALPHA(50),CALPHA(50)/24000,'LTERM'/                          
-      DATA ALPHA(51),CALPHA(51)/ 4000,'RTERM'/,                         &
-     &     ALPHA(52),CALPHA(52)/38000,'MCLTRM'/,                        &
-     &     ALPHA(53),CALPHA(53)/32000,'DBLAST'/,                        &
-     &     ALPHA(54),CALPHA(54)/25000,'DOT'/,                           &
-     &     ALPHA(55),CALPHA(55)/26000,'KREUZ'/,                         &
-     &     ALPHA(56),CALPHA(56)/45000,'CONAST'/                         
+c    using data  in "fort1.f" for this initialization
+c     DATA   CHARST /  1/,  CHARND / 56/ ,                              &
+c    &       INAMST / 57/,  INAMND /169/,                               &
+c    &       NAMEST /170/,  NAMMAX /3000/,                              &
+c    &       IFIXST/ 1/,  IFIXND /13/,                                  &
+c    &       NUMBST/14/,  NUMBND /3000/                                 
+c     DATA ALPHA(1),CALPHA(1)/    0,' '/,                               &
+c    &     ALPHA(2),CALPHA(2)/10000,'0'/,                               &
+c    &     ALPHA(3),CALPHA(3)/10000,'1'/,                               &
+c    &     ALPHA(4),CALPHA(4)/10000,'2'/,                               &
+c    &     ALPHA(5),CALPHA(5)/10000,'3'/,                               &
+c    &     ALPHA(6),CALPHA(6)/10000,'4'/,                               &
+c    &     ALPHA(7),CALPHA(7)/10000,'5'/,                               &
+c    &     ALPHA(8),CALPHA(8)/10000,'6'/,                               &
+c    &     ALPHA(9),CALPHA(9)/10000,'7'/,                               &
+c    &     ALPHA(10),CALPHA(10)/10000,'8'/                              
+c     DATA ALPHA(11),CALPHA(11)/10000,'9'/,                             &
+c    &     ALPHA(12),CALPHA(12)/ 8000,'='/,                             &
+c    &     ALPHA(13),CALPHA(13)/12000,''''/,                            &
+c    &     ALPHA(14),CALPHA(14)/ 7000,'+'/,                             &
+c    &     ALPHA(15),CALPHA(15)/11000,'A'/,                             &
+c    &     ALPHA(16),CALPHA(16)/11000,'B'/,                             &
+c    &     ALPHA(17),CALPHA(17)/11000,'C'/,                             &
+c    &     ALPHA(18),CALPHA(18)/11000,'D'/,                             &
+c    &     ALPHA(19),CALPHA(19)/11000,'E'/,                             &
+c    &     ALPHA(20),CALPHA(20)/11000,'F'/                              
+c     DATA ALPHA(21),CALPHA(21)/11000,'G'/,                             &
+c    &     ALPHA(22),CALPHA(22)/11000,'H'/,                             &
+c    &     ALPHA(23),CALPHA(23)/11000,'I'/,                             &
+c    &     ALPHA(24),CALPHA(24)/21000,'.'/,                             &
+c    &     ALPHA(25),CALPHA(25)/ 3000,')'/,                             &
+c    &     ALPHA(26),CALPHA(26)/ 6000,'-'/,                             &
+c    &     ALPHA(27),CALPHA(27)/11000,'J'/,                             &
+c    &     ALPHA(28),CALPHA(28)/11000,'K'/,                             &
+c    &     ALPHA(29),CALPHA(29)/11000,'L'/,                             &
+c    &     ALPHA(30),CALPHA(30)/11000,'M'/                              
+c     DATA ALPHA(31),CALPHA(31)/11000,'N'/,                             &
+c    &     ALPHA(32),CALPHA(32)/11000,'O'/,                             &
+c    &     ALPHA(33),CALPHA(33)/11000,'P'/,                             &
+c    &     ALPHA(34),CALPHA(34)/11000,'Q'/,                             &
+c    &     ALPHA(35),CALPHA(35)/11000,'R'/,                             &
+c    &     ALPHA(36),CALPHA(36)/15000,'$'/,                             &
+c    &     ALPHA(37),CALPHA(37)/ 9000,'*'/,                             &
+c    &     ALPHA(38),CALPHA(38)/13000,' '/,                             &
+c    &     ALPHA(39),CALPHA(39)/ 5000,'/'/,                             &
+c    &     ALPHA(40),CALPHA(40)/11000,'S'/                              
+c     DATA ALPHA(41),CALPHA(41)/11000,'T'/,                             &
+c    &     ALPHA(42),CALPHA(42)/11000,'U'/,                             &
+c    &     ALPHA(43),CALPHA(43)/11000,'V'/,                             &
+c    &     ALPHA(44),CALPHA(44)/11000,'W'/,                             &
+c    &     ALPHA(45),CALPHA(45)/11000,'X'/,                             &
+c    &     ALPHA(46),CALPHA(46)/11000,'Y'/,                             &
+c    &     ALPHA(47),CALPHA(47)/11000,'Z'/,                             &
+c    &     ALPHA(48),CALPHA(48)/ 1000,','/,                             &
+c    &     ALPHA(49),CALPHA(49)/ 2000,'('/,                             &
+c    &     ALPHA(50),CALPHA(50)/24000,'LTERM'/                          
+c     DATA ALPHA(51),CALPHA(51)/ 4000,'RTERM'/,                         &
+c    &     ALPHA(52),CALPHA(52)/38000,'MCLTRM'/,                        &
+c    &     ALPHA(53),CALPHA(53)/32000,'DBLAST'/,                        &
+c    &     ALPHA(54),CALPHA(54)/25000,'DOT'/,                           &
+c    &     ALPHA(55),CALPHA(55)/26000,'KREUZ'/,                         &
+c    &     ALPHA(56),CALPHA(56)/45000,'CONAST'/                         
 !                                                                       
 !          7.    RESTRICTION DATA FOR CAPACITY CONTROL                  
 !                                                                       

@@ -766,26 +766,27 @@ C
 C
 C...        20.    IO - ARRAY
 C
-      DATA DARRAY/' '/
+c      DATA DARRAY/' '/
       END
 **** SOURCE FILE : BDSDP000.ORG   ***
+c commented out because initialized in loadcomp/block_data.f
 *
-      BLOCK DATA BDSDP
+c      BLOCK DATA BDSDP
 C
 C  PURPOSE TO INITIALIZE SYSTEM DEPENDENT PARAMETERS
 C
-      INCLUDE 'SDP.INC'
+c      INCLUDE 'SDP.INC'
 C
 C     NBCHAR:  NO. OF BITS PER BYTE
-      DATA NBCHAR/8/
+c     DATA NBCHAR/8/
 C     NBWRD:   NO OF BITS PER WORD
-      DATA NBWRD/32/
+c     DATA NBWRD/32/
 C     IWRD:    NO OF BYTES PER WORD
-      DATA IWRD/4/
+c     DATA IWRD/4/
 C     IFAC:    BYTE LEFT SHIFT MULTIPLICATION FACTOR
-      DATA IFAC/256/
+c     DATA IFAC/256/
 C
-      END
+c     END
 **** SOURCE FILE : M0000502.W01   ***
 *
 C
