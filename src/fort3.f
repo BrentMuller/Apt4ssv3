@@ -9,7 +9,7 @@ C
      2            (ARGMXY(1),GMTY(301)),
      3            (GEOMTB(1),GMTY(551)) 
 C
-c      DATA ARGMXY/250*0/
+      DATA ARGMXY/250*0/
       DATA ARGMXY(  7)/   2/
       DATA ARGMXY(  8)/   3/
       DATA ARGMXY(  9)/   2/
@@ -34,14 +34,8 @@ c      DATA ARGMXY/250*0/
       DATA ARGMXY( 52)/   3/
       DATA ARGMXY( 53)/   4/
       DATA ARGMXY(147)/   2/
-
-c      gfortran chokes on initializing everything, then
-c      re-initializing individual memory locations, so this
-c      first statement must be commented.
 C                     /Z7FFFFFFF/
-c      DATA PMIDTB/250* 2147483647/
-
-      data pmidtb(238:250)/13*2147483647/
+      DATA PMIDTB/250* 2147483647/
 C                     / Z40800000/
       DATA PMIDTB( 21)/ 1082130432/
 C                     / Z40400000/

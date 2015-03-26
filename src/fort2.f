@@ -328,14 +328,9 @@ C     BLOCK DATA PROGRAM FOR NAMETB
      1          1,    56,    57,   169,   170,  3000/,
      2     IFIXST,IFIXND,NUMBST,NUMBND/
      3          1,    13,    14,  3000/
-c       gfortran chokes on initializations like this-
-c       maybe because it thinks you want to define it 
-c       twice?
-c      DATA NAMTBL/ 3000*0/
-c      DATA CNAMTB/ 3000*' '/
-c      DATA CNUMTB/ 3000*' '/
-      data namtbl(   1),   cnamtb(   1)
-     *         /0,           ' '/
+      DATA NAMTBL/ 3000*0/
+      DATA CNAMTB/ 3000*' '/
+      DATA CNUMTB/ 3000*' '/
 C          NAMTBL ENTRY FOR 0     
       DATA NAMTBL(   2),   CNAMTB(   2)
      *        /10000   ,     '0     '/
@@ -2460,10 +2455,6 @@ C          NAMTBL ENTRY FOR GAPLES
 C          NAMTBL ENTRY FOR ZIGZAG
       DATA NAMTBL(2994),   CNAMTB(2994)
      *        /35061   ,     'ZIGZAG'/
-
-      data namtbl(2995:3000)/6*0/
-      data cnamtb(2995:3000)/6*' '/
-
 C     CNUMTB ENTRIES FROM IFIXST TO IFIXND
       DATA CNUMTB(   1) /'0           '/
       DATA CNUMTB(   2) /'1           '/
@@ -2478,5 +2469,4 @@ C     CNUMTB ENTRIES FROM IFIXST TO IFIXND
       DATA CNUMTB(  11) /'0.          '/
       DATA CNUMTB(  12) /'1.          '/
       DATA CNUMTB(  13) /'10.         '/
-      data cnumtb(14:3000)/2987*' '/
        END

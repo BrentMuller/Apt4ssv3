@@ -1,6 +1,7 @@
 
 
-AM_FFLAGS = -I$(top_srcdir)/src/include -ffixed-form  -fdollar-ok -g -fno-range-check #-Wall
+AM_FFLAGS = -I$(top_srcdir)/src/include -ffixed-form  -fdollar-ok -g -fno-range-check \
+		-fno-automatic
 
 AM_FCFLAGS = -I$(top_srcdir)/src/include 
 
