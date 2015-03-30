@@ -769,13 +769,12 @@ C
 c      DATA DARRAY/' '/
       END
 **** SOURCE FILE : BDSDP000.ORG   ***
-c commented out because initialized in loadcomp/block_data.f
 *
-c      BLOCK DATA BDSDP
+      BLOCK DATA BDSDP
 C
 C  PURPOSE TO INITIALIZE SYSTEM DEPENDENT PARAMETERS
 C
-c      INCLUDE 'SDP.INC'
+      INCLUDE 'SDP.INC'
 C
 C     NBCHAR:  NO. OF BITS PER BYTE
 c     DATA NBCHAR/8/
@@ -785,8 +784,9 @@ C     IWRD:    NO OF BYTES PER WORD
 c     DATA IWRD/4/
 C     IFAC:    BYTE LEFT SHIFT MULTIPLICATION FACTOR
 c     DATA IFAC/256/
+      data nbchar,nbwrd,iwrd,ifac/8,32,4,256/
 C
-c     END
+      END
 **** SOURCE FILE : M0000502.W01   ***
 *
 C

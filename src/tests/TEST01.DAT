@@ -1,0 +1,155 @@
+PARTNO TEST01 GENERAL TEST FOR SS  JKH,IITRI
+REMARK          TESTING ON SSX3.LM
+$$
+$$ *******************************************************************
+$$ *                                                                 *
+$$ *   THIS TEST OK IN SSV3 - 08-JUN-1989                            *
+$$ *                                                                 *
+$$ *     FOLLOWING CORRECTION DETAILED IN CAR. 0046                  *
+$$ *     AND THE INSERTION OF TLAXIS/0,0,1 AT START OF MACRO MILLPS  *
+$$ *                                                                 *
+$$ *******************************************************************
+$$
+$$   THIS TEST LARGELY PROCESSES OK IN SSV1 - 07-JUL-1982
+$$                                 AND SSV2 - 29-SEP-1986
+$$
+$$   BUT GIVES THE FOLLOWING 3 RESTART DIAGNOSTICS
+$$
+$$   *** 25403   ISN  61 FROM SUBROUTINE DDSSRF ***
+$$   *** 25403   ISN  61 FROM SUBROUTINE DDSSRF ***
+$$           GOLFT/C1,TANTO,LYM11     FOR MACRO CALLED WITH SSRF=SSADLE
+$$   *** 20102   ISN 115 FROM SUBROUTINE APT211 ***
+$$           GOFWD/SSDRIV,SSCHK1
+$$
+$$---------------------------------------------------------------------
+CLPRNT
+NOPOST
+MULTAX
+      INTOL/0.002
+      OUTTOL/0.002
+      RESERV/ P, 100
+      PDEF=MACRO/SSF,ANGA,DA1,DA2,NSPLA,ANGB,DB1,DB2,NSPLB
+      ASTEP=(DA2-DA1)/(NSPLA-1)
+      BSTEP=(DB2-DB1)/(NSPLB-1)
+      PCT=0
+      ACT=0
+ ID1) ACT=ACT+1
+      IF(ACT-NSPLA)ID2,ID2,ID5
+  ID2) DA=(ACT-1)*ASTEP+DA1
+      PA=POINT/(DA*COSF(ANGA)),(DA*SINF(ANGA)),0.0
+      LA=LINE/PA,ATANGL,(ANGA+90)
+      BCT=0
+ID3)  BCT=BCT+1
+      IF(BCT-NSPLB) ID4,ID4,ID1
+ID4)  DB=(BCT-1)*BSTEP+DB1
+      PB=POINT/(DB*COSF(ANGB)),(DB*SINF(ANGB)),0.0
+      LB=LINE/PB,ATANGL,(ANGB+90)
+      PCT=PCT+1
+      PXY=POINT/INTOF,LA,LB
+       OBTAIN,POINT/PXY,X,Y
+      IF(SSF) IC1,IC2,IC3
+  IC1) Z=0.01*(X*X+Y*Y)
+      JUMPTO/ IC4
+  IC2) RAD=100.0
+      Z=SQRTF(RAD*RAD-X*X-Y*Y)-RAD
+      JUMPTO/IC4
+  IC3)  FAC=0.02
+      Z=FAC*(X*X-Y*Y)
+  IC4) DUMMY=0
+      P(PCT)=POINT/X,Y,Z
+      JUMPTO/ID3
+ID5)  DUMMY=0
+      TERMAC
+     CALL/PDEF,SSF=-1 ,ANGA=-90,DA1=-10,DA2=10,NSPLA=4,$
+      ANGB=0,DB1=-10,DB2=10,NSPLB=5
+     I=0
+      SSPARB=SSURF/SMESH,XYPLAN,$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1)
+      CALL/PDEF,SSF=0  ,ANGA=-90,DA1=-10,DA2=10,NSPLA=4,$
+        ANGB=0,DB1=-10,DB2=10,NSPLB=5
+      I=0
+       SSPHER=SSURF/SMESH,XYPLAN,$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),$
+      SPLINE,P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1),P(I=I+1)
+      CALL/PDEF,SSF=1  ,ANGA=-90,DA1=-10,DA2=10,NSPLA=4,$
+       ANGB=0,DB1=-10,DB2=10,NSPLB=5
+$$      INCLUSIVE SUBSCRIPTS APPLIED TO THE DEFINITION OF A MESH
+      SSADLE=SSURF/SMESH,XYPLAN,SPLINE,P(1,THRU,5),SPLINE, $
+      P(6,THRU,10),SPLINE,P(11,THRU,15),SPLINE,P(16,THRU,20)
+       LYM11=LINE/0,-11,1,-11
+      L1=LINE/5,-11,0,3
+      C1=CIRCLE/0,-3,0,8
+      MILLPS=MACRO/SSRF
+      CUTTER/2.0,1.0
+      TLAXIS/0,0,1   $$ INSERTED TO ENSURE CORRECT TOOL AXIS ON 2ND CALL
+      FROM/-1,-1,3
+      GOTO/0,-5,3
+      INDIRV/0,0,-1
+      GO/L1,SSRF,LYM11
+      INDIRV/-1,2,0
+      GOFWD/L1,C1
+      GOLFT/C1,TANTO,LYM11
+      GOFWD/LYM11,ON,L1
+PPRINT  NORMAL TO PART SURFACE TEST
+      GOTO/0,-8,3
+      TLAXIS/NORMPS
+      INDIRV/0,0,-1
+      GO/L1,SSRF,LYM11
+      INDIRV/-1,2,0
+      GOFWD/L1,C1
+      GOTO/0,0,10
+      TERMAC
+PPRINT   PARABALOID OF REVOLUTION SS TEST
+            CALL/ MILLPS,SSRF=SSPARB
+PPRINT SPHERE SS TEST
+            CALL/MILLPS, SSRF=SSPHER
+PPRINT SADDLE TEST
+            CALL/MILLPS,SSRF=SSADLE
+       P1=POINT/10,-3,-10
+      P2=POINT/10,-2,0
+      P3=POINT/10,-3,10
+      P4=POINT/0,-1,-10
+      P5=POINT/0,0,0
+      P6=POINT/0,-1,10
+      P7=POINT/-10,-3,-10
+      P8=POINT/-10,-2,0
+      P9=POINT/-10,-3,10
+      SSDRIV=SSURF/SMESH,XYZ,SPLINE,P1,P2,P3,SPLINE,P4,P5,$
+      P6,NORMAL,(VECTOR/10,0,1),SPLINE,P7,P8,WEIGHT,0.5,P9
+      R1=POINT/-3,-10,-10
+      R2=POINT/-2,-10,0
+      R3=POINT/-3,-10,10
+      R4=POINT/-1,0,-10
+      R5=POINT/0,0,0
+      R6=POINT/-1,0,10
+      R7=POINT/-3,10,-10
+      R8=POINT/-2,10,0
+      R9=POINT/-3,10,10
+      SSCHK2=SSURF/SMESH,YZPLAN,SPLINE,R1,R2,R3,SPLINE,R4,R5,R6, $
+         SPLINE,R7,R8,R9
+      Q1=POINT/-8,-10,-10
+      Q2=POINT/-7,-10,0
+       Q3=POINT/-8,-10,10
+      Q4=POINT/-6,0,-10
+      Q5=POINT/-5,0,0
+      Q6=POINT/-6,0,10
+      Q7=POINT/-8,10,-10
+      Q8=POINT/-7,10,0
+      Q9=POINT/-8,10,10
+      SSCHK1=SSURF/SMESH,YZPLAN,SPLINE,Q1,Q2,Q3,SPLINE,Q4,Q5,Q6, $
+             SPLINE,Q7,Q8,Q9
+      TLAXIS/0,0,1
+      CUTTER/2.0,1.0,0.0,0.0,0.0,0.0,1.0
+PPRINT  THREE SCULPTURED SURFACES IN ONE MOTION STATEMENT
+      GOTO/1.5, 1.5, 1.5
+PPRINT   STARTUP TO THREE SCULPTURED SURFACES
+      GO/SSDRIV,SSPHER,SSCHK2
+      INDIRV/-1,0,0
+      GOFWD/SSDRIV,SSCHK1
+      GOTO/3,3,3
+      FINI

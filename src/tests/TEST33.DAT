@@ -1,0 +1,28 @@
+PARTNO CURV FLOW TEST
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  15-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 08-JUL-1982
+$$               AND SSV2 - 07-NOV-1986
+$$
+PPOPTN/INTLNG,ON
+RESERV/P,50
+P(001)=POINT/     -8.7818  ,-2.0546  ,-0.3645
+P(002)=POINT/     -8.0776  ,-1.4698  ,-0.3940
+P(003)=POINT/     -5.1896  ,-0.4142  ,-0.4565
+P(004)=POINT/     -3.9760  , -0.0770 ,-0.4335
+P(005)=POINT/     -1.6456  ,1.2440   ,-0.4680
+P(006)=POINT/     0.8988   ,3.3542   ,-0.5160
+ARCFL=SCURV/SPLINE,P(1,THRU,6),$
+            FLOW,ARC,0,5,SEG,LENGTH,0,5
+PARMFL=SCURV/SPLINE,P(1,THRU,6),$
+            FLOW,PARAM,0,5,SEG,PARAM,0,5
+CORDFL=SCURV/SPLINE,P(1,THRU,6),$
+            FLOW,CHORD,0,5,P(1),P(6),SEG,LENGTH,0,5
+PT=POINT/0,0,0
+ANGLFL=SCURV/SPLINE,P(1,THRU,6),$
+            FLOW,ANGLE,0,5,PT,SEG,LENGTH,0,5
+FINI

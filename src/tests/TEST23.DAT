@@ -1,0 +1,139 @@
+PARTNO  TEST BOEINGA  FUSELAGE DOOR, H MEENTS, BOEING
+REMARK   DSN IS BOEINGA
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  15-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 07-JUL-1982
+$$               AND SSV2 - 06-OCT-1986
+$$
+        CLPRNT
+        MULTAX
+        RESERV/P,10,P1,30,M,10,P2,30
+        CUTCOM/LENGTH,12.5,SMALL
+        CUTTER/1.125,.5625
+INTOL/.005
+OUTTOL/.005
+        LX=LINE/XAXIS
+        LY=LINE/YAXIS
+        TPLY=PLANE/0,1,0,.25
+        TPLPNY=PLANE/0,1,0,0
+        YEDGEB=PLANE/0,1,0,1.05
+        ENDPLB=PLANE/0,-1,0,1.5
+        PPLL=PLANE/1,0,0,-(2.87+1.1)
+        PPLR=PLANE/1,0,0,(8.2-(2.87+1.1))
+        TPLPNR=PLANE/1,0,0,((4.7-2.87)+1.1)
+        TPLPNX=PLANE/-1,0,0,2.87
+        TPLX=PLANE/-1,0,0,(2.87-.25)
+        XEDGEL=PLANE/-1,0,0,(2.87-1.1)
+        XEDGER=PLANE/1,0,0,(4.7-2.87)
+        YEDGET=PLANE/0,1,0,8.2
+        ENDPLT=PLANE/0,1,0,(13-1.5)
+        MY=MATRIX/TRANSL,0,0,350
+        MZ=MATRIX/ZXROT,180
+        MYZ=MATRIX/MZ,MY
+TH1   = POINT/0,0,2.1
+TH2   = POINT/-2.87,1.81,2.1
+TH3   = POINT/-2.87,7.41,2.1
+MPLHI = PLANE/0,0,1,1
+MACHPL= PLANE/0,0,1,.35
+        CR=CIRCLE/0,(350-46),46
+        P(1)=POINT/CR,ATANGL,85
+        P(2)=POINT/CR,ATANGL,87.5
+        P(3)=POINT/CR,ATANGL,90
+        P(4)=POINT/CR,ATANGL,92.5
+        P(5)=POINT/CR,ATANGL,95
+        LOOPST
+K     = 1
+N     = 1
+AN    = 2.2
+3)J   = 1
+1)      OBTAIN,POINT/P(J),X,Y,Z
+        REFSYS/(M(N)=MATRIX/ZXROT,AN)
+P2(K) = POINT/Z,X,Y
+        REFSYS/NOMORE
+J     = J+1
+K     = K+1
+        IF(J-5)1,1,2
+2)N   = N+1
+AN    = AN-.55
+        IF(AN+.55)4,3,3
+4)      J=1
+5)      OBTAIN,POINT/P2(J),X,Y,Z
+        REFSYS/MYZ
+        P1(J)=POINT/Y,X,Z
+        REFSYS/NOMORE
+        J=J+1
+        IF(30-J)6,5,5
+6)      LOOPND
+MAXDP/10
+DOOR  = SSURF/SMESH,XYZ,SPLINE,P1(1,THRU,5),SPLINE,P1(6,THRU,10),$
+       SPLINE,P1(11,THRU,15),SPLINE,P1(16,THRU,20),SPLINE,$
+        P1(21,THRU,25),SPLINE,P1(26,THRU,30)
+MAXDP/10
+        FEDRAT/100
+        FROM/34,32,30,0,1,0
+        STOP
+        TLAXIS/0,0,1
+        GOTO/TH1
+        STOP
+        GOTO/TH2
+        STOP
+        GOTO/TH3
+        STOP
+        GOTO/34,32,30,0,1,0
+        DRAFT/ON
+        STOP
+        $$   LOAD 11/8 BALL NOSE CUTTER
+        SEQNO/004
+        INDEX/1
+        TLAXIS/0,0,1
+        GOTO/TH1
+        STOP
+        FEDRAT/25
+        GO/ON,TPLPNY,MPLHI,ON,(PLANE/PARLEL,TPLPNX,XLARGE,1)
+        LOOPST
+J=.05
+        GO/ON,TPLPNX,DOOR,ON,TPLPNY,7
+7)      TLON,GORGT/TPLPNX,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GORGT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,TPLPNR
+J=J+.05
+        GOLFT/TPLPNR,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GOLFT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,TPLPNX
+      J=J+.05
+IF(1.7-J) 11,7,7 $$ FORMERLY 8,7,7
+8)      GO/ON,(PLANE/PARLEL,TPLPNY,YLARGE,J),MPLHI,ON,TPLPNX
+        GO/ON,(PLANE/PARLEL,TPLPNY,YLARGE,J),DOOR,ON,TPLPNX
+        J=J+.05
+9)      TLON,GORGT/TPLPNX,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GORGT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,XEDGEL
+        J=J+.05
+DUMMY=0
+        GOLFT/XEDGEL,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GOLFT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,TPLPNX
+        J=J+.05
+        IF(8-J)10,9,9
+10)     TLON,GORGT/TPLPNX,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GORGT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,TPLPNR
+        J=J+.05
+DUMMY=0
+        GOLFT/TPLPNR,ON,(PLANE/PARLEL,TPLPNY,YLARGE,J)
+        GOLFT/(PLANE/PARLEL,TPLPNY,YLARGE,J),ON,TPLPNX
+        J=J+.05
+        IF(9.5-J)11,10,10
+11)     MAXDP/10
+        LOOPND
+        GODLTA/1
+        FEDRAT/100
+        GOTO/0,0,2.1
+        INDEX/1,NOMORE
+MXR   = MATRIX/-1,0,0,0,0,1,0,0,0,0,1,0
+        COPY/1,MODIFY,MXR,1
+        GOTO/34,32,30,0,1,0
+        DRAFT/OFF
+        STOP
+        GOTO/-43,69.5,28.75,0,1,0
+        END
+        FINI

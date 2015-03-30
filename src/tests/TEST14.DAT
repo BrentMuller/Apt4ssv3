@@ -1,0 +1,49 @@
+PARTNO TEST14  THE EFFECTS OF WEIGHTS IN SMOOTHING A CLOSED CIRCLE
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+PARTNO TEST FOR THE EFFECT OF WEIGHTS IN SMOOTHING A CLOSED CIRCLE
+PPRINT   TEST14
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  13-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 05-JUL-1982
+$$               AND SSV2 - 29-SEP-1986
+$$
+SYN/W,WEIGHT
+RESERV/P,50
+P(1)=POINT/0,0,0
+      GENP=MACRO/RAD,YVAL,IA,IB
+      I=IA-1
+      ID1) I=I+1
+      IF(I-IB) ID2,ID2,ID3
+      ID2) DIF=360/(IB-IA)
+      ANG=(I-IA)*DIF
+      ANG=360-ANG
+      X=RAD*COSF(ANG)
+      Z=RAD*SINF(ANG)
+      Y=YVAL
+      P(I)=POINT/X,Y,Z
+      JUMPTO/ID1
+      ID3) TERMAC
+$$
+      CALL/GENP,RAD=10,YVAL=0,IA=1,IB=10
+      CALL/GENP,RAD=10,YVAL=10,IA=11,IB=20
+      SSDEF=MACRO/WT
+      S=SSURF/SMESH,XYZ,$
+   SPLINE,P(1),W,WT,P(2),W,WT,P(3),W,WT,P(4),W,WT,P(5),W,WT,P(6),W,WT,$
+   P(7),W,WT,P(8),W,WT,P(9),W,WT,P(10),W,WT,  $
+   SPLINE,P(11),W,WT,P(12),W,WT,P(13),W,WT,P(14),W,WT,P(15),W,WT, $
+   P(16),W,WT,P(17),W,WT,P(18),W,WT,P(19),W,WT,P(20),W,WT
+      TERMAC
+      CALL/SSDEF,WT=1.0
+      CALL/SSDEF,WT=0.9
+      CALL/SSDEF,WT=0.7
+      CALL/SSDEF,WT=0.5
+      CALL/SSDEF,WT=0.3
+      CALL/SSDEF,WT=0.1
+      CALL/SSDEF,WT=.01
+      CALL/SSDEF,WT=.001
+      CALL/SSDEF,WT=.0001
+FINI

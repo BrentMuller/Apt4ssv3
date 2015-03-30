@@ -1,0 +1,31 @@
+PARTNO TEST38 A SIMPLE RULED SURFACE UNDER THE GENCUR DEFINITION
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  15-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 08-JUL-1982
+$$               AND SSV2 - 02-OCT-1986
+$$
+PPOPTN/INTLNG,ON
+CLPRNT
+PRINT/TABPRT,ON
+P1=POINT/0,0,0
+P2=POINT/1,0,1
+P3=POINT/2,0,0
+Q1=POINT/0,1,0
+Q2=POINT/1,1,.5
+Q3=POINT/2,1,0
+C1=SCURV/SPLINE,P1,P2,P3,FLOW,ARC,0,2,SEG,LENGTH,0,2
+C2=SCURV/SPLINE,Q1,Q2,Q3,FLOW,ARC,0,2,SEG,LENGTH,0,2
+S1=SSURF/GENCUR,C1,C2
+CUTTER/0,0,0,0,0,0,0
+FROM/.5, .5, 1
+LX1=LINE/0, .25, 1, .25
+LX2=LINE/0, 1.75, 1, 1.75
+LY=LINE/.75, 0, .75, 2
+GO/TO, LY, TO, S1, TO, LX1
+INDIRV/0, 1, 0
+GOFWD/LY, TO, LX2
+FINI

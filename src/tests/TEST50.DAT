@@ -1,0 +1,46 @@
+PARTNO/'FURTHER GOLOFT TESTS'
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  28-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+CLPRNT
+P0=POINT/0,0,0
+P1=POINT/0,1,0
+P2=POINT/1,2.5,0
+P3=POINT/3,3.0,0
+P4=POINT/5,2.5,0
+C=SCURV/SPLINE,P1,P2,P3,P4
+RS1=SSURF/REVOLV,C,AXIS,P0,(VECTOR/1,0,0),CCLW,0,180
+$$
+CS1=PLANE/1,0,0,0.75
+CS2=PLANE/1,0,0,4.25
+CS3=PLANE/0,1,0,1
+CS4=PLANE/0,1,0,-1
+$$
+TOLER/0.001
+$$ 1 INCH BALL ENDED CUTTER
+CUTTER/0.5,0.25,0,0,0,0,0.25
+FROM/2,0,5
+$$
+CLDAT/START,1,UVPPS
+GO/TO,CS3,TO,RS1,TO,CS1
+GORGT/CS3,TO,CS2
+GORGT/CS2,TO,CS4
+GORGT/CS4,TO,CS1
+GORGT/CS1,TO,CS3
+CLDAT/NOMORE,1
+$$
+REGION/1,IN
+$$
+V1=0.9
+$$
+ID1)GOLOFT/RS1,VCONST,V1
+$$
+V1=V1+0.1
+$$
+IF (V1.LT.1.2)JUMPTO/ID1
+$$
+REGION/OFF
+$$
+FINI
