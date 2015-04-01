@@ -1,0 +1,19 @@
+PARTNO/'TEST49'
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  23-AUG-1989   *
+$$ *                                          *
+$$ ********************************************
+REMARK/'TOR1 HAS BEEN PREVIOUSLY CREATED BY FTORUS'
+PRINT/SSTEST,ON
+READ/1,TOR1
+M1=MATRIX/TRANSL,10,20,30
+TOR2=SSURF/COMBIN,TOR1,TRFORM,M1
+M2=MATRIX/XYROT,90
+TOR3=SSURF/COMBIN,TOR1,TRFORM,M2
+P1=POINT/INTOF,TOR1,PARAM,0.5,0.5,1
+P2=POINT/INTOF,TOR2,PARAM,0.5,0.5,1
+P3=POINT/INTOF,TOR3,PARAM,0.5,0.5,1
+V3=VECTOR/INTOF,TOR3,PARAM,.5,0.5,1,TANSPL,UNIT
+PRINT/3,ALL
+FINI

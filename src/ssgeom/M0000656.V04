@@ -1,0 +1,17 @@
+*
+      SUBROUTINE SCDUMP(IN,SCAN)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION SCAN(*)
+      CALL BAD(-1,0,' ',0)
+      CALL BAD(-1,0,'CHK=',IN)
+      NTOT=SCAN(12)
+      IF(NTOT.EQ.0) NTOT=(SCAN(2)+SCAN(4))*24.
+      IK=-3
+      DO 10 L=1,NTOT,4
+      IF(MOD(L,24).EQ.1) CALL BAD(-1,0,' ',0)
+      IK=IK+4
+      CALL BAD(1,0,'KCT ',IK)
+      CALL BAD(-4,1,'SCAN',SCAN(L))
+   10 CONTINUE
+      RETURN
+      END

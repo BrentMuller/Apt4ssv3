@@ -1,0 +1,45 @@
+PARTNO TEST03 RULED SURFACE TEST
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+$$
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  09-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 24-JUN-1982
+$$               AND SSV2 - 02-OCT-1986
+$$
+NOPOST
+CLPRNT
+RESERV/P1,2,P2,2,P3,2,P4,2,P5,2,M,2
+V1=VECTOR/0,1,-3
+V2=VECTOR/0,1,-2
+V3=VECTOR/0,1,1
+V4=VECTOR/-.2,1,1
+PP=POINT/0,0,3
+PT=POINT/6,0,3
+M(1)=MATRIX/PP,V1,V3
+M(2)=MATRIX/PT,V2,V4
+I=1
+ID1) REFSYS/M(I)
+P1(I)=POINT/0,0
+P2(I)=POINT/1,.6
+P3(I)=POINT/2,.85
+P4(I)=POINT/4,.45
+P5(I)=POINT/6,0
+REFSYS/NOMORE
+I=I+1
+IF(I-2)ID1,ID1,ID2
+ID2) C=CIRCLE/0,0,0,3
+      S=SSURF/SMESH,XYZ,SPLINE,P1(1),P2(1),P3(1),P4(1), $
+    P5(1),SPLINE,P1(2),P2(2),P3(2),P4(2),P5(2)
+SETPT=POINT/3,3,5
+Z=PLANE/0,0,1,0
+Z1=PLANE/0,0,1,2
+CUTTER/.5,.25
+FROM/SETPT
+GO/C,S,Z
+GOUP/C,PAST,Z1
+GOTO/SETPT
+FINI

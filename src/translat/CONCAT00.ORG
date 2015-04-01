@@ -1,0 +1,21 @@
+*
+      SUBROUTINE CONCAT(CHR,BCD)
+C
+C.....INSERT A SINGLE CHARACTER, BCD, INTO NEXT AVAILABLE POSITION
+C.....IN STRING OF CHARACTERS, CHR
+C
+C.....THE NUMBER OF CHARACTERS IN THE STRING IS HELD IN THE FIRST 3 CHAR
+C.....LOCATIONS OF CHR
+C
+      CHARACTER*(*) CHR,BCD
+      INTEGER NCHR,K
+C
+      READ(CHR,'(I3)') NCHR
+      NCHR = NCHR+1
+      WRITE(CHR(1:3),'(I3)') NCHR
+      K = NCHR+3
+      CHR(K:K) = BCD(1:1)
+C
+      RETURN
+      END
+                                                                        00002000

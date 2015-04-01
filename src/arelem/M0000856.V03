@@ -1,0 +1,56 @@
+*
+C.....FORTRAN SUBROUTINE             APT236...              4/1/68   GK
+      SUBROUTINE APT236
+      IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
+C
+C
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (FXCOR)
+      INCLUDE (SV)
+      INCLUDE (ISV)
+      INCLUDE (IFXCOR)
+      INCLUDE (ISHR18)
+      INCLUDE (KNUMBR)
+C
+C...  21. ADDCOM BLOCK
+C
+      COMMON/ADDCOM/ ADDCOM
+      DIMENSION ADDCOM(25)
+      EQUIVALENCE (ADDCOM( 1),ELMAX ),  (ADDCOM( 2),CLNGTH),
+     1            (ADDCOM(23),IBTFLG),  (ADDCOM(24),JLIN)
+C
+      DATA ZLIT1,KLIT2/.997D0,11/
+C
+C
+C
+C
+C
+      DO 1 K = 1,3
+      INOPS=0
+      ICSCNT=0
+      TEMP(K) = TE(K) - TEK(K)
+      TPK(K,IPS) = TP(K,IPS)
+      SPK(K,IPS) = SP(K,IPS)
+      U1K(K,IPS) = U1(K,IPS)
+      SNK(K,IPS) = SN(K,IPS)
+    1 CONTINUE
+      ITSEGK(IPS) = ITSEG(IPS)
+      CALL VNORM (TEMP,TEMP)
+      IF(IER)2,2,4
+    2 IF(DABS(TEMP(1)*TA(1)+TEMP(2)*TA(2)+TEMP(3)*TA(3))-ZLIT1) 3,3,4
+    3 PMOVE(1) = TEMP(1)
+      PMOVE(2)=TEMP(2)
+      PMOVE(3)=TEMP(3)
+    4 I=IPS
+      DO 5 J = 1,NUMSUR
+      INDIR(I)=0
+      ISVFL(I)=0
+      IF (I .GE. ICS)  GO TO 7
+    6 I=I+LSV
+      GO TO 5
+    7 I=I+LSV1
+    5 CONTINUE
+      RETURN
+       END

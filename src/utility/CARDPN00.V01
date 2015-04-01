@@ -1,0 +1,45 @@
+*
+      SUBROUTINE CARDPN(A,N,M,I,D)
+*
+*  * CARDPN *   VAX-11 FORTRAN 77 VERSION   15.10.82  E.MCLELLAN
+*
+*  PURPOSE      WRITE AN ASCII FILE , PNCHFL
+*
+*  CALLING SEQUENCE
+*               CALL CARDPN(A,N,M,I,D)
+*  ARGUMENTS
+*              A   LOCATION OF FIRST WORD TO BE PUNCHED
+*              N   NO OF 4 BYTE WORDS TO BE PUNCHED,NORMALLY 18,
+*                  IF GREATER NO, ID AND SEQUENCE NO WILL BE PUNCHED
+*              M   MODE IGNORED BY THIS VERSION OF ROUTINE
+*             I   4 BYTE SEQUENCE NO TO BE PUNCHED IN COL 77-80
+*                 TREATED AS MODULO 10,000
+*             D   LOCATION OF A 4 BYTE IDENTIFICATION WORD TO BE
+*                 PUNCHED IN COLUMNS 73-76 (ALPHA ONLY)
+*
+      REAL A(18)
+      LOGICAL OD
+C
+      INCLUDE (DARRAY)
+C
+C
+      INQUIRE(FILE='PNCHFL.',OPENED=OD)
+          IF (.NOT.OD) THEN
+             OPEN(UNIT=7,FILE='PNCHFL',ERR=90,STATUS='NEW',
+     1            ACCESS='SEQUENTIAL',FORM='FORMATTED')
+          END IF
+C
+      IF (N.LE.18) THEN
+         WRITE(7,'(18A4)') (A(I),I=1,N)
+      ELSE
+         ISEQ=MOD(I,10000)
+         WRITE(7,'(19A4,I4)') (A(I),I=1,18),D,ISEQ
+      END IF
+      RETURN
+C
+   90 CALL CFORM('**** ERROR OPENING PNCHFL.DAT ****',DARRAY,2,34)
+      CALL CPRINT(DARRAY)
+      CALL ABNEND
+      RETURN
+      END
+                                                                        00004400

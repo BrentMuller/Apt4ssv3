@@ -1,0 +1,81 @@
+*
+*
+*  *  ATAPRD  *  FORTRAN 77 VERSION  1-MAR-1988 E.MCLELLAN
+*
+*  PURPOSE      TO READ AN APT 111 FORMATTED CLFILE
+*               RESTRICTED TO TWO OUTPUT ARRAYS ONLY
+*
+*  CALLING SEQUENCE
+*               CALL ATAPRD(NO,IRET,NW,N,A1,N1,A2,N2)
+*  ARGUMENTS
+*               NO         FILE NUMBER
+*                         FOR NC 360 HELD IN SECOND HALF
+*                         OF DOUBLE PRECISION WORD
+*               IRET.LT.0  NORMAL RETURN
+*                   .EQ.0  END OF FILE ENCOUNTERED
+*                   .GT.0  ABNORMAL CONDITION
+*               NW         NO OF DATA ITEMS RETURNED IN A2
+*               N          NO OF ARRAYS SPECIFIED IN CALLING SEQUENCE
+*               AI         ARRAY INTO WHICH DATA IS TO BE READ
+*               NI         NO OF ITEMS IN ARRAY AI
+*                          IF N2=0 ON ENTRY - ALL REMAINING ITEMS ARE
+*                          TRANSFERRED TO ARRAY A2 AND NO RETURNED IN NW
+*                          NOTE: FIRST 3 ITEMS TO BE TRANSFERRED
+*                                ARE ASSUMED INTEGER THE REMAINDER
+*                                REAL*8
+      SUBROUTINE ATAPRD(NO,IRET,NW,N,A1,N1,A2,N2)
+C
+C.... ARGUMENTS
+      INTEGER NO,IRET,NW,N,A1,N1,N2
+      DOUBLE PRECISION A2
+      DIMENSION NO(2),A1(N1),A2(254)
+C
+C.... LOCAL VARIABLES
+      INTEGER NWRDS,IREC
+      REAL REC
+      DOUBLE PRECISION DREC
+      DIMENSION IREC(512),REC(512),DREC(256)
+      EQUIVALENCE (REC(1),IREC(1))
+      EQUIVALENCE (REC(1),DREC(1))
+C
+C.... COMMON BLOCKS
+      INCLUDE (DARRAY)
+C
+      ID=NO(1)
+      IF (NO(1).EQ.0)  ID=NO(2)
+C
+      READ (ID,ERR=99,END=90,IOSTAT=IRET) NWRDS,(REC(I+1),I=1,NWRDS)
+C
+      DO 10 I=1,N1
+        A1(I)=IREC(I+1)
+   10 CONTINUE
+C
+      IF (N.EQ.1) THEN
+        IRET=-1
+      ELSE IF (N.EQ.2) THEN
+C
+       IF (N2.EQ.0) THEN
+         NW=(NWRDS-N1)/2
+         NN=NW
+       ELSE
+         NN=N2
+       ENDIF
+C
+       I1=(N1+2)/2
+       DO 20 I=1,NN
+         A2(I)=DREC(I1+I)
+   20  CONTINUE
+       IRET=-1
+      ELSE
+       CALL CFORM(' *** ERROR IN CALL TO ATAPRD - MAXIMUM OF TWO ARRAYS
+     +ALLOWED ***',DARRAY,1,64)
+       CALL CPRINT(DARRAY)
+       IRET=1
+      ENDIF
+      RETURN
+C
+   90 IRET=0
+      RETURN
+   99 IRET=1
+      RETURN
+      END

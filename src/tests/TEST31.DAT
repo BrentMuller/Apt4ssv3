@@ -1,0 +1,312 @@
+PARTNO TEST TRONDB   DEFINISJON AV PROPELL VED HJELP AV SS-PROSESSOR
+REMARK  FAILURE REPORT RECEIVED JULY 10, 1973 ON UNIVAC SSX3 SYSTEM
+REMARK DATA SET NAME IS  FAIL   MEMBER NAME IS  TRONDB
+$$ ****************************************************
+$$ *                                                  *
+$$ *   THIS TEST LARGELY OK IN SSV3  -  15-JUN-1989   *
+$$ *                                                  *
+$$ *   WARNING 50 - OK                                *
+$$ *   RESTART DIAGNOSTIC 20103 FROM STATEMENT        *
+$$ *         GORGT/SSKNT,PAST,L6                      *
+$$ *         WHERE L6=LINE/-0.5471,0.8371,0,485.3274  *
+$$ *                                                  *
+$$ ****************************************************
+$$
+$$   THIS TEST FAILED IN SSV1 - 08-JUL-1982
+$$                              RAN TO TIME LIMIT, NO CLPRNT
+$$                              GAVE LOOP=PCHPRC DIAGNOSTICS
+$$
+$$        RERUN THROUGH SSV1  - 03-SEP-1986
+$$              LARGELY OK      GAVE LOOP=PCHPRC DIAGOSTICS
+$$                              RESTART DIAGNOSTIC 25402 FROM ISN 245
+$$                                  GORGT/SSKNT,PAST,L6
+$$                              WHERE L6=LINE/-0.5471,0.8371,0,485.3273
+$$                              CLPRNT PRODUCED
+$$
+$$           LARGELY OK SSV2  - 01-OCT-1986
+$$                              RESTART DIAGNOSTIC 25402 FROM ISN 245
+$$                                  GORGT/SSKNT,PAST,L6
+$$                              WHERE L6=LINE/-0.5471,0.8371,0,485.3274
+$$                              CLPRNT PRODUCED
+$$
+NOPOST
+CLPRNT
+      UNITS/MM
+      INTOL/0.1
+      OUTTOL/0.1
+      RESERV/PR1,5,PR2,5,PR3,5,PR4,5
+      RESERV/R,5,VR,5,LLE,5,SENT,5
+      RESERV/L,5,RL,5,P,25
+      RESERV/NV1,5,NV2,5,NV3,5,NV4,5
+      RESERV/PW1,5
+      RESERV/KPZ,16,PW2,2,PR1Z,5
+         RAD = 3000
+         R(1) = RAD*0.35
+         R(2) = RAD*0.50
+         R(3) = RAD*0.70
+         R(4) = RAD*0.90
+         R(5) = RAD*0.99
+         VBAS = 17.5
+         VR(1) = 29.30-VBAS
+         VR(2) = 23.10-VBAS
+         VR(3) = 17.50-VBAS
+         VR(4) = 13.55-VBAS
+         VR(4) = 13.55-VBAS
+         VR(5) = 12.20-VBAS
+         LLE(1) = 571.0
+         LLE(2) = 721.0
+         LLE(3) = 746.0
+         LLE(4) = 470.0
+         LLE(5) = -51.4
+         SENT(1) = 34.7
+         SENT(2) = 42.3
+         SENT(3) = 42.0
+         SENT(4) = 27.7
+         SENT(5) = 12.6
+         K = 0
+         J = 0
+         ND = 1
+         JUMPTO/NSET
+D1)      B = LLE(J)
+         IF(ND-2) DAT1,DAT2,D2
+DAT1)    L(1) = -651.0
+         L(2) = -404.0
+         L(3) = -38.3
+         L(4) = 388.2
+         L(5) = 571.0
+         RL(1) = 0.0
+         RL(2) = 170.6-60.9
+         RL(3) = 244.0-87.3
+         RL(4) = 168.0-63.6
+         RL(5) = 0.0
+         ND = 2
+         JUMPTO/NPKT
+DAT2)    L(1) = -938.0
+         L(2) = -603.8
+         L(3) = -107.0
+         L(4) = 472.6
+         L(5) = 721.0
+         RL(1) = 0.0
+         RL(2) = 119.0-29.4
+         RL(3) = 170.0-42.7
+         RL(4) = 117.2-33.5
+         RL(5) = 0.0
+         ND = 3
+         JUMPTO/NPKT
+D2)      IF(ND-4) DAT3,DAT4,DAT5
+DAT3)    L(1) = -1146.0
+         L(2) = -765.2
+         L(3) = -198.5
+         L(4) = 462.7
+         L(5) = 746.0
+         RL(1) = 0.0
+         RL(2) = 72.1-6.5
+         RL(3) = 103.0-9.5
+         RL(4) = 71.0-10.8
+         RL(5) = 0.0
+         ND = 4
+         JUMPTO/NPKT
+DAT4)    L(1) = -1053.0
+         L(2) = -746.0
+         L(3) = -290.0
+         L(4) = 242.0
+         L(5) = 470.0
+         RL(1) = 0.0
+         RL(2) = 36.2+1.3
+         RL(3) = 51.8+1.8
+         RL(4) = 35.7-1.6
+         RL(5) = 0.0
+         ND = 5
+         JUMPTO/NPKT
+DAT5)    L(1) = -611.4
+         L(2) = -555.4
+         L(3) = -387.4
+         L(4) = -107.4
+         L(5) = -36.4
+         RL(1) = 0.0
+         RL(2) = 23.8-6.8
+         RL(3) = 31.2-3.5
+         RL(4) = 23.8-6.8
+         RL(5) = 0.0
+         JUMPTO/NPKT
+NSET)    J = J+1
+         I = 0
+         IF(J-5) D1,D1,SDEF
+NPKT)    I = I+1
+         IF(I-5) KALK,KALK,NSET
+KALK)    B = L(I)
+         V = (B*180)/(R(J)*3.14159)
+         XR = SINF(V)*R(J)
+         ZR = RL(I)-SENT(J)
+         X = XR*COSF(VR(J))-ZR*SINF(VR(J))
+         Y = COSF(V)*R(J)
+         Z = ZR*COSF(VR(J))+XR*SINF(VR(J))
+         P(K=K+1) = POINT/X,Y,Z
+         JUMPTO/NPKT
+SDEF) PR1(1) = POINT/-625.746,525.458,-201.327
+      PR1(2) = POINT/-226.753,745.495, 200.041
+      PR1(3) = POINT/ -49.903,770.245, 267.343
+      PR1(4) = POINT/ 251.044,738.956, 309.380
+      PR1(5) = POINT/ 559.915,591.080,  99.927
+      PR2(1) = POINT/-570.329,831.335,-161.524
+      PR2(2) = POINT/-352.260,902.452,    .200
+      PR2(3) = POINT/ -53.998,929.997, 121.944
+      PR2(4) = POINT/ 314.956,880.798, 161.811
+      PR2(5) = POINT/ 497.422,817.443,  87.794
+      PR3(1) = POINT/ 656.639,490.229, 118.707
+      PR3(2) = POINT/ 305.007,720.374,-175.701
+      PR3(3) = POINT/  91.058,766.386,-259.406
+      PR3(4) = POINT/-293.148,722.777,-327.789
+      PR3(5) = POINT/-700.000,426.728,-254.658
+      PR4(1) = POINT/ 497.422,817.443,  87.794
+      PR4(2) = POINT/ 363.685,914.152, -21.961
+      PR4(3) = POINT/   4.675,997.525,-129.823
+      PR4(4) = POINT/-352.599,933.771,-178.040
+      PR4(5) = POINT/-570.329,831.335,-161.525
+      PW1(1) = POINT/-423.317,686.855,-166.220
+      PW1(2) = POINT/-245.401,762.062,  21.831
+      PW1(3) = POINT/ -47.506,791.068, 135.098
+      PW1(4) = POINT/ 256.879,755.420, 181.850
+      PW1(5) = POINT/ 434.431,682.235, 105.883
+      NV1(1) = VECTOR/-.73621,.67561,-.03941
+      NV1(2) = VECTOR/-.30550,.93482, .18107
+      NV1(3) = VECTOR/-.10577,.97383, .20115
+      NV1(4) = VECTOR/ .25511,.94935,-.18345
+      NV1(5) = VECTOR/ .66297,.74828,-.02350
+      NV2(1) = VECTOR/-.43130,-.46356, .77401
+      NV2(2) = VECTOR/-.41314,-.19257, .89007
+      NV2(3) = VECTOR/-.23869, .07447, .96824
+      NV2(4) = VECTOR/ .15737, .08905, .98352
+      NV2(5) = VECTOR/ .43221,-.10218, .89596
+      NV3(1) = VECTOR/ .78037, .62477, .02636
+      NV3(2) = VECTOR/ .39492, .90151,-.17696
+      NV3(3) = VECTOR/ .15406, .96712,-.20233
+      NV3(4) = VECTOR/-.30489, .93288,-.19176
+      NV3(5) = VECTOR/-.82843, .55607,-.06690
+      NV4(1) = VECTOR/ .43221,-.10218, .89596
+      NV4(2) = VECTOR/-.36935, .11251, .92236
+      NV4(3) = VECTOR/-.18105,-.10633, .97771
+      NV4(4) = VECTOR/ .01650,-.08840, .99595
+      NV4(5) = VECTOR/-.43130,-.46356, .77401
+      KPZ(1) = POINT/ -625.746, 525.458,500.0
+      KPZ(2) = POINT/ -497.429, 687.411,500.0
+      KPZ(3) = POINT/ -570.329, 831.335,500.0
+      KPZ(4) = POINT/ -590.099, 854.572,500.0
+      KPZ(5) = POINT/ -869.734,1216.152,500.0
+      KPZ(6) = POINT/-1089.961,1794.989,500.0
+      KPZ(7) = POINT/-1025.979,2497.254,500.0
+      KPZ(8) = POINT/ -605.660,2907.291,500.0
+      KPZ(9) = POINT/  -37.407,2969.777,500.0
+      KPZ(10) = POINT/ 464.611,2659.196,500.0
+      KPZ(11) = POINT/ 730.409,1968.884,500.0
+      KPZ(12) = POINT/ 694.374,1330.030,500.0
+      KPZ(13) = POINT/ 538.885, 898.531,500.0
+      KPZ(14) = POINT/ 497.422, 817.443,500.0
+      KPZ(15) = POINT/ 482.555, 695.470,500.0
+      KPZ(16) = POINT/ 559.915, 591.080,500.0
+      PW2(1) = POINT/-497.429,687.411,-175.564
+      PW2(2) = POINT/482.555,695.470,  99.370
+PR1Z(1)=POINT/-625.746,725.458,101.327
+PR1Z(2)=POINT/-226.753,945.495,500.041
+PR1Z(3)=POINT/-49.903,970.245,567.343
+PR1Z(4)=POINT/251.044,938.956,609.380
+PR1Z(5)=POINT/559.915,791.080,399.927
+      TV1 = VECTOR/0.0,0.6,0.8
+      KW1 = 0.000001
+      KW2 = 0.0000005
+          SSPR = SSURF/SMESH,XYZ,SPLINE,PR1(1),NORMAL,NV1(1), $
+                                       CRSSPL,TV1, $
+                                       PW1(1),WEIGHT,KW2,PR2(1), $
+                                       P(1),P(6),P(11),P(16),P(21), $
+                                SPLINE,PR1(2),NORMAL,NV1(2), $
+                                       PW1(2),WEIGHT,KW1,PR2(2), $
+                                       P(2),P(7),P(12),P(17),P(22), $
+                                SPLINE,PR1(3),NORMAL,NV1(3), $
+                                       PW1(3),WEIGHT,KW1,PR2(3), $
+                                       P(3),P(8),P(13),P(18),P(23), $
+                                SPLINE,PR1(4),NORMAL,NV1(4), $
+                                       PW1(4),WEIGHT,KW1,PR2(4), $
+                                       P(4),P(9),P(14),P(19),P(24), $
+                                SPLINE,PR1(5),NORMAL,NV1(5), $
+                                       CRSSPL,TV1, $
+                                       PW1(5),WEIGHT,KW1,PR2(5), $
+                                       P(5),P(10),P(15),P(20),P(25)
+      SSKNT = SSURF/SMESH,XYZ,SPLINE,PR1(1),PW2(1),PR2(1), $
+                                       P(1),P(6),P(11),P(16),P(21), $
+                                    P(25),P(20),P(15),P(10),P(5), $
+                                    PR2(5),PW2(2),PR1(5), $
+                             SPLINE,KPZ(1,THRU,16)
+      SSROT = SSURF/SMESH,XYZ,SPLINE,PR1(1,THRU,5), $
+                             SPLINE,PR1Z(1,THRU,5)
+      M1=MATRIX/ZXROT,17.5
+      REFSYS/M1
+      C=64/121
+      D=-64*10**4
+      QUAD=QADRIC/1,1,C,0,0,0,0,0,0,D
+      REFSYS/NOMORE
+      CUTTER/0,0,0,0,0,0,0
+      POLPT = POINT/-32.916,558.279
+      SETPT = POINT/0,700,400
+      C1 = CIRCLE/CENTER,POLPT,PR1(1)
+      DPT =POINT/-114,1500,350
+      L1 = LINE/PR1(1),PR1(5)
+      B = 180
+      DANG = 90
+      A = B-10
+      L3 = LINE/POLPT,ATANGL,A,L1
+      FROM/SETPT
+      GO/L3,QUAD,L1
+ID1)  B = B-20
+      IF(B-90) ID3,ID3,ID2
+ID2)  CANG = DANG-10
+      L4 = LINE/POLPT,ATANGL,B,L1
+      L5 = LINE/POLPT,ATANGL,CANG,L1
+      GORGT/L3,TO,SSROT
+      DNTCUT
+      GOTO/DPT
+      FROM/DPT
+      INDIRP/PR1(1)
+      GO/L3,SSPR,SSROT
+      CUT
+      GORGT/L3,TO,SSKNT
+      GORGT/SSKNT,PAST,L4
+      GORGT/L4,TO,SSROT
+      DNTCUT
+      AUTOPS
+      GOBACK/L4,TO,C1
+      GOBACK/L4,TO,QUAD
+      PSIS/QUAD
+      CUT
+      GOFWD/L4,PAST,L5
+      DANG = DANG-20
+      A = B-10
+      L6 = LINE/POLPT,ATANGL,DANG,L1
+      L3 = LINE/POLPT,ATANGL,A,L1
+      GOLFT/L5,TO,SSROT
+      DNTCUT
+      GOTO/DPT
+      FROM/DPT
+      INDIRP/PR1(4)
+      GO/PAST,L5,SSPR,SSROT
+      CUT
+      INDIRV/1,1,-1
+      GOFWD/L5,TO,SSKNT
+      GORGT/SSKNT,PAST,L6
+      GORGT/L6,TO,SSROT
+      DNTCUT
+      AUTOPS
+      GOBACK/L6,TO,C1
+      GOBACK/L6,TO,QUAD
+      PSIS/QUAD
+      CUT
+      GOFWD/L6,TO,L3
+      JUMPTO/ID1
+ID3)  GORGT/L3,TO,SSROT
+      DNTCUT
+      GOTO/SETPT
+      FROM/SETPT
+      GO/L3,SSPR,SSROT
+      CUT
+      GORGT/L3,TO,SSKNT
+      GOTO/SETPT
+      FINI

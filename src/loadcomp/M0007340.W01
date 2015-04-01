@@ -1,0 +1,262 @@
+*
+C
+C              FORTRAN SUBROUTINE INPUT
+C
+C LINKAGE       CALL   INPUT
+C
+C          SUBSIDIARIES                  CALLED FROM
+C          TYPE          ENTRY           TYPE          ENTRY
+C          INTEGER FCT.  NAME            SUBROUTINE    LOADI
+C          SUBROUTINE    READ
+C          SUBROUTINE    SHIFT
+C
+      SUBROUTINE INPUT
+C
+      IMPLICIT INTEGER (A-Z)
+C
+C        1.    NAME TABLE AND TABLE LIMITS
+C
+      INCLUDE (NAMETB)
+C  NAMTBL:     INTEGER CODE CORRESPONDING TO NAME TABLE ENTRY
+C  CNAMTB:     NAME TABLE OR DICTIONARY
+C
+C        2.    STACK AND POINTER STORAGE
+C
+      COMMON/STKLST/STKLST
+      DIMENSION STKLST(3002),STACK(2,1500)
+C  TOP:        POINTER TO LAST STACK ENTRY
+      EQUIVALENCE (TOP,STKLST(1))
+C  STACK:      WORKING STACK
+      EQUIVALENCE (STACK(1,1),STKLST(3))
+C
+C        5.    CLASS CODE MODULI
+C
+C  MODULO:     NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS
+      COMMON/MODULI/MODULO
+C
+C        6.    SYMBOLIC FILE DEFINITIONS
+C
+      COMMON/SYMFIL/SYMFIL
+      DIMENSION SYMFIL(6)
+C  VLFILE:     VERIFICATION LISTING FILE
+      EQUIVALENCE (VLFILE,SYMFIL(6))
+C*
+C PURPOSE      TO PLACE IN THE FIRST COLUMN OF STACK THE INDEX
+C              IN NAMTBL OF THE NEXT ITEM IN THE INPUT STREAM.
+C
+C LOCAL                                INITIAL
+C VARIABLES    NAME   DIMENSION  TYPE  VALUE   DESCRIPTION
+C
+C              BLANK              C        ' ' BLANK WORD
+C              CNT                I            COUNT OF CHARACTERS
+C                                              FETCHED FROM INCHAR
+C              ENDFL              L            FLAG FOR LAST ITEM ON
+C                                              CARD
+C              EXPIND             I        66  NAMTBL INDEX FOR END OF
+C                                              CARD
+C              I                  I            MODE OF CHARACTER
+C              II                 I            NAMTBL POINTER FOR NEXT
+C                                              CHARACTER
+C              INCHAR       72    I            FOR READ TO PLACE FIRST
+C                                              72 CHARS ON A CARD IN
+C              J                  I            NAMTBL POINTER
+C              SAVE               L    .FALSE. FLAG IF NEXT ITEM HAS
+C                                              BEEN SAVED.
+C              SEQNO              C*8          FOR READ TO PLACE
+C                                              SEQUENCE NO. IN
+C              SYM                L            FLAG SET WHEN A SYMBOL
+C                                              (NOT A NO.) IS BEING
+C                                              FORMED
+C              WDFL               L            FLAG SET WHEN
+C                                              CONCATINATION IS IN
+C                                              PROGRESS
+C              WORD               C*6          TEMPORARY STORAGE OF
+C                                              CHARS. WHILE WORD IS
+C                                              FORMED
+C              XI                 I            NAMTBL POINTER
+C              PTR                I            NAMBTL POINTER
+C              CLASS              I            CLASS NUMBER
+C
+      LOGICAL   SAVE,SYM,WDFL,ENDFL,ERRFL
+      DIMENSION INCHAR(73)
+      CHARACTER SEQNO*8,WORD*6,BLANK
+      DATA ENDFL,SAVE/.TRUE.,.FALSE./
+      DATA INCHAR(73)/1/
+      DATA EXPIND,BLANK/51,' ' /
+C**
+C...     IS NEW ITEM REQUIRED
+C
+      IF(SAVE) GO TO 10
+C
+C...     YES. IS NEW CARD REQUIRED
+C
+      IF(.NOT.ENDFL) GO TO 8
+C
+C...     YES. SET FLAGS
+C
+      SAVE = .FALSE.
+      SYM = .FALSE.
+      WDFL = .FALSE.
+      ENDFL = .FALSE.
+C
+C...     READ NEXT CARD
+C
+    2 CALL READ(INCHAR,SEQNO)
+      CNT=0
+      ERRFL=.TRUE.
+C
+C...     HAVE WE REACHED THE END OF THIS CARD
+C
+    8 IF(CNT.EQ.72) GO TO 20
+C
+C...     NO. FETCH NEXT CHARACTER FROM INCHAR
+C
+      CNT = CNT + 1
+      II = INCHAR(CNT)
+C
+C...     IS THIS A VALID CHARACTER
+C
+      IF (NAMTBL(II).NE.0) GOTO 7
+C
+C...     NO. REJECT CHARACTER AND PRODUCE DIAGNOSTIC
+C
+      IF(ERRFL)WRITE(VLFILE,3) SEQNO
+    3 FORMAT(1H ,73HERROR NO. 7001 IN SUBROUTINE INPUT. INVALID CHARACTE
+     *R. CARD SEQUENCE NO.=,A8)
+      ERRFL=.FALSE.
+      GO TO 8
+    7 I = NAMTBL(II)/MODULO
+C
+C...     IS CHARACTER $
+C
+      IF(I.EQ.15) GO TO 400
+C
+C...     IS CHARACTER .
+C
+      IF(I.EQ.21)GO TO 1500
+C
+C...     TAKE APPROPRIATE ACTION FOR EACH TYPE OF CHARACTER
+C
+      GO TO (100,200,300,400,500,600,700,800,900,1000,1100,1200,1300),I
+      WRITE(VLFILE,4) CNT,SEQNO
+    4 FORMAT(1H ,46HERROR 7037 IN SUBROUTINE INPUT. CHARACTER NO. ,I3,
+     * 37HILLEGAL, IGNORED.  CARD SEQUENCE NO.=,A8)
+      GOTO 8
+C
+C...     PUT NAMTBL INDEX OF ITEM IN PTR
+C
+   10 PTR = II
+      SAVE = .FALSE.
+      GO TO 2000
+C
+C...     END OF CARD REACHED
+C
+   20 II=EXPIND
+      ENDFL=.TRUE.
+      GO TO 1500
+C
+C...     ,
+C
+  100  GO TO 1500
+C
+C...     (
+C
+  200  GO TO 1500
+C
+C...     )
+C
+  300  GO TO 1500
+C
+C...     $  FETCH NEXT CHARACTER
+C
+  400 J = INCHAR(CNT+1)
+C
+C...     IF $ THIS IS END OF CARD
+C
+      IF (NAMTBL(J).EQ.15000) GOTO 20
+C
+C...     NOT $ - THEREFORE CONTINUED ON NEXT CARD
+C
+      GO TO 2
+C
+C...     /
+C
+  500  GO TO 1500
+C
+C...     -
+C
+  600  GO TO 1500
+C
+C...     +
+C
+  700  GO TO 1500
+C
+C...     =
+C
+  800  GO TO 1500
+C
+C...     *
+C
+  900 GO TO 1500
+C
+C...     NUMERIC DIGIT
+C
+ 1000 GO TO 1600
+C
+C...     LETTER - SET SYMBOL FLAG
+C
+ 1100 SYM = .TRUE.
+      GO TO 1600
+C
+C...     '
+C
+ 1200 GO TO 1500
+C
+C...     BLANK
+C
+ 1300 GO TO 8
+C
+C...     IS AN ITEM PARTIALLY FORMED
+C
+ 1500 IF(.NOT.WDFL) GO TO 10
+C
+C...     YES. SET SAVE MARKER. THEN SET WORD(3) TO CLASS NUMBER IF
+C...     THIS IS NOT A SYMBOL, TO CLASS IDENT IF IT IS.
+C
+      SAVE = .TRUE.
+      IF (.NOT.SYM) CLASS=10000
+      IF (SYM)      CLASS=35000
+C
+C...     CLEAR SYMBOL AND WORDFILL FLAGS, AND FIND NAMTBL INDEX OF
+C...     THIS ITEM. SET COLUMN 1 OF NAMTBL IF THIS IS THE FIRST
+C...     OCCURRENCE OF THIS ITEM.
+C...     STORE NAMTBL INDEX OF ITEM IN PTR
+C
+      SYM = .FALSE.
+      WDFL = .FALSE.
+      XI = NAME(WORD)
+      IF (NAMTBL(XI).EQ.0) NAMTBL(XI)=CLASS
+      PTR = XI
+      GO TO 2000
+C
+C...     ITEM NAME IS TO BE FORMED BY CONCATINATION.
+C...     HAS THIS STARTED YET
+C
+ 1600 IF(WDFL) GO TO 1610
+C
+C...     NO. CLEAR WORD AND SET WORDFILL FLAG
+C
+      WORD = BLANK
+      WDFL = .TRUE.
+C
+C...     PUT CHARACTER IN NEXT VACANT POSITION
+C
+ 1610 CALL SHIFT(WORD,CNAMTB(II))
+      GO TO 8
+C
+C...     PUT NAMTBL POINTER TO ITEM IN STACK AND RETURN
+C
+ 2000 TOP = TOP+1
+      STACK(1,TOP) = PTR
+      RETURN
+       END

@@ -1,0 +1,49 @@
+PARTNO TEST06 INCLUSIVE SUBSCRIPT TEST
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+$$ ********************************************
+$$ *                                          *
+$$ *   THIS TEST OK IN SSV3  -  12-JUN-1989   *
+$$ *                                          *
+$$ ********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 25-JUN-1982
+$$               AND SSV2 - 29-SEP-1986
+$$
+  CLPRNT
+  NOPOST
+  INTOL/.001
+  OUTTOL/.001
+  CUTTER/1.0,0.5
+  SETPT=POINT/8,4,1.5
+  RESERV/P,3,S,2
+  V1=VECTOR/6.7,1.3,2.83
+  V2=VECTOR/6.15,2.25,3.4
+  VA=VECTOR/-0.4,0.017,0.9
+  P1=POINT/0,0,0
+  P2=POINT/7,2,1
+  P3=POINT/12,4,0
+  P4=POINT/0,3,0
+  P5=POINT/7,5,1.2
+  P6=POINT/12,6,0
+  P(1)=POINT/0.2,7.0,0.2
+  P(2)=POINT/7,8,1.2
+  P(3)=POINT/12.,9.,0.2
+  PA=POINT/7.0,3.0,0.0
+  PB=POINT/1.0,3.0,0.0
+  PC=POINT/7.0,7.0,0.0
+  PD=POINT/11.,6.0,0.0
+  PL1=LINE/PD,PA
+  PL2=LINE/PA,PB
+  PL3=LINE/PB,PC
+  PL4=LINE/PC,PD
+  S(2)=SSURF/SMESH,XYZ,SPLINE,P1,NORMAL,VA,TANSPL,V1,P2,P3,$
+                      SPLINE,P4,TANSPL,V2,P5,P6,$
+                      SPLINE,P(1,THRU,3)
+  FROM/SETPT
+  GO/PL1,S(2),PL2
+  INDIRV/0,-1,0
+  TLRGT,GORGT/PL2,PL3
+  GORGT/PL3,PL4
+  GORGT/PL4,PL1
+  GO TO/SETPT
+  FINI

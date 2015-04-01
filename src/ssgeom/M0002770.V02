@@ -1,0 +1,78 @@
+*
+      SUBROUTINE LINEAR(SCAN,SPL,PNTS,ILIN)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+C
+      INCLUDE (BLANKCOM)
+C
+      DIMENSION SCAN(2000),X(200),Y(200),SLOP(200)
+      DIMENSION IU(3),IV(3)
+      DATA IU,IV/1,2,3,2,3,1/
+      DATA AZERO/0.1D-6/
+      IDEBUG=0
+      ID=SSCAN(6)
+      IA=SPL
+      IB=PNTS
+      NU=IU(ID)
+      NV=IV(ID)
+      DO 150 J=1,IA
+      DO 150 I=1,IB
+      IC=(J-1)*IB*3+(I-1)*3
+      X(I+J*IB-IB)=SCAN(IC+NU)
+      Y(I+J*IB-IB)=SCAN(IC+NV)
+  150 CONTINUE
+      I=IA
+      J=IB
+      DO 100 N=1,I
+      JA=J-1
+      DO 100 M=1,JA
+      MN=M+IB*N-IB
+      IF (DABS(X(MN+1) -X(MN )).LE.AZERO) GO TO 101
+      SLOP(MN)=(Y(MN+1)-Y(MN))/(X(MN+1)-X(MN))
+      IF (DABS(SLOP(MN )).LE.AZERO) SLOP(MN )=0.0
+      GO TO 100
+  101 SLOP(MN)=9999.0
+ 100  CONTINUE
+      CSLOP=SLOP(1)*1.001
+      DSLOP=SLOP(1)*0.999
+      DO 120 N=1,I
+      I1N=1+(N-1)*IB
+      ASLOP=SLOP(I1N)*1.001
+      BSLOP=SLOP(I1N)*0.999
+      DO 110 M=1,JA
+      MN=M+(N-1)*IB
+      IF((SLOP(MN ).LE.ASLOP).AND.(SLOP(MN ).GE.BSLOP)) GO TO 110
+      GO TO 130
+ 110  CONTINUE
+      IF((SLOP(I1N).LE.CSLOP).AND.(SLOP(I1N).GE.DSLOP)) GO TO 120
+      GO TO 130
+ 120  CONTINUE
+      GO TO 1500
+ 130  ILIN=0
+      GO TO 300
+ 1500 DO 200 N=1,J
+      IA=I-1
+      DO 200 M=1,IA
+      NM=N+(M-1)*IB
+      IF (DABS(X(NM+IB)-X(NM )).LE.AZERO) GO TO 201
+      SLOP(NM)=(Y(NM+IB)-Y(NM))/(X(NM+IB)-X(NM))
+      IF (DABS(SLOP(NM )).LE.AZERO) SLOP(NM )=0.0
+      GO TO 200
+  201 SLOP(NM)=9999.0
+ 200  CONTINUE
+      CSLOP=SLOP(1)*1.001
+      DSLOP=SLOP(1)*0.9990
+      DO 220 N=1,J
+      IN1=N
+      ASLOP=SLOP(IN1)*1.001
+      BSLOP=SLOP(IN1)*0.999
+      DO 210 M=1,IA
+      NM=N+(M-1)*IB
+      IF((SLOP(NM ).LE.ASLOP).AND.(SLOP(NM ).GE.BSLOP)) GO TO 210
+      GO TO 130
+ 210  CONTINUE
+      IF((SLOP(IN1).LE.CSLOP).AND.(SLOP(IN1).GE.DSLOP)) GO TO 220
+      GO TO 130
+ 220  CONTINUE
+      ILIN=1
+ 300  RETURN
+      END

@@ -1,0 +1,77 @@
+*
+C.....FORTRAN SUBROUTINE             COMP3D...              3/1/68   GK
+      SUBROUTINE COMP3D
+      IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (IFXCOR)
+      INCLUDE (KNUMBR)
+C
+C
+      INTEGER PPWORD(2),BCDF
+      CHARACTER*8 PP1
+      DATA PP1/'3DCALC  '/
+C
+      I3DFLG=1
+      PPWORD(1) = BCDF(PP1(1:4))
+      PPWORD(2) = BCDF(PP1(5:8))
+C
+      CALL APT299(0,PPWORD,0,0)
+      RETURN
+      END
+C
+C
+C
+      SUBROUTINE NDTEST
+      IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (IFXCOR)
+      INCLUDE (KNUMBR)
+C
+C
+      INTEGER PPWORD(2),BCDF
+      CHARACTER*8 PP2
+      DATA PP2/'2DCALC  '/
+C
+      I3DFLG=0
+      PPWORD(1) = BCDF(PP2(1:4))
+      PPWORD(2) = BCDF(PP2(5:8))
+C
+      CALL APT299(0,PPWORD,0,0)
+      RETURN
+      END
+C
+C
+C
+      SUBROUTINE GOUGCK(DONOFF)
+      IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
+C
+C
+      INCLUDE (TOTAL)
+      INCLUDE (IFXCOR)
+      INCLUDE (KNUMBR)
+C
+      INCLUDE (RMFLGS)
+C
+      INTEGER PPWORD(2),BCDF
+      CHARACTER PP3*8,DON*2,TEST*2
+      DATA PP3/'GOUGCK  '/,DON/'ON'/
+C
+      CALL HOLFRM(DONOFF,TEST,1,2,NWD)
+      IF (TEST.EQ.DON) THEN
+        IGOUG=1
+        LGCHK=.TRUE.
+      ELSE
+        IGOUG=0
+        LGCHK=.FALSE.
+      ENDIF
+                                                                        COMP2722
+      PPWORD(1) = BCDF(PP3(1:4))
+      PPWORD(2) = BCDF(PP3(5:8))
+C
+      CALL APT299(1,PPWORD,2,DONOFF)
+      RETURN
+      END
