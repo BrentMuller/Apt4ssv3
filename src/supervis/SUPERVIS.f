@@ -89,7 +89,7 @@ c     3     U(1)/1/,RL(1)/516/,NXTREC(1)/1/,LSTREC(1)/0/
      2     OPSTAT(2)/'UNKNOWN'/,CLSTAT(2)/'KEEP'/,
 c     3     U(2)/2/,RL(2)/516/,NXTREC(2)/1/,LSTREC(2)/0/
      3     u(2)/2/,rl(2)/2064/,nxtrec(2)/1/,lstrec(2)/0/
-     DATA FILNAM(3)/'CLFIL3'/,FILACC(3)/'SEQUENTIAL'/,
+      DATA FILNAM(3)/'CLFIL3'/,FILACC(3)/'SEQUENTIAL'/,
      1     FILFMT(3)/'UNFORMATTED'/,
      2     OPSTAT(3)/'UNKNOWN'/,CLSTAT(3)/'KEEP'/,
      3     U(3)/3/,RL(3)/512/,NXTREC(3)/1/,LSTREC(3)/0/
