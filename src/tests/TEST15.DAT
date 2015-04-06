@@ -111,3 +111,118 @@ $$    KL/DOIT
 $$    TRACUT/NM
       PRINT/3,ALL
       FINI
+=======
+PARTNO TEST15  BELL HELICOPTER ROTOR TIP TEST( LEON DAVIS)
+REMARK      TEST RUN ON SSX3A SYSTEM--- OCTOBER 1973
+$$ *********************************************
+$$ *                                           *
+$$ *   THIS TEST OK IN SSV3  -  13-JUN-1989    *
+$$ *                                           *
+$$ *      THOUGH NOW GIVES WARNING 24007       *
+$$ * 'NEGATIVE DISTANCE TO CS AT START OF CUT' *
+$$ *                                           *
+$$ *  INTRODUCED AS PART OF VW ARELEM UPDATES  *
+$$ *                                           *
+$$ *********************************************
+$$
+$$   THIS TEST OK IN SSV1 - 05-JUL-1982
+$$               AND SSV2 - 01-OCT-1986
+$$
+      MACHIN/GERBER,1
+NOPOST
+      MULTAX
+      CLPRNT
+      INTOL/.002
+      OUTTOL/.002
+      FROM/0,0,0
+SYN/PN,PLANE,PT,POINT,TN,TLON,GL,GOLFT,GR,GORGT,NM,NOMORE,KL,CALL
+      PL1=PN/0,1,0,0
+      PL2=PN/0,0,1,2.5
+      PL3=PN/0,0,-1,2.5
+      P1=PT/.9,0,0
+      P2=PT/1.675,0,2.5
+      STP=PT/.750,0,1.5
+      PA1=PT/1,0,2.5
+      PA2=PT/1.038,.150,2.50
+      PA3=PT/1.124,.263,2.50
+      PA4=PT/1.338,.375,2.5
+      PA5=PT/1.675,.431,2.5
+      PB1=PT/1,0,1
+      PB2=PT/1.038,.150,1
+      PB3=PT/1.124,.263,1
+      PB4=PT/1.338,.375,1
+      PB5=PT/1.675,.431,1
+      PC1=PT/.160,0,.350
+      PC2=PT/.208,.192,.350
+      PC3=PT/.318,.336,.350
+      PC4=PT/.592,.480,.350
+      PC5=PT/1.024,.552,.350
+      PD1=PT/0,0,0
+      PD2=PT/.050,.200,0
+      PD3=PT/.165,.350,0
+      PD4=PT/.450,.500,0
+      PD5=PT/.900,.575,0
+      PE1=PT/.160,0,-.350
+      PE2=PT/.208,.192,-.350
+      PE3=PT/.318,.336,-.350
+     PE4=PT/.592,.480,-.350
+      PE5=PT/1.024,.552,-.350
+      PF1=PT/1,0,-.9
+      PF2=PT/1.038,.150,-.9
+      PF3=PT/1.124,.263,-.9
+      PF4=PT/1.338,.375,-.9
+      PF5=PT/1.675,.431,-.9
+      PG1=PT/3.600,0,-2.5
+      PG2=PT/3.605,.020,-2.5
+      PG3=PT/3.617,.035,-2.5
+      PG4=PT/3.645,.050,-2.5
+      PG5=PT/3.690,.058,-2.5
+      BATTIP=SSURF/SMESH,XYZ,                 $
+          SPLINE, PA1,PA2,PA3,PA4,PA5,       $
+          SPLINE, PB1,PB2,PB3,PB4,PB5,       $
+          SPLINE, PC1,PC2,PC3,PC4,PC5,       $
+          SPLINE, PD1,PD2,PD3,PD4,PD5,       $
+          SPLINE, PE1,PE2,PE3,PE4,PE5,       $
+          SPLINE, PF1,PF2,PF3,PF4,PF5,       $
+          SPLINE, PG1,PG2,PG3,PG4,PG5
+      PL4=PN/P2,PA5,PB5
+      PL5=PN/PB5,PD5,P1
+      PL6=PN/P1,PD5,PG5
+      PL7=PN/0,0,-1,1.25
+      PL8=PN/0,0,1,0
+    DOIT=MACRO/
+      TLAXIS/0,1,0
+      GOTO/STP
+      PSIS/PL1
+      CUTTER/0
+CUTTER/0,0,0,0,0,0,0
+      INDIRV/1,0,0
+      GO/ON,BATTIP
+      PENDWN
+      TN,GL/BATTIP ,ON,PL8
+      GOFWD/BATTIP,ON,PL3
+ PSIS/BATTIP
+      TN  $$ TLON COMMAND
+      GOUP/PL3,ON,PL6
+      GR/PL6
+      GL/PL5
+      GR/PL4
+      GR/PL2,ON,PL1
+      PENUP
+      GOBACK/PL2,ON,PL4
+      GL/PL4
+      GL/PL5
+      GR/PL6,ON,PL7
+      PENDWN
+      GL/PL7,ON,PL1
+      PENUP
+      GOHOME
+      TERMAC
+      KL/DOIT
+$$    TRACUT/(MATRIX/.8662058,.8662058,0,0,-.50005,.50005,1.0002625,$
+$$    0,.7072924,-.7072924,.7071774,0)
+$$    KL/DOIT
+$$    TRACUT/NM
+      PRINT/3,ALL
+      FINI
+>>>>>>> local/lap_development

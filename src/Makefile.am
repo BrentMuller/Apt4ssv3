@@ -13,9 +13,9 @@ apt4ssv3_SOURCES= aptgeom/APTGEOM.f arelem/ARELEM.f goloft/GOLOFT.f aptfun/APTFU
 	      	cleditor/CLEDITOR.f regmill/REGMILL.f nonnativ/NONNATIV.f \
 		intcheck/INTCHECK.f translat/TRANSLAT.f auxilary/AUXILARY.f \
 		vax/VAX.f xecution/XECUTION.f supervis/SUPERVIS.f  utility/UTILITY.f \
-	        vax/apt211.f dummy.f loadcomp/block_data.f fort1.f fort2.f fort3.f
+	        vax/apt211.f dummy.f fort1.f fort2.f fort3.f
 
-
+#loadcomp/block_data.f 
 
 ########aptfun
 ########aptgeom

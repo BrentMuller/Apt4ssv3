@@ -1858,6 +1858,9 @@ C
 C
       DIMENSION ADRESS(*)
 c      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
+      if(jds) then
+         dummy= apt211(0,'nocs    ',idum)
+      endif
 C-IBM-      CALL APT241
       IF(IAERR.EQ.1)GO TO 10
 C-VAX-ESTABLISH CONDITION HANDLER
@@ -2503,6 +2506,7 @@ c*******************************************************
      f,z'00',
      gz'08',z'04',z'02',z'04',z'08',z'00', z'40',z'40',z'40',z'40',z'40'
      g,z'00'/
+
       IF (J.EQ.0) THEN
 C
 C.....5*7 MATRIX, ODD PARITY, COLUMN BINARY
