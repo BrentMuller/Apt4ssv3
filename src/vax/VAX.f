@@ -1857,8 +1857,10 @@ C
       INCLUDE 'IFXCOR.INC'
 C
       DIMENSION ADRESS(*)
-      call abort
 c      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
+      if(jds) then
+         dummy= apt211(0,'nocs    ',idum)
+      endif
 C-IBM-      CALL APT241
       IF(IAERR.EQ.1)GO TO 10
 C-VAX-ESTABLISH CONDITION HANDLER
@@ -1868,9 +1870,8 @@ C-VAX-ESTABLISH CONDITION HANDLER
       CALL GO2(HMOD,ADRESS)
       IF (IAERR.EQ.1) GOTO 20
 C-VAX- REVERT TO DEFAULT CONDITION HANDLER
-c   10 CALL LIB$REVERT
-c      RETURN
-   10 return
+   10 CALL LIB$REVERT
+      RETURN
       END
 **** SOURCE FILE : ADDRSS00.ORG   ***
 *
