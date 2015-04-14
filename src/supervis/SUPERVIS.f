@@ -164,8 +164,10 @@ c     3     U(15)/15/,RL(15)/48/,NXTREC(15)/1/,LSTREC(15)/0/
      1     FILFMT(16)/'UNFORMATTED'/,
 c     2     OPSTAT(16)/'SCRATCH'/,CLSTAT(16)/'DELETE'/,
      2     opstat(16)/'replace'/,clstat(16)/'delete'/,
+c     2     opstat(16)/'replace'/,clstat(16)/'keep'/,
 c     3     U(16)/16/,RL(16)/256/,NXTREC(16)/1/,LSTREC(16)/0/
-     3     u(16)/16/,rl(16)/1024/,nxtrec(16)/1/,lstrec(16)/0/
+c     3     u(16)/16/,rl(16)/1024/,nxtrec(16)/1/,lstrec(16)/0/
+     3     u(16)/16/,rl(16)/4096/,nxtrec(16)/1/,lstrec(16)/0/
       DATA FILNAM(17)/'POFILE'/,FILACC(17)/'DIRECT '/,
      1     FILFMT(17)/'UNFORMATTED'/,
 c     2     OPSTAT(17)/'SCRATCH'/,CLSTAT(17)/'DELETE'/,
