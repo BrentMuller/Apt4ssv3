@@ -31,6 +31,9 @@ C
       EQUIVALENCE (PPS(1,1),NNN(9))
 C
 C
+c     adding this line because the tape has data, but is at the end
+c     of the file
+      call tapop(cpfile,-4)
       CALL AREAD(CPFILE,1,NNN,48,IR)
 C
 C... IS POST PROCESSING REQUIRED

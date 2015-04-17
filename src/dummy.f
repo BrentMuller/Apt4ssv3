@@ -6,8 +6,18 @@ c ** some dummy routines to fill in for linker undefined ref errors
       return
       end
 
-      subroutine time
+      subroutine time(ct)
+c     TODO
+      character ctme*30
+      character ct*8
+      integer vals(9)
       write(*,*)"unimplemented VAX subroutine TIME"
+      i=time8()
+      call ctime(i,ct)
+      call ctime(i,ctme)
+      call ltime(i,vals)
+      write(*,*)ctme
+c      ct=ctme
       return
       end
 

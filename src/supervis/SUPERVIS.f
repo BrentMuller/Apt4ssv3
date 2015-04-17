@@ -157,7 +157,8 @@ c     3     U(14)/14/,RL(14)/256/,NXTREC(14)/1/,LSTREC(14)/0/
      3     u(14)/14/,rl(14)/114096/,nxtrec(14)/1/,lstrec(14)/0/
       DATA FILNAM(15)/'CPFILE'/,FILACC(15)/'SEQUENTIAL'/,
      1     FILFMT(15)/'UNFORMATTED'/,
-     2     OPSTAT(15)/'UNKNOWN'/,CLSTAT(15)/'DELETE'/,
+c     2     OPSTAT(15)/'UNKNOWN'/,CLSTAT(15)/'DELETE'/,
+     2     opstat(15)/'unknown'/,clstat(15)/'keep'/,
 c     3     U(15)/15/,RL(15)/48/,NXTREC(15)/1/,LSTREC(15)/0/
      3     u(15)/15/,rl(15)/1148/,nxtrec(15)/1/,lstrec(15)/0/
       DATA FILNAM(16)/'AXFILE'/,FILACC(16)/'DIRECT'/,
@@ -167,7 +168,10 @@ c     2     OPSTAT(16)/'SCRATCH'/,CLSTAT(16)/'DELETE'/,
 c     2     opstat(16)/'replace'/,clstat(16)/'keep'/,
 c     3     U(16)/16/,RL(16)/256/,NXTREC(16)/1/,LSTREC(16)/0/
 c     3     u(16)/16/,rl(16)/1024/,nxtrec(16)/1/,lstrec(16)/0/
-     3     u(16)/16/,rl(16)/4096/,nxtrec(16)/1/,lstrec(16)/0/
+c     3     u(16)/16/,rl(16)/4096/,nxtrec(16)/1/,lstrec(16)/0/
+c     3     u(16)/16/,rl(16)/8192/,nxtrec(16)/1/,lstrec(16)/0/
+c     3     u(16)/16/,rl(16)/16384/,nxtrec(16)/1/,lstrec(16)/0/
+     3     u(16)/16/,rl(16)/32768/,nxtrec(16)/1/,lstrec(16)/0/
       DATA FILNAM(17)/'POFILE'/,FILACC(17)/'DIRECT '/,
      1     FILFMT(17)/'UNFORMATTED'/,
 c     2     OPSTAT(17)/'SCRATCH'/,CLSTAT(17)/'DELETE'/,
