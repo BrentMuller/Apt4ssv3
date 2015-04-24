@@ -40,7 +40,8 @@ C
 C
       INCLUDE 'BLANKCOM.INC'
 C
-      DIMENSION A(*),SNN(49),SOUT(48),TY(3),KTY(5),KTW(5)
+c      DIMENSION A(*),SNN(49),SOUT(48),TY(3),KTY(5),KTW(5)
+      dimension a(*),snn(49),sout(49),ty(3),kty(5),ktw(5)
       EQUIVALENCE (SNN(1),SCAN(1)), (SOUT(1),SCAN(50))
 C
       COMMON/MAXLDA/MAXLDA
@@ -6546,7 +6547,8 @@ C---  PA AND PB ARE TWO POINTS WHICH DESCRIBE THE AXIS VECTOR OF THE
 C--- CYLINDER. SET DA=0., DB=90. AND ICCLW=0
       DIMENSION S(*),SC(4,6,*),PA(*),PB(*)
       DIMENSION P(4),T(4,4),BT(4,4),CC(4,4),BM(4,4,4),BU(4,4,4)
-      DIMENSION CX(4,6,4)
+c      DIMENSION CX(4,6,4)
+      dimension cx(4,6,31)
 C
       INCLUDE 'XUNITS.INC'
 C
