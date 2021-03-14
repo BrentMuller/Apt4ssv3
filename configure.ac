@@ -3,6 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([apt4ssv3], [VERSION], [BUG-REPORT-ADDRESS])
+AM_INIT_AUTOMAKE([subdir-objects])
 
 # Checks for programs.
 AC_PROG_FC
@@ -19,4 +20,3 @@ AC_CONFIG_FILES([Makefile
                  src/loadcomp/Makefile
 		 src/Makefile src/include/Makefile])
 AC_OUTPUT
-AM_INIT_AUTOMAKE
