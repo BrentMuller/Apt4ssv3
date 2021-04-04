@@ -1,7 +1,7 @@
 *
 C....  SYMFIL BLOCK   .....  MEMBER NAME = SSYMFIL
       BLOCK DATA SYMFL
-      INCLUDE (SYMFIL)
+      INCLUDE 'SYMFIL.INC'
 C
       DATA CLFILP,CLFILE,CLFIL3,EXFILE,INFILE/
      1          1,     2,     3,     4,     5/,

@@ -1,6 +1,6 @@
 *
       PROGRAM SSV3
-      INCLUDE (COMMONS)
+      INCLUDE 'COMMONS.INC'
       CALL SPRVIS
       STOP
       END

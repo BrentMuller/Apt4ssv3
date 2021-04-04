@@ -24,7 +24,7 @@
 *                                         (DIRECT ACCESS)
       BLOCK DATA FLTAB
 C
-      INCLUDE (FILTAB)
+      INCLUDE 'FILTAB.INC'
 C
       DATA FILNAM(1)/'CLFILP'/,FILACC(1)/'DIRECT '/,
      1     FILFMT(1)/'UNFORMATTED'/,
