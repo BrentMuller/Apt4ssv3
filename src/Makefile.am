@@ -7,7 +7,18 @@ AM_FCFLAGS = -I$(top_srcdir)/src/include  #-O0
 
 bin_PROGRAMS=apt4ssv3
 
-apt4ssv3_SOURCES = aptgeom/APTGEOM.f arelem/ARELEM.f goloft/GOLOFT.f aptfun/APTFUN.f \
+apt4ssv3_SOURCES = aptgeom/APTGEOM.f arelem/ARELEM.f goloft/GOLOFT.f \
+aptfun/UTILTY.f \
+aptfun/ANGLFB.f \
+aptfun/NEWFUNCS.f \
+aptfun/CANF.f \
+aptfun/DOTF.f \
+aptfun/DISTF.f \
+aptfun/MINMAX.f \
+aptfun/NUMF.f \
+aptfun/PARMF.f \
+aptfun/SPATF.f \
+aptfun/LNTHF.f \
 ileditor/ILEDITOR.f gougechk/GOUGECHK.f ssarelem/SSARELEM.f \
 ssdata/SSDATA.f postexec/POSTEXEC.f sseval/SSEVAL.f ssgeom/SSGEOM.f \
 cleditor/CLEDITOR.f regmill/REGMILL.f nonnativ/NONNATIV.f \

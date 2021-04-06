@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0002836.V02   ***
 *
 C.....FORTRAN SUBROUTINE             DOTF.....              5/1/68   GK
 C                      THE FIRST INPUT VECTOR
@@ -16,9 +17,9 @@ C
 C
 C
 C
-      INCLUDE (TOTAL)
-      INCLUDE (ZNUMBR)
-      INCLUDE (KNUMBR)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'ZNUMBR.INC'
+      INCLUDE 'KNUMBR.INC'
 C
       IF (CKDEF(ARG1).OR.CKDEF(ARG2)) GO TO 20
 C

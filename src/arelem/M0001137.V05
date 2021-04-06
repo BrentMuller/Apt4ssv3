@@ -1,7 +1,8 @@
+**** SOURCE FILE : M0001137.V05   ***
 *
-d
-d
-d
+ 
+ 
+ 
 C
 C
 C.....FORTRAN SUBROUTINES          MAXDP & MAXDPH            4/1/68   GK
@@ -12,7 +13,7 @@ C
       IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
 C
 C
-      INCLUDE (FXCOR)
+      INCLUDE 'FXCOR.INC'
 C
 C...  21. ADDCOM BLOCK
 C
@@ -42,7 +43,7 @@ C             /-SURFACE.  INTERVENING COMMANDS NOT TO BE EXECUTED YET.
       ITABH(ITHCNT)=10
       ITHCNT=ITHCNT+1
       RETURN
-                                                                        00008210
+            
     1 CONTINUE
 C
 C             /-SPECIAL FLAG FOR SS ARELEM MODE AND DEBUGGING LEVEL PRIN
@@ -93,8 +94,8 @@ C
 C
       IMPLICIT DOUBLE PRECISION(A-H),DOUBLE PRECISION(O-Z)
 C
-      INCLUDE (TOTAL)
-      INCLUDE (FXCOR)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'FXCOR.INC'
 C
 C...  21. ADDCOM BLOCK
 C

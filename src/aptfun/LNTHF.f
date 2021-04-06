@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0002848.V02   ***
 *
 C.....FORTRAN SUBROUTINE             LNTHF....              3/1/68   GK
 C
@@ -22,9 +23,9 @@ C              REAL FUNCTION       SQRT
 C
 C
 C
-      INCLUDE (TOTAL)
-      INCLUDE (ZNUMBR)
-      INCLUDE (KNUMBR)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'ZNUMBR.INC'
+      INCLUDE 'KNUMBR.INC'
 C
 C
 C
