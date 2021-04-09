@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0011539.W03   ***
 *
 C
 C......    FORTRAN SUBROUTINE CNVRT3    11/69    RC
@@ -44,7 +45,7 @@ C
 C
 C...            SYSTEM I/O FILE NAMES
 C
-      INCLUDE (SYMFIL)
+      INCLUDE 'SYMFIL.INC'
 C
 C
       COMMON/I5AXIS/
@@ -280,7 +281,7 @@ C...     ***  TYPE 3 --- ALPHANUMERIC LITERAL STRING
   250 IR = IR + 2
   260 IF (IR.LT.LR)  GOTO 170
       GOTO 9000
-                                                                        CNVR1753
+               
 C...     FINI RECORD...
   300 IRXXXX(2) = 14000
       IF (NNN.EQ.0)RETURN

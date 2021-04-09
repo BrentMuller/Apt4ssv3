@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0004176.V02   ***
 *
 C
 C
@@ -14,7 +15,7 @@ C
 C
 C...                ...ERROR DIAGNOSTICS
 C
-      INCLUDE (EXERR)
+      INCLUDE 'EXERR.INC'
 C
       CHARACTER B*120,NOTEXT*54
 C

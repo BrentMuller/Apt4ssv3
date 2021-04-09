@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000428.V05   ***
 *
 C
 C.....FORTRAN SUBROUTINE                   APT312
@@ -22,7 +23,7 @@ C
 C
 C...            SYSTEM I/O FILE NAMES
 C
-      INCLUDE (SYMFIL)
+      INCLUDE 'SYMFIL.INC'
       INTEGER EBUFF(516)
       DATA K/2/,N/0/,KFINI/'FINI'/,EBUFF(1)/1/
       DATA AERR /'AERR    '/
