@@ -1,0 +1,320 @@
+**** SOURCE FILE : M0000736.V04   ***
+*
+C.....FORTRAN SUBROUTINE  ....TRANSM        3/72                     RN
+C.... SUBROUTINE                     TRANSM              3/72
+C
+C              FORTRAN SUBROUTINE TRANSM
+C
+C PURPOSE      TO TRANSFORM THE CANONICAL FORMS OF POINTS,
+C              SPHERES, VECTORS, LINES, PLANES, CIRCLES,
+C              CYLINDERS, CONES AND QUADRIC SURFACES WHEN A
+C              REFSYS STATEMENT IS IN EFFECT.
+C
+C LINKAGE      CALL TRANSM (SO, SI, IR, IN, IE)
+C
+C ARGUMENTS    SO      ARRAY TO CONTAIN THE RESULTING CANONICAL
+C                      FORM
+C              SI      ARRAY CONTAINING THE INPUT CANONICAL FORM
+C              IN      INTEGER CONTAINING THE NUMBER OF WORDS
+C                      IN THE CANONICAL FORM
+C              IR      INTEGER CONTAINING THE SURFACE INDICATOR
+C                      IR=1 QUADRICS (IN=10)
+C                        =2 POINTS AND SPHERES (IN=3)
+C                        =3 VECTORS (IN=3)
+C                        =4 LINES AND PLANES (IN=4)
+C                        =5 CIRCLES, CONES AND CYLINDERS (IN=7)
+C              IE      INTEGER WHICH INDICATES TRANSFORMATION
+C                      DIRECTION AND ERROR CODE NUMBER WHEN A
+C                      LINE OR CIRCLE IS TO BE CHECKED TO BE
+C                      SURE IT IS A VERTICAL PLANE OR CYLINDER
+C                      RESPECTIVELY.
+C                      IE =-1 TRANSFORM LOCAL TO BASE COORDINATE
+C                           SYSTEM
+C                      IE = O TRANSFORM BASE TO LOCAL COORDINATE
+C                           SYSTEM
+C
+C SUBSIDIARIES TYPE                ENTRY
+C
+      SUBROUTINE TRANSM (SO,SI,IR,IN,IE)
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION (O-Z)
+      LOGICAL CKDEF,CIRDEF,LINDEF
+      DIMENSION SO(IN),SI(IN)
+C
+C
+C
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'DEF.INC'
+      INCLUDE 'LDEF.INC'
+C...  ISHR16.INC HAS BEEN OMITTED, AS USEAGE OF I,J,
+C...  M & M11 SEEMS TO BE LOCAL.
+      INCLUDE 'KNUMBR.INC'
+C
+C
+      DIMENSION T(16),T1(16),T2(16),T3(16)
+      DIMENSION XT(4,4),XT1(4,4),XT2(4,4),XT3(4,4)
+      EQUIVALENCE (T(1),XT(1,1)),(T1(1),XT1(1,1))
+      EQUIVALENCE(T2(1),XT2(1,1)),(T3(1),XT3(1,1))
+C
+C
+C...     DETERMINE WHETHER INPUT SURFACE HAS BEEN DEFINED
+C
+      DO 10 I=1,IN
+   10 T(I)=SI(I)
+C
+C...     IF REFSYS NOT IN EFFECT MOVE ARRAY TO OUTPUT ARRAY
+C
+C
+      IF(.NOT.REFMOT) GO TO 20
+      IF(.NOT.REFFLG) GO TO 20
+      J=0
+      IF(SI(J).GE.21000000.0.OR.SI(J).LT.999999.) GO TO 20
+      CALL UNPACK(SI,MODE,ISIZE,ISUB)
+      IF(MODE.LE.0.OR.MODE.GT.20) GO TO 20
+      IF(IR.EQ.3.AND.MODE.NE.20) GO TO 20
+      GO TO 90
+   20 CONTINUE
+      DO 30 I=1,IN
+   30 SO(I)=T(I)
+  999 RETURN
+C
+C...     SET M=1 FOR BASE TO LOCAL OR M=2 FOR LOCAL TO BASE AND
+C...     TRANSFORM CANONICAL FORMS
+C
+   90 DO 95 I=1,IN
+   95 T1(I)=T(I)
+      M=K1
+      IF (IE.LT.0) M=K2
+      M11 = K3 - M
+      GO TO (100,300,300,400,300),IR
+C
+C...     QUADRIC CANONICAL FORM TRANSFORMATION
+C
+  100 T(2)=T1(7)
+      T(3)=T1(6)
+      T(4)=T1(8)
+      T(5)=T1(7)
+      T(6)=T1(2)
+      T(7)=T1(5)
+      T(8)=T1(9)
+      T(9)=T1(6)
+      T(10)=T1(5)
+      T(11)=T1(3)
+      T(12)=T1(10)
+      T(13)=T1(8)
+      T(14)=T1(9)
+      T(15)=T1(10)
+      T(16)=T1(4)
+      DO 200 I=1,12
+  200 T3(I)=A(I,M11)
+      T3(13)=0.
+      T3(14)=0.
+      T3(15)=0.
+      T3(16)=1.
+C
+C
+      DO 250 I=1,4
+      DO 250 J=1,4
+      XT1(I,J) = 0.0
+      DO 250 M=1,4
+  250 XT1(I,J)=XT1(I,J)+XT(M,J)*XT3(I,M)
+      DO 260 I=1,4
+      DO 260 J=1,4
+  260 XT2(J,I)=XT3(I,J)
+      DO 270 I=1,4
+      DO 270 J=1,4
+      XT(I,J)=0.0
+      DO 270 M=1,4
+  270 XT(I,J)=XT(I,J)+XT2(M,J)*XT1(I,M)
+  271 T(5)=T(7)
+      T(7)=T(2)
+      T(2)=T(6)
+      T(6)=T(3)
+      T(3)=T(11)
+      T(9)=T(8)
+      T(8)=T(4)
+      T(4)=T(16)
+      T(10)=T(12)
+      GO TO 20
+C
+C...     VECTOR CANONICAL FORM TRANSFORMATION
+C
+  300 DO 310 I=1,3
+  310 T(I)=A(4*I-3,M)*T1(1)+A(4*I-2,M)*T1(2)+A(4*I-1,M)*T1(3)
+      GO TO (20,320,20, 20,320),IR
+C
+C...     FINISH TRANSFORMATION FOR POINTS
+C
+  320 DO 330 I=1,3
+  330 T(I)=T(I)+A(4*I,M)
+      IF(IR.NE.K5) GO TO 20
+C
+C...     FINISH TRANSFORMATION FOR CIRCLES
+C
+      DO 340 I=4,6
+  340 T(I)=A(4*I-15,M)*T1(4)+A(4*I-14,M)*T1(5)+A(4*I-13,M)*T1(6)
+      GO TO 20
+C
+C...     TRANSFORM NORMAL DISTANCE FOR LINES
+C
+  400 T(4)=T1(4)-T1(1)*A(4,M11)-T1(2)*A(8,M11)-T1(3)*A(12,M11)
+      GO TO 300
+       END
+C
+C.....FORTRAN SUBROUTINE  ....TRANSF        3/72                     RN
+C.... SUBROUTINE                    TRANSF               3/72
+C
+C              FORTRAN SUBROUTINE TRANSF
+C
+C PURPOSE      TO TRANSFORM THE CANONICAL FORMS OF POINTS,
+C              SPHERES, VECTORS, LINES, PLANES, CIRCLES,
+C              CYLINDERS, CONES AND QUADRIC SURFACES WHEN A
+C              REFSYS STATEMENT IS IN EFFECT.
+C
+C LINKAGE      CALL TRANSF (SO, SI, IR, IN, IE)
+C
+C ARGUMENTS    SO      ARRAY TO CONTAIN THE RESULTING CANONICAL
+C                      FORM
+C              SI      ARRAY CONTAINING THE INPUT CANONICAL FORM
+C              IN      INTEGER CONTAINING THE NUMBER OF WORDS
+C                      IN THE CANONICAL FORM
+C              IR      INTEGER CONTAINING THE SURFACE INDICATOR
+C                      IR=1 QUADRICS (IN=10)
+C                        =2 POINTS AND SPHERES (IN=3)
+C                        =3 VECTORS (IN=3)
+C                        =4 LINES AND PLANES (IN=4)
+C                        =5 CIRCLES, CONES AND CYLINDERS (IN=7)
+C              IE      INTEGER WHICH INDICATES TRANSFORMATION
+C                      DIRECTION AND ERROR CODE NUMBER WHEN A
+C                      LINE OR CIRCLE IS TO BE CHECKED TO BE
+C                      SURE IT IS A VERTICAL PLANE OR CYLINDER
+C                      RESPECTIVELY.
+C                      IE =-1 TRANSFORM LOCAL TO BASE COORDINATE
+C                           SYSTEM
+C                      IE = O TRANSFORM BASE TO LOCAL COORDINATE
+C                           SYSTEM
+C
+C SUBSIDIARIES TYPE                ENTRY
+C
+      SUBROUTINE TRANSF (SO,SI,IR,IN,IE)
+      LOGICAL CKDEF,CIRDEF,LINDEF
+      DOUBLE PRECISION SO(IN),SI(IN)
+C
+C
+C
+      INCLUDE 'DEF.INC'
+      INCLUDE 'LDEF.INC'
+C...  ISHR16.INC HAS BEEN OMITTED, AS USEAGE OF I,J,
+C...  M & M11 SEEMS TO BE LOCAL.
+      INCLUDE 'KNUMBR.INC'
+C
+C
+      DOUBLE PRECISION T(16),T1(16),T2(16),T3(16)
+C
+      IF(IE.LT.0) GO TO 5
+      UNFLAG=CKDEF(SI)
+      IF(UNFLAG) GO TO 999
+C
+C...     DETERMINE WHETHER INPUT SURFACE HAS BEEN DEFINED
+C
+    5 DO 10 I=1,IN
+      T(I)=SI(I)
+   10 CONTINUE
+C
+C...     IF REFSYS NOT IN EFFECT MOVE ARRAY TO OUTPUT ARRAY
+C
+C---    GEOMETRIC MODE IS IN EFFECT
+      IF(REFFLG) GO TO 90
+   20 IF(IE.LT.0) GO TO 61
+      DO 31 I=1,IN
+      SO(I)=T(I)
+   31 CONTINUE
+      IF(IE.EQ.0) GO TO 999
+      GO TO (999,999,999,41,51),IR
+   41 UNFLAG=LINDEF(T,IE)
+      GO TO 999
+   51 UNFLAG=CIRDEF(T,IE)
+      GO TO 999
+   61 DO 71 I=1,IN
+      R(I)=T(I)
+   71 CONTINUE
+      GO TO 999
+  999 RETURN
+C
+C...     SET M=1 FOR BASE TO LOCAL OR M=2 FOR LOCAL TO BASE AND
+C...     TRANSFORM CANONICAL FORMS
+C
+   90 DO 95 I=1,IN
+      T1(I)=T(I)
+   95 CONTINUE
+      M=K1
+      IF (IE.LT.0) M=K2
+      M11 = K3 - M
+      GO TO (100,300,300,400,300),IR
+C
+C...     QUADRIC CANONICAL FORM TRANSFORMATION
+C
+  100 T(2)=T1(7)
+      T(3)=T1(6)
+      T(4)=T1(8)
+      T(5)=T1(7)
+      T(6)=T1(2)
+      T(7)=T1(5)
+      T(8)=T1(9)
+      T(9)=T1(6)
+      T(10)=T1(5)
+      T(11)=T1(3)
+      T(12)=T1(10)
+      T(13)=T1(8)
+      T(14)=T1(9)
+      T(15)=T1(10)
+      T(16)=T1(4)
+      DO 200 I=1,12
+      T3(I)=A(I,M11)
+  200 CONTINUE
+      T3(13)=0.
+      T3(14)=0.
+      T3(15)=0.
+      T3(16)=1.
+C
+C---    GEOMETRIC TRANSFORM CASE
+      CALL APT076(T1,T,T3,K4)
+      CALL APT086(T2,T3,K4)
+      CALL APT076(T,T2,T1,K4)
+C
+      T(5)=T(7)
+      T(7)=T(2)
+      T(2)=T(6)
+      T(6)=T(3)
+      T(3)=T(11)
+      T(9)=T(8)
+      T(8)=T(4)
+      T(4)=T(16)
+      T(10)=T(12)
+      GO TO 20
+C
+C...     VECTOR CANONICAL FORM TRANSFORMATION
+C
+  300 DO 310 I=1,3
+      T(I)=A(4*I-3,M)*T1(1)+A(4*I-2,M)*T1(2)+A(4*I-1,M)*T1(3)
+  310 CONTINUE
+      GO TO (20,320,20, 20,320),IR
+C
+C...     FINISH TRANSFORMATION FOR POINTS
+C
+  320 DO 330 I=1,3
+      T(I)=T(I)+A(4*I,M)
+  330 CONTINUE
+      IF(IR.NE.K5) GO TO 20
+C
+C...     FINISH TRANSFORMATION FOR CIRCLES
+C
+      DO 340 I=4,6
+      T(I)=A(4*I-15,M)*T1(4)+A(4*I-14,M)*T1(5)+A(4*I-13,M)*T1(6)
+  340 CONTINUE
+      GO TO 20
+C
+C...     TRANSFORM NORMAL DISTANCE FOR LINES
+C
+  400 T(4)=T1(4)-T1(1)*A(4,M11)-T1(2)*A(8,M11)-T1(3)*A(12,M11)
+      GO TO 300
+       END

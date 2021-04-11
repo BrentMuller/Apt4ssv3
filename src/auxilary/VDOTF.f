@@ -1,0 +1,8 @@
+**** SOURCE FILE : M0001127.V02   ***
+*
+      FUNCTION VDOTF(B,C)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION B(*),C(*)
+      VDOTF=B(1)*C(1)+B(2)*C(2)+B(3)*C(3)
+      RETURN
+      END
