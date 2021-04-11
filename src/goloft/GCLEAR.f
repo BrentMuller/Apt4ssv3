@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0011488.V01   ***
 *
       SUBROUTINE GCLEAR(CNAME)
 C
@@ -12,7 +13,7 @@ C
      *              ,IRETRO(4)
      *              ,IDIRMO(4)
      *              ,ICANIN(4)
-      INCLUDE (BLANKCOM)
+      INCLUDE 'BLANKCOM.INC'
 C
       LOGICAL CKDEF
       CHARACTER*6 HPOS,HARG,TEST
