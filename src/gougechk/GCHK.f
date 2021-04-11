@@ -1,3 +1,4 @@
+**** SOURCE FILE : GCHK.V01   ***
 *
       SUBROUTINE GCHK(SURF,SIDE,R ,TE ,TA ,NPAT ,UP ,VP ,
      +                          RL,TEL,TAL,NPATL,UPL,VPL,
@@ -10,7 +11,7 @@ C
 C
       CHARACTER*20 BADMSG
 C
-      INCLUDE (IBUGG)
+      INCLUDE 'IBUGG.INC'
 C
       DATA Z1EM10/1.0D-10/,ZERO/0.0D0/,ONE/1.0D0/
 C
