@@ -1,3 +1,4 @@
+**** SOURCE FILE : PARNOM00.IBM;1   ***
 *
       SUBROUTINE PARNOM(N,A,J)
 *

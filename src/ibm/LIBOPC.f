@@ -1,3 +1,4 @@
+**** SOURCE FILE : LIBOPC00.IBM;2   ***
 *
       SUBROUTINE LIBOPC(IND,FLAG)
 *

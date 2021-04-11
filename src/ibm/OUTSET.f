@@ -1,3 +1,4 @@
+**** SOURCE FILE : OUTSET00.IBM;1   ***
 *
       SUBROUTINE OUTSET(J)
 *

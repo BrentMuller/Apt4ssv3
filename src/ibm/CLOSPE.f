@@ -1,3 +1,4 @@
+**** SOURCE FILE : CLOSPE00.IBM;1   ***
 *
 *                MODIFIED                23-FEB-1988  E.MCLELLAN
       SUBROUTINE CLOSPE(ID,IRET)
