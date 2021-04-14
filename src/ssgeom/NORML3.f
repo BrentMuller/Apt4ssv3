@@ -1,0 +1,23 @@
+**** SOURCE FILE : M0000643.V01   ***
+*
+      SUBROUTINE NORML3(PA,PB,PC,AN,IRR)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+C------CONSTRUCT A UNIT NORMAL TO THREE POINTS PA,PB,PC AND STORE IN AN
+C------IF NO NORMAL EXISTS THEN IRR NE 0.
+      DIMENSION PA(3),PB(3),PC(3),AN(3),P1(3),P2(3)
+      IDIAG=4000
+      CRIT=1.0D-10
+      DO 10 I=1,3
+      P1(I)=PB(I)-PA(I)
+   10 P2(I)=PC(I)-PA(I)
+      AN(1) = P1(2)*P2(3) - P1(3)*P2(2)
+      AN(2) = P1(3)*P2(1) - P1(1)*P2(3)
+      AN(3) = P1(1)*P2(2) - P1(2)*P2(1)
+      D=DSQRT(AN(1)*AN(1)+AN(2)*AN(2)+AN(3)*AN(3))
+      IRR=IDIAG+1
+      IF(D.LT.CRIT) RETURN
+      DO 20 I=1,3
+   20 AN(I)=AN(I)/D
+      IRR=0
+      RETURN
+      END
