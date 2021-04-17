@@ -97,6 +97,7 @@ C---     DETERMINE RATES OF CHANGE AT THIS POINT
       B=(CV(5)*CV(9)+CV(6)*CV(10)+CV(7)*CV(11))/A
 C---     LOAD THE KEY VALUES
       FL(1,NX)=ARCLEN
+      FL(2,NX)=UNX
       FL(3,NX)=ONE/A
       FL(4,NX)=-B/(A**3)
 C
