@@ -1,0 +1,47 @@
+**** SOURCE FILE : ICONV000.ORG   ***
+*
+*
+*  *  ICONV  *    VAX11 FORTRAN VERSION   8.4.81   E.MCLELLAN
+*
+*                              MODIFEED  25.06.82  E.MCLELLAN
+*                              MODIFIED  16.07.85  E.MCLELLAN
+*                              MODIFIED  07.07.86  E.MCLELLAN
+*
+*  PURPOSE     TO CONVERT INTEGERS TO ALPHAMERIC REPRESENTATAION
+*
+*  CALLING SEQUENCE
+*              CALL ICONV(I,A,N,K)
+*  ARGUMENTS
+*              I   INTEGER VALUE TO BE CONVERTED TO CHARACTER
+*              A   CHARACTER STRING TO CONTAIN THE CONVERTED INTEGER
+*              N   INTEGER INDICATING THE START BYTE POSITION TO
+*                  STORE THE CHARACTERS IN A
+*              K   INTEGER INDICATING TOTAL NUMBER OF CHARACTERS
+*                  DESIRED
+*
+      SUBROUTINE ICONV(I,A,N,K)
+C
+      CHARACTER*(*) A
+      CHARACTER*11 INTFIL
+      WRITE (INTFIL,'(I11)') I
+      DO 10 J=1,11
+      IF (INTFIL(J:J).NE.' ') GOTO 20
+   10 CONTINUE
+      J=11
+C
+   20 L=12-J
+      IF (L.GT.K) GOTO 30
+C
+      I2=N+K-1
+      I1=I2-L+1
+      A(I1:I2)=INTFIL(J:11)
+      GO TO 99
+C---- OVERFLOW
+   30 I1=N
+      DO 35 J=1,K
+      A(I1:I1)='*'
+   35 I1=I1+1
+C
+   99 CONTINUE
+      RETURN
+      END
