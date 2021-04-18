@@ -1,0 +1,3040 @@
+PROC      GEOM
+,              1000       4      ADDITIONAL ORDINAL NUMBERS
+(              2000       7      FOR PROCESSING IN JUMP MODE
+)              3000       5      NOTICE: IT SHOULD BE
+RTERM          4000       6      ORDINAL NUMBER OF       ORDINAL NUMBER
+/              5000      31      DBLAST            <     *,/
+-              6000      34      *,/               <     +,-
++              7000      33
+=              8000       8
+*              9000      32
+DIGIT         10000       2
+LETTER        11000       1
+'             12000      44
+BLANK         13000       0
+NUMBER        14000      11
+DOLLAR        15000      43
+GEOM          16000      18
+TEMP          17000      10
+FCN           18000      16
+PROCED        19000      17
+PERMID        20000      13
+.             21000       3
+LABEL         22000      15
+IMPLAB        23000      14
+LTERM         24000      25
+DOT           25000      39
+KREUZ         26000      40
+RELAT         27000      35
+NOT           28000      36
+AND           29000      37
+OR            30000      38
+VBL           31000       9
+DBLAST        32000      30
+MACRO         33000      27
+MACNAM        34000      28
+IDENT         35000      12
+MACVBL        36000       0
+TERMAC        37000      29
+MCLTRM        38000      42
+CONGEO        39000      23
+CONPRO        40000      22
+IF            41000      20
+CANON         42000      21
+CONBIG        43000      24
+BIGGEO        44000      19
+CONAST        45000      41
+OBTAIN        46000      26
+                 -1
+       LETTER,DIGIT
+       LETTER
+       25          $$  CONCATINATE TO LETTER SEQUENCE,READ NEXT CHAR.
+       DIGIT
+       .
+       36          $$    SET DECIMAL, CONCATINATE, READ NEXT CHAR.
+       .
+       DIGIT
+       36          $$  SET DECIMAL, CONCATINATE, READ NEXT CHAR.
+       DIGIT
+       DIGIT
+       25          $$   CONCATENATE TO DECIMAL OR DIGIT SEQUENCE, READ
+       DIGIT
+       NUMBER
+       25          $$   CONCATENATE TO DECIMAL OR DIGIT SEQUENCE, READ
+       LETTER
+       DIGIT
+       22          $$   SET LETTER, CONCATENATE, READ
+       LETTER
+       .
+       71          $$   INITIALIZE LETTER,READ (BOOLEAN EXPRESSION)
+       .
+       LETTER
+       72          $$  ENTER LETTER STRING IN NAMTBL IF NOT IN, READ
+       .
+       NUMBER
+       73          $$   EXAMINE NEXT CHARACTER ,READ
+       LETTER
+       NUMBER
+       74          $$   ENTER NUMBER IN NUMBER TABLE, READ
+       DIGIT,LETTER,.,    
+       9           $$   INITIALIZE DIGIT ,READ
+      (
+      15           $$  CHECK NEXT CHAR.,SET KREUZ OR DOT IF APPROPRIATE
+      *
+      32           $$  CHECK NEXT CHAR., SET DBLAST IF APPROPRIATE
+      DOLLAR
+      19           $$  SCAN PAST RTERM TO NEXT CARD
+      '
+      3            $$  GENERATE CODE FOR STRING
+       ALL
+       DIGIT
+      34           $$  ADD DEC. POINT, ENTER IN NUMBER TABLE, BRKPNT
+       ALL
+       LETTER
+       35          $$  ENTER LETTER STRING IN NAMTBL IF NOT IN, BRKPNT
+       ALL
+       NUMBER
+       20          $$   ENTER NUMBER IN NUMBER TABLE, BRKPNT
+  BRKPNT $
+  $    RTERM PRODUCTIONS FADED OUT WILL BE GENERATED AUTOMATICALLY
+  $   TERMAC                           BY THE LOAD COMPLEX PROGRAM
+  $   MCLTRM
+  $   54     $$    TERMINATE STORAGE OF MACRO DEF IN MAC. TEXT TABLE
+  $   MCLTRM
+  $   MCLTRM
+  $   58           $$  INITIATE INTERMEDIATE PROCESSING OF NESTED MACRO
+  $    RTERM
+  $   MCLTRM
+  $   56           $$  PLACE RIGHT TERMINATOR IN MACRO TEXT TABLE
+  $    ALL
+  $    ALL
+  $   MCLTRM
+  $   55           $$  ADD WORDS TO MACRO TEXT TABLE, READ
+  $    ALL
+  $   MCLTRM
+  $$  60           $$  ADD WORD TO MACRO TEXT TABLE, READ NEXT CHAR.
+             GEOM,FCN,PROCED,PERMID,LABEL,IMPLAB,BIGGEO,          $
+      VBL,MACNAM,IDENT,TERMAC,CONGEO,CONBIG,CONPRO,IF,CANON,OBTAIN
+29                 $$  READ NEXT CHAR.
+      NUMBER
+  14               $$  PLACE NUMBER IN NAME TABLE , READ NEXT CHAR.
+      /
+      CONGEO
+      =,(,,
+       1           $$  CHANGE COND. GEOMETRIC TO GEOMETRIC, BRKPNT
+      /
+      CONBIG
+      =,(
+      101      $$ CHANGE CONDITIONAL LARGE GEO. TO LARGE GEO., BRKPNT
+       /,RTERM,,
+      CONPRO
+       LTERM
+       2           $$  CHANGE COND. PROCEDURE TO PROCEDURE, BRKPNT
+      )
+      IMPLAB,IDENT,CONGEO,CONBIG,CONPRO,NUMBER
+       LTERM
+      5            $$  GENERATE LABEL COMMAND, COMPRESS STACK, READ
+)
+LABEL
+       LTERM
+7                  $$    ALARM  'DUPLICATE LABEL', READ
+      =,(
+      29           $$  READ NEXT CHAR.
+       )
+      TEMP,NUMBER,VBL
+       (
+      VBL,IDENT,PERMID
+       29          $$  READ
+       )
+      IDENT,PERMID
+       (
+      VBL,IDENT,PERMID
+       29          $$  READ
+      ,,RTERM
+      )
+      TEMP,NUMBER,VBL,IDENT,PERMID
+      (
+      VBL
+      ,
+      VBL,TEMP
+      /
+      GEOM
+      ,
+      OBTAIN
+      48           $$  GENERATE SUBSCRIPT CODE, BRKPNT
+      RTERM,)
+      VBL,TEMP,NUMBER
+      KREUZ,DOT
+      VBL,TEMP,NUMBER
+      33           $$  PREPARE SCALAR- OR VECTOR PRODUCT
+       ALL
+       )
+      TEMP,NUMBER,VBL,IDENT,PERMID
+       (
+       VBL
+       10  $$ GENERATE SUBSCRIPT CODE, BRKPNT
+      /
+      GEOM,BIGGEO
+      =
+      )
+       VBL,TEMP,NUMBER
+      (
+       VBL
+      18           $$  GENERATE SUBSCRIPT CODE, BRKPNT
+      KREUZ
+       VBL,TEMP,NUMBER
+      =
+      )
+       VBL,TEMP,NUMBER
+      (
+       VBL
+      18           $$  GENERATE SUBSCRIPT CODE, BRKPNT
+       KREUZ,DOT,CONAST
+  29               $$  READ NEXT CHAR.
+      ,,),RTERM
+      VBL,TEMP,NUMBER
+      ,
+      CANON
+      /
+      BIGGEO
+      102      $$ GENERATE I.L. FOR ARGUMENT AND COMPRESS STACK, BRKPNT
+      ,,),RTERM
+      VBL,TEMP,NUMBER,IDENT,PERMID,GEOM,CONGEO
+      ,
+      VBL,TEMP,NUMBER,IDENT,PERMID,CANON
+      /
+      BIGGEO
+      102      $$ GENERATE I.L. FOR ARGUMENT AND COMPRESS STACK, BRKPNT
+      ALL
+      VBL,TEMP,NUMBER
+      DBLAST
+      VBL,TEMP,NUMBER
+      8            $$  GENERATE EXPONENTIATION CODE,BRKPNT
+      ,,),RTERM
+      )
+      TEMP,NUMBER,VBL
+      (
+      IDENT,PERMID
+      4              $$  CLDATA OR INVALID SUBSCRIPTED VARIABLE
+       ALL
+       NUMBER,TEMP
+       CONAST
+       NUMBER,TEMP
+       40          $$       GENERATE NUMBER ,READ
+      DBLAST
+      29           $$  READ NEXT CHARACTER
+      ALL
+      VBL,TEMP,NUMBER
+      /,*
+      VBL,TEMP,NUMBER
+      8            $$  GENERATE ARITHMETIC CODE, BRKPNT
+      /,*
+      29
+       ALL
+       VBL,TEMP,NUMBER
++,-
+       VBL,TEMP,NUMBER
+    8              $$  GENERATE ARITHMETIC CODE, BRKPNT
+       ALL
+       VBL,TEMP,NUMBER
++,-                $$        DELETE UNARY PLUS  OR
+13                 $$        GENERATE  CHANGE  OF SIGN,  BRKPNT
+       AND,OR,NOT,RELAT
+   29              $$  READ NEXT CHAR.
+       RTERM,,
+       PROCED
+       LTERM
+26                 $$        GENERATE PROCEDURE CALL
+       ),RTERM
+       VBL,TEMP
+       NOT
+       75          $$        BOOLEAN VARIABLE
+       ),RTERM
+       VBL,TEMP,NUMBER
+       RELAT
+       VBL,TEMP,NUMBER
+       76          $$        BOOLEAN EXPRESSION
+       ),RTERM
+       VBL,TEMP
+       AND,OR
+       VBL,TEMP,NUMBER
+       77          $$        BOOLEAN EXPRESSION
+       ,,),RTERM
+       TEMP,VBL,NUMBER
+       ,
+       CANON
+       41          $$  STORE CANONICAL FORM ELEMENT, BRKPNT
+      ,,),RTERM
+       ,
+       CANON
+       42          $$  STORE CANONICAL FORM ELEMENT, READ
+       RTERM
+       VBL,IDENT,PERMID,LABEL,IMPLAB
+      /
+      CANON
+      LTERM
+      50
+      ,,RTERM
+      VBL,IDENT,CONGEO,CONBIG,CONPRO,TEMP
+      ,
+      VBL,TEMP
+      /
+      GEOM
+      ,
+      OBTAIN
+      41           $$ STORE OBTAIN ST. ARGUMENT, BRKPNT
+      ,,RTERM
+      ,
+      VBL,TEMP
+      /
+      GEOM
+      ,
+      OBTAIN
+      42           $$  STORE OBTAIN ST. ARGUMENT, BRKPNT
+       ,,RTERM
+       IDENT,CONPRO,CONGEO,PERMID,LABEL,IMPLAB,FCN,PROCED,GEOM,VBL
+      /
+      MACRO
+      =
+      52           $$  STORE MACRO VARIABLE, BRKPNT
+       ,,RTERM
+       IDENT,CONPRO,CONGEO,PERMID,LABEL,IMPLAB,FCN,PROCED,GEOM,VBL
+      ,
+      MACRO
+      =
+      52           $$  STORE MACRO VARIABLE, BRKPNT
+      RTERM,,
+      NUMBER,IDENT,CONGEO,CONPRO,GEOM,FCN,PROCED,CANON,OBTAIN, $
+         PERMID,LABEL,IMPLAB,MACNAM,VBL,TEMP,CONBIG,BIGGEO
+      =
+      IDENT,CONGEO,CONPRO,PERMID,LABEL,IMPLAB,FCN,PROCED,GEOM,VBL, $
+      CONBIG,BIGGEO
+      ,,/
+       MACRO,MACNAM
+      51           $$  STORE MACRO VARIABLE AND ASSIGNED VALUE, BRKPNT
+      ,,RTERM
+      NUMBER,IDENT,CONGEO,CONPRO,GEOM,FCN,PROCED,CANON,OBTAIN, $
+         PERMID,LABEL,IMPLAB,MACNAM,VBL,TEMP,CONBIG,BIGGEO
+      =
+      IDENT,CONGEO,CONPRO,PERMID,LABEL,IMPLAB,FCN,PROCED,GEOM,VBL, $
+         CONBIG,BIGGEO
+      ,
+      IDENT,CONGEO,CONBIG,CONPRO
+      /
+      PROCED
+      LTERM
+      31           $$  PROCESS CALL TO SYSTEM MACRO
++,-
+    29   $$    GET NEXT  CHARACTER
+    ,
+    12   $$    GET NEXT CHARACTER
+         RTERM
+        NUMBER,TEMP,VBL
+        ,
+        NUMBER,TEMP,VBL
+        =
+        VBL,IDENT,CONGEO,CONBIG,CONPRO
+        ,
+        NUMBER,CONGEO,CONPRO,CONBIG,IMPLAB,IDENT,LABEL
+        /
+        IF           $$    BEGINN DER DO SCHLEIFE
+         LTERM
+         27
+         RTERM
+        NUMBER,TEMP,VBL
+        ,
+        NUMBER,TEMP,VBL
+        ,
+        NUMBER,TEMP,VBL
+        =
+        VBL,IDENT,CONGEO,CONBIG,CONPRO
+        ,
+        NUMBER,CONGEO,CONPRO,CONBIG,IMPLAB,IDENT,LABEL
+        /
+        IF           $$    BEGINN DER DO SCHLEIFE
+         LTERM
+         27
+       RTERM
+      NUMBER,IDENT,CONGEO,CONBIG,CONPRO,IMPLAB,LABEL
+      ,
+      NUMBER,IDENT,CONGEO,CONBIG,CONPRO,IMPLAB,LABEL
+      ,
+      NUMBER,IDENT,CONGEO,CONBIG,CONPRO,IMPLAB,LABEL
+      )
+       TEMP,VBL,NUMBER
+      (
+      IF
+       LTERM
+       30    $$   IF STATEMENT
+      )
+      VBL,TEMP,NUMBER
+      ,
+      VBL,TEMP,NUMBER
+      (
+      =,/,(,,
+      49           $$  SUPPLY NORMAL POINT FORMAT, READ NEXT CHAR.
+       RTERM
+      VBL,TEMP,NUMBER,IDENT,PERMID,CONGEO,GEOM,CONPRO,PROCED,CONBIG, $
+      BIGGEO,LABEL,IMPLAB
+       /
+       PROCED
+       LTERM
+      16           $$  ARGUMENT PLACED IN ARGUMENT STACK, BRKPNT
+       RTERM
+       VBL,TEMP,NUMBER,IDENT,PERMID
+      /
+       GEOM
+      =
+      VBL,IDENT,CONGEO,CONBIG,CONPRO,TEMP
+       LTERM
+      38           $$  GENERATE GEOMETRIC DEFINITION CALL
+      )
+       VBL,TEMP,NUMBER,IDENT,PERMID
+      /
+       GEOM
+      =
+      VBL,IDENT,CONGEO,CONBIG,CONPRO,TEMP
+      (
+      39           $$  GENERATE GEOMETRIC DEFINITION CALL, READ
+      RTERM
+      VBL,TEMP,NUMBER,IDENT,PERMID,CANON
+      /
+      BIGGEO
+      =
+      VBL,IDENT,CONGEO,CONBIG,CONPRO,TEMP
+      LTERM
+      103      $$ GENERATE REPLACE CODE
+      )
+      VBL,TEMP,NUMBER,IDENT,PERMID,CANON
+      /
+      BIGGEO
+      =
+      VBL,IDENT,CONGEO,CONBIG,CONPRO,TEMP
+      (
+      104      $$ GENERATE REPLACE CODE, BRKPNT
+      RTERM
+       VBL,TEMP,NUMBER
+      =
+      VBL,TEMP,IDENT,CONGEO,CONBIG,CONPRO
+       LTERM
+      24           $$  GENERATE REPLACE CODE
+      )
+       VBL,TEMP,NUMBER
+      =
+      VBL,TEMP,IDENT,CONGEO,CONBIG,CONPRO
+      (
+      23           $$  GENERATE REPLACE CODE, BRKPNT
+       ),RTERM
+       VBL,NUMBER,TEMP
+       =
+       )
+       VBL,NUMBER,TEMP
+       (
+       VBL
+       11   $$ GENERATE SUBSCRIPT CODE, BRKPNT
+      )
+       VBL,TEMP,NUMBER,IDENT,PERMID
+      /
+       GEOM
+      (
+      37           $$  GENERATE GEOMETRIC DEFINITION CALL, READ
+      )
+      VBL,TEMP,NUMBER,IDENT,PERMID,CANON
+      /
+      BIGGEO
+      (
+      105      $$ FINISH GENERATING LARGE GEOMETRIC CALL,READ NEXT CHAR
+      )
+      VBL,TEMP,NUMBER
+      (
+       FCN
+      17           $$  GENERATE FUNCTION CALL, READ
+      )
+      IDENT,PERMID
+      (
+       FCN
+      17           $$  GENERATE FUNCTION CALL, READ
+      )
+       VBL,TEMP,NUMBER
+      (
+      IF
+      78           $$  READ NEXT CHARACTER  IF NOT LOGICAL IF
+)
+       VBL,TEMP,NUMBER
+(
+21                 $$        REMOVE PARENTHESES, READ
+       ),RTERM
+       VBL,TEMP,NUMBER
+      =
+      VBL,TEMP,IDENT,CONGEO,CONBIG,CONPRO
+      =
+      23           $$  GENERATE REPLACE CODE, BRKPNT
+       RTERM
+      MACRO
+      =
+      IDENT,CONGEO,CONPRO,CONBIG
+       LTERM
+      53           $$  PROCESS MACRO DEFINITION
+      RTERM
+      /
+      MACRO
+      =
+      IDENT,CONGEO,CONBIG,CONPRO
+      LTERM
+     61          $$ PROCESS MACRO DEFINITION (NO ARGUMENTS)
+       RTERM
+       MACNAM
+      /
+       PROCED
+       LTERM
+      57           $$  PROCESS MACRO CALL
+       RTERM
+      TERMAC
+       LTERM
+      59           $$  END OF MACRO TEXT
+       ),RTERM
+       CANON
+       ,
+       VBL,TEMP
+       /
+       GEOM
+       43          $$  SAVE VARIABLE NAME IN CANON TABLE, BRKPNT
+       RTERM
+       CANON
+       /
+       GEOM
+       =
+       VBL,IDENT,CONGEO,CONPRO,TEMP
+       LTERM
+       44          $$  GENERATE GEOMETRIC DEFINITION
+       )
+       CANON
+       /
+       GEOM
+       =
+       VBL,IDENT,CONGEO,CONPRO,TEMP
+       (
+       45          $$  GENERATE GEOMETRIC DEFINITION, READ
+       )
+       CANON
+       /
+       GEOM
+       (
+       46          $$  GENERATE GEOMETRIC DEFINITION, READ
+       RTERM
+       LTERM
+     6                  $$    DUMMY  STATEMENT
+      RTERM
+      VBL,TEMP
+      /
+      GEOM
+      ,
+      OBTAIN
+      LTERM
+      47           $$  PROCESS OBTAIN STATEMENT
+      ),RTERM
+      VBL,TEMP,NUMBER,IDENT,PERMID,CONGEO,GEOM,CONPRO,PROCED,CONBIG, $
+      BIGGEO,LABEL,IMPLAB,MACRO,TERMAC,CANON,OBTAIN,FCN
+      ,
+      VBL,TEMP,NUMBER,IDENT,PERMID,CONGEO,GEOM,CONPRO,PROCED,CONBIG, $
+      BIGGEO,LABEL,IMPLAB,MACRO,TERMAC,CANON,OBTAIN,FCN
+      16           $$  ARGUMENT PLACED IN ARGUMENT STACK, BRKPNT
+FINI
+ABSF          18181
+ATANF         18182
+COSF          18184
+DOTF          18186
+EXPF          18187
+ERROR         18188
+LNTHF         18189
+LOGF          18190
+SINF          18191
+SQRTF         18192
+ANGLF         18197
+NUMF          18210
+DISTF         18220
+LOG10F        18221
+TANF          18222
+ATAN2F        18223
+COTANF        18224
+ARSINF        18225
+ARCOSF        18226
+SINB          18227
+COSB          18228
+TANB          18229
+COTANB        18230
+ARSINB        18231
+ARCOSB        18232
+ATANB         18233
+ATAN2B        18234
+SINHF         18235
+COSHF         18236
+TANHF         18237
+MINF          18238
+MAXF          18239
+MODF          18240
+INTF          18241
+SIGNF         18242
+SPATF         18243
+ANGLB         18244
+PARMF         18245
+CANF          18246
+CLDATF        18249
+CLPRNT        19014
+APTRAN        19015
+APTREN        19016
+REFSYS        19017
+FINI          19018
+RESERV        19019
+CONTRL        19020
+SYN           19021
+TLAXIS        19039
+PSIS          19041
+PRINT         19042
+EJECT         19042
+CALL          19043
+LOOPST        19044
+LOOPND        19045
+CONTIN        19045
+PUNCH         19050
+DDLIM         19185
+.EQ           27001
+.NE           27002
+.GE           27003
+.LE           27004
+.GT           27005
+.LT           27006
+.FALSE        27000
+.TRUE         27000
+.NOT          28000
+.AND          29000
+.OR           30000
+MACRO         33000
+CS            35001
+DS            35001
+PS            35001
+ON            35003
+PAST          35003
+TO            35003
+PSTAN         35004
+DUMYA         35005
+DUMYB         35005
+INTOF         35006
+XAXIS         35007
+YAXIS         35008
+RIGHT         35009
+ATANGL        35010
+SLOPE         35011
+PARLEL        35012
+NORMAL        35013
+PERPTO        35013
+POSX          35014
+XLARGE        35014
+INTERC        35015
+POSZ          35016
+ZLARGE        35016
+CENTER        35017
+RADIUS        35018
+LARGE         35019
+IN            35020
+OUT           35021
+FUNOFY        35022
+NOX           35023
+NOY           35024
+NOZ           35025
+RTHETA        35026
+THETAR        35027
+XYZ           35028
+MIRROR        35029
+SPLINE        35030
+TRFORM        35031
+LEFT          35032
+TRANSL        35033
+XYPLAN        35034
+XYROT         35034
+INVERS        35035
+SCALE         35036
+YZPLAN        35037
+YZROT         35037
+POSY          35038
+YLARGE        35038
+TIMES         35039
+CROSS         35040
+MINUS         35041
+PLUS          35042
+UNIT          35043
+LENGTH        35044
+NEGX          35045
+XSMALL        35045
+NEGY          35046
+YSMALL        35046
+NEGZ          35047
+ZSMALL        35047
+ZXPLAN        35048
+ZXROT         35048
+SMALL         35049
+ALL           35050
+OFF           35050
+5PT           35051
+4PT1SL        35052
+3PT2SL        35053
+GRID          35054
+PERIM         35055
+RANDOM        35056
+INCR          35057
+CLW           35058
+CCLW          35059
+DECR          35060
+ZIGZAG        35061
+AVOID         35062
+THRU          35063
+OMIT          35064
+RETAIN        35065
+AT            35066
+ARC           35067
+LINEAR        35068
+CLDATA        35069
+UVAL          35069
+VVAL          35069
+PVAL          35069
+TVAL          35069
+SVAL          35069
+START         35070
+CUTANG        35071
+HEX           35072
+WITH          35073
+CONST         35074
+RANGE         35075
+MOTDIR        35094
+LEAD          35095
+LAG           35096
+HIGHT         35097
+AUTO          35098
+LAST          35099
+AAXIS         35100         SUPPLEMENTARY POSTPROCESSOR MINOR WORDS
+ADJUST        35100
+ANTSPI        35100
+BAXIS         35100
+BCD           35100
+BINARY        35100
+BLACK         35100
+BLUE          35100
+BORE          35100
+BOTH          35100
+CAM           35100
+CAXIS         35100
+CHUCK         35100
+CIRCUL        35100
+CIRLIN        35100
+COLLET        35100
+DARK          35100
+DASH          35100
+DEEP          35100
+DITTO         35100
+DOTTED        35100
+DOWN          35100
+DRILL         35100
+ENDARC        35100
+FACE          35100
+FLOOD         35100
+FOURPT        35100
+FRONT         35100
+FULL          35100
+FWD           35100
+GAPLES        35100
+GREEN         35100
+HIGH          35100
+HOLDER        35100
+INTENS        35100
+IPM           35100
+IPR           35100
+LAST          35100
+LIGHT         35100
+LINCIR        35100
+LITE          35100
+LOCK          35100
+LOW           35100
+MAIN          35100
+MANUAL        35100
+MAXIPM        35100
+MAXLNG        35100
+MAXPTS        35100
+MAXRPM        35100
+MAXWD         35100
+MED           35100
+MEDIUM        35100
+MILL          35100
+MIST          35100
+MMPM          35100
+MMPR          35100
+MODIFY        35100
+MULTRD        35100
+NEXT          35100
+NIXIE         35100
+NOBND         35100
+NOCLRP        35100
+NOMORE        35100
+NOW           35100
+OPEN          35100
+OPTION        35100
+PARAB         35100
+PART          35100
+PEN           35100
+PITCH         35100
+PTNORM        35100
+PTSLOP        35100
+RAIL          35100
+REAM          35100
+REAR          35100
+RED           35100
+REGTOL        35100
+REV           35100
+ROTREF        35100
+RPM           35100
+SADDLE        35100
+SAME          35100
+SCRIBE        35100
+SETANG        35100
+SETOOL        35100
+SIDE          35100
+SOLID         35100
+SPIRAL        35100
+STEP          35100
+TANON         35100
+TAP           35100
+TAPKUL        35100
+TPI           35100
+TRAV          35100
+TRAVED        35100
+TURN          35100
+TWOPT         35100
+TYPE          35100
+UP            35100
+XCOORD        35100
+XYVIEW        35100
+YCOORD        35100
+YZVIEW        35100
+ZAXIS         35100
+ZCOORD        35100
+ZXVIEW        35100             END OF SUPPLEMENT    19.7.84
+SCALAR        35126
+GEOM          35127
+LISTON        35128
+NOLIST        35129
+TABPRT        35130
+SSPRT         35130
+SSTEST        35130
+AVPRT         35130
+PATCH         35131
+SMESH         35132
+PNTVEC        35133
+POLYGN        35134
+PNTSON        35135
+TANSPL        35136
+CRSSPL        35137
+WEIGHT        35138
+LIMIT         35139
+CURSEG        35140
+COMBIN        35141
+REVOLV        35142
+RULED         35143
+PARAM         35144
+BINORM        35145
+AXIS          35146
+TANTO         35147
+DSTAN         35147
+GENCUR        35148
+FLOW          35149
+SEG           35150
+NORMDS        35151
+NORMPS        35152
+ANGLE         35153
+CHORD         35154
+SCALOP        35155
+MAXSTP        35156
+CLEARS        35157
+AWAY          35158
+BACK          35159
+LIBPRT        35160
+INIT          35161
+STEPOV        35162
+FEED          35163
+POSN          35164
+PATH          35165
+PICKFD        35166
+PIVOT         35167
+PLANO         35168
+RETR          35169
+UCONST        35170
+VCONST        35170
+RELTOL        35171
+CHDPT         35172
+SAVMDI        35180
+SAVTDI        35180
+TP            35181
+TA            35182
+TV            35183
+PDS           35184
+NDS           35185
+PPS           35186
+NPS           35187
+UVPDS         35188
+UVPPS         35188
+TERMAC        37000
+LINE          39001
+PLANE         39002
+CYLNDR        39003
+CIRCLE        39004
+SPHERE        39005
+HYPERB        39006
+LCONIC        39007
+ELLIPS        39008
+CONE          39009
+GCONIC        39010
+TABCYL        43011
+RLDSRF        39012
+POLCON        43013
+QADRIC        39014
+PARSRF        39015
+TOOL          39017
+MATRIX        39018
+POINT         39019
+VECTOR        39020
+REAL          39021
+SUBSCR        39024
+PATERN        43026
+BOUNDS        39027
+OBJECT        39028
+AVCXXX        39045
+CLRXXX        39046
+GMLXXX        39047
+GFTXXX        39048
+TLAXXX        39049
+RGMXXX        39050
+SSURF         43029
+SCURV         43030
+AIR           40000
+ARCSLP        40000
+ASLOPE        40000
+AUXFUN        40000
+BREAK         40000
+CAMERA        40000
+CHECK         40000
+CLAMP         40000
+CLEARP        40000
+CLRSRF        40000
+CODEL         40000
+COOLNT        40000
+COPY          40000
+CORNFD        40000
+COUPLE        40000
+CUTCOM        40000
+CYCLE         40000
+DEBUGG        40000
+DELAY         40000
+DELETE        40000
+DISPLY        40000
+DRAFT         40000
+DRAWLI        40000
+DRESS         40000
+DWELL         40000
+END           40000
+ENDMDI        40000
+FACEML        40000
+FEDRAT        40000
+GOCLER        40000
+GOHOME        40000
+HEAD          40000
+IFRO          40000
+INDEX         40000
+INSERT        40000
+INTCOD        40000
+ISTOP         40000
+LEADER        40000
+LETTER        40000
+LINTOL        40000
+LOADTL        40000
+LOCKX         40000
+LPRINT        40000
+MAGTAP        40000
+MAXDPM        40000
+MAXVEL        40000
+MCHFIN        40000
+MCHTOL        40000
+MDEND         40000
+MDWRIT        40000
+MODE          40000
+MOVETO        40000
+OPPLOT        40000
+OPSKIP        40000
+OPSTOP        40000
+ORIGIN        40000
+OVPLOT        40000
+PARTNO        40000
+PBS           40000
+PENDWN        40000
+PENUP         40000
+PICKUP        40000
+PITCH         40000
+PIVOTZ        40000
+PLABEL        40000
+PLOT          40000
+PLUNGE        40000
+POSTN         40000
+POSMAP        40000
+PPLOT         40000
+PPRINT        40000
+PREFUN        40000
+PROBX         40000
+PROBY         40000
+RAPID         40000
+REGBRK        40000
+RESET         40000
+RETRCT        40000
+REVERS        40000
+REWIND        40000
+ROTABL        40000
+ROTHED        40000
+SAFETY        40000
+SELCTL        40000
+SEQNO         40000
+SFM           40000
+SLOWDN        40000
+SPINDL        40000
+STOP          40000
+SWITCH        40000
+THREAD        40000
+TMARK         40000
+TOOLNO        40000
+TRACUT        40000
+TRANS         40000
+TURRET        40000
+ULOCKX        40000
+UNLOAD        40000
+VTLAXS        40000
+WRTMDI        40000
+WCORN         40000
+ZERO          40000
+TLLFT         40001
+TLRGT         40002
+TLON          40003
+TLONPS        40004
+TLOFPS        40005
+MULTAX        40006
+NOPS          40007
+AUTOPS        40008
+CUT           40009
+DNTCUT        40010
+NDTEST        40011
+GOUGCK        40013
+DYNDMP        40022
+ZSURF         40023
+JUMPTO        40024
+TRANTO        19024
+GO            40025
+OFFSET        40025
+GODLTA        40026
+TOLER         40027
+INTOL         40028
+OUTTOL        40029
+CUTTER        40030
+MAXDP         40031
+NUMPTS        40032
+THICK         40033
+GOBACK        40034
+GODOWN        40034
+GOFWD         40034
+GOLFT         40034
+GORGT         40034
+GOUP          40034
+GOTO          40035
+FROM          40036
+INDIRV        40037
+SRFVCT        40038
+INDIRP        40040
+MACHIN        40046
+NOPOST        40047
+POCKET        40048
+TITLES        40049
+2DCALC        40051
+3DCALC        40052
+TLNDON        40053
+CFSAVE        40054
+PPOPTN        40055
+PTONLY        40056
+TUNEUP        40056
+REMARK        40056
+READ          40057
+UNITS         40058
+SCON          40059
+GCLEAR        40059
+SMIL          40060
+GOMILL        40060
+INTSEC        40060
+GOLOFT        40060
+PLOTFT        40060
+TLPROJ        40062
+CLDAT         40063
+CHKSRF        40064
+AVCTRL        40065
+REGION        40066
+IF            41001
+DO            41002
+CANON         42000
+OBTAIN        46000
+                 -1
+      LINE  /      $$ LINE FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      70
+      REAL
+      REAL
+      REAL
+      REAL
+      5
+      POINT
+      POINT
+      7
+      XAXIS
+      111
+      YAXIS
+      112
+      POINT
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      50
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      51
+      POINT
+      ATANGL,SLOPE
+      REAL
+      LINE,PLANE
+      11
+      POINT
+      ATANGL,SLOPE
+      REAL
+      YAXIS
+      113
+      POINT
+      ATANGL,SLOPE
+      REAL
+      XAXIS
+      52
+      POINT
+      ATANGL,SLOPE
+      REAL
+      52
+      POINT
+      PARLEL
+      LINE,PLANE
+      8
+      POINT
+      PERPTO
+      LINE,PLANE
+      9
+      PARLEL
+      LINE,PLANE
+      XLARGE,XSMALL,YLARGE,YSMALL,ZLARGE,ZSMALL
+      REAL
+      53
+      ATANGL,SLOPE
+      REAL
+      INTERC
+      REAL
+      10
+      ATANGL,SLOPE
+      REAL
+      INTERC
+      XAXIS,YAXIS
+      REAL
+      10
+      INTOF
+      LINE,PLANE
+      LINE,PLANE
+      17
+      POINT
+      TANTO,PERPTO
+      TABCYL
+      POINT
+      79
+      PLANE /      $$ PLANE FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      24
+      POINT
+      POINT
+      POINT
+      25
+      POINT
+      PARLEL
+      LINE,PLANE
+      26
+      PARLEL
+      LINE,PLANE
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      REAL
+      62
+      POINT
+      PERPTO
+      VECTOR
+      26
+      POINT
+      POINT
+      PERPTO
+      LINE,PLANE
+      183
+      PERPTO
+      LINE,PLANE
+      POINT
+      POINT
+      28
+      POINT
+      PERPTO
+      LINE,PLANE
+      LINE,PLANE
+      76
+      POINT
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      50
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      RIGHT,LEFT
+      TANTO
+      CIRCLE,CYLNDR
+      51
+      CIRCLE/      $$ CIRCLE FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      103
+      REAL
+      REAL
+      REAL
+      104
+      CENTER
+      POINT
+      RADIUS
+      REAL
+      12
+      CENTER
+      REAL
+      REAL
+      REAL
+      RADIUS
+      REAL
+      105
+      CENTER
+      POINT
+      TANTO
+      LINE,PLANE
+      13
+      POINT
+      POINT
+      POINT
+      15
+      CENTER
+      POINT
+      POINT
+      14
+      CENTER
+      POINT
+      LARGE,SMALL
+      TANTO
+      CIRCLE,CYLNDR
+      54
+      TANTO
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      POINT
+      RADIUS
+      REAL
+      55
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      RADIUS
+      REAL
+      56
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      IN,OUT
+      CIRCLE,CYLNDR
+      IN,OUT
+      CIRCLE,CYLNDR
+      RADIUS
+      REAL
+      57
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      IN,OUT
+      CIRCLE,CYLNDR
+      RADIUS
+      REAL
+      58
+      TANTO
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL
+      TABCYL
+      XLARGE,YLARGE,XSMALL,YSMALL
+      POINT
+      RADIUS
+      REAL
+      84
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      89
+      CYLNDR/      $$ CYLINDER FORMATS FOLLOW
+      POINT
+      REAL
+      REAL
+      REAL
+      REAL
+      33
+      POINT
+      VECTOR
+      REAL
+      34
+      REAL
+      REAL
+      REAL
+      VECTOR
+      REAL
+      182
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      178
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      LINE,PLANE
+      89
+      CENTER
+      POINT
+      LARGE,SMALL
+      TANTO
+      CIRCLE,CYLNDR
+      54
+      TANTO
+      LINE,PLANE
+      XLARGE,YSMALL,XSMALL,YLARGE,ZLARGE,ZSMALL
+      POINT
+      RADIUS
+      REAL
+      55
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      RADIUS
+      REAL
+      56
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      IN,OUT
+      CIRCLE,CYLNDR
+      IN,OUT
+      CIRCLE,CYLNDR
+      RADIUS
+      REAL
+      57
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      LINE,PLANE
+      XLARGE,YLARGE,XSMALL,YSMALL,ZLARGE,ZSMALL
+      IN,OUT
+      CIRCLE,CYLNDR
+      RADIUS
+      REAL
+      58
+      SPHERE/      $$ SPHERE FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      108
+      POINT
+      REAL
+      29
+      CENTER
+      POINT
+      RADIUS
+      REAL
+      29
+      CENTER
+      POINT
+      POINT
+      30
+      CENTER
+      POINT
+      TANTO
+      LINE,PLANE
+      31
+      POINT
+      POINT
+      POINT
+      POINT
+      32
+      QADRIC/      $$ QUADRIC FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      39
+      HYPERB/      $$ HYPERBOLA FORMATS FOLLOW
+      CENTER
+      POINT
+      REAL
+      REAL
+      REAL
+      37
+      ELLIPS/      $$ ELLIPSE FORMATS FOLLOW
+      CENTER
+      POINT
+      REAL
+      REAL
+      REAL
+      36
+      CONE/        $$ CONE FORMATS FOLLOW
+      POINT
+      VECTOR
+      REAL
+      35
+      GCONIC/      $$ CONIC FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      38
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      FUNOFY
+      69
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      71
+      LCONIC/      $$ LCONIC FORMATS FOLLOW
+      5PT
+      POINT
+      POINT
+      POINT
+      POINT
+      POINT
+      83
+      5PT
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      179
+      4PT1SL
+      POINT
+      REAL
+      POINT
+      POINT
+      POINT
+      83
+      4PT1SL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      180
+      3PT2SL
+      POINT
+      REAL
+      POINT
+      REAL
+      POINT
+      83
+      3PT2SL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      181
+      TABCYL/      $$ TABCYL FORMATS FOLLOW
+      NOX,NOY,NOZ,RTHETA,THETAR,XYZ
+      SPLINE
+      1
+      NOX,NOY,NOZ,RTHETA,THETAR,XYZ
+      TRFORM
+      MATRIX
+      2
+      NOX,NOY,NOZ,RTHETA,THETAR,XYZ
+      TRFORM
+      3
+      XYZ
+      VECTOR
+      4
+      NOX,NOY,NOZ,RTHETA,THETAR
+      SLOPE,NORMAL
+      REAL
+      5
+      NOX,NOY,NOZ,RTHETA,THETAR
+      SLOPE,NORMAL
+      6
+      NOX,NOY,NOZ,RTHETA,THETAR
+      REAL
+      REAL
+      7
+      XYZ
+      REAL
+      REAL
+      REAL
+      8
+      XYZ
+      REAL
+      REAL
+      9
+      NOX,NOY,NOZ,RTHETA,THETAR,XYZ
+      REAL
+      10
+      NOZ,RTHETA,THETAR
+      POINT
+      11
+      NOX
+      POINT
+      12
+      NOY
+      POINT
+      13
+      XYZ
+      POINT
+      14
+      MATRIX/      $$ MATRIX FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      109
+      MIRROR
+      LINE,PLANE
+      80
+      SCALE
+      REAL
+      SCALE
+      REAL
+      174
+      POINT
+      VECTOR
+      VECTOR
+      64
+      POINT
+      VECTOR
+      REAL
+      78
+      MIRROR
+      XYPLAN,YZPLAN,ZXPLAN
+      XYPLAN,YZPLAN,ZXPLAN
+      XYPLAN,YZPLAN,ZXPLAN
+      81
+      MIRROR
+      XYPLAN,YZPLAN,ZXPLAN
+      XYPLAN,YZPLAN,ZXPLAN
+      177
+      MIRROR
+      XYPLAN,YZPLAN,ZXPLAN
+      176
+      MATRIX
+      TRANSL
+      REAL
+      REAL
+      REAL
+      151
+      MATRIX
+      TRANSL
+      REAL
+      REAL
+      152
+      MATRIX
+      XYROT,YZROT,ZXROT
+      REAL
+      153
+      MATRIX
+      SCALE
+      REAL
+      154
+      TRANSL
+      REAL
+      REAL
+      REAL
+      MATRIX
+      155
+      TRANSL
+      REAL
+      REAL
+      REAL
+      TRANSL
+      REAL
+      REAL
+      REAL
+      156
+      TRANSL
+      REAL
+      REAL
+      REAL
+      TRANSL
+      REAL
+      REAL
+      157
+      TRANSL
+      REAL
+      REAL
+      REAL
+      XYROT,YZROT,ZXROT
+      REAL
+      158
+      TRANSL
+      REAL
+      REAL
+      REAL
+      SCALE
+      REAL
+      159
+      TRANSL
+      REAL
+      REAL
+      MATRIX
+      160
+      TRANSL
+      REAL
+      REAL
+      TRANSL
+      REAL
+      REAL
+      REAL
+      161
+      TRANSL
+      REAL
+      REAL
+      TRANSL
+      REAL
+      REAL
+      162
+      TRANSL
+      REAL
+      REAL
+      XYROT,YZROT,ZXROT
+      REAL
+      163
+      TRANSL
+      REAL
+      REAL
+      SCALE
+      REAL
+      164
+      XYROT,YZROT,ZXROT
+      REAL
+      MATRIX
+      165
+      XYROT,YZROT,ZXROT
+      REAL
+      TRANSL
+      REAL
+      REAL
+      REAL
+      166
+      XYROT,YZROT,ZXROT
+      REAL
+      TRANSL
+      REAL
+      REAL
+      167
+      XYROT,YZROT,ZXROT
+      REAL
+      XYROT,YZROT,ZXROT
+      REAL
+      168
+      XYROT,YZROT,ZXROT
+      REAL
+      SCALE
+      REAL
+      169
+      SCALE
+      REAL
+      MATRIX
+      170
+      SCALE
+      REAL
+      TRANSL
+      REAL
+      REAL
+      REAL
+      171
+      SCALE
+      REAL
+      TRANSL
+      REAL
+      REAL
+      172
+      SCALE
+      REAL
+      XYROT,YZROT,ZXROT
+      REAL
+      173
+      TRANSL
+      REAL
+      REAL
+      REAL
+      40
+      TRANSL
+      REAL
+      REAL
+      175
+      XYROT,YZROT,ZXROT
+      REAL
+      63
+      MATRIX
+      MATRIX
+      41
+      INVERS
+      MATRIX
+      42
+      LINE,PLANE
+      LINE,PLANE
+      LINE,PLANE
+      43
+      SCALE
+      REAL
+      110
+      POINT /      $$ POINT FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      101
+      REAL
+      REAL
+      102
+      INTOF
+      LINE,PLANE
+      LINE,PLANE
+      LINE,PLANE
+      4
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      INTOF
+      LINE,PLANE
+      CIRCLE,CYLNDR
+      65
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      INTOF
+      CIRCLE,CYLNDR
+      CIRCLE,CYLNDR
+      46
+      CIRCLE,CYLNDR
+      ATANGL
+      REAL
+      2
+      CENTER
+      CIRCLE,CYLNDR
+      3
+      XLARGE,YLARGE,ZLARGE,XSMALL,YSMALL,ZSMALL
+      INTOF
+      LINE,PLANE
+      ELLIPS,GCONIC,QADRIC,LCONIC,HYPERB
+      47
+      INTOF
+      LINE,PLANE
+      LINE,PLANE
+      1
+      RTHETA
+      XYPLAN,YZPLAN,ZXPLAN
+      REAL
+      REAL
+      48
+      THETAR
+      XYPLAN,YZPLAN,ZXPLAN
+      REAL
+      REAL
+      184
+      INTOF
+      LINE,PLANE
+      TABCYL
+      POINT
+      6
+      CLDATA
+      REAL
+      TP,PPS,PDS
+      REAL
+      90
+      CLDATA
+      REAL
+      27
+      PATERN
+      REAL
+      45
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+REAL
+202
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+201
+INTOF
+SSURF
+REAL
+REAL
+REAL
+204
+INTOF
+SSURF
+REAL
+REAL
+203
+INTOF
+SSURF
+PARAM,FLOW
+REAL
+REAL
+REAL
+205
+INTOF
+LINE,PLANE
+SCURV
+POINT
+206
+INTOF
+SSURF
+POINT
+POINT
+207
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+POINT
+208
+INTOF
+SSURF
+POINT
+VECTOR
+POINT
+209
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+VECTOR
+POINT
+210
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+VECTOR
+212
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+214
+INTOF
+SSURF
+POINT
+VECTOR
+211
+INTOF
+SSURF
+POINT
+213
+      VECTOR/      $$ VECTOR FORMATS FOLLOW
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      REAL
+      100
+      REAL
+      REAL
+      REAL
+      106
+      POINT
+      POINT
+      16
+      PERPTO
+      LINE,PLANE
+      POSX,POSY,POSZ,NEGX,NEGY,NEGZ
+      60
+      REAL
+      TIMES
+      VECTOR
+      19
+      VECTOR
+      CROSS
+      VECTOR
+      20
+      VECTOR,POINT
+      MINUS
+      VECTOR,POINT
+      21
+      VECTOR,POINT
+      PLUS
+      VECTOR,POINT
+      22
+      UNIT
+      VECTOR,POINT
+      23
+      UNIT
+      REAL
+      REAL
+      REAL
+      107
+      LENGTH
+      REAL
+      ATANGL
+      REAL
+      XYPLAN,YZPLAN,ZXPLAN
+      61
+      PARLEL
+      INTOF
+      LINE,PLANE
+      LINE,PLANE
+      POSX,POSY,POSZ,NEGX,NEGY,NEGZ
+      75
+      ATANGL
+      REAL
+      LINE,PLANE
+      POSX,POSY,NEGX,NEGY,XLARGE,YLARGE,XSMALL,YSMALL
+      77
+      CLDATA
+      REAL
+      TA,TV,NPS,NDS
+      REAL
+      90
+      CLDATA
+      REAL
+      27
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+TANSPL,CRSSPL,NORMAL,BINORM
+UNIT
+215
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL,BINORM
+UNIT
+216
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+TANSPL,CRSSPL,NORMAL,BINORM
+217
+INTOF
+SCURV
+PARAM,FLOW
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL,BINORM
+218
+INTOF
+SSURF
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+UNIT
+219
+INTOF
+SSURF
+REAL
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+UNIT
+220
+INTOF
+SSURF
+PARAM,FLOW
+REAL
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+UNIT
+221
+INTOF
+SSURF
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+222
+INTOF
+SSURF
+REAL
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+223
+INTOF
+SSURF
+PARAM,FLOW
+REAL
+REAL
+REAL
+TANSPL,CRSSPL,NORMAL
+224
+INTOF
+LINE,PLANE
+SCURV
+POINT
+TANSPL,CRSSPL,NORMAL,BINORM
+UNIT
+226
+INTOF
+LINE,PLANE
+SCURV
+POINT
+TANSPL,CRSSPL,NORMAL,BINORM
+225
+INTOF
+SSURF
+POINT
+TANSPL,CRSSPL,NORMAL
+UNIT
+228
+INTOF
+SSURF
+POINT
+TANSPL,CRSSPL,NORMAL
+227
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+TANSPL,CRSSPL,NORMAL
+229
+INTOF
+SSURF
+POINT
+POINT
+TANSPL,CRSSPL,NORMAL
+UNIT
+231
+INTOF
+SSURF
+POINT
+POINT
+TANSPL,CRSSPL,NORMAL
+230
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+POINT
+TANSPL,CRSSPL,NORMAL
+232
+INTOF
+SSURF
+POINT
+VECTOR
+TANSPL,CRSSPL,NORMAL
+UNIT
+234
+INTOF
+SSURF
+POINT
+VECTOR
+TANSPL,CRSSPL,NORMAL
+233
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+VECTOR
+TANSPL,CRSSPL,NORMAL
+235
+INTOF
+SSURF
+POINT
+VECTOR
+POINT
+TANSPL,CRSSPL,NORMAL
+UNIT
+237
+INTOF
+SSURF
+POINT
+VECTOR
+POINT
+TANSPL,CRSSPL,NORMAL
+236
+INTOF
+SSURF
+PARAM,FLOW
+POINT
+VECTOR
+POINT
+TANSPL,CRSSPL,NORMAL
+238
+      PARSRF/      $$ PARAMETRIC SURFACE FORMATS FOLLOW
+      301
+      RLDSRF/       $$ RULED SURFACE FORMATS FOLLOW
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE, $
+      GCONIC,TABCYL,QADRIC
+      POINT
+      POINT
+      POINT,VECTOR
+      POINT
+      401
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE, $
+      GCONIC,TABCYL,QADRIC
+      POINT
+      POINT
+      POINT,VECTOR
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE, $
+      GCONIC,TABCYL,QADRIC
+      POINT
+      POINT
+      POINT,VECTOR
+      402
+      PATERN/            $$PATERN FORMATS FOLLOW
+LINEAR
+POINT
+POINT
+      REAL
+      1
+      LINEAR
+      POINT
+      VECTOR
+      REAL
+      2
+      LINEAR
+      POINT
+      VECTOR
+      INCR
+      3
+      ARC
+      CIRCLE,CYLNDR
+      REAL
+      REAL
+      CLW,CCLW
+      REAL
+      4
+      ARC
+      CIRCLE,CYLNDR
+      REAL
+      CLW,CCLW
+      INCR
+      5
+      GRID,PERIM
+      PATERN
+      PATERN
+      6
+      GRID,PERIM
+      PATERN
+      VECTOR
+      REAL
+      7
+      GRID,PERIM
+      PATERN
+      VECTOR
+      INCR
+      8
+      RANDOM
+      POINT,PATERN
+      9
+      INCR
+      REAL
+      REAL
+      10
+      INCR
+      REAL
+      AT
+      REAL
+      11
+      INVERS,ZIGZAG           $$ THE FOLLOWING PRODUCTIONS ARE USED IN
+      13                      $$ VALIDATING GOTO/PATERN STATEMENTS
+      AVOID
+      REAL
+      REAL
+      THRU
+      REAL
+      14
+      OMIT,RETAIN
+      REAL
+      THRU
+      REAL
+      15
+      AVOID
+      REAL
+      REAL
+      16
+      OMIT,RETAIN
+      REAL
+      17
+      BOUNDS/      $$ BOUNDS FORMAT FOLLOWS
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE,GCONIC,$
+      TABCYL,QADRIC,BOUNDS
+      REAL,IN,OUT
+      185
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE,GCONIC,$
+      TABCYL,QADRIC,BOUNDS
+      POINT,POSX,POSY,POSZ,NEGX,NEGY,NEGZ
+      186
+      LINE,PLANE,CYLNDR,CIRCLE,SPHERE,HYPERB,LCONIC,ELLIPS,CONE,GCONIC,$
+      TABCYL,QADRIC,BOUNDS
+      86
+      OBJECT/      $$ OBJECT FORMAT FOLLOWS
+      BOUNDS,OBJECT
+      87
+      SUBSCR/     $$ INCLUSIVE SUBSCRIPT FORMATS FOLLOW
+      ALL
+      INCR,DECR
+      REAL
+      6
+      ALL
+      1
+      REAL
+      THRU
+      REAL
+      INCR,DECR
+      REAL
+      10
+      REAL
+      THRU
+      REAL
+      5
+      REAL
+      THRU
+      ALL
+      INCR,DECR
+      REAL
+      9
+      REAL
+      THRU
+      ALL
+      4
+      THRU
+      REAL
+      INCR,DECR
+      REAL
+      8
+      THRU
+      REAL
+      3
+      THRU
+      ALL
+      INCR,DECR
+      REAL
+      7
+      THRU
+      ALL
+      2
+      SCURV /     $$ SCURV FORMATS FOLLOW
+      POINT                          $$ CURSEG, SPLINE ,MINTEN, GEOSPN
+      CURSEG,SPLINE                  $$ ==========================
+    1
+      POINT
+      POINT
+      CURSEG
+    2
+      POINT
+      POINT
+      SPLINE
+    3
+      TANSPL,CRSSPL,NORMAL
+      POINT
+      CURSEG,SPLINE
+    4
+      LIMIT,WEIGHT
+      SPLINE
+    5
+      LIMIT,WEIGHT
+      POINT
+      SPLINE
+    5
+      SCURV                          $$ COMBIN
+      COMBIN                         $$ ======
+    6
+      SCURV
+      SCURV
+      COMBIN
+    7
+      CIRCLE,LINE                    $$ SEG
+      SEG                            $$ ===
+    8
+      CIRCLE,LINE
+      CIRCLE,LINE
+    8
+      POSX,POSY,NEGX,NEGY
+      CIRCLE,LINE
+      CIRCLE,LINE
+    9
+      FLOW                           $$ FLOW SECTION
+   10                                $$ ============
+      PARAM,ARC
+      FLOW
+   11
+      ANGLE,CHORD
+      FLOW
+   12
+      RELTOL
+      FLOW
+   13
+      PIVOT,CHDPT
+      FLOW
+   14
+      PLANO
+      FLOW
+   15
+      REAL,POINT,VECTOR
+      FLOW
+   16
+      SEG                            $$ SEG SECTION
+      FLOW                           $$ ===========
+   17
+      PARAM,LENGTH
+      SEG
+   18
+      TRFORM
+   19
+      SSURF /     $$ SSURF FORMATS FOLLOW
+      POINT                          $$ SMESH, GMESH
+      SPLINE                         $$ ======
+    1
+      XYZ
+      SMESH
+   20
+      RULED,XYPLAN,YZPLAN,ZXPLAN
+      SMESH
+   20
+      SPLINE
+      XYZ,XYPLAN,YZPLAN,ZXPLAN
+   21
+      SPLINE
+      POINT
+      SPLINE
+   21
+      POINT
+      POINT
+      SPLINE
+   22
+      LIMIT,WEIGHT
+      POINT
+      SPLINE
+      XYZ
+    5
+      LIMIT,WEIGHT
+      SPLINE
+      XYZ
+    5
+      TANSPL,CRSSPL,NORMAL
+      POINT
+      SPLINE
+      XYZ,XYPLAN,YZPLAN,ZXPLAN
+    4
+      PNTVEC,POLYGN,PNTSON           $$ PATCH
+      PATCH                          $$ ======
+   20
+      PLUS,MINUS
+      PNTVEC,POLYGN,PNTSON
+   23
+      SCURV                          $$ REVOLV, RULED
+      REVOLV,RULED,GENCUR            $$ ======
+    1
+      SCURV
+      SCURV
+      RULED
+    6
+      AXIS
+      SCURV
+      REVOLV,RULED
+   24
+      CLW,CCLW
+      AXIS
+      REVOLV
+   25
+      SCURV                          $$ GENCUR
+      SCURV                          $$ ======
+      GENCUR,CROSS
+   26
+      CROSS
+      SCURV
+      GENCUR
+   26
+      SSURF                          $$ COMBIN
+      COMBIN                         $$ ======
+    6
+      SSURF
+      SSURF
+      COMBIN
+    7
+      SCURV                          $$ TRANSL,XYROT,YZROT,ZXROT,SCALE
+      TRANSL,XYROT,YZROT,ZXROT,SCALE $$ ==============================
+    1
+      CROSS
+      SCURV
+      TRANSL,XYROT,YZROT,ZXROT,SCALE
+   27
+      TRFORM
+   19
+      CLRXXX/      $$ REG. MILLING  FORMATS GCLEAR/.....
+      START,THRU,AWAY,BACK
+      ON,OFF
+      25
+      ON,OFF
+      26
+      START,THRU,AWAY,BACK
+      MOTDIR
+      REAL
+      15
+      START,THRU,AWAY,BACK
+      NORMAL
+      REAL
+      16
+      START,THRU,AWAY,BACK
+      PARLEL
+      VECTOR
+      17
+      START,THRU,AWAY,BACK
+      FEED
+      REAL
+      18
+      START,THRU,AWAY,BACK
+      CLEARS
+      SSURF
+      19
+      START,THRU,AWAY,BACK
+      CLEARS
+      LINE,PLANE,SPHERE,CIRCLE,CYLNDR,CONE
+      19
+      MOTDIR
+      REAL
+      20
+      NORMAL
+      REAL
+      21
+      PARLEL
+      VECTOR
+      22
+      FEED
+      REAL
+      23
+      CLEARS
+      SSURF
+      24
+      CLEARS
+      LINE,PLANE,SPHERE,CIRCLE,CYLNDR,CONE
+      24
+      GMLXXX/      $$ NEW APT COMPATIBLE FORMATS GOMILL/.....
+      SSURF
+      UCONST,VCONST
+      REAL
+      STEPOV
+      REAL
+      10
+      SSURF
+      UCONST,VCONST
+      REAL
+      STEPOV
+      REAL
+      PICKFD,ZIGZAG
+      14
+      SCURV,SSURF
+      UCONST,VCONST
+      REAL
+      11
+      AT
+      REAL
+      12
+      AT
+      REAL
+      RETR
+      REAL,VECTOR
+      12
+      AT
+      REAL
+      RETR
+      PLANE
+      12
+      INVERS
+      13
+      START,THRU
+      REAL
+      13
+      START,THRU
+      REAL
+      INVERS
+      13
+      START
+      REAL
+      THRU
+      REAL
+      13
+      START
+      REAL
+      THRU
+      REAL
+      INVERS
+      13
+      PICKFD,ZIGZAG
+      SCALOP,MAXSTP
+      REAL
+      14
+      PICKFD,ZIGZAG
+      RETR
+      REAL,VECTOR
+      14
+      PICKFD,ZIGZAG
+      SCALOP,MAXSTP
+      REAL
+      RETR
+      REAL,VECTOR
+      14
+      PICKFD,ZIGZAG
+      SCALOP
+      REAL
+      MAXSTP
+      REAL
+      14
+      PICKFD,ZIGZAG
+      SCALOP
+      REAL
+      MAXSTP
+      REAL
+      RETR
+      REAL,VECTOR
+      14
+      GFTXXX/      $$ GOLOFT AND PLOTFT FORMATS FOLLOW
+    SSURF           $$ FORMAT 2,4
+    UCONST
+    REAL
+    1                                    $$ GOLOFT AND PLOTFT
+    SSURF
+    START
+    TO
+    LINE,PLANE
+    THRU
+    TO
+    LINE,PLANE
+    2                                    $$ GOLOFT
+    SSURF
+    START
+    REAL
+    THRU
+    TO
+    LINE,PLANE
+    3                                    $$ GOLOFT
+    SSURF
+    START
+    TO
+    LINE,PLANE
+    THRU
+    REAL
+    4                                    $$ GOLOFT
+    SSURF
+    START
+    REAL
+    THRU
+    REAL
+    5                                    $$ GOLOFT
+    SSURF
+    START,THRU,AT
+    REAL
+    6                                    $$ GOLOFT
+    SSURF
+    START,THRU,AT
+    TO
+    LINE,PLANE
+    7                                    $$ GOLOFT
+    SSURF
+    INVERS
+    MIRROR
+    INCR,CHORD
+    REAL
+    LENGTH
+    REAL
+    8                                    $$ GOLOFT
+    SSURF
+    INVERS
+    MIRROR
+    INCR,CHORD,LENGTH
+    REAL
+    9                                    $$ GOLOFT
+    SSURF
+    INVERS,MIRROR
+    INCR,CHORD
+    REAL
+    LENGTH
+    REAL
+    10                                   $$ GOLOFT
+    SSURF
+    INVERS
+    MIRROR
+    11                                   $$ GOLOFT
+    SSURF
+    INCR,CHORD
+    REAL
+    LENGTH
+    REAL
+    12                                   $$ GOLOFT
+    SSURF
+    INVERS,MIRROR
+    INCR,CHORD,LENGTH
+    REAL
+    13                                   $$ GOLOFT
+    SSURF
+    INVERS,MIRROR
+    14                                   $$ GOLOFT
+    SSURF
+    INCR,CHORD,LENGTH
+    REAL
+    15                                   $$ GOLOFT
+    SCURV          $$ FORMAT 1
+    START
+    REAL
+    THRU
+    REAL
+    PARAM,FLOW
+    INCR,CHORD
+    REAL
+    17                                   $$ PLOTFT
+    SCURV          $$ FORMAT 1,2
+    START
+    REAL
+    THRU
+    REAL
+    INCR,CHORD
+    REAL
+    25                                   $$ PLOTFT
+    SCURV
+    START
+    REAL
+    THRU
+    REAL
+    PARAM,FLOW
+    18                                   $$ PLOTFT
+    SCURV
+    START
+    REAL
+    PARAM,FLOW
+    INCR,CHORD
+    REAL
+    19                                   $$ PLOTFT
+    SCURV
+    THRU
+    REAL
+    PARAM,FLOW
+    INCR,CHORD
+    REAL
+    20                                   $$ PLOTFT
+    SCURV
+    START
+    REAL
+    THRU
+    REAL
+    26                                   $$ PLOTFT
+    SCURV
+    START
+    REAL
+    INCR,CHORD
+    REAL
+    27                                   $$ PLOTFT
+    SCURV
+    START
+    REAL
+    PARAM,FLOW
+    21                                   $$ PLOTFT
+    SCURV
+    THRU
+    REAL
+    INCR,CHORD
+    REAL
+    28                                   $$ PLOTFT
+    SCURV
+    THRU
+    REAL
+    PARAM,FLOW
+    22                                   $$ PLOTFT
+    SCURV
+    PARAM,FLOW
+    INCR,CHORD
+    REAL
+    23                                   $$ PLOTFT
+    SCURV
+    START,THRU,INCR,CHORD
+    REAL
+    29                                   $$ PLOTFT
+    SCURV
+    PARAM,FLOW
+    16                                   $$ PLOTFT
+    SCURV
+    24                                   $$ PLOTFT
+    SSURF          $$ FORMAT 3
+    GRID
+    UCONST
+    REAL
+    VCONST
+    REAL
+    INCR,CHORD
+    REAL
+    30                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    REAL
+    VCONST
+    REAL
+    31                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    VCONST
+    REAL
+    INCR,CHORD
+    REAL
+    32                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    VCONST
+    REAL
+    33                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    REAL
+    VCONST
+    INCR,CHORD
+    REAL
+    34                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    REAL
+    VCONST
+    35                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    VCONST
+    INCR,CHORD
+    REAL
+    36                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    VCONST
+    37                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    REAL
+    INCR,CHORD
+    REAL
+    38                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST,INCR,CHORD
+    REAL
+    39                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    INCR,CHORD
+    REAL
+    40                                   $$ PLOTFT
+    SSURF
+    GRID
+    UCONST
+    41                                   $$ PLOTFT
+    SSURF
+    GRID
+    42                                   $$ PLOTFT
+      TLAXXX/      $$ TLAXIS FORMATS FOLLOW
+  ATANGL
+  DS
+  REAL
+  RADIUS
+  REAL
+  HIGHT
+  REAL
+  1
+  ATANGL
+  DS
+  REAL
+  RADIUS
+  REAL
+  2
+  ATANGL
+  DS
+  REAL
+  HIGHT
+  REAL
+  3
+  ATANGL
+  DS
+  REAL
+  4
+  REAL
+  REAL
+  5
+  LAST
+  6
+  VECTOR
+  7
+  NORMDS,NORMPS
+  8
+  REAL
+  9
+  PARLEL
+  REAL
+  REAL
+  REAL
+  10
+  PARLEL
+  REAL
+  11
+  PARLEL
+  DS,PS
+  RADIUS
+  REAL
+  HIGHT
+  REAL
+  12
+  PARLEL
+  DS
+  RADIUS
+  REAL
+  13
+  PARLEL
+  DS
+  HIGHT
+  REAL
+  14
+  PARLEL
+  DS
+  15
+  ATANGL
+  CUTANG
+  LEAD,LAG
+  REAL
+  16
+  ATANGL
+  CUTANG
+  REAL
+  17
+  ATANGL
+  CUTANG
+  LEAD,LAG
+  AUTO
+  18
+  ATANGL
+  CUTANG
+  AUTO
+  19
+  ATANGL
+  PARLEL
+  LINE,PLANE
+  20
+  ATANGL
+  PERPTO
+  VECTOR
+  20
+  ATANGL
+  LINE,PLANE
+  21
+  ATANGL
+  VECTOR
+  21
+  ATANGL
+  MOTDIR
+  22
+      RGMXXX/      $$ REGIONAL MILLING FORMATS FOLLOW
+      INIT         $$ OLD FORMATS WITH SCON/...  AND SMIL/...
+      ALL
+      4
+      INIT
+      DS,PS,AXIS,FEED,STEPOV
+      1
+      DS
+      SCURV
+      PARAM
+      REAL
+      REAL
+      AT,ON
+      VECTOR,CRSSPL
+      2
+      DS
+      SSURF
+      PARAM
+      REAL
+      REAL
+      REAL
+      REAL
+      AT,ON
+      VECTOR,NORMAL
+      2
+      PS
+      TO,ON
+      SSURF
+      PLUS,MINUS
+      3
+      AXIS
+      VECTOR,NORMDS
+      PLUS,MINUS
+      4
+      AXIS
+      VECTOR,NORMDS
+      4
+      AXIS             $$ EXTENSION TO SCON/AXIS
+      ATANGL           $$ FOR INTERFERENCE CHECKING (INTERIM)
+      DS,PS            $$ NOTE ONLY DS CONTROL IMPLEMENTED
+      REAL
+      CUTANG
+      REAL
+      4
+      AXIS
+      ATANGL
+      DS,PS
+      REAL
+      CUTANG
+      LEAD,LAG
+      REAL
+      4
+      FEED
+      PLANE
+      4
+      FEED
+      REAL
+      REAL
+      REAL
+      REAL
+      4
+      STEPOV
+      REAL
+      REAL
+      REAL
+      REAL
+      4
+      POSN
+      DS
+      PARAM
+      REAL
+      REAL
+      INCR
+      VECTOR,REAL
+      6
+      POSN
+      DS
+      PARAM
+      REAL
+      REAL
+      INCR
+      PLANE
+      7
+      PATH
+      DS
+      PARAM
+      REAL
+      REAL
+      TANSPL,CRSSPL
+      PLUS,MINUS
+      5
+      ZIGZAG,PICKFD
+      DS
+      PARAM
+      REAL
+      REAL
+      TANSPL,CRSSPL
+      PLUS,MINUS
+      STEPOV
+      PLUS,MINUS
+      5
+      AVCXXX/              $$ AVOIDANCE CONTROL AVCTRL/... FORMATS
+      ON,OFF
+      27
+      CUTANG
+      CONST
+      REAL
+      RANGE
+      REAL
+      REAL
+      28
+      NORMPS,AXIS
+      29
+      LIMIT
+      REAL
+      30
+      FINI
+
+
+
+
+
+
+
+
+
+
