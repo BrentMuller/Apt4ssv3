@@ -1,3 +1,4 @@
+**** SOURCE FILE : FILOPN00.ORG   ***
 *
 *
 *  * FILOPN *    VAX11 FORTRAN SUBROUTINE  10.5.82 E.MCLELLAN
@@ -45,15 +46,20 @@
 *
       SUBROUTINE FILOPN(NO)
 C
-      INCLUDE (FILTAB)
+      INCLUDE 'FILTAB.INC'
 C
       INTEGER POSN,SLEN
       CHARACTER*80 DARRAY
       DATA DARRAY/' '/
 C
-      OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
-     1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
-     2      FORM=FILFMT(NO),RECL=RL(NO))
+c     gfortran doesn't like an option in this open statement
+c      OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
+c     1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
+c     2      FORM=FILFMT(NO),RECL=RL(NO))
+      open (unit=u(no),file=filnam(no),iostat=iret,err=90,
+c     1      status=opstat(no),access=filacc(no),
+     1      access=filacc(no),
+     2      form=filfmt(no),recl=rl(no))
 C
       RETURN
 C

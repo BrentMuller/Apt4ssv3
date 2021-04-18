@@ -1,3 +1,4 @@
+**** SOURCE FILE : PUNCHA00.ORG   ***
 *
       SUBROUTINE PUNCHA(N,A,J,K)
 *
@@ -31,9 +32,10 @@ C
       BYTE PUNOUT(512)
       LOGICAL OD
 C
-      INCLUDE (DARRAY)
+      INCLUDE 'DARRAY.INC'
 C
-      DATA ILEGAL/ZEE/
+c      DATA ILEGAL/ZEE/
+      data ilegal/z'ee'/
 C
 C
       ENTRY PUNCHB(N,A,J,K)

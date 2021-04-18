@@ -1,3 +1,4 @@
+**** SOURCE FILE : ADDRSS00.ORG   ***
 *
       INTEGER FUNCTION ADDRSS(X)
 *
@@ -12,7 +13,8 @@
 *              X  VARIABLE WHOSE ADDRESS IS TO BE RETURNED
 *
       DOUBLE PRECISION X
-      ADDRSS=%LOC(X)
+c      ADDRSS=%LOC(X)
+      addrss=loc(x)
 C
       RETURN
       END

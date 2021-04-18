@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0006620.W02   ***
 *
 C                                                 8/81     MBB
 C...  FORTRAN BLOCK DATA               BD2ITL
@@ -38,7 +39,7 @@ C...        11.    SEQUENCE NUMBER STORAGE
 C
 C                  COMMENT OF  SEQNO AND SEQNUM
 C
-      INCLUDE (SEQCOM)
+      INCLUDE 'SEQCOM.INC'
 C
 C...        12.    LARGE DATA ARRAY STORAGE REQUIREMENTS
 C
@@ -318,8 +319,8 @@ C
 C
 C           45.    NUMBER TABLE INDICES
 C
-      INCLUDE (NUMBLK)
-                                                                        M005040C
+      INCLUDE 'NUMBLK.INC'
+                          
 C     DATA STATEMENTS
 C
 C...         2.    STACK AND POINTER STORAGE
