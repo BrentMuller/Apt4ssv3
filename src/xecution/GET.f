@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000717.W02   ***
 *
 C.....FORTRAN SUBROUTINE  ....GET            8/68                 HG
 C.....FORTRAN FUNCTION             ..GET..     HL GRAY 3/68         *ID*
@@ -43,8 +44,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C
@@ -82,8 +83,8 @@ C
 C
       COMMON/CONST/KCOMT,KCOMF
 C
-      INCLUDE (TOTAL)
-      INCLUDE (LDEF)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
 C
       COMMON/ILD/ILD
 C

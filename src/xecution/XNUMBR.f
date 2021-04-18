@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000989.V05   ***
 *
 C
 C-------- FORTRAN SUBROUTINE... XNUMBR           R.COLLINS  4/16/70
@@ -23,8 +24,8 @@ C--------**** COMMON AREAS NEEDED FOR THIS ROUTINE ****
 C
 C--------UNLABELED COMMON - COM
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C STOR--COMMON CONTAINING STORAGE PARAMETERS
@@ -43,7 +44,7 @@ C
 C
 C...  20. SYSTEM I/O FILE NAMES
 C
-      INCLUDE (SYMFIL)
+      INCLUDE 'SYMFIL.INC'
 C
 C  ------------------------------------------------------------------
 C

@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0001665.V04   ***
 *
 C
 C....FORTRAN SUBROUTINE  ...EXEC...       5/69                   HG
@@ -10,7 +11,7 @@ C
 C
 C...      32.  PARAMETERS REQUIRED BY SUPERVISOR
 C
-      INCLUDE (SUPER)
+      INCLUDE 'SUPER.INC'
 C
       INTEGER  ONE
       DATA  ONE/1/

@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000952.V04   ***
 *
 C.....FORTRAN SUBROUTINE  ....PUT            8/68                 HG
 C.....FORTRAN FUNCTION             ..PUT..     HL GRAY 3/68         *ID*
@@ -30,8 +31,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C
@@ -56,8 +57,8 @@ C
       EQUIVALENCE  (FPP,   NTP)
       DIMENSION                   LNA(2,20)
 C
-      INCLUDE (TOTAL)
-      INCLUDE (LDEF)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
 C
 C
 C---------------------------------------------------------------------

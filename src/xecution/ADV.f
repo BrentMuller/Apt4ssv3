@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000746.V03   ***
 *
 C
 C.....FORTRAN ROUTINE              ..ADV..     HL GRAY 3/68         *ID*
@@ -30,8 +31,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C

@@ -1,3 +1,4 @@
+**** SOURCE FILE : DELALL00.ORG   ***
 *
       SUBROUTINE DELALL
 C

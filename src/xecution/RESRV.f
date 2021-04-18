@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0000959.W01   ***
 *
 C.....FORTRAN SUBROUTINE  ....RESRV          8/68                 HG
 C.....FORTRAN ROUTINE              ..RESRV..   HL GRAY 3/68         *ID*
@@ -32,8 +33,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C
@@ -64,8 +65,8 @@ C
       COMMON/CONST/KCOMT,KCOMF,CILPRT,KCBN
 C
 C
-      INCLUDE (TOTAL)
-      INCLUDE (LDEF)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
 C
 C
 C---------------------------------------------------------------------

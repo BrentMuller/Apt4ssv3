@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0002658.W03   ***
 *
 C.....FORTRAN SUBROUTINE  ....LIB            8/68                 HG
 C.....FORTRAN ROUTINE              ..LIB..     HL GRAY 3/68         *ID*
@@ -9,8 +10,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C
@@ -52,9 +53,9 @@ C
 C
       COMMON/CONST/KTEMPB,KCOMF
 C
-      INCLUDE (TOTAL)
-      INCLUDE (LDEF)
-      INCLUDE (DARRAY)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
+      INCLUDE 'DARRAY.INC'
 C
       COMMON/SQNC/SQNO
       INTEGER SQNO

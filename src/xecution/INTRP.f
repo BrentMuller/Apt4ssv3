@@ -1,3 +1,4 @@
+**** SOURCE FILE : M0004105.W03   ***
 *
 C.....FORTRAN SUBROUTINE  ....INTRP          8/68                 HG
 C.....FORTRAN ROUTINE              ..INTRP..   HL GRAY 3/68         *ID*
@@ -41,8 +42,8 @@ C
 C UNLABELED COMMON
 C
 C
-      INCLUDE (BLANKCOM)
-      INCLUDE (INTRPEQ)
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
 C
 C
 C
@@ -76,13 +77,13 @@ C
       LOGICAL CILPRT
 C
 C
-      INCLUDE (DARRAY)
+      INCLUDE 'DARRAY.INC'
 C
 C
       COMMON/ILD/ILD
 C
-      INCLUDE (TOTAL)
-      INCLUDE (LDEF)
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
 C
 C---------------------------------------------------------------------
       INTEGER       XCANON
