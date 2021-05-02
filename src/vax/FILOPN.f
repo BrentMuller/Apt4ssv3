@@ -51,15 +51,32 @@ C
       INTEGER POSN,SLEN
       CHARACTER*80 DARRAY
       DATA DARRAY/' '/
-C
-c     gfortran doesn't like an option in this open statement
-c      OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
-c     1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
-c     2      FORM=FILFMT(NO),RECL=RL(NO))
-      open (unit=u(no),file=filnam(no),iostat=iret,err=90,
-c     1      status=opstat(no),access=filacc(no),
-     1      access=filacc(no),
+      
+c   fortran 77 disallows a named scratch file
+       if(opstat(no).eq.'SCRATCH')then
+            write(*,*)'opstat is scratch'
+            write(*,*)'opstat is: ',opstat(no)
+c    no file name-
+      open (unit=u(no),iostat=iret,err=90,
+     1      status=opstat(no),access=filacc(no),
      2      form=filfmt(no),recl=rl(no))
+      else
+c    file name-
+      open (unit=u(no),file=filnam(no),iostat=iret,err=90,
+     1      status=opstat(no),access=filacc(no),
+     2      form=filfmt(no),recl=rl(no))
+            write(*,*)'opstat is: ',opstat(no)
+      endif
+C
+c      gfortran doesn't like an option in this open statement
+c     OPEN (UNIT=U(NO),FILE=FILNAM(NO),IOSTAT=IRET,ERR=90,
+c    1      STATUS=OPSTAT(NO),ACCESS=FILACC(NO),
+c    2      FORM=FILFMT(NO),RECL=RL(NO))
+c     open (unit=u(no),file=filnam(no),iostat=iret,err=90,
+c      open (unit=u(no),iostat=iret,err=90,
+c     1      status=opstat(no),access=filacc(no),
+c     1      access=filacc(no),
+c     2      form=filfmt(no),recl=rl(no))
 C
       RETURN
 C
