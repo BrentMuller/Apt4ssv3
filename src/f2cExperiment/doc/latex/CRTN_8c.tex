@@ -1,0 +1,65 @@
+\hypertarget{CRTN_8c}{}\section{C\+R\+T\+N.\+c File Reference}
+\label{CRTN_8c}\index{C\+R\+T\+N.\+c@{C\+R\+T\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+R\+T\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{CRTN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CRTN_8c_ab10a5210c5e25020342298c60c61c9c4}{crtn\+\_\+} (integer $\ast$cond)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+R\+T\+N.\+c@{C\+R\+T\+N.\+c}!crtn\+\_\+@{crtn\+\_\+}}
+\index{crtn\+\_\+@{crtn\+\_\+}!C\+R\+T\+N.\+c@{C\+R\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{crtn\+\_\+(integer $\ast$cond)}{crtn_(integer *cond)}}]{\setlength{\rightskip}{0pt plus 5cm}int crtn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{cond}
+\end{DoxyParamCaption}
+)}\hypertarget{CRTN_8c_ab10a5210c5e25020342298c60c61c9c4}{}\label{CRTN_8c_ab10a5210c5e25020342298c60c61c9c4}
+
+
+Definition at line 16 of file C\+R\+T\+N.\+c.
+
+
+
+Referenced by sprvis\+\_\+0\+\_\+().
+
+
+\begin{DoxyCode}
+17 \{
+18     \textcolor{comment}{/* Builtin functions */}
+19     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_stop(\textcolor{keywordtype}{char} *, ftnlen);
+20 
+21 
+22 \textcolor{comment}{/*  *  CRTN  *   TEMPORARY VAX11 VERSION   13.5.81    E.MCLELLAN */}
+23 
+24     \textcolor{keywordflow}{if} (*cond == 0) \{
+25     s\_stop(\textcolor{stringliteral}{"PROCESSING COMPLETED OK"}, (ftnlen)23);
+26     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*cond == 4) \{
+27     s\_stop(\textcolor{stringliteral}{"PROCESSING COMPLETED - WARNINGS HAVE OCCURRED"}, (ftnlen)45);
+28     \} \textcolor{keywordflow}{else} \{
+29     s\_stop(\textcolor{stringliteral}{"ABNORMAL END - ERRORS HAVE OCCURRED"}, (ftnlen)35);
+30     \}
+31     \textcolor{keywordflow}{return} 0;
+32 \} \textcolor{comment}{/* crtn\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CRTN_8c_ab10a5210c5e25020342298c60c61c9c4_icgraph}
+\end{center}
+\end{figure}
+
+

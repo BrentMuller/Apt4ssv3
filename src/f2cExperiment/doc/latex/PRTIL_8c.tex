@@ -1,0 +1,933 @@
+\hypertarget{PRTIL_8c}{}\section{P\+R\+T\+I\+L.\+c File Reference}
+\label{PRTIL_8c}\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+R\+T\+I\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{PRTIL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PRTIL_8c_a6fde43723377b88e2e00b933ffc7a25e}{sdp\+\_\+1}~\hyperlink{TRASH_8c_a3f483bb7c527318c80e56d5e24dc5c2a}{sdp\+\_\+}
+\item 
+\#define \hyperlink{PRTIL_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{PRTIL_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1}~\hyperlink{TWOARG_8c_a32a4a134d3ab3577d788e459ac052a95}{iltext\+\_\+}
+\item 
+\#define \hyperlink{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 4)
+\item 
+\#define \hyperlink{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 3)
+\item 
+\#define \hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PRTIL_8c_acafd2ac1e22563aeae23034f33e6fcf0}{prtil\+\_\+} (char $\ast$\hyperlink{TSSMIL_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, ftnlen line\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PRTIL_8c_acb97996fe7b03c888c0de3988ddfa4e9}{nbchar}\\
+\>integer \hyperlink{PRTIL_8c_a8e23a7d61f75b6210b50e42277844171}{nbwrd}\\
+\>integer \hyperlink{PRTIL_8c_a7186be17bd02477bcc26c602ec6adcf4}{iwrd}\\
+\>integer \hyperlink{PRTIL_8c_a50166c6d5710a40a5c7294ebde2ae16a}{ifac}\\
+\} \hyperlink{PRTIL_8c_a109a76a9a7cc0b98c044d47f2ddae13a}{sdp\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PRTIL_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{PRTIL_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{PRTIL_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{PRTIL_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{PRTIL_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{PRTIL_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{PRTIL_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{PRTIL_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{PRTIL_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{PRTIL_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{PRTIL_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{PRTIL_8c_a2f0b9a2795d1897fdf7f09c39ab0ac40}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{PRTIL_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{PRTIL_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{PRTIL_8c_afe823c48e3a6be8d2b983d5cab349f2b}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PRTIL_8c_a2cd599a0a65171bbfd166ff31c5d45b1}{iltext} \mbox{[}94\mbox{]}\\
+\} \hyperlink{PRTIL_8c_ad91ffac96ade4e15793f9fb83081d74b}{iltext\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PRTIL_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{PRTIL_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{PRTIL_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{PRTIL_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{PRTIL_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{PRTIL_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{PRTIL_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{PRTIL_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{PRTIL_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{PRTIL_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{PRTIL_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{PRTIL_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{PRTIL_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{PRTIL_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{PRTIL_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{PRTIL_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{PRTIL_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{PRTIL_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{PRTIL_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{PRTIL_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{PRTIL_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{PRTIL_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{PRTIL_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{PRTIL_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{PRTIL_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{PRTIL_8c_aff917f99684dd597ce3a70fc10b338de}{symfil\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{PRTIL_8c_a7814524f4d0261a69ff9e437574a0858}{c\+\_\+\+\_\+116} = 116
+\item 
+static integer \hyperlink{PRTIL_8c_a5dd561db01e04fd938070cb5782ba8db}{c\+\_\+\+\_\+120} = 120
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 34 of file P\+R\+T\+I\+L.\+c.
+
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!iltext\+\_\+1@{iltext\+\_\+1}}
+\index{iltext\+\_\+1@{iltext\+\_\+1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{iltext\+\_\+1}{iltext_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iltext\+\_\+1~{\bf iltext\+\_\+}}\hypertarget{PRTIL_8c_a727a9e7abb817d21bac6d7e622bd87b1}{}\label{PRTIL_8c_a727a9e7abb817d21bac6d7e622bd87b1}
+
+
+Definition at line 40 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{PRTIL_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{PRTIL_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 28 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!optext@{optext}}
+\index{optext@{optext}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{optext}{optext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define optext~((integer $\ast$)\&{\bf iltext\+\_\+1} + 3)}\hypertarget{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{}\label{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!sdp\+\_\+1@{sdp\+\_\+1}}
+\index{sdp\+\_\+1@{sdp\+\_\+1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{sdp\+\_\+1}{sdp_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sdp\+\_\+1~{\bf sdp\+\_\+}}\hypertarget{PRTIL_8c_a6fde43723377b88e2e00b933ffc7a25e}{}\label{PRTIL_8c_a6fde43723377b88e2e00b933ffc7a25e}
+
+
+Definition at line 21 of file P\+R\+T\+I\+L.\+c.
+
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 49 of file P\+R\+T\+I\+L.\+c.
+
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!textin@{textin}}
+\index{textin@{textin}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{textin}{textin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define textin~((integer $\ast$)\&{\bf iltext\+\_\+1} + 4)}\hypertarget{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{}\label{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!tpntrx@{tpntrx}}
+\index{tpntrx@{tpntrx}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{tpntrx}{tpntrx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tpntrx~((integer $\ast$)\&{\bf iltext\+\_\+1} + 2)}\hypertarget{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{}\label{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}
+
+
+Referenced by prtil\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!prtil\+\_\+@{prtil\+\_\+}}
+\index{prtil\+\_\+@{prtil\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{prtil\+\_\+(char $\ast$line, ftnlen line\+\_\+len)}{prtil_(char *line, ftnlen line_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int prtil\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{ftnlen}]{line\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{PRTIL_8c_acafd2ac1e22563aeae23034f33e6fcf0}{}\label{PRTIL_8c_acafd2ac1e22563aeae23034f33e6fcf0}
+
+
+Definition at line 69 of file P\+R\+T\+I\+L.\+c.
+
+
+
+References binbcd\+\_\+(), blk, c\+\_\+\+\_\+116, c\+\_\+\+\_\+120, cnamtb\+\_\+1, count, foutxx\+\_\+(), holfrm\+\_\+(), i1, i\+\_\+\+\_\+, ii, j, k, l, neg, oppair\+\_\+(), optext, sdp\+\_\+1, symfil\+\_\+1, textin, and tpntrx.
+
+
+
+Referenced by rlslin\+\_\+().
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{comment}{/* Initialized data */}
+72 
+73     \textcolor{keyword}{static} \textcolor{keywordtype}{char} opbcd[6*21] = \textcolor{stringliteral}{"FADD  "} \textcolor{stringliteral}{"FSUB  "} \textcolor{stringliteral}{"FMPY  "} \textcolor{stringliteral}{"FDIV  "} \textcolor{stringliteral}{"PEXP  "} 
+74         \textcolor{stringliteral}{"LABEL "} \textcolor{stringliteral}{"ENTRY "} \textcolor{stringliteral}{"JUMP  "} \textcolor{stringliteral}{"SEQNCE"} \textcolor{stringliteral}{"RETMC "} \textcolor{stringliteral}{"CONJMP"} \textcolor{stringliteral}{"RESRV "} 
+75         \textcolor{stringliteral}{"CVTSUB"} \textcolor{stringliteral}{"CALMC "} \textcolor{stringliteral}{"ASNADD"} \textcolor{stringliteral}{"ASNJMP"} \textcolor{stringliteral}{"REPL  "} \textcolor{stringliteral}{"CALL  "} \textcolor{stringliteral}{"MOVE  "} 
+76         \textcolor{stringliteral}{"VBLJMP"} \textcolor{stringliteral}{"HOLDAT"};
+77     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{CNVRT3_8c_adfc9d568fc0536427fcc65d0a150cf14}{blk}[4] = \textcolor{stringliteral}{"    "};
+78     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{NEWFUNCS_8c_a8e1095b31ec94f7edd42bb6985648bc6}{neg}[4] = \textcolor{stringliteral}{"   -"};
+79 
+80     \textcolor{comment}{/* System generated locals */}
+81     integer i\_\_1, i\_\_2;
+82 
+83     \textcolor{comment}{/* Builtin functions */}
+84     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+85 
+86     \textcolor{comment}{/* Local variables */}
+87     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, nwd, limit, \hyperlink{APT301_8c_ac74ae34e9c58234aacabb6867b245c58}{count}, itext;
+88     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(integer *, \textcolor{keywordtype}{char} *, integer *, ftnlen),
+89          \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\textcolor{keywordtype}{char} *, integer *, ftnlen), \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(integer *, \textcolor{keywordtype}{char} *, 
+90         integer *, integer *, integer *, ftnlen);
+91 \textcolor{preprocessor}{#define textin ((integer *)&iltext\_1 + 4)}
+92 \textcolor{preprocessor}{#define optext ((integer *)&iltext\_1 + 3)}
+93     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{foutxx\_}(integer *, \textcolor{keywordtype}{char} *, integer *, ftnlen);
+94 \textcolor{preprocessor}{#define tpntrx ((integer *)&iltext\_1 + 2)}
+95 
+96 
+97 
+98 \textcolor{comment}{/*        0.    SYSTEM DEPENDENT PARAMETERS */}
+99 
+100 \textcolor{comment}{/* IWRD:        NO. OF BYTES PER INTEGER WORD */}
+101 \textcolor{comment}{/* IFAC:        BYTE LEFT SHIFT MULTIPLICATION FACTOR */}
+102 
+103 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+104 
+105 
+106 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+107 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+108 
+109 \textcolor{comment}{/*       19.    INTERMEDIATE LANGUAGE TEXT */}
+110 
+111 
+112 
+113 
+114 
+115 
+116 
+117 \textcolor{comment}{/* TPNTRX:      POINTER TO LAST TEXTIN ENTRY */}
+118 \textcolor{comment}{/* OPTEXT:      CONTAINS COMMAND CODE FOR CURRENT I.L. COMMAND */}
+119 \textcolor{comment}{/* TEXTIN:      STORAGE FOR CURRENTLY GENERATED I.L. COMMAND ARGUM.LIST */}
+120 
+121 \textcolor{comment}{/*       33.    SYMBOLIC FILE DEFINITIONS */}
+122 
+123 \textcolor{comment}{/* VLFILE:      VERIFICATION LISTING FILE */}
+124 \textcolor{comment}{/* * */}
+125 \textcolor{comment}{/* ARGUMENTS    LINE     OUTPUT ARRAY TO CONTAIN ALPHA- */}
+126 \textcolor{comment}{/*                       NUMERIC EQUIVALENT OF BINARY I.L.. */}
+127 
+128 
+129 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+130 
+131 
+132 
+133 \textcolor{comment}{/* ** */}
+134     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 4, opbcd + (0 + (0 + (*\hyperlink{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext} - 1) * 6)), (ftnlen)120, (
+135         ftnlen)6);
+136     \textcolor{keywordflow}{switch} (*\hyperlink{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}) \{
+137     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L100;
+138     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L100;
+139     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L100;
+140     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L100;
+141     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L100;
+142     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L600;
+143     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L600;
+144     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L600;
+145     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L900;
+146     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L1000;
+147     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L1100;
+148     \textcolor{keywordflow}{case} 12:  \textcolor{keywordflow}{goto} L1200;
+149     \textcolor{keywordflow}{case} 13:  \textcolor{keywordflow}{goto} L1300;
+150     \textcolor{keywordflow}{case} 14:  \textcolor{keywordflow}{goto} L1400;
+151     \textcolor{keywordflow}{case} 15:  \textcolor{keywordflow}{goto} L1500;
+152     \textcolor{keywordflow}{case} 16:  \textcolor{keywordflow}{goto} L1600;
+153     \textcolor{keywordflow}{case} 17:  \textcolor{keywordflow}{goto} L1700;
+154     \textcolor{keywordflow}{case} 18:  \textcolor{keywordflow}{goto} L1800;
+155     \textcolor{keywordflow}{case} 19:  \textcolor{keywordflow}{goto} L1900;
+156     \textcolor{keywordflow}{case} 20:  \textcolor{keywordflow}{goto} L2000;
+157     \textcolor{keywordflow}{case} 21:  \textcolor{keywordflow}{goto} L2100;
+158     \}
+159 
+160 \textcolor{comment}{/* ...  FADD,FSUB,FMPY,FDIV,FEXP */}
+161 
+162 L100:
+163     l = 13;
+164     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 5; i\_\_ += 2) \{
+165     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (l - 1), &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1], 124 - (l - 1));
+166 \textcolor{comment}{/* L101: */}
+167     l += 20;
+168     \}
+169     k = 69;
+170     \textcolor{keywordflow}{goto} L9000;
+171 
+172 \textcolor{comment}{/* ...  LABEL,ENTRY,JUMP */}
+173 
+174 L600:
+175     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+176     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+177         6);
+178     k = 21;
+179     \textcolor{keywordflow}{goto} L9000;
+180 
+181 \textcolor{comment}{/* ...     SEQNCE */}
+182 
+183 L900:
+184     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, blk, (ftnlen)112, (ftnlen)4);
+185     \textcolor{keywordflow}{if} (\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0] >= 0) \{
+186     \textcolor{keywordflow}{goto} L902;
+187     \} \textcolor{keywordflow}{else} \{
+188     \textcolor{keywordflow}{goto} L901;
+189     \}
+190 L901:
+191     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, neg, (ftnlen)112, (ftnlen)4);
+192 L902:
+193     i\_\_1 = abs(\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0]);
+194     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&i\_\_1, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 16, &count, (ftnlen)108);
+195     k = 25;
+196     \textcolor{keywordflow}{goto} L9000;
+197 
+198 \textcolor{comment}{/* ...     RETMC */}
+199 
+200 L1000:
+201     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, &count, (ftnlen)112);
+202     k = 21;
+203     \textcolor{keywordflow}{goto} L9000;
+204 
+205 \textcolor{comment}{/* ...  CONJMP */}
+206 
+207 L1100:
+208     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}, (ftnlen)112);
+209     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+210     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ + 1];
+211     i1 = (i\_\_ << 3) + 25;
+212     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (i1 - 1), \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, 124 - (i1 
+213         - 1), (ftnlen)6);
+214 \textcolor{comment}{/* L1101: */}
+215     \}
+216     k = 57;
+217     \textcolor{keywordflow}{goto} L9000;
+218 
+219 \textcolor{comment}{/* ...  RESRV */}
+220 
+221 L1200:
+222     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+223     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+224         6);
+225     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+226 \textcolor{comment}{/* L1201: */}
+227     i\_\_1 = (i\_\_ << 3) + 4;
+228     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + i\_\_1, &count, 124 - i\_\_1);
+229     \}
+230     k = 41;
+231     \textcolor{keywordflow}{goto} L9000;
+232 
+233 \textcolor{comment}{/* ...  CVTSUB */}
+234 
+235 L1300:
+236     l = 13;
+237     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 5; i\_\_ += 2) \{
+238     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (l - 1), &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1], 124 - (l - 1));
+239 \textcolor{comment}{/* L1301: */}
+240     l += 20;
+241     \}
+242     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[6], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 64, &count, (ftnlen)60);
+243     k = 81;
+244     \textcolor{keywordflow}{goto} L9000;
+245 
+246 \textcolor{comment}{/* ...  CALMC */}
+247 
+248 L1400:
+249     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+250     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+251         6);
+252     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 20, &count, (ftnlen)104);
+253     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[2], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 28, &count, (ftnlen)96);
+254     k = 33;
+255     \textcolor{keywordflow}{goto} L9000;
+256 
+257 \textcolor{comment}{/* ...  ASNADD */}
+258 
+259 L1500:
+260     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+261     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+262         6);
+263     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 24, &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1], (ftnlen)100);
+264     k = 41;
+265     \textcolor{keywordflow}{goto} L1601;
+266 
+267 \textcolor{comment}{/* ...  ASNJMP */}
+268 
+269 L1600:
+270     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+271     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+272         6);
+273     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1];
+274     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 24, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)100, (ftnlen)
+275         6);
+276     k = 33;
+277 L1601:
+278     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 20, blk, (ftnlen)104, (ftnlen)4);
+279     \textcolor{keywordflow}{goto} L9000;
+280 
+281 \textcolor{comment}{/* ...  REPL */}
+282 
+283 L1700:
+284     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, &count, (ftnlen)112);
+285     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 20, &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1], (ftnlen)104);
+286     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 40, &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[3], (ftnlen)84);
+287     k = 61;
+288     \textcolor{keywordflow}{goto} L9000;
+289 
+290 \textcolor{comment}{/* ...  CALL */}
+291 
+292 L1800:
+293     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+294     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)112, (ftnlen)
+295         6);
+296     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 20, blk, (ftnlen)12, (ftnlen)4);
+297     limit = *\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 9;
+298     j = 2;
+299     l = 33;
+300     \textcolor{keywordflow}{if} (limit <= 0) \{
+301     \textcolor{keywordflow}{goto} L1804;
+302     \} \textcolor{keywordflow}{else} \{
+303     \textcolor{keywordflow}{goto} L1801;
+304     \}
+305 L1801:
+306     i\_\_1 = limit;
+307     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; i\_\_ += 10) \{
+308     \textcolor{keywordflow}{for} (ii = l; ii <= 100; ii += 20) \{
+309         \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (ii - 1), &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[j - 1], 124 - (ii - 1));
+310 \textcolor{comment}{/* L1802: */}
+311         j += 2;
+312     \}
+313     \hyperlink{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{foutxx\_}(&\hyperlink{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.vlfile, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, &\hyperlink{PRTIL_8c_a7814524f4d0261a69ff9e437574a0858}{c\_\_116}, (ftnlen)124);
+314     l = 13;
+315     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 8, blk, (ftnlen)116, (ftnlen)4);
+316 \textcolor{comment}{/* L1803: */}
+317     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 4, blk, (ftnlen)120, (ftnlen)4);
+318     \}
+319 L1804:
+320     \textcolor{keywordflow}{if} (*\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} == 1) \{
+321     \textcolor{keywordflow}{goto} L1807;
+322     \}
+323     i\_\_1 = *\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx};
+324     \textcolor{keywordflow}{for} (i\_\_ = j; i\_\_ <= i\_\_1; i\_\_ += 2) \{
+325     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (l - 1), &\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1], 124 - (l - 1));
+326 \textcolor{comment}{/* L1805: */}
+327     l += 20;
+328     \}
+329 L1807:
+330     k = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+331     \textcolor{keywordflow}{goto} L9000;
+332 
+333 \textcolor{comment}{/* ...  MOVE */}
+334 
+335 L1900:
+336     limit = *\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 11;
+337     j = 1;
+338     l = 13;
+339     \textcolor{keywordflow}{if} (limit <= 0) \{
+340     \textcolor{keywordflow}{goto} L1804;
+341     \} \textcolor{keywordflow}{else} \{
+342     \textcolor{keywordflow}{goto} L1801;
+343     \}
+344 
+345 \textcolor{comment}{/* ...  VBLJMP */}
+346 
+347 L2000:
+348     \hyperlink{OPPAIR_8c_a322e16f6bb86c99aa8885ea75b0e78e9}{oppair\_}(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}, (ftnlen)112);
+349     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1];
+350     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 20, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)104, (ftnlen)
+351         6);
+352     l = 29;
+353 L2006:
+354     j = 3;
+355     limit = *\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 20 + l / 4;
+356     \textcolor{keywordflow}{if} (limit <= 0) \{
+357     \textcolor{keywordflow}{goto} L2004;
+358     \} \textcolor{keywordflow}{else} \{
+359     \textcolor{keywordflow}{goto} L2001;
+360     \}
+361 L2001:
+362     i\_\_1 = limit;
+363     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; i\_\_ += 13) \{
+364     \textcolor{keywordflow}{for} (ii = l; ii <= 112; ii += 8) \{
+365         \textcolor{keywordflow}{if} (*\hyperlink{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext} > 20) \{
+366         \textcolor{keywordflow}{goto} L2007;
+367         \}
+368         itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[j - 1];
+369         s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (ii - 1), \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, 124 - (
+370             ii - 1), (ftnlen)6);
+371         \textcolor{keywordflow}{goto} L2002;
+372 L2007:
+373         \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[j - 1], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, &ii, &\hyperlink{PRTIL_8c_a6fde43723377b88e2e00b933ffc7a25e}{sdp\_1}.iwrd, &nwd, (ftnlen)124)
+374             ;
+375         i\_\_2 = ii + 3;
+376         s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + i\_\_2, blk, ii + 7 - i\_\_2, (ftnlen)4);
+377 L2002:
+378         ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+379     \}
+380     \hyperlink{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{foutxx\_}(&\hyperlink{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.vlfile, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, &\hyperlink{PRTIL_8c_a5dd561db01e04fd938070cb5782ba8db}{c\_\_120}, (ftnlen)124);
+381     l = 13;
+382     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 8, blk, (ftnlen)4, (ftnlen)4);
+383 \textcolor{comment}{/* L2003: */}
+384     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 4, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, (ftnlen)4, (ftnlen)4);
+385     \}
+386 L2004:
+387     i\_\_1 = *\hyperlink{PRTIL_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx};
+388     \textcolor{keywordflow}{for} (i\_\_ = j; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+389     \textcolor{keywordflow}{if} (*\hyperlink{PRTIL_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext} > 20) \{
+390         \textcolor{keywordflow}{goto} L2008;
+391     \}
+392     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1];
+393     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (l - 1), \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, 124 - (l - 
+394         1), (ftnlen)6);
+395     \textcolor{keywordflow}{goto} L2005;
+396 L2008:
+397     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, &l, &\hyperlink{PRTIL_8c_a6fde43723377b88e2e00b933ffc7a25e}{sdp\_1}.iwrd, &nwd, (ftnlen)124);
+398     i\_\_2 = l + 3;
+399     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + i\_\_2, blk, l + 7 - i\_\_2, (ftnlen)4);
+400 L2005:
+401     l += 8;
+402     \}
+403     k = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+404 L9000:
+405     \textcolor{keywordflow}{if} (k > 120) \{
+406     \textcolor{keywordflow}{goto} L9002;
+407     \}
+408 \textcolor{comment}{/* L9001: */}
+409     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + (k - 1), blk, 124 - (k - 1), (ftnlen)4);
+410 L9002:
+411     \hyperlink{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{foutxx\_}(&\hyperlink{PRTIL_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.vlfile, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, &\hyperlink{PRTIL_8c_a5dd561db01e04fd938070cb5782ba8db}{c\_\_120}, (ftnlen)124);
+412     \textcolor{keywordflow}{return} 0;
+413 
+414 \textcolor{comment}{/* ...  HOLDAT */}
+415 
+416 L2100:
+417     itext = \hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+418     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 12, blk, (ftnlen)112, (ftnlen)4);
+419     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 16, \hyperlink{PRTIL_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (itext - 1) * 6, (ftnlen)108, (ftnlen)
+420         6);
+421     s\_copy(\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 24, blk, (ftnlen)100, (ftnlen)4);
+422     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(&\hyperlink{PRTIL_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1], \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line} + 28, &count, (ftnlen)96);
+423     l = 37;
+424     \textcolor{keywordflow}{goto} L2006;
+425 \} \textcolor{comment}{/* prtil\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PRTIL_8c_acafd2ac1e22563aeae23034f33e6fcf0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PRTIL_8c_acafd2ac1e22563aeae23034f33e6fcf0_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{PRTIL_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{PRTIL_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!c\+\_\+\+\_\+116@{c\+\_\+\+\_\+116}}
+\index{c\+\_\+\+\_\+116@{c\+\_\+\+\_\+116}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+116}{c__116}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+116 = 116\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PRTIL_8c_a7814524f4d0261a69ff9e437574a0858}{}\label{PRTIL_8c_a7814524f4d0261a69ff9e437574a0858}
+
+
+Definition at line 53 of file P\+R\+T\+I\+L.\+c.
+
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!c\+\_\+\+\_\+120@{c\+\_\+\+\_\+120}}
+\index{c\+\_\+\+\_\+120@{c\+\_\+\+\_\+120}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+120}{c__120}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+120 = 120\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PRTIL_8c_a5dd561db01e04fd938070cb5782ba8db}{}\label{PRTIL_8c_a5dd561db01e04fd938070cb5782ba8db}
+
+
+Definition at line 54 of file P\+R\+T\+I\+L.\+c.
+
+
+
+Referenced by prtil\+\_\+().
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{PRTIL_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{PRTIL_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!charst@{charst}}
+\index{charst@{charst}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{PRTIL_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{PRTIL_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{PRTIL_8c_afddbf18370447268640d26c983890fd1}{}\label{PRTIL_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{PRTIL_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{PRTIL_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{PRTIL_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{PRTIL_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{PRTIL_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{PRTIL_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 31 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{PRTIL_8c_afe823c48e3a6be8d2b983d5cab349f2b}{}\label{PRTIL_8c_afe823c48e3a6be8d2b983d5cab349f2b}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{PRTIL_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{PRTIL_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 31 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{PRTIL_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{PRTIL_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{PRTIL_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{PRTIL_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{PRTIL_8c_a995bd688c87d82736860b413de2416d4}{}\label{PRTIL_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{PRTIL_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{PRTIL_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{PRTIL_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{PRTIL_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{PRTIL_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{PRTIL_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{PRTIL_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{PRTIL_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!ifac@{ifac}}
+\index{ifac@{ifac}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{ifac}{ifac}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifac}\hypertarget{PRTIL_8c_a50166c6d5710a40a5c7294ebde2ae16a}{}\label{PRTIL_8c_a50166c6d5710a40a5c7294ebde2ae16a}
+
+
+Definition at line 18 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{PRTIL_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{PRTIL_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{PRTIL_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{PRTIL_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!iltext@{iltext}}
+\index{iltext@{iltext}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{iltext}{iltext}}]{\setlength{\rightskip}{0pt plus 5cm}integer iltext\mbox{[}94\mbox{]}}\hypertarget{PRTIL_8c_a2cd599a0a65171bbfd166ff31c5d45b1}{}\label{PRTIL_8c_a2cd599a0a65171bbfd166ff31c5d45b1}
+
+
+Definition at line 37 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!iltext\+\_\+@{iltext\+\_\+}}
+\index{iltext\+\_\+@{iltext\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{iltext\+\_\+}{iltext_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   iltext\+\_\+}\hypertarget{PRTIL_8c_ad91ffac96ade4e15793f9fb83081d74b}{}\label{PRTIL_8c_ad91ffac96ade4e15793f9fb83081d74b}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{PRTIL_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{PRTIL_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{PRTIL_8c_a373010e90fb1cd08bf263255a111920d}{}\label{PRTIL_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{PRTIL_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{PRTIL_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{PRTIL_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{PRTIL_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!iwrd@{iwrd}}
+\index{iwrd@{iwrd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{iwrd}{iwrd}}]{\setlength{\rightskip}{0pt plus 5cm}integer iwrd}\hypertarget{PRTIL_8c_a7186be17bd02477bcc26c602ec6adcf4}{}\label{PRTIL_8c_a7186be17bd02477bcc26c602ec6adcf4}
+
+
+Definition at line 18 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{PRTIL_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{PRTIL_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{PRTIL_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{PRTIL_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{PRTIL_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{PRTIL_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!namest@{namest}}
+\index{namest@{namest}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{PRTIL_8c_ab97202700d22183890e79bc8791f4bff}{}\label{PRTIL_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{PRTIL_8c_a2f0b9a2795d1897fdf7f09c39ab0ac40}{}\label{PRTIL_8c_a2f0b9a2795d1897fdf7f09c39ab0ac40}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{PRTIL_8c_a12351fe75bd822dfa233783a24bab726}{}\label{PRTIL_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{PRTIL_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{PRTIL_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nbchar@{nbchar}}
+\index{nbchar@{nbchar}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nbchar}{nbchar}}]{\setlength{\rightskip}{0pt plus 5cm}integer nbchar}\hypertarget{PRTIL_8c_acb97996fe7b03c888c0de3988ddfa4e9}{}\label{PRTIL_8c_acb97996fe7b03c888c0de3988ddfa4e9}
+
+
+Definition at line 18 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nbwrd@{nbwrd}}
+\index{nbwrd@{nbwrd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nbwrd}{nbwrd}}]{\setlength{\rightskip}{0pt plus 5cm}integer nbwrd}\hypertarget{PRTIL_8c_a8e23a7d61f75b6210b50e42277844171}{}\label{PRTIL_8c_a8e23a7d61f75b6210b50e42277844171}
+
+
+Definition at line 18 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{PRTIL_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{PRTIL_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{PRTIL_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{PRTIL_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{PRTIL_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{PRTIL_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{PRTIL_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{PRTIL_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 24 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{PRTIL_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{PRTIL_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{PRTIL_8c_af29300e691e97a062da856325402d3e9}{}\label{PRTIL_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{PRTIL_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{PRTIL_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!sdp\+\_\+@{sdp\+\_\+}}
+\index{sdp\+\_\+@{sdp\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{sdp\+\_\+}{sdp_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sdp\+\_\+}\hypertarget{PRTIL_8c_a109a76a9a7cc0b98c044d47f2ddae13a}{}\label{PRTIL_8c_a109a76a9a7cc0b98c044d47f2ddae13a}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{PRTIL_8c_aff917f99684dd597ce3a70fc10b338de}{}\label{PRTIL_8c_aff917f99684dd597ce3a70fc10b338de}
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{PRTIL_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{PRTIL_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{PRTIL_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{PRTIL_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{PRTIL_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{PRTIL_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+
+\index{P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!P\+R\+T\+I\+L.\+c@{P\+R\+T\+I\+L.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{PRTIL_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{PRTIL_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 43 of file P\+R\+T\+I\+L.\+c.
+

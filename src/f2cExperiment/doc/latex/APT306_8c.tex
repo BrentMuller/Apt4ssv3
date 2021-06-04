@@ -1,0 +1,101 @@
+\hypertarget{APT306_8c}{}\section{A\+P\+T306.\+c File Reference}
+\label{APT306_8c}\index{A\+P\+T306.\+c@{A\+P\+T306.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T306.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT306_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT306_8c_ab2fb97c649bdf7cc2424ab97a30923ea}{apt306\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$m1, doublereal $\ast$m2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T306.\+c@{A\+P\+T306.\+c}!apt306\+\_\+@{apt306\+\_\+}}
+\index{apt306\+\_\+@{apt306\+\_\+}!A\+P\+T306.\+c@{A\+P\+T306.\+c}}
+\subsubsection[{\texorpdfstring{apt306\+\_\+(doublereal $\ast$result, doublereal $\ast$m1, doublereal $\ast$m2)}{apt306_(doublereal *result, doublereal *m1, doublereal *m2)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt306\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{m1, }
+\item[{doublereal $\ast$}]{m2}
+\end{DoxyParamCaption}
+)}\hypertarget{APT306_8c_ab2fb97c649bdf7cc2424ab97a30923ea}{}\label{APT306_8c_ab2fb97c649bdf7cc2424ab97a30923ea}
+
+
+Definition at line 28 of file A\+P\+T306.\+c.
+
+
+
+References i\+\_\+\+\_\+, j, and k.
+
+
+
+Referenced by apt305\+\_\+(), and apt335\+\_\+().
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+32     \textcolor{keyword}{static} doublereal gm1[16]   \textcolor{comment}{/* was [4][4] */}, gm2[16]   \textcolor{comment}{/* was [4][4] }
+33 \textcolor{comment}{        */}, gm3[16] \textcolor{comment}{/* was [4][4] */};
+34 
+35 \textcolor{comment}{/*     THIS ROUTINE MULTIPLIES TWO MATRICES OF THREE ROWS AND FOUR */}
+36 \textcolor{comment}{/*     COLUMNS */}
+37     \textcolor{comment}{/* Parameter adjustments */}
+38     m2 -= 4;
+39     m1 -= 4;
+40     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= 4;
+41 
+42     \textcolor{comment}{/* Function Body */}
+43     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+44     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+45         gm1[i\_\_ + (j << 2) - 5] = m1[i\_\_ + j * 3];
+46         gm2[i\_\_ + (j << 2) - 5] = m2[i\_\_ + j * 3];
+47 \textcolor{comment}{/* L50: */}
+48     \}
+49     \}
+50     i\_\_ = 4;
+51     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+52     gm1[i\_\_ + (j << 2) - 5] = 0.;
+53     gm2[i\_\_ + (j << 2) - 5] = 0.;
+54 \textcolor{comment}{/* L100: */}
+55     \}
+56     gm1[15] = 1.;
+57     gm2[15] = 1.;
+58     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+59     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+60         gm3[i\_\_ + (j << 2) - 5] = 0.;
+61         \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+62         gm3[i\_\_ + (j << 2) - 5] += gm1[i\_\_ + (k << 2) - 5] * gm2[k + (
+63             j << 2) - 5];
+64 \textcolor{comment}{/* L190: */}
+65         \}
+66     \}
+67     \}
+68     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+69     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+70         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + j * 3] = gm3[i\_\_ + (j << 2) - 5];
+71 \textcolor{comment}{/* L230: */}
+72     \}
+73     \}
+74     \textcolor{keywordflow}{return} 0;
+75 \} \textcolor{comment}{/* apt306\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT306_8c_ab2fb97c649bdf7cc2424ab97a30923ea_icgraph}
+\end{center}
+\end{figure}
+
+

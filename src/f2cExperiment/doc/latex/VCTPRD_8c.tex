@@ -1,0 +1,547 @@
+\hypertarget{VCTPRD_8c}{}\section{V\+C\+T\+P\+R\+D.\+c File Reference}
+\label{VCTPRD_8c}\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for V\+C\+T\+P\+R\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{VCTPRD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{VCTPRD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1}~\hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1}~\hyperlink{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}{srctbl\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{flags\+\_\+1}~\hyperlink{VCTPRD_8c_a1ffc2c06059b0ea96a284de96d88b6e4}{flags\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_adc26d046da3b096176d64df0f9b82911}{inptr\+\_\+1}~\hyperlink{VCTPRD_8c_a8ceb01063c1243e7dd8cb1335e233bbc}{inptr\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1}~\hyperlink{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{macxx1\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{VCTPRD_8c_adecf5d6273480fb438d640425e20b40d}{dot}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 48)
+\item 
+\#define \hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1})
+\item 
+\#define \hyperlink{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1} + 2)
+\item 
+\#define \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 3)
+\item 
+\#define \hyperlink{VCTPRD_8c_a41f762e476e07a7d721ee4351047b85d}{slash}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 8)
+\item 
+\#define \hyperlink{VCTPRD_8c_a00b0574d211dbeb5c922a327fcd822b8}{macred}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 17)
+\item 
+\#define \hyperlink{VCTPRD_8c_a0c517024a3711279fbbb2c0cda5b45b1}{endflg}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{flags\+\_\+1})
+\item 
+\#define \hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1} + 10)
+\item 
+\#define \hyperlink{VCTPRD_8c_af1724cb67424440e47e76c7523840ab8}{permid}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 38)
+\item 
+\#define \hyperlink{VCTPRD_8c_a205397a99afa81dd8a318d6ec9aa2da7}{lparen}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 2)
+\item 
+\#define \hyperlink{VCTPRD_8c_afea4a6cb2f8e34188519baa7d2a86a79}{rparen}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 4)
+\item 
+\#define \hyperlink{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 201)
+\item 
+\#define \hyperlink{VCTPRD_8c_ae157b988f5222e270f494b81959e9bfc}{argtop}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 1)
+\item 
+\#define \hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{VCTPRD_8c_aae8b99ce27e867ce9a04bfdc8a5e7405}{vctprd\+\_\+} (integer $\ast$\hyperlink{SSDEF_8c_a4521a507401ef14efdf22acebba2aa20}{jmp})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_ab1f3042e2a54f27a5f82b0f7e8b66b72}{nametb} \mbox{[}3007\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_ada93478ed3a7b6732d0c4af5a026499f}{stklst} \mbox{[}300\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_aefe191e09bb77f4f2ee73486b77cd328}{srctbl} \mbox{[}501\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}{srctbl\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}{flags} \mbox{[}4\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_a1ffc2c06059b0ea96a284de96d88b6e4}{flags\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_a7eabbcbc6985430e776e56f03f632542}{cnt}\\
+\} \hyperlink{VCTPRD_8c_a8ceb01063c1243e7dd8cb1335e233bbc}{inptr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_a62736b21eda0cd16ae1b6bef6723680a}{macxx1} \mbox{[}71\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{macxx1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{VCTPRD_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!argstk@{argstk}}
+\index{argstk@{argstk}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{argstk}{argstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argstk~((integer $\ast$)\&{\bf stklst\+\_\+1} + 201)}\hypertarget{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}{}\label{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!argtop@{argtop}}
+\index{argtop@{argtop}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{argtop}{argtop}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argtop~((integer $\ast$)\&{\bf stklst\+\_\+1} + 1)}\hypertarget{VCTPRD_8c_ae157b988f5222e270f494b81959e9bfc}{}\label{VCTPRD_8c_ae157b988f5222e270f494b81959e9bfc}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 33 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!dot@{dot}}
+\index{dot@{dot}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{dot}{dot}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dot~((integer $\ast$)\&{\bf code\+\_\+1} + 48)}\hypertarget{VCTPRD_8c_adecf5d6273480fb438d640425e20b40d}{}\label{VCTPRD_8c_adecf5d6273480fb438d640425e20b40d}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!endflg@{endflg}}
+\index{endflg@{endflg}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{endflg}{endflg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define endflg~((logical $\ast$)\&{\bf flags\+\_\+1})}\hypertarget{VCTPRD_8c_a0c517024a3711279fbbb2c0cda5b45b1}{}\label{VCTPRD_8c_a0c517024a3711279fbbb2c0cda5b45b1}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!flags\+\_\+1@{flags\+\_\+1}}
+\index{flags\+\_\+1@{flags\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{flags\+\_\+1}{flags_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define flags\+\_\+1~{\bf flags\+\_\+}}\hypertarget{VCTPRD_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{}\label{VCTPRD_8c_ab9c16f9ce00e07b1bd55590608dad1aa}
+
+
+Definition at line 45 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!inptr\+\_\+1@{inptr\+\_\+1}}
+\index{inptr\+\_\+1@{inptr\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{inptr\+\_\+1}{inptr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inptr\+\_\+1~{\bf inptr\+\_\+}}\hypertarget{VCTPRD_8c_adc26d046da3b096176d64df0f9b82911}{}\label{VCTPRD_8c_adc26d046da3b096176d64df0f9b82911}
+
+
+Definition at line 51 of file V\+C\+T\+P\+R\+D.\+c.
+
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!lparen@{lparen}}
+\index{lparen@{lparen}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{lparen}{lparen}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lparen~((integer $\ast$)\&{\bf code\+\_\+1} + 2)}\hypertarget{VCTPRD_8c_a205397a99afa81dd8a318d6ec9aa2da7}{}\label{VCTPRD_8c_a205397a99afa81dd8a318d6ec9aa2da7}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!macred@{macred}}
+\index{macred@{macred}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{macred}{macred}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macred~((logical $\ast$)\&{\bf macxx1\+\_\+1} + 17)}\hypertarget{VCTPRD_8c_a00b0574d211dbeb5c922a327fcd822b8}{}\label{VCTPRD_8c_a00b0574d211dbeb5c922a327fcd822b8}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!macxx1\+\_\+1@{macxx1\+\_\+1}}
+\index{macxx1\+\_\+1@{macxx1\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+1}{macxx1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx1\+\_\+1~{\bf macxx1\+\_\+}}\hypertarget{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{}\label{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}
+
+
+Definition at line 57 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!meta@{meta}}
+\index{meta@{meta}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{meta}{meta}}]{\setlength{\rightskip}{0pt plus 5cm}\#define meta~((integer $\ast$)\&{\bf srctbl\+\_\+1} + 2)}\hypertarget{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{}\label{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 63 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{VCTPRD_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{VCTPRD_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 21 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define namtbl~((integer $\ast$)\&{\bf nametb\+\_\+1} + 10)}\hypertarget{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{}\label{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!permid@{permid}}
+\index{permid@{permid}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{permid}{permid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define permid~((integer $\ast$)\&{\bf code\+\_\+1} + 38)}\hypertarget{VCTPRD_8c_af1724cb67424440e47e76c7523840ab8}{}\label{VCTPRD_8c_af1724cb67424440e47e76c7523840ab8}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!rparen@{rparen}}
+\index{rparen@{rparen}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{rparen}{rparen}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rparen~((integer $\ast$)\&{\bf code\+\_\+1} + 4)}\hypertarget{VCTPRD_8c_afea4a6cb2f8e34188519baa7d2a86a79}{}\label{VCTPRD_8c_afea4a6cb2f8e34188519baa7d2a86a79}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!slash@{slash}}
+\index{slash@{slash}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{slash}{slash}}]{\setlength{\rightskip}{0pt plus 5cm}\#define slash~((integer $\ast$)\&{\bf code\+\_\+1} + 8)}\hypertarget{VCTPRD_8c_a41f762e476e07a7d721ee4351047b85d}{}\label{VCTPRD_8c_a41f762e476e07a7d721ee4351047b85d}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!srctbl\+\_\+1@{srctbl\+\_\+1}}
+\index{srctbl\+\_\+1@{srctbl\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+1}{srctbl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define srctbl\+\_\+1~{\bf srctbl\+\_\+}}\hypertarget{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}{}\label{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}
+
+
+Definition at line 39 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!stack@{stack}}
+\index{stack@{stack}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{stack}{stack}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stack~((integer $\ast$)\&{\bf stklst\+\_\+1} + 3)}\hypertarget{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{}\label{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}
+
+
+Referenced by vctprd\+\_\+().
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!stklst\+\_\+1@{stklst\+\_\+1}}
+\index{stklst\+\_\+1@{stklst\+\_\+1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+1}{stklst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stklst\+\_\+1~{\bf stklst\+\_\+}}\hypertarget{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{}\label{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}
+
+
+Definition at line 27 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!top@{top}}
+\index{top@{top}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{top}{top}}]{\setlength{\rightskip}{0pt plus 5cm}\#define top~((integer $\ast$)\&{\bf stklst\+\_\+1})}\hypertarget{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{}\label{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}
+
+
+Referenced by vctprd\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!vctprd\+\_\+@{vctprd\+\_\+}}
+\index{vctprd\+\_\+@{vctprd\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{vctprd\+\_\+(integer $\ast$jmp)}{vctprd_(integer *jmp)}}]{\setlength{\rightskip}{0pt plus 5cm}int vctprd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{jmp}
+\end{DoxyParamCaption}
+)}\hypertarget{VCTPRD_8c_aae8b99ce27e867ce9a04bfdc8a5e7405}{}\label{VCTPRD_8c_aae8b99ce27e867ce9a04bfdc8a5e7405}
+
+
+Definition at line 77 of file V\+C\+T\+P\+R\+D.\+c.
+
+
+
+References argstk, argtop, dot, endflg, i\+\_\+\+\_\+, inptr\+\_\+1, lparen, macred, meta, modulo, name\+\_\+(), namtbl, permid, rparen, setchr\+\_\+(), slash, stack, and top.
+
+
+
+Referenced by recog\+\_\+().
+
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{comment}{/* Initialized data */}
+80 
+81     \textcolor{keyword}{static} integer nmtb = 0;
+82 
+83     \textcolor{comment}{/* System generated locals */}
+84     integer i\_\_1;
+85 
+86     \textcolor{comment}{/* Local variables */}
+87     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+88 \textcolor{preprocessor}{#define dot ((integer *)&code\_1 + 48)}
+89 \textcolor{preprocessor}{#define top ((integer *)&stklst\_1)}
+90     \textcolor{keyword}{extern} integer \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{keywordtype}{char} *, ftnlen);
+91 \textcolor{preprocessor}{#define meta ((integer *)&srctbl\_1 + 2)}
+92 \textcolor{preprocessor}{#define stack ((integer *)&stklst\_1 + 3)}
+93 \textcolor{preprocessor}{#define slash ((integer *)&code\_1 + 8)}
+94 \textcolor{preprocessor}{#define macred ((logical *)&macxx1\_1 + 17)}
+95 \textcolor{preprocessor}{#define endflg ((logical *)&flags\_1)}
+96 \textcolor{preprocessor}{#define namtbl ((integer *)&nametb\_1 + 10)}
+97 \textcolor{preprocessor}{#define permid ((integer *)&code\_1 + 38)}
+98 \textcolor{preprocessor}{#define lparen ((integer *)&code\_1 + 2)}
+99 \textcolor{preprocessor}{#define rparen ((integer *)&code\_1 + 4)}
+100     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SETCHR_8c_a8599603ebdbb917d221588b3fa48ea83}{setchr\_}(integer *, integer *);
+101 \textcolor{preprocessor}{#define argstk ((integer *)&stklst\_1 + 201)}
+102 \textcolor{preprocessor}{#define argtop ((integer *)&stklst\_1 + 1)}
+103 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+104 
+105 
+106 
+107 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+108 
+109 \textcolor{comment}{/* NAMTBL:      NAME TABLE OR DICTIONARY */}
+110 
+111 \textcolor{comment}{/*        2.    STACK AND POINTER STORAGE */}
+112 
+113 \textcolor{comment}{/* TOP:         POINTER TO LAST STACK ENTRY */}
+114 \textcolor{comment}{/* ARGTOP:      POINTER TO LAST ARGSTK ENTRY */}
+115 \textcolor{comment}{/* STACK:       WORKING STACK */}
+116 \textcolor{comment}{/* ARGSTK:      ARGUMENT STACK */}
+117 
+118 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+119 
+120 \textcolor{comment}{/* LPAREN:      (1)=CODE CLASS  2000,(2)=NAMTBL INDEX OF '(     ' */}
+121 \textcolor{comment}{/* RPAREN:      (1)=CODE CLASS  3000,(2)=NAMTBL INDEX OF ')     ' */}
+122 \textcolor{comment}{/* SLASH:       (1)=CODE CLASS  5000,(2)=NAMTBL INDEX OF '/     ' */}
+123 \textcolor{comment}{/* PERMID:      (1)=CODE CLASS 20000,(2)=NAMTBL INDEX OF 'PERMID' */}
+124 \textcolor{comment}{/* DOT:         (1)=CODE CLASS 25000,(2)=NAMTBL INDEX OF 'DOT   ' */}
+125 
+126 \textcolor{comment}{/*        4.    PRODUCTION TABLE */}
+127 
+128 \textcolor{comment}{/* META:        CONTAINS INTERNAL BIT CODES FOR METALINGUISTIC CLASSES */}
+129 
+130 \textcolor{comment}{/*        5.    PROGRAM CONTROL FLAGS */}
+131 
+132 \textcolor{comment}{/* ENDFLG:      TRUE WHEN SOURCE STATEMENT TOTALLY IN STACK */}
+133 
+134 \textcolor{comment}{/*        7.    STRING STORAGE AREA */}
+135 \textcolor{comment}{/*              POINTER TO THE LAST PROCESSED CHARACTER OF A STATEMENT */}
+136 
+137 \textcolor{comment}{/*       22.    MACRO PROCESSING VARIABLES */}
+138 
+139 \textcolor{comment}{/* MACRED:      SET TRUE TO INDICATE INPUT FROM MCBUFF TABLE */}
+140 
+141 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+142 
+143 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+144 \textcolor{comment}{/* ** */}
+145 
+146     \textcolor{keywordflow}{if} (*\hyperlink{SSDEF_8c_a4521a507401ef14efdf22acebba2aa20}{jmp} < 0) \{
+147     \textcolor{keywordflow}{goto} L10;
+148     \}
+149     *\hyperlink{SSDEF_8c_a4521a507401ef14efdf22acebba2aa20}{jmp} = 1;
+150     \textcolor{keywordflow}{if} (nmtb == 0) \{
+151     \textcolor{keywordflow}{goto} L50;
+152     \}
+153     *\hyperlink{SSDEF_8c_a4521a507401ef14efdf22acebba2aa20}{jmp} = 2;
+154     ++(*top);
+155     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 2] = nmtb;
+156     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 1] = \hyperlink{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[\hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[nmtb * 3 - 3] / *
+      \hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} - 1];
+157     \textcolor{keywordflow}{goto} L40;
+158 
+159 \textcolor{comment}{/*     VECTOR AND SCALAR PRODUCT */}
+160 
+161 L10:
+162     \textcolor{keywordflow}{if} (\hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[\hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2 << 1) - 2] * 3 - 3] == \hyperlink{VCTPRD_8c_adecf5d6273480fb438d640425e20b40d}{dot}[0]) \{
+163     \textcolor{keywordflow}{goto} L30;
+164     \}
+165 
+166     *\hyperlink{VCTPRD_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} = 2;
+167     \hyperlink{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[0] = \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2];
+168     i\_\_ = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{stringliteral}{"$CROSS   "}, (ftnlen)9);
+169     \textcolor{keywordflow}{if} (*\hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (\hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[i\_\_ * 3 - 3] / *\hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}) == \hyperlink{VCTPRD_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0]) \{
+170     \textcolor{keywordflow}{goto} L20;
+171     \}
+172     \hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[i\_\_ * 3 - 3] = \hyperlink{VCTPRD_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0] + 40;
+173 L20:
+174     \hyperlink{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[1] = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+175     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2] = \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2];
+176     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 1] = \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 1];
+177     i\_\_1 = *\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2;
+178     \hyperlink{SETCHR_8c_a8599603ebdbb917d221588b3fa48ea83}{setchr\_}(&i\_\_1, \hyperlink{VCTPRD_8c_a41f762e476e07a7d721ee4351047b85d}{slash});
+179     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2] = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{stringliteral}{"VECTOR  "}, (ftnlen)8);
+180     \hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 1] = \hyperlink{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[\hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[\hyperlink{VCTPRD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2] * 3 - 
+181         3] / *\hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} - 1];
+182 
+183     \textcolor{keywordflow}{goto} L40;
+184 
+185 L30:
+186     *\hyperlink{VCTPRD_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} = 1;
+187     nmtb = stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 2];
+188     \hyperlink{VCTPRD_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[0] = stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2];
+189     \hyperlink{SETCHR_8c_a8599603ebdbb917d221588b3fa48ea83}{setchr\_}(\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}, \hyperlink{VCTPRD_8c_afea4a6cb2f8e34188519baa7d2a86a79}{rparen});
+190     stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2] = stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2];
+191     stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 1] = stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 1];
+192     i\_\_1 = *\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2;
+193     \hyperlink{SETCHR_8c_a8599603ebdbb917d221588b3fa48ea83}{setchr\_}(&i\_\_1, \hyperlink{VCTPRD_8c_a205397a99afa81dd8a318d6ec9aa2da7}{lparen});
+194     stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2] = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{stringliteral}{"DOTF    "}, (ftnlen)8);
+195     stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 1] = \hyperlink{VCTPRD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[\hyperlink{VCTPRD_8c_ab6bdfba02e45713912413c4996ea16ac}{namtbl}[stack[(*\hyperlink{VCTPRD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2] * 3 - 
+196         3] / *\hyperlink{VCTPRD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} - 1];
+197     \textcolor{keywordflow}{if} (*\hyperlink{VCTPRD_8c_a00b0574d211dbeb5c922a327fcd822b8}{macred}) \{
+198     \textcolor{keywordflow}{goto} L50;
+199     \}
+200     *\hyperlink{VCTPRD_8c_a0c517024a3711279fbbb2c0cda5b45b1}{endflg} = FALSE\_;
+201     --\hyperlink{VCTPRD_8c_adc26d046da3b096176d64df0f9b82911}{inptr\_1}.cnt;
+202 
+203 L40:
+204     nmtb = 0;
+205 L50:
+206     \textcolor{keywordflow}{return} 0;
+207 
+208 \} \textcolor{comment}{/* vctprd\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{VCTPRD_8c_aae8b99ce27e867ce9a04bfdc8a5e7405_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{VCTPRD_8c_aae8b99ce27e867ce9a04bfdc8a5e7405_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!cnt@{cnt}}
+\index{cnt@{cnt}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnt}{cnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer cnt}\hypertarget{VCTPRD_8c_a7eabbcbc6985430e776e56f03f632542}{}\label{VCTPRD_8c_a7eabbcbc6985430e776e56f03f632542}
+
+
+Definition at line 48 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!code@{code}}
+\index{code@{code}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{VCTPRD_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{VCTPRD_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 30 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{}\label{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!flags@{flags}}
+\index{flags@{flags}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}integer flags\mbox{[}4\mbox{]}}\hypertarget{VCTPRD_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}{}\label{VCTPRD_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}
+
+
+Definition at line 42 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!flags\+\_\+@{flags\+\_\+}}
+\index{flags\+\_\+@{flags\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{flags\+\_\+}{flags_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   flags\+\_\+}\hypertarget{VCTPRD_8c_a1ffc2c06059b0ea96a284de96d88b6e4}{}\label{VCTPRD_8c_a1ffc2c06059b0ea96a284de96d88b6e4}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!inptr\+\_\+@{inptr\+\_\+}}
+\index{inptr\+\_\+@{inptr\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{inptr\+\_\+}{inptr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inptr\+\_\+}\hypertarget{VCTPRD_8c_a8ceb01063c1243e7dd8cb1335e233bbc}{}\label{VCTPRD_8c_a8ceb01063c1243e7dd8cb1335e233bbc}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!macxx1@{macxx1}}
+\index{macxx1@{macxx1}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{macxx1}{macxx1}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx1\mbox{[}71\mbox{]}}\hypertarget{VCTPRD_8c_a62736b21eda0cd16ae1b6bef6723680a}{}\label{VCTPRD_8c_a62736b21eda0cd16ae1b6bef6723680a}
+
+
+Definition at line 54 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!macxx1\+\_\+@{macxx1\+\_\+}}
+\index{macxx1\+\_\+@{macxx1\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+}{macxx1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx1\+\_\+}\hypertarget{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{}\label{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{VCTPRD_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{VCTPRD_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 60 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{}\label{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!nametb@{nametb}}
+\index{nametb@{nametb}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{nametb}{nametb}}]{\setlength{\rightskip}{0pt plus 5cm}integer nametb\mbox{[}3007\mbox{]}}\hypertarget{VCTPRD_8c_ab1f3042e2a54f27a5f82b0f7e8b66b72}{}\label{VCTPRD_8c_ab1f3042e2a54f27a5f82b0f7e8b66b72}
+
+
+Definition at line 18 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{}\label{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!srctbl@{srctbl}}
+\index{srctbl@{srctbl}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl}{srctbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer srctbl\mbox{[}501\mbox{]}}\hypertarget{VCTPRD_8c_aefe191e09bb77f4f2ee73486b77cd328}{}\label{VCTPRD_8c_aefe191e09bb77f4f2ee73486b77cd328}
+
+
+Definition at line 36 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!srctbl\+\_\+@{srctbl\+\_\+}}
+\index{srctbl\+\_\+@{srctbl\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+}{srctbl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   srctbl\+\_\+}\hypertarget{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}{}\label{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!stklst@{stklst}}
+\index{stklst@{stklst}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst}{stklst}}]{\setlength{\rightskip}{0pt plus 5cm}integer stklst\mbox{[}300\mbox{]}}\hypertarget{VCTPRD_8c_ada93478ed3a7b6732d0c4af5a026499f}{}\label{VCTPRD_8c_ada93478ed3a7b6732d0c4af5a026499f}
+
+
+Definition at line 24 of file V\+C\+T\+P\+R\+D.\+c.
+
+\index{V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}!stklst\+\_\+@{stklst\+\_\+}}
+\index{stklst\+\_\+@{stklst\+\_\+}!V\+C\+T\+P\+R\+D.\+c@{V\+C\+T\+P\+R\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+}{stklst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stklst\+\_\+}\hypertarget{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{}\label{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}

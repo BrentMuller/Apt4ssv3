@@ -1,0 +1,84 @@
+\hypertarget{PSIGN_8c}{}\section{P\+S\+I\+G\+N.\+c File Reference}
+\label{PSIGN_8c}\index{P\+S\+I\+G\+N.\+c@{P\+S\+I\+G\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+S\+I\+G\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{PSIGN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+doublereal \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+S\+I\+G\+N.\+c@{P\+S\+I\+G\+N.\+c}!psign\+\_\+@{psign\+\_\+}}
+\index{psign\+\_\+@{psign\+\_\+}!P\+S\+I\+G\+N.\+c@{P\+S\+I\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{psign\+\_\+(doublereal $\ast$a, doublereal $\ast$b)}{psign_(doublereal *a, doublereal *b)}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal psign\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{}\label{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}
+
+
+Definition at line 20 of file P\+S\+I\+G\+N.\+c.
+
+
+
+Referenced by qsd\+\_\+().
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{comment}{/* System generated locals */}
+23     doublereal ret\_val;
+24 
+25     \textcolor{comment}{/* Builtin functions */}
+26     \textcolor{keywordtype}{double} d\_sign(doublereal *, doublereal *);
+27 
+28 
+29 \textcolor{comment}{/*  PURPOSE         TO MULTIPLY THE FIRST ARGUMENT BY THE SIGN OF THE */}
+30 \textcolor{comment}{/*                  SECOND ARGUMENT  -AND- IF THE SECOND ARGUMENT */}
+31 \textcolor{comment}{/*                  IS EQUAL TO ZERO, TO RETURN THE VALUE ZERO */}
+32 
+33 \textcolor{comment}{/*  LINKAGE         VALUE=PSIGN(A,B) */}
+34 
+35 \textcolor{comment}{/*  ARGUMENTS       A AND B ANY REAL VARIABLES */}
+36 
+37 \textcolor{comment}{/*  CALLED BY       QSD */}
+38 
+39 \textcolor{comment}{/*     ------------------------------------------------------------ */}
+40 
+41     \textcolor{keywordflow}{if} (*\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} != 0.) \{
+42     \textcolor{keywordflow}{goto} L10;
+43     \} \textcolor{keywordflow}{else} \{
+44     \textcolor{keywordflow}{goto} L20;
+45     \}
+46 
+47 L10:
+48     ret\_val = d\_sign(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b});
+49     \textcolor{keywordflow}{return} ret\_val;
+50 
+51 L20:
+52     ret\_val = 0.f;
+53     \textcolor{keywordflow}{return} ret\_val;
+54 \} \textcolor{comment}{/* psign\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c_icgraph}
+\end{center}
+\end{figure}
+
+

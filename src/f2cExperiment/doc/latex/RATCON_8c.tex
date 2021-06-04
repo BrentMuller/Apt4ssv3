@@ -1,0 +1,120 @@
+\hypertarget{RATCON_8c}{}\section{R\+A\+T\+C\+O\+N.\+c File Reference}
+\label{RATCON_8c}\index{R\+A\+T\+C\+O\+N.\+c@{R\+A\+T\+C\+O\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+A\+T\+C\+O\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{RATCON_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RATCON_8c_a868a5301b81baeb01515d9136a43c696}{ratcon\+\_\+} (doublereal $\ast$\hyperlink{APT341_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, doublereal $\ast$xm, doublereal $\ast$ym, doublereal $\ast$xi, doublereal $\ast$yi, doublereal $\ast$\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{R\+A\+T\+C\+O\+N.\+c@{R\+A\+T\+C\+O\+N.\+c}!ratcon\+\_\+@{ratcon\+\_\+}}
+\index{ratcon\+\_\+@{ratcon\+\_\+}!R\+A\+T\+C\+O\+N.\+c@{R\+A\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ratcon\+\_\+(doublereal $\ast$x1, doublereal $\ast$xm, doublereal $\ast$ym, doublereal $\ast$xi, doublereal $\ast$yi, doublereal $\ast$cx)}{ratcon_(doublereal *x1, doublereal *xm, doublereal *ym, doublereal *xi, doublereal *yi, doublereal *cx)}}]{\setlength{\rightskip}{0pt plus 5cm}int ratcon\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{x1, }
+\item[{doublereal $\ast$}]{xm, }
+\item[{doublereal $\ast$}]{ym, }
+\item[{doublereal $\ast$}]{xi, }
+\item[{doublereal $\ast$}]{yi, }
+\item[{doublereal $\ast$}]{cx}
+\end{DoxyParamCaption}
+)}\hypertarget{RATCON_8c_a868a5301b81baeb01515d9136a43c696}{}\label{RATCON_8c_a868a5301b81baeb01515d9136a43c696}
+
+
+Definition at line 17 of file R\+A\+T\+C\+O\+N.\+c.
+
+
+
+References cx, j, s1, w1, and x1.
+
+
+
+Referenced by scurv\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* System generated locals */}
+21     doublereal d\_\_1, d\_\_2, d\_\_3, d\_\_4;
+22 
+23     \textcolor{comment}{/* Builtin functions */}
+24     \textcolor{keywordtype}{double} sqrt(doublereal);
+25 
+26     \textcolor{comment}{/* Local variables */}
+27     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+28     \textcolor{keyword}{static} doublereal s0, \hyperlink{APT008_8c_a09dff3d9a89874939fa7cc9d056b114c}{s1}, w0, \hyperlink{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{w1}, det, ratio;
+29 
+30 \textcolor{comment}{/* ---  THIS SUBROUTINE ACCEPTS AS INPUT COORDINATES OF THREE */}
+31 \textcolor{comment}{/* ---  POINTS IN THE X,Y-PLANE OF A LOCAL SYSTEM OF COORDINATES. */}
+32 \textcolor{comment}{/* ---  THE OUTPUT CX IS THE CANONICAL FORM IN THE SAME COORDINATE */}
+33 \textcolor{comment}{/* ---  SYSTEM OF A CONIC ARC WITH ENDPOINTS (0,0) AND (X1,0), */}
+34 \textcolor{comment}{/* ---  WHOSE END TANGENTS INTERSECT AT (XI,YI), AND WHICH ALSO */}
+35 \textcolor{comment}{/* ---  INTERPOLATES THE POINT (XM,YM). THE ARC IS PARAMETRISED SO */}
+36 \textcolor{comment}{/* ---  THAT THE MAGNITUDES OF ITS END TANGENTS ARE EQUAL. */}
+37 \textcolor{comment}{/* ---  REVISED AND CORRECTED, CRANFIELD 1981, M.J.P. */}
+38     \textcolor{comment}{/* Parameter adjustments */}
+39     --\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx};
+40 
+41     \textcolor{comment}{/* Function Body */}
+42 \textcolor{comment}{/* Computing 2nd power */}
+43     d\_\_1 = *xi;
+44 \textcolor{comment}{/* Computing 2nd power */}
+45     d\_\_2 = *yi;
+46 \textcolor{comment}{/* Computing 2nd power */}
+47     d\_\_3 = *xi - *\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1};
+48 \textcolor{comment}{/* Computing 2nd power */}
+49     d\_\_4 = *yi;
+50     ratio = sqrt((d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2) / (d\_\_3 * d\_\_3 + d\_\_4 * d\_\_4));
+51     det = *x1 * *ym;
+52     s0 = ((*xi - *xm) * *ym - (*xm - *x1) * (*yi - *ym)) * 2 / det;
+53     s1 = (*xm * (*yi - *ym) - (*xi - *xm) * *ym) * 2 / det;
+54     w0 = sqrt(s0 * s1 * ratio);
+55     w1 = w0 / ratio;
+56 \textcolor{comment}{/* ---  IN THE STANDARD RATIONAL QUADRATIC FORMULA FOR A CONIC ARC */}
+57 \textcolor{comment}{/* ---  THE WEIGHT ASSOCIATED WITH THE TANGENT INTERSECTION POINT */}
+58 \textcolor{comment}{/* ---  HAS BEEN ARBITRARILY TAKEN AS 1.0. W0 AND W1 ARE THE WEIGHTS */}
+59 \textcolor{comment}{/* ---  ASSOCIATED WITH THE END POINTS.  WE NEXT SET UP THE CANONICAL */}
+60 \textcolor{comment}{/* ---  MATRIX FOR THE ARC, CONTAINING THE TWO PROJECTIVE END POINTS */}
+61 \textcolor{comment}{/* ---  AND END TANGENTS. */}
+62     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[1] = 0.f;
+63     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[2] = w1 * *\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1};
+64     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[3] = *xi * 2;
+65     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[4] = (\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[2] - *xi) * 2;
+66     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[5] = 0.f;
+67     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[6] = 0.f;
+68     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[7] = *yi * 2;
+69     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[8] = *yi * -2;
+70     \textcolor{keywordflow}{for} (j = 9; j <= 12; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+71 \textcolor{comment}{/* L10: */}
+72     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 0.;
+73     \}
+74 \textcolor{comment}{/* ---  ALL Z-COORDINATES ARE ZERO IN LOCAL COORDINATE SYSTEM */}
+75     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[13] = w0;
+76     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[14] = \hyperlink{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{w1};
+77     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[15] = (1 - w0) * 2;
+78     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[16] = (w1 - 1) * 2;
+79     \textcolor{keywordflow}{return} 0;
+80 \} \textcolor{comment}{/* ratcon\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RATCON_8c_a868a5301b81baeb01515d9136a43c696_icgraph}
+\end{center}
+\end{figure}
+
+

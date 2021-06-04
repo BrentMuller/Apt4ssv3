@@ -1,0 +1,203 @@
+\hypertarget{CLOCUB_8c}{}\section{C\+L\+O\+C\+U\+B.\+c File Reference}
+\label{CLOCUB_8c}\index{C\+L\+O\+C\+U\+B.\+c@{C\+L\+O\+C\+U\+B.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+O\+C\+U\+B.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{CLOCUB_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLOCUB_8c_a9b20bb943d50b4574b80a549cc2f53f1}{clocub\+\_\+} (doublereal $\ast$\hyperlink{APT335_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}, doublereal $\ast$\hyperlink{APT335_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}, doublereal $\ast$bx, doublereal $\ast$by, doublereal $\ast$gx, doublereal $\ast$gy, doublereal $\ast$hx, doublereal $\ast$hy, doublereal $\ast$ca, doublereal $\ast$cb, doublereal $\ast$alph, doublereal $\ast$\hyperlink{TULPOS_8c_a0f4d8a67bb39acc583704de120c23b36}{beta}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+L\+O\+C\+U\+B.\+c@{C\+L\+O\+C\+U\+B.\+c}!clocub\+\_\+@{clocub\+\_\+}}
+\index{clocub\+\_\+@{clocub\+\_\+}!C\+L\+O\+C\+U\+B.\+c@{C\+L\+O\+C\+U\+B.\+c}}
+\subsubsection[{\texorpdfstring{clocub\+\_\+(doublereal $\ast$ax, doublereal $\ast$ay, doublereal $\ast$bx, doublereal $\ast$by, doublereal $\ast$gx, doublereal $\ast$gy, doublereal $\ast$hx, doublereal $\ast$hy, doublereal $\ast$ca, doublereal $\ast$cb, doublereal $\ast$alph, doublereal $\ast$beta, integer $\ast$irr)}{clocub_(doublereal *ax, doublereal *ay, doublereal *bx, doublereal *by, doublereal *gx, doublereal *gy, doublereal *hx, doublereal *hy, doublereal *ca, doublereal *cb, doublereal *alph, doublereal *beta, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int clocub\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ax, }
+\item[{doublereal $\ast$}]{ay, }
+\item[{doublereal $\ast$}]{bx, }
+\item[{doublereal $\ast$}]{by, }
+\item[{doublereal $\ast$}]{gx, }
+\item[{doublereal $\ast$}]{gy, }
+\item[{doublereal $\ast$}]{hx, }
+\item[{doublereal $\ast$}]{hy, }
+\item[{doublereal $\ast$}]{ca, }
+\item[{doublereal $\ast$}]{cb, }
+\item[{doublereal $\ast$}]{alph, }
+\item[{doublereal $\ast$}]{beta, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{CLOCUB_8c_a9b20bb943d50b4574b80a549cc2f53f1}{}\label{CLOCUB_8c_a9b20bb943d50b4574b80a549cc2f53f1}
+
+
+Definition at line 17 of file C\+L\+O\+C\+U\+B.\+c.
+
+
+
+References a, ax, ay, b, beta, biquad\+\_\+(), c\+\_\+\+\_\+, d\+\_\+\+\_\+, dx, dy, f, l, one, p, q, r\+\_\+\+\_\+, w, z1em7, and zero.
+
+
+
+Referenced by forcub\+\_\+().
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{comment}{/* System generated locals */}
+23     integer i\_\_1;
+24     doublereal d\_\_1, d\_\_2;
+25 
+26     \textcolor{comment}{/* Builtin functions */}
+27     \textcolor{keywordtype}{double} sqrt(doublereal);
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e, \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+31     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}, \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}, \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}, \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}, e1, f1, at, bt, \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx}, \hyperlink{APT301_8c_a1aa95347d299564b1d20a922f0d7eb97}{dy};
+33     \textcolor{keyword}{static} integer nz;
+34     \textcolor{keyword}{static} doublereal hca, hcb, \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+35     \textcolor{keyword}{static} integer nct;
+36     \textcolor{keyword}{static} doublereal rts[4];
+37     \textcolor{keyword}{static} integer ichk;
+38     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_a34884c645f1e0e39c41d505703dc3f13}{z1em7}, \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}, rpp0x, rpp0y, rpp1x, rpp1y;
+39     \textcolor{keyword}{static} integer idiag;
+40     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BIQUAD_8c_a9d030851473002077954bf2f9e02de66}{biquad\_}(doublereal *, doublereal *, 
+41         doublereal *, doublereal *, doublereal *, doublereal *, integer *)
+42         ;
+43 
+44 \textcolor{comment}{/* ------THIS SUBROUTINE ACCEPTS AS INPUT TWO END POINTS AX,AY $ BX,BY */}
+45 \textcolor{comment}{/* ------TWO END DIRECTION VECTORS GX,GY $ HX,HY AND TWO END CURVATURES */}
+46 \textcolor{comment}{/* ------CA,CB(SIGNED BY DR X DDR).  GX,GY AND HX,HY ARE CONVERTED TO */}
+47 \textcolor{comment}{/* ------UNIT TANGENT VECTORS FOR THE PLANAR PARAMETRIC CUBIC */}
+48 \textcolor{comment}{/* ------ OUTPUT CONSISTS OF SCALARS ALPH AND BETA WHICH ARE MULTIPLIERS */}
+49 \textcolor{comment}{/* ------SATISFIES END CONDITIONS OF POINTS,DIRECTION AND CURVATURE */}
+50     idiag = 19000;
+51     z1em7 = 1e-7\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+52     zero = 0.f;
+53     one = 1.f;
+54     w = *gx * *gx + *gy * *gy;
+55     *irr = idiag + 1;
+56     \textcolor{keywordflow}{if} (w < z1em7) \{
+57     \textcolor{keywordflow}{return} 0;
+58     \}
+59     *gx /= sqrt(w);
+60     *gy /= sqrt(w);
+61     w = *hx * *hx + *hy * *hy;
+62     *irr = idiag + 2;
+63     \textcolor{keywordflow}{if} (w < z1em7) \{
+64     \textcolor{keywordflow}{return} 0;
+65     \}
+66     *hx /= sqrt(w);
+67     *hy /= sqrt(w);
+68     dx = *bx - *\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax};
+69     dy = *by - *\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay};
+70     p = *gx * dy - *gy * \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx};
+71     q = *gx * *hy - *gy * *hx;
+72     r\_\_ = dx * *hy - dy * *hx;
+73 \textcolor{comment}{/* ------THE FOLLOWING SETS UP A SOLUTION TO TWO SIMULTANEOUS IN ALPH, */}
+74 \textcolor{comment}{/* ------BETA WHICH ARE THE DESIRED TANGENT MULTIPLIERS */}
+75 \textcolor{comment}{/* ------3GXD-BETAGXH=SGN(ALPH)*ALPH**2*CA/2 */}
+76 \textcolor{comment}{/* ------3DXH-ALPH*GXH=SGN(BETA)*BETA**2*CB/2 */}
+77     nct = 0;
+78     ichk = 0;
+79     hca = *ca / 2;
+80     hcb = *cb / 2;
+81 \textcolor{comment}{/* Computing 2nd power */}
+82     d\_\_1 = hcb;
+83     a = hca * (d\_\_1 * d\_\_1);
+84     b = 0.f;
+85     c\_\_ = hca * -6 * hcb * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+86 \textcolor{comment}{/* Computing 3rd power */}
+87     d\_\_1 = \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q};
+88     d\_\_ = d\_\_1 * (d\_\_1 * d\_\_1);
+89 \textcolor{comment}{/* Computing 2nd power */}
+90     d\_\_1 = \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q};
+91 \textcolor{comment}{/* Computing 2nd power */}
+92     d\_\_2 = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+93     e = p * -3 * (d\_\_1 * d\_\_1) + hca * 9 * (d\_\_2 * d\_\_2);
+94     \hyperlink{BIQUAD_8c_a9d030851473002077954bf2f9e02de66}{biquad\_}(&a, &b, &c\_\_, &d\_\_, &e, rts, &nz);
+95     \textcolor{keywordflow}{if} (nz == 0) \{
+96     *irr = 1;
+97     \}
+98     \textcolor{keywordflow}{if} (*irr != 0) \{
+99     \textcolor{keywordflow}{goto} L200;
+100     \}
+101 \textcolor{comment}{/* ------ NOW CHECK FOR A VALID ALPH,BETA PAIR */}
+102     i\_\_1 = nz;
+103     \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+104     *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} = rts[l - 1];
+105     \textcolor{keywordflow}{if} (*\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} < 0.f) \{
+106         \textcolor{keywordflow}{goto} L10;
+107     \}
+108 \textcolor{comment}{/* Computing 2nd power */}
+109     d\_\_1 = *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta};
+110     *alph = (r\_\_ * 3 - hcb * (d\_\_1 * d\_\_1)) / \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q};
+111     \textcolor{keywordflow}{if} (*alph < 0.f) \{
+112         \textcolor{keywordflow}{goto} L10;
+113     \}
+114     rpp0x = (dx * 3 - *gx * 2 * *alph - *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} * *hx) * 2;
+115     rpp0y = (dy * 3 - *gy * 2 * *alph - *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} * *hy) * 2;
+116     rpp1x = (dx * -3 + *gx * *alph + *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} * 2 * *hx) * 2;
+117     rpp1y = (dy * -3 + *gy * *alph + *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} * 2 * *hy) * 2;
+118 \textcolor{comment}{/* Computing 2nd power */}
+119     d\_\_1 = *alph;
+120     e = (*gx * rpp0y - *gy * rpp0x) / (d\_\_1 * d\_\_1);
+121 \textcolor{comment}{/* Computing 2nd power */}
+122     d\_\_1 = *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta};
+123     f = (*hx * rpp1y - *hy * rpp1x) / (d\_\_1 * d\_\_1);
+124     e1 = e - *ca;
+125     f1 = f - *cb;
+126     e1 /= *ca;
+127     f1 /= *cb;
+128     \textcolor{keywordflow}{if} (abs(e1) > .01 || abs(f1) > .01) \{
+129         \textcolor{keywordflow}{goto} L10;
+130     \}
+131     ichk = 1;
+132     at = *alph;
+133     bt = *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta};
+134 L10:
+135     ;
+136     \}
+137 L200:
+138     *irr = idiag + 3;
+139     \textcolor{keywordflow}{if} (ichk == 0) \{
+140     \textcolor{keywordflow}{return} 0;
+141     \}
+142     *alph = at;
+143     *\hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta} = bt;
+144     *irr = 0;
+145     \textcolor{keywordflow}{return} 0;
+146 \} \textcolor{comment}{/* clocub\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLOCUB_8c_a9b20bb943d50b4574b80a549cc2f53f1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLOCUB_8c_a9b20bb943d50b4574b80a549cc2f53f1_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -22,10 +22,13 @@ C
 C
 C.... INQUIRE IF FILE EXISTS
 C
-      CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'U',0,JRET)
+c      CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'U',0,JRET)
+      jret=1
+      write(*,*)'TODO: uopen command, FINDME.f'
       IF (JRET.EQ.0) THEN
 C.... FILE EXISTS - OPEN ATTACHED TO ID
-        CALL UOPEN(ID,FLNAME(:NLEN),1,1,80,0,'U',0,JRET)
+c        CALL UOPEN(ID,FLNAME(:NLEN),1,1,80,0,'U',0,JRET)
+      write(*,*)'TODO: uopen command, FINDME.f'
         IF (JRET.NE.0) GOTO 20
         IRET=0
       ELSE

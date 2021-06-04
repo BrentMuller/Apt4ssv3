@@ -1,0 +1,131 @@
+\hypertarget{RETMCX_8c}{}\section{R\+E\+T\+M\+C\+X.\+c File Reference}
+\label{RETMCX_8c}\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+E\+T\+M\+C\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{RETMCX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{RETMCX_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1}~\hyperlink{TSSMIL_8c_afbe97352b0a7b81f71ad1f9d9b682017}{il\+\_\+}
+\item 
+\#define \hyperlink{RETMCX_8c_a1df7a1e883bf88b48e994c157286d403}{retmc}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 9)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f}{retmcx\+\_\+} (integer $\ast$indx)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RETMCX_8c_a5524c41368cc6530a9c6a9ccab6163db}{il} \mbox{[}21\mbox{]}\\
+\} \hyperlink{RETMCX_8c_acb533e729e10f4af15dcc628e44f6a16}{il\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}!il\+\_\+1@{il\+\_\+1}}
+\index{il\+\_\+1@{il\+\_\+1}!R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+1}{il_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define il\+\_\+1~{\bf il\+\_\+}}\hypertarget{RETMCX_8c_abcc19ac3deb5a72995081498826879ac}{}\label{RETMCX_8c_abcc19ac3deb5a72995081498826879ac}
+
+
+Definition at line 21 of file R\+E\+T\+M\+C\+X.\+c.
+
+\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}!retmc@{retmc}}
+\index{retmc@{retmc}!R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+\subsubsection[{\texorpdfstring{retmc}{retmc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define retmc~((integer $\ast$)\&{\bf il\+\_\+1} + 9)}\hypertarget{RETMCX_8c_a1df7a1e883bf88b48e994c157286d403}{}\label{RETMCX_8c_a1df7a1e883bf88b48e994c157286d403}
+
+
+Referenced by retmcx\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}!retmcx\+\_\+@{retmcx\+\_\+}}
+\index{retmcx\+\_\+@{retmcx\+\_\+}!R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+\subsubsection[{\texorpdfstring{retmcx\+\_\+(integer $\ast$indx)}{retmcx_(integer *indx)}}]{\setlength{\rightskip}{0pt plus 5cm}int retmcx\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{indx}
+\end{DoxyParamCaption}
+)}\hypertarget{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f}{}\label{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f}
+
+
+Definition at line 36 of file R\+E\+T\+M\+C\+X.\+c.
+
+
+
+References onearg\+\_\+(), opcode\+\_\+(), retmc, and rlslin\+\_\+().
+
+
+
+Referenced by comstr\+\_\+(), and match\+\_\+().
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{comment}{/* Local variables */}
+39 \textcolor{preprocessor}{#define retmc ((integer *)&il\_1 + 9)}
+40     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(integer *), \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(integer *), 
+41         \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}(\textcolor{keywordtype}{void});
+42 
+43 
+44 
+45 \textcolor{comment}{/*       16.    LITERALS FOR I. L. OPERATION CODES */}
+46 
+47 \textcolor{comment}{/* RETMC:       CONTAINS COMMAND CODE (10) FOR RETMC COMMAND */}
+48 \textcolor{comment}{/* * */}
+49 \textcolor{comment}{/* ARGUMENTS    INDX     INDEX REGISTER NUMBER */}
+50 \textcolor{comment}{/* ** */}
+51     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{RETMCX_8c_a1df7a1e883bf88b48e994c157286d403}{retmc});
+52     \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(indx);
+53     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+54     \textcolor{keywordflow}{return} 0;
+55 \} \textcolor{comment}{/* retmcx\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}!il@{il}}
+\index{il@{il}!R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il\mbox{[}21\mbox{]}}\hypertarget{RETMCX_8c_a5524c41368cc6530a9c6a9ccab6163db}{}\label{RETMCX_8c_a5524c41368cc6530a9c6a9ccab6163db}
+
+
+Definition at line 18 of file R\+E\+T\+M\+C\+X.\+c.
+
+\index{R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}!il\+\_\+@{il\+\_\+}}
+\index{il\+\_\+@{il\+\_\+}!R\+E\+T\+M\+C\+X.\+c@{R\+E\+T\+M\+C\+X.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+}{il_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   il\+\_\+}\hypertarget{RETMCX_8c_acb533e729e10f4af15dcc628e44f6a16}{}\label{RETMCX_8c_acb533e729e10f4af15dcc628e44f6a16}

@@ -1,0 +1,114 @@
+\hypertarget{FLOINV_8c}{}\section{F\+L\+O\+I\+N\+V.\+c File Reference}
+\label{FLOINV_8c}\index{F\+L\+O\+I\+N\+V.\+c@{F\+L\+O\+I\+N\+V.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for F\+L\+O\+I\+N\+V.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{FLOINV_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{FLOINV_8c_acfa6a181235243e80067e209e4b345b4}{floinv\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a9cae3e36ae5e63785447451b6081dc98}{sc}, doublereal $\ast$flo, integer $\ast$\hyperlink{UTILTY_8c_abdc936055e6863ee32f47ab3666ef718}{iseg})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{F\+L\+O\+I\+N\+V.\+c@{F\+L\+O\+I\+N\+V.\+c}!floinv\+\_\+@{floinv\+\_\+}}
+\index{floinv\+\_\+@{floinv\+\_\+}!F\+L\+O\+I\+N\+V.\+c@{F\+L\+O\+I\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{floinv\+\_\+(doublereal $\ast$u, doublereal $\ast$sc, doublereal $\ast$flo, integer $\ast$iseg)}{floinv_(doublereal *u, doublereal *sc, doublereal *flo, integer *iseg)}}]{\setlength{\rightskip}{0pt plus 5cm}int floinv\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{sc, }
+\item[{doublereal $\ast$}]{flo, }
+\item[{integer $\ast$}]{iseg}
+\end{DoxyParamCaption}
+)}\hypertarget{FLOINV_8c_acfa6a181235243e80067e209e4b345b4}{}\label{FLOINV_8c_acfa6a181235243e80067e209e4b345b4}
+
+
+Definition at line 17 of file F\+L\+O\+I\+N\+V.\+c.
+
+
+
+References f, and sc.
+
+
+
+Referenced by gencrv\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} integer nn, iarc, junc, locarc, locseg, locflo, numarc, numseg;
+21 
+22 \textcolor{comment}{/* ---     PURPOSE IS TO CONVERT A COONS PARAMETER U */}
+23 \textcolor{comment}{/* ---     INTO A FLOW VALUE FLO AND SEGMENT NUMBER ISEG */}
+24 \textcolor{comment}{/* ---     ON A GIVEN FLOW CURVE SC. */}
+25 \textcolor{comment}{/* ---     PRESENT ROUTINE ONLY WORKS FOR INTEGRAL U */}
+26 
+27     \textcolor{comment}{/* Parameter adjustments */}
+28     --\hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc};
+29 
+30     \textcolor{comment}{/* Function Body */}
+31     numseg = (integer) \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[8];
+32     \textcolor{keywordflow}{if} (numseg > 0) \{
+33     \textcolor{keywordflow}{goto} L10;
+34     \}
+35 \textcolor{comment}{/* ---     CURVE HAS NO FLOW STRUCTURE, SET FLO TO U */}
+36     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = *flo;
+37     *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 0;
+38     \textcolor{keywordflow}{goto} L999;
+39 
+40 L10:
+41     locseg = (integer) (\hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[9] - 5.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+42 \textcolor{comment}{/* ---     FIRST SEARCH FOR A SEGMENT NUMBER */}
+43     *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 1;
+44 L20:
+45     \textcolor{keywordflow}{if} (*\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} >= numseg) \{
+46     \textcolor{keywordflow}{goto} L40;
+47     \}
+48     locseg += 4;
+49     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} < \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[locseg + 1]) \{
+50     \textcolor{keywordflow}{goto} L40;
+51     \}
+52     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} <= \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[locseg + 2]) \{
+53     \textcolor{keywordflow}{goto} L40;
+54     \}
+55     ++(*iseg);
+56     \textcolor{keywordflow}{goto} L20;
+57 
+58 L40:
+59 \textcolor{comment}{/* ---     NOW DETERMINE THE FLOW VALUE WITHIN THIS SEGMENT */}
+60     junc = (integer) (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+61     numarc = (integer) \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[4];
+62     iarc = junc + 1;
+63     \textcolor{keywordflow}{if} (junc >= numarc) \{
+64     iarc = numarc;
+65     \}
+66     locarc = (integer) (\hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[7] + (iarc - 1 << 2));
+67     nn = 1;
+68     locflo = (integer) \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[locarc];
+69     \textcolor{keywordflow}{if} (junc >= numarc) \{
+70     nn = (integer) \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[locarc + 1];
+71     \}
+72     locflo += nn - 1 << 2;
+73     *flo = \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[locflo];
+74 L999:
+75     \textcolor{keywordflow}{return} 0;
+76 \} \textcolor{comment}{/* floinv\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FLOINV_8c_acfa6a181235243e80067e209e4b345b4_icgraph}
+\end{center}
+\end{figure}
+
+

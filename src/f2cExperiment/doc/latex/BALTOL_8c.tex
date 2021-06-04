@@ -1,0 +1,138 @@
+\hypertarget{BALTOL_8c}{}\section{B\+A\+L\+T\+O\+L.\+c File Reference}
+\label{BALTOL_8c}\index{B\+A\+L\+T\+O\+L.\+c@{B\+A\+L\+T\+O\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+A\+L\+T\+O\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{BALTOL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BALTOL_8c_af820aa16a66a83ae065766e1602f7e73}{baltol\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$\hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, doublereal $\ast$\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, integer $\ast$iok)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+A\+L\+T\+O\+L.\+c@{B\+A\+L\+T\+O\+L.\+c}!baltol\+\_\+@{baltol\+\_\+}}
+\index{baltol\+\_\+@{baltol\+\_\+}!B\+A\+L\+T\+O\+L.\+c@{B\+A\+L\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{baltol\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$dist, doublereal $\ast$tol, integer $\ast$iok)}{baltol_(doublereal *r__, doublereal *side, doublereal *tc, doublereal *rad, doublereal *td, doublereal *dist, doublereal *tol, integer *iok)}}]{\setlength{\rightskip}{0pt plus 5cm}int baltol\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{tc, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{doublereal $\ast$}]{td, }
+\item[{doublereal $\ast$}]{dist, }
+\item[{doublereal $\ast$}]{tol, }
+\item[{integer $\ast$}]{iok}
+\end{DoxyParamCaption}
+)}\hypertarget{BALTOL_8c_af820aa16a66a83ae065766e1602f7e73}{}\label{BALTOL_8c_af820aa16a66a83ae065766e1602f7e73}
+
+
+Definition at line 17 of file B\+A\+L\+T\+O\+L.\+c.
+
+
+
+References dotv\+\_\+(), flipck, i\+\_\+\+\_\+, r\+\_\+\+\_\+, and st.
+
+
+
+Referenced by balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Initialized data */}
+22 
+23     \textcolor{keyword}{static} doublereal smal = 1e-22;
+24     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_a4f8565d2426d7c015c852031ba692178}{flipck} = .99995;
+25 
+26     \textcolor{comment}{/* Builtin functions */}
+27     \textcolor{keywordtype}{double} sqrt(doublereal);
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+31     \textcolor{keyword}{static} doublereal \hyperlink{APT053_8c_a6a2301d903a8a0cd60900232c4f2d69a}{st}[3], fac, ang;
+32     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(doublereal *, doublereal *, doublereal *
+33         );
+34     \textcolor{keyword}{static} doublereal stlen;
+35 
+36 \textcolor{comment}{/*           /-PURPOSE IS TO VERIFY THAT CUTTER IS WITHIN TOLERANCE OF */}
+37 \textcolor{comment}{/*           /-SURFACE AT THIS POINT */}
+38 \textcolor{comment}{/*           /-IOK=0 IF IT IS AND SET TO NON-ZERO VALUE OTHERWISE */}
+39 
+40     \textcolor{comment}{/* Parameter adjustments */}
+41     --td;
+42     --tc;
+43     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+44 
+45     \textcolor{comment}{/* Function Body */}
+46 
+47     fac = *side * *rad;
+48     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+49 \textcolor{comment}{/* L10: */}
+50     st[i\_\_ - 1] = tc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} * td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - fac * 
+      \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_ + 
+51         28];
+52     \}
+53     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&stlen, st, st);
+54     *iok = 0;
+55 \textcolor{comment}{/*            /-IF STLEN IS VERY SMALL, ACCEPT THIS RESULT */}
+56     \textcolor{keywordflow}{if} (stlen < smal) \{
+57     \textcolor{keywordflow}{goto} L999;
+58     \}
+59     stlen = sqrt(stlen);
+60     *iok = 1;
+61 \textcolor{comment}{/*            /-IF STLEN EXCEEDS TOLERANCE, DO NOT ACCEPT */}
+62     \textcolor{keywordflow}{if} (stlen > *\hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}) \{
+63     \textcolor{keywordflow}{goto} L999;
+64     \}
+65 \textcolor{comment}{/*            /-MEASURE ANGLE FROM NORMAL TO ST */}
+66     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+67 \textcolor{comment}{/* L20: */}
+68     st[i\_\_ - 1] = tc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} * td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+69     \}
+70     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&stlen, st, st);
+71     \textcolor{keywordflow}{if} (stlen < smal) \{
+72     \textcolor{keywordflow}{goto} L999;
+73     \}
+74     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&ang, st, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+75     ang = ang / sqrt(stlen) * *side;
+76     *iok = 2;
+77 \textcolor{comment}{/*            /-VECTOR LINEUP IS REQUIRED ONLY FOR NON ZERO RADIUS */}
+78     \textcolor{keywordflow}{if} (*rad > smal && ang < flipck) \{
+79     \textcolor{keywordflow}{goto} L999;
+80     \}
+81     *iok = 0;
+82 L999:
+83     \textcolor{keywordflow}{return} 0;
+84 \} \textcolor{comment}{/* baltol\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{BALTOL_8c_af820aa16a66a83ae065766e1602f7e73_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALTOL_8c_af820aa16a66a83ae065766e1602f7e73_icgraph}
+\end{center}
+\end{figure}
+
+

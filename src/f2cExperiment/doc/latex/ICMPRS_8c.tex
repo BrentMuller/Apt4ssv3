@@ -1,0 +1,1094 @@
+\hypertarget{ICMPRS_8c}{}\section{I\+C\+M\+P\+R\+S.\+c File Reference}
+\label{ICMPRS_8c}\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+C\+M\+P\+R\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{ICMPRS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ICMPRS_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1}~\hyperlink{TSSMIL_8c_a90cb1ad7bdad1d33f36d4ff1d0975969}{modx\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1}~\hyperlink{TWOARG_8c_a32a4a134d3ab3577d788e459ac052a95}{iltext\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1}~\hyperlink{SSV3_8c_a7e9dcb1b858320e2072e1096415bb471}{outbuf\+\_\+}
+\item 
+\#define \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}~((integer $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1} + 1)
+\item 
+\#define \hyperlink{ICMPRS_8c_a0f35da9763409d42058ac1bbdcffee4b}{fcn}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 34)
+\item 
+\#define \hyperlink{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}{real\+\_\+\+\_\+}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 20)
+\item 
+\#define \hyperlink{ICMPRS_8c_abb452686968e48b67397da5f97445f5b}{bool}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 22)
+\item 
+\#define \hyperlink{ICMPRS_8c_a6f6874a6df52419012319261aec60a6f}{proced}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 36)
+\item 
+\#define \hyperlink{ICMPRS_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\item 
+\#define \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 4)
+\item 
+\#define \hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 3)
+\item 
+\#define \hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a727a9e7abb817d21bac6d7e622bd87b1}{iltext\+\_\+1} + 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ICMPRS_8c_afadc31b441f2fde31b54f9f99f4855c9}{icmprs\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{ICMPRS_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{ICMPRS_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{ICMPRS_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{ICMPRS_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{ICMPRS_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{ICMPRS_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{ICMPRS_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{ICMPRS_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{ICMPRS_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{ICMPRS_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_a0145643782bea8ee868ddb5913d5ecc5}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{ICMPRS_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{ICMPRS_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_af04ca9ebb0c1b0f30b963ad86ef5342c}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_aa8cbd70620a3544d1f38406483f22bdd}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_abd1eef3c1b001e65bada11247921ce11}{modx} \mbox{[}32\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_a37c1aa9474bc7bfbb0168cfb54a640b0}{modx\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_a2cd599a0a65171bbfd166ff31c5d45b1}{iltext} \mbox{[}94\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_a1c7b4980feb90dee2eba4a9e1759bb5c}{iltext\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{ICMPRS_8c_a7f7d8af4c4adeadbb1c7f6c38ab229d4}{moduli\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ICMPRS_8c_ad949091e205c2dbf743270f10efaacfb}{pagpak}\\
+\>integer \hyperlink{ICMPRS_8c_aaf460a324a841afc65907fb2ff37f221}{isc}\\
+\>integer \hyperlink{ICMPRS_8c_a5d0aa317407eead95c0279781416a7d3}{iscarr}\\
+\>integer \hyperlink{ICMPRS_8c_ad0232959d4df30978c73f10a44c8ed87}{icform}\\
+\>integer \hyperlink{ICMPRS_8c_a1238df502a5c16cd6b016fe34f8ccc6f}{ifloat}\\
+\>integer \hyperlink{ICMPRS_8c_aa7a8a40e29dee4cf2a1377bc9164604c}{icom}\\
+\>integer \hyperlink{ICMPRS_8c_a4b0225c88e41b966cb9adb70eb748490}{macwds}\\
+\>integer \hyperlink{ICMPRS_8c_a12f88df5c9c201e4677acc4b09ad4d83}{ppwrds}\\
+\>logical \hyperlink{ICMPRS_8c_a41dd91d18b6174f346541f62020fcf70}{macflg}\\
+\>logical \hyperlink{ICMPRS_8c_aa446796435b12f32aaf1f7c7d7fd35a1}{labflg}\\
+\>logical \hyperlink{ICMPRS_8c_a406e859663da9aacc49aca44ef7342c0}{rsvflg}\\
+\>integer \hyperlink{ICMPRS_8c_af846455c708d097eb6a07ce3135ddf32}{lpage}\\
+\>integer \hyperlink{ICMPRS_8c_ab4b9001e3fd07481a9b32b25a1e165cc}{buffer} \mbox{[}256\mbox{]}\\
+\>integer \hyperlink{ICMPRS_8c_a7735c088b87c9aa80abc8effe49a54bd}{labbuf} \mbox{[}256\mbox{]}\\
+\>integer \hyperlink{ICMPRS_8c_a06f0315da6fa972d9844c64cf881a126}{ibuf}\\
+\>integer \hyperlink{ICMPRS_8c_a0636e49faa67ec6d06404963bd2c1e26}{ilbuf}\\
+\>integer \hyperlink{ICMPRS_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}{pppage}\\
+\>integer \hyperlink{ICMPRS_8c_ad789f08e68f3bd2d0487fd79de6a873b}{mcpage}\\
+\} \hyperlink{ICMPRS_8c_a6577233ccc93771d01817924703e518f}{outbuf\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{ICMPRS_8c_ad427ecb11b7ed998e0c614a47da76f4d}{c\+\_\+\+\_\+7} = 7
+\item 
+static integer \hyperlink{ICMPRS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{ICMPRS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\+\_\+\+\_\+9} = 9
+\item 
+static integer \hyperlink{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{ICMPRS_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{ICMPRS_8c_ac1b28bfdd6ccb89299c47817c082755e}{c\+\_\+\+\_\+5} = 5
+\item 
+static integer \hyperlink{ICMPRS_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\+\_\+\+\_\+4} = 4
+\item 
+static integer \hyperlink{ICMPRS_8c_a280863ace4c11cd9695eac1046336a9c}{c\+\_\+\+\_\+38} = 38
+\item 
+static integer \hyperlink{ICMPRS_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!bool@{bool}}
+\index{bool@{bool}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{bool}{bool}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bool~((integer $\ast$)\&{\bf modx\+\_\+1} + 22)}\hypertarget{ICMPRS_8c_abb452686968e48b67397da5f97445f5b}{}\label{ICMPRS_8c_abb452686968e48b67397da5f97445f5b}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{ICMPRS_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{ICMPRS_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{ICMPRS_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{ICMPRS_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 34 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!fcn@{fcn}}
+\index{fcn@{fcn}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{fcn}{fcn}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fcn~((integer $\ast$)\&{\bf code\+\_\+1} + 34)}\hypertarget{ICMPRS_8c_a0f35da9763409d42058ac1bbdcffee4b}{}\label{ICMPRS_8c_a0f35da9763409d42058ac1bbdcffee4b}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ic@{ic}}
+\index{ic@{ic}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ic~((integer $\ast$)\&{\bf outbuf\+\_\+1} + 1)}\hypertarget{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{}\label{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}
+
+
+Referenced by bad\+\_\+(), comptw\+\_\+(), ctrans\+\_\+(), gencrv\+\_\+(), getsca\+\_\+(), icmprs\+\_\+(), linear\+\_\+(), lodpch\+\_\+(), parnom\+\_\+0\+\_\+(), print\+\_\+(), puncha\+\_\+0\+\_\+(), punchc\+\_\+0\+\_\+(), sctra\+\_\+(), smooth\+\_\+(), sspict\+\_\+(), and sstra\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!iltext\+\_\+1@{iltext\+\_\+1}}
+\index{iltext\+\_\+1@{iltext\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{iltext\+\_\+1}{iltext_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iltext\+\_\+1~{\bf iltext\+\_\+}}\hypertarget{ICMPRS_8c_a727a9e7abb817d21bac6d7e622bd87b1}{}\label{ICMPRS_8c_a727a9e7abb817d21bac6d7e622bd87b1}
+
+
+Definition at line 46 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{ICMPRS_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{ICMPRS_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 52 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{ICMPRS_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{ICMPRS_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!modx\+\_\+1@{modx\+\_\+1}}
+\index{modx\+\_\+1@{modx\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+1}{modx_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modx\+\_\+1~{\bf modx\+\_\+}}\hypertarget{ICMPRS_8c_a0827be493b63e8b953d7efdff31266fe}{}\label{ICMPRS_8c_a0827be493b63e8b953d7efdff31266fe}
+
+
+Definition at line 40 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{ICMPRS_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{ICMPRS_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!optext@{optext}}
+\index{optext@{optext}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{optext}{optext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define optext~((integer $\ast$)\&{\bf iltext\+\_\+1} + 3)}\hypertarget{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{}\label{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!outbuf\+\_\+1@{outbuf\+\_\+1}}
+\index{outbuf\+\_\+1@{outbuf\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{outbuf\+\_\+1}{outbuf_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define outbuf\+\_\+1~{\bf outbuf\+\_\+}}\hypertarget{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{}\label{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}
+
+
+Definition at line 60 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!proced@{proced}}
+\index{proced@{proced}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{proced}{proced}}]{\setlength{\rightskip}{0pt plus 5cm}\#define proced~((integer $\ast$)\&{\bf code\+\_\+1} + 36)}\hypertarget{ICMPRS_8c_a6f6874a6df52419012319261aec60a6f}{}\label{ICMPRS_8c_a6f6874a6df52419012319261aec60a6f}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!real\+\_\+\+\_\+@{real\+\_\+\+\_\+}}
+\index{real\+\_\+\+\_\+@{real\+\_\+\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{real\+\_\+\+\_\+}{real__}}]{\setlength{\rightskip}{0pt plus 5cm}\#define real\+\_\+\+\_\+~((integer $\ast$)\&{\bf modx\+\_\+1} + 20)}\hypertarget{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}{}\label{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!textin@{textin}}
+\index{textin@{textin}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{textin}{textin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define textin~((integer $\ast$)\&{\bf iltext\+\_\+1} + 4)}\hypertarget{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{}\label{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!tpntrx@{tpntrx}}
+\index{tpntrx@{tpntrx}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{tpntrx}{tpntrx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tpntrx~((integer $\ast$)\&{\bf iltext\+\_\+1} + 2)}\hypertarget{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{}\label{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}
+
+
+Referenced by icmprs\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!icmprs\+\_\+@{icmprs\+\_\+}}
+\index{icmprs\+\_\+@{icmprs\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{icmprs\+\_\+(void)}{icmprs_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int icmprs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ICMPRS_8c_afadc31b441f2fde31b54f9f99f4855c9}{}\label{ICMPRS_8c_afadc31b441f2fde31b54f9f99f4855c9}
+
+
+Definition at line 89 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+References alarm\+\_\+(), binchk\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, c\+\_\+\+\_\+38, c\+\_\+\+\_\+4, c\+\_\+\+\_\+5, c\+\_\+\+\_\+7, c\+\_\+\+\_\+8, c\+\_\+\+\_\+9, cilout\+\_\+(), fcn, help\+\_\+(), i\+\_\+\+\_\+, ic, j, m, mode, modulo, n, nametb\+\_\+1, optext, outbuf\+\_\+1, proced, real\+\_\+\+\_\+, rlsbuf\+\_\+(), seqnum, textin, and tpntrx.
+
+
+
+Referenced by comprs\+\_\+(), and iprlog\+\_\+().
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{comment}{/* Initialized data */}
+92 
+93     \textcolor{keyword}{static} integer blksiz = 128;
+94     \textcolor{keyword}{static} logical operck = FALSE\_;
+95     \textcolor{keyword}{static} logical seqflg = FALSE\_;
+96 
+97     \textcolor{comment}{/* System generated locals */}
+98     integer i\_\_1;
+99 
+100     \textcolor{comment}{/* Local variables */}
+101     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+102 \textcolor{preprocessor}{#define ic ((integer *)&outbuf\_1 + 1)}
+103     \textcolor{keyword}{static} integer jc, im;
+104 \textcolor{preprocessor}{#define fcn ((integer *)&code\_1 + 34)}
+105     \textcolor{keyword}{static} integer siz;
+106 \textcolor{preprocessor}{#define real\_\_ ((integer *)&modx\_1 + 20)}
+107     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+108     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}(\textcolor{keywordtype}{void});
+109     \textcolor{keyword}{static} integer left;
+110 \textcolor{preprocessor}{#define bool ((integer *)&modx\_1 + 22)}
+111     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+112         , ftnlen);
+113     \textcolor{keyword}{static} integer itext;
+114     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(integer *);
+115     \textcolor{keyword}{static} integer labsav[5];
+116 \textcolor{preprocessor}{#define proced ((integer *)&code\_1 + 36)}
+117 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+118     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(integer *, integer *, integer *), 
+119         \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}(\textcolor{keywordtype}{void});
+120     \textcolor{keyword}{static} integer caltyp, \hyperlink{LABCON_8c_addf0eb3e133a4cd9fcb58f8ef26982ec}{seqnum};
+121 \textcolor{preprocessor}{#define textin ((integer *)&iltext\_1 + 4)}
+122     \textcolor{keyword}{static} integer pronum;
+123 \textcolor{preprocessor}{#define optext ((integer *)&iltext\_1 + 3)}
+124 \textcolor{preprocessor}{#define tpntrx ((integer *)&iltext\_1 + 2)}
+125 
+126 
+127 
+128 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+129 
+130 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+131 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+132 
+133 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+134 
+135 
+136 
+137 
+138 
+139 
+140 
+141 \textcolor{comment}{/* FCN:         (1)=CODE CLASS 18000,(2)=NAMTBL INDEX OF 'FCN   ' */}
+142 \textcolor{comment}{/* PROCED:      (1)=CODE CLASS 19000,(2)=NAMTBL INDEX OF 'PROCED' */}
+143 
+144 \textcolor{comment}{/*       17.    MODE CODES */}
+145 
+146 \textcolor{comment}{/* REAL:        MODE CODE (21) FOR A SCALAR */}
+147 \textcolor{comment}{/* BOOL:        MODE CODE (23) FOR BOOLEAN TYPE */}
+148 
+149 \textcolor{comment}{/*       19.    INTERMEDIATE LANGUAGE TEXT */}
+150 
+151 \textcolor{comment}{/* TPNTRX:      POINTER TO LAST TEXTIN ENTRY */}
+152 \textcolor{comment}{/* OPTEXT:      CONTAINS COMMAND CODE FOR CURRENT I.L. COMMAND */}
+153 \textcolor{comment}{/* TEXTIN:      STORAGE FOR CURRENTLY GENERATED I.L. COMMAND ARGUM.LIST */}
+154 
+155 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+156 
+157 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+158 
+159 \textcolor{comment}{/*       34.    COMMON BLOCK FOR INTERPRETIVE C.I.L. OUTPUT */}
+160 
+161 \textcolor{comment}{/* ICOM:        NUMBER OF WORDS OF BLANK COMMON REQUIRED BY LDA */}
+162 \textcolor{comment}{/* MACFLG:      TRUE WHEN MACRO PROCESSING IN EFFECT (INTERPRETER) */}
+163 \textcolor{comment}{/* LABFLG:      INDICATES I.L. COMMAND IS LABEL (INTERPRETER) */}
+164 \textcolor{comment}{/* RSVFLG:      TRUE IF I.L. COMMAND IS A RESRV (INTERPRETER) */}
+165 \textcolor{comment}{/* IBUF:        NUMBER OF RECORDS IN BUFFER ARRAY */}
+166 \textcolor{comment}{/* PPPAGE:      PAGE NUMBER OF PART PROGRAMMING TEXT (INTERPRETER) */}
+167 \textcolor{comment}{/* MCPAGE:      NUMBER OF PAGES OF MACRO I.L. (INTERPRETER) */}
+168 \textcolor{comment}{/* IC:          NUMBER OF SCALARS IN BLOCK 1 OF CANONICAL FORMS */}
+169 
+170 
+171 
+172 \textcolor{comment}{/* * */}
+173 \textcolor{comment}{/* ** */}
+174 \textcolor{comment}{/* L100: */}
+175     \textcolor{keywordflow}{if} (seqflg) \{
+176     \textcolor{keywordflow}{goto} L510;
+177     \}
+178 L120:
+179     \textcolor{keywordflow}{switch} (*\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}) \{
+180     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L300;
+181     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L300;
+182     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L300;
+183     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L300;
+184     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L300;
+185     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L400;
+186     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L130;
+187     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L200;
+188     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L500;
+189     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L200;
+190     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L600;
+191     \textcolor{keywordflow}{case} 12:  \textcolor{keywordflow}{goto} L700;
+192     \textcolor{keywordflow}{case} 13:  \textcolor{keywordflow}{goto} L800;
+193     \textcolor{keywordflow}{case} 14:  \textcolor{keywordflow}{goto} L200;
+194     \textcolor{keywordflow}{case} 15:  \textcolor{keywordflow}{goto} L900;
+195     \textcolor{keywordflow}{case} 16:  \textcolor{keywordflow}{goto} L200;
+196     \textcolor{keywordflow}{case} 17:  \textcolor{keywordflow}{goto} L1000;
+197     \textcolor{keywordflow}{case} 18:  \textcolor{keywordflow}{goto} L1100;
+198     \textcolor{keywordflow}{case} 19:  \textcolor{keywordflow}{goto} L1200;
+199     \textcolor{keywordflow}{case} 20:  \textcolor{keywordflow}{goto} L200;
+200     \textcolor{keywordflow}{case} 21:  \textcolor{keywordflow}{goto} L1300;
+201     \}
+202 
+203 \textcolor{comment}{/* ...    ENTRY - NO OUTPUT */}
+204 
+205 L130:
+206     \textcolor{keywordflow}{return} 0;
+207 
+208 \textcolor{comment}{/* ...     NO SPECIAL TREATMENT REQUIRED - OUTPUT USING CILOUT */}
+209 
+210 L200:
+211     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}, \hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx}, \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin});
+212     \textcolor{keywordflow}{return} 0;
+213 
+214 \textcolor{comment}{/* ...    LABEL - STORE I.L. */}
+215 
+216 L400:
+217     labsav[0] = *\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext};
+218     labsav[2] = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+219 
+220 \textcolor{comment}{/* ...     RELEASE I.L. BUFFER IF NECCESSARY */}
+221 
+222     \textcolor{keywordflow}{if} (\hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.ibuf + 2 > 254) \{
+223     \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}();
+224     \}
+225     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.labflg = TRUE\_;
+226     \textcolor{keywordflow}{if} (\hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.macflg) \{
+227     \textcolor{keywordflow}{goto} L410;
+228     \}
+229     labsav[3] = \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.pppage + 1;
+230     \textcolor{keywordflow}{goto} L420;
+231 
+232 \textcolor{comment}{/* ...     MACRO PROCESSING IN PROGRESS */}
+233 
+234 L410:
+235     labsav[3] = -\hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.mcpage - 1;
+236 L420:
+237     labsav[1] = 3;
+238     labsav[4] = \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.ibuf + 3;
+239     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(labsav, &labsav[1], &labsav[2]);
+240     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.labflg = FALSE\_;
+241     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(&\hyperlink{ICMPRS_8c_ad427ecb11b7ed998e0c614a47da76f4d}{c\_\_7}, &\hyperlink{ICMPRS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin});
+242     \textcolor{keywordflow}{return} 0;
+243 
+244 \textcolor{comment}{/* ...     SEQNCE COMMAND - STORE I.L. AND SET SEQFLG */}
+245 
+246 L500:
+247     seqnum = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+248     seqflg = TRUE\_;
+249     \textcolor{keywordflow}{return} 0;
+250 
+251 \textcolor{comment}{/* ...     RESRV COMMAND - INCREASE APPROPRIATE COUNT AND OUTPUT */}
+252 
+253 L700:
+254     mode = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[1];
+255     siz = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[2] + 1;
+256     n = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[3];
+257     im = 1;
+258     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.rsvflg = TRUE\_;
+259 \textcolor{comment}{/*        MODE NON-SUBCRIPTED SCALAR */}
+260     \textcolor{keywordflow}{if} (mode != *\hyperlink{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_} && mode != *\textcolor{keywordtype}{bool} || n != 1) \{
+261     \textcolor{keywordflow}{goto} L701;
+262     \}
+263     im = 0;
+264     j = 1;
+265     \textcolor{keywordflow}{goto} L710;
+266 \textcolor{comment}{/*        MODE SUBSRIPTED SCALAR. */}
+267 L701:
+268     \textcolor{keywordflow}{if} (mode == *\hyperlink{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_} && n != 1) \{
+269     j = 2;
+270     \}
+271     \textcolor{keywordflow}{if} (mode == *\textcolor{keywordtype}{bool} && n != 1) \{
+272     j = 2;
+273     \}
+274 \textcolor{comment}{/*        MODE INTERNALLY GENERATED VARIABLE. */}
+275     \textcolor{keywordflow}{if} (mode != 0) \{
+276     \textcolor{keywordflow}{goto} L705;
+277     \}
+278     j = 4;
+279     --siz;
+280     im = 0;
+281 \textcolor{comment}{/*        MODE BLANK COMMON. */}
+282 L705:
+283     \textcolor{keywordflow}{if} (mode < 0) \{
+284     \textcolor{keywordflow}{goto} L760;
+285     \}
+286 \textcolor{comment}{/*        MODE NON-SCALAR */}
+287     \textcolor{keywordflow}{if} (mode > 0 && mode != *\hyperlink{ICMPRS_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_} && mode != *\textcolor{keywordtype}{bool}) \{
+288     j = 3;
+289     \}
+290 \textcolor{comment}{/* ...     UP POINTER */}
+291 L710:
+292     jc = \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}[j - 1] + n * siz + im;
+293 \textcolor{comment}{/*        WILL FORM FIT IN CURRENT BLOCK. */}
+294     \textcolor{keywordflow}{if} (\hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}[j - 1] / blksiz == jc / blksiz) \{
+295     \textcolor{keywordflow}{goto} L720;
+296     \}
+297 \textcolor{comment}{/*        NO, SPLIT FORM IF INDEXED. */}
+298     left = blksiz - \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}[j - 1] % blksiz;
+299 \textcolor{comment}{/*        OBTAIN NO. OF ELEMENTS WHICH WILL FIT IN REST OF BLOCK */}
+300     m = (left - 1) / siz;
+301 \textcolor{comment}{/*        ENTIRE ARRAY CAN NOT FIT */}
+302     \textcolor{keywordflow}{if} (m == n) \{
+303     --\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+304     \}
+305 \textcolor{comment}{/*        INCREASE POINTER, DECREASE  NO. OF ELEMENTS, ITERATE */}
+306     \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}[j - 1] += left;
+307     n -= \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+308     \textcolor{keywordflow}{goto} L710;
+309 L720:
+310     \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}[j - 1] = jc;
+311 
+312 \textcolor{comment}{/* ...     OUTPUT IS TO EXFIL1 */}
+313 
+314 \textcolor{comment}{/* .....   INTERNALLY GENERATED VARIABLES */}
+315 L730:
+316     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}, \hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx}, \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin});
+317     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.rsvflg = FALSE\_;
+318     \textcolor{keywordflow}{return} 0;
+319 
+320 \textcolor{comment}{/* ....    BLANK COMMON */}
+321 
+322 L760:
+323     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.icom += \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[2];
+324     \textcolor{keywordflow}{goto} L730;
+325 
+326 \textcolor{comment}{/* ...     CALL COMMAND - FORM CORRECT PROCEDURE NUMBER */}
+327 
+328 L1100:
+329     itext = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0];
+330     \textcolor{keywordflow}{goto} L1110;
+331 
+332 \textcolor{comment}{/* ...     CHECK ARGUMENT LIST FOR PROCEDURE INDICES */}
+333 
+334 L1120:
+335     operck = TRUE\_;
+336     j = *\hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 1;
+337     i\_\_1 = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+338     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; i\_\_ += 2) \{
+339     \textcolor{keywordflow}{if} (\hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[i\_\_ - 1] != 4) \{
+340         \textcolor{keywordflow}{goto} L1130;
+341     \}
+342 
+343 \textcolor{comment}{/* ...     THIS ARGUMENT IS A PROCEDURE INDEX */}
+344 
+345     itext = \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+346 
+347 \textcolor{comment}{/* ...     FORM PROCEDURE NUMBER. */}
+348 \textcolor{comment}{/* ...     ALL PROCEDURES HAVE A UNIQUE MODE, THEREFORE EACH PROCEDURE CAN */}
+349 \textcolor{comment}{/* ...     BE ASSIGNED A UNIQUE NUMBER.  THIS IS DONE IN ORDER THAT THE */}
+350 \textcolor{comment}{/* ...     EXECUTION PHASE CAN CALL A PROCEDURE BY NUMBER. */}
+351 
+352 L1110:
+353     pronum = \hyperlink{ICMPRS_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[itext - 1];
+354     caltyp = *\hyperlink{ICMPRS_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (pronum / *\hyperlink{ICMPRS_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo});
+355     pronum -= caltyp;
+356 
+357 \textcolor{comment}{/* ...     CALTYP IS THE CLASS OF THE PROCEDURE, AND SHOULD THEREFORE BE */}
+358 \textcolor{comment}{/* ...     EITHER PROCED OR FCN */}
+359 
+360     \textcolor{keywordflow}{if} (caltyp != \hyperlink{ICMPRS_8c_a6f6874a6df52419012319261aec60a6f}{proced}[0] && caltyp != \hyperlink{ICMPRS_8c_a0f35da9763409d42058ac1bbdcffee4b}{fcn}[0]) \{
+361         \textcolor{keywordflow}{goto} L9999;
+362     \}
+363     \textcolor{keywordflow}{if} (pronum < 500) \{
+364         \textcolor{keywordflow}{goto} L1125;
+365     \}
+366     pronum = itext + 1000;
+367 \textcolor{comment}{/* ...PRONUM IS NOW A POINTER TO THE PROCEDURE NUMBER */}
+368 
+369 \textcolor{comment}{/* ...     WAS THIS AN ARGUMENT */}
+370 
+371 L1125:
+372     \textcolor{keywordflow}{if} (! operck) \{
+373         \textcolor{keywordflow}{goto} L1140;
+374     \}
+375 
+376 \textcolor{comment}{/* ...     YES. STORE PROCEDURE NUMBER AND CONTINUE LOOP */}
+377 
+378     \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = pronum;
+379 L1130:
+380     ;
+381     \}
+382     operck = FALSE\_;
+383     \textcolor{keywordflow}{goto} L1150;
+384 
+385 \textcolor{comment}{/* ...     STORE PROCEDURE NUMBER AND START TO INSPECT ARGUMENT LIST */}
+386 
+387 L1140:
+388     \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin}[0] = pronum;
+389     \textcolor{keywordflow}{if} (*\hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} > 1) \{
+390     \textcolor{keywordflow}{goto} L1120;
+391     \}
+392 
+393 \textcolor{comment}{/* ...     OUTPUT I.L. */}
+394 
+395 
+396 
+397 \textcolor{comment}{/* ...     WAS THIS A CALL TO FINI. IF NOT RETURN */}
+398 
+399 L1160:
+400     \textcolor{keywordflow}{if} (pronum != 18) \{
+401     \textcolor{keywordflow}{goto} L200;
+402     \}
+403 
+404 \textcolor{comment}{/* ...     CALL WAS TO FINI. */}
+405 \textcolor{comment}{/* ...     FUTURE I.L. WILL BE MACRO TEXT. */}
+406 
+407     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext}, \hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx}, \hyperlink{ICMPRS_8c_a8a14a0becf00dde2a08b5d534fb604fc}{textin});
+408     \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}();
+409     \hyperlink{ICMPRS_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.macflg = TRUE\_;
+410     \textcolor{keywordflow}{return} 0;
+411 
+412 \textcolor{comment}{/* ...     LAST COMMAND WAS SEQUENCE, AND NOT OUTPUT. */}
+413 \textcolor{comment}{/* ...    IF THIS IS A LABEL COMMAND,OUTPUT THIS FIRST */}
+414 
+415 L510:
+416     \textcolor{keywordflow}{if} (*\hyperlink{ICMPRS_8c_a8b7066beec2cb450d69a75b8ae3d4868}{optext} == 6) \{
+417     \textcolor{keywordflow}{goto} L120;
+418     \}
+419     \hyperlink{CILOUT_8c_a948ad32ad5599a7997e5c0ae8ce15c50}{cilout\_}(&\hyperlink{ICMPRS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\_\_9}, &\hyperlink{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &seqnum);
+420     seqflg = FALSE\_;
+421     \textcolor{keywordflow}{goto} L120;
+422 
+423 \textcolor{comment}{/* ...     THE FOLLOWING CODE IS TO CHECK OPERANDS FOR THOSE WITH A */}
+424 \textcolor{comment}{/* ...     MODIFIER OF 1, FOLLOWED BY AN INTEGER CONSTANT INDEX. */}
+425 \textcolor{comment}{/* ...     THESE ARE TO BE CHANGED TO MODIFIER OF 5, FOLLOWED BY */}
+426 \textcolor{comment}{/* ...     THE BINARY NUMBER ITSELF */}
+427 
+428 
+429 \textcolor{comment}{/* ...     FADD,FSUB,FMPY,FDIV,FEXP */}
+430 
+431 L300:
+432     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+433     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+434     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_ac1b28bfdd6ccb89299c47817c082755e}{c\_\_5});
+435     \textcolor{keywordflow}{goto} L200;
+436 
+437 \textcolor{comment}{/* ...     CONJMP */}
+438 
+439 L600:
+440     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+441     \textcolor{keywordflow}{goto} L200;
+442 
+443 \textcolor{comment}{/* ...     CVTSUB */}
+444 
+445 L800:
+446     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_ac1b28bfdd6ccb89299c47817c082755e}{c\_\_5});
+447     \textcolor{keywordflow}{goto} L200;
+448 
+449 \textcolor{comment}{/* ...     ASNADD */}
+450 
+451 L900:
+452     \textcolor{keywordflow}{goto} L1120;
+453 
+454 
+455 \textcolor{comment}{/* ...     REPL */}
+456 
+457 L1000:
+458     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&\hyperlink{ICMPRS_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4});
+459     \textcolor{keywordflow}{goto} L200;
+460 
+461 \textcolor{comment}{/* ...     CALL */}
+462 
+463 L1150:
+464     j = *\hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 1;
+465     i\_\_1 = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+466     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; i\_\_ += 2) \{
+467 \textcolor{comment}{/* L1170: */}
+468     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&i\_\_);
+469     \}
+470     \textcolor{keywordflow}{goto} L1160;
+471 
+472 \textcolor{comment}{/* ...     MOVE */}
+473 
+474 L1200:
+475     j = *\hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} - 1;
+476     i\_\_1 = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+477     \textcolor{keywordflow}{for} (i\_\_ = 3; i\_\_ <= i\_\_1; i\_\_ += 2) \{
+478 \textcolor{comment}{/* L1210: */}
+479     \hyperlink{BINCHK_8c_af420c1aee5d2e6374faee893c86cb948}{binchk\_}(&i\_\_);
+480     \}
+481     \textcolor{keywordflow}{goto} L200;
+482 
+483 \textcolor{comment}{/* ...     HOLDAT STATEMENT */}
+484 
+485 L1300:
+486     j = 4;
+487     siz = (*\hyperlink{ICMPRS_8c_af2545616d2b08623559a6b38db18ad7d}{tpntrx} + 1) / 2;
+488     n = 1;
+489     im = 0;
+490     \textcolor{keywordflow}{goto} L710;
+491 
+492 \textcolor{comment}{/* ...     SUPPOSED PROCEDURE DOES NOT HAVE CLASS PROCED OR FCN */}
+493 
+494 L9999:
+495     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{ICMPRS_8c_a280863ace4c11cd9695eac1046336a9c}{c\_\_38}, &\hyperlink{ICMPRS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{ICMPRS_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"ICMPRS  "}, (ftnlen)8);
+496     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+497     \textcolor{keywordflow}{return} 0;
+498 \} \textcolor{comment}{/* icmprs\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ICMPRS_8c_afadc31b441f2fde31b54f9f99f4855c9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ICMPRS_8c_afadc31b441f2fde31b54f9f99f4855c9_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!buffer@{buffer}}
+\index{buffer@{buffer}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{buffer}{buffer}}]{\setlength{\rightskip}{0pt plus 5cm}integer buffer\mbox{[}256\mbox{]}}\hypertarget{ICMPRS_8c_ab4b9001e3fd07481a9b32b25a1e165cc}{}\label{ICMPRS_8c_ab4b9001e3fd07481a9b32b25a1e165cc}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{ICMPRS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 65 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ICMPRS_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 67 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_a5e7359f78743350865398325d9155f20}{}\label{ICMPRS_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 68 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}}
+\index{c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+38}{c__38}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+38 = 38\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_a280863ace4c11cd9695eac1046336a9c}{}\label{ICMPRS_8c_a280863ace4c11cd9695eac1046336a9c}
+
+
+Definition at line 71 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}}
+\index{c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+4}{c__4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+4 = 4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_ab195470f8c6d55e333ee709af09ba2d6}{}\label{ICMPRS_8c_ab195470f8c6d55e333ee709af09ba2d6}
+
+
+Definition at line 70 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+5@{c\+\_\+\+\_\+5}}
+\index{c\+\_\+\+\_\+5@{c\+\_\+\+\_\+5}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+5}{c__5}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+5 = 5\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_ac1b28bfdd6ccb89299c47817c082755e}{}\label{ICMPRS_8c_ac1b28bfdd6ccb89299c47817c082755e}
+
+
+Definition at line 69 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+7@{c\+\_\+\+\_\+7}}
+\index{c\+\_\+\+\_\+7@{c\+\_\+\+\_\+7}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+7}{c__7}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+7 = 7\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_ad427ecb11b7ed998e0c614a47da76f4d}{}\label{ICMPRS_8c_ad427ecb11b7ed998e0c614a47da76f4d}
+
+
+Definition at line 64 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{ICMPRS_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 72 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}}
+\index{c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+9}{c__9}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+9 = 9\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ICMPRS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{}\label{ICMPRS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}
+
+
+Definition at line 66 of file I\+C\+M\+P\+R\+S.\+c.
+
+
+
+Referenced by icmprs\+\_\+().
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{ICMPRS_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{ICMPRS_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!charst@{charst}}
+\index{charst@{charst}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{ICMPRS_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{ICMPRS_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{ICMPRS_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{ICMPRS_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{ICMPRS_8c_af04ca9ebb0c1b0f30b963ad86ef5342c}{}\label{ICMPRS_8c_af04ca9ebb0c1b0f30b963ad86ef5342c}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{ICMPRS_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{ICMPRS_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!code@{code}}
+\index{code@{code}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{ICMPRS_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{ICMPRS_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 31 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{ICMPRS_8c_aa8cbd70620a3544d1f38406483f22bdd}{}\label{ICMPRS_8c_aa8cbd70620a3544d1f38406483f22bdd}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ibuf@{ibuf}}
+\index{ibuf@{ibuf}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ibuf}{ibuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibuf}\hypertarget{ICMPRS_8c_a06f0315da6fa972d9844c64cf881a126}{}\label{ICMPRS_8c_a06f0315da6fa972d9844c64cf881a126}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!icform@{icform}}
+\index{icform@{icform}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{icform}{icform}}]{\setlength{\rightskip}{0pt plus 5cm}integer icform}\hypertarget{ICMPRS_8c_ad0232959d4df30978c73f10a44c8ed87}{}\label{ICMPRS_8c_ad0232959d4df30978c73f10a44c8ed87}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!icom@{icom}}
+\index{icom@{icom}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{icom}{icom}}]{\setlength{\rightskip}{0pt plus 5cm}integer icom}\hypertarget{ICMPRS_8c_aa7a8a40e29dee4cf2a1377bc9164604c}{}\label{ICMPRS_8c_aa7a8a40e29dee4cf2a1377bc9164604c}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{ICMPRS_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{ICMPRS_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{ICMPRS_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{ICMPRS_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ifloat@{ifloat}}
+\index{ifloat@{ifloat}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ifloat}{ifloat}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifloat}\hypertarget{ICMPRS_8c_a1238df502a5c16cd6b016fe34f8ccc6f}{}\label{ICMPRS_8c_a1238df502a5c16cd6b016fe34f8ccc6f}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ilbuf@{ilbuf}}
+\index{ilbuf@{ilbuf}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ilbuf}{ilbuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer ilbuf}\hypertarget{ICMPRS_8c_a0636e49faa67ec6d06404963bd2c1e26}{}\label{ICMPRS_8c_a0636e49faa67ec6d06404963bd2c1e26}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!iltext@{iltext}}
+\index{iltext@{iltext}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{iltext}{iltext}}]{\setlength{\rightskip}{0pt plus 5cm}integer iltext\mbox{[}94\mbox{]}}\hypertarget{ICMPRS_8c_a2cd599a0a65171bbfd166ff31c5d45b1}{}\label{ICMPRS_8c_a2cd599a0a65171bbfd166ff31c5d45b1}
+
+
+Definition at line 43 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!iltext\+\_\+@{iltext\+\_\+}}
+\index{iltext\+\_\+@{iltext\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{iltext\+\_\+}{iltext_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   iltext\+\_\+}\hypertarget{ICMPRS_8c_a1c7b4980feb90dee2eba4a9e1759bb5c}{}\label{ICMPRS_8c_a1c7b4980feb90dee2eba4a9e1759bb5c}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{ICMPRS_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{ICMPRS_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{ICMPRS_8c_a373010e90fb1cd08bf263255a111920d}{}\label{ICMPRS_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!isc@{isc}}
+\index{isc@{isc}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{isc}{isc}}]{\setlength{\rightskip}{0pt plus 5cm}integer isc}\hypertarget{ICMPRS_8c_aaf460a324a841afc65907fb2ff37f221}{}\label{ICMPRS_8c_aaf460a324a841afc65907fb2ff37f221}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!iscarr@{iscarr}}
+\index{iscarr@{iscarr}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{iscarr}{iscarr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iscarr}\hypertarget{ICMPRS_8c_a5d0aa317407eead95c0279781416a7d3}{}\label{ICMPRS_8c_a5d0aa317407eead95c0279781416a7d3}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!labbuf@{labbuf}}
+\index{labbuf@{labbuf}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{labbuf}{labbuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer labbuf\mbox{[}256\mbox{]}}\hypertarget{ICMPRS_8c_a7735c088b87c9aa80abc8effe49a54bd}{}\label{ICMPRS_8c_a7735c088b87c9aa80abc8effe49a54bd}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!labflg@{labflg}}
+\index{labflg@{labflg}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{labflg}{labflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical labflg}\hypertarget{ICMPRS_8c_aa446796435b12f32aaf1f7c7d7fd35a1}{}\label{ICMPRS_8c_aa446796435b12f32aaf1f7c7d7fd35a1}
+
+
+Definition at line 56 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!lpage@{lpage}}
+\index{lpage@{lpage}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{lpage}{lpage}}]{\setlength{\rightskip}{0pt plus 5cm}integer lpage}\hypertarget{ICMPRS_8c_af846455c708d097eb6a07ce3135ddf32}{}\label{ICMPRS_8c_af846455c708d097eb6a07ce3135ddf32}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!macflg@{macflg}}
+\index{macflg@{macflg}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{macflg}{macflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical macflg}\hypertarget{ICMPRS_8c_a41dd91d18b6174f346541f62020fcf70}{}\label{ICMPRS_8c_a41dd91d18b6174f346541f62020fcf70}
+
+
+Definition at line 56 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!macwds@{macwds}}
+\index{macwds@{macwds}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{macwds}{macwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer macwds}\hypertarget{ICMPRS_8c_a4b0225c88e41b966cb9adb70eb748490}{}\label{ICMPRS_8c_a4b0225c88e41b966cb9adb70eb748490}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!mcpage@{mcpage}}
+\index{mcpage@{mcpage}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{mcpage}{mcpage}}]{\setlength{\rightskip}{0pt plus 5cm}integer mcpage}\hypertarget{ICMPRS_8c_ad789f08e68f3bd2d0487fd79de6a873b}{}\label{ICMPRS_8c_ad789f08e68f3bd2d0487fd79de6a873b}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{ICMPRS_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{ICMPRS_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 49 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{ICMPRS_8c_a7f7d8af4c4adeadbb1c7f6c38ab229d4}{}\label{ICMPRS_8c_a7f7d8af4c4adeadbb1c7f6c38ab229d4}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!modx@{modx}}
+\index{modx@{modx}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{modx}{modx}}]{\setlength{\rightskip}{0pt plus 5cm}integer modx\mbox{[}32\mbox{]}}\hypertarget{ICMPRS_8c_abd1eef3c1b001e65bada11247921ce11}{}\label{ICMPRS_8c_abd1eef3c1b001e65bada11247921ce11}
+
+
+Definition at line 37 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!modx\+\_\+@{modx\+\_\+}}
+\index{modx\+\_\+@{modx\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+}{modx_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   modx\+\_\+}\hypertarget{ICMPRS_8c_a37c1aa9474bc7bfbb0168cfb54a640b0}{}\label{ICMPRS_8c_a37c1aa9474bc7bfbb0168cfb54a640b0}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!namest@{namest}}
+\index{namest@{namest}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{ICMPRS_8c_ab97202700d22183890e79bc8791f4bff}{}\label{ICMPRS_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{ICMPRS_8c_a0145643782bea8ee868ddb5913d5ecc5}{}\label{ICMPRS_8c_a0145643782bea8ee868ddb5913d5ecc5}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{ICMPRS_8c_a12351fe75bd822dfa233783a24bab726}{}\label{ICMPRS_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{ICMPRS_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{ICMPRS_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{ICMPRS_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{ICMPRS_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{ICMPRS_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{ICMPRS_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!outbuf\+\_\+@{outbuf\+\_\+}}
+\index{outbuf\+\_\+@{outbuf\+\_\+}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{outbuf\+\_\+}{outbuf_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   outbuf\+\_\+}\hypertarget{ICMPRS_8c_a6577233ccc93771d01817924703e518f}{}\label{ICMPRS_8c_a6577233ccc93771d01817924703e518f}
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!pagpak@{pagpak}}
+\index{pagpak@{pagpak}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{pagpak}{pagpak}}]{\setlength{\rightskip}{0pt plus 5cm}integer pagpak}\hypertarget{ICMPRS_8c_ad949091e205c2dbf743270f10efaacfb}{}\label{ICMPRS_8c_ad949091e205c2dbf743270f10efaacfb}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!pppage@{pppage}}
+\index{pppage@{pppage}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{pppage}{pppage}}]{\setlength{\rightskip}{0pt plus 5cm}integer pppage}\hypertarget{ICMPRS_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}{}\label{ICMPRS_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}
+
+
+Definition at line 57 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!ppwrds@{ppwrds}}
+\index{ppwrds@{ppwrds}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{ppwrds}{ppwrds}}]{\setlength{\rightskip}{0pt plus 5cm}integer ppwrds}\hypertarget{ICMPRS_8c_a12f88df5c9c201e4677acc4b09ad4d83}{}\label{ICMPRS_8c_a12f88df5c9c201e4677acc4b09ad4d83}
+
+
+Definition at line 55 of file I\+C\+M\+P\+R\+S.\+c.
+
+\index{I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}!rsvflg@{rsvflg}}
+\index{rsvflg@{rsvflg}!I\+C\+M\+P\+R\+S.\+c@{I\+C\+M\+P\+R\+S.\+c}}
+\subsubsection[{\texorpdfstring{rsvflg}{rsvflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical rsvflg}\hypertarget{ICMPRS_8c_a406e859663da9aacc49aca44ef7342c0}{}\label{ICMPRS_8c_a406e859663da9aacc49aca44ef7342c0}
+
+
+Definition at line 56 of file I\+C\+M\+P\+R\+S.\+c.
+

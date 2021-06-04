@@ -1,0 +1,133 @@
+\hypertarget{FOUTXX_8c}{}\section{F\+O\+U\+T\+X\+X.\+c File Reference}
+\label{FOUTXX_8c}\index{F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for F\+O\+U\+T\+X\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{FOUTXX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{FOUTXX_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{foutxx\+\_\+} (integer $\ast$ifile, char $\ast$\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}, integer $\ast$\hyperlink{SSDEF_8c_ac74ae34e9c58234aacabb6867b245c58}{count}, ftnlen array\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{FOUTXX_8c_ad8149129b0ac5c966968e55ba6106146}{darray} \mbox{[}120\mbox{]}\\
+\} \hyperlink{FOUTXX_8c_aef03efc0e667b410a7b17b85d811b0c3}{darray\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~{\bf darray\+\_\+}}\hypertarget{FOUTXX_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{FOUTXX_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 21 of file F\+O\+U\+T\+X\+X.\+c.
+
+
+
+Referenced by foutxx\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}!foutxx\+\_\+@{foutxx\+\_\+}}
+\index{foutxx\+\_\+@{foutxx\+\_\+}!F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}}
+\subsubsection[{\texorpdfstring{foutxx\+\_\+(integer $\ast$ifile, char $\ast$array, integer $\ast$count, ftnlen array\+\_\+len)}{foutxx_(integer *ifile, char *array, integer *count, ftnlen array_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int foutxx\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ifile, }
+\item[{char $\ast$}]{array, }
+\item[{integer $\ast$}]{count, }
+\item[{ftnlen}]{array\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}{}\label{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2}
+
+
+Definition at line 39 of file F\+O\+U\+T\+X\+X.\+c.
+
+
+
+References cprint\+\_\+(), and darray\+\_\+1.
+
+
+
+Referenced by alarm\+\_\+(), pro027\+\_\+(), prtil\+\_\+(), puttmp\+\_\+(), rlslin\+\_\+(), and start\+\_\+().
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{comment}{/* Builtin functions */}
+43     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+44 
+45     \textcolor{comment}{/* Local variables */}
+46     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+47 
+48 
+49 
+50 \textcolor{comment}{/*       20.    IO - ARRAY */}
+51 
+52 
+53 \textcolor{comment}{/*   ***  20.  DARRAY BLOCK  *** */}
+54 
+55 \textcolor{comment}{/*   PRINT BUFFER */}
+56 
+57 
+58 
+59 \textcolor{comment}{/* ** */}
+60     s\_copy(\hyperlink{FOUTXX_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, \hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}, (*\hyperlink{APT301_8c_ac74ae34e9c58234aacabb6867b245c58}{count}), (*\hyperlink{APT301_8c_ac74ae34e9c58234aacabb6867b245c58}{count}));
+61     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{FOUTXX_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+62     \textcolor{keywordflow}{return} 0;
+63 \} \textcolor{comment}{/* foutxx\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{FOUTXX_8c_aee9daf419ce5b8eebfbd4576c01188a2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}!darray@{darray}}
+\index{darray@{darray}!F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}}
+\subsubsection[{\texorpdfstring{darray}{darray}}]{\setlength{\rightskip}{0pt plus 5cm}char darray\mbox{[}120\mbox{]}}\hypertarget{FOUTXX_8c_ad8149129b0ac5c966968e55ba6106146}{}\label{FOUTXX_8c_ad8149129b0ac5c966968e55ba6106146}
+
+
+Definition at line 18 of file F\+O\+U\+T\+X\+X.\+c.
+
+\index{F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!F\+O\+U\+T\+X\+X.\+c@{F\+O\+U\+T\+X\+X.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{FOUTXX_8c_aef03efc0e667b410a7b17b85d811b0c3}{}\label{FOUTXX_8c_aef03efc0e667b410a7b17b85d811b0c3}

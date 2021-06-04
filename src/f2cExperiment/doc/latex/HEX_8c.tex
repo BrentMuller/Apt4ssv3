@@ -1,0 +1,63 @@
+\hypertarget{HEX_8c}{}\section{H\+E\+X.\+c File Reference}
+\label{HEX_8c}\index{H\+E\+X.\+c@{H\+E\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for H\+E\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{HEX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+V\+O\+ID \hyperlink{HEX_8c_ae342ae698b48ac5e173e00331e6d899e}{hex\+\_\+} (char $\ast$ret\+\_\+val, ftnlen ret\+\_\+val\+\_\+len, integer $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{H\+E\+X.\+c@{H\+E\+X.\+c}!hex\+\_\+@{hex\+\_\+}}
+\index{hex\+\_\+@{hex\+\_\+}!H\+E\+X.\+c@{H\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{hex\+\_\+(char $\ast$ret\+\_\+val, ftnlen ret\+\_\+val\+\_\+len, integer $\ast$value)}{hex_(char *ret_val, ftnlen ret_val_len, integer *value)}}]{\setlength{\rightskip}{0pt plus 5cm}V\+O\+ID hex\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ret\+\_\+val, }
+\item[{ftnlen}]{ret\+\_\+val\+\_\+len, }
+\item[{integer $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{HEX_8c_ae342ae698b48ac5e173e00331e6d899e}{}\label{HEX_8c_ae342ae698b48ac5e173e00331e6d899e}
+
+
+Definition at line 45 of file H\+E\+X.\+c.
+
+
+
+References h\+\_\+\+\_\+, i\+\_\+\+\_\+, j, and v.
+
+
+\begin{DoxyCode}
+46 \{
+47     \textcolor{comment}{/* Initialized data */}
+48 
+49     \textcolor{keyword}{static} integer div[7] = \{ 268435456,16777216,1048576,65536,4096,256,16 \};
+50     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_}[1*16] = \textcolor{stringliteral}{"0"} \textcolor{stringliteral}{"1"} \textcolor{stringliteral}{"2"} \textcolor{stringliteral}{"3"} \textcolor{stringliteral}{"4"} \textcolor{stringliteral}{"5"} \textcolor{stringliteral}{"6"} \textcolor{stringliteral}{"7"} \textcolor{stringliteral}{"8"} \textcolor{stringliteral}{"9"} \textcolor{stringliteral}{"A"} \textcolor{stringliteral}{"B"} 
+51         \textcolor{stringliteral}{"C"} \textcolor{stringliteral}{"D"} \textcolor{stringliteral}{"E"} \textcolor{stringliteral}{"F"};
+52 
+53     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+54 
+55 
+56 
+57 
+58 
+59     v = *value;
+60     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 7; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+61     j = v / div[i\_\_ - 1];
+62     v -= j * div[i\_\_ - 1];
+63     *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&ret\_val[i\_\_ - 1] = *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&h\_\_[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+64 \textcolor{comment}{/* L10: */}
+65     \}
+66     *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&ret\_val[7] = *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&h\_\_[\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}];
+67 
+68     return ;
+69 \} \textcolor{comment}{/* hex\_ */}
+\end{DoxyCode}

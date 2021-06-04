@@ -1,0 +1,556 @@
+\hypertarget{MULTAX_8c}{}\section{M\+U\+L\+T\+A\+X.\+c File Reference}
+\label{MULTAX_8c}\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+U\+L\+T\+A\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{MULTAX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MULTAX_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MULTAX_8c_a8f3ac2ec46a04c8f32019d32773ca377}{multax\+\_\+} (doublereal $\ast$donoff)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MULTAX_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{MULTAX_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{MULTAX_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{MULTAX_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{MULTAX_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{MULTAX_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{MULTAX_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{MULTAX_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{MULTAX_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{MULTAX_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{MULTAX_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{MULTAX_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{MULTAX_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{MULTAX_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{MULTAX_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{MULTAX_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{MULTAX_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{MULTAX_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{MULTAX_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{MULTAX_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{MULTAX_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{MULTAX_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{MULTAX_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{MULTAX_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{MULTAX_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{MULTAX_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{MULTAX_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{MULTAX_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{MULTAX_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{MULTAX_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{MULTAX_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{MULTAX_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{MULTAX_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{MULTAX_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{MULTAX_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{MULTAX_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{MULTAX_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{MULTAX_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{MULTAX_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{MULTAX_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{MULTAX_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{MULTAX_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{MULTAX_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{MULTAX_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{MULTAX_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{MULTAX_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{MULTAX_8c_a543649c94dc39ff168101bf84f81094b}{ifxcor\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MULTAX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{MULTAX_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{MULTAX_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\+\_\+\+\_\+4} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{MULTAX_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{MULTAX_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 25 of file M\+U\+L\+T\+A\+X.\+c.
+
+
+
+Referenced by multax\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!multax\+\_\+@{multax\+\_\+}}
+\index{multax\+\_\+@{multax\+\_\+}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{multax\+\_\+(doublereal $\ast$donoff)}{multax_(doublereal *donoff)}}]{\setlength{\rightskip}{0pt plus 5cm}int multax\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{donoff}
+\end{DoxyParamCaption}
+)}\hypertarget{MULTAX_8c_a8f3ac2ec46a04c8f32019d32773ca377}{}\label{MULTAX_8c_a8f3ac2ec46a04c8f32019d32773ca377}
+
+
+Definition at line 36 of file M\+U\+L\+T\+A\+X.\+c.
+
+
+
+References apt299\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, c\+\_\+\+\_\+4, holfrm\+\_\+(), ifxcor\+\_\+1, and test.
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{comment}{/* Initialized data */}
+39 
+40     \textcolor{keyword}{static} \textcolor{keywordtype}{char} doff[4] = \textcolor{stringliteral}{"OFF "};
+41 
+42     \textcolor{comment}{/* Builtin functions */}
+43     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+44 
+45     \textcolor{comment}{/* Local variables */}
+46     \textcolor{keyword}{static} integer nwd;
+47     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+48     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af04af1bc6d042a68a2b24d6e1312d253}{test}[4];
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(integer *, integer *, integer *, 
+50         doublereal *), \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, integer *,
+51          integer *, ftnlen);
+52     \textcolor{keyword}{static} integer ppword[2];
+53 
+54 
+55 
+56 
+57 
+58 
+59 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+60 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+61 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+62 
+63 
+64 
+65 
+66 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+67 
+68 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+69 
+70 
+71 
+72 
+73 
+74 \textcolor{comment}{/* ...  ALL CUTTER CENTERS WILL BE OUTPUT WITH TOOL AXIS VECTORS */}
+75 \textcolor{comment}{/* IF DONOFF .NE. 'OFF' */}
+76     ppword[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"MULT"}, (ftnlen)4);
+77     ppword[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"AX  "}, (ftnlen)4);
+78 
+79     \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(&\hyperlink{MULTAX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, ppword, &\hyperlink{MULTAX_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, donoff);
+80     \hyperlink{MULTAX_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout = 1;
+81     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(donoff, test, &\hyperlink{MULTAX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MULTAX_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4}, &nwd, (ftnlen)4);
+82     \textcolor{keywordflow}{if} (s\_cmp(test, doff, (ftnlen)4, (ftnlen)4) == 0) \{
+83     \hyperlink{MULTAX_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout = 0;
+84     \}
+85     \textcolor{keywordflow}{return} 0;
+86 \} \textcolor{comment}{/* multax\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MULTAX_8c_a8f3ac2ec46a04c8f32019d32773ca377_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MULTAX_8c_a8f3ac2ec46a04c8f32019d32773ca377_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MULTAX_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{MULTAX_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 29 of file M\+U\+L\+T\+A\+X.\+c.
+
+
+
+Referenced by multax\+\_\+().
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MULTAX_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{MULTAX_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 30 of file M\+U\+L\+T\+A\+X.\+c.
+
+
+
+Referenced by multax\+\_\+().
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}}
+\index{c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+4}{c__4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+4 = 4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MULTAX_8c_ab195470f8c6d55e333ee709af09ba2d6}{}\label{MULTAX_8c_ab195470f8c6d55e333ee709af09ba2d6}
+
+
+Definition at line 31 of file M\+U\+L\+T\+A\+X.\+c.
+
+
+
+Referenced by multax\+\_\+().
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{MULTAX_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{MULTAX_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{MULTAX_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{MULTAX_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{MULTAX_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{MULTAX_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{MULTAX_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{MULTAX_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ic@{ic}}
+\index{ic@{ic}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{MULTAX_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{MULTAX_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{MULTAX_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{MULTAX_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!icl@{icl}}
+\index{icl@{icl}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{MULTAX_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{MULTAX_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ics@{ics}}
+\index{ics@{ics}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{MULTAX_8c_a7217a40b82199af56087b578a9bef158}{}\label{MULTAX_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{MULTAX_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{MULTAX_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{MULTAX_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{MULTAX_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!icut@{icut}}
+\index{icut@{icut}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{MULTAX_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{MULTAX_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ids@{ids}}
+\index{ids@{ids}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{MULTAX_8c_a312fee9680413e72b1ed128af2de8822}{}\label{MULTAX_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ier@{ier}}
+\index{ier@{ier}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{MULTAX_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{MULTAX_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{MULTAX_8c_a543649c94dc39ff168101bf84f81094b}{}\label{MULTAX_8c_a543649c94dc39ff168101bf84f81094b}
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!igo@{igo}}
+\index{igo@{igo}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{MULTAX_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{MULTAX_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{MULTAX_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{MULTAX_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{MULTAX_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{MULTAX_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!igs@{igs}}
+\index{igs@{igs}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{MULTAX_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{MULTAX_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!inops@{inops}}
+\index{inops@{inops}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{MULTAX_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{MULTAX_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ips@{ips}}
+\index{ips@{ips}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{MULTAX_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{MULTAX_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{MULTAX_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{MULTAX_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{MULTAX_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{MULTAX_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!is@{is}}
+\index{is@{is}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{MULTAX_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{MULTAX_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{MULTAX_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{MULTAX_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{MULTAX_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{MULTAX_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{MULTAX_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{MULTAX_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{MULTAX_8c_a71eb31c84997c0822663e9391c14d998}{}\label{MULTAX_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!it@{it}}
+\index{it@{it}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{MULTAX_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{MULTAX_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{MULTAX_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{MULTAX_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{MULTAX_8c_a10effd66f46b95c77726e50c3d371477}{}\label{MULTAX_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{MULTAX_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{MULTAX_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{MULTAX_8c_a15ffd813a44621365b809bd790efc487}{}\label{MULTAX_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{MULTAX_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{MULTAX_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{MULTAX_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{MULTAX_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!msav@{msav}}
+\index{msav@{msav}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{MULTAX_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{MULTAX_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{MULTAX_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{MULTAX_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{MULTAX_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{MULTAX_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{MULTAX_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{MULTAX_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{MULTAX_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{MULTAX_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!numax@{numax}}
+\index{numax@{numax}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{MULTAX_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{MULTAX_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{MULTAX_8c_a5123b60c8419619c6c2debf212d28208}{}\label{MULTAX_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nump@{nump}}
+\index{nump@{nump}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{MULTAX_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{MULTAX_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{MULTAX_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{MULTAX_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{MULTAX_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{MULTAX_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{MULTAX_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{MULTAX_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nw@{nw}}
+\index{nw@{nw}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{MULTAX_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{MULTAX_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+
+\index{M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!M\+U\+L\+T\+A\+X.\+c@{M\+U\+L\+T\+A\+X.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{MULTAX_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{MULTAX_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 18 of file M\+U\+L\+T\+A\+X.\+c.
+

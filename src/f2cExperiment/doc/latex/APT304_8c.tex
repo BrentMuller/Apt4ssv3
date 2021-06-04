@@ -1,0 +1,80 @@
+\hypertarget{APT304_8c}{}\section{A\+P\+T304.\+c File Reference}
+\label{APT304_8c}\index{A\+P\+T304.\+c@{A\+P\+T304.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T304.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT304_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT304_8c_af6710fe1e3de61527d61ef3d36df21ff}{apt304\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$matrx, doublereal $\ast$vctr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T304.\+c@{A\+P\+T304.\+c}!apt304\+\_\+@{apt304\+\_\+}}
+\index{apt304\+\_\+@{apt304\+\_\+}!A\+P\+T304.\+c@{A\+P\+T304.\+c}}
+\subsubsection[{\texorpdfstring{apt304\+\_\+(doublereal $\ast$result, doublereal $\ast$matrx, doublereal $\ast$vctr)}{apt304_(doublereal *result, doublereal *matrx, doublereal *vctr)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt304\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{matrx, }
+\item[{doublereal $\ast$}]{vctr}
+\end{DoxyParamCaption}
+)}\hypertarget{APT304_8c_af6710fe1e3de61527d61ef3d36df21ff}{}\label{APT304_8c_af6710fe1e3de61527d61ef3d36df21ff}
+
+
+Definition at line 26 of file A\+P\+T304.\+c.
+
+
+
+References i\+\_\+\+\_\+, j, and result.
+
+
+
+Referenced by apt301\+\_\+().
+
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+30     \textcolor{keyword}{static} doublereal vec[3];
+31 
+32 \textcolor{comment}{/*     THIS ROUTINE TRANSFORMS THE CANONICAL FORM OF A VECTOR */}
+33 \textcolor{comment}{/*     BY A GIVEN MATRIX */}
+34     \textcolor{comment}{/* Parameter adjustments */}
+35     --vctr;
+36     matrx -= 4;
+37     --\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result};
+38 
+39     \textcolor{comment}{/* Function Body */}
+40     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+41 \textcolor{comment}{/* L20: */}
+42     vec[i\_\_ - 1] = vctr[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+43     \}
+44     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+45     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 0.;
+46     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+47         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] += vec[j - 1] * matrx[i\_\_ + j * 3];
+48 \textcolor{comment}{/* L70: */}
+49     \}
+50     \}
+51     \textcolor{keywordflow}{return} 0;
+52 \} \textcolor{comment}{/* apt304\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT304_8c_af6710fe1e3de61527d61ef3d36df21ff_icgraph}
+\end{center}
+\end{figure}
+
+

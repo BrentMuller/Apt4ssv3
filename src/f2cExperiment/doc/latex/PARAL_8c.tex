@@ -1,0 +1,311 @@
+\hypertarget{PARAL_8c}{}\section{P\+A\+R\+A\+L.\+c File Reference}
+\label{PARAL_8c}\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+A\+R\+A\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{PARAL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PARAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PARAL_8c_ad79722cf82c43e5a0c0011b013e91aa7}{paral\+\_\+} (doublereal $\ast$veca, doublereal $\ast$\hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, doublereal $\ast$vecb, doublereal $\ast$avdist, integer $\ast$nspl, integer $\ast$\hyperlink{INTTPL_8c_a1f0203656d2880e98c95896b7ce303b4}{npts}, integer $\ast$ipara)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PARAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{PARAL_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{PARAL_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\} \hyperlink{PARAL_8c_ab3964c6ca6e5a8f9deb039fccc6e2e62}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{PARAL_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{PARAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{PARAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{PARAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file P\+A\+R\+A\+L.\+c.
+
+
+
+Referenced by paral\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!paral\+\_\+@{paral\+\_\+}}
+\index{paral\+\_\+@{paral\+\_\+}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{paral\+\_\+(doublereal $\ast$veca, doublereal $\ast$dist, doublereal $\ast$vecb, doublereal $\ast$avdist, integer $\ast$nspl, integer $\ast$npts, integer $\ast$ipara)}{paral_(doublereal *veca, doublereal *dist, doublereal *vecb, doublereal *avdist, integer *nspl, integer *npts, integer *ipara)}}]{\setlength{\rightskip}{0pt plus 5cm}int paral\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{veca, }
+\item[{doublereal $\ast$}]{dist, }
+\item[{doublereal $\ast$}]{vecb, }
+\item[{doublereal $\ast$}]{avdist, }
+\item[{integer $\ast$}]{nspl, }
+\item[{integer $\ast$}]{npts, }
+\item[{integer $\ast$}]{ipara}
+\end{DoxyParamCaption}
+)}\hypertarget{PARAL_8c_ad79722cf82c43e5a0c0011b013e91aa7}{}\label{PARAL_8c_ad79722cf82c43e5a0c0011b013e91aa7}
+
+
+Definition at line 30 of file P\+A\+R\+A\+L.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+n1, dist, i\+\_\+\+\_\+, ibugg\+\_\+1, ipt, j1, jj, k, npts, and top.
+
+
+
+Referenced by mesh\+\_\+().
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{comment}{/* System generated locals */}
+35     integer i\_\_1, i\_\_2, i\_\_3;
+36 
+37     \textcolor{comment}{/* Local variables */}
+38     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}, j2, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+39     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, integer *, 
+40         ftnlen);
+41     \textcolor{keyword}{static} doublereal bot;
+42     \textcolor{keyword}{static} integer \hyperlink{AMIND_8c_a664d06786bfa2b6c0ae2d16dfee1b469}{ipt};
+43     \textcolor{keyword}{static} doublereal \hyperlink{ALARM_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}, sum;
+44     \textcolor{keyword}{static} integer ivec, jseg, kvec, nseg, iptb, ispl;
+45     \textcolor{keyword}{static} doublereal alen1, alen2;
+46     \textcolor{keyword}{static} integer ivecb, kvecb;
+47     \textcolor{keyword}{static} doublereal anspl;
+48 
+49 \textcolor{comment}{/* ---      PURPOSE OF PARAL IS TO DETERMINE LENGTHS OF TANGENT */}
+50 \textcolor{comment}{/* ---      VECTORS IN ONE PARAMETRIC DIRECTION ACROSS A MESH SURFACE */}
+51 \textcolor{comment}{/* ---      VECA IS THE ARRAY OF UNITIZED INPUT TANGENTS AND */}
+52 \textcolor{comment}{/* ---      ON OUTPUT IS THE ENTERING VECTOR FOR A PATCH AT EACH POINT */}
+53 \textcolor{comment}{/* ---      DIST IS THE ARRAY OF POLYGONAL DISTANCES BETWEEN POINTS */}
+54 \textcolor{comment}{/* ---      VECB IS AN OUTPUT ARRAY OF EXITING VECTORS FOR EACH PAOINT */}
+55 \textcolor{comment}{/* ---      AVDIST IS AN INPUT ARRAY USED TO TEMPORARILY HOLD THE */}
+56 \textcolor{comment}{/* ---      AVERAGE WIDTH OF CHORDAL BANDS ACROSS THE SURFACE */}
+57 \textcolor{comment}{/* ---      NSPL IS THE TOTAL NUMBER OF SPLINE CURVES AND */}
+58 \textcolor{comment}{/* ---      NPTS IS THE NUMBER OF POINTS PER SPLINE(BOTH INPUT) */}
+59 \textcolor{comment}{/* ---      IPARA IS SET TO 1 IF ROUGHLY PARALLEL CHORDAL BANDS */}
+60 \textcolor{comment}{/* ---      ARE DETECTED ACROSS THE SURFACE, AND 0 OTHERWISE */}
+61 \textcolor{comment}{/* ---      IPARA IS SET TO 1 ON OUTPUT. */}
+62 
+63 \textcolor{comment}{/* ---      NUMBER OF CHORDS PER SPLINE */}
+64     \textcolor{comment}{/* Parameter adjustments */}
+65     --avdist;
+66     --vecb;
+67     --\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+68     --veca;
+69 
+70     \textcolor{comment}{/* Function Body */}
+71     nseg = *\hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts} - 1;
+72     anspl = (doublereal) (*nspl);
+73 \textcolor{comment}{/* ---      CHECK FOR ROUGH EQUALITY OF CHORDS ACROSS SURFACE */}
+74     i\_\_1 = nseg;
+75     \textcolor{keywordflow}{for} (jseg = 1; jseg <= i\_\_1; ++jseg) \{
+76 \textcolor{comment}{/* ---      COMPUTE THE AVERAGE BAND WIDTH OF THE JTH CHORDS. */}
+77     sum = 0.f;
+78     i\_\_2 = *nspl;
+79     \textcolor{keywordflow}{for} (ispl = 1; ispl <= i\_\_2; ++ispl) \{
+80         jj = nseg * (ispl - 1) + jseg;
+81         sum += \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}];
+82 \textcolor{comment}{/* L20: */}
+83     \}
+84 \textcolor{comment}{/* ---      AVERAGE BANDWIDTH */}
+85     avdist[jseg] = sum / anspl;
+86 \textcolor{comment}{/* ---      IF IPARA IS 1 ON INPUT, THEN ASSUME PARALLELISM */}
+87     \textcolor{keywordflow}{if} (*ipara == 1) \{
+88         \textcolor{keywordflow}{goto} L10;
+89     \}
+90 
+91 \textcolor{comment}{/* ---      SET TOLERANCE FOR EQUALITY OF CHORDS */}
+92     bot = avdist[jseg] * .95f;
+93     top = avdist[jseg] * 1.06f;
+94 \textcolor{comment}{/* ---      CHECK ALL CHORDS IN THIS BAND. */}
+95     i\_\_2 = *nspl;
+96     \textcolor{keywordflow}{for} (ispl = 1; ispl <= i\_\_2; ++ispl) \{
+97         jj = nseg * (ispl - 1) + jseg;
+98         \textcolor{keywordflow}{if} (bot <= \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[jj] && \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[jj] <= top) \{
+99         \textcolor{keywordflow}{goto} L30;
+100         \}
+101 \textcolor{comment}{/* ---      PARALLELISM CHECK FAILED */}
+102         *ipara = 0;
+103         \textcolor{keywordflow}{goto} L90;
+104 L30:
+105         ;
+106     \}
+107 
+108 L10:
+109     ;
+110     \}
+111 
+112 \textcolor{comment}{/* ---      SURFACE WILL BE TREATED AS PARALLEL. */}
+113     *ipara = 1;
+114 L90:
+115 \textcolor{comment}{/* ---      IF SURFACE HAS ONLY A SINGLE CROSS BAND, USE NON-PARALLEL */}
+116     \textcolor{keywordflow}{if} (nseg <= 1) \{
+117     *ipara = 0;
+118     \}
+119 
+120 \textcolor{comment}{/* ---      SECOND PHASE, ASSIGN LENGTHS TO INCOMING AND OUTGOING */}
+121 \textcolor{comment}{/* ---      VECTORS AT EACH POINT */}
+122 
+123     i\_\_1 = *nspl;
+124     \textcolor{keywordflow}{for} (ispl = 1; ispl <= i\_\_1; ++ispl) \{
+125     i\_\_2 = *\hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts};
+126     \textcolor{keywordflow}{for} (ipt = 1; ipt <= i\_\_2; ++\hyperlink{AMIND_8c_a664d06786bfa2b6c0ae2d16dfee1b469}{ipt}) \{
+127         ivec = (ipt - 1 + (ispl - 1) * *\hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts}) * 3;
+128 \textcolor{comment}{/* ---      A SEPARATE POINTER IS SET UP FOR THE ARRAY OF */}
+129 \textcolor{comment}{/* ---      EXITING VECTORS VECB. THIS ARRAY IS OF DIMENSION */}
+130 \textcolor{comment}{/* ---      NSEG X NSPL COMPARED WITH NPTS X NSPL FOR VECA AND */}
+131 \textcolor{comment}{/* ---      POINTERS FOR VECB ARE SET UP SO THAT THE FIRST ENTRY */}
+132 \textcolor{comment}{/* ---      IS OVERWRITTEN IN NPT PASSES THRU THIS LOOP */}
+133 \textcolor{comment}{/* Computing MAX */}
+134         i\_\_3 = ipt - 1;
+135         iptb = max(i\_\_3,1);
+136         ivecb = (iptb - 1 + (ispl - 1) * nseg) * 3;
+137 \textcolor{comment}{/* ---      COMPUTE REFERENCE CHORD FOR VECTOR LENGTHS */}
+138 \textcolor{comment}{/* Computing MAX */}
+139         i\_\_3 = ipt - 1;
+140         j1 = max(i\_\_3,1);
+141         j2 = min(ipt,nseg);
+142 
+143         \textcolor{keywordflow}{if} (*ipara == 1) \{
+144         \textcolor{keywordflow}{goto} L110;
+145         \}
+146 \textcolor{comment}{/* ---      SHARED VECTOR CASE */}
+147         j1 += (ispl - 1) * nseg;
+148         j2 += (ispl - 1) * nseg;
+149 \textcolor{comment}{/* ---      CHOOSE THE MINIMUM OF THE TWO SURROUNDING CHORDS */}
+150         alen1 = \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}];
+151         \textcolor{keywordflow}{if} (alen1 > \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[j2]) \{
+152         alen1 = \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[j2];
+153         \}
+154         alen2 = alen1;
+155         \textcolor{keywordflow}{goto} L120;
+156 \textcolor{comment}{/* ---      PARALLEL CASE, CHOOSE SEPARATE LENGTHS */}
+157 L110:
+158         alen1 = avdist[j2];
+159         alen2 = avdist[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}];
+160 L120:
+161 \textcolor{comment}{/* ---      VECB IS SET TO THE LENGTH OF THE EXITING VECTOR */}
+162         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+163         kvec = ivec + \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+164         kvecb = ivecb + \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+165         vecb[kvecb] = alen2 * veca[kvec];
+166         veca[kvec] = alen1 * veca[kvec];
+167 \textcolor{comment}{/* L130: */}
+168         \}
+169 
+170 \textcolor{comment}{/* L100: */}
+171     \}
+172     \}
+173 
+174 \textcolor{comment}{/* ---      END OF LOOP, CHANGE IPARA TO 1 */}
+175     \textcolor{keywordflow}{if} (\hyperlink{PARAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+176     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PARAL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PARAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IPAR"}, ipara, (ftnlen)4);
+177     \}
+178     *ipara = 1;
+179 \textcolor{comment}{/* ---      CLEAN UP AVDIST ARRAY */}
+180     i\_\_2 = nseg;
+181     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+182 \textcolor{comment}{/* L200: */}
+183     avdist[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 0.f;
+184     \}
+185 
+186 \textcolor{comment}{/* L999: */}
+187     \textcolor{keywordflow}{return} 0;
+188 \} \textcolor{comment}{/* paral\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PARAL_8c_ad79722cf82c43e5a0c0011b013e91aa7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PARAL_8c_ad79722cf82c43e5a0c0011b013e91aa7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PARAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{PARAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file P\+A\+R\+A\+L.\+c.
+
+
+
+Referenced by paral\+\_\+().
+
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PARAL_8c_a9e9287f317ef3436252a395791a899f6}{}\label{PARAL_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file P\+A\+R\+A\+L.\+c.
+
+
+
+Referenced by paral\+\_\+().
+
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{PARAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{PARAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file P\+A\+R\+A\+L.\+c.
+
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{PARAL_8c_ab3964c6ca6e5a8f9deb039fccc6e2e62}{}\label{PARAL_8c_ab3964c6ca6e5a8f9deb039fccc6e2e62}
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{PARAL_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{PARAL_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file P\+A\+R\+A\+L.\+c.
+
+\index{P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!P\+A\+R\+A\+L.\+c@{P\+A\+R\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{PARAL_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{PARAL_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 18 of file P\+A\+R\+A\+L.\+c.
+

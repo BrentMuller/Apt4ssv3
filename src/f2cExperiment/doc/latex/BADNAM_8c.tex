@@ -1,0 +1,89 @@
+\hypertarget{BADNAM_8c}{}\section{B\+A\+D\+N\+A\+M.\+c File Reference}
+\label{BADNAM_8c}\index{B\+A\+D\+N\+A\+M.\+c@{B\+A\+D\+N\+A\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+A\+D\+N\+A\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{BADNAM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BADNAM_8c_a7e0cf52df2f059ad08ca9f50e21ce43f}{badnam\+\_\+} (integer $\ast$\hyperlink{INTSEC_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+A\+D\+N\+A\+M.\+c@{B\+A\+D\+N\+A\+M.\+c}!badnam\+\_\+@{badnam\+\_\+}}
+\index{badnam\+\_\+@{badnam\+\_\+}!B\+A\+D\+N\+A\+M.\+c@{B\+A\+D\+N\+A\+M.\+c}}
+\subsubsection[{\texorpdfstring{badnam\+\_\+(integer $\ast$iword)}{badnam_(integer *iword)}}]{\setlength{\rightskip}{0pt plus 5cm}int badnam\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{iword}
+\end{DoxyParamCaption}
+)}\hypertarget{BADNAM_8c_a7e0cf52df2f059ad08ca9f50e21ce43f}{}\label{BADNAM_8c_a7e0cf52df2f059ad08ca9f50e21ce43f}
+
+
+Definition at line 37 of file B\+A\+D\+N\+A\+M.\+c.
+
+
+
+References bcdf\+\_\+(), first, and iword.
+
+
+
+Referenced by apt104\+\_\+(), and print\+\_\+().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{comment}{/* Initialized data */}
+40 
+41     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+42 
+43     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+44     \textcolor{keyword}{static} integer ibdnam[2];
+45 
+46 
+47 
+48     \textcolor{comment}{/* Parameter adjustments */}
+49     --\hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword};
+50 
+51     \textcolor{comment}{/* Function Body */}
+52     \textcolor{keywordflow}{if} (first) \{
+53     ibdnam[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"BADN"}, (ftnlen)4);
+54     ibdnam[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"AM  "}, (ftnlen)4);
+55     first = FALSE\_;
+56     \}
+57 
+58     \hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword}[1] = ibdnam[0];
+59     \hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword}[2] = ibdnam[1];
+60     \textcolor{keywordflow}{return} 0;
+61 \} \textcolor{comment}{/* badnam\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{BADNAM_8c_a7e0cf52df2f059ad08ca9f50e21ce43f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{BADNAM_8c_a7e0cf52df2f059ad08ca9f50e21ce43f_icgraph}
+\end{center}
+\end{figure}
+
+

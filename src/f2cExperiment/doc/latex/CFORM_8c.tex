@@ -1,0 +1,62 @@
+\hypertarget{CFORM_8c}{}\section{C\+F\+O\+R\+M.\+c File Reference}
+\label{CFORM_8c}\index{C\+F\+O\+R\+M.\+c@{C\+F\+O\+R\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+F\+O\+R\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{CFORM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\+\_\+} (char $\ast$\hyperlink{RECOG_8c_a25093e36e9fb377b246945a84745823f}{string}, char $\ast$\hyperlink{SSV3_8c_ab4b9001e3fd07481a9b32b25a1e165cc}{buffer}, integer $\ast$posn, integer $\ast$\hyperlink{OPCODE_8c_a0492c4557ef9b88f68d0a0bc7a2d0e97}{length}, ftnlen string\+\_\+len, ftnlen buffer\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+F\+O\+R\+M.\+c@{C\+F\+O\+R\+M.\+c}!cform\+\_\+@{cform\+\_\+}}
+\index{cform\+\_\+@{cform\+\_\+}!C\+F\+O\+R\+M.\+c@{C\+F\+O\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{cform\+\_\+(char $\ast$string, char $\ast$buffer, integer $\ast$posn, integer $\ast$length, ftnlen string\+\_\+len, ftnlen buffer\+\_\+len)}{cform_(char *string, char *buffer, integer *posn, integer *length, ftnlen string_len, ftnlen buffer_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int cform\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{buffer, }
+\item[{integer $\ast$}]{posn, }
+\item[{integer $\ast$}]{length, }
+\item[{ftnlen}]{string\+\_\+len, }
+\item[{ftnlen}]{buffer\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{}\label{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}
+
+
+Definition at line 47 of file C\+F\+O\+R\+M.\+c.
+
+
+
+Referenced by abuftp\+\_\+0\+\_\+(), aerr2\+\_\+(), aerr\+\_\+(), alarm\+\_\+(), apt024\+\_\+(), apt089\+\_\+(), apt104\+\_\+(), apt107\+\_\+(), apt301\+\_\+(), apt302\+\_\+(), apt309\+\_\+(), apt330\+\_\+(), apt331\+\_\+(), apt335\+\_\+(), apt336\+\_\+(), aread\+\_\+(), atapop\+\_\+0\+\_\+(), ataprd\+\_\+(), atapwt\+\_\+(), avmsg\+\_\+(), avoid\+\_\+(), awrite\+\_\+(), bad\+\_\+(), cardpn\+\_\+(), chread\+\_\+(), chwrit\+\_\+(), cilout\+\_\+(), cleror\+\_\+(), conbcd\+\_\+(), crblen\+\_\+(), curflo\+\_\+(), errlod\+\_\+(), error\+\_\+(), errout\+\_\+(), eval\+\_\+(), filopn\+\_\+(), floseg\+\_\+(), fread\+\_\+(), gol\+\_\+(), gop\+\_\+(), init\+\_\+(), intmsg\+\_\+(), intout\+\_\+(), intrp\+\_\+(), ldard\+\_\+(), lib\+\_\+(), linkf\+\_\+(), mesh\+\_\+(), mixal\+\_\+(), page\+\_\+(), parnom\+\_\+0\+\_\+(), print\+\_\+(), punch\+\_\+(), puncha\+\_\+0\+\_\+(), punchc\+\_\+0\+\_\+(), read\+\_\+(), resred\+\_\+(), scpict\+\_\+(), sctra\+\_\+(), set\+\_\+(), sprvis\+\_\+0\+\_\+(), srfcom\+\_\+(), sspath\+\_\+(), sspict\+\_\+(), sstra\+\_\+(), tapepn\+\_\+(), tapop\+\_\+(), tecalc\+\_\+(), teval\+\_\+(), tulpos\+\_\+(), and xcanon\+\_\+().
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{comment}{/* Builtin functions */}
+51     integer i\_len(\textcolor{keywordtype}{char} *, ftnlen);
+52     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+53 
+54 
+55 
+56 \textcolor{comment}{/* .....IF LENGTH IS ZERO ON INPUT RETURN ACTUAL LENGTH OF STRING */}
+57 
+58     \textcolor{keywordflow}{if} (*\hyperlink{OPCODE_8c_a0492c4557ef9b88f68d0a0bc7a2d0e97}{length} == 0) \{
+59     *\hyperlink{OPCODE_8c_a0492c4557ef9b88f68d0a0bc7a2d0e97}{length} = i\_len(\textcolor{keywordtype}{string}, string\_len);
+60     \}
+61 
+62 \textcolor{comment}{/* .....INSERT CHARACTER STRING IN PRINT BUFFER */}
+63 
+64     s\_copy(\hyperlink{PUNCH_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer} + (*posn - 1), \textcolor{keywordtype}{string}, *posn + *\hyperlink{OPCODE_8c_a0492c4557ef9b88f68d0a0bc7a2d0e97}{length} - 1 - (*posn - 1), (*
+65         \hyperlink{OPCODE_8c_a0492c4557ef9b88f68d0a0bc7a2d0e97}{length}));
+66 
+67     \textcolor{keywordflow}{return} 0;
+68 \} \textcolor{comment}{/* cform\_ */}
+\end{DoxyCode}

@@ -1,0 +1,495 @@
+\hypertarget{TECALC_8c}{}\section{T\+E\+C\+A\+L\+C.\+c File Reference}
+\label{TECALC_8c}\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+E\+C\+A\+L\+C.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{TECALC_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+}
+\item 
+\#define \hyperlink{TECALC_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{TECALC_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TECALC_8c_af08ec06461f871c7c57bb16f427d763f}{tecalc\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tolcom, doublereal $\ast$tul, doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{TECALC_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{TECALC_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{TECALC_8c_a7c2b45a1ecabf0053781616ce5e96124}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{TECALC_8c_ad8149129b0ac5c966968e55ba6106146}{darray} \mbox{[}120\mbox{]}\\
+\} \hyperlink{TECALC_8c_a169736003102b03195277fda1f5380ef}{darray\_}\\
+
+\end{tabbing}\item 
+static doublereal \hyperlink{TECALC_8c_abda8393dbbff83238306cabf353a9d23}{c\+\_\+b3} = 1.
+\item 
+static integer \hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{TECALC_8c_a280863ace4c11cd9695eac1046336a9c}{c\+\_\+\+\_\+38} = 38
+\item 
+static integer \hyperlink{TECALC_8c_ae9c087dbe3f8ddad13760d209cb18649}{c\+\_\+\+\_\+71} = 71
+\item 
+static integer \hyperlink{TECALC_8c_a0846905f461846c9c0a3036851f2c483}{c\+\_\+\+\_\+101} = 101
+\item 
+static integer \hyperlink{TECALC_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{TECALC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{TECALC_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{TECALC_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{TECALC_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{TECALC_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~{\bf darray\+\_\+}}\hypertarget{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 28 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{TECALC_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{TECALC_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{}\label{TECALC_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 22 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tecalc\+\_\+@{tecalc\+\_\+}}
+\index{tecalc\+\_\+@{tecalc\+\_\+}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tecalc\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$ta, doublereal $\ast$u, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tolcom, doublereal $\ast$tul, doublereal $\ast$te)}{tecalc_(doublereal *r__, doublereal *ta, doublereal *u, doublereal *pside, doublereal *pthick, doublereal *tolcom, doublereal *tul, doublereal *te)}}]{\setlength{\rightskip}{0pt plus 5cm}int tecalc\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tolcom, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{te}
+\end{DoxyParamCaption}
+)}\hypertarget{TECALC_8c_af08ec06461f871c7c57bb16f427d763f}{}\label{TECALC_8c_af08ec06461f871c7c57bb16f427d763f}
+
+
+Definition at line 44 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+101, c\+\_\+\+\_\+3, c\+\_\+\+\_\+38, c\+\_\+\+\_\+71, c\+\_\+b3, c\+\_\+n1, c\+\_\+n3, cang, cform\+\_\+(), cprint\+\_\+(), cross\+\_\+(), crossv\+\_\+(), darray\+\_\+1, dotv\+\_\+(), i\+\_\+\+\_\+, ibug, k, offset, r\+\_\+\+\_\+, ta, te, tlldat\+\_\+1, u, v, vn, and vnorm\+\_\+().
+
+
+
+Referenced by avoid\+\_\+().
+
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{comment}{/* Builtin functions */}
+49     \textcolor{keywordtype}{double} d\_sign(doublereal *, doublereal *);
+50     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+51 
+52     \textcolor{comment}{/* Local variables */}
+53     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+54     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[3], \hyperlink{DDTABC_8c_a68cef9ab1f225fc582f4d350155b7ccb}{vn}[3];
+55     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+56     \textcolor{keyword}{static} doublereal vec[3], \hyperlink{APT301_8c_a0cd64d6cb1ca4a09fe69edce55b5aa7d}{cang};
+57     \textcolor{keyword}{static} real tbef;
+58     \textcolor{keyword}{static} integer \hyperlink{ANGDER_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug};
+59     \textcolor{keyword}{static} doublereal sang, tang;
+60 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+61 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+62     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(doublereal *, doublereal *, doublereal *
+63         );
+64     \textcolor{keyword}{static} doublereal vlen2;
+65     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+66         ftnlen, ftnlen), \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal *),
+67          \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+68     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+69     \textcolor{keyword}{static} doublereal \hyperlink{ARLM2_8c_a7270a6904e3eefbc7185e8ab5e119a92}{offset};
+70     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(doublereal *,
+71          doublereal *, doublereal *);
+72 
+73 
+74 \textcolor{comment}{/*     PURPOSE: COMPUTE TE GIVEN CURRENT CONTACT POINT R AND TA */}
+75 
+76 
+77 \textcolor{comment}{/*     ARGUMENTS: */}
+78 \textcolor{comment}{/*      R      - INPUT SURFACE CONTACT POINT/DERIVATIVES(SEE CNSURF) */}
+79 \textcolor{comment}{/*      TA     - INPUT TOOL AXIS */}
+80 \textcolor{comment}{/*      U      - LOCAL FORWARD DIRECTION */}
+81 \textcolor{comment}{/*      PSIDE  - INPUT 1 OR -1, DEFINES CUTTER SIDE OF SURFACE */}
+82 \textcolor{comment}{/*      PTHICK - PART GEOMETRY THICK SPECIFICATION */}
+83 \textcolor{comment}{/*      TOLCOM - TOLERANCE BAND COMPENSATION */}
+84 \textcolor{comment}{/*      TUL    - CUTTER PARAMETERS */}
+85 \textcolor{comment}{/*      TE     - OUTPUT TOOL END */}
+86 
+87 
+88 \textcolor{comment}{/*     GLOBAL VARIABLES: */}
+89 
+90 
+91 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+92 
+93 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+94 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+95 
+96 
+97 
+98 
+99 
+100 \textcolor{comment}{/*     LOCAL VARIABLES: */}
+101 
+102 \textcolor{comment}{/*       OFFSET - TOOL OFFSET FROM SURFACE */}
+103 \textcolor{comment}{/*       VEC    - TOOL RADIAL AXIS */}
+104 \textcolor{comment}{/*       VLEN2  - LENGTH OF VEC SQUARED */}
+105 \textcolor{comment}{/*       V,VN   - WORK VECTORS */}
+106 \textcolor{comment}{/*       CANG   - COS(ANGLE BETWEEN TOOL NORMAL AND TOOL RADIAL AXES) */}
+107 \textcolor{comment}{/*       SANG   - SINE OF SAME ANGLE */}
+108 \textcolor{comment}{/*       TANG   - TANGENT OF SAME ANGLE */}
+109 \textcolor{comment}{/*       BADMSG - DIAGNOSTIC MESSAGE */}
+110 
+111 
+112 \textcolor{comment}{/*   ***  20.  DARRAY BLOCK  *** */}
+113 
+114 \textcolor{comment}{/*   PRINT BUFFER */}
+115 
+116 
+117 
+118 
+119 \textcolor{comment}{/*     GENERAL CASE,TOOL OFFSET FROM SURFACE */}
+120     \textcolor{comment}{/* Parameter adjustments */}
+121     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+122     --tul;
+123     --\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+124     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+125     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+126 
+127     \textcolor{comment}{/* Function Body */}
+128     offset = *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside} * (*\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + *tolcom);
+129 \textcolor{comment}{/*     COMPUTE TOOL RADIAL AXIS */}
+130     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], vec);
+131 \textcolor{comment}{/* ...IF TA IS PARALLEL TO SN USE U (FWD) TO DETERMINE TOOL RADIAL AXIS */}
+132     vlen2 = vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2];
+133     \textcolor{keywordflow}{if} (vlen2 < 1e-12) \{
+134     \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}[1], vec);
+135     \} \textcolor{keywordflow}{else} \{
+136     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137         vec[i\_\_ - 1] = *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside} * vec[i\_\_ - 1];
+138 \textcolor{comment}{/* L20: */}
+139     \}
+140     \}
+141     \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(vec, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], vec);
+142 \textcolor{comment}{/* ...COMPUTE TANGENT OF ANGLE BETWEEN TOOL NORMAL AND TOOL RADIAL AXIS */}
+143     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&cang, vec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+144     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(vec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], v);
+145     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(v, vn);
+146     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&sang, v, vn);
+147     \textcolor{keywordflow}{if} (abs(cang) > 1e-15) \{
+148     tang = sang / \hyperlink{APT301_8c_a0cd64d6cb1ca4a09fe69edce55b5aa7d}{cang};
+149     \} \textcolor{keywordflow}{else} \{
+150     tang = d\_sign(&\hyperlink{TECALC_8c_abda8393dbbff83238306cabf353a9d23}{c\_b3}, &sang) * 1e15;
+151     \}
+152 \textcolor{comment}{/* ...IS ANGLE VALID FOR SEGMENTS 3,4,5 OF CUTTER */}
+153 \textcolor{comment}{/*   I.E. CORNER RADIUS AND ADJACENT POINT CIRCLE SEGMENTS */}
+154     \textcolor{keywordflow}{for} (i\_\_ = 3; i\_\_ <= 5; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+155     \textcolor{keywordflow}{if} (\hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[i\_\_] > 0. && (tang - \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[i\_\_ - 1]) * (
+156         tang - \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[i\_\_ - 1]) <= 0.) \{
+157 \textcolor{comment}{/* ...COMPUTE TOOL END COORDS */}
+158         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+159         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + (offset + *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside} * \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.corrad[i\_\_ - 1]) 
+160             * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28] + \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.ri[i\_\_ - 1] * vec[k - 1] - 
+161             \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tlhite[i\_\_ - 1] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[k];
+162 \textcolor{comment}{/* L25: */}
+163         \}
+164         \textcolor{keywordflow}{goto} L999;
+165     \}
+166 \textcolor{comment}{/* L30: */}
+167     \}
+168 \textcolor{comment}{/* ...NO - IS ANGLE VALID FOR TOOL TIP */}
+169     \textcolor{keywordflow}{if} (\hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[1] > 0. && (tang - \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[0]) * (tang - 
+170         \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[0]) <= 0.) \{
+171 \textcolor{comment}{/* ...YES - OUTPUT WARNING */}
+172     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - CUTTING ON TOOL TIP ***"}, \hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &
+173         \hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{TECALC_8c_a280863ace4c11cd9695eac1046336a9c}{c\_\_38}, (ftnlen)38, (ftnlen)120);
+174     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+175     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+176         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + offset * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28];
+177 \textcolor{comment}{/* L40: */}
+178     \}
+179 \textcolor{comment}{/* ...NO - IS ANGLE VALID FOR TOP OF UPPER LINE SEGMENT */}
+180     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[7] > 0. && (tang - \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[6]) * (tang - 
+181         \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[6]) <= 0.) \{
+182 \textcolor{comment}{/* ...YES - OUTPUT WARNING */}
+183     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - CUTTING ON POINT CIRCLE AT TOP OF UPPER LINE "}
+184         \textcolor{stringliteral}{"SEGMENT ***"}, \hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{TECALC_8c_ae9c087dbe3f8ddad13760d209cb18649}{c\_\_71}, (ftnlen)71, (
+185         ftnlen)120);
+186     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+187     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+188         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + offset * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28] + \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.ri[6] * vec[k - 
+189             1] - \hyperlink{TECALC_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tlhite[6] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+190 \textcolor{comment}{/* L50: */}
+191     \}
+192 \textcolor{comment}{/* ...NO - INVALID ANGLE FOR THIS CUTTER */}
+193     \} \textcolor{keywordflow}{else} \{
+194     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - UNABLE TO POSITION 7 SEGMENT CUTTER AT CURREN"}
+195         \textcolor{stringliteral}{"T SURFACE POINT - SPHERICAL CUTTER ASSUMED"}, \hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, 
+196         &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{TECALC_8c_a0846905f461846c9c0a3036851f2c483}{c\_\_101}, (ftnlen)102, (ftnlen)120);
+197     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{TECALC_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+198 
+199     \}
+200 L999:
+201     \textcolor{keywordflow}{if} (ibug != 11) \{
+202     \textcolor{keywordflow}{goto} L1999;
+203     \}
+204     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TECALC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{TECALC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{TECALC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+205     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER TECALC"}, (ftnlen)20, (ftnlen)13);
+206     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+207     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TECALC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TCOM"}, tolcom, (ftnlen)4);
+208     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TECALC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TE  "}, &\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], (ftnlen)4);
+209     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TECALC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TA  "}, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], (ftnlen)4);
+210     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TECALC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TBEF"}, &tbef, (ftnlen)4);
+211 L1999:
+212 
+213     \textcolor{keywordflow}{return} 0;
+214 \} \textcolor{comment}{/* tecalc\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TECALC_8c_af08ec06461f871c7c57bb16f427d763f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TECALC_8c_af08ec06461f871c7c57bb16f427d763f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{TECALC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 38 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{TECALC_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 33 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+101@{c\+\_\+\+\_\+101}}
+\index{c\+\_\+\+\_\+101@{c\+\_\+\+\_\+101}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+101}{c__101}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+101 = 101\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a0846905f461846c9c0a3036851f2c483}{}\label{TECALC_8c_a0846905f461846c9c0a3036851f2c483}
+
+
+Definition at line 36 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a5e7359f78743350865398325d9155f20}{}\label{TECALC_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 39 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}}
+\index{c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+38}{c__38}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+38 = 38\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a280863ace4c11cd9695eac1046336a9c}{}\label{TECALC_8c_a280863ace4c11cd9695eac1046336a9c}
+
+
+Definition at line 34 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+\+\_\+71@{c\+\_\+\+\_\+71}}
+\index{c\+\_\+\+\_\+71@{c\+\_\+\+\_\+71}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+71}{c__71}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+71 = 71\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_ae9c087dbe3f8ddad13760d209cb18649}{}\label{TECALC_8c_ae9c087dbe3f8ddad13760d209cb18649}
+
+
+Definition at line 35 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+b3@{c\+\_\+b3}}
+\index{c\+\_\+b3@{c\+\_\+b3}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b3}{c_b3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+b3 = 1.\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_abda8393dbbff83238306cabf353a9d23}{}\label{TECALC_8c_abda8393dbbff83238306cabf353a9d23}
+
+
+Definition at line 32 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a9e9287f317ef3436252a395791a899f6}{}\label{TECALC_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 37 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TECALC_8c_a6d165623735ee520885e84b5052c252b}{}\label{TECALC_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 40 of file T\+E\+C\+A\+L\+C.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{TECALC_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!darray@{darray}}
+\index{darray@{darray}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{darray}{darray}}]{\setlength{\rightskip}{0pt plus 5cm}char darray\mbox{[}120\mbox{]}}\hypertarget{TECALC_8c_ad8149129b0ac5c966968e55ba6106146}{}\label{TECALC_8c_ad8149129b0ac5c966968e55ba6106146}
+
+
+Definition at line 25 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{TECALC_8c_a169736003102b03195277fda1f5380ef}{}\label{TECALC_8c_a169736003102b03195277fda1f5380ef}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!ri@{ri}}
+\index{ri@{ri}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{TECALC_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{TECALC_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{TECALC_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{TECALC_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{TECALC_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{TECALC_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{TECALC_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{TECALC_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{TECALC_8c_a7c2b45a1ecabf0053781616ce5e96124}{}\label{TECALC_8c_a7c2b45a1ecabf0053781616ce5e96124}
+\index{T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}!umax@{umax}}
+\index{umax@{umax}!T\+E\+C\+A\+L\+C.\+c@{T\+E\+C\+A\+L\+C.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{TECALC_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{TECALC_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 18 of file T\+E\+C\+A\+L\+C.\+c.
+

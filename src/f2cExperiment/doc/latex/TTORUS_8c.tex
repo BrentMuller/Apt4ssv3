@@ -1,0 +1,90 @@
+\hypertarget{TTORUS_8c}{}\section{T\+T\+O\+R\+U\+S.\+c File Reference}
+\label{TTORUS_8c}\index{T\+T\+O\+R\+U\+S.\+c@{T\+T\+O\+R\+U\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+T\+O\+R\+U\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{TTORUS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TTORUS_8c_afcc0978da406b31c36b86d04dbc8bdef}{ttorus\+\_\+} (doublereal $\ast$trm, doublereal $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+T\+O\+R\+U\+S.\+c@{T\+T\+O\+R\+U\+S.\+c}!ttorus\+\_\+@{ttorus\+\_\+}}
+\index{ttorus\+\_\+@{ttorus\+\_\+}!T\+T\+O\+R\+U\+S.\+c@{T\+T\+O\+R\+U\+S.\+c}}
+\subsubsection[{\texorpdfstring{ttorus\+\_\+(doublereal $\ast$trm, doublereal $\ast$data)}{ttorus_(doublereal *trm, doublereal *data)}}]{\setlength{\rightskip}{0pt plus 5cm}int ttorus\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{trm, }
+\item[{doublereal $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{TTORUS_8c_afcc0978da406b31c36b86d04dbc8bdef}{}\label{TTORUS_8c_afcc0978da406b31c36b86d04dbc8bdef}
+
+
+Definition at line 17 of file T\+T\+O\+R\+U\+S.\+c.
+
+
+
+References a, and i\+\_\+\+\_\+.
+
+
+
+Referenced by teval\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3];
+20     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+21 
+22 
+23 \textcolor{comment}{/* .... TRANSFORMATOR FOR NON-NATIVE TORUS */}
+24 
+25 
+26 \textcolor{comment}{/* .... AXIS, CENTER AND REF AXIS FOR TORUS REQUIRE ROTATION */}
+27 
+28     \textcolor{comment}{/* Parameter adjustments */}
+29     --data;
+30     trm -= 5;
+31 
+32     \textcolor{comment}{/* Function Body */}
+33     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 7; i\_\_ += 3) \{
+34     a[0] = trm[5] * data[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + trm[6] * data[i\_\_ + 1] + trm[7] * data[
+35         i\_\_ + 2];
+36     a[1] = trm[9] * data[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + trm[10] * data[i\_\_ + 1] + trm[11] * data[
+37         i\_\_ + 2];
+38     a[2] = trm[13] * data[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + trm[14] * data[i\_\_ + 1] + trm[15] * data[
+39         i\_\_ + 2];
+40     data[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = a[0];
+41     data[i\_\_ + 1] = a[1];
+42     data[i\_\_ + 2] = a[2];
+43 \textcolor{comment}{/* L10: */}
+44     \}
+45 
+46 \textcolor{comment}{/* .... CENTER ALSO NEEDS TRANSLATION */}
+47 
+48     data[4] += trm[8];
+49     data[5] += trm[12];
+50     data[6] += trm[16];
+51 
+52     \textcolor{keywordflow}{return} 0;
+53 \} \textcolor{comment}{/* ttorus\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TTORUS_8c_afcc0978da406b31c36b86d04dbc8bdef_icgraph}
+\end{center}
+\end{figure}
+
+

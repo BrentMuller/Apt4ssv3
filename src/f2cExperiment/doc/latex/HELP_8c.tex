@@ -1,0 +1,69 @@
+\hypertarget{HELP_8c}{}\section{H\+E\+L\+P.\+c File Reference}
+\label{HELP_8c}\index{H\+E\+L\+P.\+c@{H\+E\+L\+P.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for H\+E\+L\+P.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{HELP_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\+\_\+} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{H\+E\+L\+P.\+c@{H\+E\+L\+P.\+c}!help\+\_\+@{help\+\_\+}}
+\index{help\+\_\+@{help\+\_\+}!H\+E\+L\+P.\+c@{H\+E\+L\+P.\+c}}
+\subsubsection[{\texorpdfstring{help\+\_\+(void)}{help_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int help\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{}\label{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}
+
+
+Definition at line 31 of file H\+E\+L\+P.\+c.
+
+
+
+References i\+\_\+\+\_\+, x, and y.
+
+
+
+Referenced by apt301\+\_\+(), apt314\+\_\+(), eread\+\_\+(), icmprs\+\_\+(), init\+\_\+(), input\+\_\+(), intrp\+\_\+(), larges\+\_\+(), lib\+\_\+(), maclbl\+\_\+(), macrec\+\_\+(), match\+\_\+(), mcxtrn\+\_\+(), mnproc\+\_\+(), page\+\_\+(), set\+\_\+(), and xcanon\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+34     \textcolor{keyword}{static} real \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{APT088_8c_a0ed6a908288e0cd87f79c1b5ab56d07c}{y}[1];
+35 
+36 
+37 \textcolor{comment}{/* ...     CATASTROPHIC FAILURE */}
+38 \textcolor{comment}{/* ...     PRODUCE EXECUTION FAILURE SO AS TO OBTAIN AUTOMATIC TRACE-BACK */}
+39 
+40     \textcolor{keywordflow}{for} (i\_\_ = 100000; i\_\_ <= 1000000; i\_\_ += 10) \{
+41     x = y[i\_\_ - 1];
+42 \textcolor{comment}{/* L10: */}
+43     y[i\_\_ - 1] = \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+44     \}
+45 \textcolor{comment}{/* L1: */}
+46     \textcolor{keywordflow}{return} 0;
+47 \} \textcolor{comment}{/* help\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{HELP_8c_aee5524b7b93e83211e32f9ae3247a832_icgraph}
+\end{center}
+\end{figure}
+
+

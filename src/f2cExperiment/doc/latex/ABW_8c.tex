@@ -1,0 +1,168 @@
+\hypertarget{ABW_8c}{}\section{A\+B\+W.\+c File Reference}
+\label{ABW_8c}\index{A\+B\+W.\+c@{A\+B\+W.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+B\+W.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{ABW_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ABW_8c_a324346196546d3d422992db07347c8e0}{abw\+\_\+} (doublereal $\ast$\hyperlink{APT341_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, doublereal $\ast$\hyperlink{APT089_8c_ac010594fc8b67761696388ca9f2d7654}{x2}, doublereal $\ast$\hyperlink{ZSURF_8c_ad43e2527e2f754444227a9804f266148}{t1}, doublereal $\ast$\hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}, doublereal $\ast$\hyperlink{START_8c_ab9574ad05adc2d78e28d0744d0fb9218}{err})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{ABW_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{ABW_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+B\+W.\+c@{A\+B\+W.\+c}!abw\+\_\+@{abw\+\_\+}}
+\index{abw\+\_\+@{abw\+\_\+}!A\+B\+W.\+c@{A\+B\+W.\+c}}
+\subsubsection[{\texorpdfstring{abw\+\_\+(doublereal $\ast$x1, doublereal $\ast$x2, doublereal $\ast$t1, doublereal $\ast$t2, doublereal $\ast$err)}{abw_(doublereal *x1, doublereal *x2, doublereal *t1, doublereal *t2, doublereal *err)}}]{\setlength{\rightskip}{0pt plus 5cm}int abw\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{x1, }
+\item[{doublereal $\ast$}]{x2, }
+\item[{doublereal $\ast$}]{t1, }
+\item[{doublereal $\ast$}]{t2, }
+\item[{doublereal $\ast$}]{err}
+\end{DoxyParamCaption}
+)}\hypertarget{ABW_8c_a324346196546d3d422992db07347c8e0}{}\label{ABW_8c_a324346196546d3d422992db07347c8e0}
+
+
+Definition at line 47 of file A\+B\+W.\+c.
+
+
+
+References a, a1, al, b1, beta, c1, c\+\_\+\+\_\+, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, cos1, darcos\+\_\+(), dotf\+\_\+(), f, gamma, i\+\_\+\+\_\+, pi, t1, t2, x1, and x2.
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{comment}{/* Format strings */}
+51     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_2[] = \textcolor{stringliteral}{"(\(\backslash\)002 ABW:X1,X2,T1,T2,ERR:\(\backslash\)002,/,\(\backslash\)002 \(\backslash\)002,13f10."}
+52         \textcolor{stringliteral}{"4)"};
+53 
+54     \textcolor{comment}{/* Builtin functions */}
+55     \textcolor{keywordtype}{double} sqrt(doublereal), sin(doublereal);
+56     integer s\_wsfe(cilist *), do\_fio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_wsfe(\textcolor{keywordtype}{void});
+57 
+58     \textcolor{comment}{/* Local variables */}
+59     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3], \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+60     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+61     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{DDTABC_8c_a8f9aca421a560153a31ebb326da34216}{c1}, \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al}, \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi};
+62     \textcolor{keyword}{static} integer kq;
+63     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_aa061b11706c46e4e7299be7f1dd355ef}{cos1}, cos2, \hyperlink{AXSET_8c_a0f4d8a67bb39acc583704de120c23b36}{beta};
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+65         );
+66     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma};
+67     \textcolor{keyword}{extern} doublereal \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(doublereal *);
+68 
+69     \textcolor{comment}{/* Fortran I/O blocks */}
+70     \textcolor{keyword}{static} cilist io\_\_\_14 = \{ 0, 0, 0, fmt\_2, 0 \};
+71 
+72 
+73     \textcolor{comment}{/* Parameter adjustments */}
+74     --\hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2};
+75     --\hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1};
+76     --\hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2};
+77     --\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1};
+78 
+79     \textcolor{comment}{/* Function Body */}
+80     kq = 6;
+81     pi = 3.1415926535f;
+82     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+83 \textcolor{comment}{/* L1: */}
+84     a[i\_\_ - 1] = \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+85     \}
+86     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&al, a, a);
+87     al = sqrt(al);
+88     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&cos1, a, &\hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1}[1]);
+89     cos1 /= \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al};
+90     \textcolor{keywordflow}{if} (abs(cos1) <= 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+91     \textcolor{keywordflow}{goto} L3;
+92     \}
+93     \textcolor{keywordflow}{if} (cos1 > 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+94     cos1 = 1.f;
+95     \}
+96     \textcolor{keywordflow}{if} (cos1 < -1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+97     cos1 = -1.f;
+98     \}
+99 L3:
+100     b1 = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&cos1);
+101     beta = b1 * 180.f / \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi};
+102     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&cos2, a, &\hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}[1]);
+103     cos2 /= \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al};
+104     \textcolor{keywordflow}{if} (abs(cos2) <= 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+105     \textcolor{keywordflow}{goto} L5;
+106     \}
+107     \textcolor{keywordflow}{if} (cos2 < -1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+108     cos2 = -1.f;
+109     \}
+110     \textcolor{keywordflow}{if} (cos2 > 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+111     cos2 = 1.f;
+112     \}
+113 L5:
+114     c1 = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&cos2);
+115     gamma = c1 * 180.f / \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi};
+116     a1 = (180.f - beta - \hyperlink{AERR2_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}) * pi / 180.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+117     c\_\_ = al * sin(c1) / sin(a1);
+118     *\hyperlink{ACNTRL_8c_ab9574ad05adc2d78e28d0744d0fb9218}{err} = c\_\_ * sin(b1) * .1f;
+119     *\hyperlink{ACNTRL_8c_ab9574ad05adc2d78e28d0744d0fb9218}{err} = abs(*\hyperlink{ACNTRL_8c_ab9574ad05adc2d78e28d0744d0fb9218}{err});
+120     \textcolor{keywordflow}{if} (kq != 0) \{
+121     io\_\_\_14.ciunit = kq;
+122     s\_wsfe(&io\_\_\_14);
+123     do\_fio(&\hyperlink{ABW_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, (\textcolor{keywordtype}{char} *)&\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}[1], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+124     do\_fio(&\hyperlink{ABW_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, (\textcolor{keywordtype}{char} *)&\hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}[1], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+125     do\_fio(&\hyperlink{ABW_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, (\textcolor{keywordtype}{char} *)&\hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1}[1], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+126     do\_fio(&\hyperlink{ABW_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, (\textcolor{keywordtype}{char} *)&\hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}[1], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+127     do\_fio(&\hyperlink{ABW_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&(*\hyperlink{ACNTRL_8c_ab9574ad05adc2d78e28d0744d0fb9218}{err}), (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+128     e\_wsfe();
+129     \}
+130     \textcolor{keywordflow}{return} 0;
+131 \} \textcolor{comment}{/* abw\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ABW_8c_a324346196546d3d422992db07347c8e0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+B\+W.\+c@{A\+B\+W.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+B\+W.\+c@{A\+B\+W.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ABW_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ABW_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 18 of file A\+B\+W.\+c.
+
+
+
+Referenced by abw\+\_\+().
+
+\index{A\+B\+W.\+c@{A\+B\+W.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!A\+B\+W.\+c@{A\+B\+W.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ABW_8c_a5e7359f78743350865398325d9155f20}{}\label{ABW_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 17 of file A\+B\+W.\+c.
+
+
+
+Referenced by abw\+\_\+().
+

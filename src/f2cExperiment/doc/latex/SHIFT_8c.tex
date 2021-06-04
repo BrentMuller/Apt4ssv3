@@ -1,0 +1,117 @@
+\hypertarget{SHIFT_8c}{}\section{S\+H\+I\+F\+T.\+c File Reference}
+\label{SHIFT_8c}\index{S\+H\+I\+F\+T.\+c@{S\+H\+I\+F\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+H\+I\+F\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{SHIFT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SHIFT_8c_a7d0b4ac6dcd3f89e4ae3d554b969eaa2}{shift\+\_\+} (char $\ast$\hyperlink{INTSEC_8c_a836535f59bf515522a395858a8029d42}{word}, char $\ast$jchar, ftnlen word\+\_\+len, ftnlen jchar\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{SHIFT_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+H\+I\+F\+T.\+c@{S\+H\+I\+F\+T.\+c}!shift\+\_\+@{shift\+\_\+}}
+\index{shift\+\_\+@{shift\+\_\+}!S\+H\+I\+F\+T.\+c@{S\+H\+I\+F\+T.\+c}}
+\subsubsection[{\texorpdfstring{shift\+\_\+(char $\ast$word, char $\ast$jchar, ftnlen word\+\_\+len, ftnlen jchar\+\_\+len)}{shift_(char *word, char *jchar, ftnlen word_len, ftnlen jchar_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int shift\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{word, }
+\item[{char $\ast$}]{jchar, }
+\item[{ftnlen}]{word\+\_\+len, }
+\item[{ftnlen}]{jchar\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{SHIFT_8c_a7d0b4ac6dcd3f89e4ae3d554b969eaa2}{}\label{SHIFT_8c_a7d0b4ac6dcd3f89e4ae3d554b969eaa2}
+
+
+Definition at line 21 of file S\+H\+I\+F\+T.\+c.
+
+
+
+References c\+\_\+\+\_\+2, j, and temp.
+
+
+
+Referenced by gettmp\+\_\+(), and maclbl\+\_\+().
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* System generated locals */}
+25     address a\_\_1[2];
+26     integer i\_\_1[2];
+27 
+28     \textcolor{comment}{/* Builtin functions */}
+29     integer i\_indx(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+30     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_cat(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} **, integer *, integer *, ftnlen),
+31          s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+35     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[6];
+36 
+37 
+38 \textcolor{comment}{/*  *  SHIFT  *  VAX11 VERSION   4.10.85    E.MCLELLAN */}
+39 
+40 \textcolor{comment}{/*  PURPOSE     TO APPEND A SINGLE CHARACTER 'JCHAR' TO THE CHARACTER */}
+41 \textcolor{comment}{/*              STRING BEING SET UP IN 'WORD' TO FORM A LEFT-JUSTIFIED */}
+42 \textcolor{comment}{/*              'NAME' IN 'WORD' */}
+43 
+44 \textcolor{comment}{/*  CALLING SEQUENCE */}
+45 \textcolor{comment}{/*              CALL SHIFT(WORD,JCHAR) */}
+46 \textcolor{comment}{/*  ARGUMENTS   WORD   CHARACTER STRING IN WHICH A 'NAME' */}
+47 \textcolor{comment}{/*                     IS BEING BUILT UP */}
+48 \textcolor{comment}{/*              JCHAR  CONTAINS THE NEXT CHARACTER (LEFT JUSTIFIED) */}
+49 \textcolor{comment}{/*                     TO BE PLACED IN WORD */}
+50 
+51 
+52     j = i\_indx(\hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word}, \textcolor{stringliteral}{" "}, (ftnlen)6, (ftnlen)1);
+53     \textcolor{keywordflow}{if} (j != 0) \{
+54     *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&\hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word}[j - 1] = *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)jchar;
+55     \} \textcolor{keywordflow}{else} \{
+56 \textcolor{comment}{/*  LEFT SHIFT CONTENTS OF WORD AND APPEND CHARACTER */}
+57 \textcolor{comment}{/* Writing concatenation */}
+58     i\_\_1[0] = 5, a\_\_1[0] = \hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word} + 1;
+59     i\_\_1[1] = 1, a\_\_1[1] = jchar;
+60     s\_cat(temp, a\_\_1, i\_\_1, &\hyperlink{SHIFT_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, (ftnlen)6);
+61     s\_copy(\hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word}, temp, (ftnlen)6, (ftnlen)6);
+62     \}
+63     \textcolor{keywordflow}{return} 0;
+64 \} \textcolor{comment}{/* shift\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SHIFT_8c_a7d0b4ac6dcd3f89e4ae3d554b969eaa2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+H\+I\+F\+T.\+c@{S\+H\+I\+F\+T.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!S\+H\+I\+F\+T.\+c@{S\+H\+I\+F\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SHIFT_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{SHIFT_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file S\+H\+I\+F\+T.\+c.
+
+
+
+Referenced by shift\+\_\+().
+

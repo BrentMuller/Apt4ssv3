@@ -1,0 +1,307 @@
+\hypertarget{SETVER_8c}{}\section{S\+E\+T\+V\+E\+R.\+c File Reference}
+\label{SETVER_8c}\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+E\+T\+V\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{SETVER_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\+\_\+1}~\hyperlink{SETVER_8c_a5669d464871821e3d9357614f947b8e8}{vercom\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SETVER_8c_a32dbb6214badc8fb7514795bf2847a14}{setver\+\_\+} (doublereal $\ast$\hyperlink{POCKET_8c_a6c6772207c061db8f6ca77c2661f497a}{w})
+\item 
+int \hyperlink{SETVER_8c_a96b90d384d01f7f1271789ba9ddef808}{getver\+\_\+} (doublereal $\ast$w2, doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$ires)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{SETVER_8c_a29bf2c26b3e4ef06c538733c7c5560e1}{umin1}\\
+\>doublereal \hyperlink{SETVER_8c_a537804f8667e90e60d6fa010a44fa054}{umax1}\\
+\>doublereal \hyperlink{SETVER_8c_aa810456694d45f2e28b598fbd8f87280}{vmin1}\\
+\>doublereal \hyperlink{SETVER_8c_a76c09d4f3d5d081a4c1c15995e9e2dc4}{vmax1}\\
+\>doublereal \hyperlink{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{w1} \mbox{[}4\mbox{]}\\
+\} \hyperlink{SETVER_8c_a5669d464871821e3d9357614f947b8e8}{vercom\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!vercom\+\_\+1@{vercom\+\_\+1}}
+\index{vercom\+\_\+1@{vercom\+\_\+1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{vercom\+\_\+1}{vercom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vercom\+\_\+1~{\bf vercom\+\_\+}}\hypertarget{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{}\label{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}
+
+
+Definition at line 21 of file S\+E\+T\+V\+E\+R.\+c.
+
+
+
+Referenced by getver\+\_\+(), and setver\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!getver\+\_\+@{getver\+\_\+}}
+\index{getver\+\_\+@{getver\+\_\+}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{getver\+\_\+(doublereal $\ast$w2, doublereal $\ast$result, integer $\ast$ires)}{getver_(doublereal *w2, doublereal *result, integer *ires)}}]{\setlength{\rightskip}{0pt plus 5cm}int getver\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{w2, }
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{ires}
+\end{DoxyParamCaption}
+)}\hypertarget{SETVER_8c_a96b90d384d01f7f1271789ba9ddef808}{}\label{SETVER_8c_a96b90d384d01f7f1271789ba9ddef808}
+
+
+Definition at line 73 of file S\+E\+T\+V\+E\+R.\+c.
+
+
+
+References a1, a2, b1, b2, d\+\_\+\+\_\+, result, and vercom\+\_\+1.
+
+
+
+Referenced by numver\+\_\+(), and region\+\_\+().
+
+
+\begin{DoxyCode}
+75 \{
+76     \textcolor{comment}{/* System generated locals */}
+77     doublereal d\_\_1, d\_\_2;
+78 
+79     \textcolor{comment}{/* Local variables */}
+80     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, a3, \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2}, b3;
+81 
+82 
+83 \textcolor{comment}{/* ROUTINE   GETVER COMPUTES THE INTERSECTION */}
+84 \textcolor{comment}{/*       W2     : I: DEFINITION OF 2ND LINE: START POINT (U3,V3) */}
+85 \textcolor{comment}{/*                                           END   POINT (U4,V4) */}
+86 \textcolor{comment}{/*                    W2(1) = U3 */}
+87 \textcolor{comment}{/*                    W2(2) = V3 */}
+88 \textcolor{comment}{/*                    W2(3) = U4-U3 */}
+89 \textcolor{comment}{/*                    W2(4) = V4-V3 */}
+90 \textcolor{comment}{/*       RESULT : O: RESULTING VALUES, POINT OF INTERSECTION */}
+91 \textcolor{comment}{/*       IRES   : O: =0: NO INTERSECTION */}
+92 \textcolor{comment}{/*                   =1: INTERSECTION, RESULT IN RESULT */}
+93 \textcolor{comment}{/*                   =2: INTERSECTION, PARALLEL LINES, */}
+94 \textcolor{comment}{/*                        UPON EACH OTHER */}
+95 
+96 
+97 
+98 
+99     \textcolor{comment}{/* Parameter adjustments */}
+100     --\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result};
+101     --w2;
+102 
+103     \textcolor{comment}{/* Function Body */}
+104     *ires = 0;
+105 
+106 \textcolor{comment}{/* Computing MAX */}
+107     d\_\_1 = w2[1], d\_\_2 = w2[1] + w2[3];
+108     \textcolor{keywordflow}{if} (\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.umin1 > max(d\_\_1,d\_\_2)) \{
+109     \textcolor{keywordflow}{return} 0;
+110     \}
+111 \textcolor{comment}{/* Computing MIN */}
+112     d\_\_1 = w2[1], d\_\_2 = w2[1] + w2[3];
+113     \textcolor{keywordflow}{if} (\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.umax1 < min(d\_\_1,d\_\_2)) \{
+114     \textcolor{keywordflow}{return} 0;
+115     \}
+116 \textcolor{comment}{/* Computing MAX */}
+117     d\_\_1 = w2[2], d\_\_2 = w2[2] + w2[4];
+118     \textcolor{keywordflow}{if} (\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.vmin1 > max(d\_\_1,d\_\_2)) \{
+119     \textcolor{keywordflow}{return} 0;
+120     \}
+121 \textcolor{comment}{/* Computing MIN */}
+122     d\_\_1 = w2[2], d\_\_2 = w2[2] + w2[4];
+123     \textcolor{keywordflow}{if} (\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.vmax1 < min(d\_\_1,d\_\_2)) \{
+124     \textcolor{keywordflow}{return} 0;
+125     \}
+126 
+127     \textcolor{keywordflow}{if} (((w2[1] - \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0]) * \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3] - (w2[2] - 
+      \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1]) 
+128         * \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2]) * ((w2[1] + w2[3] - \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0]) * 
+129         \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3] - (w2[2] + w2[4] - \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1]) * 
+      \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2]
+130         ) > 0.) \{
+131     \textcolor{keywordflow}{return} 0;
+132     \}
+133 
+134     \textcolor{keywordflow}{if} (((\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0] - w2[1]) * w2[4] - (\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1] - w2[2]) * w2[3]) 
+135         * ((\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2] - w2[1]) * w2[4] - (
+136         \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3] - w2[2]) * w2[3]) > 0.) \{
+137     \textcolor{keywordflow}{return} 0;
+138     \}
+139 
+140 \textcolor{comment}{/* INTERSECT THE 1ST AND 2ND LINE */}
+141     a1 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3];
+142     a2 = -\hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2];
+143     a3 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3] * \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0] - \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2] * 
+      \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1];
+144     b1 = w2[4];
+145     b2 = -w2[3];
+146     b3 = w2[4] * w2[1] - w2[3] * w2[2];
+147 
+148 \textcolor{comment}{/*  CHECK FOR PARALLEL */}
+149     d\_\_ = a2 * b1 - a1 * \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2};
+150     \textcolor{keywordflow}{if} (abs(d\_\_) < 1e-10) \{
+151     \textcolor{keywordflow}{goto} L50;
+152     \}
+153     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[1] = -(a3 * b2 - a2 * b3) / d\_\_;
+154     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[2] = (a3 * b1 - a1 * b3) / d\_\_;
+155     *ires = 1;
+156     \textcolor{keywordflow}{goto} L60;
+157 L50:
+158     *ires = 2;
+159 L60:
+160 \textcolor{comment}{/* CCCC WRITE(6,100)IRES,W1,W2,RESULT */}
+161 \textcolor{comment}{/* C100 FORMAT(' IRES,W1,W2,RESULT:'/I3/1X,4F20.5/1X,4F20.5/1X,2F20.5) */}
+162 
+163     \textcolor{keywordflow}{return} 0;
+164 \} \textcolor{comment}{/* getver\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SETVER_8c_a96b90d384d01f7f1271789ba9ddef808_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!setver\+\_\+@{setver\+\_\+}}
+\index{setver\+\_\+@{setver\+\_\+}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{setver\+\_\+(doublereal $\ast$w)}{setver_(doublereal *w)}}]{\setlength{\rightskip}{0pt plus 5cm}int setver\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{SETVER_8c_a32dbb6214badc8fb7514795bf2847a14}{}\label{SETVER_8c_a32dbb6214badc8fb7514795bf2847a14}
+
+
+Definition at line 25 of file S\+E\+T\+V\+E\+R.\+c.
+
+
+
+References i\+\_\+\+\_\+, vercom\+\_\+1, and w.
+
+
+
+Referenced by numver\+\_\+(), and region\+\_\+().
+
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{comment}{/* System generated locals */}
+28     doublereal d\_\_1, d\_\_2;
+29 
+30     \textcolor{comment}{/* Local variables */}
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+32 
+33 
+34 \textcolor{comment}{/* ROUTINE SETVER SETS THE STARTING VALUES FOR INTERSECTION */}
+35 
+36 \textcolor{comment}{/* STORES ARRAY W IN ARRAY W1 IN COMMON/VERCOM FOR USE BY GETVER */}
+37 
+38 \textcolor{comment}{/*       W1     : I: DEFINITION OF 1ST LINE: START POINT (U1,V1) */}
+39 \textcolor{comment}{/*                                           END   POINT (U2,V2) */}
+40 \textcolor{comment}{/*                    W1(1) = U1 */}
+41 \textcolor{comment}{/*                    W1(2) = V1 */}
+42 \textcolor{comment}{/*                    W1(3) = U2-U1 */}
+43 \textcolor{comment}{/*                    W1(4) = V2-V1 */}
+44 
+45 
+46 
+47 
+48     \textcolor{comment}{/* Parameter adjustments */}
+49     --\hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+50 
+51     \textcolor{comment}{/* Function Body */}
+52     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+53     \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[i\_\_ - 1] = \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+54 \textcolor{comment}{/* L10: */}
+55     \}
+56 
+57 \textcolor{comment}{/* Computing MIN */}
+58     d\_\_1 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0], d\_\_2 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2];
+59     \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.umin1 = min(d\_\_1,d\_\_2);
+60 \textcolor{comment}{/* Computing MAX */}
+61     d\_\_1 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0], d\_\_2 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[0] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[2];
+62     \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.umax1 = max(d\_\_1,d\_\_2);
+63 \textcolor{comment}{/* Computing MIN */}
+64     d\_\_1 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1], d\_\_2 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3];
+65     \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.vmin1 = min(d\_\_1,d\_\_2);
+66 \textcolor{comment}{/* Computing MAX */}
+67     d\_\_1 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1], d\_\_2 = \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[1] + \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.w1[3];
+68     \hyperlink{SETVER_8c_a0f7ed7077da034562bceab8cf7126154}{vercom\_1}.vmax1 = max(d\_\_1,d\_\_2);
+69     \textcolor{keywordflow}{return} 0;
+70 \} \textcolor{comment}{/* setver\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SETVER_8c_a32dbb6214badc8fb7514795bf2847a14_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!umax1@{umax1}}
+\index{umax1@{umax1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{umax1}{umax1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax1}\hypertarget{SETVER_8c_a537804f8667e90e60d6fa010a44fa054}{}\label{SETVER_8c_a537804f8667e90e60d6fa010a44fa054}
+
+
+Definition at line 18 of file S\+E\+T\+V\+E\+R.\+c.
+
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!umin1@{umin1}}
+\index{umin1@{umin1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{umin1}{umin1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umin1}\hypertarget{SETVER_8c_a29bf2c26b3e4ef06c538733c7c5560e1}{}\label{SETVER_8c_a29bf2c26b3e4ef06c538733c7c5560e1}
+
+
+Definition at line 18 of file S\+E\+T\+V\+E\+R.\+c.
+
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!vercom\+\_\+@{vercom\+\_\+}}
+\index{vercom\+\_\+@{vercom\+\_\+}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{vercom\+\_\+}{vercom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   vercom\+\_\+}\hypertarget{SETVER_8c_a5669d464871821e3d9357614f947b8e8}{}\label{SETVER_8c_a5669d464871821e3d9357614f947b8e8}
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!vmax1@{vmax1}}
+\index{vmax1@{vmax1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{vmax1}{vmax1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vmax1}\hypertarget{SETVER_8c_a76c09d4f3d5d081a4c1c15995e9e2dc4}{}\label{SETVER_8c_a76c09d4f3d5d081a4c1c15995e9e2dc4}
+
+
+Definition at line 18 of file S\+E\+T\+V\+E\+R.\+c.
+
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!vmin1@{vmin1}}
+\index{vmin1@{vmin1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{vmin1}{vmin1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vmin1}\hypertarget{SETVER_8c_aa810456694d45f2e28b598fbd8f87280}{}\label{SETVER_8c_aa810456694d45f2e28b598fbd8f87280}
+
+
+Definition at line 18 of file S\+E\+T\+V\+E\+R.\+c.
+
+\index{S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}!w1@{w1}}
+\index{w1@{w1}!S\+E\+T\+V\+E\+R.\+c@{S\+E\+T\+V\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{w1}{w1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal w1\mbox{[}4\mbox{]}}\hypertarget{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{}\label{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}
+
+
+Definition at line 18 of file S\+E\+T\+V\+E\+R.\+c.
+
+
+
+Referenced by ajundd\+\_\+(), amind\+\_\+(), ccurv\+\_\+(), curflo\+\_\+(), ddrlsr\+\_\+(), ddssrf\+\_\+(), gcubic\+\_\+(), numver\+\_\+(), parmf2\+\_\+(), radar\+\_\+(), ratcon\+\_\+(), sspath\+\_\+(), tlnorm\+\_\+(), txhull\+\_\+(), and u1comp\+\_\+().
+

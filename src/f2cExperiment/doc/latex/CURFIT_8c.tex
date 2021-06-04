@@ -1,0 +1,305 @@
+\hypertarget{CURFIT_8c}{}\section{C\+U\+R\+F\+I\+T.\+c File Reference}
+\label{CURFIT_8c}\index{C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+U\+R\+F\+I\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{CURFIT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CURFIT_8c_ac94d036185355df0576434ab0dde7787}{curfit\+\_\+} (doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$pc, doublereal $\ast$pd, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$td, integer $\ast$ktyp, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{CURFIT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CURFIT_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}!curfit\+\_\+@{curfit\+\_\+}}
+\index{curfit\+\_\+@{curfit\+\_\+}!C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}}
+\subsubsection[{\texorpdfstring{curfit\+\_\+(doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$pc, doublereal $\ast$pd, doublereal $\ast$ta, doublereal $\ast$td, integer $\ast$ktyp, integer $\ast$irr)}{curfit_(doublereal *pa, doublereal *pb, doublereal *pc, doublereal *pd, doublereal *ta, doublereal *td, integer *ktyp, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int curfit\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pa, }
+\item[{doublereal $\ast$}]{pb, }
+\item[{doublereal $\ast$}]{pc, }
+\item[{doublereal $\ast$}]{pd, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{td, }
+\item[{integer $\ast$}]{ktyp, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{CURFIT_8c_ac94d036185355df0576434ab0dde7787}{}\label{CURFIT_8c_ac94d036185355df0576434ab0dde7787}
+
+
+Definition at line 22 of file C\+U\+R\+F\+I\+T.\+c.
+
+
+
+References b, c\+\_\+\+\_\+, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, d1, d2, f, forcub\+\_\+(), i\+\_\+\+\_\+, parint\+\_\+(), parmpt\+\_\+(), r\+\_\+\+\_\+, s, ta, and x.
+
+
+
+Referenced by pntson\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* System generated locals */}
+27     doublereal d\_\_1, d\_\_2, d\_\_3;
+28 
+29     \textcolor{comment}{/* Builtin functions */}
+30     \textcolor{keywordtype}{double} sqrt(doublereal);
+31 
+32     \textcolor{comment}{/* Local variables */}
+33     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+34     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}, \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}, \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, d3, dt, df1, df2, df3, bcb, ddf, del,
+36          bsq, crit, suma, sumb;
+37     \textcolor{keyword}{static} integer idiag;
+38     \textcolor{keyword}{static} doublereal ccoef[12] \textcolor{comment}{/* was [3][4] */};
+39     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{FORCUB_8c_a85c8c12c025d65437e8b925db0a1e629}{forcub\_}(doublereal *, doublereal *, 
+40         doublereal *, doublereal *, doublereal *, doublereal *, integer *)
+41         , \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(doublereal *, doublereal *, doublereal *, doublereal *, 
+42         doublereal *, integer *, integer *), \hyperlink{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa}{parmpt\_}(doublereal *, 
+43         doublereal *, doublereal *, doublereal *, doublereal *, 
+44         doublereal *, doublereal *, doublereal *, integer *);
+45 
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     --td;
+48     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+49     --pd;
+50     --pc;
+51     --pb;
+52     --pa;
+53 
+54     \textcolor{comment}{/* Function Body */}
+55     idiag = 27000;
+56     *irr = 0;
+57 \textcolor{comment}{/* ------INPUT IS FOUR POINTS PA,PB,PC,PD IN LINEAR ORDER */}
+58 \textcolor{comment}{/* ------OUTPUT IS TANGENT VECTORS TA,TD OF A SMOOTH CUBIC CURVE */}
+59 \textcolor{comment}{/* ------WHICH PASSES THRU THE INPUT POINTS.  IF IRR.NE.0 , THEN */}
+60 \textcolor{comment}{/* ------THERE IS POTENTIAL TROUBLE IN THE INPUT POINTS */}
+61 \textcolor{comment}{/* ------THE FIRST STEP IS A CHECK FOR EQUALITY OF PB AND PC */}
+62 \textcolor{comment}{/* ------KTYP IS OUTPUT CURVE TYPE. 1=NULL CURVE, */}
+63 \textcolor{comment}{/* ------2=STRAIGHT SEGMENT, 3= THREE POINT CURVE, 4= FOUR PT CURVE */}
+64 \textcolor{comment}{/* Computing 2nd power */}
+65     d\_\_1 = pb[1] - pa[1];
+66 \textcolor{comment}{/* Computing 2nd power */}
+67     d\_\_2 = pb[2] - pa[2];
+68 \textcolor{comment}{/* Computing 2nd power */}
+69     d\_\_3 = pb[3] - pa[3];
+70     d1 = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+71 \textcolor{comment}{/* Computing 2nd power */}
+72     d\_\_1 = pc[1] - pb[1];
+73 \textcolor{comment}{/* Computing 2nd power */}
+74     d\_\_2 = pc[2] - pb[2];
+75 \textcolor{comment}{/* Computing 2nd power */}
+76     d\_\_3 = pc[3] - pb[3];
+77     d2 = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+78 \textcolor{comment}{/* Computing 2nd power */}
+79     d\_\_1 = pd[1] - pc[1];
+80 \textcolor{comment}{/* Computing 2nd power */}
+81     d\_\_2 = pd[2] - pc[2];
+82 \textcolor{comment}{/* Computing 2nd power */}
+83     d\_\_3 = pd[3] - pc[3];
+84     d3 = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+85     dt = d1 + d2 + d3;
+86 \textcolor{comment}{/* ------VARIOUS CHECKS ARE MADE ON THE INPUT TO DETECT DEGENERATE CASES */}
+87 \textcolor{comment}{/* ------FOR EXAMPLE PA=PB=PC.NE.PD WILL INDICATE A SRAIGHT LINE THRU */}
+88 \textcolor{comment}{/* ------PA AND PD. */}
+89     crit = 1e-5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+90     \textcolor{keywordflow}{if} (dt > crit) \{
+91     \textcolor{keywordflow}{goto} L100;
+92     \}
+93 \textcolor{comment}{/* ------THIS IS CASE OF A ZERO CURVE */}
+94     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+95     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 0.f;
+96 \textcolor{comment}{/* L10: */}
+97     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 0.f;
+98     \}
+99     *ktyp = 1;
+100     \textcolor{keywordflow}{goto} L999;
+101 L100:
+102     \textcolor{keywordflow}{if} (d1 > crit && d2 > crit) \{
+103     \textcolor{keywordflow}{goto} L200;
+104     \}
+105     \textcolor{keywordflow}{if} (d1 > crit && d3 > crit) \{
+106     \textcolor{keywordflow}{goto} L200;
+107     \}
+108     \textcolor{keywordflow}{if} (d2 > crit && d3 > crit) \{
+109     \textcolor{keywordflow}{goto} L200;
+110     \}
+111 \textcolor{comment}{/* ------THE STRAIGHT LINE CASE */}
+112     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+113     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+114 \textcolor{comment}{/* L120: */}
+115     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+116     \}
+117     *ktyp = 2;
+118     \textcolor{keywordflow}{goto} L999;
+119 \textcolor{comment}{/* ------FINALLY CHECK FOR THREE POINT DEGENERACY */}
+120 L200:
+121     \textcolor{keywordflow}{if} (d1 < crit) \{
+122     \textcolor{keywordflow}{goto} L400;
+123     \}
+124     \textcolor{keywordflow}{if} (d2 < crit) \{
+125     \textcolor{keywordflow}{goto} L400;
+126     \}
+127     \textcolor{keywordflow}{if} (d3 < crit) \{
+128     \textcolor{keywordflow}{goto} L400;
+129     \}
+130 \textcolor{comment}{/* ------THE NON TRIVIAL FOUR POINT CURVE FOLLOWS */}
+131     \hyperlink{FORCUB_8c_a85c8c12c025d65437e8b925db0a1e629}{forcub\_}(&pa[1], &pb[1], &pc[1], &pd[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &td[1], irr);
+132     \textcolor{keywordflow}{if} (*irr == 0) \{
+133     \textcolor{keywordflow}{goto} L310;
+134     \}
+135 \textcolor{comment}{/* ------TRY A MORE RUDIMENTARY ESTIMATE OF TA AND TD */}
+136     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * dt / d1;
+138     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * dt / d3;
+139 \textcolor{comment}{/* L320: */}
+140     \}
+141 L310:
+142 \textcolor{comment}{/* ------NOW PROJECT PB AND PC ONTO THE INITIAL ESTIMATED CURVE */}
+143     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+144     ccoef[i\_\_ - 1] = pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+145     ccoef[i\_\_ + 2] = pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+146     ccoef[i\_\_ + 5] = \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+147 \textcolor{comment}{/* L330: */}
+148     ccoef[i\_\_ + 8] = td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+149     \}
+150     df1 = pd[1] - pa[1];
+151     df2 = pd[2] - pa[2];
+152     df3 = pd[3] - pa[3];
+153     ddf = df1 * df1 + df2 * df2 + df3 * df3 + 1e-30;
+154     b = ((pb[1] - pa[1]) * df1 + (pb[2] - pa[2]) * df2 + (pb[3] - pa[3]) * 
+155         df3) / ddf;
+156     c\_\_ = ((pc[1] - pa[1]) * df1 + (pc[2] - pa[2]) * df2 + (pc[3] - pa[3]) * 
+157         df3) / ddf;
+158     \hyperlink{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa}{parmpt\_}(&pa[1], &pd[1], &pb[1], &b, &pc[1], &c\_\_, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &td[1], irr);
+159     *ktyp = 4;
+160     \textcolor{keywordflow}{goto} L999;
+161 \textcolor{comment}{/* ------THE THREE POINT DEGENERATE CASE FOLLOWS */}
+162 L400:
+163 \textcolor{comment}{/* ------PB SHOULD BE THE NONTRIVIAL THIRD POINT */}
+164     \textcolor{keywordflow}{if} (d1 > crit) \{
+165     \textcolor{keywordflow}{goto} L410;
+166     \}
+167     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+168 \textcolor{comment}{/* L420: */}
+169     pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+170     \}
+171 L410:
+172     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&pa[1], &pb[1], &pd[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &r\_\_, &\hyperlink{CURFIT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, irr);
+173     \textcolor{keywordflow}{if} (*irr != 0) \{
+174     \textcolor{keywordflow}{goto} L430;
+175     \}
+176     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&pa[1], &pb[1], &pd[1], &td[1], &r\_\_, &\hyperlink{CURFIT_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, irr);
+177     \textcolor{keywordflow}{goto} L450;
+178 L430:
+179     *irr = 0;
+180     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+181     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) / max(d1,d2);
+182     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) / max(d2,d3);
+183 \textcolor{comment}{/* L440: */}
+184     \}
+185 L450:
+186 \textcolor{comment}{/* ------NOW PROJECT THE PB ONTO THE INITIAL CURVE */}
+187     df1 = pd[1] - pa[1];
+188     df2 = pd[2] - pa[2];
+189     df3 = pd[3] - pa[3];
+190     ddf = df1 * df1 + df2 * df2 + df3 * df3 + 1e-12;
+191     b = ((pb[1] - pa[1]) * df1 + (pb[2] - pa[2]) * df2 + (pb[3] - pa[3]) * 
+192         df3) / ddf;
+193 \textcolor{comment}{/* ------DETERMINE A SCALAR X SUCH THAT THE VECTORS X*TA AND X*TD */}
+194 \textcolor{comment}{/* ------MAKE A CLOSEST APPROACH TO THE POINT PB AT THE PARAMETER */}
+195 \textcolor{comment}{/* ------VALUE B. */}
+196     bsq = b * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+197     bcb = b * bsq;
+198     suma = 0.f;
+199     sumb = 0.f;
+200     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+201     del = pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+202     r\_\_ = pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + del * (bsq * 3 - bcb * 2);
+203     s = \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * (b - bsq - bsq + bcb) + td[i\_\_] * (-bsq + bcb);
+204 \textcolor{comment}{/* ------MINIMIZE THE FORM (R+ X*S - PB)**2 WITH RESPECT TO X */}
+205     r\_\_ -= pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+206     suma += r\_\_ * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+207     sumb += s * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+208 \textcolor{comment}{/* L470: */}
+209     \}
+210     \textcolor{keywordflow}{if} (abs(sumb) < 1e-8) \{
+211     x = 1.f;
+212     \}
+213     \textcolor{keywordflow}{if} (abs(sumb) >= 1e-8) \{
+214     x = -suma / sumb;
+215     \}
+216     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+217     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = x * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+218 \textcolor{comment}{/* L480: */}
+219     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = x * td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+220     \}
+221     *ktyp = 3;
+222     *irr = 0;
+223 L999:
+224     \textcolor{keywordflow}{return} 0;
+225 \} \textcolor{comment}{/* curfit\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CURFIT_8c_ac94d036185355df0576434ab0dde7787_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CURFIT_8c_ac94d036185355df0576434ab0dde7787_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CURFIT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CURFIT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file C\+U\+R\+F\+I\+T.\+c.
+
+
+
+Referenced by curfit\+\_\+().
+
+\index{C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!C\+U\+R\+F\+I\+T.\+c@{C\+U\+R\+F\+I\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CURFIT_8c_a5e7359f78743350865398325d9155f20}{}\label{CURFIT_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 18 of file C\+U\+R\+F\+I\+T.\+c.
+
+
+
+Referenced by curfit\+\_\+().
+

@@ -1,0 +1,400 @@
+\hypertarget{CRVLEN_8c}{}\section{C\+R\+V\+L\+E\+N.\+c File Reference}
+\label{CRVLEN_8c}\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+R\+V\+L\+E\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{CRVLEN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CRVLEN_8c_a2030f346803ca62bb534d53bec2e462b}{crvlen\+\_\+} (doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, integer $\ast$numint, integer $\ast$mxct, doublereal $\ast$ctolr, integer $\ast$ilevel)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CRVLEN_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{CRVLEN_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{CRVLEN_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\} \hyperlink{CRVLEN_8c_a20cfc431b5e957790c797d5cefb4b2b5}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CRVLEN_8c_a62cf20bfb309ebd68eabc431a5affe7f}{c\+\_\+n6} = -\/6
+\item 
+static integer \hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+Referenced by crvlen\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!crvlen\+\_\+@{crvlen\+\_\+}}
+\index{crvlen\+\_\+@{crvlen\+\_\+}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{crvlen\+\_\+(doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$ta, doublereal $\ast$tb, doublereal $\ast$a, doublereal $\ast$b, integer $\ast$numint, integer $\ast$mxct, doublereal $\ast$ctolr, integer $\ast$ilevel)}{crvlen_(doublereal *pa, doublereal *pb, doublereal *ta, doublereal *tb, doublereal *a, doublereal *b, integer *numint, integer *mxct, doublereal *ctolr, integer *ilevel)}}]{\setlength{\rightskip}{0pt plus 5cm}int crvlen\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pa, }
+\item[{doublereal $\ast$}]{pb, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tb, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{integer $\ast$}]{numint, }
+\item[{integer $\ast$}]{mxct, }
+\item[{doublereal $\ast$}]{ctolr, }
+\item[{integer $\ast$}]{ilevel}
+\end{DoxyParamCaption}
+)}\hypertarget{CRVLEN_8c_a2030f346803ca62bb534d53bec2e462b}{}\label{CRVLEN_8c_a2030f346803ca62bb534d53bec2e462b}
+
+
+Definition at line 32 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+References a, a1, ader\+\_\+(), b, b1, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, c\+\_\+n6, cprint\+\_\+(), dif, dotf\+\_\+(), h\+\_\+\+\_\+, i\+\_\+\+\_\+, ibugg\+\_\+1, istart, j, mode, ta, tb, temp, u, vnorm\+\_\+(), w, x1, x2, x3, and zero.
+
+
+
+Referenced by scurv\+\_\+().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{comment}{/* Initialized data */}
+37 
+38     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+39     \textcolor{keyword}{static} doublereal smal = 1e-15;
+40 
+41     \textcolor{comment}{/* System generated locals */}
+42     integer i\_\_1;
+43     doublereal d\_\_1, d\_\_2, d\_\_3, d\_\_4;
+44 
+45     \textcolor{comment}{/* Builtin functions */}
+46     \textcolor{keywordtype}{double} sqrt(doublereal);
+47     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+48 
+49     \textcolor{comment}{/* Local variables */}
+50     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_};
+51     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+52     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}, \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, h3, \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}, \hyperlink{APT301_8c_a5bdef1e4ef34037b8882dcc778f83fe9}{x3}, da, db;
+53     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+54     \textcolor{keyword}{static} doublereal \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[3], det;
+55     \textcolor{keyword}{static} integer ict;
+56     \textcolor{keyword}{static} doublereal sum[6], area[6];
+57     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd}{ader\_}(doublereal *, doublereal *, doublereal *
+58         , doublereal *, doublereal *, doublereal *, integer *, doublereal 
+59         *);
+60     \textcolor{keyword}{static} integer iend, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+61     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+62         );
+63     \textcolor{keyword}{static} doublereal \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}, asave, bsave, ratio;
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+65     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+66     \textcolor{keyword}{static} doublereal simfac;
+67     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+68     \textcolor{keyword}{static} integer \hyperlink{AMIND_8c_a9b291e9727dbce8ec72e9bf593b4d998}{istart};
+69 
+70 \textcolor{comment}{/* ---MAIN ROUTINE TO DETERMINE OPTIMUM VECTOR LENGTHS FOR TANGENT */}
+71 \textcolor{comment}{/* ---VECTORS OF A CUBIC.  INPUT CONSTRAINTS INCLUDE */}
+72 \textcolor{comment}{/* --- PA,PB  START AND END POINTS OF PARAMETRIC CUBIC */}
+73 \textcolor{comment}{/* --- TA,TB  START AND END UNIT TANGENT VECTORS */}
+74 \textcolor{comment}{/* --- NUMINT IS NUMBER OF SIMPSON INTERVALS FOR DETERMINING AREA */}
+75 \textcolor{comment}{/* --- MXCT IS THE MAXIMUM NUMBER OF NEWTON-RHAPSON ITERATIONS */}
+76 \textcolor{comment}{/* --- CTOLR IS THE RATIO OF CHANGE FOR TERMINATION OF ITERATIONS */}
+77 \textcolor{comment}{/* --- ILEVEL CONTROLS THE LEVEL OF CALCULATION FOR A,B */}
+78 \textcolor{comment}{/* --- =1 CHORD LENGTH, =2 MINIMIZE DDR, =3 NEWTON RHAPSON */}
+79 \textcolor{comment}{/* --- A,B ARE THE OUTPUT LENGTHS OF TANGENTS. */}
+80 \textcolor{comment}{/* --- A,B ARE SELECTED TO MINIMZE INTEGRAL OF K*K*DS OVER 0,1 */}
+81 \textcolor{comment}{/* --- METHOD IS NEWTON-RHAPSON WITH ITERATIONS AND */}
+82 \textcolor{comment}{/* --- SIMPSONS RULE TO DETERMINE APPROXIMATE AREA */}
+83 
+84     \textcolor{comment}{/* Parameter adjustments */}
+85     --\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+86     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+87     --pb;
+88     --pa;
+89 
+90     \textcolor{comment}{/* Function Body */}
+91 
+92     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+93 \textcolor{comment}{/* L5: */}
+94     dif[i\_\_ - 1] = pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+95     \}
+96     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1]);
+97     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], &\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1]);
+98     istart = 1;
+99     iend = (*numint << 1) + 1;
+100     h\_\_ = 1.f / (*numint * 2.f);
+101     h3 = h\_\_ / 3.f;
+102     w = h\_\_ + \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_};
+103 
+104 \textcolor{comment}{/* ---      INITIAL ESTIMATE OF A,B IS FROM CHORD LENGTH */}
+105     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, dif, dif);
+106     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = sqrt(*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a});
+107     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+108     \textcolor{keywordflow}{if} (*ilevel <= 1) \{
+109     \textcolor{keywordflow}{goto} L70;
+110     \}
+111 \textcolor{comment}{/* ---      A SECOND INITIAL ESTIMATE IS FROM MINIMIZE DDR AT ENDS */}
+112     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&x1, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], dif);
+113     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&x2, &\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], dif);
+114     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&x3, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1]);
+115 \textcolor{comment}{/* Computing 2nd power */}
+116     d\_\_1 = \hyperlink{APT301_8c_a5bdef1e4ef34037b8882dcc778f83fe9}{x3};
+117     temp = 3.f / (4.f - d\_\_1 * d\_\_1);
+118     a1 = (x1 * 2.f - x3 * \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}) * temp;
+119     b1 = (x2 * 2.f - x3 * \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}) * temp;
+120 \textcolor{comment}{/* ---      IF A1 OR B1 IS NEGATIVE, IGNORE THESE VALUES */}
+121     \textcolor{keywordflow}{if} (a1 < smal || b1 < smal) \{
+122     \textcolor{keywordflow}{goto} L7;
+123     \}
+124     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+125     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1};
+126 L7:
+127 \textcolor{comment}{/* ---      NOW SAVE THESE A,B ESTIMATES AS A BACKUP */}
+128     asave = *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+129     bsave = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+130 
+131     \textcolor{keywordflow}{if} (*ilevel <= 2) \{
+132     \textcolor{keywordflow}{goto} L70;
+133     \}
+134     ict = 0;
+135 
+136 L10:
+137 \textcolor{comment}{/* ---      ICT IS THE COUNT OF THE NUMBER OF NEWTON RHAPSON ITERATIONS */}
+138     \textcolor{keywordflow}{if} (ict > *mxct) \{
+139     \textcolor{keywordflow}{goto} L70;
+140     \}
+141     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 6; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+142 \textcolor{comment}{/* L20: */}
+143     area[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+144     \}
+145 
+146 \textcolor{comment}{/* ---      PERFORM INTEGRATION TO OBTAIN ESTIMATES OF TENSION AND DERIVS. */}
+147     i\_\_1 = iend;
+148     \textcolor{keywordflow}{for} (i\_\_ = istart; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+149     simfac = 4.f;
+150     \textcolor{keywordflow}{if} (i\_\_ % 2 == 1) \{
+151         simfac = 2.f;
+152     \}
+153     \textcolor{keywordflow}{if} (i\_\_ == istart || i\_\_ == iend) \{
+154         simfac = 1.f;
+155     \}
+156     simfac *= h3;
+157     mode = 0;
+158     \textcolor{keywordflow}{if} (i\_\_ == istart) \{
+159         mode = 1;
+160     \}
+161     u = (i\_\_ - 1.f) * h\_\_;
+162 
+163     \hyperlink{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd}{ader\_}(dif, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, &u, &mode, sum);
+164 
+165     \textcolor{keywordflow}{if} (\hyperlink{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+166         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a62cf20bfb309ebd68eabc431a5affe7f}{c\_n6}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SUM "}, sum, (ftnlen)4);
+167     \}
+168     \textcolor{keywordflow}{for} (j = 1; j <= 6; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+169 \textcolor{comment}{/* L40: */}
+170         area[j - 1] = simfac * sum[j - 1] + area[j - 1];
+171     \}
+172 
+173 \textcolor{comment}{/* L30: */}
+174     \}
+175 
+176     \textcolor{keywordflow}{if} (\hyperlink{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+177     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a62cf20bfb309ebd68eabc431a5affe7f}{c\_n6}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"AREA"}, area, (ftnlen)4);
+178     \}
+179 
+180 \textcolor{comment}{/* ---      ESTIMATE CHANGE DA,DB IN A,B TO REDUCE TENSION IN CURVE */}
+181 \textcolor{comment}{/* Computing 2nd power */}
+182     d\_\_1 = area[4];
+183     det = area[3] * area[5] - d\_\_1 * d\_\_1;
+184     \textcolor{keywordflow}{if} (abs(det) > smal) \{
+185     \textcolor{keywordflow}{goto} L50;
+186     \}
+187 \textcolor{comment}{/* ---      USE THE PREVIOUS VALUES FOR A,B */}
+188     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = asave;
+189     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = bsave;
+190     \textcolor{keywordflow}{goto} L70;
+191 
+192 L50:
+193 
+194     da = (-area[1] * area[5] + area[2] * area[4]) / det;
+195     db = (-area[3] * area[2] + area[4] * area[1]) / det;
+196 
+197 \textcolor{comment}{/* Computing 2nd power */}
+198     d\_\_1 = da;
+199 \textcolor{comment}{/* Computing 2nd power */}
+200     d\_\_2 = db;
+201 \textcolor{comment}{/* Computing 2nd power */}
+202     d\_\_3 = *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+203 \textcolor{comment}{/* Computing 2nd power */}
+204     d\_\_4 = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+205     ratio = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2) / sqrt(d\_\_3 * d\_\_3 + d\_\_4 * d\_\_4);
+206     \textcolor{keywordflow}{if} (\hyperlink{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+207     \textcolor{keywordflow}{goto} L93;
+208     \}
+209     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+210     s\_copy(badmsg, \textcolor{stringliteral}{" ENTRY TO CRVLEN"}, (ftnlen)20, (ftnlen)16);
+211     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+212     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"A   "}, \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, (ftnlen)4);
+213     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"B   "}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, (ftnlen)4);
+214     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DA  "}, &da, (ftnlen)4);
+215     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DB  "}, &db, (ftnlen)4);
+216     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"RATI"}, &ratio, (ftnlen)4);
+217 L93:
+218     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} += da;
+219     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} += db;
+220     \textcolor{keywordflow}{if} (ratio < *ctolr) \{
+221     \textcolor{keywordflow}{goto} L70;
+222     \}
+223 
+224     ++ict;
+225     \textcolor{keywordflow}{goto} L10;
+226 
+227 L70:
+228 \textcolor{comment}{/* ---      A NEGATIVE A OR B IS NOT ACCEPTABLE SO USE THE BACKUP */}
+229 \textcolor{comment}{/* ---      VALUES IF A OR B ARE NEGATIVE */}
+230     \textcolor{keywordflow}{if} (*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} > zero && *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} > zero) \{
+231     \textcolor{keywordflow}{goto} L999;
+232     \}
+233     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = asave;
+234     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = bsave;
+235 L999:
+236     \textcolor{keywordflow}{if} (\hyperlink{CRVLEN_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+237     \textcolor{keywordflow}{goto} L998;
+238     \}
+239     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+240     s\_copy(badmsg, \textcolor{stringliteral}{" EXIT FROM CRVLEN"}, (ftnlen)20, (ftnlen)17);
+241     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+242     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"A   "}, \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, (ftnlen)4);
+243     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"B   "}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, (ftnlen)4);
+244     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ASAV"}, &asave, (ftnlen)4);
+245     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"BSAV"}, &bsave, (ftnlen)4);
+246     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+247 L998:
+248 
+249     \textcolor{keywordflow}{return} 0;
+250 \} \textcolor{comment}{/* crvlen\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CRVLEN_8c_a2030f346803ca62bb534d53bec2e462b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CRVLEN_8c_a2030f346803ca62bb534d53bec2e462b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{CRVLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 28 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+Referenced by crvlen\+\_\+().
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CRVLEN_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 26 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+Referenced by crvlen\+\_\+().
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}{}\label{CRVLEN_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 27 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+Referenced by crvlen\+\_\+().
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!c\+\_\+n6@{c\+\_\+n6}}
+\index{c\+\_\+n6@{c\+\_\+n6}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n6}{c_n6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n6 = -\/6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRVLEN_8c_a62cf20bfb309ebd68eabc431a5affe7f}{}\label{CRVLEN_8c_a62cf20bfb309ebd68eabc431a5affe7f}
+
+
+Definition at line 25 of file C\+R\+V\+L\+E\+N.\+c.
+
+
+
+Referenced by crvlen\+\_\+().
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{CRVLEN_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{CRVLEN_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file C\+R\+V\+L\+E\+N.\+c.
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{CRVLEN_8c_a20cfc431b5e957790c797d5cefb4b2b5}{}\label{CRVLEN_8c_a20cfc431b5e957790c797d5cefb4b2b5}
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{CRVLEN_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{CRVLEN_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file C\+R\+V\+L\+E\+N.\+c.
+
+\index{C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!C\+R\+V\+L\+E\+N.\+c@{C\+R\+V\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{CRVLEN_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{CRVLEN_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 18 of file C\+R\+V\+L\+E\+N.\+c.
+

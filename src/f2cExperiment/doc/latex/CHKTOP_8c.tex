@@ -1,0 +1,107 @@
+\hypertarget{CHKTOP_8c}{}\section{C\+H\+K\+T\+O\+P.\+c File Reference}
+\label{CHKTOP_8c}\index{C\+H\+K\+T\+O\+P.\+c@{C\+H\+K\+T\+O\+P.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+H\+K\+T\+O\+P.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{CHKTOP_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{chktop\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, integer $\ast$iok)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+H\+K\+T\+O\+P.\+c@{C\+H\+K\+T\+O\+P.\+c}!chktop\+\_\+@{chktop\+\_\+}}
+\index{chktop\+\_\+@{chktop\+\_\+}!C\+H\+K\+T\+O\+P.\+c@{C\+H\+K\+T\+O\+P.\+c}}
+\subsubsection[{\texorpdfstring{chktop\+\_\+(doublereal $\ast$u, doublereal $\ast$v, integer $\ast$itop, integer $\ast$iok)}{chktop_(doublereal *u, doublereal *v, integer *itop, integer *iok)}}]{\setlength{\rightskip}{0pt plus 5cm}int chktop\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{integer $\ast$}]{itop, }
+\item[{integer $\ast$}]{iok}
+\end{DoxyParamCaption}
+)}\hypertarget{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{}\label{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}
+
+
+Definition at line 17 of file C\+H\+K\+T\+O\+P.\+c.
+
+
+
+References j, k, one, and zero.
+
+
+
+Referenced by balloc\+\_\+(), balscn\+\_\+(), and balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+24     \textcolor{keyword}{static} integer icomp[18]    \textcolor{comment}{/* was [2][3][3] */} = \{ 1,2,1,0,1,3,2,0,0,0,3,
+25         0,2,4,4,0,4,3 \};
+26 
+27     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, iu, iv;
+28 
+29     \textcolor{comment}{/* Parameter adjustments */}
+30     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+31 
+32     \textcolor{comment}{/* Function Body */}
+33 \textcolor{comment}{/*      DIMENSION ICOMP(2,3,3) */}
+34 \textcolor{comment}{/*           /-PURPOSE IS TO SEE IF U,V, VALUES OF PATCH WITH TOPOLOGY */}
+35 \textcolor{comment}{/*           /-TABLE ITOP ARE IN A VALID SECTOR FOR THIS SURFACE */}
+36 \textcolor{comment}{/*           /-IOK=0 MEANS SECTOR IS OKAY. OTHERWISE IOK POINTS TO INVALI */}
+37 \textcolor{comment}{/*           /-SECTOR */}
+38 \textcolor{comment}{/*           /-NOTE THAT UNIT SQUARE DIVIDES SPACE INTO 9 SECTORS */}
+39 
+40 \textcolor{comment}{/*           /-FIRST DETERMINE THE SECTOR OF U,V */}
+41     iu = 2;
+42     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} < zero) \{
+43     iu = 1;
+44     \}
+45     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} > one) \{
+46     iu = 3;
+47     \}
+48     iv = 2;
+49     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} < zero) \{
+50     iv = 1;
+51     \}
+52     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} > one) \{
+53     iv = 3;
+54     \}
+55 \textcolor{comment}{/*           /-NOW COMPARE THIS SECTOR FOR FREE BOUNDARIES */}
+56     *iok = 0;
+57     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+58     k = icomp[j + (iu + iv * 3 << 1) - 9];
+59     \textcolor{keywordflow}{if} (k == 0) \{
+60         \textcolor{keywordflow}{goto} L10;
+61     \}
+62     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[k * 6 + 2] != 0) \{
+63         *iok = \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[k * 6 + 2];
+64     \}
+65 L10:
+66     ;
+67     \}
+68     \textcolor{keywordflow}{return} 0;
+69 \} \textcolor{comment}{/* chktop\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580_icgraph}
+\end{center}
+\end{figure}
+
+

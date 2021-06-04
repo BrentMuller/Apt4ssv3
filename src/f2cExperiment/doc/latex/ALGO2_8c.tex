@@ -1,0 +1,132 @@
+\hypertarget{ALGO2_8c}{}\section{A\+L\+G\+O2.\+c File Reference}
+\label{ALGO2_8c}\index{A\+L\+G\+O2.\+c@{A\+L\+G\+O2.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+G\+O2.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{ALGO2_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd}{algo2\+\_\+} (doublereal $\ast$\hyperlink{UNITS_8c_a66b316fa3299925e5c7630d5af6601fd}{tn}, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$ruu, doublereal $\ast$ruv, doublereal $\ast$rvv, doublereal $\ast$du, doublereal $\ast$dv, logical $\ast$iok)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+G\+O2.\+c@{A\+L\+G\+O2.\+c}!algo2\+\_\+@{algo2\+\_\+}}
+\index{algo2\+\_\+@{algo2\+\_\+}!A\+L\+G\+O2.\+c@{A\+L\+G\+O2.\+c}}
+\subsubsection[{\texorpdfstring{algo2\+\_\+(doublereal $\ast$tn, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$ruu, doublereal $\ast$ruv, doublereal $\ast$rvv, doublereal $\ast$du, doublereal $\ast$dv, logical $\ast$iok)}{algo2_(doublereal *tn, doublereal *ru, doublereal *rv, doublereal *ruu, doublereal *ruv, doublereal *rvv, doublereal *du, doublereal *dv, logical *iok)}}]{\setlength{\rightskip}{0pt plus 5cm}int algo2\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{tn, }
+\item[{doublereal $\ast$}]{ru, }
+\item[{doublereal $\ast$}]{rv, }
+\item[{doublereal $\ast$}]{ruu, }
+\item[{doublereal $\ast$}]{ruv, }
+\item[{doublereal $\ast$}]{rvv, }
+\item[{doublereal $\ast$}]{du, }
+\item[{doublereal $\ast$}]{dv, }
+\item[{logical $\ast$}]{iok}
+\end{DoxyParamCaption}
+)}\hypertarget{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd}{}\label{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd}
+
+
+Definition at line 17 of file A\+L\+G\+O2.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, d\+\_\+\+\_\+, dotf\+\_\+(), f, and tn.
+
+
+
+Referenced by mixal\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e, \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+22     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+23         );
+24 
+25 
+26 \textcolor{comment}{/*     PURPOSE: CALCULATE DU,DV USING ALGORITHM 2 */}
+27 
+28 \textcolor{comment}{/*              GIVEN AN INITIAL SURFACE POINT, AND THE TOOL NORMAL TN */}
+29 \textcolor{comment}{/*              AT THE 'NEAREST' POINT ON THE TOOL, */}
+30 \textcolor{comment}{/*              USING  A LOCAL QUADRATIC APPROXIMATION TO THE SURFACE */}
+31 \textcolor{comment}{/*              DETERMINE DU,DV OF POINT S WITH SAME NORMAL TN */}
+32 
+33 \textcolor{comment}{/*     ARGUMENTS: */}
+34 
+35 \textcolor{comment}{/*            TN  - TOOL NORMAL AT 'NEAREST' POINT ON TOOL */}
+36 \textcolor{comment}{/*            RU,RV - FIRST DERIVATIVES AT R */}
+37 \textcolor{comment}{/*            RUU,RUV,RVV - SECOND DERIVATIVES AT R */}
+38 \textcolor{comment}{/*            DU,DV - ESTIMATED DU,DV USING ALGORITHM 2 */}
+39 \textcolor{comment}{/*            IOK   - FLAG INDICATING THAT DU,DV HAVE BEEN CALCULATED */}
+40 
+41 
+42 \textcolor{comment}{/*     LOCAL VARIABLES: */}
+43 
+44 
+45 
+46 \textcolor{comment}{/* .... COMPUTE DETERMINANT OF SECOND FUNDAMENTAL MATRIX OF SURFACE AT R */}
+47 
+48     \textcolor{comment}{/* Parameter adjustments */}
+49     --rvv;
+50     --ruv;
+51     --ruu;
+52     --rv;
+53     --ru;
+54     --\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn};
+55 
+56     \textcolor{comment}{/* Function Body */}
+57     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &ruu[1]);
+58     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&b, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &ruv[1]);
+59     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&c\_\_, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &rvv[1]);
+60 
+61     f = b * b - a * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+62 
+63     \textcolor{keywordflow}{if} (abs(f) < 1e-6) \{
+64 \textcolor{comment}{/* .... AT LEAST ONE CURVATURE IS ZERO, SURFACE IS LCALLY A RULED SURFACE */}
+65 \textcolor{comment}{/*     THEREFORE UNABLE TO COMPUTE DU,DV USING ALGORITHM 2 */}
+66     *iok = FALSE\_;
+67     \} \textcolor{keywordflow}{else} \{
+68     *iok = TRUE\_;
+69 
+70     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&d\_\_, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &ru[1]);
+71     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&e, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &rv[1]);
+72 
+73     *du = (d\_\_ * c\_\_ - b * e) / f;
+74     *dv = (a * e - b * \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / f;
+75     \}
+76 
+77     \textcolor{keywordflow}{return} 0;
+78 \} \textcolor{comment}{/* algo2\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd_icgraph}
+\end{center}
+\end{figure}
+
+

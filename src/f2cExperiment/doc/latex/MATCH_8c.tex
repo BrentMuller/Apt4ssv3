@@ -1,0 +1,1681 @@
+\hypertarget{MATCH_8c}{}\section{M\+A\+T\+C\+H.\+c File Reference}
+\label{MATCH_8c}\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+A\+T\+C\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{MATCH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1}~\hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1}~\hyperlink{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{macxx1\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a304d3d09234da1e5aeb79b0d9d73c2c3}{macxx5\+\_\+1}~\hyperlink{SSV3_8c_a4faf02d6498be31f3a31a2156e5905d0}{macxx5\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a6c7a5b1f6913c2a1e404c8459088d553}{macxx6\+\_\+1}~\hyperlink{SSV3_8c_a605fff5b8b5beaaa4b98ef5011478987}{macxx6\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a68c8462aec62a3c63d598fc5532b0e85}{macxx7\+\_\+1}~\hyperlink{SSV3_8c_a70562c183fbc47fa80408963db2fe0b4}{macxx7\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a7a2321436f546e3da7cdcc23afbe0377}{errpos\+\_\+1}~\hyperlink{SSV3_8c_a59d335627a4f345fe44597881357e2d1}{errpos\+\_\+}
+\item 
+\#define \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}~((integer $\ast$)\&\hyperlink{SSV3_8c_a68c8462aec62a3c63d598fc5532b0e85}{macxx7\+\_\+1} + 50)
+\item 
+\#define \hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 38)
+\item 
+\#define \hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 25)
+\item 
+\#define \hyperlink{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}{typ}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 48)
+\item 
+\#define \hyperlink{MATCH_8c_a1234f3b20d3a79bf1b267f1a19f1afb4}{road}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 46)
+\item 
+\#define \hyperlink{MATCH_8c_a194c3fb843a8ae50f9ed19d4ee4f42de}{label}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 42)
+\item 
+\#define \hyperlink{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}{masdm}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 54)
+\item 
+\#define \hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 43)
+\item 
+\#define \hyperlink{MATCH_8c_a8b742fe78545e613fe1f124bcf59e871}{ilhlt}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 13)
+\item 
+\#define \hyperlink{MATCH_8c_a873fb852bc3c892c63bba021e83f2be5}{nestg}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 44)
+\item 
+\#define \hyperlink{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{route}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 45)
+\item 
+\#define \hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\+\_\+\+\_\+}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 39)
+\item 
+\#define \hyperlink{MATCH_8c_a0f8423cb7cb41e555860ec3c5afbfd93}{implab}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 44)
+\item 
+\#define \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}~((integer $\ast$)\&\hyperlink{SSV3_8c_a6c7a5b1f6913c2a1e404c8459088d553}{macxx6\+\_\+1})
+\item 
+\#define \hyperlink{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{macvar}~((integer $\ast$)\&\hyperlink{SSV3_8c_a68c8462aec62a3c63d598fc5532b0e85}{macxx7\+\_\+1} + 150)
+\item 
+\#define \hyperlink{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1} + 1)
+\item 
+\#define \hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 36)
+\item 
+\#define \hyperlink{MATCH_8c_af1724cb67424440e47e76c7523840ab8}{permid}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 38)
+\item 
+\#define \hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 22)
+\item 
+\#define \hyperlink{MATCH_8c_af5e9b9880df01acaab2620a08cd543ae}{nmline}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 24)
+\item 
+\#define \hyperlink{MATCH_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 26)
+\item 
+\#define \hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 41)
+\item 
+\#define \hyperlink{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 201)
+\item 
+\#define \hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 1)
+\item 
+\#define \hyperlink{MATCH_8c_a6da1e42f90c3adddc2f0a624d27c8468}{bitwds}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 28)
+\item 
+\#define \hyperlink{MATCH_8c_aae696311b372fb19441d5ae2427f915c}{lnsddm}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 52)
+\item 
+\#define \hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 37)
+\item 
+\#define \hyperlink{MATCH_8c_ae9546b94968c3324e664310354110abd}{mvardm}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 53)
+\item 
+\#define \hyperlink{MATCH_8c_a469272ce65df5816f9bf8029cd0e7194}{mctopp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 51)
+\item 
+\#define \hyperlink{MATCH_8c_ad09f67e1988e5571c8254408b9429853}{numbit}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 55)
+\item 
+\#define \hyperlink{MATCH_8c_a232e57e43d6b86f5a37d99e51c71a030}{mcspdp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 56)
+\item 
+\#define \hyperlink{MATCH_8c_a386a3849201238dcb8f7daf0dd102e5a}{lnusdp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 50)
+\item 
+\#define \hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 60)
+\item 
+\#define \hyperlink{MATCH_8c_a9e6837cddcbb9eb06de5990da9c42669}{savmsp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 47)
+\item 
+\#define \hyperlink{MATCH_8c_a97953eeec073cbc2542c077ec462cf8c}{whchmn}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 62)
+\item 
+\#define \hyperlink{MATCH_8c_a7330a1daf5ae8293bf8eb644c2f9b7da}{maxsps}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 20)
+\item 
+\#define \hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 42)
+\item 
+\#define \hyperlink{MATCH_8c_abb6e702a4f84a2b38dde019d2666b17a}{mspddm}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 64)
+\item 
+\#define \hyperlink{MATCH_8c_a8fc33fd61b2d3f6cd496994365ddfefe}{linusd}~((integer $\ast$)\&\hyperlink{SSV3_8c_a68c8462aec62a3c63d598fc5532b0e85}{macxx7\+\_\+1})
+\item 
+\#define \hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\item 
+\#define \hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}~((integer $\ast$)\&\hyperlink{SSV3_8c_a304d3d09234da1e5aeb79b0d9d73c2c3}{macxx5\+\_\+1})
+\item 
+\#define \hyperlink{MATCH_8c_a84b26d7e51e1906ff5c47e20bb3c6cc1}{ergstk}~((integer $\ast$)\&\hyperlink{SSV3_8c_a7a2321436f546e3da7cdcc23afbe0377}{errpos\+\_\+1} + 202)
+\item 
+\#define \hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 40)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MATCH_8c_a6a928538579d8ea0f178b2fcdb7bad01}{match\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{MATCH_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{MATCH_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{MATCH_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{MATCH_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{MATCH_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{MATCH_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{MATCH_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{MATCH_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{MATCH_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{MATCH_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{MATCH_8c_a89902642d5a5ad60a82ce61068d10a24}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{MATCH_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{MATCH_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{MATCH_8c_a4f3d3720acd901e8b7b109a449f3cba9}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_ada93478ed3a7b6732d0c4af5a026499f}{stklst} \mbox{[}300\mbox{]}\\
+\} \hyperlink{MATCH_8c_ab0691103148b0c9e999aa96963208712}{stklst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{MATCH_8c_a6d919bc9df3b334727f405c7c460d5c6}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a62736b21eda0cd16ae1b6bef6723680a}{macxx1} \mbox{[}71\mbox{]}\\
+\} \hyperlink{MATCH_8c_ad77ab25adedbee02cc6c63e18689d4bd}{macxx1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a446bef61e8d8c3c868fa38f38fd23594}{macxx5} \mbox{[}135\mbox{]}\\
+\} \hyperlink{MATCH_8c_a10e458f1ff749cf22a19bca4a836fe9a}{macxx5\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a6aef08ab591c06e1bc5eec5e925bcbf4}{macxx6} \mbox{[}1300\mbox{]}\\
+\} \hyperlink{MATCH_8c_a1f8340ea02c007dbc078a07b685f69da}{macxx6\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_afffac0ddecd654e0d788a3a61514d4c5}{macxx7} \mbox{[}182\mbox{]}\\
+\} \hyperlink{MATCH_8c_a3ef99cde235ba5bdb4887bb7aad03609}{macxx7\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{MATCH_8c_a5a7a9a5cab650b470b41639e915ea0ae}{moduli\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MATCH_8c_a5a2d3d03fb596a9a02911696cd9cd35a}{errpos} \mbox{[}302\mbox{]}\\
+\} \hyperlink{MATCH_8c_aa47f13acfadbc5e9b5a8441bdc6aef65}{errpos\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MATCH_8c_a5408aa4e6c3d299b57489962388d5609}{c\+\_\+\+\_\+32} = 32
+\item 
+static integer \hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{MATCH_8c_af1cbc1b5782283e7dbc2a0442d1e7662}{c\+\_\+\+\_\+26} = 26
+\item 
+static integer \hyperlink{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{MATCH_8c_a7e1e3d9d25083144d8c8a011e8e8352e}{c\+\_\+\+\_\+20} = 20
+\item 
+static integer \hyperlink{MATCH_8c_a6ce0784e0ee2f08488f30ecc0c08d14c}{c\+\_\+\+\_\+31} = 31
+\item 
+static integer \hyperlink{MATCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{MATCH_8c_a9b9f53bd7854b64c2f90be225fb97402}{c\+\_\+\+\_\+1015} = 1015
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!argstk@{argstk}}
+\index{argstk@{argstk}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{argstk}{argstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argstk~((integer $\ast$)\&{\bf stklst\+\_\+1} + 201)}\hypertarget{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}{}\label{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!argtop@{argtop}}
+\index{argtop@{argtop}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{argtop}{argtop}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argtop~((integer $\ast$)\&{\bf stklst\+\_\+1} + 1)}\hypertarget{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{}\label{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!bitwds@{bitwds}}
+\index{bitwds@{bitwds}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{bitwds}{bitwds}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bitwds~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 28)}\hypertarget{MATCH_8c_a6da1e42f90c3adddc2f0a624d27c8468}{}\label{MATCH_8c_a6da1e42f90c3adddc2f0a624d27c8468}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{MATCH_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{MATCH_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{MATCH_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{MATCH_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 40 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!entry\+\_\+\+\_\+@{entry\+\_\+\+\_\+}}
+\index{entry\+\_\+\+\_\+@{entry\+\_\+\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{entry\+\_\+\+\_\+}{entry__}}]{\setlength{\rightskip}{0pt plus 5cm}\#define entry\+\_\+\+\_\+~((logical $\ast$)\&{\bf macxx1\+\_\+1} + 39)}\hypertarget{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{}\label{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!ergstk@{ergstk}}
+\index{ergstk@{ergstk}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{ergstk}{ergstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ergstk~((integer $\ast$)\&{\bf errpos\+\_\+1} + 202)}\hypertarget{MATCH_8c_a84b26d7e51e1906ff5c47e20bb3c6cc1}{}\label{MATCH_8c_a84b26d7e51e1906ff5c47e20bb3c6cc1}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!errpos\+\_\+1@{errpos\+\_\+1}}
+\index{errpos\+\_\+1@{errpos\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{errpos\+\_\+1}{errpos_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define errpos\+\_\+1~{\bf errpos\+\_\+}}\hypertarget{MATCH_8c_a7a2321436f546e3da7cdcc23afbe0377}{}\label{MATCH_8c_a7a2321436f546e3da7cdcc23afbe0377}
+
+
+Definition at line 76 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!ilhlt@{ilhlt}}
+\index{ilhlt@{ilhlt}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{ilhlt}{ilhlt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ilhlt~((logical $\ast$)\&{\bf macxx1\+\_\+1} + 13)}\hypertarget{MATCH_8c_a8b742fe78545e613fe1f124bcf59e871}{}\label{MATCH_8c_a8b742fe78545e613fe1f124bcf59e871}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!implab@{implab}}
+\index{implab@{implab}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{implab}{implab}}]{\setlength{\rightskip}{0pt plus 5cm}\#define implab~((integer $\ast$)\&{\bf code\+\_\+1} + 44)}\hypertarget{MATCH_8c_a0f8423cb7cb41e555860ec3c5afbfd93}{}\label{MATCH_8c_a0f8423cb7cb41e555860ec3c5afbfd93}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!itmpsv@{itmpsv}}
+\index{itmpsv@{itmpsv}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{itmpsv}{itmpsv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define itmpsv~((integer $\ast$)\&{\bf macxx5\+\_\+1})}\hypertarget{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{}\label{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!label@{label}}
+\index{label@{label}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{label}{label}}]{\setlength{\rightskip}{0pt plus 5cm}\#define label~((integer $\ast$)\&{\bf code\+\_\+1} + 42)}\hypertarget{MATCH_8c_a194c3fb843a8ae50f9ed19d4ee4f42de}{}\label{MATCH_8c_a194c3fb843a8ae50f9ed19d4ee4f42de}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!linusd@{linusd}}
+\index{linusd@{linusd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{linusd}{linusd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define linusd~((integer $\ast$)\&{\bf macxx7\+\_\+1})}\hypertarget{MATCH_8c_a8fc33fd61b2d3f6cd496994365ddfefe}{}\label{MATCH_8c_a8fc33fd61b2d3f6cd496994365ddfefe}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!lnsddm@{lnsddm}}
+\index{lnsddm@{lnsddm}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{lnsddm}{lnsddm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lnsddm~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 52)}\hypertarget{MATCH_8c_aae696311b372fb19441d5ae2427f915c}{}\label{MATCH_8c_aae696311b372fb19441d5ae2427f915c}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!lnusdp@{lnusdp}}
+\index{lnusdp@{lnusdp}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{lnusdp}{lnusdp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lnusdp~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 50)}\hypertarget{MATCH_8c_a386a3849201238dcb8f7daf0dd102e5a}{}\label{MATCH_8c_a386a3849201238dcb8f7daf0dd102e5a}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!maclnt@{maclnt}}
+\index{maclnt@{maclnt}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{maclnt}{maclnt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define maclnt~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 36)}\hypertarget{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{}\label{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macspd@{macspd}}
+\index{macspd@{macspd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macspd}{macspd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macspd~((integer $\ast$)\&{\bf macxx6\+\_\+1})}\hypertarget{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{}\label{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mactop@{mactop}}
+\index{mactop@{mactop}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mactop}{mactop}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mactop~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 41)}\hypertarget{MATCH_8c_a647ec60da38692a234f5de577abcb815}{}\label{MATCH_8c_a647ec60da38692a234f5de577abcb815}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macvar@{macvar}}
+\index{macvar@{macvar}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macvar}{macvar}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macvar~((integer $\ast$)\&{\bf macxx7\+\_\+1} + 150)}\hypertarget{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{}\label{MATCH_8c_ac2695171a0b97657ebab009301284d7e}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx1\+\_\+1@{macxx1\+\_\+1}}
+\index{macxx1\+\_\+1@{macxx1\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+1}{macxx1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx1\+\_\+1~{\bf macxx1\+\_\+}}\hypertarget{MATCH_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{}\label{MATCH_8c_a0ec105cf88fc59f5e6e839cc0756c06d}
+
+
+Definition at line 46 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx5\+\_\+1@{macxx5\+\_\+1}}
+\index{macxx5\+\_\+1@{macxx5\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx5\+\_\+1}{macxx5_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx5\+\_\+1~{\bf macxx5\+\_\+}}\hypertarget{MATCH_8c_a304d3d09234da1e5aeb79b0d9d73c2c3}{}\label{MATCH_8c_a304d3d09234da1e5aeb79b0d9d73c2c3}
+
+
+Definition at line 52 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx6\+\_\+1@{macxx6\+\_\+1}}
+\index{macxx6\+\_\+1@{macxx6\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx6\+\_\+1}{macxx6_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx6\+\_\+1~{\bf macxx6\+\_\+}}\hypertarget{MATCH_8c_a6c7a5b1f6913c2a1e404c8459088d553}{}\label{MATCH_8c_a6c7a5b1f6913c2a1e404c8459088d553}
+
+
+Definition at line 58 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx7\+\_\+1@{macxx7\+\_\+1}}
+\index{macxx7\+\_\+1@{macxx7\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx7\+\_\+1}{macxx7_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx7\+\_\+1~{\bf macxx7\+\_\+}}\hypertarget{MATCH_8c_a68c8462aec62a3c63d598fc5532b0e85}{}\label{MATCH_8c_a68c8462aec62a3c63d598fc5532b0e85}
+
+
+Definition at line 64 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!major@{major}}
+\index{major@{major}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{major}{major}}]{\setlength{\rightskip}{0pt plus 5cm}\#define major~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 43)}\hypertarget{MATCH_8c_a6646389206c0df53428153071878a63d}{}\label{MATCH_8c_a6646389206c0df53428153071878a63d}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!majwrd@{majwrd}}
+\index{majwrd@{majwrd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{majwrd}{majwrd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define majwrd~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 22)}\hypertarget{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{}\label{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mas@{mas}}
+\index{mas@{mas}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mas}{mas}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mas~((integer $\ast$)\&{\bf macxx7\+\_\+1} + 50)}\hypertarget{MATCH_8c_a25cdd532658e3d56b36e848581108279}{}\label{MATCH_8c_a25cdd532658e3d56b36e848581108279}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!masdm@{masdm}}
+\index{masdm@{masdm}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{masdm}{masdm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define masdm~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 54)}\hypertarget{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}{}\label{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!maxsps@{maxsps}}
+\index{maxsps@{maxsps}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{maxsps}{maxsps}}]{\setlength{\rightskip}{0pt plus 5cm}\#define maxsps~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 20)}\hypertarget{MATCH_8c_a7330a1daf5ae8293bf8eb644c2f9b7da}{}\label{MATCH_8c_a7330a1daf5ae8293bf8eb644c2f9b7da}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mcslnt@{mcslnt}}
+\index{mcslnt@{mcslnt}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mcslnt}{mcslnt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mcslnt~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 37)}\hypertarget{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{}\label{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mcspdp@{mcspdp}}
+\index{mcspdp@{mcspdp}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mcspdp}{mcspdp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mcspdp~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 56)}\hypertarget{MATCH_8c_a232e57e43d6b86f5a37d99e51c71a030}{}\label{MATCH_8c_a232e57e43d6b86f5a37d99e51c71a030}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mcstrt@{mcstrt}}
+\index{mcstrt@{mcstrt}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mcstrt}{mcstrt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mcstrt~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 42)}\hypertarget{MATCH_8c_a6def84049741d41b0852246964094691}{}\label{MATCH_8c_a6def84049741d41b0852246964094691}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mctopp@{mctopp}}
+\index{mctopp@{mctopp}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mctopp}{mctopp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mctopp~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 51)}\hypertarget{MATCH_8c_a469272ce65df5816f9bf8029cd0e7194}{}\label{MATCH_8c_a469272ce65df5816f9bf8029cd0e7194}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!modhlf@{modhlf}}
+\index{modhlf@{modhlf}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{modhlf}{modhlf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modhlf~((integer $\ast$)\&{\bf moduli\+\_\+1} + 1)}\hypertarget{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}{}\label{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{MATCH_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{MATCH_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 70 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!msp@{msp}}
+\index{msp@{msp}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{msp}{msp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define msp~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 38)}\hypertarget{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{}\label{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mspddm@{mspddm}}
+\index{mspddm@{mspddm}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mspddm}{mspddm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mspddm~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 64)}\hypertarget{MATCH_8c_abb6e702a4f84a2b38dde019d2666b17a}{}\label{MATCH_8c_abb6e702a4f84a2b38dde019d2666b17a}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mvardm@{mvardm}}
+\index{mvardm@{mvardm}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mvardm}{mvardm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mvardm~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 53)}\hypertarget{MATCH_8c_ae9546b94968c3324e664310354110abd}{}\label{MATCH_8c_ae9546b94968c3324e664310354110abd}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!mvexst@{mvexst}}
+\index{mvexst@{mvexst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{mvexst}{mvexst}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mvexst~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 40)}\hypertarget{MATCH_8c_a2219888269381d59da356327349401e6}{}\label{MATCH_8c_a2219888269381d59da356327349401e6}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!nestg@{nestg}}
+\index{nestg@{nestg}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nestg}{nestg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nestg~((logical $\ast$)\&{\bf macxx1\+\_\+1} + 44)}\hypertarget{MATCH_8c_a873fb852bc3c892c63bba021e83f2be5}{}\label{MATCH_8c_a873fb852bc3c892c63bba021e83f2be5}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!nmline@{nmline}}
+\index{nmline@{nmline}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nmline}{nmline}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nmline~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 24)}\hypertarget{MATCH_8c_af5e9b9880df01acaab2620a08cd543ae}{}\label{MATCH_8c_af5e9b9880df01acaab2620a08cd543ae}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!numarg@{numarg}}
+\index{numarg@{numarg}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{numarg}{numarg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numarg~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 60)}\hypertarget{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{}\label{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!number@{number}}
+\index{number@{number}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{number}{number}}]{\setlength{\rightskip}{0pt plus 5cm}\#define number~((integer $\ast$)\&{\bf code\+\_\+1} + 26)}\hypertarget{MATCH_8c_aa97c1f529dc5a11a78758184c84a39c9}{}\label{MATCH_8c_aa97c1f529dc5a11a78758184c84a39c9}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!numbit@{numbit}}
+\index{numbit@{numbit}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{numbit}{numbit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numbit~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 55)}\hypertarget{MATCH_8c_ad09f67e1988e5571c8254408b9429853}{}\label{MATCH_8c_ad09f67e1988e5571c8254408b9429853}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!permid@{permid}}
+\index{permid@{permid}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{permid}{permid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define permid~((integer $\ast$)\&{\bf code\+\_\+1} + 38)}\hypertarget{MATCH_8c_af1724cb67424440e47e76c7523840ab8}{}\label{MATCH_8c_af1724cb67424440e47e76c7523840ab8}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!road@{road}}
+\index{road@{road}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{road}{road}}]{\setlength{\rightskip}{0pt plus 5cm}\#define road~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 46)}\hypertarget{MATCH_8c_a1234f3b20d3a79bf1b267f1a19f1afb4}{}\label{MATCH_8c_a1234f3b20d3a79bf1b267f1a19f1afb4}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!route@{route}}
+\index{route@{route}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{route}{route}}]{\setlength{\rightskip}{0pt plus 5cm}\#define route~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 45)}\hypertarget{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{}\label{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!savmsp@{savmsp}}
+\index{savmsp@{savmsp}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{savmsp}{savmsp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define savmsp~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 47)}\hypertarget{MATCH_8c_a9e6837cddcbb9eb06de5990da9c42669}{}\label{MATCH_8c_a9e6837cddcbb9eb06de5990da9c42669}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!stklst\+\_\+1@{stklst\+\_\+1}}
+\index{stklst\+\_\+1@{stklst\+\_\+1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+1}{stklst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stklst\+\_\+1~{\bf stklst\+\_\+}}\hypertarget{MATCH_8c_a3341ad96672b1b8b33fe8a6a195faad0}{}\label{MATCH_8c_a3341ad96672b1b8b33fe8a6a195faad0}
+
+
+Definition at line 34 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!typ@{typ}}
+\index{typ@{typ}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{typ}{typ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define typ~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 48)}\hypertarget{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}{}\label{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}
+
+
+Referenced by apt331\+\_\+(), match\+\_\+(), ssdef\+\_\+(), and tssmil\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!way@{way}}
+\index{way@{way}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{way}{way}}]{\setlength{\rightskip}{0pt plus 5cm}\#define way~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 25)}\hypertarget{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{}\label{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!whchmn@{whchmn}}
+\index{whchmn@{whchmn}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{whchmn}{whchmn}}]{\setlength{\rightskip}{0pt plus 5cm}\#define whchmn~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 62)}\hypertarget{MATCH_8c_a97953eeec073cbc2542c077ec462cf8c}{}\label{MATCH_8c_a97953eeec073cbc2542c077ec462cf8c}
+
+
+Referenced by match\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!match\+\_\+@{match\+\_\+}}
+\index{match\+\_\+@{match\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{match\+\_\+(void)}{match_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int match\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{MATCH_8c_a6a928538579d8ea0f178b2fcdb7bad01}{}\label{MATCH_8c_a6a928538579d8ea0f178b2fcdb7bad01}
+
+
+Definition at line 106 of file M\+A\+T\+C\+H.\+c.
+
+
+
+References alarm\+\_\+(), argstk, argtop, bitwds, c\+\_\+\+\_\+0, c\+\_\+\+\_\+1015, c\+\_\+\+\_\+2, c\+\_\+\+\_\+20, c\+\_\+\+\_\+26, c\+\_\+\+\_\+31, c\+\_\+\+\_\+32, c\+\_\+\+\_\+8, entry\+\_\+\+\_\+, ergstk, help\+\_\+(), i\+\_\+\+\_\+, ilhlt, implab, itmpsv, j, k, k1, l, label, labelz\+\_\+(), linusd, lnsddm, lnusdp, m, maclbl\+\_\+(), maclnt, macspd, mactop, macvar, major, majwrd, mas, masdm, mcslnt, mcspdp, mcstrt, mctopp, mode\+\_\+(), modhlf, modulo, msp, mspddm, mvardm, mvexst, n, nametb\+\_\+1, nestg, nmline, numarg, number, numbit, permid, retmcx\+\_\+(), road, route, savmsp, setbit\+\_\+(), typ, way, and whchmn.
+
+
+
+Referenced by input\+\_\+(), pro020\+\_\+(), pro026\+\_\+(), recog\+\_\+(), and replac\+\_\+().
+
+
+\begin{DoxyCode}
+107 \{
+108     \textcolor{comment}{/* Initialized data */}
+109 
+110     \textcolor{keyword}{static} integer lbrch = 0;
+111     \textcolor{keyword}{static} logical extern\_\_ = FALSE\_;
+112 
+113     \textcolor{comment}{/* System generated locals */}
+114     integer i\_\_1, i\_\_2, i\_\_3;
+115 
+116     \textcolor{comment}{/* Local variables */}
+117     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}, \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1}, m1, kk;
+118 \textcolor{preprocessor}{#define mas ((integer *)&macxx7\_1 + 50)}
+119 \textcolor{preprocessor}{#define msp ((integer *)&macxx1\_1 + 38)}
+120 \textcolor{preprocessor}{#define way ((integer *)&macxx1\_1 + 25)}
+121 \textcolor{preprocessor}{#define typ ((integer *)&macxx1\_1 + 48)}
+122     \textcolor{keyword}{extern} integer \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(integer *);
+123 \textcolor{preprocessor}{#define road ((integer *)&macxx1\_1 + 46)}
+124     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}(\textcolor{keywordtype}{void});
+125 \textcolor{preprocessor}{#define label ((integer *)&code\_1 + 42)}
+126     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+127         , ftnlen);
+128 \textcolor{preprocessor}{#define masdm ((integer *)&macxx1\_1 + 54)}
+129 \textcolor{preprocessor}{#define major ((integer *)&macxx1\_1 + 43)}
+130 \textcolor{preprocessor}{#define ilhlt ((logical *)&macxx1\_1 + 13)}
+131 \textcolor{preprocessor}{#define nestg ((logical *)&macxx1\_1 + 44)}
+132 \textcolor{preprocessor}{#define route ((integer *)&macxx1\_1 + 45)}
+133 \textcolor{preprocessor}{#define entry\_\_ ((logical *)&macxx1\_1 + 39)}
+134     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{MACLBL_8c_a03ec9a6955dcadbedce6f850023a6a08}{maclbl\_}(integer *, integer *, integer *);
+135     \textcolor{keyword}{static} integer argarg;
+136 \textcolor{preprocessor}{#define implab ((integer *)&code\_1 + 44)}
+137 \textcolor{preprocessor}{#define macspd ((integer *)&macxx6\_1)}
+138 \textcolor{preprocessor}{#define macvar ((integer *)&macxx7\_1 + 150)}
+139 \textcolor{preprocessor}{#define modhlf ((integer *)&moduli\_1 + 1)}
+140     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LABELZ_8c_a518bec8a4632eba8893728620b662241}{labelz\_}(integer *);
+141 \textcolor{preprocessor}{#define maclnt ((integer *)&macxx1\_1 + 36)}
+142 \textcolor{preprocessor}{#define permid ((integer *)&code\_1 + 38)}
+143 \textcolor{preprocessor}{#define majwrd ((integer *)&macxx1\_1 + 22)}
+144 \textcolor{preprocessor}{#define nmline ((integer *)&macxx1\_1 + 24)}
+145 \textcolor{preprocessor}{#define number ((integer *)&code\_1 + 26)}
+146 \textcolor{preprocessor}{#define mactop ((integer *)&macxx1\_1 + 41)}
+147 \textcolor{preprocessor}{#define argstk ((integer *)&stklst\_1 + 201)}
+148 \textcolor{preprocessor}{#define argtop ((integer *)&stklst\_1 + 1)}
+149 \textcolor{preprocessor}{#define bitwds ((integer *)&macxx1\_1 + 28)}
+150 \textcolor{preprocessor}{#define lnsddm ((integer *)&macxx1\_1 + 52)}
+151 \textcolor{preprocessor}{#define mcslnt ((integer *)&macxx1\_1 + 37)}
+152 \textcolor{preprocessor}{#define mvardm ((integer *)&macxx1\_1 + 53)}
+153 \textcolor{preprocessor}{#define mctopp ((integer *)&macxx1\_1 + 51)}
+154 \textcolor{preprocessor}{#define numbit ((integer *)&macxx1\_1 + 55)}
+155 \textcolor{preprocessor}{#define mcspdp ((integer *)&macxx1\_1 + 56)}
+156 \textcolor{preprocessor}{#define lnusdp ((integer *)&macxx1\_1 + 50)}
+157 \textcolor{preprocessor}{#define numarg ((integer *)&macxx1\_1 + 60)}
+158 \textcolor{preprocessor}{#define savmsp ((integer *)&macxx1\_1 + 47)}
+159 \textcolor{preprocessor}{#define whchmn ((integer *)&macxx1\_1 + 62)}
+160 \textcolor{preprocessor}{#define maxsps ((integer *)&macxx1\_1 + 20)}
+161 \textcolor{preprocessor}{#define mcstrt ((integer *)&macxx1\_1 + 42)}
+162 \textcolor{preprocessor}{#define mspddm ((integer *)&macxx1\_1 + 64)}
+163 \textcolor{preprocessor}{#define linusd ((integer *)&macxx7\_1)}
+164 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+165 \textcolor{preprocessor}{#define itmpsv ((integer *)&macxx5\_1)}
+166 \textcolor{preprocessor}{#define ergstk ((integer *)&errpos\_1 + 202)}
+167 \textcolor{preprocessor}{#define mvexst ((integer *)&macxx1\_1 + 40)}
+168     \textcolor{keyword}{static} integer nrmval, nrmsav, majsav;
+169     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SETBIT_8c_ae1e87dd428b0ffb4ce000b3004674193}{setbit\_}(integer *, integer *), \hyperlink{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f}{retmcx\_}(
+170         integer *);
+171 
+172 
+173 
+174 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+175 
+176 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+177 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+178 \textcolor{comment}{/* NAMMAX:      NAMTBL INDEX OF END OF THE PART PROGRAM NAME SECTION */}
+179 
+180 \textcolor{comment}{/*        2.    STACK AND POINTER STORAGE */}
+181 
+182 
+183 
+184 
+185 
+186 
+187 
+188 \textcolor{comment}{/* ARGTOP:      POINTER TO LAST ARGSTK ENTRY */}
+189 \textcolor{comment}{/* ARGSTK:      ARGUMENT STACK */}
+190 
+191 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+192 
+193 \textcolor{comment}{/* NUMBER:      (1)=CODE CLASS 14000,(2)=NAMTBL INDEX OF 'NUMBER' */}
+194 \textcolor{comment}{/* PERMID:      (1)=CODE CLASS 20000,(2)=NAMTBL INDEX OF 'PERMID' */}
+195 \textcolor{comment}{/* LABEL:       (1)=CODE CLASS 22000,(2)=NAMTBL INDEX OF 'LABEL ' */}
+196 \textcolor{comment}{/* IMPLAB:      (1)=CODE CLASS 23000,(2)=NAMTBL INDEX OF 'IMPLAB' */}
+197 
+198 \textcolor{comment}{/*       22.    MACRO PROCESSING VARIABLES */}
+199 
+200 \textcolor{comment}{/* ILHLT:       TRUE IF I.L. SHOULD NOT BE PLACED IN ILFILE */}
+201 \textcolor{comment}{/* MAXSPS:      NUMBER OF MACRO VARIABLES+1 FOR CURRENT MACRO */}
+202 \textcolor{comment}{/* MAJWRD:      CONTAINS ACTUAL MAJOR WORD */}
+203 \textcolor{comment}{/* NMLINE:      EQUALS NUMBER OF EXPRESSIONS THAT REQUIRE BRANCHING I.L. */}
+204 \textcolor{comment}{/* WAY:         INDICATES TYPE OF MACRO PROCESSING */}
+205 \textcolor{comment}{/* BITWDS:      NUMBER OF WORDS NEEDED FOR ALL CALL QUALITIES OF MACRO */}
+206 \textcolor{comment}{/* MACLNT:      TEMPORARY STORAGE FOR MCSLNT */}
+207 \textcolor{comment}{/* MCSLNT:      NUMBER OF MACRO VBLS IN ARGSTK FOR CURRENT EXPRESSION */}
+208 \textcolor{comment}{/* MSP:         POINTER TO THE LAST ENTRY IN MAS ARRAY */}
+209 \textcolor{comment}{/* ENTRY:       FALSE ON FIRST ENTRY TO MATCH FOR A MACRO EXPRESSION */}
+210 \textcolor{comment}{/* MVEXST:      POSITION NUMBER OF MACRO VARIABLE, 0=NO MACRO VARIABLE */}
+211 \textcolor{comment}{/* MACTOP:      POINTER TO EXPRESSION NUMBER IN MACSPD TABLE */}
+212 \textcolor{comment}{/* MCSTRT:      INDEX IN MACSPD OF CURRENT CALL BEING EXAMINED */}
+213 \textcolor{comment}{/* MAJOR:       CURRENT CALL ASSIGNED VALUE IF MAYWRD IS MACRO VARIABLE */}
+214 \textcolor{comment}{/* NESTG:       TRUE WHEN A NESTED GEOMETRIC EXPRESSION ENCOUNTERED */}
+215 \textcolor{comment}{/* ROUTE:       CLASS CODE OF A MAJOR WORD DURING MACRO PROCESSING */}
+216 \textcolor{comment}{/* ROAD:        CLASS CODE OF A MAJOR WORD DURING MACRO PROCESSING */}
+217 \textcolor{comment}{/* SAVMSP:      USED TO SAVE A POINTER TO THE MAS ARRAY */}
+218 \textcolor{comment}{/* TYP:         1 WHEN AN INVALID PATTERN FOR CURRENT EXPRESSION APPEARS */}
+219 \textcolor{comment}{/* LNUSDP:      INDEX OF LAST LINUSD ENTRY */}
+220 \textcolor{comment}{/* MCTOPP:      TEMPORARY STORAGE IN MATCH FOR MACTOP VALUE */}
+221 \textcolor{comment}{/* LNSDDM:      DIMENSION OF LINUSD */}
+222 \textcolor{comment}{/* MVARDM:      CONTAINS DIMENSION OF THE ARRAY MACVAR */}
+223 \textcolor{comment}{/* MASDM:       CONTAINS DIMENSION OF ARRAY MAS */}
+224 \textcolor{comment}{/* NUMBIT:      CONTAINS NUMBER OF BITS IN A FIXED POINT WORD */}
+225 \textcolor{comment}{/* MCSPDP:      POINTER TO LAST ENTRY IN MACSPD TABLE */}
+226 \textcolor{comment}{/* NUMARG:      NUMBER OF MACRO VARIABLES+1 FOR CURRENT MACRO */}
+227 \textcolor{comment}{/* WHCHMN:      EQUAL TO NUMBER OF CURRENT MACRO BEING PROCESSED */}
+228 \textcolor{comment}{/* MSPDDM:      CONTAINS DIMENSION OF THE ARRAY MACSPD */}
+229 
+230 \textcolor{comment}{/*      25A.    MACRO PROCESSING ARRAYS */}
+231 
+232 \textcolor{comment}{/* ITMPSV:      TEMPORARY STORAGE DURING FINAL MACRO PROCESSING */}
+233 
+234 \textcolor{comment}{/*       26.    MACRO PROCESSING ARRAYS */}
+235 
+236 \textcolor{comment}{/* MACSPD:      NAMTBL POINTERS OF THE ASSIGNED VALUES FOR MACRO CALL */}
+237 
+238 \textcolor{comment}{/*      26A.    MACRO PROCESSING ARRAYS */}
+239 
+240 \textcolor{comment}{/* LINUSD:      NUMBERS OF EXPRESSIONS REQUIRING BRANCHING FOR MACROS */}
+241 \textcolor{comment}{/* MAS:         NAMTBL POINTERS OR ASSIGNED VALUES OF MACRO VBL MAJOR W. */}
+242 \textcolor{comment}{/* MACVAR:      POSITION NUMBER OF EACH UNIQUE MACRO VARIABLE */}
+243 
+244 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+245 
+246 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+247 \textcolor{comment}{/* MODHLF:      NORMAL MODE CODE LIMIT 500 */}
+248 
+249 \textcolor{comment}{/*       44.    ERROR POSITION TABLE */}
+250 
+251 \textcolor{comment}{/* ERGSTK:      INPUT STATEMENT ERROR POSITION WHEN DETECTED IN ARGSTK */}
+252 \textcolor{comment}{/* * */}
+253 \textcolor{comment}{/* PURPOSE      TO DETERMINE WHICH EXPRESSIONS IN AN APT MACRO */}
+254 \textcolor{comment}{/*              REQUIRE BRANCHING */}
+255 
+256 \textcolor{comment}{/* NOTES        1.  MATCH IS ACCESSED DURING THE FIRST PASS OF */}
+257 \textcolor{comment}{/*                  FINAL MACRO PROCESSING */}
+258 \textcolor{comment}{/*              2.  FOR EACH CALL A 'STATE' BASED UPON THE KIND */}
+259 \textcolor{comment}{/*                  OF EXPRESSION ENCONTERED IS CALCULATED FOR */}
+260 \textcolor{comment}{/*                  EACH INVOLVED MACRO VARIABLE.  EVERY TIME */}
+261 \textcolor{comment}{/*                  THE CURRENT CALL STRING OF 'STATES' DIFFERS */}
+262 \textcolor{comment}{/*                  IN AT LEAST ONE POSITION FROM ALL OTHER */}
+263 \textcolor{comment}{/*                  PREVIOUS STRINGS, A NEW BRANCH IS INITIATED */}
+264 \textcolor{comment}{/*                  AND THE STRING OF 'STATES' IS STORED IN THE */}
+265 \textcolor{comment}{/* ** */}
+266     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg} == 0) \{
+267     \textcolor{keywordflow}{goto} L7;
+268     \}
+269 
+270 \textcolor{comment}{/* ...     ENTRY=.TRUE. IF MATCH IS BEING ENTERED AGAIN FOR SAME */}
+271 \textcolor{comment}{/* ...     PRODUCTION INDICATING A BRANCHING SITUATION EXISTS. */}
+272 
+273     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_}) \{
+274     \textcolor{keywordflow}{goto} L99;
+275     \}
+276 
+277 \textcolor{comment}{/* ...     NMLINE=NUMBER OF CURRENT (POTENTIAL) BRANCHING EXPRESSION. */}
+278 
+279     ++(*nmline);
+280     k1 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+281     m1 = 0;
+282     argarg = *\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop};
+283     i\_\_1 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+284     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+285 \textcolor{comment}{/* L1: */}
+286     \hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}[i\_\_ + 98] = 0;
+287     \}
+288 
+289 \textcolor{comment}{/* ...     MCSLNT=NUMBER OF UNIQUE MACRO VARIABLES IN ARGSTK. */}
+290 
+291     *\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} = 0;
+292 
+293 \textcolor{comment}{/* ...     MVEXST=POSITION NUMBER IF APT MAJOR WORD A MACRO VARIABLE. */}
+294 \textcolor{comment}{/* ...     NORMALLY=0. */}
+295 
+296     *\hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst} = 0;
+297 
+298 \textcolor{comment}{/* ...     IF FUNCTION,NO BRANCHING REQUIRED FOR MACRO VARIABLE ARGUMENTS. */}
+299 
+300     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} == 0 || *\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way} == 3) \{
+301     \textcolor{keywordflow}{goto} L3;
+302     \}
+303     i\_\_1 = *\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop};
+304     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+305 
+306 \textcolor{comment}{/* ...     SAVE CONTENTS OF ARGSTK IN ITMPSV(1) THRU ITMPSV(99) */}
+307 
+308     \hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}[i\_\_ - 1] = \hyperlink{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[i\_\_ - 1];
+309 
+310 \textcolor{comment}{/* ...     SCAN ARGSTK AND PLACE THE POSITION NUMBER OF EACH UNIQUE MACRO */}
+311 \textcolor{comment}{/* ...     VARIABLE FOUND IN THE FIRST FREE POSITION OF MACVAR ARRAY. */}
+312 
+313     i\_\_2 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+314     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+315         \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[j - 2] != \hyperlink{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[i\_\_ - 1]) \{
+316         \textcolor{keywordflow}{goto} L2;
+317         \}
+318         \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}[j + 98] != 0) \{
+319         \textcolor{keywordflow}{goto} L2;
+320         \}
+321         ++(*mcslnt);
+322         \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} <= *\hyperlink{MATCH_8c_ae9546b94968c3324e664310354110abd}{mvardm}) \{
+323         \textcolor{keywordflow}{goto} L17;
+324         \}
+325 L18:
+326         i\_\_3 = -\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+327         \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MATCH_8c_a5408aa4e6c3d299b57489962388d5609}{c\_\_32}, &i\_\_3, &\hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MATCH   "}, (ftnlen)8);
+328         \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+329 L17:
+330         \hyperlink{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{macvar}[*\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} - 1] = j - 1;
+331         \hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}[j + 98] = 1;
+332 L2:
+333         ;
+334     \}
+335     \}
+336 L3:
+337     *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt} = *\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt};
+338 
+339 \textcolor{comment}{/* ...     CALL EXPRESSIONS REQUIRE NO MAJOR WORD ANALYSIS. */}
+340 
+341     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way} == 5) \{
+342     \textcolor{keywordflow}{goto} L6;
+343     \}
+344 
+345 \textcolor{comment}{/* ...     ROUTE=CLASS CODE OF MAJOR WORD. */}
+346 \textcolor{comment}{/* ...     ROAD=MODE CODE OF MAJOR WORD. */}
+347 
+348     *\hyperlink{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{route} = *\hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (\hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[*\hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd} - 1] / *
+      \hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo});
+349     *\hyperlink{MATCH_8c_a1234f3b20d3a79bf1b267f1a19f1afb4}{road} = \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[*\hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd} - 1] - *\hyperlink{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{route};
+350     i\_\_2 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+351     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+352     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[i\_\_ - 2] == *\hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd}) \{
+353         \textcolor{keywordflow}{goto} L5;
+354     \}
+355 \textcolor{comment}{/* L4: */}
+356     \}
+357     \textcolor{keywordflow}{goto} L6;
+358 
+359 \textcolor{comment}{/* ...     STORE POSITION NUMBER OF MACRO VARIABLE MAJOR WORD IN BOTH */}
+360 \textcolor{comment}{/* ...     MVEXST AND FIRST FREE CELL OF MACVAR ARRAY. */}
+361 
+362 L5:
+363     *\hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst} = i\_\_ - 1;
+364 
+365 \textcolor{comment}{/* ...     IF GEOMETRIC EXPRESSION HAS MACRO VARIABLE MAJOR WORD, THEN */}
+366 \textcolor{comment}{/* ...     ISSUE DIAGNOSTIC. */}
+367 
+368     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a873fb852bc3c892c63bba021e83f2be5}{nestg}) \{
+369     \textcolor{keywordflow}{goto} L62;
+370     \}
+371     i\_\_ = 100;
+372     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} >= *\hyperlink{MATCH_8c_ae9546b94968c3324e664310354110abd}{mvardm}) \{
+373     \textcolor{keywordflow}{goto} L18;
+374     \}
+375     \hyperlink{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{macvar}[*\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt}] = *\hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst};
+376     *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt} = *\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} + 1;
+377 
+378 \textcolor{comment}{/* ...     RETURN IF NO MACRO VARIABLES INVOLVED IN EXPRESSION. */}
+379 
+380 L6:
+381     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt} != 0) \{
+382     \textcolor{keywordflow}{goto} L8;
+383     \}
+384 L7:
+385     \textcolor{keywordflow}{return} 0;
+386 
+387 \textcolor{comment}{/* ...     EACH CALL IS EXAMINED AND COMPARED TO THE ONES PRECEDING IT TO */}
+388 \textcolor{comment}{/* ...     DETERMINE WHEN AND IF CODE FOR A NEW BRANCH IS REQUIRED. */}
+389 \textcolor{comment}{/* ...     MCSTRT POINTS TO CURRENT CALL ASSIGNED VALUES IN MACSPD TABLE. */}
+390 \textcolor{comment}{/* ...     MSP POINTS TO LAST ENTRY IN MAS TABLE. */}
+391 
+392 L8:
+393     *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt} = 0;
+394     *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} = 0;
+395 L9:
+396     *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt} += *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+397 
+398 \textcolor{comment}{/* ...     IF CALLS REMAIN TO BE PROCESSED, THEN BRANCH. */}
+399 
+400     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt} < *\hyperlink{MATCH_8c_a232e57e43d6b86f5a37d99e51c71a030}{mcspdp}) \{
+401     \textcolor{keywordflow}{goto} L10;
+402     \}
+403 
+404 \textcolor{comment}{/* ...     RESET CONTROL PARAMETERS FOR FINAL EXIT FOR THIS EXPRESSION. */}
+405 
+406     l = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+407     *\hyperlink{MATCH_8c_a8b742fe78545e613fe1f124bcf59e871}{ilhlt} = TRUE\_;
+408     *\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_} = FALSE\_;
+409     m1 = 1;
+410     \textcolor{keywordflow}{goto} L60;
+411 L10:
+412     *\hyperlink{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}{typ} = 0;
+413     nrmval = -1;
+414     *\hyperlink{MATCH_8c_a9e6837cddcbb9eb06de5990da9c42669}{savmsp} = *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} + 1;
+415     *\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} = argarg;
+416 
+417 \textcolor{comment}{/* ...     MAJOR=CURRENT CALL ASSIGNED VALUE (MACSPD(I)) IF MAJOR WORD IS */}
+418 \textcolor{comment}{/* ...     A MACRO VARIABLE. OTHERWISE MAJOR=MAJOR WORD (MAJWRD). */}
+419 
+420     *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} = *\hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd};
+421     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst} == 0) \{
+422     \textcolor{keywordflow}{goto} L13;
+423     \}
+424 \textcolor{comment}{/* L11: */}
+425     i\_\_ = *\hyperlink{MATCH_8c_a2219888269381d59da356327349401e6}{mvexst} + *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt};
+426     *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} = (i\_\_2 = \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[i\_\_ - 1], abs(i\_\_2));
+427 
+428 \textcolor{comment}{/* ...     FOR EACH CALL A MACRO VARIABLE MAJOR WORD HAS EITHER ITS */}
+429 \textcolor{comment}{/* ...     ASSIGNED VALUE MODE OR NAMTBL POINTER STORED IN MAS ARRAY */}
+430 \textcolor{comment}{/* ...     DEPENDING UPON EXPRESSION TYPE. */}
+431 
+432     \textcolor{keywordflow}{switch} (*\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way}) \{
+433     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L101;
+434     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L202;
+435     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L202;
+436     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L102;
+437     \}
+438 L101:
+439     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major};
+440     \textcolor{keywordflow}{goto} L12;
+441 L202:
+442     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[*\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} - 1] - *\hyperlink{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{route};
+443     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_}) \{
+444     \textcolor{keywordflow}{goto} L20;
+445     \}
+446     extern\_\_ = TRUE\_;
+447     m1 = 1;
+448     \textcolor{keywordflow}{goto} L20;
+449 L102:
+450     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[*\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} - 1] - *\hyperlink{MATCH_8c_a7f57f1cf6a13ed9d2cd7758ae2bfbed1}{route};
+451     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way} == 4) \{
+452     \textcolor{keywordflow}{goto} L12;
+453     \}
+454 
+455 \textcolor{comment}{/* ...     IF A POSTPROCESSOR OR GOLFT,GORGT,GOUP,GODOWN,GOFWD,GOBACK */}
+456 \textcolor{comment}{/* ...     PROCEDURE IS ENCOUNTERED, BRANCHING ON MAJOR WORD UNNECESSARY. */}
+457 
+458 L20:
+459     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 0 || \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 34) \{
+460     *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} = *\hyperlink{MATCH_8c_a2294f9850cd86e90d1df971f4f31a0b1}{majwrd};
+461     \}
+462 L12:
+463     *road = \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}];
+464     ++(*msp);
+465     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} < *\hyperlink{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}{masdm}) \{
+466     \textcolor{keywordflow}{goto} L13;
+467     \}
+468 L16:
+469     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MATCH_8c_af1cbc1b5782283e7dbc2a0442d1e7662}{c\_\_26}, &\hyperlink{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MATCH   "}, (ftnlen)8);
+470     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+471 
+472 \textcolor{comment}{/* ...     IF NO ELEMENTS OF ARGSTK ARE MACRO VARIABLES, THEN BRANCH. */}
+473 
+474 L13:
+475     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} == 0 || *\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way} == 3) \{
+476     \textcolor{keywordflow}{goto} L51;
+477     \}
+478 
+479 \textcolor{comment}{/* ...     RESTORE CONTENTS OF ARGSTK WHICH MIGHT HAVE BEEN ALTERED IN */}
+480 \textcolor{comment}{/* ...     GENERATING BRANCHING CODE FOR PRIOR CALLS. */}
+481 
+482     i\_\_2 = *\hyperlink{MATCH_8c_ae157b988f5222e270f494b81959e9bfc}{argtop};
+483     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+484 \textcolor{comment}{/* L14: */}
+485     \hyperlink{MATCH_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[i\_\_ - 1] = \hyperlink{MATCH_8c_a71e0cadeafb77b7d3712716f12131ad8}{itmpsv}[i\_\_ - 1];
+486     \}
+487     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt} == 0) \{
+488     \textcolor{keywordflow}{goto} L51;
+489     \}
+490 
+491 \textcolor{comment}{/* ...     ESTABLISH 'STATE' OF EACH INVOLVED MACRO VARIABLE FOR THIS CALL */}
+492 
+493     i\_\_2 = *\hyperlink{MATCH_8c_a48f4f66615c2ef89cc231c9da7a914e3}{mcslnt};
+494     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+495     j = \hyperlink{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{macvar}[i\_\_ - 1] + *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt};
+496 
+497 \textcolor{comment}{/* ...     PICK UP ASSIGNED VALUE POINTER. */}
+498 
+499     k = (i\_\_1 = \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[j - 1], abs(i\_\_1));
+500 
+501 \textcolor{comment}{/* ...     NRMVAL=1 IF AT LEAST ONE NON-NORMAL VALUE USED. */}
+502 
+503     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[j - 1] >= 0) \{
+504         nrmval = 1;
+505     \}
+506 
+507 \textcolor{comment}{/* ...     ASSIGN INITIAL 'STATE' OF MACRO VARIABLE. */}
+508 
+509     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&k);
+510 
+511 \textcolor{comment}{/* ...     M=CLASS OF ASSIGNED VALUE. */}
+512 
+513     \textcolor{keywordflow}{if} (k <= \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+514         \textcolor{keywordflow}{goto} L1100;
+515     \}
+516     m = \hyperlink{MATCH_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}[0];
+517     \textcolor{keywordflow}{goto} L1110;
+518 L1100:
+519     m = *\hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (\hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] / *\hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo});
+520     l = \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] - \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+521 
+522 \textcolor{comment}{/* ...     WAY=1 FOR GEOM, WAY=2 FOR PROC, WAY=3 FOR FUNC, WAY=4 FOR REPL, */}
+523 \textcolor{comment}{/* ...     WAY=5 FOR CALL. */}
+524 
+525 L1110:
+526     \textcolor{keywordflow}{switch} (*\hyperlink{MATCH_8c_a7bd372a6f29ca1796a9c89c23b935ea3}{way}) \{
+527         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L41;
+528         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L15;
+529         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L50;
+530         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L71;
+531         \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L43;
+532     \}
+533 L71:
+534     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 0) \{
+535         \textcolor{keywordflow}{goto} L22;
+536     \}
+537     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == *road) \{
+538         \textcolor{keywordflow}{goto} L50;
+539     \}
+540     \textcolor{keywordflow}{goto} L22;
+541 L15:
+542     \textcolor{keywordflow}{if} (*road == 0) \{
+543         \textcolor{keywordflow}{goto} L50;
+544     \}
+545     \textcolor{keywordflow}{if} (*road < 22) \{
+546         \textcolor{keywordflow}{goto} L22;
+547     \}
+548     \textcolor{keywordflow}{if} ((i\_\_1 = *road - 41) < 0) \{
+549         \textcolor{keywordflow}{goto} L26;
+550     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+551         \textcolor{keywordflow}{goto} L25;
+552     \} \textcolor{keywordflow}{else} \{
+553         \textcolor{keywordflow}{goto} L22;
+554     \}
+555 L26:
+556     \textcolor{keywordflow}{if} ((i\_\_1 = *road - 24) < 0) \{
+557         \textcolor{keywordflow}{goto} L24;
+558     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+559         \textcolor{keywordflow}{goto} L21;
+560     \} \textcolor{keywordflow}{else} \{
+561         \textcolor{keywordflow}{goto} L44;
+562     \}
+563 L21:
+564     \textcolor{keywordflow}{if} (m != \hyperlink{MATCH_8c_a194c3fb843a8ae50f9ed19d4ee4f42de}{label}[0] && m != \hyperlink{MATCH_8c_a0f8423cb7cb41e555860ec3c5afbfd93}{implab}[0]) \{
+565         \textcolor{keywordflow}{goto} L22;
+566     \}
+567 \textcolor{comment}{/* L23: */}
+568     \textcolor{keywordflow}{if} (l != *\hyperlink{MATCH_8c_a97953eeec073cbc2542c077ec462cf8c}{whchmn}) \{
+569         \textcolor{keywordflow}{goto} L22;
+570     \}
+571     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = 200;
+572     \textcolor{keywordflow}{goto} L50;
+573 L25:
+574     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 0 || \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] > 17) \{
+575         \textcolor{keywordflow}{goto} L22;
+576     \}
+577 \textcolor{comment}{/* L38: */}
+578     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = 50;
+579     \textcolor{keywordflow}{goto} L50;
+580 L24:
+581     \textcolor{keywordflow}{if} (*road == 23) \{
+582         \textcolor{keywordflow}{goto} L47;
+583     \}
+584     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] != 21) \{
+585         \textcolor{keywordflow}{goto} L22;
+586     \}
+587     \textcolor{keywordflow}{goto} L50;
+588 L47:
+589     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] != 2) \{
+590         \textcolor{keywordflow}{goto} L22;
+591     \}
+592     \textcolor{keywordflow}{goto} L50;
+593 L44:
+594     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 21) \{
+595         \textcolor{keywordflow}{goto} L50;
+596     \}
+597     \textcolor{keywordflow}{if} ((i\_\_1 = *road - 34) < 0) \{
+598         \textcolor{keywordflow}{goto} L27;
+599     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+600         \textcolor{keywordflow}{goto} L29;
+601     \} \textcolor{keywordflow}{else} \{
+602         \textcolor{keywordflow}{goto} L30;
+603     \}
+604 L27:
+605     \textcolor{keywordflow}{if} (*road == 25) \{
+606         \textcolor{keywordflow}{goto} L36;
+607     \}
+608 
+609 \textcolor{comment}{/* ...     INVALID 'STATE'. A SINGLE BRANCH FOR ALL SUCH CALLS. */}
+610 
+611 L22:
+612     *\hyperlink{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}{typ} = 1;
+613     \textcolor{keywordflow}{goto} L50;
+614 L36:
+615     \textcolor{keywordflow}{if} (m != \hyperlink{MATCH_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0]) \{
+616         \textcolor{keywordflow}{goto} L25;
+617     \}
+618     \textcolor{keywordflow}{goto} L42;
+619 L29:
+620     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] != 0) \{
+621         \textcolor{keywordflow}{goto} L25;
+622     \}
+623     \textcolor{keywordflow}{if} (m != \hyperlink{MATCH_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0]) \{
+624         \textcolor{keywordflow}{goto} L21;
+625     \}
+626     \textcolor{keywordflow}{if} (l == 5) \{
+627         l = 3;
+628     \}
+629     \textcolor{keywordflow}{goto} L42;
+630 L30:
+631     \textcolor{keywordflow}{if} ((i\_\_1 = *road - 37) < 0) \{
+632         \textcolor{keywordflow}{goto} L31;
+633     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+634         \textcolor{keywordflow}{goto} L33;
+635     \} \textcolor{keywordflow}{else} \{
+636         \textcolor{keywordflow}{goto} L32;
+637     \}
+638 L31:
+639     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 19) \{
+640         \textcolor{keywordflow}{goto} L50;
+641     \}
+642     \textcolor{keywordflow}{goto} L22;
+643 L32:
+644     \textcolor{keywordflow}{if} ((i\_\_1 = *road - 39) < 0) \{
+645         \textcolor{keywordflow}{goto} L33;
+646     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+647         \textcolor{keywordflow}{goto} L46;
+648     \} \textcolor{keywordflow}{else} \{
+649         \textcolor{keywordflow}{goto} L39;
+650     \}
+651 L33:
+652     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 20) \{
+653         \textcolor{keywordflow}{goto} L50;
+654     \}
+655     \textcolor{keywordflow}{goto} L46;
+656 L39:
+657     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] == 19) \{
+658         \textcolor{keywordflow}{goto} L50;
+659     \}
+660     \textcolor{keywordflow}{goto} L46;
+661 L41:
+662     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] != 0) \{
+663         \textcolor{keywordflow}{goto} L50;
+664     \}
+665 L46:
+666     \textcolor{keywordflow}{if} (m != \hyperlink{MATCH_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0]) \{
+667         \textcolor{keywordflow}{goto} L22;
+668     \}
+669 L42:
+670     \textcolor{keywordflow}{if} (l == 0) \{
+671         \textcolor{keywordflow}{goto} L22;
+672     \}
+673     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = l + 100;
+674     \textcolor{keywordflow}{goto} L50;
+675 L43:
+676     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp}] = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+677 L50:
+678     ++(*msp);
+679     \}
+680     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} >= *\hyperlink{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}{masdm}) \{
+681     \textcolor{keywordflow}{goto} L16;
+682     \}
+683 
+684 \textcolor{comment}{/* ...     BRANCH IF NO INVALID 'STATES' ENCOUNTERED. */}
+685 
+686     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a07943f75fd3dd1cbc1b5eb0714b41513}{typ} == 0) \{
+687     \textcolor{keywordflow}{goto} L51;
+688     \}
+689 
+690 \textcolor{comment}{/* ...     SET ALL 'STATES' = 0 FOR THIS CALL. */}
+691 
+692 \textcolor{comment}{/* L61: */}
+693     i\_\_2 = *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp};
+694     \textcolor{keywordflow}{for} (i\_\_ = *\hyperlink{MATCH_8c_a9e6837cddcbb9eb06de5990da9c42669}{savmsp}; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+695 \textcolor{comment}{/* L45: */}
+696     \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[i\_\_ - 1] = 0;
+697     \}
+698 L51:
+699     j = \hyperlink{MATCH_8c_ac2695171a0b97657ebab009301284d7e}{macvar}[*\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt} - 1] + *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt};
+700     \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[j - 1] >= 0) \{
+701     nrmval = 1;
+702     \}
+703     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} != *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt}) \{
+704     \textcolor{keywordflow}{goto} L98;
+705     \}
+706 
+707 \textcolor{comment}{/* ...     THIS PATH FOLLOWED FOR 1ST CALL SINCE NO COMPARISON CAN YET BE */}
+708 \textcolor{comment}{/* ...     MADE TO DETERMINE IF BRANCHING IS NECESSARY. */}
+709 
+710     nrmsav = nrmval;
+711     majsav = *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major};
+712     \textcolor{keywordflow}{if} (! extern\_\_) \{
+713     \textcolor{keywordflow}{goto} L9;
+714     \}
+715     extern\_\_ = FALSE\_;
+716     \textcolor{keywordflow}{goto} L105;
+717 L98:
+718     k1 += *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+719     l = *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} - *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt};
+720     k = l + 1;
+721 
+722 \textcolor{comment}{/* ...     COMPARE 'STATES' FOR THIS CALL WITH 'STATES' FOR EACH CALL THAT */}
+723 \textcolor{comment}{/* ...     INITIATED A NEW BRANCH. UPON COMPLETION OF A CALL COMPARISON */}
+724 \textcolor{comment}{/* ...     M1=0 IF SAME AS SOME PREVIOUS CALL. OTHERWISE BRANCH (M1=1). */}
+725 
+726     i\_\_2 = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+727     i\_\_1 = *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt};
+728     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_1 < 0 ? i\_\_ >= i\_\_2 : i\_\_ <= i\_\_2; i\_\_ += i\_\_1) \{
+729     m1 = 0;
+730     i\_\_3 = *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp};
+731     \textcolor{keywordflow}{for} (j = k; j <= i\_\_3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+732         n = i\_\_ + j - \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+733 \textcolor{comment}{/* L52: */}
+734         \textcolor{keywordflow}{if} (\hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[j - 1] != \hyperlink{MATCH_8c_a25cdd532658e3d56b36e848581108279}{mas}[n - 1]) \{
+735         m1 = 1;
+736         \}
+737     \}
+738     \textcolor{keywordflow}{if} (m1 == 0) \{
+739         \textcolor{keywordflow}{goto} L59;
+740     \}
+741 \textcolor{comment}{/* L53: */}
+742     \}
+743 
+744 \textcolor{comment}{/* ...     ENTRY=.FALSE. IF 1ST BRANCH ENCOUNTERED FOR THIS EXPRESSION. */}
+745 
+746     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_}) \{
+747     \textcolor{keywordflow}{goto} L56;
+748     \}
+749 
+750 \textcolor{comment}{/* ...     MAXSPS KEEPS TRACK OF NUMBER OF ACTUAL BRANCHING EXPRESSIONS IN */}
+751 \textcolor{comment}{/* ...     MACRO. */}
+752 
+753 L105:
+754     ++(*maxsps);
+755 
+756 \textcolor{comment}{/* ...     EVERY POTENTIAL BRANCHING SITUATION HAS A NUMBER ASSOCIATED */}
+757 \textcolor{comment}{/* ...     WITH IT (NMLINE INCREMENTED EACH TIME). THOSE ACTUAL BRANCHING */}
+758 \textcolor{comment}{/* ...     EXPRESSIONS HAVE CURRENT VALUE OF NMLINE STORED IN LINUSD ARRAY */}
+759 
+760     ++(*lnusdp);
+761     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a386a3849201238dcb8f7daf0dd102e5a}{lnusdp} <= *\hyperlink{MATCH_8c_aae696311b372fb19441d5ae2427f915c}{lnsddm}) \{
+762     \textcolor{keywordflow}{goto} L54;
+763     \}
+764     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MATCH_8c_a7e1e3d9d25083144d8c8a011e8e8352e}{c\_\_20}, &\hyperlink{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MATCH   "}, (ftnlen)8);
+765     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+766 L54:
+767     \hyperlink{MATCH_8c_a8fc33fd61b2d3f6cd496994365ddfefe}{linusd}[*\hyperlink{MATCH_8c_a386a3849201238dcb8f7daf0dd102e5a}{lnusdp} - 1] = *\hyperlink{MATCH_8c_af5e9b9880df01acaab2620a08cd543ae}{nmline};
+768 
+769 \textcolor{comment}{/* ...     NEGATIVE OF BRANCHING EXPRESSION NUMBER STORED IN MACSPD TABLE. */}
+770 
+771     \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[*\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop}] = -(*nmline);
+772     *\hyperlink{MATCH_8c_a8b742fe78545e613fe1f124bcf59e871}{ilhlt} = FALSE\_;
+773     nrmval = nrmsav;
+774     *\hyperlink{MATCH_8c_a6646389206c0df53428153071878a63d}{major} = majsav;
+775     k1 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg} << 1;
+776     *mcstrt = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+777     *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} = *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt};
+778     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} >= *\hyperlink{MATCH_8c_a93b2466d1002a60d0798e27a73828f6c}{masdm}) \{
+779     \textcolor{keywordflow}{goto} L16;
+780     \}
+781     *\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_} = TRUE\_;
+782     ++(*mactop);
+783 
+784 \textcolor{comment}{/* ...     MCTOPP IS POINTER TO EXPRESSION NUMBER IN MACSPD TABLE. */}
+785 
+786     *\hyperlink{MATCH_8c_a469272ce65df5816f9bf8029cd0e7194}{mctopp} = *\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop};
+787     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop} < *\hyperlink{MATCH_8c_abb6e702a4f84a2b38dde019d2666b17a}{mspddm}) \{
+788     \textcolor{keywordflow}{goto} L56;
+789     \}
+790 L55:
+791     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MATCH_8c_a6ce0784e0ee2f08488f30ecc0c08d14c}{c\_\_31}, &\hyperlink{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MATCH   "}, (ftnlen)8);
+792     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+793 L56:
+794     ++lbrch;
+795     i\_\_1 = -lbrch;
+796     \hyperlink{MACLBL_8c_a03ec9a6955dcadbedce6f850023a6a08}{maclbl\_}(&\hyperlink{MATCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &i\_\_1, &n);
+797     \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[n - 1] = \hyperlink{MATCH_8c_a194c3fb843a8ae50f9ed19d4ee4f42de}{label}[0];
+798 
+799 \textcolor{comment}{/* ...     GENERATE BRANCH LABEL COMMAND. */}
+800 
+801     \hyperlink{LABELZ_8c_a518bec8a4632eba8893728620b662241}{labelz\_}(&n);
+802     m = *\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop};
+803     *\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop} = *\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop} + *\hyperlink{MATCH_8c_a6da1e42f90c3adddc2f0a624d27c8468}{bitwds} + 1;
+804     \textcolor{keywordflow}{if} (*\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop} >= *\hyperlink{MATCH_8c_abb6e702a4f84a2b38dde019d2666b17a}{mspddm}) \{
+805     \textcolor{keywordflow}{goto} L55;
+806     \}
+807 
+808 \textcolor{comment}{/* ...     STORE THE LATEST BRANCH LABEL IN THE BRANCHING HISTORY PORTION */}
+809 \textcolor{comment}{/* ...     OF THE MACSPD TABLE. IF THIS BRANCH ONLY EMPLOYS NORMAL VALUES */}
+810 \textcolor{comment}{/*        (NRMVAL=-1), THEN STORE THE NEGATIVE OF THE LABEL POINTER. */}
+811 
+812     \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[*\hyperlink{MATCH_8c_a647ec60da38692a234f5de577abcb815}{mactop} - 1] = nrmval * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+813 L57:
+814     j = (\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[k1 - 1] - 1) / *\hyperlink{MATCH_8c_ad09f67e1988e5571c8254408b9429853}{numbit};
+815     n = \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[k1 - 1] - *\hyperlink{MATCH_8c_ad09f67e1988e5571c8254408b9429853}{numbit} * \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+816     k = m + j + 1;
+817 
+818 \textcolor{comment}{/* ...     SET THE NTH CALL QUALITY FOR THE APPROPRIATE BRANCH. */}
+819 
+820     \hyperlink{SETBIT_8c_ae1e87dd428b0ffb4ce000b3004674193}{setbit\_}(&\hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[k - 1], &n);
+821     l = *\hyperlink{MATCH_8c_a6def84049741d41b0852246964094691}{mcstrt};
+822 
+823 \textcolor{comment}{/* ...     UPDATE THE CLASS AND MODE FOR EACH MACRO VARIABLE TO CORRESPOND */}
+824 \textcolor{comment}{/* ...     TO THE ASSIGNED VALUES FOR THE CURRENT CALL. */}
+825 
+826 L60:
+827     i\_\_1 = *\hyperlink{MATCH_8c_af19be6b4a3de85f930cf096208d604a0}{numarg};
+828     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+829     j = \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[i\_\_ - 2];
+830     k = (i\_\_2 = \hyperlink{MATCH_8c_aad03ecfffec88bd692dae5ee733592fd}{macspd}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}], abs(i\_\_2));
+831     \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] = \hyperlink{MATCH_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}[0] + *\hyperlink{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+832     \textcolor{keywordflow}{if} (k > \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+833         \textcolor{keywordflow}{goto} L58;
+834     \}
+835     kk = \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1];
+836     \textcolor{keywordflow}{if} (kk - *\hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (kk / *\hyperlink{MATCH_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}) < *\hyperlink{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}) \{
+837         kk += *\hyperlink{MATCH_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+838     \}
+839     \hyperlink{MATCH_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] = kk;
+840 L58:
+841     ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+842     \}
+843     \textcolor{keywordflow}{if} (m1 == 0) \{
+844     \textcolor{keywordflow}{goto} L9;
+845     \}
+846     \textcolor{keywordflow}{goto} L7;
+847 L59:
+848     *\hyperlink{MATCH_8c_ab75d814af1737ae7ea85e34b8ddccb5b}{msp} -= *\hyperlink{MATCH_8c_af5d5b8bfd24a1a86adbb29618b20cbbb}{maclnt};
+849     \textcolor{keywordflow}{if} (! (*\hyperlink{MATCH_8c_ae5bb26e11ca31162c14ed5995777b6d5}{entry\_\_})) \{
+850     \textcolor{keywordflow}{goto} L9;
+851     \}
+852 
+853 \textcolor{comment}{/* ...     COMPUTE POSITION IN MACSPD TABLE FOR BRANCH ASSOCIATED WITH */}
+854 \textcolor{comment}{/* ...     THIS CALL. */}
+855 
+856     m = *\hyperlink{MATCH_8c_a469272ce65df5816f9bf8029cd0e7194}{mctopp} + (i\_\_ - 1) / *maclnt * (*bitwds + 1);
+857     \textcolor{keywordflow}{goto} L57;
+858 
+859 \textcolor{comment}{/* ...     GENERATE RETURN TERMINATOR FOR BRANCH CODE. */}
+860 
+861 L99:
+862     \hyperlink{RETMCX_8c_a46838b080b8a2bfd85c3204a5bb20f2f}{retmcx\_}(&\hyperlink{MATCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+863     \textcolor{keywordflow}{goto} L9;
+864 
+865 \textcolor{comment}{/* ...     1015 - SURFACE TYPE CHANGED IN NESTED GEOMETRIC DEFINITION */}
+866 
+867 L62:
+868     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MATCH_8c_a9b9f53bd7854b64c2f90be225fb97402}{c\_\_1015}, &\hyperlink{MATCH_8c_a84b26d7e51e1906ff5c47e20bb3c6cc1}{ergstk}[99], &\hyperlink{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MATCH   "}, (ftnlen)8);
+869     \textcolor{keywordflow}{goto} L7;
+870 \} \textcolor{comment}{/* match\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MATCH_8c_a6a928538579d8ea0f178b2fcdb7bad01_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MATCH_8c_a6a928538579d8ea0f178b2fcdb7bad01_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{MATCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 83 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+1015@{c\+\_\+\+\_\+1015}}
+\index{c\+\_\+\+\_\+1015@{c\+\_\+\+\_\+1015}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1015}{c__1015}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1015 = 1015\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a9b9f53bd7854b64c2f90be225fb97402}{}\label{MATCH_8c_a9b9f53bd7854b64c2f90be225fb97402}
+
+
+Definition at line 87 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{MATCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 86 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+20@{c\+\_\+\+\_\+20}}
+\index{c\+\_\+\+\_\+20@{c\+\_\+\+\_\+20}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+20}{c__20}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+20 = 20\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a7e1e3d9d25083144d8c8a011e8e8352e}{}\label{MATCH_8c_a7e1e3d9d25083144d8c8a011e8e8352e}
+
+
+Definition at line 84 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+26@{c\+\_\+\+\_\+26}}
+\index{c\+\_\+\+\_\+26@{c\+\_\+\+\_\+26}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+26}{c__26}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+26 = 26\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_af1cbc1b5782283e7dbc2a0442d1e7662}{}\label{MATCH_8c_af1cbc1b5782283e7dbc2a0442d1e7662}
+
+
+Definition at line 82 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+31@{c\+\_\+\+\_\+31}}
+\index{c\+\_\+\+\_\+31@{c\+\_\+\+\_\+31}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+31}{c__31}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+31 = 31\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a6ce0784e0ee2f08488f30ecc0c08d14c}{}\label{MATCH_8c_a6ce0784e0ee2f08488f30ecc0c08d14c}
+
+
+Definition at line 85 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+32@{c\+\_\+\+\_\+32}}
+\index{c\+\_\+\+\_\+32@{c\+\_\+\+\_\+32}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+32}{c__32}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+32 = 32\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a5408aa4e6c3d299b57489962388d5609}{}\label{MATCH_8c_a5408aa4e6c3d299b57489962388d5609}
+
+
+Definition at line 80 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{MATCH_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 81 of file M\+A\+T\+C\+H.\+c.
+
+
+
+Referenced by match\+\_\+().
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{MATCH_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{MATCH_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!charst@{charst}}
+\index{charst@{charst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{MATCH_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{MATCH_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{MATCH_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{MATCH_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{MATCH_8c_a4f3d3720acd901e8b7b109a449f3cba9}{}\label{MATCH_8c_a4f3d3720acd901e8b7b109a449f3cba9}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{MATCH_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{MATCH_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!code@{code}}
+\index{code@{code}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{MATCH_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{MATCH_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 37 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{MATCH_8c_a6d919bc9df3b334727f405c7c460d5c6}{}\label{MATCH_8c_a6d919bc9df3b334727f405c7c460d5c6}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!errpos@{errpos}}
+\index{errpos@{errpos}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{errpos}{errpos}}]{\setlength{\rightskip}{0pt plus 5cm}integer errpos\mbox{[}302\mbox{]}}\hypertarget{MATCH_8c_a5a2d3d03fb596a9a02911696cd9cd35a}{}\label{MATCH_8c_a5a2d3d03fb596a9a02911696cd9cd35a}
+
+
+Definition at line 73 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!errpos\+\_\+@{errpos\+\_\+}}
+\index{errpos\+\_\+@{errpos\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{errpos\+\_\+}{errpos_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   errpos\+\_\+}\hypertarget{MATCH_8c_aa47f13acfadbc5e9b5a8441bdc6aef65}{}\label{MATCH_8c_aa47f13acfadbc5e9b5a8441bdc6aef65}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{MATCH_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{MATCH_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{MATCH_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{MATCH_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{MATCH_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{MATCH_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{MATCH_8c_a373010e90fb1cd08bf263255a111920d}{}\label{MATCH_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx1@{macxx1}}
+\index{macxx1@{macxx1}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx1}{macxx1}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx1\mbox{[}71\mbox{]}}\hypertarget{MATCH_8c_a62736b21eda0cd16ae1b6bef6723680a}{}\label{MATCH_8c_a62736b21eda0cd16ae1b6bef6723680a}
+
+
+Definition at line 43 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx1\+\_\+@{macxx1\+\_\+}}
+\index{macxx1\+\_\+@{macxx1\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+}{macxx1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx1\+\_\+}\hypertarget{MATCH_8c_ad77ab25adedbee02cc6c63e18689d4bd}{}\label{MATCH_8c_ad77ab25adedbee02cc6c63e18689d4bd}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx5@{macxx5}}
+\index{macxx5@{macxx5}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx5}{macxx5}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx5\mbox{[}135\mbox{]}}\hypertarget{MATCH_8c_a446bef61e8d8c3c868fa38f38fd23594}{}\label{MATCH_8c_a446bef61e8d8c3c868fa38f38fd23594}
+
+
+Definition at line 49 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx5\+\_\+@{macxx5\+\_\+}}
+\index{macxx5\+\_\+@{macxx5\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx5\+\_\+}{macxx5_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx5\+\_\+}\hypertarget{MATCH_8c_a10e458f1ff749cf22a19bca4a836fe9a}{}\label{MATCH_8c_a10e458f1ff749cf22a19bca4a836fe9a}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx6@{macxx6}}
+\index{macxx6@{macxx6}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx6}{macxx6}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx6\mbox{[}1300\mbox{]}}\hypertarget{MATCH_8c_a6aef08ab591c06e1bc5eec5e925bcbf4}{}\label{MATCH_8c_a6aef08ab591c06e1bc5eec5e925bcbf4}
+
+
+Definition at line 55 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx6\+\_\+@{macxx6\+\_\+}}
+\index{macxx6\+\_\+@{macxx6\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx6\+\_\+}{macxx6_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx6\+\_\+}\hypertarget{MATCH_8c_a1f8340ea02c007dbc078a07b685f69da}{}\label{MATCH_8c_a1f8340ea02c007dbc078a07b685f69da}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx7@{macxx7}}
+\index{macxx7@{macxx7}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx7}{macxx7}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx7\mbox{[}182\mbox{]}}\hypertarget{MATCH_8c_afffac0ddecd654e0d788a3a61514d4c5}{}\label{MATCH_8c_afffac0ddecd654e0d788a3a61514d4c5}
+
+
+Definition at line 61 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!macxx7\+\_\+@{macxx7\+\_\+}}
+\index{macxx7\+\_\+@{macxx7\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{macxx7\+\_\+}{macxx7_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx7\+\_\+}\hypertarget{MATCH_8c_a3ef99cde235ba5bdb4887bb7aad03609}{}\label{MATCH_8c_a3ef99cde235ba5bdb4887bb7aad03609}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{MATCH_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{MATCH_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 67 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{MATCH_8c_a5a7a9a5cab650b470b41639e915ea0ae}{}\label{MATCH_8c_a5a7a9a5cab650b470b41639e915ea0ae}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!namest@{namest}}
+\index{namest@{namest}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{MATCH_8c_ab97202700d22183890e79bc8791f4bff}{}\label{MATCH_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{MATCH_8c_a89902642d5a5ad60a82ce61068d10a24}{}\label{MATCH_8c_a89902642d5a5ad60a82ce61068d10a24}
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{MATCH_8c_a12351fe75bd822dfa233783a24bab726}{}\label{MATCH_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{MATCH_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{MATCH_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{MATCH_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{MATCH_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{MATCH_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{MATCH_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!stklst@{stklst}}
+\index{stklst@{stklst}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{stklst}{stklst}}]{\setlength{\rightskip}{0pt plus 5cm}integer stklst\mbox{[}300\mbox{]}}\hypertarget{MATCH_8c_ada93478ed3a7b6732d0c4af5a026499f}{}\label{MATCH_8c_ada93478ed3a7b6732d0c4af5a026499f}
+
+
+Definition at line 31 of file M\+A\+T\+C\+H.\+c.
+
+\index{M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}!stklst\+\_\+@{stklst\+\_\+}}
+\index{stklst\+\_\+@{stklst\+\_\+}!M\+A\+T\+C\+H.\+c@{M\+A\+T\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+}{stklst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stklst\+\_\+}\hypertarget{MATCH_8c_ab0691103148b0c9e999aa96963208712}{}\label{MATCH_8c_ab0691103148b0c9e999aa96963208712}

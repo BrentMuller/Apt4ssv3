@@ -1,0 +1,100 @@
+\hypertarget{DEGSOL_8c}{}\section{D\+E\+G\+S\+O\+L.\+c File Reference}
+\label{DEGSOL_8c}\index{D\+E\+G\+S\+O\+L.\+c@{D\+E\+G\+S\+O\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for D\+E\+G\+S\+O\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{DEGSOL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{REGION_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, doublereal $\ast$\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{D\+E\+G\+S\+O\+L.\+c@{D\+E\+G\+S\+O\+L.\+c}!degsol\+\_\+@{degsol\+\_\+}}
+\index{degsol\+\_\+@{degsol\+\_\+}!D\+E\+G\+S\+O\+L.\+c@{D\+E\+G\+S\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{degsol\+\_\+(doublereal $\ast$v, doublereal $\ast$v1, doublereal $\ast$v2, doublereal $\ast$a, doublereal $\ast$b, integer $\ast$iflag)}{degsol_(doublereal *v, doublereal *v1, doublereal *v2, doublereal *a, doublereal *b, integer *iflag)}}]{\setlength{\rightskip}{0pt plus 5cm}int degsol\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{v1, }
+\item[{doublereal $\ast$}]{v2, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{integer $\ast$}]{iflag}
+\end{DoxyParamCaption}
+)}\hypertarget{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{}\label{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}
+
+
+Definition at line 17 of file D\+E\+G\+S\+O\+L.\+c.
+
+
+
+References b, j, k, v, v1, and v2.
+
+
+
+Referenced by algo1\+\_\+(), curint\+\_\+(), and shella\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+21     \textcolor{keyword}{static} doublereal o;
+22     \textcolor{keyword}{static} integer ja, ka;
+23 
+24 \textcolor{comment}{/*     SOLVES DEGENERATE EQN. SYSTEM  A.V1 + B.V2 = V */}
+25 \textcolor{comment}{/*     WHERE V, V1, V2, 3-D VECTORS AND A,B SCALARS */}
+26 \textcolor{comment}{/*     FOR NO SOLUTION, IFLAG SET TO 1, ELSE ZERO */}
+27 
+28 
+29 
+30 
+31     \textcolor{comment}{/* Parameter adjustments */}
+32     --\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2};
+33     --\hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+34     --\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+35 
+36     \textcolor{comment}{/* Function Body */}
+37     *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 0;
+38     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = 0.;
+39 \textcolor{comment}{/* .... CHOOSE LARGEST ABS(DET) */}
+40     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+41     \textcolor{keywordflow}{for} (k = j + 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+42         *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] * \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] - \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] * \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+43         \textcolor{keywordflow}{if} (abs(*\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}) > abs(*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a})) \{
+44         *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+45         ja = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+46         ka = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+47         \}
+48 \textcolor{comment}{/* L10: */}
+49     \}
+50     \}
+51 
+52     \textcolor{keywordflow}{if} (abs(*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}) < 1e-10 || (doublereal) ja == o) \{
+53     *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 1;
+54     \} \textcolor{keywordflow}{else} \{
+55     *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} = (\hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[ja] * \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[ka] - \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[ka] * \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[ja]) / *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+56     *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} = (\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[ja] * v2[ka] - \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[ka] * v2[ja]) / *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+57     \}
+58 
+59     \textcolor{keywordflow}{return} 0;
+60 \} \textcolor{comment}{/* degsol\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7_icgraph}
+\end{center}
+\end{figure}
+
+

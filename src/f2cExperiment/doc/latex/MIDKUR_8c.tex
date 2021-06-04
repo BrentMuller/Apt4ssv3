@@ -1,0 +1,223 @@
+\hypertarget{MIDKUR_8c}{}\section{M\+I\+D\+K\+U\+R.\+c File Reference}
+\label{MIDKUR_8c}\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+I\+D\+K\+U\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{MIDKUR_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MIDKUR_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MIDKUR_8c_a6535bcc86d008e2797c756d99256e491}{midkur\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$p0, doublereal $\ast$\hyperlink{TLNORM_8c_ae00530def7fb9219b16d51f103557608}{p1}, doublereal $\ast$side, doublereal $\ast$\hyperlink{UNITS_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MIDKUR_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{MIDKUR_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{MIDKUR_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{MIDKUR_8c_a1fb068af84b4eaebf33e2a9381ac35ed}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MIDKUR_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{MIDKUR_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{MIDKUR_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{MIDKUR_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file M\+I\+D\+K\+U\+R.\+c.
+
+
+
+Referenced by midkur\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!midkur\+\_\+@{midkur\+\_\+}}
+\index{midkur\+\_\+@{midkur\+\_\+}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{midkur\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$p0, doublereal $\ast$p1, doublereal $\ast$side, doublereal $\ast$sk)}{midkur_(doublereal *r__, doublereal *p0, doublereal *p1, doublereal *side, doublereal *sk)}}]{\setlength{\rightskip}{0pt plus 5cm}int midkur\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{p0, }
+\item[{doublereal $\ast$}]{p1, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{sk}
+\end{DoxyParamCaption}
+)}\hypertarget{MIDKUR_8c_a6535bcc86d008e2797c756d99256e491}{}\label{MIDKUR_8c_a6535bcc86d008e2797c756d99256e491}
+
+
+Definition at line 30 of file M\+I\+D\+K\+U\+R.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+n1, cprint\+\_\+(), cross\+\_\+(), dotf\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, kursrf\+\_\+(), p1, r\+\_\+\+\_\+, and vnorm\+\_\+().
+
+
+
+Referenced by gchk\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{comment}{/* Builtin functions */}
+34     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+35 
+36     \textcolor{comment}{/* Local variables */}
+37     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+38     \textcolor{keyword}{static} doublereal ch[3], sx[24];
+39     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, doublereal 
+40         *, ftnlen);
+41     \textcolor{keyword}{static} doublereal vec[3];
+42     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+43         );
+44     \textcolor{keyword}{static} doublereal xcos, xsin;
+45     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+46         *), \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+47     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+48     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d}{kursrf\_}(doublereal *,
+49          doublereal *, doublereal *);
+50 
+51 
+52 
+53 
+54 
+55 \textcolor{comment}{/* .... COMPUTE PRINCIPLE CURVATURES ETC. AT MIDPOINT, R */}
+56 
+57 
+58 \textcolor{comment}{/* .... DEBUG FLAGS */}
+59 
+60 
+61     \textcolor{comment}{/* Parameter adjustments */}
+62     --\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1};
+63     --p0;
+64     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+65 
+66     \textcolor{comment}{/* Function Body */}
+67     \hyperlink{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d}{kursrf\_}(&\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1], side, sx);
+68 
+69 \textcolor{comment}{/* .... COMPUTE CHORD DIRECTION */}
+70 
+71     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+72     ch[i\_\_ - 1] = \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - p0[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+73 \textcolor{comment}{/* L10: */}
+74     \}
+75     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(ch, ch);
+76 
+77 \textcolor{comment}{/* .... PROJECT CHORD VECTOR INTO SURFACE TANGENT PLANE */}
+78 
+79     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], ch, vec);
+80     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+81     vec[i\_\_ - 1] = *side * vec[i\_\_ - 1];
+82 \textcolor{comment}{/* L20: */}
+83     \}
+84 
+85     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(vec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], vec);
+86     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(vec, vec);
+87 
+88 \textcolor{comment}{/* .... COMPUTE CURVATURE OF SURFACE IN DIRECTION OF CHORD */}
+89 
+90     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&xcos, vec, &sx[4]);
+91     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&xsin, vec, &sx[8]);
+92     *\hyperlink{AERR2_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk} = sx[0] * xcos * xcos + sx[1] * xsin * xsin;
+93 
+94     \textcolor{keywordflow}{if} (\hyperlink{MIDKUR_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+95     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER MIDKUR"}, (ftnlen)20, (ftnlen)13);
+96     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+97     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIDKUR_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{MIDKUR_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SK  "}, \hyperlink{AERR2_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk}, (ftnlen)4);
+98     \}
+99 
+100     \textcolor{keywordflow}{return} 0;
+101 \} \textcolor{comment}{/* midkur\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIDKUR_8c_a6535bcc86d008e2797c756d99256e491_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIDKUR_8c_a6535bcc86d008e2797c756d99256e491_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIDKUR_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{MIDKUR_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 26 of file M\+I\+D\+K\+U\+R.\+c.
+
+
+
+Referenced by midkur\+\_\+().
+
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIDKUR_8c_a9e9287f317ef3436252a395791a899f6}{}\label{MIDKUR_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file M\+I\+D\+K\+U\+R.\+c.
+
+
+
+Referenced by midkur\+\_\+().
+
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{MIDKUR_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{MIDKUR_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file M\+I\+D\+K\+U\+R.\+c.
+
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{MIDKUR_8c_a1fb068af84b4eaebf33e2a9381ac35ed}{}\label{MIDKUR_8c_a1fb068af84b4eaebf33e2a9381ac35ed}
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{MIDKUR_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{MIDKUR_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file M\+I\+D\+K\+U\+R.\+c.
+
+\index{M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!M\+I\+D\+K\+U\+R.\+c@{M\+I\+D\+K\+U\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{MIDKUR_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{MIDKUR_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file M\+I\+D\+K\+U\+R.\+c.
+

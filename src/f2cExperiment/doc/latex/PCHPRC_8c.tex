@@ -1,0 +1,762 @@
+\hypertarget{PCHPRC_8c}{}\section{P\+C\+H\+P\+R\+C.\+c File Reference}
+\label{PCHPRC_8c}\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+C\+H\+P\+R\+C.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{PCHPRC_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{cstart\+\_\+1}~\hyperlink{PCHPRC_8c_a429da0df3313c4dcbd0f0ffff1a45cae}{cstart\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PCHPRC_8c_a9322141c122b6fc3b8f2ce6cb5d8b576}{pchprc\+\_\+} (doublereal $\ast$ss, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$ust, doublereal $\ast$vst, doublereal $\ast$\hyperlink{UNITS_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp}, doublereal $\ast$\hyperlink{UNITS_8c_a66b316fa3299925e5c7630d5af6601fd}{tn}, doublereal $\ast$\hyperlink{SSV3_8c_aabb2cadb015ae8f77e6c853cddd11c39}{ua}, doublereal $\ast$\hyperlink{SSV3_8c_a17f3f96959db8563424d69ae8c64f2d3}{va}, doublereal $\ast$\hyperlink{UNITS_8c_ae1ea305557352179a5595123e4f7bef9}{sp}, doublereal $\ast$\hyperlink{UNITS_8c_affaf74dabdb513fe55fa48a1091a82f0}{sn}, doublereal $\ast$\hyperlink{UNITS_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, integer $\ast$\hyperlink{SSV3_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, integer $\ast$idebug, integer $\ast$irr, logical $\ast$lgeom)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}\\
+\>doublereal \hyperlink{PCHPRC_8c_aede8e3160729930bd4eb99a9cc65e9ac}{uvdist}\\
+\>doublereal \hyperlink{PCHPRC_8c_a29c57bc2f86afd3d642ebe548d3e3304}{spbond} \mbox{[}40\mbox{]}\\
+\>integer \hyperlink{PCHPRC_8c_a9b291e9727dbce8ec72e9bf593b4d998}{istart}\\
+\} \hyperlink{PCHPRC_8c_a429da0df3313c4dcbd0f0ffff1a45cae}{cstart\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!cstart\+\_\+1@{cstart\+\_\+1}}
+\index{cstart\+\_\+1@{cstart\+\_\+1}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{cstart\+\_\+1}{cstart_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cstart\+\_\+1~{\bf cstart\+\_\+}}\hypertarget{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{}\label{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}
+
+
+Definition at line 22 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!pchprc\+\_\+@{pchprc\+\_\+}}
+\index{pchprc\+\_\+@{pchprc\+\_\+}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{pchprc\+\_\+(doublereal $\ast$ss, doublereal $\ast$b, doublereal $\ast$ust, doublereal $\ast$vst, doublereal $\ast$tp, doublereal $\ast$tn, doublereal $\ast$ua, doublereal $\ast$va, doublereal $\ast$sp, doublereal $\ast$sn, doublereal $\ast$slx, integer $\ast$iflag, integer $\ast$itop, integer $\ast$ipnum, integer $\ast$mode, integer $\ast$idebug, integer $\ast$irr, logical $\ast$lgeom)}{pchprc_(doublereal *ss, doublereal *b, doublereal *ust, doublereal *vst, doublereal *tp, doublereal *tn, doublereal *ua, doublereal *va, doublereal *sp, doublereal *sn, doublereal *slx, integer *iflag, integer *itop, integer *ipnum, integer *mode, integer *idebug, integer *irr, logical *lgeom)}}]{\setlength{\rightskip}{0pt plus 5cm}int pchprc\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ss, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{ust, }
+\item[{doublereal $\ast$}]{vst, }
+\item[{doublereal $\ast$}]{tp, }
+\item[{doublereal $\ast$}]{tn, }
+\item[{doublereal $\ast$}]{ua, }
+\item[{doublereal $\ast$}]{va, }
+\item[{doublereal $\ast$}]{sp, }
+\item[{doublereal $\ast$}]{sn, }
+\item[{doublereal $\ast$}]{slx, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{itop, }
+\item[{integer $\ast$}]{ipnum, }
+\item[{integer $\ast$}]{mode, }
+\item[{integer $\ast$}]{idebug, }
+\item[{integer $\ast$}]{irr, }
+\item[{logical $\ast$}]{lgeom}
+\end{DoxyParamCaption}
+)}\hypertarget{PCHPRC_8c_a9322141c122b6fc3b8f2ce6cb5d8b576}{}\label{PCHPRC_8c_a9322141c122b6fc3b8f2ce6cb5d8b576}
+
+
+Definition at line 34 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+References aprix\+\_\+(), b, bad\+\_\+(), bonchk\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, c\+\_\+n1, c\+\_\+n3, cnsurf\+\_\+(), cprint\+\_\+(), cstart\+\_\+1, d\+\_\+\+\_\+, dif, dmax\+\_\+\+\_\+, dotf\+\_\+(), i\+\_\+\+\_\+, iflag, ii, ipnum, ir, j, k, lodpch\+\_\+(), one, slx, sn, sp, spv, sqrcut\+\_\+(), step, stepmx, tn, tp, u, u1, ua, umax, v, v1, va, vnorm\+\_\+(), and zero.
+
+
+
+Referenced by apt109\+\_\+(), and ddssrf\+\_\+().
+
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{comment}{/* Initialized data */}
+41 
+42     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+43     \textcolor{keyword}{static} doublereal uchg[8] = \{ 0.,1.,1.,1.,0.,-1.,-1.,-1. \};
+44     \textcolor{keyword}{static} doublereal vchg[8] = \{ 1.,1.,0.,-1.,-1.,-1.,0.,1. \};
+45     \textcolor{keyword}{static} integer nits = 30;
+46     \textcolor{keyword}{static} integer mexchg = 10;
+47     \textcolor{keyword}{static} doublereal \hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} = .64;
+48     \textcolor{keyword}{static} doublereal stepln = .7;
+49     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+50     \textcolor{keyword}{static} doublereal half = .5;
+51     \textcolor{keyword}{static} doublereal flck0 = .99998;
+52     \textcolor{keyword}{static} doublereal flck2 = .999;
+53     \textcolor{keyword}{static} doublereal smal = 1e-10;
+54     \textcolor{keyword}{static} doublereal vsmal = 1e-20;
+55 
+56     \textcolor{comment}{/* System generated locals */}
+57     integer i\_\_1;
+58     doublereal d\_\_1, d\_\_2;
+59 
+60     \textcolor{comment}{/* Builtin functions */}
+61     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+62     \textcolor{keywordtype}{double} sqrt(doublereal);
+63 
+64     \textcolor{comment}{/* Local variables */}
+65     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+66     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+67     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, dm;
+68     \textcolor{keyword}{static} integer \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii};
+69     \textcolor{keyword}{static} doublereal dr, cu, cv, dt;
+70     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir};
+71     \textcolor{keyword}{static} doublereal ct;
+72     \textcolor{keyword}{static} integer iz;
+73     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+74     \textcolor{keyword}{static} doublereal daf[3], \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[3], dhu, dhv, ctm, \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[32], \hyperlink{AVCTRL_8c_aabdf0482f8572b46a4ea0e69e8721721}{dmax\_\_};
+75     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+76         );
+77     \textcolor{keyword}{static} integer ilev, jmax;
+78     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_a94e6890329a61867ed59615fc2df0aa9}{umax}, vmax, \hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step};
+79     \textcolor{keyword}{static} integer ickbn;
+80     \textcolor{keyword}{static} doublereal ubond, vbond, drmax;
+81     \textcolor{keyword}{static} integer ipmax;
+82     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6}{aprix\_}(doublereal *, doublereal *, doublereal 
+83         *, doublereal *, doublereal *, doublereal *, integer *, integer *,
+84          integer *, integer *);
+85     \textcolor{keyword}{static} doublereal ulast, vlast, udist, vdist;
+86     \textcolor{keyword}{static} integer ipnst;
+87     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+88     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+89     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BONCHK_8c_a6630801f161c793500e790423ef68134}{bonchk\_}(doublereal *, doublereal *, 
+90         doublereal *, doublereal *, integer *, integer *, integer *, 
+91         integer *, integer *), \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, 
+92         integer *, integer *, integer *, integer *);
+93     \textcolor{keyword}{static} integer kinpat, ipsave, iexcnt;
+94     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *,
+95          doublereal *, doublereal *, doublereal *, integer *, integer *);
+96     \textcolor{keyword}{static} integer kretry;
+97     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SQRCUT_8c_a85a4c82884e61dff8233ebd10d5c6b24}{sqrcut\_}(doublereal *, doublereal *, 
+98         doublereal *, doublereal *, doublereal *, doublereal *, integer *)
+99         ;
+100 
+101 \textcolor{comment}{/* ------ THIS PROGRAM ACCEPTS A CURRENT PATCH B AND U,V VALUES. */}
+102 \textcolor{comment}{/* ------ IT MUST DETERMINE A LINEUP WITH AN INPUT TOOL POINT AND */}
+103 \textcolor{comment}{/* ------  TOOL NORMAL .  IF THE LINEUP IS NOT ON THE CURRENT */}
+104 \textcolor{comment}{/* ------ PATCH THEN THE LOGIC FREELY EXCHANGES PATCHES UNTIL AN ANSWER */}
+105 \textcolor{comment}{/* ------ IS FOUND.  NO MORE THAN TEN PATCH EXCHANGES ARE ALLOWED. */}
+106 
+107 
+108 
+109 
+110 
+111     \textcolor{comment}{/* Parameter adjustments */}
+112     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+113     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+114     --\hyperlink{AERR2_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx};
+115     --\hyperlink{APT331_8c_ac44dba448ffaa92867e6b60d2fd5abff}{sn};
+116     --\hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp};
+117     --\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn};
+118     --\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp};
+119     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+120     --ss;
+121 
+122     \textcolor{comment}{/* Function Body */}
+123 \textcolor{comment}{/* ---      NITS IS THE NUMBER OR ITERATIONS ALLOWED ON 1 SURFACE */}
+124 \textcolor{comment}{/* ---      MEXCHG IS THE NUMBER OF PATCH EXCHANGES ALLOWED */}
+125 \textcolor{comment}{/* ---      STEPMX IS A MAXIMUM STEP WITHIN THE PARAMETRIC UNIT SQUARE */}
+126 \textcolor{comment}{/* ---      STEPLN IS THE REDUCTION OF STEP SIZE IF IT IS TOO LARGE. */}
+127 \textcolor{comment}{/* --- */}
+128 \textcolor{comment}{/* --- */}
+129 \textcolor{comment}{/* --- */}
+130 \textcolor{comment}{/* --- */}
+131     kretry = 0;
+132     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = *ust;
+133     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = *vst;
+134     ulast = half;
+135     vlast = half;
+136     drmax = 0.;
+137     ipnst = *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum};
+138 L1:
+139     iexcnt = 0;
+140     kinpat = 0;
+141 
+142     i\_\_1 = nits;
+143     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+144 
+145     \textcolor{keywordflow}{if} (kretry == 5) \{
+146         \textcolor{keywordflow}{goto} L8;
+147     \}
+148     \textcolor{keywordflow}{if} (kretry == 0) \{
+149         \textcolor{keywordflow}{goto} L8;
+150     \}
+151     \textcolor{keywordflow}{if} (*\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} != ipmax) \{
+152         \textcolor{keywordflow}{goto} L8;
+153     \}
+154     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} - umax, abs(d\_\_1)) > .01) \{
+155         \textcolor{keywordflow}{goto} L8;
+156     \}
+157     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} - vmax, abs(d\_\_1)) > .01) \{
+158         \textcolor{keywordflow}{goto} L8;
+159     \}
+160     \textcolor{keywordflow}{goto} L1400;
+161 L8:
+162     ++kinpat;
+163     \textcolor{keywordflow}{if} (*idebug == 0) \{
+164         \textcolor{keywordflow}{goto} L9;
+165     \}
+166     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+167     s\_copy(badmsg, \textcolor{stringliteral}{" PCHPRC LOOP"}, (ftnlen)20, (ftnlen)12);
+168     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+169     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"PNUM"}, \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, (ftnlen)4);
+170     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UA  "}, \hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, (ftnlen)4);
+171     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VA  "}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, (ftnlen)4);
+172     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"KNPT"}, &kinpat, (ftnlen)4);
+173 L9:
+174 
+175 \textcolor{comment}{/* ------EVALUATE THE SURFACE DIFFERENTIAL ELEMENTS AT UA,VA */}
+176 \textcolor{comment}{/* ------PLACE THE ELEMENTS IN ARRAY SPV */}
+177 
+178     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], spv, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+179     \textcolor{keywordflow}{if} (*idebug == 0) \{
+180         \textcolor{keywordflow}{goto} L10;
+181     \}
+182     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SP  "}, spv, (ftnlen)4);
+183     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPN "}, &spv[28], (ftnlen)4);
+184     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPU "}, &spv[4], (ftnlen)4);
+185     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SP-V"}, &spv[8], (ftnlen)4);
+186     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPUU"}, &spv[12], (ftnlen)4);
+187     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPVV"}, &spv[20], (ftnlen)4);
+188     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPUV"}, &spv[16], (ftnlen)4);
+189 L10:
+190 
+191 
+192 \textcolor{comment}{/* ------BEFORE SEEKING A NEW UV PAIR, CHECK THE ACCURACY OF THE */}
+193 \textcolor{comment}{/* ------PRESENT SURFACE POINT,NORMAL */}
+194 \textcolor{comment}{/* ------ ERROR COMPUTATIONS DEPEND ON THE VARIABLE MODE */}
+195 \textcolor{comment}{/* ------ MODE=-1, POSITIVE DDST. =0 SNXP OR CLOSEST POINT. =1 */}
+196 \textcolor{comment}{/* ------ DDST IN EITHER DIRECTION ALONG TOOL RAY. */}
+197     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+198 \textcolor{comment}{/* L20: */}
+199         dif[i\_\_ - 1] = \hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - spv[i\_\_ - 1];
+200     \}
+201     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&d\_\_, dif, dif);
+202     d\_\_ = sqrt(d\_\_);
+203 \textcolor{comment}{/* ---      IF D IS TOO SMALL, THEN SET IT TO A LARGER VALUE */}
+204     d\_\_ = max(d\_\_,vsmal);
+205     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+206         daf[i\_\_ - 1] = dif[i\_\_ - 1] / \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+207 \textcolor{comment}{/* L25: */}
+208     \}
+209 
+210     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+211         \textcolor{keywordflow}{goto} L30;
+212     \}
+213 \textcolor{comment}{/* ---      COMPUTE ANGLE BETWEEN DIF AND SURFACE NORMAL */}
+214     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&dr, daf, &spv[28]);
+215     \textcolor{keywordflow}{goto} L35;
+216 
+217 L30:
+218 \textcolor{comment}{/* ---      COMPUTE ANGLE BETWEEN DIF AND TOOL RAY */}
+219     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&dr, daf, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+220 \textcolor{comment}{/* ---      NORMALIZE ANGLE BY DIVIDING BY LENGTH OF DIF */}
+221 L35:
+222     dr = abs(dr);
+223 
+224     \textcolor{keywordflow}{if} (*idebug == 0) \{
+225         \textcolor{keywordflow}{goto} L41;
+226     \}
+227     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ERR*"}, &dr, (ftnlen)4);
+228     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DIST"}, &d\_\_, (ftnlen)4);
+229     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SPTP"}, dif, (ftnlen)4);
+230 L41:
+231 
+232 \textcolor{comment}{/* ---      IF THE RAY IS AT RIGHT ANGLES TO THE SURFACE, QUIT NOW. */}
+233     \textcolor{keywordflow}{if} (dr < smal && *\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+234         \textcolor{keywordflow}{goto} L9999;
+235     \}
+236 \textcolor{comment}{/* ---      ACCEPTANCE CRITERIA, ANGULAR LINEUP BETTER THAN FLIPCK */}
+237     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0 && dr > flck0) \{
+238         \textcolor{keywordflow}{goto} L2000;
+239     \}
+240     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0 && dr > flck2) \{
+241         \textcolor{keywordflow}{goto} L2000;
+242     \}
+243     \textcolor{keywordflow}{if} (dr < smal) \{
+244         \textcolor{keywordflow}{goto} L63;
+245     \}
+246     \textcolor{keywordflow}{if} (dr < drmax) \{
+247         \textcolor{keywordflow}{goto} L60;
+248     \}
+249     dmax\_\_ = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+250     drmax = dr;
+251     umax = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua};
+252     vmax = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va};
+253     ipmax = *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum};
+254 
+255 \textcolor{comment}{/* ------ ALL INDICATIONS ARE THAT U,V SHOULD BE R MODIFIED */}
+256 L60:
+257     cu = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+258     cv = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+259     dt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+260     ilev = 3;
+261     \textcolor{keywordflow}{if} (kretry < 5) \{
+262         ilev = 2;
+263     \}
+264     \hyperlink{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6}{aprix\_}(&cu, &cv, &dt, spv, &\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[1], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, &ilev, &ir, idebug);
+265 \textcolor{comment}{/* ---      IF IR.NE.0, THEN ARBITRARILY ALTER CU,CV SLIGHTLY */}
+266 \textcolor{comment}{/* L640: */}
+267     \textcolor{keywordflow}{if} (ir == 0) \{
+268         \textcolor{keywordflow}{goto} L65;
+269     \}
+270 L63:
+271     dm = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+272     ct = .025;
+273     \textcolor{keywordflow}{for} (iz = 1; iz <= 2; ++iz) \{
+274         \textcolor{keywordflow}{for} (j = 1; j <= 8; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+275         dhu = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} + ct * uchg[j - 1];
+276         dhv = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} + ct * uchg[j - 1];
+277         \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&dhu, &dhv, &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], spv, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+278         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+279 \textcolor{comment}{/* L641: */}
+280             dif[i\_\_ - 1] = \hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - spv[i\_\_ - 1];
+281         \}
+282         \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&d\_\_, dif, dif);
+283         d\_\_ = sqrt(d\_\_);
+284         d\_\_ = max(d\_\_,vsmal);
+285         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+286 \textcolor{comment}{/* L642: */}
+287             daf[i\_\_ - 1] = dif[i\_\_ - 1] / \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+288         \}
+289         \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+290             \textcolor{keywordflow}{goto} L643;
+291         \}
+292         \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&dt, daf, &spv[28]);
+293         \textcolor{keywordflow}{goto} L644;
+294 L643:
+295         \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&dt, daf, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+296 L644:
+297         dt = abs(dt);
+298         \textcolor{keywordflow}{if} (dt <= dm) \{
+299             \textcolor{keywordflow}{goto} L648;
+300         \}
+301         jmax = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+302         ctm = ct;
+303         dm = dt;
+304 L648:
+305         ;
+306         \}
+307         ct = .075;
+308 \textcolor{comment}{/* L649: */}
+309     \}
+310     \textcolor{keywordflow}{if} (*idebug != 0) \{
+311         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ERRT"}, &dm, (ftnlen)4);
+312     \}
+313     \textcolor{keywordflow}{if} (*idebug != 0) \{
+314         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+315         s\_copy(badmsg, \textcolor{stringliteral}{" AFTER UV CHANGE"}, (ftnlen)20, (ftnlen)16);
+316         \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+317     \}
+318     \textcolor{keywordflow}{if} (dt * 1.1 < drmax || dt < smal) \{
+319         \textcolor{keywordflow}{goto} L1400;
+320     \}
+321     cu = uchg[jmax - 1] * ctm;
+322     cv = vchg[jmax - 1] * ctm;
+323 L65:
+324 
+325     u1 = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} + cu;
+326     v1 = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} + cv;
+327 
+328     \textcolor{keywordflow}{if} (*idebug == 0) \{
+329         \textcolor{keywordflow}{goto} L42;
+330     \}
+331     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UNXT"}, &u1, (ftnlen)4);
+332     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VNXT"}, &v1, (ftnlen)4);
+333     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UCHG"}, &cu, (ftnlen)4);
+334     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VCHG"}, &cv, (ftnlen)4);
+335 L42:
+336 
+337 \textcolor{comment}{/* ------ SQRCUT DETERMINES IF A BOUNDARY IS BEING CROSSED.  IF IT IS, */}
+338 \textcolor{comment}{/* ------ IT WILL THEN DETERMINE IF AN EXCHANGE SHOULD BE CONSIDERED */}
+339 \textcolor{comment}{/* ------ ON THE BOUNDARY ICKBN. */}
+340 
+341     \hyperlink{SQRCUT_8c_a85a4c82884e61dff8233ebd10d5c6b24}{sqrcut\_}(\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, &u1, &v1, &u, &v, &ickbn);
+342 \textcolor{comment}{/* ---      SAVE THE NUMBER OF THE CURRENT PATCH */}
+343     ipsave = *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum};
+344     \textcolor{keywordflow}{if} (*idebug == 0) \{
+345         \textcolor{keywordflow}{goto} L43;
+346     \}
+347     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UCUT"}, &u, (ftnlen)4);
+348     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VCUT"}, &v, (ftnlen)4);
+349     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ICKB"}, &ickbn, (ftnlen)4);
+350     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+351     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER SQRCUT"}, (ftnlen)20, (ftnlen)13);
+352     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+353 L43:
+354 \textcolor{comment}{/* ---      RESTRICT A PARAMETER CHANGE WITHIN THE UNIT SQUARE */}
+355     \textcolor{keywordflow}{if} (kinpat <= 1) \{
+356         \textcolor{keywordflow}{goto} L130;
+357     \}
+358     \textcolor{keywordflow}{if} ((d\_\_1 = ulast - half, abs(d\_\_1)) > half) \{
+359         \textcolor{keywordflow}{goto} L130;
+360     \}
+361     \textcolor{keywordflow}{if} ((d\_\_1 = vlast - half, abs(d\_\_1)) > half) \{
+362         \textcolor{keywordflow}{goto} L130;
+363     \}
+364     \textcolor{keywordflow}{if} ((d\_\_1 = u - half, abs(d\_\_1)) > half) \{
+365         \textcolor{keywordflow}{goto} L130;
+366     \}
+367     \textcolor{keywordflow}{if} ((d\_\_1 = v - half, abs(d\_\_1)) > half) \{
+368         \textcolor{keywordflow}{goto} L130;
+369     \}
+370 \textcolor{comment}{/* ---      BOTH POINTS ARE WITHIN THE UNIT SQUARE, SO CHECK FOR LENGTH */}
+371 \textcolor{comment}{/* Computing 2nd power */}
+372     d\_\_1 = u - ulast;
+373 \textcolor{comment}{/* Computing 2nd power */}
+374     d\_\_2 = v - vlast;
+375     step = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+376     \textcolor{keywordflow}{if} (step < stepmx) \{
+377         \textcolor{keywordflow}{goto} L130;
+378     \}
+379 \textcolor{comment}{/* ---      MODIFY STEP LENGTH TO AVOID TRAVERSING COMPLETE PATCH */}
+380     u = ulast + stepln * (u - ulast);
+381     v = vlast + stepln * (v - vlast);
+382     ickbn = 0;
+383     \textcolor{keywordflow}{if} (*idebug == 0) \{
+384         \textcolor{keywordflow}{goto} L130;
+385     \}
+386     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ULIM"}, &u, (ftnlen)4);
+387     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VLIM"}, &v, (ftnlen)4);
+388 L130:
+389 
+390 \textcolor{comment}{/* ------ BONCHK WILL SEARCH BOUNDARY ICKBN AND IF ANOTHER PATCH IS */}
+391 \textcolor{comment}{/* ------ FOUND, WILL EXCHANGE THE CURRENT PATCH VALUES. */}
+392 
+393     \textcolor{keywordflow}{if} (ickbn == 0) \{
+394         \textcolor{keywordflow}{goto} L110;
+395     \}
+396 \textcolor{comment}{/* --- */}
+397     \hyperlink{BONCHK_8c_a6630801f161c793500e790423ef68134}{bonchk\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &u, &v, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &ickbn, 
+398         idebug);
+399     \textcolor{keywordflow}{if} (ipsave != *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}) \{
+400         \textcolor{keywordflow}{goto} L1300;
+401     \}
+402     \textcolor{keywordflow}{goto} L110;
+403 \textcolor{comment}{/* ---      A PATCH EXCHANGE OCCURRED SO INCREMENT THE EXCHANGE COUNT */}
+404 L1300:
+405     ++iexcnt;
+406 \textcolor{comment}{/* ---      RESET COUNTER FOR ITERATIONS ON THIS PATCH TO ZERO */}
+407     kinpat = 0;
+408 
+409     \textcolor{keywordflow}{if} (*idebug == 0) \{
+410         \textcolor{keywordflow}{goto} L120;
+411     \}
+412     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UNEW"}, &u, (ftnlen)4);
+413     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VNEW"}, &v, (ftnlen)4);
+414     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"PNUM"}, \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, (ftnlen)4);
+415     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"EXCT"}, &iexcnt, (ftnlen)4);
+416     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+417     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER BONCHK"}, (ftnlen)20, (ftnlen)13);
+418     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+419 L120:
+420 
+421     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+422     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+423 L110:
+424     \textcolor{keywordflow}{if} (iexcnt > mexchg) \{
+425         \textcolor{keywordflow}{goto} L1400;
+426     \}
+427 
+428 \textcolor{comment}{/* L1100: */}
+429     ulast = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua};
+430     vlast = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va};
+431     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+432     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+433 \textcolor{comment}{/* L1000: */}
+434     \}
+435 \textcolor{comment}{/* ---      ACCEPT A LESSER TOLERANCE, IF NECESSARY. */}
+436 L1400:
+437     \textcolor{keywordflow}{if} (drmax > flck2) \{
+438     \textcolor{keywordflow}{goto} L1500;
+439     \}
+440     \textcolor{keywordflow}{if} (dr > flck2) \{
+441     \textcolor{keywordflow}{goto} L2000;
+442     \}
+443 L1410:
+444     ++kretry;
+445     \textcolor{keywordflow}{if} (kretry > 4) \{
+446     \textcolor{keywordflow}{if} (kretry > 5) \{
+447         \textcolor{keywordflow}{goto} L9999;
+448     \}
+449     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = \hyperlink{AERR2_8c_a94e6890329a61867ed59615fc2df0aa9}{umax};
+450     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = vmax;
+451     *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = ipmax;
+452     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &
+      \hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+453     \} \textcolor{keywordflow}{else} \{
+454     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = *ust;
+455     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = *vst;
+456     \textcolor{keywordflow}{if} (kretry == 1) \{
+457         *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = -half;
+458     \}
+459     \textcolor{keywordflow}{if} (kretry == 2) \{
+460         *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = -half;
+461     \}
+462     \textcolor{keywordflow}{if} (kretry == 3) \{
+463         *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = 1.5;
+464     \}
+465     \textcolor{keywordflow}{if} (kretry == 4) \{
+466         *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = 1.5;
+467     \}
+468     *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = ipnst;
+469     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &
+      \hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+470     \hyperlink{SQRCUT_8c_a85a4c82884e61dff8233ebd10d5c6b24}{sqrcut\_}(ust, vst, \hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, &u, &v, &ickbn);
+471     \textcolor{keywordflow}{if} (ickbn == 0) \{
+472         \textcolor{keywordflow}{goto} L1410;
+473     \}
+474     \hyperlink{BONCHK_8c_a6630801f161c793500e790423ef68134}{bonchk\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &u, &v, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &ickbn, 
+475         idebug);
+476     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+477     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+478     \textcolor{keywordflow}{if} (kretry == 1) \{
+479         *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} -= half;
+480     \}
+481     \textcolor{keywordflow}{if} (kretry == 2) \{
+482         *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} -= half;
+483     \}
+484     \textcolor{keywordflow}{if} (kretry == 3) \{
+485         *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} += half;
+486     \}
+487     \textcolor{keywordflow}{if} (kretry == 4) \{
+488         *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} += half;
+489     \}
+490     \}
+491     \textcolor{keywordflow}{if} (*idebug == 0) \{
+492     \textcolor{keywordflow}{goto} L1;
+493     \}
+494     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UA  "}, \hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, (ftnlen)4);
+495     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VA  "}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, (ftnlen)4);
+496     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"PNUM"}, \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, (ftnlen)4);
+497     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"RETY"}, &kretry, (ftnlen)4);
+498     \textcolor{keywordflow}{goto} L1;
+499 \textcolor{comment}{/* ---      ERROR, ROUTINE FAILED TO DETERMINE SURFACE PT WITHIN TOLERANCE */}
+500 L9999:
+501 \textcolor{comment}{/* .... FOR MODE=0 (CALC. SP WITH MINIMUM DISTANCE TO TE) */}
+502 \textcolor{comment}{/* .... AND (DMAX.GT.10) AND (DRMAX.GT.0.8) TAKE BEST SOLUTION */}
+503     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0 && dmax\_\_ > 10. && drmax > .8) \{
+504     \textcolor{keywordflow}{goto} L1500;
+505     \}
+506     *irr = 7001;
+507     \textcolor{keywordflow}{goto} L3000;
+508 
+509 \textcolor{comment}{/* --- THE BEST LINE-UP IS ACCEPTED WITH A LESSER TOLERANCE */}
+510 
+511 L1500:
+512     *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = ipmax;
+513     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &
+      \hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+514     *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} = \hyperlink{AERR2_8c_a94e6890329a61867ed59615fc2df0aa9}{umax};
+515     *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} = vmax;
+516     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], spv, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+517 
+518 L2000:
+519     *irr = 0;
+520     \textcolor{keywordflow}{if} (nits != 20) \{
+521     \textcolor{keywordflow}{goto} L2003;
+522     \}
+523     nits = 30;
+524     \textcolor{keywordflow}{goto} L1;
+525 L2003:
+526 
+527     \textcolor{keywordflow}{if} (*\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} < zero) \{
+528     udist = -(*ua);
+529     ubond = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+530     \} \textcolor{keywordflow}{else} \{
+531     \textcolor{keywordflow}{if} (*\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} <= one) \{
+532         udist = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+533         ubond = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua};
+534     \} \textcolor{keywordflow}{else} \{
+535         udist = *\hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua} - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+536         ubond = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+537     \}
+538     \}
+539 
+540     \textcolor{keywordflow}{if} (*\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} < zero) \{
+541     vdist = -(*va);
+542     vbond = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+543     \} \textcolor{keywordflow}{else} \{
+544     \textcolor{keywordflow}{if} (*\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} <= one) \{
+545         vdist = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+546         vbond = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va};
+547     \} \textcolor{keywordflow}{else} \{
+548         vdist = *\hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va} - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+549         vbond = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+550     \}
+551     \}
+552 
+553     \hyperlink{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{cstart\_1}.uvdist = udist + vdist;
+554 
+555     \hyperlink{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{cstart\_1}.dist = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+556 
+557     \textcolor{keywordflow}{if} (\hyperlink{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{cstart\_1}.uvdist >= .1) \{
+558     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &
+      \hyperlink{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+559     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&ubond, &vbond, &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], \hyperlink{PCHPRC_8c_ab55a46149b080628c437f64de770ece7}{cstart\_1}.spbond, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &
+      \hyperlink{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+560     \}
+561 
+562     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+563     \hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ - 1];
+564     \hyperlink{APT331_8c_ac44dba448ffaa92867e6b60d2fd5abff}{sn}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 27];
+565 \textcolor{comment}{/* L2005: */}
+566     \}
+567 
+568 \textcolor{comment}{/* ---  LGEOM=.TRUE. SIGNIFIES A SPECIAL CALL FOR GEOMETRIC CONSTRUCTION */}
+569     \textcolor{keywordflow}{if} (*lgeom) \{
+570     \textcolor{keywordflow}{for} (ii = 4; ii <= 32; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+571         \hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}] = spv[ii - 1];
+572 \textcolor{comment}{/* L2001: */}
+573     \}
+574     \}
+575 \textcolor{comment}{/* ---      SLX VECTOR IS SET IN THE DIRECTION OF THE CRSSPL VECTOR */}
+576 \textcolor{comment}{/* ---      THIS IS FOR SPECIAL ARELEM TOOL AXIS PRORATING. */}
+577     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&spv[8], &\hyperlink{AERR2_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx}[1]);
+578 
+579 
+580 L3000:
+581     \textcolor{keywordflow}{return} 0;
+582 \} \textcolor{comment}{/* pchprc\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PCHPRC_8c_a9322141c122b6fc3b8f2ce6cb5d8b576_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PCHPRC_8c_a9322141c122b6fc3b8f2ce6cb5d8b576_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{PCHPRC_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 27 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{PCHPRC_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 28 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHPRC_8c_a5e7359f78743350865398325d9155f20}{}\label{PCHPRC_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 29 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}{}\label{PCHPRC_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 26 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}{}\label{PCHPRC_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 30 of file P\+C\+H\+P\+R\+C.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!cstart\+\_\+@{cstart\+\_\+}}
+\index{cstart\+\_\+@{cstart\+\_\+}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{cstart\+\_\+}{cstart_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cstart\+\_\+}\hypertarget{PCHPRC_8c_a429da0df3313c4dcbd0f0ffff1a45cae}{}\label{PCHPRC_8c_a429da0df3313c4dcbd0f0ffff1a45cae}
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!dist@{dist}}
+\index{dist@{dist}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{dist}{dist}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dist}\hypertarget{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{}\label{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}
+
+
+Definition at line 18 of file P\+C\+H\+P\+R\+C.\+c.
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!istart@{istart}}
+\index{istart@{istart}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{istart}{istart}}]{\setlength{\rightskip}{0pt plus 5cm}integer istart}\hypertarget{PCHPRC_8c_a9b291e9727dbce8ec72e9bf593b4d998}{}\label{PCHPRC_8c_a9b291e9727dbce8ec72e9bf593b4d998}
+
+
+Definition at line 19 of file P\+C\+H\+P\+R\+C.\+c.
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!spbond@{spbond}}
+\index{spbond@{spbond}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{spbond}{spbond}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spbond\mbox{[}40\mbox{]}}\hypertarget{PCHPRC_8c_a29c57bc2f86afd3d642ebe548d3e3304}{}\label{PCHPRC_8c_a29c57bc2f86afd3d642ebe548d3e3304}
+
+
+Definition at line 18 of file P\+C\+H\+P\+R\+C.\+c.
+
+\index{P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}!uvdist@{uvdist}}
+\index{uvdist@{uvdist}!P\+C\+H\+P\+R\+C.\+c@{P\+C\+H\+P\+R\+C.\+c}}
+\subsubsection[{\texorpdfstring{uvdist}{uvdist}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uvdist}\hypertarget{PCHPRC_8c_aede8e3160729930bd4eb99a9cc65e9ac}{}\label{PCHPRC_8c_aede8e3160729930bd4eb99a9cc65e9ac}
+
+
+Definition at line 18 of file P\+C\+H\+P\+R\+C.\+c.
+

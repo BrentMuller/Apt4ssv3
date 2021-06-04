@@ -1,0 +1,153 @@
+\hypertarget{TCSPHR_8c}{}\section{T\+C\+S\+P\+H\+R.\+c File Reference}
+\label{TCSPHR_8c}\index{T\+C\+S\+P\+H\+R.\+c@{T\+C\+S\+P\+H\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+C\+S\+P\+H\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{TCSPHR_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2}{tcsphr\+\_\+} (doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$tul, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tccent, doublereal $\ast$tcrad)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+C\+S\+P\+H\+R.\+c@{T\+C\+S\+P\+H\+R.\+c}!tcsphr\+\_\+@{tcsphr\+\_\+}}
+\index{tcsphr\+\_\+@{tcsphr\+\_\+}!T\+C\+S\+P\+H\+R.\+c@{T\+C\+S\+P\+H\+R.\+c}}
+\subsubsection[{\texorpdfstring{tcsphr\+\_\+(doublereal $\ast$te, doublereal $\ast$ta, doublereal $\ast$tul, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tccent, doublereal $\ast$tcrad)}{tcsphr_(doublereal *te, doublereal *ta, doublereal *tul, doublereal *r__, doublereal *pside, doublereal *pthick, doublereal *tccent, doublereal *tcrad)}}]{\setlength{\rightskip}{0pt plus 5cm}int tcsphr\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tccent, }
+\item[{doublereal $\ast$}]{tcrad}
+\end{DoxyParamCaption}
+)}\hypertarget{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2}{}\label{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2}
+
+
+Definition at line 17 of file T\+C\+S\+P\+H\+R.\+c.
+
+
+
+References cosa, dotf\+\_\+(), i\+\_\+\+\_\+, offset, r\+\_\+\+\_\+, sina, ta, and te.
+
+
+
+Referenced by avoid\+\_\+(), and remscn\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* System generated locals */}
+22     doublereal d\_\_1;
+23 
+24     \textcolor{comment}{/* Builtin functions */}
+25     \textcolor{keywordtype}{double} sqrt(doublereal);
+26 
+27     \textcolor{comment}{/* Local variables */}
+28     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+29     \textcolor{keyword}{static} doublereal \hyperlink{APT069_8c_ac8bea603620e8184eaf39b513a6a5ef6}{cosa}, \hyperlink{APT069_8c_a694d1e234c04670a207cbb6164b7902a}{sina};
+30     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+31         );
+32     \textcolor{keyword}{static} doublereal \hyperlink{ARLM2_8c_a7270a6904e3eefbc7185e8ab5e119a92}{offset};
+33 
+34 
+35 \textcolor{comment}{/*     PURPOSE: COMPUTE THE CENTRE AND RADIUS OF THE TOOL CONTACT SPHERE */}
+36 
+37 
+38 \textcolor{comment}{/*     ARGUMENTS: */}
+39 
+40 \textcolor{comment}{/*     TE      -  TOOL END COORDINATES */}
+41 \textcolor{comment}{/*     TA      -  TOOL AXIS VECTOR */}
+42 \textcolor{comment}{/*     TUL     -  TOOL GEOMETRY */}
+43 \textcolor{comment}{/*     R       -  SURFACE CONTACT POINT AND DERIVATIVES */}
+44 \textcolor{comment}{/*     PSIDE   -  1 OR -1 TO AJUST SURFACE NORMAL (RU X RV) */}
+45 \textcolor{comment}{/*     PTHICK  -  THICKNESS OFFSET FROM SURFACE */}
+46 \textcolor{comment}{/*     TCCENT  -  CENTRE OF TOOL CONTACT SPHERE */}
+47 \textcolor{comment}{/*     TCRAD   -  RADIUS OF TOOL CONTACT SPHERE */}
+48 
+49 
+50 
+51 
+52 
+53 \textcolor{comment}{/* .... LOCAL VARIABLES */}
+54 
+55 \textcolor{comment}{/*     COSA    -  COSINE OF ANGLE BETWEEN SURFACE NORMAL AND TOOL AXIS */}
+56 \textcolor{comment}{/*     SINA    -  SINE             (DITTO) */}
+57 \textcolor{comment}{/*     OFFSET  -  POSITION OF CENTRE ALONG TA FROM TE */}
+58 
+59 
+60     \textcolor{comment}{/* Parameter adjustments */}
+61     --tccent;
+62     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+63     --tul;
+64     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+65     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+66 
+67     \textcolor{comment}{/* Function Body */}
+68     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&cosa, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1]);
+69 
+70     \textcolor{keywordflow}{if} ((d\_\_1 = 1. - cosa, abs(d\_\_1)) <= 1e-6) \{
+71 
+72 \textcolor{comment}{/* .... SN PARALLEL TO TA */}
+73 
+74     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+75         tccent[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * 1e5;
+76 \textcolor{comment}{/* L10: */}
+77     \}
+78     *tcrad = 1e5;
+79 
+80     \} \textcolor{keywordflow}{else} \{
+81     sina = sqrt(1 - cosa * cosa);
+82 
+83 \textcolor{comment}{/* .... RADIUS = E/SINA + R */}
+84 
+85     *tcrad = tul[3] / sina + tul[1];
+86 
+87 \textcolor{comment}{/* .... POSITION OF CENTRE ALONG TA FROM TE */}
+88 
+89 \textcolor{comment}{/*            = F + (TCRAD-R)*COSA */}
+90 
+91     offset = tul[4] + tul[1] + (*tcrad - tul[1]) * cosa;
+92     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+93         tccent[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + offset * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+94 \textcolor{comment}{/* L20: */}
+95     \}
+96 
+97     \}
+98 
+99     \textcolor{keywordflow}{return} 0;
+100 \} \textcolor{comment}{/* tcsphr\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2_icgraph}
+\end{center}
+\end{figure}
+
+

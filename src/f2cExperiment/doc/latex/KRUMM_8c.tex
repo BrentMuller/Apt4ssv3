@@ -1,0 +1,164 @@
+\hypertarget{KRUMM_8c}{}\section{K\+R\+U\+M\+M.\+c File Reference}
+\label{KRUMM_8c}\index{K\+R\+U\+M\+M.\+c@{K\+R\+U\+M\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for K\+R\+U\+M\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{KRUMM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{KRUMM_8c_aac890343d9e105916ba363dde7ad4b4c}{krumm\+\_\+} (doublereal $\ast$\hyperlink{INTTPL_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, doublereal $\ast$e, doublereal $\ast$\hyperlink{DDRLSR_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}, doublereal $\ast$\hyperlink{ZSURF_8c_a4b844110bdc6a857d17ab8289ff9a043}{g}, doublereal $\ast$\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl}, doublereal $\ast$xm, doublereal $\ast$xn, doublereal $\ast$hkr, doublereal $\ast$rk1, doublereal $\ast$rk2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{K\+R\+U\+M\+M.\+c@{K\+R\+U\+M\+M.\+c}!krumm\+\_\+@{krumm\+\_\+}}
+\index{krumm\+\_\+@{krumm\+\_\+}!K\+R\+U\+M\+M.\+c@{K\+R\+U\+M\+M.\+c}}
+\subsubsection[{\texorpdfstring{krumm\+\_\+(doublereal $\ast$spv, doublereal $\ast$e, doublereal $\ast$f, doublereal $\ast$g, doublereal $\ast$xl, doublereal $\ast$xm, doublereal $\ast$xn, doublereal $\ast$hkr, doublereal $\ast$rk1, doublereal $\ast$rk2)}{krumm_(doublereal *spv, doublereal *e, doublereal *f, doublereal *g, doublereal *xl, doublereal *xm, doublereal *xn, doublereal *hkr, doublereal *rk1, doublereal *rk2)}}]{\setlength{\rightskip}{0pt plus 5cm}int krumm\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{spv, }
+\item[{doublereal $\ast$}]{e, }
+\item[{doublereal $\ast$}]{f, }
+\item[{doublereal $\ast$}]{g, }
+\item[{doublereal $\ast$}]{xl, }
+\item[{doublereal $\ast$}]{xm, }
+\item[{doublereal $\ast$}]{xn, }
+\item[{doublereal $\ast$}]{hkr, }
+\item[{doublereal $\ast$}]{rk1, }
+\item[{doublereal $\ast$}]{rk2}
+\end{DoxyParamCaption}
+)}\hypertarget{KRUMM_8c_aac890343d9e105916ba363dde7ad4b4c}{}\label{KRUMM_8c_aac890343d9e105916ba363dde7ad4b4c}
+
+
+Definition at line 17 of file K\+R\+U\+M\+M.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, f, g, i\+\_\+\+\_\+, kreuz\+\_\+(), t1, t2, t3, vt, and xl.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Builtin functions */}
+22     \textcolor{keywordtype}{double} sqrt(doublereal);
+23 
+24     \textcolor{comment}{/* Local variables */}
+25     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+26     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+27     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1}, \hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}, \hyperlink{TRANSM_8c_a71a491fa5f35065b954a3001ebed0f28}{t3}, t4, du, dv, we, \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt}[3], vt2[3], xnl, supi, 
+28         svpi;
+29     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2}{kreuz\_}(doublereal *, doublereal *, doublereal 
+30         *);
+31     \textcolor{keyword}{static} doublereal xnorm, cosalf, sinalf;
+32 
+33 
+34 \textcolor{comment}{/* SUBROUTINE FOR THE OUTPUT OF THE CURVING OF PATCHES */}
+35 
+36 \textcolor{comment}{/*  SPV :   SURFACE POINTS AND DERIVATIVES */}
+37 \textcolor{comment}{/*  E   :   COEFFICIENTS OF FIRST AND SECOND GAUSSIAN FUNDAMENTAL FORM */}
+38 \textcolor{comment}{/*  F   : */}
+39 \textcolor{comment}{/*  G   : */}
+40 \textcolor{comment}{/*  XL  : */}
+41 \textcolor{comment}{/*  XM  : */}
+42 \textcolor{comment}{/*  XN  : */}
+43 \textcolor{comment}{/*  HKR :   MAIN CURVATURE DIRECTION */}
+44 \textcolor{comment}{/*  RK1 :   1.CURVATURE */}
+45 \textcolor{comment}{/*  RK2 :   2.CURVATURE */}
+46 
+47 \textcolor{comment}{/*  HELP STORAGE */}
+48 
+49 \textcolor{comment}{/*  COMPUTATION OF THE FUNDAMENTAL COEFFICIENTS */}
+50     \textcolor{comment}{/* Parameter adjustments */}
+51     --hkr;
+52     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv} -= 5;
+53 
+54     \textcolor{comment}{/* Function Body */}
+55     *e = 0.;
+56     *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} = 0.;
+57     *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} = 0.;
+58     *\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} = 0.;
+59     *xn = 0.;
+60     *xm = 0.;
+61     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+62     supi = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 8];
+63     svpi = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 12];
+64     *e = supi * supi + *e;
+65     *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} = supi * svpi + *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+66     *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} = svpi * svpi + *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g};
+67     xnorm = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 32];
+68     *\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 16] * xnorm + *\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl};
+69     *xm = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 20] * xnorm + *xm;
+70     *xn = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 24] * xnorm + *xn;
+71 \textcolor{comment}{/* L7002: */}
+72     \}
+73 \textcolor{comment}{/*   THE LENGTH OF THE NORMAL */}
+74     xnl = sqrt(*e * *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} - *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) + 1e-12;
+75 \textcolor{comment}{/*   COMPUTATION OF ONE MAIN CURVATURE DIRECTION */}
+76 \textcolor{comment}{/*   A=G*M-F*N */}
+77     a = *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} * *xm - *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * *xn;
+78 \textcolor{comment}{/*   B=G*L-E*N */}
+79     b = *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} * *\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} - *e * *xn;
+80 \textcolor{comment}{/*   C=F*L-E*M */}
+81     c\_\_ = *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * *\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} - *e * *xm;
+82     t1 = b * b - a * 4. * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+83     t2 = sqrt(t1);
+84     t3 = *e * b - *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * 2. * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+85     \textcolor{keywordflow}{if} (t3 < 0.) \{
+86     t2 = -\hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2};
+87     \}
+88     t4 = sqrt(*e * 2. * *e * t1 + *e * 2. * t3 * t2);
+89     \textcolor{keywordflow}{if} (abs(t4) > 0.) \{
+90     \textcolor{keywordflow}{goto} L7060;
+91     \}
+92 \textcolor{comment}{/*   NO MAIN DIRECTION GIVEN */}
+93     sinalf = 0.;
+94     cosalf = 1.;
+95     \textcolor{keywordflow}{goto} L7070;
+96 L7060:
+97     sinalf = (t3 + *e * \hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}) / t4;
+98     cosalf = c\_\_ * 2. * xnl / t4;
+99 L7070:
+100     we = sqrt(*e);
+101     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+102 \textcolor{comment}{/*  U-TANGENT */}
+103 \textcolor{comment}{/* L7300: */}
+104     vt[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 8] / we;
+105     \}
+106 \textcolor{comment}{/*  VECTOR, PERPENTICULAR TO U-TANGENT */}
+107     \hyperlink{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2}{kreuz\_}(&\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[33], vt, vt2);
+108 \textcolor{comment}{/*   DIRECTION OF 1. MAIN CURVATURE */}
+109     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+110 \textcolor{comment}{/* L7310: */}
+111     hkr[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = cosalf * vt[i\_\_ - 1] + sinalf * vt2[i\_\_ - 1];
+112     \}
+113 \textcolor{comment}{/*  COMPUTATION OF 1.CURVATURE: */}
+114     dv = *e * sinalf;
+115     du = xnl * cosalf - *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * sinalf;
+116     *rk1 = (*\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} * du * du + *xm * 2. * du * dv + *xn * dv * dv) / (*e * du * 
+117         du + *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * 2. * du * dv + *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} * dv * dv);
+118 \textcolor{comment}{/*  COMPUTATION OF 2.CURVATURE: */}
+119     dv = *e * cosalf;
+120     du = -xnl * sinalf - *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * cosalf;
+121     *rk2 = (*\hyperlink{INTRP_8c_a7cc0df378636b8794f48353b4d5c5ac4}{xl} * du * du + *xm * 2. * du * dv + *xn * dv * dv) / (*e * du * 
+122         du + *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * 2. * du * dv + *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} * dv * dv);
+123 
+124     \textcolor{keywordflow}{return} 0;
+125 \} \textcolor{comment}{/* krumm\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{KRUMM_8c_aac890343d9e105916ba363dde7ad4b4c_cgraph}
+\end{center}
+\end{figure}
+
+

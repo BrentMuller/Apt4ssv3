@@ -1,0 +1,159 @@
+/* OUTSET.f -- translated by f2c (version 20100827).
+   You must link the resulting object file with libf2c:
+	on Microsoft Windows system, link with libf2c.lib;
+	on Linux or Unix systems, link with .../path/to/libf2c.a -lm
+	or, if you install libf2c.a in a standard place, with -lf2c -lm
+	-- in that order, at the end of the command line, as in
+		cc *.o -lf2c -lm
+	Source for libf2c is in /netlib/f2c/libf2c.zip, e.g.,
+
+		http://www.netlib.org/f2c/libf2c.zip
+*/
+
+#include "f2c.h"
+
+/* Common Block Declarations */
+
+struct {
+    char darray[120];
+} darray_;
+
+#define darray_1 darray_
+
+struct {
+    integer1 puncod[128];
+} puntab_;
+
+#define puntab_1 puntab_
+
+/* Table of constant values */
+
+static integer c__2 = 2;
+static integer c__44 = 44;
+
+/* *** SOURCE FILE : OUTSET00.ORG   *** */
+
+/* Subroutine */ int outset_(integer *j)
+{
+    /* Initialized data */
+
+    static integer1 nas943[128] = { 0,238,238,238,238,238,238,238,238,62,238,
+	    238,238,128,238,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,238,16,238,238,127,128,11,112,238,11,42,62,112,59,
+	    64,107,49,32,1,2,19,4,21,22,7,8,25,124,122,238,127,238,238,14,97,
+	    98,115,100,117,118,103,104,121,81,82,67,84,69,70,87,88,73,50,35,
+	    52,37,38,55,56,41,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,238,238,238,238,238 };
+    static integer1 iso[128] = { 0,238,238,238,238,238,238,238,238,9,10,238,
+	    238,141,238,238,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,160,238,238,163,36,165,166,39,40,169,170,43,172,
+	    45,46,175,48,177,178,51,180,53,54,183,184,57,58,238,238,238,238,
+	    238,192,65,66,195,68,197,198,71,72,201,202,75,204,77,78,207,80,
+	    209,210,83,212,85,86,215,216,89,90,238,238,238,238,238,238,238,
+	    238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,238,238,238,238,238,238,238,238,238,255 };
+    static integer1 ascii[128] = { 0,238,238,238,238,238,238,238,238,9,10,238,
+	    238,13,238,238,238,238,238,238,238,238,238,238,238,238,238,238,
+	    238,238,238,238,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,
+	    48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,
+	    70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,
+	    92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,
+	    110,111,112,113,114,115,116,117,118,119,120,121,122,238,238,238,
+	    238,127 };
+
+    static integer i__;
+    extern /* Subroutine */ int cform_(char *, char *, integer *, integer *, 
+	    ftnlen, ftnlen), abnend_(void), cprint_(char *, ftnlen);
+
+
+/*  * OUTSET *  VAX-11 FORTRAN 77 SUBROUTINE   E.MCLELLAN */
+
+/*  PURPOSE     TO SET UP PAPER TAPE CODE CONVERSION TABLE */
+
+/*  CALLING SEQUENCE */
+/*              CALL OUTSET(J) */
+/*  ARGUMENT */
+/*              J  INDICATES REQUIRED CODE */
+/*                 =1  NAS943  ,ODD PARITY, COLUMN BINARY */
+/*                 =2  ISO     ,EVEN PARITY,COLUMN BINARY */
+/*                 =3  ASCII   ,NO PARITY,  NO CONVERSION */
+
+
+
+
+/*   ***  20.  DARRAY BLOCK  *** */
+
+/*   PRINT BUFFER */
+
+
+
+
+/* ...BYTE VARIABLES IN THIS VAX IMPLEMENTATION MIGHT BE ABLE TO BE LOGICA */
+/* ...ON OTHER SYSTEMS */
+/*      integer*8 puncod(128) */
+/*      integer*8 nas943(128),iso(128),ascii(128) */
+
+/* *****  NAS943 ODD PARITY COLUMN BINARY */
+
+/*      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F */
+/*     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z3E,ZEE,ZEE,ZEE,Z80,ZEE,ZEE, */
+/*     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     2Z10,ZEE,ZEE,Z7F,Z80,Z0B,Z70,ZEE,Z0B,Z2A,Z3E,Z70,Z3B,Z40,Z6B,Z31, */
+/*     3Z20,Z01,Z02,Z13,Z04,Z15,Z16,Z07,Z08,Z19,Z7C,Z7A,ZEE,Z7F,ZEE,ZEE, */
+/*     4Z0E,Z61,Z62,Z73,Z64,Z75,Z76,Z67,Z68,Z79,Z51,Z52,Z43,Z54,Z45,Z46, */
+/*     5Z57,Z58,Z49,Z32,Z23,Z34,Z25,Z26,Z37,Z38,Z29,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE/ */
+
+/* *****  ISO/ */
+
+/*      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F */
+/*     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z8D,ZEE,ZEE, */
+/*     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     2ZA0,ZEE,ZEE,ZA3,Z24,ZA5,ZA6,Z27,Z28,ZA9,ZAA,Z2B,ZAC,Z2D,Z2E,ZAF, */
+/*     3Z30,ZB1,ZB2,Z33,ZB4,Z35,Z36,ZB7,ZB8,Z39,Z3A,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     4ZC0,Z41,Z42,ZC3,Z44,ZC5,ZC6,Z47,Z48,ZC9,ZCA,Z4B,ZCC,Z4D,Z4E,ZCF, */
+/*     5Z50,ZD1,ZD2,Z53,ZD4,Z55,Z56,ZD7,ZD8,Z59,Z5A,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     6ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     7ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZFF/ */
+
+/* *****  ASCII 7 BIT NO PARITY */
+
+/*      0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F */
+/*     *Z00,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,Z09,Z0A,ZEE,ZEE,Z0D,ZEE,ZEE, */
+/*     1ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE,ZEE, */
+/*     2Z20,Z21,Z22,Z23,Z24,Z25,Z26,Z27,Z28,Z29,Z2A,Z2B,Z2C,Z2D,Z2E,Z2F, */
+/*     3Z30,Z31,Z32,Z33,Z34,Z35,Z36,Z37,Z38,Z39,Z3A,Z3B,Z3C,Z3D,Z3E,Z3F, */
+/*     4Z40,Z41,Z42,Z43,Z44,Z45,Z46,Z47,Z48,Z49,Z4A,Z4B,Z4C,Z4D,Z4E,Z4F, */
+/*     5Z50,Z51,Z52,Z53,Z54,Z55,Z56,Z57,Z58,Z59,Z5A,Z5B,Z5C,Z5D,Z5E,Z5F, */
+/*     6Z60,Z61,Z62,Z63,Z64,Z65,Z66,Z67,Z68,Z69,Z6A,Z6B,Z6C,Z6D,Z6E,Z6F, */
+/*     7Z70,Z71,Z72,Z73,Z74,Z75,Z76,Z77,Z78,Z79,Z7A,ZEE,ZEE,ZEE,ZEE,Z7F/ */
+
+    if (*j == 1) {
+	for (i__ = 1; i__ <= 128; ++i__) {
+/* L100: */
+	    puntab_1.puncod[i__ - 1] = nas943[i__ - 1];
+	}
+
+    } else if (*j == 2) {
+	for (i__ = 1; i__ <= 128; ++i__) {
+/* L200: */
+	    puntab_1.puncod[i__ - 1] = iso[i__ - 1];
+	}
+
+    } else if (*j == 3) {
+	for (i__ = 1; i__ <= 128; ++i__) {
+/* L300: */
+	    puntab_1.puncod[i__ - 1] = ascii[i__ - 1];
+	}
+
+    } else {
+	cform_("**** INVALID ARGUMENT IN CALL TO OUTSET ****", 
+		darray_1.darray, &c__2, &c__44, (ftnlen)44, (ftnlen)120);
+	cprint_(darray_1.darray, (ftnlen)120);
+	abnend_();
+    }
+    return 0;
+} /* outset_ */
+

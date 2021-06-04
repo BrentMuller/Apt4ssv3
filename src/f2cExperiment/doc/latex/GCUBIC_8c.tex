@@ -1,0 +1,180 @@
+\hypertarget{GCUBIC_8c}{}\section{G\+C\+U\+B\+I\+C.\+c File Reference}
+\label{GCUBIC_8c}\index{G\+C\+U\+B\+I\+C.\+c@{G\+C\+U\+B\+I\+C.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+C\+U\+B\+I\+C.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{GCUBIC_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aec37dbecf1f14b0e999eeb6ead189904}{p}, doublereal $\ast$\hyperlink{POCKET_8c_a3d866bcc3e6368bb95201907177c539b}{q}, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s}, doublereal $\ast$\hyperlink{UNITS_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\+\_\+\+\_\+}, integer $\ast$nz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+C\+U\+B\+I\+C.\+c@{G\+C\+U\+B\+I\+C.\+c}!gcubic\+\_\+@{gcubic\+\_\+}}
+\index{gcubic\+\_\+@{gcubic\+\_\+}!G\+C\+U\+B\+I\+C.\+c@{G\+C\+U\+B\+I\+C.\+c}}
+\subsubsection[{\texorpdfstring{gcubic\+\_\+(doublereal $\ast$p, doublereal $\ast$q, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$s, doublereal $\ast$z\+\_\+\+\_\+, integer $\ast$nz)}{gcubic_(doublereal *p, doublereal *q, doublereal *r__, doublereal *s, doublereal *z__, integer *nz)}}]{\setlength{\rightskip}{0pt plus 5cm}int gcubic\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{p, }
+\item[{doublereal $\ast$}]{q, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{s, }
+\item[{doublereal $\ast$}]{z\+\_\+\+\_\+, }
+\item[{integer $\ast$}]{nz}
+\end{DoxyParamCaption}
+)}\hypertarget{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{}\label{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}
+
+
+Definition at line 18 of file G\+C\+U\+B\+I\+C.\+c.
+
+
+
+References a, b, d\+\_\+\+\_\+, darcos\+\_\+(), f, one, p, pi, q, r\+\_\+\+\_\+, s, s1, s2, t1, t2, w1, and z\+\_\+\+\_\+.
+
+
+
+Referenced by apt109\+\_\+(), biquad\+\_\+(), parlnd\+\_\+(), and parmf2\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Initialized data */}
+22 
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+24     \textcolor{keyword}{static} doublereal thd = .333333333333333;
+25     \textcolor{keyword}{static} doublereal smal = 1e-10;
+26     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi} = 3.1415926536;
+27     \textcolor{keyword}{static} doublereal tpio3 = 2.0943951024;
+28 
+29     \textcolor{comment}{/* System generated locals */}
+30     doublereal d\_\_1, d\_\_2;
+31 
+32     \textcolor{comment}{/* Builtin functions */}
+33     \textcolor{keywordtype}{double} sqrt(doublereal), d\_sign(doublereal *, doublereal *), pow\_dd(
+34         doublereal *, doublereal *), cos(doublereal);
+35 
+36     \textcolor{comment}{/* Local variables */}
+37     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e, \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}, \hyperlink{APT008_8c_a09dff3d9a89874939fa7cc9d056b114c}{s1}, \hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1}, \hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}, \hyperlink{APT008_8c_a3ec77fc652b1787d9ace19f0f8fb6072}{s2}, \hyperlink{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{w1}, bh, ds, tr;
+38     \textcolor{keyword}{extern} doublereal \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(doublereal *);
+39 
+40 \textcolor{comment}{/* ------ MODULAR SCULPTURED SURFACE ROUTINE ALSO SHARED BY PARAMETRIC */}
+41 \textcolor{comment}{/* ------ SURFACES. GENERAL SOLUTION OF CUBIC EQN. */}
+42 \textcolor{comment}{/* ------ INPUT ARE COEFFICIENTS OF CUBIC EQN' P*X**3+Q*X**2+R*X+S=0. */}
+43 \textcolor{comment}{/* ------ OUTPUT IS SET OF REAL ROOTS Z(I), WHERE I=1 TO NZ */}
+44 \textcolor{comment}{/* ------ NZ IS THE TOTAL NUMBER OF REAL ROOTS. */}
+45 \textcolor{comment}{/* ------ PROGRAM HANDLES QUADRATICS AND LINEAR EQNS AS SPECIAL CASES */}
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     --\hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_};
+48 
+49     \textcolor{comment}{/* Function Body */}
+50     *nz = 0;
+51     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[1] = 9999.;
+52     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[2] = 9999.;
+53     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[3] = 9999.;
+54     \textcolor{keywordflow}{if} (abs(*\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}) < smal) \{
+55     \textcolor{keywordflow}{goto} L200;
+56     \}
+57     tr = *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} / (*\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p} * 3.f);
+58     a = (*\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} - *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} * tr) / *\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p};
+59     b = ((thd * 2 * *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} * tr - *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}) * tr + *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}) / *\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p};
+60     d\_\_ = b * b / 4.f + a * a * a / 27.f;
+61     bh = -b / 2.f;
+62     \textcolor{keywordflow}{if} (d\_\_ >= 0.) \{
+63     \textcolor{keywordflow}{goto} L10;
+64     \} \textcolor{keywordflow}{else} \{
+65     \textcolor{keywordflow}{goto} L20;
+66     \}
+67 L10:
+68     ds = sqrt(d\_\_);
+69     t1 = bh + ds;
+70     t2 = bh - ds;
+71     s1 = d\_sign(&one, &t1);
+72     s2 = d\_sign(&one, &t2);
+73     d\_\_1 = s1 * \hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1};
+74     d\_\_2 = s2 * \hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2};
+75     e = s1 * pow\_dd(&d\_\_1, &thd) + s2 * pow\_dd(&d\_\_2, &thd);
+76     f = a + e * e;
+77     d\_\_ = e * e - f * 4.f;
+78     *nz = 1;
+79     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[1] = e - tr;
+80     \textcolor{keywordflow}{if} (d\_\_ >= 0.) \{
+81     \textcolor{keywordflow}{goto} L30;
+82     \} \textcolor{keywordflow}{else} \{
+83     \textcolor{keywordflow}{goto} L999;
+84     \}
+85 L30:
+86     d\_\_ = sqrt(d\_\_);
+87     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[2] = (-e + \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / 2.f - tr;
+88     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[3] = (-e - \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / 2.f - tr;
+89     *nz = 3;
+90 L999:
+91     \textcolor{keywordflow}{return} 0;
+92 L20:
+93     s2 = sqrt(-d\_\_);
+94     s1 = bh;
+95     t1 = sqrt(s1 * s1 + s2 * s2);
+96     d\_\_1 = s1 / \hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1};
+97     t2 = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&d\_\_1);
+98     \textcolor{keywordflow}{if} (s2 < 0.f) \{
+99     t2 += \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi};
+100     \}
+101     bh = pow\_dd(&t1, &thd) * 2.f;
+102     w1 = t2 / 3.f;
+103     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[1] = bh * cos(w1) - tr;
+104     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[2] = bh * cos(w1 - tpio3) - tr;
+105     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[3] = bh * cos(w1 - tpio3 - tpio3) - tr;
+106     *nz = 3;
+107     \textcolor{keywordflow}{return} 0;
+108 L200:
+109     \textcolor{keywordflow}{if} (abs(*\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}) < smal) \{
+110     \textcolor{keywordflow}{goto} L300;
+111     \}
+112     d\_\_ = *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} * *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} - *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} * 4.f * *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+113     \textcolor{keywordflow}{if} (d\_\_ < 0.f) \{
+114     \textcolor{keywordflow}{return} 0;
+115     \}
+116     d\_\_ = sqrt(d\_\_);
+117     w1 = *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} + *\hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q};
+118     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[1] = (-(*r\_\_) + \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / w1;
+119     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[2] = (-(*r\_\_) - \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / w1;
+120     *nz = 2;
+121     \textcolor{keywordflow}{return} 0;
+122 L300:
+123     \textcolor{keywordflow}{if} (abs(*\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}) < smal) \{
+124     \textcolor{keywordflow}{return} 0;
+125     \}
+126     \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[1] = -(*s) / *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+127     *nz = 1;
+128     \textcolor{keywordflow}{return} 0;
+129 \} \textcolor{comment}{/* gcubic\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39_icgraph}
+\end{center}
+\end{figure}
+
+

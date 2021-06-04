@@ -1,0 +1,247 @@
+\hypertarget{GAUSS_8c}{}\section{G\+A\+U\+S\+S.\+c File Reference}
+\label{GAUSS_8c}\index{G\+A\+U\+S\+S.\+c@{G\+A\+U\+S\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+A\+U\+S\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{GAUSS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GAUSS_8c_a629ee67127137faa0c209bcef6336ec3}{gauss\+\_\+} (doublereal $\ast$vec1, doublereal $\ast$\hyperlink{TLNORM_8c_aff587268f876f02cc4873d3591ca4198}{d1}, doublereal $\ast$vec2, doublereal $\ast$\hyperlink{POCKET_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, doublereal $\ast$vec3, doublereal $\ast$d3, doublereal $\ast$\hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}, integer $\ast$\hyperlink{CNVRT3_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{GAUSS_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+A\+U\+S\+S.\+c@{G\+A\+U\+S\+S.\+c}!gauss\+\_\+@{gauss\+\_\+}}
+\index{gauss\+\_\+@{gauss\+\_\+}!G\+A\+U\+S\+S.\+c@{G\+A\+U\+S\+S.\+c}}
+\subsubsection[{\texorpdfstring{gauss\+\_\+(doublereal $\ast$vec1, doublereal $\ast$d1, doublereal $\ast$vec2, doublereal $\ast$d2, doublereal $\ast$vec3, doublereal $\ast$d3, doublereal $\ast$pt, integer $\ast$ir)}{gauss_(doublereal *vec1, doublereal *d1, doublereal *vec2, doublereal *d2, doublereal *vec3, doublereal *d3, doublereal *pt, integer *ir)}}]{\setlength{\rightskip}{0pt plus 5cm}int gauss\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{vec1, }
+\item[{doublereal $\ast$}]{d1, }
+\item[{doublereal $\ast$}]{vec2, }
+\item[{doublereal $\ast$}]{d2, }
+\item[{doublereal $\ast$}]{vec3, }
+\item[{doublereal $\ast$}]{d3, }
+\item[{doublereal $\ast$}]{pt, }
+\item[{integer $\ast$}]{ir}
+\end{DoxyParamCaption}
+)}\hypertarget{GAUSS_8c_a629ee67127137faa0c209bcef6336ec3}{}\label{GAUSS_8c_a629ee67127137faa0c209bcef6336ec3}
+
+
+Definition at line 22 of file G\+A\+U\+S\+S.\+c.
+
+
+
+References a, c\+\_\+\+\_\+, c\+\_\+\+\_\+2, d1, d2, dotf\+\_\+(), i\+\_\+\+\_\+, j, k, m, pt, q, and zero.
+
+
+
+Referenced by centr\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* Initialized data */}
+27 
+28     \textcolor{keyword}{static} doublereal eps = .9999;
+29     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+30 
+31     \textcolor{comment}{/* System generated locals */}
+32     doublereal d\_\_1;
+33 
+34     \textcolor{comment}{/* Builtin functions */}
+35     integer pow\_ii(integer *, integer *);
+36 
+37     \textcolor{comment}{/* Local variables */}
+38     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12], \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[3];
+39     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+40     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}, coe5, erg1, erg2, erg3, coe9, coe10, asav[4];
+41     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+42         );
+43     \textcolor{keyword}{static} integer jmax;
+44 
+45     \textcolor{comment}{/* Parameter adjustments */}
+46     --\hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt};
+47     --d3;
+48     --vec3;
+49     --\hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+50     --vec2;
+51     --\hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+52     --vec1;
+53 
+54     \textcolor{comment}{/* Function Body */}
+55 \textcolor{comment}{/* .... CHECK FOR ANY TWO INPUT VECTORS BEING PARALLEL */}
+56 
+57     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&erg1, &vec1[1], &vec2[1]);
+58     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&erg2, &vec1[1], &vec3[1]);
+59     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&erg3, &vec2[1], &vec3[1]);
+60     \textcolor{keywordflow}{if} (abs(erg1) > eps) \{
+61     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 12;
+62     \textcolor{keywordflow}{if} (erg1 < zero) \{
+63         *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = -12;
+64     \}
+65     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (abs(erg2) > eps) \{
+66     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 13;
+67     \textcolor{keywordflow}{if} (erg2 < zero) \{
+68         *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = -13;
+69     \}
+70     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (abs(erg3) > eps) \{
+71     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 23;
+72     \textcolor{keywordflow}{if} (erg3 < zero) \{
+73         *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = -23;
+74     \}
+75     \} \textcolor{keywordflow}{else} \{
+76     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+77         a[i\_\_ - 1] = vec1[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+78         a[i\_\_ + 3] = vec2[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+79 \textcolor{comment}{/* L7: */}
+80         a[i\_\_ + 7] = vec3[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+81     \}
+82     a[3] = \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}[1];
+83     a[7] = \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}[1];
+84     a[11] = d3[1];
+85     q = 0.f;
+86     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+87         c\_\_[i\_\_ - 1] = (d\_\_1 = a[(i\_\_ << 2) - 4], abs(d\_\_1));
+88         q += c\_\_[i\_\_ - 1];
+89 \textcolor{comment}{/* L2: */}
+90     \}
+91     \textcolor{keywordflow}{if} (q <= 0.) \{
+92         \textcolor{keywordflow}{goto} L2000;
+93     \} \textcolor{keywordflow}{else} \{
+94         \textcolor{keywordflow}{goto} L3;
+95     \}
+96 L3:
+97     \textcolor{keywordflow}{if} (c\_\_[1] - c\_\_[0] <= 0.) \{
+98         \textcolor{keywordflow}{goto} L30;
+99     \} \textcolor{keywordflow}{else} \{
+100         \textcolor{keywordflow}{goto} L40;
+101     \}
+102 L30:
+103     \textcolor{keywordflow}{if} (c\_\_[2] - c\_\_[0] <= 0.) \{
+104         \textcolor{keywordflow}{goto} L70;
+105     \} \textcolor{keywordflow}{else} \{
+106         \textcolor{keywordflow}{goto} L50;
+107     \}
+108 L40:
+109     \textcolor{keywordflow}{if} (c\_\_[2] - c\_\_[1] <= 0.) \{
+110         \textcolor{keywordflow}{goto} L60;
+111     \} \textcolor{keywordflow}{else} \{
+112         \textcolor{keywordflow}{goto} L50;
+113     \}
+114 L50:
+115     jmax = 3;
+116     \textcolor{keywordflow}{goto} L65;
+117 L60:
+118     jmax = 2;
+119 L65:
+120     k = pow\_ii(&\hyperlink{GAUSS_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &jmax);
+121     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+122         m = i\_\_ + \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+123         asav[i\_\_ - 1] = a[i\_\_ - 1];
+124         a[i\_\_ - 1] = a[m - 1];
+125         a[m - 1] = asav[i\_\_ - 1];
+126 \textcolor{comment}{/* L66: */}
+127     \}
+128 L70:
+129     coe5 = a[4] / a[0];
+130     coe9 = a[8] / a[0];
+131     \textcolor{keywordflow}{for} (j = 2; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+132         a[j + 3] -= coe5 * a[j - 1];
+133         a[j + 7] -= coe9 * a[j - 1];
+134 \textcolor{comment}{/* L75: */}
+135     \}
+136     c\_\_[1] = abs(a[5]);
+137     c\_\_[2] = abs(a[9]);
+138     \textcolor{keywordflow}{if} (c\_\_[1] + c\_\_[2] <= 0.) \{
+139         \textcolor{keywordflow}{goto} L2000;
+140     \} \textcolor{keywordflow}{else} \{
+141         \textcolor{keywordflow}{goto} L80;
+142     \}
+143 L80:
+144     \textcolor{keywordflow}{if} (c\_\_[1] - c\_\_[2] >= 0.) \{
+145         \textcolor{keywordflow}{goto} L100;
+146     \} \textcolor{keywordflow}{else} \{
+147         \textcolor{keywordflow}{goto} L90;
+148     \}
+149 L90:
+150     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+151         asav[j - 1] = a[j + 3];
+152         a[j + 3] = a[j + 7];
+153         a[j + 7] = asav[j - 1];
+154 \textcolor{comment}{/* L95: */}
+155     \}
+156 L100:
+157     coe10 = a[9] / a[5];
+158     \textcolor{keywordflow}{for} (j = 3; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+159 \textcolor{comment}{/* L105: */}
+160         a[j + 7] -= a[j + 3] * coe10;
+161     \}
+162     \textcolor{keywordflow}{if} (a[10] != 0.) \{
+163         \textcolor{keywordflow}{goto} L1050;
+164     \} \textcolor{keywordflow}{else} \{
+165         \textcolor{keywordflow}{goto} L2000;
+166     \}
+167 L1050:
+168     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[3] = a[11] / a[10];
+169     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[2] = (a[7] - a[6] * \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[3]) / a[5];
+170     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[1] = (a[3] - a[2] * \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[3] - a[1] * \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[2]) / a[0];
+171     \textcolor{keywordflow}{goto} L2010;
+172 L2000:
+173     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 1;
+174     \textcolor{keywordflow}{goto} L2020;
+175 L2010:
+176     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 0;
+177     \}
+178 L2020:
+179     \textcolor{keywordflow}{return} 0;
+180 \} \textcolor{comment}{/* gauss\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GAUSS_8c_a629ee67127137faa0c209bcef6336ec3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GAUSS_8c_a629ee67127137faa0c209bcef6336ec3_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{G\+A\+U\+S\+S.\+c@{G\+A\+U\+S\+S.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!G\+A\+U\+S\+S.\+c@{G\+A\+U\+S\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GAUSS_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{GAUSS_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file G\+A\+U\+S\+S.\+c.
+
+
+
+Referenced by gauss\+\_\+().
+

@@ -1,0 +1,154 @@
+\hypertarget{PLAPOL_8c}{}\section{P\+L\+A\+P\+O\+L.\+c File Reference}
+\label{PLAPOL_8c}\index{P\+L\+A\+P\+O\+L.\+c@{P\+L\+A\+P\+O\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+L\+A\+P\+O\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{PLAPOL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PLAPOL_8c_aeede72f21c2a15af1bf600a544cf4746}{plapol\+\_\+} (doublereal $\ast$\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}, doublereal $\ast$poed, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, doublereal $\ast$\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, doublereal $\ast$\hyperlink{UNITS_8c_ae1ea305557352179a5595123e4f7bef9}{sp}, integer $\ast$irc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+L\+A\+P\+O\+L.\+c@{P\+L\+A\+P\+O\+L.\+c}!plapol\+\_\+@{plapol\+\_\+}}
+\index{plapol\+\_\+@{plapol\+\_\+}!P\+L\+A\+P\+O\+L.\+c@{P\+L\+A\+P\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{plapol\+\_\+(doublereal $\ast$pl, doublereal $\ast$poed, integer $\ast$m, integer $\ast$n, doublereal $\ast$tol, doublereal $\ast$sp, integer $\ast$irc)}{plapol_(doublereal *pl, doublereal *poed, integer *m, integer *n, doublereal *tol, doublereal *sp, integer *irc)}}]{\setlength{\rightskip}{0pt plus 5cm}int plapol\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pl, }
+\item[{doublereal $\ast$}]{poed, }
+\item[{integer $\ast$}]{m, }
+\item[{integer $\ast$}]{n, }
+\item[{doublereal $\ast$}]{tol, }
+\item[{doublereal $\ast$}]{sp, }
+\item[{integer $\ast$}]{irc}
+\end{DoxyParamCaption}
+)}\hypertarget{PLAPOL_8c_aeede72f21c2a15af1bf600a544cf4746}{}\label{PLAPOL_8c_aeede72f21c2a15af1bf600a544cf4746}
+
+
+Definition at line 17 of file P\+L\+A\+P\+O\+L.\+c.
+
+
+
+References dist, i\+\_\+\+\_\+, ii, j, jj, k, m, n, pl, and sp.
+
+
+
+Referenced by intsec\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* System generated locals */}
+21     integer poed\_dim2, poed\_offset, i\_\_1, i\_\_2;
+22 
+23     \textcolor{comment}{/* Local variables */}
+24     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+25     \textcolor{keyword}{static} doublereal \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}[5], disti, distmi;
+26 
+27 
+28 \textcolor{comment}{/*  TO CHECK THE INTERFERENCE BETWEEN A PLANE AND A POLYHEDRON */}
+29 \textcolor{comment}{/*      PL  : I : PLANE */}
+30 \textcolor{comment}{/*      POED: I : POLYHEDRAL DATA OF SURFACE 2 */}
+31 \textcolor{comment}{/*      TOL : I : INTERSECTION TOLERANCE */}
+32 \textcolor{comment}{/*      SP  : O : INTERSECTION NEAR POINT */}
+33 \textcolor{comment}{/*      IRC : O : RETURNCODE : NO INTERSECTION: IRC=0 */}
+34 
+35 
+36     \textcolor{comment}{/* Parameter adjustments */}
+37     --\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl};
+38     poed\_dim2 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+39     poed\_offset = 1 + 3 * (1 + poed\_dim2);
+40     poed -= poed\_offset;
+41     --\hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp};
+42 
+43     \textcolor{comment}{/* Function Body */}
+44     *irc = 0;
+45     distmi = 1e20;
+46 
+47 \textcolor{comment}{/*  DISTANCE TO PLANE */}
+48     i\_\_1 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+49     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+50     i\_\_2 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+51     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+52         disti = poed[(i\_\_ + j * poed\_dim2) * 3 + 1] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[1] + poed[(i\_\_ + 
+53             j * poed\_dim2) * 3 + 2] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[2] + poed[(i\_\_ + j * 
+54             poed\_dim2) * 3 + 3] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[3] - \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[4];
+55 
+56 \textcolor{comment}{/*   MINIMUM DISTANCE SELECTION */}
+57         \textcolor{keywordflow}{if} (distmi < abs(disti)) \{
+58         \textcolor{keywordflow}{goto} L2;
+59         \}
+60         distmi = abs(disti);
+61         ii = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+62         jj = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+63 
+64 \textcolor{comment}{/*   CROSS OF PLANE IN V-DIRECTION ? */}
+65 L2:
+66         \textcolor{keywordflow}{if} (j == 1) \{
+67         \textcolor{keywordflow}{goto} L5;
+68         \}
+69         \textcolor{keywordflow}{if} (disti * dist[i\_\_ - 1] > 0.) \{
+70         \textcolor{keywordflow}{goto} L5;
+71         \}
+72 
+73 \textcolor{comment}{/*   CROSS OR TUCH POINT FOUND */}
+74         ii = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+75         jj = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+76         \textcolor{keywordflow}{goto} L20;
+77 
+78 \textcolor{comment}{/*   CROSS OF PLANE IN U-DIRECTION ? */}
+79 L5:
+80         \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+81         \textcolor{keywordflow}{goto} L7;
+82         \}
+83         \textcolor{keywordflow}{if} (disti * dist[i\_\_ - 2] > 0.) \{
+84         \textcolor{keywordflow}{goto} L7;
+85         \}
+86 
+87 \textcolor{comment}{/*   CROSS OR TUCH POINT FOUND */}
+88         ii = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+89         jj = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+90         \textcolor{keywordflow}{goto} L20;
+91 
+92 \textcolor{comment}{/*   STORE DISTANCE */}
+93 L7:
+94         dist[i\_\_ - 1] = disti;
+95 \textcolor{comment}{/* L10: */}
+96     \}
+97     \}
+98 
+99 \textcolor{comment}{/*   RETURN IF THE SURFACES ARE NOT CLOSE ENOUGH */}
+100     \textcolor{keywordflow}{if} (*\hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol} * 100. < distmi) \{
+101     \textcolor{keywordflow}{return} 0;
+102     \}
+103 
+104 \textcolor{comment}{/*  STORE NEAR POINT */}
+105 L20:
+106     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+107 \textcolor{comment}{/* L30: */}
+108     \hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = poed[k + (ii + jj * poed\_dim2) * 3];
+109     \}
+110     *irc = 1;
+111 
+112     \textcolor{keywordflow}{return} 0;
+113 \} \textcolor{comment}{/* plapol\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PLAPOL_8c_aeede72f21c2a15af1bf600a544cf4746_icgraph}
+\end{center}
+\end{figure}
+
+

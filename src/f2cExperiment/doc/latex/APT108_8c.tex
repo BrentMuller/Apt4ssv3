@@ -1,0 +1,1314 @@
+\hypertarget{APT108_8c}{}\section{A\+P\+T108.\+c File Reference}
+\label{APT108_8c}\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T108.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT108_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{APT108_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1}~\hyperlink{SSV3_8c_a55cc1af51f82b825bacf79bfbbdb5619}{sspad\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\+\_\+1}~\hyperlink{TLCONV_8c_aa3e0350b693a9ca63e1c219a5cbf8b7a}{ssprt\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+}
+\item 
+\#define \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 1)
+\item 
+\#define \hyperlink{APT108_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 73)
+\item 
+\#define \hyperlink{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}{sci}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 1)
+\item 
+\#define \hyperlink{APT108_8c_a2aaa0b0f6d733a20fb5300195465ce07}{scv0}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 97)
+\item 
+\#define \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 121)
+\item 
+\#define \hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_a618688b91ef10762e933d4002925afab}{sspad\+\_\+1} + 145)
+\item 
+\#define \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{APT108_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{APT108_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT108_8c_a104a049e41b6550bc263e966515ee483}{apt108\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{DDTABC_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, doublereal $\ast$\hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, doublereal $\ast$a3)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT108_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{APT108_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{APT108_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\} \hyperlink{APT108_8c_ad720089544b746d650986a5faafa4f3b}{ibugg\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT108_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{APT108_8c_a12b2d5778654fb23de66494638116603}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT108_8c_ab26b43007e1470a6812269aedc276cc4}{nscnmx}\\
+\>integer \hyperlink{APT108_8c_a4f36f70535ff45e43613827fb1a9c44c}{iscan}\\
+\>doublereal \hyperlink{APT108_8c_a054b516dd6020a563cf155a4b217ec26}{scan} \mbox{[}20000\mbox{]}\\
+\} \hyperlink{APT108_8c_a3846e1678b8d35fed823f88ff93dca79}{sspad\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT108_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{APT108_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{APT108_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{APT108_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{APT108_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{APT108_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{APT108_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{APT108_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{APT108_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{APT108_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{APT108_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{APT108_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{APT108_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{APT108_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{APT108_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{APT108_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{APT108_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{APT108_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{APT108_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{APT108_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{APT108_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{APT108_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{APT108_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{APT108_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{APT108_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{APT108_8c_aa490494df0b57331beebcaa103cd92fc}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{APT108_8c_aabdefdae02ca0201c3c281c4bdde30ee}{ssprt}\\
+\>logical \hyperlink{APT108_8c_a6f4ecf11f208ba0b39a3243a1c308209}{sstest}\\
+\} \hyperlink{APT108_8c_a32c8f4bf74dc8bff7ca0c32dc154d542}{ssprt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{APT108_8c_ad8149129b0ac5c966968e55ba6106146}{darray} \mbox{[}120\mbox{]}\\
+\} \hyperlink{APT108_8c_a0fda6abb2262818e6f2a8ae1cc9d9495}{darray\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{APT108_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{APT108_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\+\_\+\+\_\+10} = 10
+\item 
+static integer \hyperlink{APT108_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\+\_\+\+\_\+4} = 4
+\item 
+static integer \hyperlink{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\+\_\+\+\_\+6} = 6
+\item 
+static integer \hyperlink{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{APT108_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{APT108_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{APT108_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\+\_\+n4} = -\/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{APT108_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{APT108_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 27 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{APT108_8c_a2f226f15c00130b05db70054f6514916}{}\label{APT108_8c_a2f226f15c00130b05db70054f6514916}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!can@{can}}
+\index{can@{can}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{APT108_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{APT108_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!canon@{canon}}
+\index{canon@{canon}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{APT108_8c_a68d3ba380c16e286247bb69367760615}{}\label{APT108_8c_a68d3ba380c16e286247bb69367760615}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~{\bf darray\+\_\+}}\hypertarget{APT108_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{APT108_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 55 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{APT108_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{APT108_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sc@{sc}}
+\index{sc@{sc}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sc}{sc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 1)}\hypertarget{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{}\label{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}
+
+
+Referenced by apt085\+\_\+(), apt108\+\_\+(), crblen\+\_\+(), crsfit\+\_\+(), curflo\+\_\+(), ddrlsr\+\_\+(), floinv\+\_\+(), and qsd\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!scb@{scb}}
+\index{scb@{scb}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{scb}{scb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scb~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 73)}\hypertarget{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{}\label{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sci@{sci}}
+\index{sci@{sci}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sci}{sci}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sci~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 1)}\hypertarget{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}{}\label{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!scv0@{scv0}}
+\index{scv0@{scv0}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{scv0}{scv0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scv0~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 97)}\hypertarget{APT108_8c_a2aaa0b0f6d733a20fb5300195465ce07}{}\label{APT108_8c_a2aaa0b0f6d733a20fb5300195465ce07}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!scv1@{scv1}}
+\index{scv1@{scv1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{scv1}{scv1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scv1~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 121)}\hypertarget{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{}\label{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!scv2@{scv2}}
+\index{scv2@{scv2}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{scv2}{scv2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scv2~((doublereal $\ast$)\&{\bf sspad\+\_\+1} + 145)}\hypertarget{APT108_8c_ace399208e30e2c98f668e56c525d4122}{}\label{APT108_8c_ace399208e30e2c98f668e56c525d4122}
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{APT108_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{APT108_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sspad\+\_\+1@{sspad\+\_\+1}}
+\index{sspad\+\_\+1@{sspad\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sspad\+\_\+1}{sspad_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sspad\+\_\+1~{\bf sspad\+\_\+}}\hypertarget{APT108_8c_a618688b91ef10762e933d4002925afab}{}\label{APT108_8c_a618688b91ef10762e933d4002925afab}
+
+
+Definition at line 34 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ssprt\+\_\+1@{ssprt\+\_\+1}}
+\index{ssprt\+\_\+1@{ssprt\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ssprt\+\_\+1}{ssprt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssprt\+\_\+1~{\bf ssprt\+\_\+}}\hypertarget{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{}\label{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}
+
+
+Definition at line 49 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{APT108_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{APT108_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 43 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!apt108\+\_\+@{apt108\+\_\+}}
+\index{apt108\+\_\+@{apt108\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{apt108\+\_\+(doublereal $\ast$a, doublereal $\ast$a1, doublereal $\ast$a2, doublereal $\ast$a3)}{apt108_(doublereal *a, doublereal *a1, doublereal *a2, doublereal *a3)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt108\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{a1, }
+\item[{doublereal $\ast$}]{a2, }
+\item[{doublereal $\ast$}]{a3}
+\end{DoxyParamCaption}
+)}\hypertarget{APT108_8c_a104a049e41b6550bc263e966515ee483}{}\label{APT108_8c_a104a049e41b6550bc263e966515ee483}
+
+
+Definition at line 71 of file A\+P\+T108.\+c.
+
+
+
+References a, al, apt094\+\_\+(), bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+10, c\+\_\+\+\_\+2, c\+\_\+\+\_\+4, c\+\_\+\+\_\+6, c\+\_\+\+\_\+8, c\+\_\+n1, c\+\_\+n4, canon, ckdef\+\_\+(), cncurv\+\_\+(), end, error\+\_\+(), f, floseg\+\_\+(), holfrm\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, iconv\+\_\+(), ierror, ii, irec, isize, isub, j, k, l, mode, nblk, normal, one, point, sc, scb, sci, scpict\+\_\+(), sctra\+\_\+(), scurv\+\_\+(), scv0, scv1, scv2, smal1, ssprt\+\_\+1, symfil\+\_\+1, t, tapop\+\_\+(), test, test1, undef\+\_\+(), unpack\+\_\+(), vector, and zero.
+
+
+
+Referenced by sycurv\+\_\+(), and xcall\+\_\+().
+
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{comment}{/* Initialized data */}
+75 
+76     \textcolor{keyword}{static} integer maxnop = 30;
+77     \textcolor{keyword}{static} integer nhd = 1;
+78     \textcolor{keyword}{static} doublereal \hyperlink{INDIRP_8c_a7bff2da864fb642dcbfa06bc2ac74fa7}{point} = 19.;
+79     \textcolor{keyword}{static} doublereal \hyperlink{INDIRV_8c_add93f942eb3d18a8f8e108404869156f}{vector} = 20.;
+80     \textcolor{keyword}{static} doublereal areal = 21.;
+81     \textcolor{keyword}{static} doublereal tanspl = 136.;
+82     \textcolor{keyword}{static} doublereal crsspl = 137.;
+83     \textcolor{keyword}{static} doublereal \hyperlink{GOL_8c_a149c5e1d9599b0d7e37cd720aa7d0354}{normal} = 13.;
+84     \textcolor{keyword}{static} doublereal weight = 138.;
+85     \textcolor{keyword}{static} doublereal limit = 139.;
+86     \textcolor{keyword}{static} \textcolor{keywordtype}{char} curseg[6] = \textcolor{stringliteral}{"CURSEG"};
+87     \textcolor{keyword}{static} \textcolor{keywordtype}{char} spline[6] = \textcolor{stringliteral}{"SPLINE"};
+88     \textcolor{keyword}{static} \textcolor{keywordtype}{char} combin[6] = \textcolor{stringliteral}{"COMBIN"};
+89     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{ACNTRL_8c_ae8764e370176b9296c09eab14ebed848}{end}[6] = \textcolor{stringliteral}{"END   "};
+90     \textcolor{keyword}{static} \textcolor{keywordtype}{char} traf[6] = \textcolor{stringliteral}{"TRFORM"};
+91     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+92     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+93     \textcolor{keyword}{static} doublereal smal = 1e-7;
+94     \textcolor{keyword}{static} doublereal big = 99999999.;
+95     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1} = 1e-5;
+96     \textcolor{keyword}{static} doublereal smal2 = .001;
+97     \textcolor{keyword}{static} \textcolor{keywordtype}{char} subsc[8] = \textcolor{stringliteral}{" (     )"};
+98     \textcolor{keyword}{static} \textcolor{keywordtype}{char} bla[8] = \textcolor{stringliteral}{"        "};
+99     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rnam1[8] = \textcolor{stringliteral}{"APT108  "};
+100     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rnam2[8] = \textcolor{stringliteral}{"SCURV   "};
+101     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rnam3[8] = \textcolor{stringliteral}{"SSPLIN  "};
+102     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rnam4[8] = \textcolor{stringliteral}{"SMOOTH  "};
+103     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rnama[8] = \textcolor{stringliteral}{"APT108??"};
+104     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rname[8] = \textcolor{stringliteral}{"        "};
+105     \textcolor{keyword}{static} integer imax1 = 9;
+106     \textcolor{keyword}{static} integer izal1[9] = \{ 5121,5122,5123,5124,5125,5126,5127,5128,5129 \}
+107         ;
+108     \textcolor{keyword}{static} integer imax2 = 5;
+109     \textcolor{keyword}{static} integer izal2[5] = \{ 5751,5752,5760,5770,5771 \};
+110     \textcolor{keyword}{static} integer imax3 = 10;
+111     \textcolor{keyword}{static} integer izal3[10] = \{ 5901,5902,5903,5904,5905,5906,5907,5908,5909,
+112         5910 \};
+113     \textcolor{keyword}{static} integer imax4 = 6;
+114     \textcolor{keyword}{static} integer izal4[6] = \{ 5921,5922,5923,5924,5925,5926 \};
+115 
+116     \textcolor{comment}{/* System generated locals */}
+117     integer i\_\_1;
+118     doublereal d\_\_1, d\_\_2;
+119 
+120     \textcolor{comment}{/* Builtin functions */}
+121     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+122     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+123 
+124     \textcolor{comment}{/* Local variables */}
+125     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+126     \textcolor{keyword}{static} doublereal \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+127     \textcolor{keyword}{static} integer m1;
+128     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al};
+129     \textcolor{keyword}{static} integer \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii};
+130 \textcolor{preprocessor}{#define sc ((doublereal *)&sspad\_1 + 1)}
+131     \textcolor{keyword}{static} integer nh, nn, np, ns;
+132     \textcolor{keyword}{static} doublereal wt;
+133     \textcolor{keyword}{static} integer il1, il2, il3, il4, ns1, ns2;
+134     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+135 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+136 \textcolor{preprocessor}{#define scb ((doublereal *)&sspad\_1 + 73)}
+137     \textcolor{keyword}{static} integer kkc;
+138 \textcolor{preprocessor}{#define sci ((doublereal *)&sspad\_1 + 1)}
+139     \textcolor{keyword}{static} integer nwd, irr, nhd1;
+140 \textcolor{preprocessor}{#define scv0 ((doublereal *)&sspad\_1 + 97)}
+141 \textcolor{preprocessor}{#define scv1 ((doublereal *)&sspad\_1 + 121)}
+142 \textcolor{preprocessor}{#define scv2 ((doublereal *)&sspad\_1 + 145)}
+143     \textcolor{keyword}{static} integer \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec}, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, \hyperlink{GET_8c_aa19f8d962cb4e53028f3e905ec444c85}{nblk}, \hyperlink{APT331_8c_a0d23b6d61c40090519c85873d65b78bd}{isub}, nbot;
+144     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af04af1bc6d042a68a2b24d6e1312d253}{test}[6];
+145     \textcolor{keyword}{static} integer ntop, nblk1;
+146     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT094_8c_a0f023dd33aa032fb48b04d52fe365a14}{apt094\_}(integer *, doublereal *, doublereal *)
+147         ;
+148     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_a5c2d8fdb927334c0f5ff772c1b63752c}{test1}[6], test2[6];
+149     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+150 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+151     \textcolor{keyword}{static} integer jmode;
+152     \textcolor{keyword}{static} doublereal ddmax;
+153     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(doublereal *);
+154 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+155     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4}{sctra\_}(doublereal *, doublereal *, doublereal 
+156         *, integer *), \hyperlink{ICONV_8c_af16b5a354818a0996dcd6028177bbc96}{iconv\_}(integer *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+157         ftnlen);
+158     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize};
+159     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(integer *, integer *);
+160     \textcolor{keyword}{static} integer nsize;
+161     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen), \hyperlink{SCURV_8c_ad02f5b94b1da7f5588408bd34e39e9b4}{scurv\_}(
+162         doublereal *, integer *);
+163 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+164     \textcolor{keyword}{static} \textcolor{keywordtype}{char} scname[16];
+165     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(doublereal *, integer *, integer *, 
+166         integer *), \hyperlink{FLOSEG_8c_ae676909061cd7cd0ffe5a99f54de2fef}{floseg\_}(integer *, integer *, integer *, integer *, 
+167         integer *), \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+168         integer *, ftnlen);
+169     \textcolor{keyword}{static} integer iflseg;
+170     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+171         ftnlen);
+172     \textcolor{keyword}{static} integer kkmode, \hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror};
+173     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\_}(doublereal *, doublereal *, 
+174         doublereal *, integer *);
+175     \textcolor{keyword}{static} integer isprnt, npplus;
+176     \textcolor{keyword}{static} doublereal xmatrx[12];
+177     \textcolor{keyword}{static} integer nszsav;
+178 
+179 \textcolor{comment}{/* ---  PURPOSE  IS TO ACCEPT PART PROGRAMMERS INPUT FOR THE DEFINITION */}
+180 \textcolor{comment}{/* ---  OF A SYNTHETIC CURVE AND PROCESS THIS  INTO  COONS RATIONAL */}
+181 \textcolor{comment}{/* ---   PARAMETRIC CUBIC SEGMENTS.  THE PROCESSED DATA BASE IS THEN */}
+182 \textcolor{comment}{/* ---   DISPLAYED ON THE VLFILE(SPRINT) AND SAVED(APT094) AS A LARGE DATA */}
+183 \textcolor{comment}{/* ---  DATA ARRAY. */}
+184 \textcolor{comment}{/* ---   A(3) INPUT  CONTAINS 1 AND 2 THE INTERNAL CANON FORM OF THE */}
+185 \textcolor{comment}{/* ---               SYNTHETIC CURVE .  A(3) IS THE PP NAME */}
+186 \textcolor{comment}{/* ---   BLANK COMMON CANON(41 THRU ... ) CONTAINS THE PART PROGRAMMERS */}
+187 \textcolor{comment}{/* ---           INPUT STREAM */}
+188 \textcolor{comment}{/* ---  SC IS THE WORK ARRAY WHICH IS USED TO BUILD UP THE ANALYTIC DEFIN */}
+189 \textcolor{comment}{/* ---               ITION OF THE CURVE */}
+190 
+191 
+192 
+193 
+194 
+195 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+196 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+197 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+198 
+199 
+200 
+201 \textcolor{comment}{/* ---     SC(4,6,31) HOLDS BASIC CURVE, REST HOLDS FLOW EDITED INPUT */}
+202 
+203 
+204 \textcolor{comment}{/*     UNLABELLED COMMON */}
+205 
+206 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+207 
+208 
+209 
+210 
+211 
+212 \textcolor{comment}{/* .... SCULPTURED SURFACES SCRATCH PAD AREA */}
+213 
+214 
+215 
+216 
+217 
+218 
+219 
+220 
+221 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+222 
+223 
+224 
+225 
+226 
+227 \textcolor{comment}{/* ---     THE FOLLOWING ARRAY IS SHARED FOR PRINTING */}
+228 
+229 
+230 \textcolor{comment}{/*   ***  20.  DARRAY BLOCK  *** */}
+231 
+232 \textcolor{comment}{/*   PRINT BUFFER */}
+233 
+234 
+235 
+236     \textcolor{comment}{/* Parameter adjustments */}
+237     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+238 
+239     \textcolor{comment}{/* Function Body */}
+240 
+241 
+242 
+243     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3], scname, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)16);
+244     s\_copy(scname + 8, bla, (ftnlen)8, (ftnlen)8);
+245 \textcolor{comment}{/* ---     IF SUBSCRIPT IS BIGGER  THAN ONE, ONLY SUBCRIPT IS SHOWN */}
+246     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1], &mode, &isize, &isub);
+247     \textcolor{keywordflow}{if} (isub < 1) \{
+248     \textcolor{keywordflow}{goto} L8;
+249     \}
+250     s\_copy(scname + 8, subsc, (ftnlen)8, (ftnlen)8);
+251     \hyperlink{ICONV_8c_af16b5a354818a0996dcd6028177bbc96}{iconv\_}(&isub, scname, &\hyperlink{APT108_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\_\_10}, &\hyperlink{APT108_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4}, (ftnlen)16);
+252     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[isub * isize + isub], scname, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)16);
+253 L8:
+254     np = 0;
+255     nh = 41;
+256     nhd1 = nhd + 1;
+257     nsize = (integer) (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 3] + 39);
+258     nszsav = nsize;
+259     m1 = maxnop + nhd;
+260     ns = nh + 8;
+261 
+262 \textcolor{comment}{/* ...SET TEST1 & TEST2 TO BE CHARACTER EQUIVALENTS OF A1 & A2. */}
+263     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(\hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, test1, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+264     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(\hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, test2, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+265 
+266 \textcolor{comment}{/* ---      FETCH THE TRFORM MATRIX IF PRESENT AND THEN TRUNCATE */}
+267 \textcolor{comment}{/* ---      THE LENGTH OF INPUT DATA TO IGNORE THE TRAILING MATRIX */}
+268     \textcolor{keywordflow}{if} (s\_cmp(test2, traf, (ftnlen)6, (ftnlen)6) != 0) \{
+269     \textcolor{keywordflow}{goto} L9;
+270     \}
+271     l = (integer) (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[44] + 27);
+272     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 12; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+273     xmatrx[i\_\_ - 1] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[l + i\_\_ - 1];
+274 \textcolor{comment}{/* L7: */}
+275     \}
+276     nsize += -14;
+277     nszsav = nsize;
+278 L9:
+279 
+280 \textcolor{comment}{/* ---      SCAN INPUT STREAM FOR FLOW/SEG DATA.  IF FOUND IFLSEG=1 ELSE 0 */}
+281     \hyperlink{FLOSEG_8c_ae676909061cd7cd0ffe5a99f54de2fef}{floseg\_}(&nsize, &nszsav, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &iflseg, &irr);
+282     \textcolor{keywordflow}{if} (irr != 0) \{
+283     \textcolor{keywordflow}{goto} L995;
+284     \}
+285 
+286 
+287 \textcolor{comment}{/* ---    NOW REDUCE SIZE PARAMETER SINCE ALL FLOW/SEGMENT */}
+288 \textcolor{comment}{/* ---     INFORMATION HAS BEEN STORED IN THE STEMP BUFFER */}
+289     nsize = nszsav;
+290 
+291 
+292 \textcolor{comment}{/* ---     NORMAL PHYSICAL SHAPE OF CURVE IS PROCESSED NOW */}
+293 \textcolor{comment}{/* -------------------------------------------------------- */}
+294 \textcolor{comment}{/* ---     BRANCH TO SPECIAL PROCESSING FOR MODE COMBINE. */}
+295     \textcolor{keywordflow}{if} (s\_cmp(test1, combin, (ftnlen)6, (ftnlen)6) == 0) \{
+296     \textcolor{keywordflow}{goto} L3000;
+297     \}
+298 
+299 \textcolor{comment}{/* ----     SCAN AND ORGANIZE INPUT DATA FOR SPLINE OR CURSEG DEFN. */}
+300 \textcolor{comment}{/* --- INITIALIZE THE SCRATCH PAD AREA FOR A CURVE */}
+301     i\_\_1 = m1;
+302     \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+303     \textcolor{keywordflow}{for} (k = 1; k <= 6; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+304         \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+305 \textcolor{comment}{/* L2: */}
+306         \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[j + (k + l * 6 << 2) - 29] = zero;
+307         \}
+308     \}
+309     \textcolor{keywordflow}{if} (l > nhd) \{
+310         \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[(l * 6 + 5 << 2) - 28] = one;
+311     \}
+312     \textcolor{keywordflow}{if} (l > nhd) \{
+313         \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[(l * 6 + 5 << 2) - 27] = zero;
+314     \}
+315 \textcolor{comment}{/* L1: */}
+316     \}
+317 \textcolor{comment}{/* ****  FIRST WORD MUST BE SPLINE OR CURSEG */}
+318     \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[1] = (doublereal) nhd;
+319     irr = 1;
+320     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns - 1], test, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+321     \textcolor{keywordflow}{if} (s\_cmp(test, spline, (ftnlen)6, (ftnlen)6) != 0 && s\_cmp(test, curseg, 
+322         (ftnlen)6, (ftnlen)6) != 0) \{
+323     \textcolor{keywordflow}{goto} L998;
+324     \}
+325     \textcolor{keywordflow}{if} (s\_cmp(test, spline, (ftnlen)6, (ftnlen)6) == 0) \{
+326     sc[2] = 2.f;
+327     \}
+328     \textcolor{keywordflow}{if} (s\_cmp(test, curseg, (ftnlen)6, (ftnlen)6) == 0) \{
+329     sc[2] = 3.f;
+330     \}
+331     ++ns;
+332 
+333 L10:
+334     t = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns - 1];
+335     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&t, test, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+336     \textcolor{keywordflow}{if} (s\_cmp(test, end, (ftnlen)6, (ftnlen)6) == 0 || ns > nsize) \{
+337     \textcolor{keywordflow}{goto} L1000;
+338     \}
+339     \textcolor{keywordflow}{if} (t == point) \{
+340     \textcolor{keywordflow}{goto} L100;
+341     \}
+342     \textcolor{keywordflow}{if} (t == tanspl || t == crsspl || t == normal) \{
+343     \textcolor{keywordflow}{goto} L200;
+344     \}
+345     \textcolor{keywordflow}{if} (t == weight) \{
+346     \textcolor{keywordflow}{goto} L300;
+347     \}
+348     \textcolor{keywordflow}{if} (t == limit) \{
+349     \textcolor{keywordflow}{goto} L400;
+350     \}
+351 \textcolor{comment}{/* ****  ILLEGAL TERM IN INPUT STREAM */}
+352     irr = 2;
+353     \textcolor{keywordflow}{goto} L998;
+354 \textcolor{comment}{/* ---   PROCESS AN INPUT POINT */}
+355 L100:
+356     ++np;
+357     irr = 3;
+358     \textcolor{keywordflow}{if} (np > maxnop) \{
+359     \textcolor{keywordflow}{goto} L998;
+360     \}
+361     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+362 \textcolor{comment}{/* L110: */}
+363     sc[l + ((np + nhd) * 6 + 1 << 2) - 29] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + l - 1];
+364     \}
+365     ns += 4;
+366 
+367     \textcolor{keywordflow}{goto} L10;
+368 \textcolor{comment}{/* ---  PROCESS VECTOR CONSTRAINTS */}
+369 L200:
+370 \textcolor{comment}{/* ****  IF NO POINTS HAVE BEEN ENTERED, QUIT */}
+371     irr = 4;
+372     \textcolor{keywordflow}{if} (np == 0) \{
+373     \textcolor{keywordflow}{goto} L998;
+374     \}
+375     k = 2;
+376     \textcolor{keywordflow}{if} (t == crsspl) \{
+377     k = 3;
+378     \}
+379     \textcolor{keywordflow}{if} (t == normal) \{
+380     k = 4;
+381     \}
+382 \textcolor{comment}{/* ***   GEOMETRIC ENTRY SHOULD BE A VECTOR */}
+383     irr = 5;
+384     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 1] != vector) \{
+385     \textcolor{keywordflow}{goto} L998;
+386     \}
+387     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+388 \textcolor{comment}{/* L210: */}
+389     sc[l + (k + (np + nhd) * 6 << 2) - 29] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + l + 1];
+390     \}
+391     sc[(k + (np + nhd) * 6 << 2) - 25] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+392     ns += 6;
+393 
+394     \textcolor{keywordflow}{goto} L10;
+395 L300:
+396 \textcolor{comment}{/* ****  GEOMETRIC ARGUMENT MUST BE REAL */}
+397     irr = 6;
+398     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 1] != areal) \{
+399     \textcolor{keywordflow}{goto} L998;
+400     \}
+401 \textcolor{comment}{/* Computing MAX */}
+402     d\_\_1 = smal, d\_\_2 = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 2];
+403     wt = max(d\_\_1,d\_\_2);
+404     wt = min(one,wt);
+405     sc[((np + nhd) * 6 + 5 << 2) - 28] = wt;
+406     ns += 4;
+407 
+408     \textcolor{keywordflow}{if} (np > 0) \{
+409     \textcolor{keywordflow}{goto} L10;
+410     \}
+411 \textcolor{comment}{/* ---   IF WEIGHT COMES BEFORE THE FIRST POINT, THIS WEIGHT IS APPLIED */}
+412 \textcolor{comment}{/* ---  TO ALL POINTS */}
+413     i\_\_1 = m1;
+414     \textcolor{keywordflow}{for} (i\_\_ = nhd1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+415 \textcolor{comment}{/* L350: */}
+416     sc[(i\_\_ * 6 + 5 << 2) - 28] = wt;
+417     \}
+418 
+419     \textcolor{keywordflow}{goto} L10;
+420 \textcolor{comment}{/* ---  PROCESS INPUT LIMIT CONSTRAINT */}
+421 L400:
+422 \textcolor{comment}{/* ****  GEOMETRIC ARGUMENT MUST BE REAL */}
+423     irr = 6;
+424     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 1] != areal) \{
+425     \textcolor{keywordflow}{goto} L998;
+426     \}
+427 \textcolor{comment}{/* Computing MAX */}
+428     d\_\_1 = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}, d\_\_2 = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 2];
+429     al = max(d\_\_1,d\_\_2);
+430     al = min(big,al);
+431     sc[((nhd + np) * 6 + 5 << 2) - 27] = \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al};
+432     ns += 4;
+433 
+434     \textcolor{keywordflow}{if} (np > 0) \{
+435     \textcolor{keywordflow}{goto} L10;
+436     \}
+437     i\_\_1 = m1;
+438     \textcolor{keywordflow}{for} (i\_\_ = nhd1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+439 \textcolor{comment}{/* L450: */}
+440     sc[(i\_\_ * 6 + 5 << 2) - 27] = al;
+441     \}
+442 
+443     \textcolor{keywordflow}{goto} L10;
+444 \textcolor{comment}{/* ---   INPUT HAS BEEN FORMALLY LOADED INTO THE SC ARRAY */}
+445 \textcolor{comment}{/* ---  NOW CALL FOR ANALYTIC PROCESSING */}
+446 L1000:
+447     sc[3] = (doublereal) np;
+448 
+449     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.ssprt && \hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.sstest) \{
+450     \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(sc, scname, &\hyperlink{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)16);
+451     \}
+452 
+453     \hyperlink{SCURV_8c_ad02f5b94b1da7f5588408bd34e39e9b4}{scurv\_}(sc, &irr);
+454     \textcolor{keywordflow}{if} (irr != 0) \{
+455     ierror = irr;
+456     \}
+457     \textcolor{keywordflow}{if} (irr != 0) \{
+458     \textcolor{keywordflow}{goto} L996;
+459     \}
+460 
+461 \textcolor{comment}{/* ---   MOVE THE CURVE DATA FROM THE SCRATCH AREA TO BLANK COMMON */}
+462     kkc = 40;
+463     npplus = (integer) (np + sc[1]);
+464     i\_\_1 = npplus;
+465     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+466     \textcolor{keywordflow}{for} (j = 1; j <= 6; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+467         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+468         ++kkc;
+469 \textcolor{comment}{/* L9020: */}
+470         \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[kkc - 1] = sc[i\_\_ + (j + k * 6 << 2) - 29];
+471         \}
+472     \}
+473     \}
+474 
+475     \textcolor{keywordflow}{goto} L9000;
+476 
+477 \textcolor{comment}{/* ---      FETCH ALL CURVES FROM A SCURV/COMBIN COMMAND */}
+478 \textcolor{comment}{/* ---      NOTE LOGIC FOR TREATMENT OF CONFLICTING CRSSPL AND NORMAL */}
+479 \textcolor{comment}{/* ---      CONSTRAINT VECTORS AT CURVE JUNCTIONS. */}
+480 L3000:
+481     np = (integer) \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 2];
+482     k = 0;
+483     i\_\_1 = nsize;
+484     \textcolor{keywordflow}{for} (i\_\_ = ns; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+485     ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+486 \textcolor{comment}{/* L3100: */}
+487     \hyperlink{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}{sci}[k - 1] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[i\_\_ - 1];
+488     \}
+489     ns = nh;
+490     i\_\_ = 1;
+491     nblk = 0;
+492 L4000:
+493     ii = (i\_\_ << 1) - 1;
+494     jmode = 2;
+495     irr = 7;
+496     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}{sci}[ii - 1])) \{
+497     \textcolor{keywordflow}{goto} L998;
+498     \}
+499 
+500 \textcolor{comment}{/* ---     READ IN THE NEXT CURVE FROM THE INPUT STREAM. */}
+501 
+502     \hyperlink{APT094_8c_a0f023dd33aa032fb48b04d52fe365a14}{apt094\_}(&jmode, &\hyperlink{APT108_8c_a22cadac27b9902861ccf13a2567dcc91}{sci}[ii - 1], &\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns - 1]);
+503 \textcolor{comment}{/* **** */}
+504 \textcolor{comment}{/* ****    CURVES WITH A FLOW RATE CANNOT BE COMBINED YET */}
+505 \textcolor{comment}{/* ***      AT MOST ONE FLOW CURVE CAN BE COMBINED AT PRESENT */}
+506     \textcolor{keywordflow}{if} (i\_\_ > 1 && \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 1] > 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+507     \textcolor{keywordflow}{goto} L998;
+508     \}
+509     ns1 = ns;
+510     ns2 = ns + 24;
+511     nblk1 = (integer) \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + 2];
+512     nblk += nblk1;
+513     ns = nblk1 * 24 + ns;
+514     \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+515     \textcolor{keywordflow}{goto} L3200;
+516     \}
+517 
+518     \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\_}(&zero, &\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns2 - 1], \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+519     \hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[0] = (d\_\_1 = \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[0] - \hyperlink{APT108_8c_a2aaa0b0f6d733a20fb5300195465ce07}{scv0}[0], abs(d\_\_1));
+520     \hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[1] = (d\_\_1 = \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[1] - scv0[1], abs(d\_\_1));
+521     \hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[2] = (d\_\_1 = \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[2] - scv0[2], abs(d\_\_1));
+522 \textcolor{comment}{/* Computing MAX */}
+523     d\_\_1 = max(\hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[0],\hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[1]);
+524     ddmax = max(d\_\_1,\hyperlink{APT108_8c_ace399208e30e2c98f668e56c525d4122}{scv2}[2]);
+525 \textcolor{comment}{/* **** */}
+526     irr = 8;
+527     \textcolor{keywordflow}{if} (ddmax > smal1) \{
+528     \textcolor{keywordflow}{goto} L998;
+529     \}
+530     \textcolor{keywordflow}{if} (ddmax < smal) \{
+531     \textcolor{keywordflow}{goto} L3300;
+532     \}
+533     ddmax = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns2 + 11];
+534     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns2 - 1] = scv0[0] * ddmax;
+535     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns2 + 3] = scv0[1] * ddmax;
+536     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns2 + 7] = scv0[2] * ddmax;
+537 L3300:
+538     ddmax = (d\_\_1 = scv0[12] * \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[12] + scv0[13] * \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[13] + scv0[14] * 
+539         \hyperlink{APT108_8c_a84e4f2d2264405567083282b5a7ba00a}{scv1}[14] - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one}, abs(d\_\_1));
+540 \textcolor{comment}{/* **** */}
+541     irr = 9;
+542     \textcolor{keywordflow}{if} (ddmax > smal2) \{
+543     \textcolor{keywordflow}{goto} L998;
+544     \}
+545 
+546 L3400:
+547     \textcolor{keywordflow}{for} (j = 20; j <= 24; j += 4) \{
+548     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}[j - 1], abs(d\_\_1)) > smal) \{
+549         \textcolor{keywordflow}{goto} L3600;
+550     \}
+551     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns1 + j - 2], abs(d\_\_1)) < smal) \{
+552         \textcolor{keywordflow}{goto} L3600;
+553     \}
+554     \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+555 \textcolor{comment}{/* L3500: */}
+556         \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}[j + k - 5] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns1 + j + k - 6];
+557     \}
+558 L3600:
+559     ;
+560     \}
+561     \textcolor{keywordflow}{for} (k = 1; k <= 24; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+562 \textcolor{comment}{/* L3700: */}
+563     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns1 + k - 2] = \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}[k - 1];
+564     \}
+565 L3200:
+566     ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+567     \textcolor{keywordflow}{if} (i\_\_ > np) \{
+568     \textcolor{keywordflow}{goto} L3800;
+569     \}
+570     \textcolor{keywordflow}{for} (k = 1; k <= 24; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+571 \textcolor{comment}{/* L3900: */}
+572     \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}[k - 1] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[ns + k - 2];
+573     \}
+574     \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\_}(&one, \hyperlink{APT108_8c_ab1373e3d5118c2b8d1488387d4b33df9}{scb}, scv0, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+575     \textcolor{keywordflow}{goto} L4000;
+576 
+577 L3800:
+578     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 2] = (doublereal) nblk;
+579     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 1] = 4.f;
+580 
+581 \textcolor{comment}{/* ---     NORMAL PHYSICAL SHAPE OF CURVE HAS NOW BEEN GENERATED */}
+582 \textcolor{comment}{/* ---     FLOW/SEGMENTATION PROCESSING NOW FOLLOWS. */}
+583 
+584 L9000:
+585     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 3] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh] * 24.f + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+586 \textcolor{comment}{/* ---     NOW ZERO OUT PART OF THE HEADER TABLE CAREFULLY */}
+587     nn = 10;
+588     i\_\_1 = nn;
+589     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+590     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + i\_\_ + 4] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+591 \textcolor{comment}{/* L1005: */}
+592     \}
+593 
+594 \textcolor{comment}{/* ---     IF NO FLOW INPUT IS AVAILABLE, SAVE THE CURVE DATA */}
+595 \textcolor{comment}{/* ---     ON AN EXTERNAL FILE */}
+596     \textcolor{keywordflow}{if} (iflseg == 0) \{
+597     \textcolor{keywordflow}{goto} L9010;
+598     \}
+599 
+600     \hyperlink{FLOSEG_8c_ae676909061cd7cd0ffe5a99f54de2fef}{floseg\_}(&nsize, &nszsav, &\hyperlink{APT108_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &iflseg, &irr);
+601     \textcolor{keywordflow}{if} (irr != 0) \{
+602     \textcolor{keywordflow}{goto} L995;
+603     \}
+604 
+605 
+606 L9010:
+607 \textcolor{comment}{/* ---     SAVE SURFACE ON EXTERNAL FILE */}
+608 \textcolor{comment}{/* ---      FIRST SAVE THE SIZE OF THE ARRAY IN THE INTERNAL FORM */}
+609 
+610     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 3] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh] * 24.f + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+611     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 6] < smal) \{
+612     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 10] = (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh] + \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 2]) * 24.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+613     \}
+614     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 6] < smal) \{
+615     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 11] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+616     \}
+617 
+618     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] = \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 10];
+619 \textcolor{comment}{/* L6100: */}
+620 
+621 \textcolor{comment}{/*   BESTIMMUNG DER APT-RECORD-NR. */}
+622     irec = -5;
+623     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{APT108_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.axfile, &irec);
+624     \hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh - 1] = (doublereal) irec;
+625     isprnt = 2;
+626     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.sstest) \{
+627     isprnt = 3;
+628     \}
+629     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.ssprt) \{
+630     \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(&\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh - 1], scname, &isprnt, (ftnlen)16);
+631     \}
+632     \textcolor{keywordflow}{if} (s\_cmp(test2, traf, (ftnlen)6, (ftnlen)6) == 0) \{
+633     \hyperlink{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4}{sctra\_}(xmatrx, &\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1], &\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh - 1], &isprnt);
+634     \}
+635     kkmode = 1;
+636     \hyperlink{APT094_8c_a0f023dd33aa032fb48b04d52fe365a14}{apt094\_}(&kkmode, &\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1], &\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh - 1]);
+637     irr = 0;
+638 
+639 \textcolor{comment}{/* ---     SET THE MODE FOR LEVEL OF VERIFICATION PRINT */}
+640     \textcolor{keywordflow}{goto} L9999;
+641 
+642 \textcolor{comment}{/* ****    AREA OF CODE TO HANDLE MOST ERROR MESSAGES AND TERMINATIONS */}
+643 L998:
+644     ierror = irr + 5120;
+645 L996:
+646     s\_copy(rname, rnama, (ftnlen)8, (ftnlen)8);
+647     i\_\_1 = imax1;
+648     \textcolor{keywordflow}{for} (il1 = 1; il1 <= i\_\_1; ++il1) \{
+649 \textcolor{comment}{/* L7001: */}
+650     \textcolor{keywordflow}{if} (ierror == izal1[il1 - 1]) \{
+651         s\_copy(rname, rnam1, (ftnlen)8, (ftnlen)8);
+652     \}
+653     \}
+654     i\_\_1 = imax2;
+655     \textcolor{keywordflow}{for} (il2 = 1; il2 <= i\_\_1; ++il2) \{
+656 \textcolor{comment}{/* L7002: */}
+657     \textcolor{keywordflow}{if} (ierror == izal2[il2 - 1]) \{
+658         s\_copy(rname, rnam2, (ftnlen)8, (ftnlen)8);
+659     \}
+660     \}
+661     i\_\_1 = imax3;
+662     \textcolor{keywordflow}{for} (il3 = 1; il3 <= i\_\_1; ++il3) \{
+663 \textcolor{comment}{/* L7003: */}
+664     \textcolor{keywordflow}{if} (ierror == izal3[il3 - 1]) \{
+665         s\_copy(rname, rnam3, (ftnlen)8, (ftnlen)8);
+666     \}
+667     \}
+668     i\_\_1 = imax4;
+669     \textcolor{keywordflow}{for} (il4 = 1; il4 <= i\_\_1; ++il4) \{
+670 \textcolor{comment}{/* L7004: */}
+671     \textcolor{keywordflow}{if} (ierror == izal4[il4 - 1]) \{
+672         s\_copy(rname, rnam4, (ftnlen)8, (ftnlen)8);
+673     \}
+674     \}
+675     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&ierror, rname, (ftnlen)8);
+676     \textcolor{keywordflow}{if} (irr == 9) \{
+677     \textcolor{keywordflow}{goto} L3400;
+678     \}
+679     \textcolor{keywordflow}{if} (s\_cmp(test1, combin, (ftnlen)6, (ftnlen)6) == 0) \{
+680     \textcolor{keywordflow}{goto} L995;
+681     \}
+682 
+683     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.ssprt && \hyperlink{APT108_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.sstest) \{
+684     \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(sc, scname, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (ftnlen)16);
+685     \}
+686 L995:
+687     \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(&\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1]);
+688 
+689 \textcolor{comment}{/* ****    TERMINATION OF ERROR HANDLING CODE */}
+690 
+691 \textcolor{comment}{/* ---    QUIT PROCESSING HERE */}
+692 L9999:
+693 
+694     \textcolor{keywordflow}{if} (\hyperlink{APT108_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+695     \textcolor{keywordflow}{goto} L9711;
+696     \}
+697 \textcolor{comment}{/* ---      DUMP THE ENTIRE SCURV ARRAY */}
+698     ntop = (integer) (\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[nh + 10] + nh - 1);
+699     nbot = nh;
+700     i\_\_1 = ntop;
+701     \textcolor{keywordflow}{for} (i\_\_ = nbot; i\_\_ <= i\_\_1; i\_\_ += 4) \{
+702     \textcolor{keywordflow}{if} ((i\_\_ - nbot) % 24 == 0) \{
+703         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APT108_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+704     \}
+705     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APT108_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\_n4}, &\hyperlink{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"CANN"}, &\hyperlink{APT108_8c_a68d3ba380c16e286247bb69367760615}{canon}[i\_\_ - 1], (ftnlen)4);
+706 \textcolor{comment}{/* L9712: */}
+707     \}
+708 L9711:
+709 
+710     \textcolor{keywordflow}{return} 0;
+711 \} \textcolor{comment}{/* apt108\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{APT108_8c_a104a049e41b6550bc263e966515ee483_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT108_8c_a104a049e41b6550bc263e966515ee483_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{APT108_8c_a12b2d5778654fb23de66494638116603}{}\label{APT108_8c_a12b2d5778654fb23de66494638116603}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{APT108_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{APT108_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{APT108_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 64 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{APT108_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 59 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}}
+\index{c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+10}{c__10}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+10 = 10\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_aa084e2bf75ab962319da4c4c7dddea02}{}\label{APT108_8c_aa084e2bf75ab962319da4c4c7dddea02}
+
+
+Definition at line 61 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{APT108_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 65 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}}
+\index{c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+4}{c__4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+4 = 4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_ab195470f8c6d55e333ee709af09ba2d6}{}\label{APT108_8c_ab195470f8c6d55e333ee709af09ba2d6}
+
+
+Definition at line 62 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}}
+\index{c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+6}{c__6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+6 = 6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}{}\label{APT108_8c_a3543660f1ae989ebc88144db7ea3ecfd}
+
+
+Definition at line 63 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{APT108_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 60 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a9e9287f317ef3436252a395791a899f6}{}\label{APT108_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 66 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!c\+\_\+n4@{c\+\_\+n4}}
+\index{c\+\_\+n4@{c\+\_\+n4}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n4}{c_n4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n4 = -\/4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT108_8c_a900642cfb0fdb02c80380e0b73330cb5}{}\label{APT108_8c_a900642cfb0fdb02c80380e0b73330cb5}
+
+
+Definition at line 67 of file A\+P\+T108.\+c.
+
+
+
+Referenced by apt108\+\_\+().
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{APT108_8c_afddbf18370447268640d26c983890fd1}{}\label{APT108_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{APT108_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{APT108_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{APT108_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{APT108_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!com@{com}}
+\index{com@{com}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{APT108_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{APT108_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 24 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{APT108_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{APT108_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!darray@{darray}}
+\index{darray@{darray}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{darray}{darray}}]{\setlength{\rightskip}{0pt plus 5cm}char darray\mbox{[}120\mbox{]}}\hypertarget{APT108_8c_ad8149129b0ac5c966968e55ba6106146}{}\label{APT108_8c_ad8149129b0ac5c966968e55ba6106146}
+
+
+Definition at line 52 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{APT108_8c_a0fda6abb2262818e6f2a8ae1cc9d9495}{}\label{APT108_8c_a0fda6abb2262818e6f2a8ae1cc9d9495}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{APT108_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{APT108_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{APT108_8c_a995bd688c87d82736860b413de2416d4}{}\label{APT108_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{APT108_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{APT108_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{APT108_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{APT108_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{APT108_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{APT108_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{APT108_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{APT108_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{APT108_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{APT108_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{APT108_8c_ad720089544b746d650986a5faafa4f3b}{}\label{APT108_8c_ad720089544b746d650986a5faafa4f3b}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{APT108_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{APT108_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{APT108_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{APT108_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{APT108_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{APT108_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 18 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!iscan@{iscan}}
+\index{iscan@{iscan}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{iscan}{iscan}}]{\setlength{\rightskip}{0pt plus 5cm}integer iscan}\hypertarget{APT108_8c_a4f36f70535ff45e43613827fb1a9c44c}{}\label{APT108_8c_a4f36f70535ff45e43613827fb1a9c44c}
+
+
+Definition at line 30 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{APT108_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{APT108_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{APT108_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{APT108_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{APT108_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{APT108_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{APT108_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{APT108_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{APT108_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{APT108_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{APT108_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{APT108_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!nscnmx@{nscnmx}}
+\index{nscnmx@{nscnmx}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{nscnmx}{nscnmx}}]{\setlength{\rightskip}{0pt plus 5cm}integer nscnmx}\hypertarget{APT108_8c_ab26b43007e1470a6812269aedc276cc4}{}\label{APT108_8c_ab26b43007e1470a6812269aedc276cc4}
+
+
+Definition at line 30 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{APT108_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{APT108_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{APT108_8c_af29300e691e97a062da856325402d3e9}{}\label{APT108_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{APT108_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{APT108_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!scan@{scan}}
+\index{scan@{scan}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{scan}{scan}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal scan\mbox{[}20000\mbox{]}}\hypertarget{APT108_8c_a054b516dd6020a563cf155a4b217ec26}{}\label{APT108_8c_a054b516dd6020a563cf155a4b217ec26}
+
+
+Definition at line 31 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sspad\+\_\+@{sspad\+\_\+}}
+\index{sspad\+\_\+@{sspad\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sspad\+\_\+}{sspad_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sspad\+\_\+}\hypertarget{APT108_8c_a3846e1678b8d35fed823f88ff93dca79}{}\label{APT108_8c_a3846e1678b8d35fed823f88ff93dca79}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ssprt@{ssprt}}
+\index{ssprt@{ssprt}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ssprt}{ssprt}}]{\setlength{\rightskip}{0pt plus 5cm}logical ssprt}\hypertarget{APT108_8c_aabdefdae02ca0201c3c281c4bdde30ee}{}\label{APT108_8c_aabdefdae02ca0201c3c281c4bdde30ee}
+
+
+Definition at line 46 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!ssprt\+\_\+@{ssprt\+\_\+}}
+\index{ssprt\+\_\+@{ssprt\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{ssprt\+\_\+}{ssprt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssprt\+\_\+}\hypertarget{APT108_8c_a32c8f4bf74dc8bff7ca0c32dc154d542}{}\label{APT108_8c_a32c8f4bf74dc8bff7ca0c32dc154d542}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!sstest@{sstest}}
+\index{sstest@{sstest}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{sstest}{sstest}}]{\setlength{\rightskip}{0pt plus 5cm}logical sstest}\hypertarget{APT108_8c_a6f4ecf11f208ba0b39a3243a1c308209}{}\label{APT108_8c_a6f4ecf11f208ba0b39a3243a1c308209}
+
+
+Definition at line 46 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{APT108_8c_aa490494df0b57331beebcaa103cd92fc}{}\label{APT108_8c_aa490494df0b57331beebcaa103cd92fc}
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{APT108_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{APT108_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{APT108_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{APT108_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{APT108_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{APT108_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+
+\index{A\+P\+T108.\+c@{A\+P\+T108.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!A\+P\+T108.\+c@{A\+P\+T108.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{APT108_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{APT108_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 37 of file A\+P\+T108.\+c.
+

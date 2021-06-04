@@ -1,0 +1,249 @@
+\hypertarget{ADER_8c}{}\section{A\+D\+E\+R.\+c File Reference}
+\label{ADER_8c}\index{A\+D\+E\+R.\+c@{A\+D\+E\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+D\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{ADER_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd}{ader\+\_\+} (doublereal $\ast$\hyperlink{POCKET_8c_a1a3cb32dae0fdb9b8cbf24411186a6f2}{dif}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, doublereal $\ast$area)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{ADER_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+D\+E\+R.\+c@{A\+D\+E\+R.\+c}!ader\+\_\+@{ader\+\_\+}}
+\index{ader\+\_\+@{ader\+\_\+}!A\+D\+E\+R.\+c@{A\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ader\+\_\+(doublereal $\ast$dif, doublereal $\ast$ta, doublereal $\ast$tb, doublereal $\ast$a, doublereal $\ast$b, doublereal $\ast$u, integer $\ast$mode, doublereal $\ast$area)}{ader_(doublereal *dif, doublereal *ta, doublereal *tb, doublereal *a, doublereal *b, doublereal *u, integer *mode, doublereal *area)}}]{\setlength{\rightskip}{0pt plus 5cm}int ader\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{dif, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tb, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{u, }
+\item[{integer $\ast$}]{mode, }
+\item[{doublereal $\ast$}]{area}
+\end{DoxyParamCaption}
+)}\hypertarget{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd}{}\label{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd}
+
+
+Definition at line 21 of file A\+D\+E\+R.\+c.
+
+
+
+References c\+\_\+\+\_\+2, cncurv\+\_\+(), cross\+\_\+(), dif, dotf\+\_\+(), f, i1, i\+\_\+\+\_\+, one, ta, tab, tb, u, vdotf\+\_\+(), x, y, and zero.
+
+
+
+Referenced by crvlen\+\_\+().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{comment}{/* Initialized data */}
+26 
+27     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+28     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+29     \textcolor{keyword}{static} doublereal big = 1e8;
+30     \textcolor{keyword}{static} doublereal smal = 1e-8;
+31 
+32     \textcolor{comment}{/* System generated locals */}
+33     doublereal d\_\_1, d\_\_2;
+34 
+35     \textcolor{comment}{/* Builtin functions */}
+36     \textcolor{keywordtype}{double} sqrt(doublereal);
+37 
+38     \textcolor{comment}{/* Local variables */}
+39     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+40     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{APT088_8c_a0ed6a908288e0cd87f79c1b5ab56d07c}{y};
+41     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1};
+42     \textcolor{keyword}{static} doublereal ca[3], cb[3], qa, qb, cv[16], xa, xb, ya, yb, xg, xh, 
+43         xk, fac, \hyperlink{APT088_8c_afaa1188c28b8385279e9fbdc70873fb0}{tab}[3], tad[3], tbd[3], xaa, xab, xbb, yaa, ybb, yab, 
+44         rarb;
+45     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+46         );
+47     \textcolor{keyword}{static} doublereal rpra, rprb, rasq, rbsq, drsq, curv[16], recip;
+48     \textcolor{keyword}{extern} doublereal \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(doublereal *, doublereal *);
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+50         *), \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\_}(doublereal *, doublereal *, doublereal *, integer *);
+51 
+52 \textcolor{comment}{/* ---      PURPOSE IS TO COMPUTE TENSION AND FIRST AND SECOND */}
+53 \textcolor{comment}{/* ---      PARTIAL DERIVATIVES OF TENSION WITH RESPECT TO A AND B */}
+54 \textcolor{comment}{/* ---      INPUT CONSISTS OF THE FOLLOWING */}
+55 \textcolor{comment}{/* ---      CHORD VECTOR DIF OF PARAMETRIC CUBIC */}
+56 \textcolor{comment}{/* ---      FIRST TANGENT A*TA AND LAST TANGENT VECTOR B*TB */}
+57 \textcolor{comment}{/* ---      U=PARAMETRIC VALUE AT WHICH TO EVALUATE TENSION */}
+58 \textcolor{comment}{/* ---      MODE=1 ON FIRST ENTRY -- SETUP SOME INVARIANT VALUES */}
+59 \textcolor{comment}{/* ---      MODE=0 ON SUBSEQUENT ENTRIES. */}
+60 \textcolor{comment}{/* ---      OUTPUT IS PLACED IN AREA (1 - 6) AS FOLLOWS. */}
+61 \textcolor{comment}{/* ---      AREA(1) = K*K*DS WHERE K=CURVATURE AND DS=RATE OF CHANGE */}
+62 \textcolor{comment}{/* ---      OF ARC LENGTH WITH RESPECT TO COONS PARAMETER U. */}
+63 \textcolor{comment}{/* ---      AREA(2)= PARTIAL WRT A OF AREA(1) */}
+64 \textcolor{comment}{/* ---      AREA(3)= PARTIAL WRT B OF AREA(1) */}
+65 \textcolor{comment}{/* ---      AREA(4)= PARTIAL WRT TO A TWICE OF AREA(1) */}
+66 \textcolor{comment}{/* ---      AREA(5)= PARTIAL WRT TO A AND B OF AREA(1) */}
+67 \textcolor{comment}{/* ---      AREA(6)= PARTIAL WRT TO B TWICE OF AREA(1) */}
+68 
+69 
+70     \textcolor{comment}{/* Parameter adjustments */}
+71     --area;
+72     --\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+73     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+74     --\hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif};
+75 
+76     \textcolor{comment}{/* Function Body */}
+77 
+78     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+79     \textcolor{keywordflow}{goto} L100;
+80     \}
+81 \textcolor{comment}{/* ---IF MODE IS 1 THIS IS FIRST PASS THRU ADER */}
+82 \textcolor{comment}{/* ---COMPUTE INVARIANT DATA FOR THIS AND SUBSEQUENT CALLS */}
+83 \textcolor{comment}{/* ---SET UP COONS CANNON FORM OF CURV */}
+84     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+85     i1 = (i\_\_ - 1 << 2) + 1;
+86     curv[i1 - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+87     curv[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}] = \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+88     curv[i1 + 1] = *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+89     curv[i1 + 2] = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} * \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+90 \textcolor{comment}{/* L10: */}
+91     \}
+92     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+93     curv[i\_\_ + 11] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+94 \textcolor{comment}{/* L20: */}
+95     curv[i\_\_ + 13] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+96     \}
+97     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], tab);
+98     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[1], tad);
+99     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], &\hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[1], tbd);
+100 
+101 L100:
+102 \textcolor{comment}{/* ---COMPUTE COEFFICIENTS OF DR X DDR WHERE DR X DDR= */}
+103 \textcolor{comment}{/* ---  XG*A*B*TAB + XH * A * TAD + XK * B * TBD */}
+104 \textcolor{comment}{/* Computing 2nd power */}
+105     d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+106     xg = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} * 6.f - 2.f - d\_\_1 * d\_\_1 * 6.f;
+107 \textcolor{comment}{/* Computing 2nd power */}
+108     d\_\_1 = one - *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+109     xh = d\_\_1 * d\_\_1 * 6.f;
+110 \textcolor{comment}{/* Computing 2nd power */}
+111     d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+112     xk = d\_\_1 * d\_\_1 * -6.f;
+113 \textcolor{comment}{/* ---COMPUTE CURVE COEFFICIENTS */}
+114     \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\_}(u, curv, cv, &\hyperlink{ADER_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+115 
+116     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&cv[4], &cv[8], &cv[12]);
+117 \textcolor{comment}{/* ---COMPUTE DERIVATIVE FRAGMENTS OF DR X DDR */}
+118     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+119     ca[i\_\_ - 1] = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} * \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * xg + \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * xh;
+120     cb[i\_\_ - 1] = -(*a) * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * xg + \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * xk;
+121 \textcolor{comment}{/* L120: */}
+122     \}
+123     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], ca, ca);
+124     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[1], cb, cb);
+125 \textcolor{comment}{/* ---COMPUTE ALL PARTIAL DERIVATIVES OF (DR X DDR )**2 WRT A NND B */}
+126     x = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(&cv[12], &cv[12]);
+127     xa = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(&cv[12], ca) * 2.f;
+128     xb = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(&cv[12], cb) * 2.f;
+129     xaa = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(ca, ca) * 2.f;
+130     xab = (\hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(ca, cb) + \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(&cv[12], tab) * xg) * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+131     xbb = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(cb, cb) * 2.f;
+132 
+133 \textcolor{comment}{/* ---NEXT COMPUTE ALL PARTIAL DERIVATIVES OF (DR**2)**(-5/2) */}
+134     drsq = \hyperlink{VDOTF_8c_a3ae62cd9ea863ba14d3a0c944f95e021}{vdotf\_}(&cv[4], &cv[4]);
+135     drsq = min(big,drsq);
+136     drsq = max(smal,drsq);
+137     recip = 1.f / sqrt(drsq);
+138 \textcolor{comment}{/* Computing 5th power */}
+139     d\_\_1 = recip, d\_\_2 = d\_\_1, d\_\_1 *= d\_\_1;
+140     y = d\_\_2 * (d\_\_1 * d\_\_1);
+141 \textcolor{comment}{/* Computing 7th power */}
+142     d\_\_1 = recip, d\_\_2 = d\_\_1, d\_\_1 *= d\_\_1, d\_\_2 *= d\_\_1;
+143     fac = d\_\_2 * (d\_\_1 * d\_\_1) * 5.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+144 \textcolor{comment}{/* Computing 2nd power */}
+145     d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+146     qa = 1.f - *u * 4.f + d\_\_1 * d\_\_1 * 3.f;
+147 \textcolor{comment}{/* Computing 2nd power */}
+148     d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+149     qb = *u * -2.f + d\_\_1 * d\_\_1 * 3.f;
+150     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+151     ca[i\_\_ - 1] = \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * qa;
+152     cb[i\_\_ - 1] = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * qb;
+153 \textcolor{comment}{/* L130: */}
+154     \}
+155 \textcolor{comment}{/* ---COMPUTE INPUT DOT PRODUCTS */}
+156     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rpra, &cv[4], ca);
+157     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rprb, &cv[4], cb);
+158     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rarb, ca, cb);
+159     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rasq, ca, ca);
+160     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rbsq, cb, cb);
+161     ya = -fac * rpra;
+162     yb = -fac * rprb;
+163 \textcolor{comment}{/* ---COMPUTE SECOND ORDER PARTIALS OF Y WRT A AND B */}
+164 \textcolor{comment}{/* Computing 2nd power */}
+165     d\_\_1 = rpra;
+166     yaa = fac * (d\_\_1 * d\_\_1 * 7.f / drsq - rasq);
+167 \textcolor{comment}{/* Computing 2nd power */}
+168     d\_\_1 = rprb;
+169     ybb = fac * (d\_\_1 * d\_\_1 * 7.f / drsq - rbsq);
+170     yab = fac * (rpra * 7.f * rprb / drsq - rarb);
+171 
+172 \textcolor{comment}{/* ---COMPUTE PARTIALS OF X*Y WRT TO A AND B AND RETURN */}
+173     area[1] = x * \hyperlink{APT088_8c_a0ed6a908288e0cd87f79c1b5ab56d07c}{y};
+174     area[2] = xa * y + x * ya;
+175     area[3] = xb * y + x * yb;
+176     area[4] = xaa * y + xa * 2.f * ya + x * 2.f * yaa;
+177     area[6] = xbb * y + xb * 2.f * yb + x * 2.f * ybb;
+178     area[5] = xab * y + xa * yb + xb * ya + x * yab;
+179 
+180     \textcolor{keywordflow}{return} 0;
+181 \} \textcolor{comment}{/* ader\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ADER_8c_acdb67c3dce6a41bbf424e47f666cb7fd_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+D\+E\+R.\+c@{A\+D\+E\+R.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!A\+D\+E\+R.\+c@{A\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ADER_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{ADER_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file A\+D\+E\+R.\+c.
+
+
+
+Referenced by ader\+\_\+().
+

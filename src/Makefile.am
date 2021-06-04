@@ -8,6 +8,7 @@ AM_FCFLAGS = -I$(top_srcdir)/src/include  #-O0
 bin_PROGRAMS=apt4ssv3
 
 
+
 apt4ssv3_SOURCES = \
 aptfun/ANGLFB.f aptfun/CANF.f aptfun/DISTF.f aptfun/DOTF.f aptfun/LNTHF.f \
 aptfun/MINMAX.f aptfun/NEWFUNCS.f aptfun/NUMF.f aptfun/PARMF.f aptfun/SPATF.f \
@@ -147,13 +148,17 @@ utility/FREAD.f utility/HEX.f utility/HOLFRM.f utility/ICONV.f \
 utility/NNTAIN.f utility/OUTMSG.f utility/PUNIDN.f utility/PUNIDS.f \
 utility/RDSATZ.f utility/SHIFT.f utility/SPRINT.f utility/STRTSH.f \
 utility/TAPOP.f utility/TRASH.f utility/WTSATZ.f \
-vax/ADDRSS.f vax/APT201.f vax/apt211.f vax/APT241.f vax/ARTIME.f vax/BD2ITL.f \
-vax/BDLIBC.f vax/CLOSPE.f vax/CPUTIM.f vax/CUTTES.f vax/FILOPN.f vax/FINDME.f \
-vax/GO.f vax/LIBOPC.f vax/LIBRD.f vax/LIBSCH.f vax/OUTSET.f vax/PARNOM.f \
-vax/PUNCHA.f vax/PUNCHC.f vax/TAPEPN.f vax/WTDIRE.f \
+ibm/APT201.f ibm/ARTIME.f ibm/BD2ITL.f ibm/CLOSPE.f ibm/CPUTIM.f ibm/CUTTER.f \
+ibm/FILOPN.f ibm/FINDME.f ibm/GO.f ibm/LIBOPC.f ibm/LIBRD.f ibm/ADDRSS.f \
+ibm/LIBSCH.f ibm/OUTSET.f ibm/PARNOM.f ibm/PUNCHA.f ibm/PUNCHC.f ibm/TAPEPN.f \
+ibm/WTDIRE.f ibm/APT241.f \
 xecution/ADV.f xecution/DAT0.f xecution/DELALL.f xecution/EXEC.f xecution/GET.f \
 xecution/IMAIN.f xecution/INIT.f xecution/INTRP.f xecution/LIB.f xecution/PAGE.f \
 xecution/PUT.f xecution/RESRV.f xecution/SAVEAC.f xecution/SEQ.f xecution/SET.f \
 xecution/UNASGN.f xecution/XCALL.f xecution/XCANON.f xecution/XNUMBR.f \
 dummy.f fort1.f fort2.f fort3.f
 
+#vax/ADDRSS.f vax/APT201.f vax/apt211.f vax/APT241.f vax/ARTIME.f vax/BD2ITL.f \
+#vax/BDLIBC.f vax/CLOSPE.f vax/CPUTIM.f vax/CUTTES.f vax/FILOPN.f vax/FINDME.f \
+#vax/GO.f vax/LIBOPC.f vax/LIBRD.f vax/LIBSCH.f vax/OUTSET.f vax/PARNOM.f \
+#vax/PUNCHA.f vax/PUNCHC.f vax/TAPEPN.f vax/WTDIRE.f 

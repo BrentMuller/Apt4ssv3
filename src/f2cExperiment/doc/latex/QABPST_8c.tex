@@ -1,0 +1,124 @@
+\hypertarget{QABPST_8c}{}\section{Q\+A\+B\+P\+S\+T.\+c File Reference}
+\label{QABPST_8c}\index{Q\+A\+B\+P\+S\+T.\+c@{Q\+A\+B\+P\+S\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for Q\+A\+B\+P\+S\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{QABPST_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+doublereal \hyperlink{QABPST_8c_aaa2ef085557a457caaf7c98409c39e2f}{qabpst\+\_\+} (doublereal $\ast$\hyperlink{TLNORM_8c_ae00530def7fb9219b16d51f103557608}{p1}, doublereal $\ast$\hyperlink{TLNORM_8c_a4355b783bf60e3970c7d8e37144b1f4e}{p2}, doublereal $\ast$\hyperlink{POLPOL_8c_ac4ca304cd28414de1f88d44c0d2c1706}{p3})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Q\+A\+B\+P\+S\+T.\+c@{Q\+A\+B\+P\+S\+T.\+c}!qabpst\+\_\+@{qabpst\+\_\+}}
+\index{qabpst\+\_\+@{qabpst\+\_\+}!Q\+A\+B\+P\+S\+T.\+c@{Q\+A\+B\+P\+S\+T.\+c}}
+\subsubsection[{\texorpdfstring{qabpst\+\_\+(doublereal $\ast$p1, doublereal $\ast$p2, doublereal $\ast$p3)}{qabpst_(doublereal *p1, doublereal *p2, doublereal *p3)}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal qabpst\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{p1, }
+\item[{doublereal $\ast$}]{p2, }
+\item[{doublereal $\ast$}]{p3}
+\end{DoxyParamCaption}
+)}\hypertarget{QABPST_8c_aaa2ef085557a457caaf7c98409c39e2f}{}\label{QABPST_8c_aaa2ef085557a457caaf7c98409c39e2f}
+
+
+Definition at line 17 of file Q\+A\+B\+P\+S\+T.\+c.
+
+
+
+References a, b, d\+\_\+\+\_\+, dotf\+\_\+(), h\+\_\+\+\_\+, i\+\_\+\+\_\+, p1, p2, p3, v2, and v3.
+
+
+
+Referenced by gochor\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* System generated locals */}
+20     doublereal ret\_val;
+21 
+22     \textcolor{comment}{/* Builtin functions */}
+23     \textcolor{keywordtype}{double} sqrt(doublereal);
+24 
+25     \textcolor{comment}{/* Local variables */}
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_}[3];
+27     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+28     \textcolor{keyword}{static} doublereal \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3], \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[3];
+29     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+30         );
+31 
+32 
+33 \textcolor{comment}{/*  PURPOSE: TO COMPUTE THE DISTANCE OF A POINT FROM A SPACE LINE */}
+34 
+35 \textcolor{comment}{/*  ARGUMENTS: */}
+36 \textcolor{comment}{/*            P1    D.P.  1ST POINT OF SPACE LINE */}
+37 \textcolor{comment}{/*            P2    D.P.  2ND POINT OF SPACE LINE */}
+38 \textcolor{comment}{/*            P3    D.P.  POINT */}
+39 
+40 
+41 
+42     \textcolor{comment}{/* Parameter adjustments */}
+43     --\hyperlink{POLPOL_8c_ac4ca304cd28414de1f88d44c0d2c1706}{p3};
+44     --\hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2};
+45     --\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1};
+46 
+47     \textcolor{comment}{/* Function Body */}
+48     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+49     v2[i\_\_ - 1] = \hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+50     v3[i\_\_ - 1] = \hyperlink{POLPOL_8c_ac4ca304cd28414de1f88d44c0d2c1706}{p3}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - p1[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+51 \textcolor{comment}{/* L10: */}
+52     \}
+53 
+54     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, v3, v2);
+55     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&b, v2, v2);
+56 
+57     \textcolor{keywordflow}{if} (b > 1e-10) \{
+58     a /= \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+59     \} \textcolor{keywordflow}{else} \{
+60 \textcolor{comment}{/* .... IF LINE PIS VERY SHORT ASSUME PERPENDICULAR MEETS LINE AT MIDPOIN */}
+61     a = .5f;
+62     \}
+63 
+64     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+65     h\_\_[i\_\_ - 1] = v3[i\_\_ - 1] - a * v2[i\_\_ - 1];
+66 \textcolor{comment}{/* L20: */}
+67     \}
+68 
+69     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&d\_\_, h\_\_, h\_\_);
+70 
+71     ret\_val = sqrt(d\_\_);
+72 
+73     \textcolor{keywordflow}{return} ret\_val;
+74 \} \textcolor{comment}{/* qabpst\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{QABPST_8c_aaa2ef085557a457caaf7c98409c39e2f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{QABPST_8c_aaa2ef085557a457caaf7c98409c39e2f_icgraph}
+\end{center}
+\end{figure}
+
+

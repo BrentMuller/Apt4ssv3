@@ -1,0 +1,355 @@
+**** SOURCE FILE : M0000889.V07   ***
+*
+C.....FORTRAN SUBROUTINE  ....DDRLSR         8/68                 RN,PH
+C...  FORTRAN SUBROUTINE               DDRLSR
+C
+C              FORTRAN SUBROUTINE DDRLSR
+C
+C PURPOSE      TO CALCULATE THE SCALAR S,GIVEN THE VECTORS TP AND TN,
+C              SUCH THAT TP+S*TN IS A POINT ON THE RULED SURFACE AND
+C              ALSO TO CALCULATE THE SURFACE NORMAL AT THAT POINT
+C
+C LINKAGE      CALL DDRLSR
+C
+C CALLS        VNORM,CROSS
+C
+C
+      SUBROUTINE DDRLSR
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION (O-Z)
+      DOUBLE PRECISION LCANON
+C
+      INCLUDE 'TOTAL.INC'
+C...  ALL REFERENCES TO ARRAY R HAVE BEEN CHANGED TO R0,
+C...  BECAUSE R OCCURS IN DSHAR4.INC.
+      INCLUDE 'DSHAR4.INC'
+      INCLUDE 'FXCOR.INC'
+      INCLUDE 'SV.INC'
+      INCLUDE 'ISV.INC'
+      INCLUDE 'IFXCOR.INC'
+C
+C
+C              COMMON,DIMENSION AND EQUIVALENCE FOR RLDSR
+C
+      INCLUDE 'BLANKCOM.INC'
+C
+      DIMENSION LCANON(COMSIZ)
+      EQUIVALENCE  (CANON(1),P(1),W(1),F(1),PP(1),
+     /                      WP(1),VP(1),LCANON(1)),
+     1            (CANON(18),R2(3),R3(6),R0(9),SL(12),ZN(15),ZLAMBD(16),
+     2             DELTA(17),IFST(18))
+      DIMENSION P(COMSIZ),W(COMSIZ),F(COMSIZ),PP(COMSIZ),WP(COMSIZ),
+     1VP(COMSIZ),ZN(COMSIZ-3),SL(COMSIZ-6),R3(COMSIZ-12),R2(COMSIZ-15),
+     2R0(COMSIZ-9),Q1(3),W1(3),V1(3),Q2(3),W2(3),V2(3),D(3),PO(3),DV(3),
+     3         DVP(3),E(3),DC(3),DCP(3),SC(3),CP(3),X(3),FC(3),UT1(3),
+     4T1(3),AA(3),BB(3),IFST(COMSIZ),DELTA(COMSIZ-1),ZLAMBD(COMSIZ-2)
+     5   ,S1(3),SPLL(3),SNLL(3)
+     6        ,SPLLL(3)
+C              NOTE THIS SUBROUTINE HAS BEEN COPIED FORM THE APT SYSTEM
+C                   CURRANT AS OF 9/1/67. NONE OF THE NAMES HAVE BEEN
+C                   CHANGED TO PROTECT THE INNOCENT.
+C...           (EXCEPT FOR R, AS MENTIONED WITH THE INCLUDE STATEMENTS)
+      DIMENSION LCIC(12)
+      DOUBLE PRECISION IFST
+      COMMON/TRACFL/TRACFL
+      LOGICAL TRACFL
+C     INITIALIZE
+C
+      ILIM = IC+160
+      ICSS = IC
+      IOPS = IOP(IS)
+      I=ICANON(IS)
+      JSW1 = ISFIDN(IS)
+      IOP(IS) = -1
+      IGUESS = 0
+      LOOP = 25
+      EP2 = .00001
+      DO 10 I = 1,3
+      D(I) = TN(I,IS)
+      PO(I) = TP(I,IS)
+      SPLL(I)=SPL(I,IS)
+      SNLL(I)=SNL(I,IS)
+      SPLLL(I) = SP(I,IS)
+      SPL(I,IS) = SP(I,IS)
+      SNL(I,IS)=SN(I,IS)
+ 10   CONTINUE
+C
+C
+C     COMPUTE VARIABLE SUBSCRIPTS
+      DO 11 I=2,12
+   11 LCIC(I)=LCANON(IC+I)+0.1
+      LSD=IC+LCIC(2)+4
+      LS1=IC+LCIC(3)
+      LP=IC+LCIC(4)
+      LW=IC+LCIC(5)
+      LV=IC+LCIC(6)
+      LS2=IC+LCIC(7)
+C
+      JSW2 = LCANON(LS1-1)
+      JSW3 = LCANON(LS2-1)
+      Q1(1) = P(LP)
+      Q1(2) = P(LP+1)
+      Q1(3) = P(LP+2)
+      W1(1) = W(LW)   - Q1(1)
+      W1(2) = W(LW+1) - Q1(2)
+      W1(3) = W(LW+2) - Q1(3)
+      CALL VNORM (W1,DV)
+C
+C     STORE LENGTH OF W1 IN EP5
+C
+      EP5 = VTEM
+      V1(1) = F(LV)
+      V1(2) = F(LV+1)
+      V1(3) = F(LV+2)
+C
+C.... FIRST TIME. SET TN
+      I=ICANON(IS)
+      IF(IOPS.NE.2) GO TO 12
+      D(1) = V1(1)
+      D(2) = V1(2)
+      D(3) = V1(3)
+   12 ICSS2 = LCANON(ICSS+2) + 0.1
+C
+      IF (ICSS2.EQ.5) GOTO 20
+      LPP=IC+LCIC(8)
+      LWP=IC+LCIC(9)
+      LVP=IC+LCIC(10)
+      Q2(1) = PP(LPP)
+      Q2(2) = PP(LPP+1)
+      Q2(3) = PP(LPP+2)
+      W2(1) = WP(LWP)   - Q2(1)
+      W2(2)=WP(LWP+1)-Q2(2)
+      W2(3) = WP(LWP+2) - Q2(3)
+      CALL VNORM (W2,DVP)
+      EP6 = VTEM
+      V2(1) = VP(LVP)
+      V2(2) = VP(LVP+1)
+      V2(3) = VP(LVP+2)
+      GO TO 30
+   20 CP(1) = PP(LS2)
+      CP(2) = PP(LS2+1)
+      CP(3) = PP(LS2+2)
+      DCP(1) = 0.
+      DCP(2) = 0.
+      DCP(3) = 0.
+   30 IF(IFST(LSD).NE.0.) GO TO 220
+      IFST(LSD)=1.0
+   40 LOOP = 25
+      IGUESS = IGUESS + 1
+      ZLAMBD(LSD) = 0.5
+      ISFIDN(IS) = JSW1
+      IF(IGUESS.LE.8) GO TO 60
+      IER = 1
+   50 TP(1,IS) = PO(1)
+      TP(2,IS) = PO(2)
+      TP(3,IS) = PO(3)
+      TN(1,IS) = D(1)
+      TN(2,IS) = D(2)
+      TN(3,IS) = D(3)
+      ISFIDN(IS) = JSW1
+      IOP(IS) = IOPS
+      IF(IER.EQ.1) GO TO 53
+      DO 52 I=1,3
+      SP(I,IS) = TP(I,IS) + S(IS) * TN(I,IS)
+   52 CONTINUE
+      GO TO 55
+   53 CONTINUE
+      DO 54 I = 1,3
+      SP(I,IS) =SPLLL(I)
+      SN(I,IS) =SNL(I,IS)
+      SPL(I,IS)=SPLL(I)
+      SNL(I,IS)=SNLL(I)
+   54 CONTINUE
+   55 IC=ICANON(IS)
+      RETURN
+C
+   60 GO TO (65,70,80,90,100,110,120,130),IGUESS
+   65 IF(INDIR(IS).EQ.1) GO TO 68
+      XDIS1=(PO(1)-P(LP))**2+(PO(2)-P(LP+1))**2+(PO(3)-P(LP+2))**2
+      XDIS2=(PO(1)-W(LW))**2+(PO(2)-W(LW+1))**2+(PO(3)-W(LW+2))**2
+      DELTA(LSD)=0.3
+      IF(XDIS2.LT.XDIS1) DELTA(LSD)=0.7
+      GO TO 140
+   68 IGUESS=IGUESS+1
+   70 DELTA(LSD) = .5
+      GO TO 140
+   80 DELTA(LSD) = .999
+      GO TO 140
+   90 DELTA(LSD) = .001
+      GO TO 140
+  100 DELTA(LSD) = .75
+      GO TO 140
+  110 DELTA(LSD) = .25
+      GO TO 140
+  120 DELTA(LSD) =-.2
+      GO TO 140
+  130 DELTA(LSD) = 1.2
+C
+  140 ICSS2=LCANON(ICSS+2)+0.1
+      IF(ICSS2.EQ.5) GO TO 160
+C
+      DO 150 I = 1,3
+      X(I) = Q2(I) + DELTA(LSD)*W2(I)
+  150 BB(I) = DVP(I)
+      TN(1,IS)=V2(1)
+      TN(2,IS) = V2(2)
+      TN(3,IS) = V2(3)
+      EP = EP6
+      IC = LS2
+      ISFIDN(IS) = JSW3
+      CALL CROSS (V2,DVP,SC)
+      GO TO 180
+C
+  155 CP(1) = E(1)
+      CP(2) = E(2)
+      CP(3) = E(3)
+      DCP(1) = DC(1)
+      DCP(2) = DC(2)
+      DCP(3) = DC(3)
+C
+C
+  160 DO 170 I = 1,3
+      X(I) = Q1(I) + DELTA(LSD)*W1(I)
+  170 BB(I) = DV(I)
+      EP = EP5
+      TN(1,IS) = V1(1)
+      TN(2,IS) = V1(2)
+      TN(3,IS) = V1(3)
+      IC = LS1
+      ISFIDN(IS) = JSW2
+      CALL CROSS (V1,DV,SC)
+  180 CALL VNORM (SC,FC)
+      SIGN1 = VTEM
+      IF (IER.NE.0) GO TO 40
+      TP(1,IS) = X(1)
+      TP(2,IS) = X(2)
+      TP(3,IS) = X(3)
+      AA(1) = 0.
+      A = 0.
+      B = 0.
+      C = 0.
+C
+      JSW = ISFIDN(IS)
+      IV=ISTRUP
+      ISTRUP=4
+      GOTO(250,250,255,255,265,265,265,265,265,265,275,182,280,265),JSW
+  250 CALL DDPLAN(CANON(IC))
+       GO TO 182
+  255 CALL DDCYLN(CANON(IC))
+       GO TO 182
+  265 CALL DDQUAD(CANON(IC))
+       GO TO 182
+ 275  CALL DDTABC(CANON(IC-1))
+       GO TO 182
+  280 CALL POLCON(CANON(IC),2)
+182   ISTRUP=IV
+      IF(IER.GT.0)GO TO 40
+      E(1) = TP(1,IS) + S(IS)*TN(1,IS)
+      E(2) = TP(2,IS) + S(IS)*TN(2,IS)
+      E(3) = TP(3,IS) + S(IS)*TN(3,IS)
+      SP(1,IS) = E(1)
+      SP(2,IS) = E(2)
+      SP(3,IS) = E(3)
+  184 CALL CROSS (FC,SN(1,IS),UT1)
+      CALL VNORM (UT1,T1)
+      DOT = T1(1)*BB(1) + T1(2)*BB(2) + T1(3)*BB(3)
+      IF (DOT.GT.0.) GO TO 190
+      SIG = -1.
+      GO TO 200
+  190 SIG = 1.
+  200 CALL CROSS (T1,TN(1,IS),S1)
+      CALL VNORM (S1,UT1)
+      SIGN2 = VTEM
+      DO 210 I = 1,3
+  210 DC(I) = T1(I)*SIG*SIGN1*EP/SIGN2
+      IF(IC.EQ.LS2) GOTO 155
+C
+C   RB AND R2 ARE PARTIAL DERIVATIVES WRT DELTA AND LAMBDA REGSPECTIVELY
+C
+      R3(LSD)   = DC(1) + ZLAMBD(LSD)*(DCP(1)-DC(1))
+      R3(LSD+1) = DC(2) + ZLAMBD(LSD)*(DCP(2)-DC(2))
+      R3(LSD+2) = DC(3) + ZLAMBD(LSD)*(DCP(3)-DC(3))
+      R2(LSD)   = CP(1) - E(1)
+      R2(LSD+1) = CP(2) - E(2)
+      R2(LSD+2) = CP(3) - E(3)
+      CALL VNORM (R3(LSD),ZN(LSD))
+      IF (IER.GT.0) GO TO 40
+      CALL VNORM (R2(LSD),SL(LSD))
+      IF (IER.GT.0) GO TO 40
+      CALL CROSS (ZN(LSD),SL(LSD),SC)
+      CALL VNORM(SC,ZN(LSD))
+C     ZN(LSD) CONTAINS THE SURFACE NORMAL
+      IF (IER.GT.0) GO TO 40
+C
+C     R0(LSD) CONTAINS THE SURFACE POINT
+C
+      R0(LSD)   = E(1) + ZLAMBD(LSD)*R2(LSD)
+      R0(LSD+1) = E(2) + ZLAMBD(LSD)*R2(LSD+1)
+      R0(LSD+2) = E(3) + ZLAMBD(LSD)*R2(LSD+2)
+      ILSD=LSD+2
+C
+C     TAKE DOT PRODUCT OF TOOL NORMAL AND SURFACE NORMAL
+      IF(IOPS.NE.2) GO TO 220
+      X(1)=R0(LSD)-PO(1)
+      X(2)=R0(LSD+1)-PO(2)
+      X(3)=R0(LSD+2)-PO(3)
+      CALL VNORM(X,D)
+      VNDIR(1,IS)=D(1)
+      VNDIR(2,IS)=D(2)
+      VNDIR(3,IS)=D(3)
+      INDIR(IS)=1
+C
+  220 G = D(1)*ZN(LSD) + D(2)*ZN(LSD+1) + D(3)*ZN(LSD+2)
+      IF (DABS(G).LT..01) GO TO 40
+      X(1) = PO(1) - R0(LSD)
+      X(2) = PO(2) - R0(LSD+1)
+      X(3) = PO(3) - R0(LSD+2)
+      XLL = -(X(1)*ZN(LSD)+X(2)*ZN(LSD+1)+X(3)*ZN(LSD+2))/G
+      CALL VNORM(X,AA)
+      X(1) = X(1) + XLL*D(1)
+      X(2) = X(2) + XLL*D(2)
+      X(3) = X(3) + XLL*D(3)
+C
+C     SUM IS THE DISTANCE BETWEEN THE POINT OF INTERSECTION OF TOOL
+C         NORMAL WITH THE PLANE AND THE SURFACE POINT
+C     SIGMA IS THE COSINE OF THE ANGLE BETWEEN TOOL NORMAL AND
+C         NORMALIZED (TOOL POINT - SURFACE POINT)
+C
+      SUM = DABS(X(1)) + DABS(X(2)) + DABS(X(3))
+      SIGMA = DABS(AA(1)*D(1) + AA(2)*D(2) + AA(3)*D(3))
+C
+C     DECLARE CONVERGENCE IF EITHER ANGLE OR DIST. LT. TEST QUANTITIES
+C
+      IF ((SIGMA.LT..99995).AND.(SUM.GT.EP2)) GO TO 230
+      IER = 1
+      IF ((IOPS.GT.0).AND.(XLL.LT.0.)) GO TO 50
+      IER = 0
+      S(IS) = XLL
+      TEM(8) = ZN(LSD)
+      TEM(9) = ZN(LSD+1)
+      TEM(10)= ZN(LSD+2)
+      SLX(1,IS) = SL(LSD)
+      SLX(2,IS) = SL(LSD+1)
+      SLX(3,IS) = SL(LSD+2)
+      CALL VNORM(TEM(8),SN(1,IS))
+      GO TO 50
+C
+C     UPDATE COUNTERS PICKUP NEW PARAMETERS IF COUNTERS EXHAUSTED
+C
+  230 LOOP = LOOP - 1
+      IF (LOOP.LE.0) GO TO 40
+C
+C     ALPH AND BETA ARE LINEAR CORRECTIONS TO DELTA AND LAMBDA
+C
+      CSL = R3(LSD)**2 + R3(LSD+1)**2 + R3(LSD+2)**2
+      CSM = R3(LSD)*R2(LSD)+R3(LSD+1)*R2(LSD+1)+R3(LSD+2)*R2(LSD+2)
+      CSN = R2(LSD)**2 + R2(LSD+1)**2 + R2(LSD+2)**2
+      SMA = R3(LSD)*X(1)+R3(LSD+1)*X(2)+R3(LSD+2)*X(3)
+      SMB = R2(LSD)*X(1)+R2(LSD+1)*X(2)+R2(LSD+2)*X(3)
+      DELT = CSL*CSN - CSM*CSM
+      IF (DELT.LT..00001) GO TO 40
+      ALPH = (SMA*CSN - SMB*CSM)/DELT
+      BETA = (SMB*CSL - SMA*CSM)/DELT
+      DELTA(LSD) = DELTA(LSD) + .8*ALPH
+      ZLAMBD(LSD)= ZLAMBD(LSD) + .8*BETA
+      GO TO 140
+      END

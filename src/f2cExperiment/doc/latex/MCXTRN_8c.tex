@@ -1,0 +1,941 @@
+\hypertarget{MCXTRN_8c}{}\section{M\+C\+X\+T\+R\+N.\+c File Reference}
+\label{MCXTRN_8c}\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+C\+X\+T\+R\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{MCXTRN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1}~\hyperlink{SSV3_8c_af95d7ffd44b6fd3eb0d18bdf27e830c6}{prt\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1}~\hyperlink{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{macxx1\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_a3bf47b9edbde760ca68f9198acfbc588}{macxx2\+\_\+1}~\hyperlink{SSV3_8c_ac18104fb33fa0f7858a6e8efa6de450e}{macxx2\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1}~\hyperlink{START_8c_a0d65e2d066b8a99d678ca237f4a0fec1}{ntbl\+\_\+}
+\item 
+\#define \hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1})
+\item 
+\#define \hyperlink{MCXTRN_8c_a1ab11117a6c69aa7af847ff904996424}{nndx}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1} + 2)
+\item 
+\#define \hyperlink{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{mbrec}~((integer $\ast$)\&\hyperlink{SSV3_8c_a3bf47b9edbde760ca68f9198acfbc588}{macxx2\+\_\+1})
+\item 
+\#define \hyperlink{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{mbuff}~((integer $\ast$)\&\hyperlink{SSV3_8c_a3bf47b9edbde760ca68f9198acfbc588}{macxx2\+\_\+1} + 2)
+\item 
+\#define \hyperlink{MCXTRN_8c_a6ba48f069acda86145a51df290260fae}{nlast}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1} + 3)
+\item 
+\#define \hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 29)
+\item 
+\#define \hyperlink{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}{ncrnt}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1} + 1)
+\item 
+\#define \hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}~((integer $\ast$)\&\hyperlink{SSV3_8c_a3bf47b9edbde760ca68f9198acfbc588}{macxx2\+\_\+1} + 702)
+\item 
+\#define \hyperlink{MCXTRN_8c_a789af315155d8da28a7c4ec5cc346d7f}{assemb}~((logical $\ast$)\&\hyperlink{SSV3_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1} + 3)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MCXTRN_8c_a593551ce60d42f9de4c9e858aaa5a8ab}{mcxtrn\+\_\+} (integer $\ast$ibr, integer $\ast$\hyperlink{UNITS_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{index}, integer $\ast$info)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{MCXTRN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{MCXTRN_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{MCXTRN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{MCXTRN_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{MCXTRN_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{MCXTRN_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{MCXTRN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{MCXTRN_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{MCXTRN_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{MCXTRN_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_a0e80322eb6b0b15e0b2da78bc97ab2f9}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{MCXTRN_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{MCXTRN_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_ae27e2371797e49751345ff13d4b88e02}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_a0e54cc4380ebd714be40c0f5d63ba335}{prt} \mbox{[}7\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_ae72da9c34a9b66af11328fff848044e1}{prt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_a62736b21eda0cd16ae1b6bef6723680a}{macxx1} \mbox{[}71\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_a521c3a731818cdac594cc4841ad5f2b5}{macxx1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_a53d8d2c587c2918d236749e46efbc30b}{macxx2} \mbox{[}902\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_a3c08414299977988976d7cebd1bedb30}{macxx2\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{MCXTRN_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{MCXTRN_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{MCXTRN_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{MCXTRN_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{MCXTRN_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{MCXTRN_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{MCXTRN_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{MCXTRN_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{MCXTRN_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{MCXTRN_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{MCXTRN_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{MCXTRN_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{MCXTRN_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{MCXTRN_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{MCXTRN_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{MCXTRN_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{MCXTRN_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{MCXTRN_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{MCXTRN_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{MCXTRN_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{MCXTRN_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{MCXTRN_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{MCXTRN_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{MCXTRN_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_a9ec37b315b52796d2ae675f1e7ea1242}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MCXTRN_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}{ntbl} \mbox{[}6\mbox{]}\\
+\} \hyperlink{MCXTRN_8c_a204ddeb8ea06c7fc86185314087b1b27}{ntbl\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MCXTRN_8c_a4b2c0f7aaf62a0f3f90c77c86ab7fd3d}{c\+\_\+\+\_\+35} = 35
+\item 
+static integer \hyperlink{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{MCXTRN_8c_a1dbd779e98b334c910b2f5a2d8a66434}{c\+\_\+\+\_\+350} = 350
+\item 
+static integer \hyperlink{MCXTRN_8c_a4c6b1b990826a12828133f47fb011d77}{c\+\_\+n2} = -\/2
+\item 
+static integer \hyperlink{MCXTRN_8c_a88e5d19fe152923364ef58b34b8543e4}{c\+\_\+\+\_\+36} = 36
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!assemb@{assemb}}
+\index{assemb@{assemb}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{assemb}{assemb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define assemb~((logical $\ast$)\&{\bf prt\+\_\+1} + 3)}\hypertarget{MCXTRN_8c_a789af315155d8da28a7c4ec5cc346d7f}{}\label{MCXTRN_8c_a789af315155d8da28a7c4ec5cc346d7f}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macrtb@{macrtb}}
+\index{macrtb@{macrtb}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macrtb}{macrtb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macrtb~((integer $\ast$)\&{\bf macxx2\+\_\+1} + 702)}\hypertarget{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{}\label{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx1\+\_\+1@{macxx1\+\_\+1}}
+\index{macxx1\+\_\+1@{macxx1\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+1}{macxx1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx1\+\_\+1~{\bf macxx1\+\_\+}}\hypertarget{MCXTRN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{}\label{MCXTRN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}
+
+
+Definition at line 40 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx2\+\_\+1@{macxx2\+\_\+1}}
+\index{macxx2\+\_\+1@{macxx2\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx2\+\_\+1}{macxx2_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx2\+\_\+1~{\bf macxx2\+\_\+}}\hypertarget{MCXTRN_8c_a3bf47b9edbde760ca68f9198acfbc588}{}\label{MCXTRN_8c_a3bf47b9edbde760ca68f9198acfbc588}
+
+
+Definition at line 46 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!mbptr@{mbptr}}
+\index{mbptr@{mbptr}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{mbptr}{mbptr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mbptr~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 29)}\hypertarget{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{}\label{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!mbrec@{mbrec}}
+\index{mbrec@{mbrec}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{mbrec}{mbrec}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mbrec~((integer $\ast$)\&{\bf macxx2\+\_\+1})}\hypertarget{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{}\label{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!mbuff@{mbuff}}
+\index{mbuff@{mbuff}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{mbuff}{mbuff}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mbuff~((integer $\ast$)\&{\bf macxx2\+\_\+1} + 2)}\hypertarget{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{}\label{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ncrnt@{ncrnt}}
+\index{ncrnt@{ncrnt}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ncrnt}{ncrnt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ncrnt~((integer $\ast$)\&{\bf ntbl\+\_\+1} + 1)}\hypertarget{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}{}\label{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nlast@{nlast}}
+\index{nlast@{nlast}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nlast}{nlast}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nlast~((integer $\ast$)\&{\bf ntbl\+\_\+1} + 3)}\hypertarget{MCXTRN_8c_a6ba48f069acda86145a51df290260fae}{}\label{MCXTRN_8c_a6ba48f069acda86145a51df290260fae}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nmod@{nmod}}
+\index{nmod@{nmod}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nmod}{nmod}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nmod~((integer $\ast$)\&{\bf ntbl\+\_\+1})}\hypertarget{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{}\label{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nndx@{nndx}}
+\index{nndx@{nndx}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nndx}{nndx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nndx~((integer $\ast$)\&{\bf ntbl\+\_\+1} + 2)}\hypertarget{MCXTRN_8c_a1ab11117a6c69aa7af847ff904996424}{}\label{MCXTRN_8c_a1ab11117a6c69aa7af847ff904996424}
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ntbl\+\_\+1@{ntbl\+\_\+1}}
+\index{ntbl\+\_\+1@{ntbl\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ntbl\+\_\+1}{ntbl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ntbl\+\_\+1~{\bf ntbl\+\_\+}}\hypertarget{MCXTRN_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{}\label{MCXTRN_8c_a7646cbed8b35380bbce631ee1e3aa3f1}
+
+
+Definition at line 61 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!prt\+\_\+1@{prt\+\_\+1}}
+\index{prt\+\_\+1@{prt\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+1}{prt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define prt\+\_\+1~{\bf prt\+\_\+}}\hypertarget{MCXTRN_8c_ad5af17232611476e9b7239fc1c909844}{}\label{MCXTRN_8c_ad5af17232611476e9b7239fc1c909844}
+
+
+Definition at line 34 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 55 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!mcxtrn\+\_\+@{mcxtrn\+\_\+}}
+\index{mcxtrn\+\_\+@{mcxtrn\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{mcxtrn\+\_\+(integer $\ast$ibr, integer $\ast$index, integer $\ast$info)}{mcxtrn_(integer *ibr, integer *index, integer *info)}}]{\setlength{\rightskip}{0pt plus 5cm}int mcxtrn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ibr, }
+\item[{integer $\ast$}]{index, }
+\item[{integer $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{MCXTRN_8c_a593551ce60d42f9de4c9e858aaa5a8ab}{}\label{MCXTRN_8c_a593551ce60d42f9de4c9e858aaa5a8ab}
+
+
+Definition at line 95 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+References alarm\+\_\+(), aread\+\_\+(), assemb, awrite\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+35, c\+\_\+\+\_\+350, c\+\_\+\+\_\+36, c\+\_\+\+\_\+8, c\+\_\+n2, chwrit\+\_\+(), cnamtb\+\_\+1, help\+\_\+(), i\+\_\+\+\_\+, irec, itmp, iwrd, j, l, macrtb, mbptr, mbrec, mbuff, nametb\+\_\+1, ncrnt, nlast, nmod, nndx, nrec, symfil\+\_\+1, and tapop\+\_\+().
+
+
+
+Referenced by alarm\+\_\+(), inpat\+\_\+(), input\+\_\+(), macrec\+\_\+(), motion\+\_\+(), oppair\+\_\+(), pro026\+\_\+(), pro027\+\_\+(), recog\+\_\+(), reserv\+\_\+(), and resred\+\_\+().
+
+
+\begin{DoxyCode}
+96 \{
+97     \textcolor{comment}{/* System generated locals */}
+98     integer i\_\_1;
+99 
+100     \textcolor{comment}{/* Builtin functions */}
+101     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+102 
+103     \textcolor{comment}{/* Local variables */}
+104     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec}, \hyperlink{AERR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec};
+105     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}(\textcolor{keywordtype}{void});
+106 \textcolor{preprocessor}{#define nmod ((integer *)&ntbl\_1)}
+107     \textcolor{keyword}{static} integer iret, \hyperlink{BCDF_8c_a7186be17bd02477bcc26c602ec6adcf4}{iwrd};
+108 \textcolor{preprocessor}{#define nndx ((integer *)&ntbl\_1 + 2)}
+109     \textcolor{keyword}{static} integer \hyperlink{SSDEF_8c_a99d75f46d48276dd1d917edf55c41f2b}{itmp};
+110     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AREAD_8c_ae15c3d1a1b7ec1486e35c266f9f86549}{aread\_}();
+111 \textcolor{preprocessor}{#define mbrec ((integer *)&macxx2\_1)}
+112     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+113         , ftnlen);
+114 \textcolor{preprocessor}{#define mbuff ((integer *)&macxx2\_1 + 2)}
+115 \textcolor{preprocessor}{#define nlast ((integer *)&ntbl\_1 + 3)}
+116     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(integer *, integer *);
+117 \textcolor{preprocessor}{#define mbptr ((integer *)&macxx1\_1 + 29)}
+118 \textcolor{preprocessor}{#define ncrnt ((integer *)&ntbl\_1 + 1)}
+119 \textcolor{preprocessor}{#define macrtb ((integer *)&macxx2\_1 + 702)}
+120 \textcolor{preprocessor}{#define assemb ((logical *)&prt\_1 + 3)}
+121     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AWRITE_8c_a47d13d4327f6a21f5befc3e342166676}{awrite\_}(integer *, integer *, integer *, 
+122         integer *, integer *);
+123     \textcolor{keyword}{static} integer ibrtmp;
+124     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(integer *, integer *, \textcolor{keywordtype}{char} *, integer 
+125         *, integer *, ftnlen);
+126 
+127 
+128 
+129 
+130 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+131 
+132 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+133 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+134 \textcolor{comment}{/* NUMBST:      NAMTBL INDEX OF BEGINNING OF NUMBER SECTION */}
+135 
+136 \textcolor{comment}{/*       14.    I. L. LIST OPTION FLAGS */}
+137 
+138 
+139 
+140 
+141 
+142 
+143 
+144 \textcolor{comment}{/* ASSEMB:      SET TRUE INDICATES ASSEMBLY APPROACH (CONTRL/ASMBLE) */}
+145 
+146 \textcolor{comment}{/*       22.    MACRO PROCESSING VARIABLES */}
+147 
+148 \textcolor{comment}{/* MBPTR:       POINTER TO LAST MBREC ENTRY */}
+149 
+150 \textcolor{comment}{/*       23.    MACRO PROCESSING ARRAYS */}
+151 
+152 \textcolor{comment}{/* MBREC:       IDENTIFIES THE RECORDS(350 WORD BLK) CURRENTLY IN MBUFF */}
+153 \textcolor{comment}{/* BUFF:        BUFFER ARRAY IN ORDER TO READ OR WRITE ON EXTERNAL FILE */}
+154 \textcolor{comment}{/* MACRTB:      BUFFER ARRAY OF THE EXTERNAL FILE */}
+155 
+156 \textcolor{comment}{/*       33.    SYMBOLIC FILE DEFINITIONS */}
+157 
+158 \textcolor{comment}{/* MACTXT:          EXTERNAL FILE  OF MACRO TEXT */}
+159 \textcolor{comment}{/* XNUM  :          OVERFLOW NUMBER TABLE */}
+160 
+161 \textcolor{comment}{/*       41.    NUMBER TABLE OVERFLOW VARIABLES */}
+162 
+163 
+164 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+165 
+166 
+167 
+168 \textcolor{comment}{/* NMOD:        NUMBER OF ENTRIES PERMITTED IN INTERNAL NUMBER TABLE */}
+169 \textcolor{comment}{/* NCRNT:       ACTUAL NUMBER TABLE BLOCK - INITIALLY 1 */}
+170 \textcolor{comment}{/* NNDX:        CONVERSION BETWEEN ABS. AND VIRTUAL NUMBER TABLE POINTER */}
+171 \textcolor{comment}{/* NLAST:       LAST NEW BLOCK NUMBER OF NUMBER TABLE ON THE EXTERN FILE */}
+172 \textcolor{comment}{/* * */}
+173 \textcolor{comment}{/* ARGUMENTS    IBR     SET TO 1 FOR STORE, 2 FOR RETRIEVE */}
+174 \textcolor{comment}{/*              INDEX   POINTER TO REFERENCED MACRO TEXT WORD */}
+175 \textcolor{comment}{/*              INFO    DATA TO BE STORED OR RETRIEVED */}
+176 \textcolor{comment}{/* ** */}
+177     \textcolor{keywordflow}{if} (*ibr > 2) \{
+178     \textcolor{keywordflow}{goto} L500;
+179     \}
+180 
+181 \textcolor{comment}{/* ...     DETERMINE RECORD NUMBER AND WORD NUMBER */}
+182 
+183     itmp = (*\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} - 1) / 350;
+184     irec = itmp + 1;
+185     \textcolor{keywordflow}{if} (irec < 200) \{
+186     \textcolor{keywordflow}{goto} L10;
+187     \}
+188     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MCXTRN_8c_a4b2c0f7aaf62a0f3f90c77c86ab7fd3d}{c\_\_35}, &\hyperlink{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MCXTRN  "}, (ftnlen)8);
+189     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+190 L10:
+191     iwrd = *\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} - itmp * 350;
+192 \textcolor{comment}{/* ...  IS THIS RECORD IN THE BUFFERS */}
+193     \textcolor{keywordflow}{if} (irec == \hyperlink{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{mbrec}[*\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} - 1]) \{
+194     \textcolor{keywordflow}{goto} L100;
+195     \}
+196     *\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} = 3 - *\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr};
+197     \textcolor{keywordflow}{if} (irec == \hyperlink{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{mbrec}[*\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} - 1]) \{
+198     \textcolor{keywordflow}{goto} L100;
+199     \}
+200 \textcolor{comment}{/* ...  WRITE OLD BUFFER TO EXTERNAL FILE */}
+201     i\_\_ = \hyperlink{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{mbrec}[*\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} - 1];
+202     \textcolor{keywordflow}{if} (\hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[i\_\_ - 1] != 0) \{
+203     \textcolor{keywordflow}{goto} L20;
+204     \}
+205     nrec = 0;
+206     \hyperlink{AWRITE_8c_a47d13d4327f6a21f5befc3e342166676}{awrite\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.mactxt, &nrec, &\hyperlink{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{mbuff}[*\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} * 350 - 350], &
+      \hyperlink{MCXTRN_8c_a1dbd779e98b334c910b2f5a2d8a66434}{c\_\_350}, &
+207         iret);
+208     \hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[i\_\_ - 1] = \hyperlink{AERR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec};
+209 \textcolor{comment}{/* ...  RECORD INDICATOR INDICATES NEW RECORD NUMBER */}
+210 L20:
+211     \hyperlink{MCXTRN_8c_abb4fe5b2c95a1071ea597d3bd623d82b}{mbrec}[*\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} - 1] = \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec};
+212     \textcolor{keywordflow}{if} (\hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[irec - 1] > 0) \{
+213     \textcolor{keywordflow}{goto} L30;
+214     \}
+215     \textcolor{keywordflow}{if} (*ibr == 2) \{
+216     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MCXTRN_8c_a4b2c0f7aaf62a0f3f90c77c86ab7fd3d}{c\_\_35}, &\hyperlink{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MCXTRN  "}, (ftnlen)8);
+217     \}
+218     \textcolor{keywordflow}{goto} L100;
+219 \textcolor{comment}{/* ...  READ IN RECORD */}
+220 L30:
+221     \hyperlink{AREAD_8c_ae15c3d1a1b7ec1486e35c266f9f86549}{aread\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.mactxt, &\hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[irec - 1], &\hyperlink{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{mbuff}[*
+      \hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} * 350 - 350], &
+222         \hyperlink{MCXTRN_8c_a1dbd779e98b334c910b2f5a2d8a66434}{c\_\_350}, &iret);
+223 L100:
+224     \textcolor{keywordflow}{if} (*ibr == 2) \{
+225     \textcolor{keywordflow}{goto} L200;
+226     \}
+227 \textcolor{comment}{/* ...  STORE INFO */}
+228     \hyperlink{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{mbuff}[iwrd + *\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} * 350 - 351] = *info;
+229     \textcolor{keywordflow}{if} (\hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[irec - 1] != 0) \{
+230     \hyperlink{MCXTRN_8c_ab44517e463afcffea7a974ed13cf69b1}{macrtb}[irec - 1] = 0;
+231     \}
+232     \textcolor{keywordflow}{goto} L400;
+233 \textcolor{comment}{/* ...  READ INFO */}
+234 L200:
+235     *info = \hyperlink{MCXTRN_8c_a19561780a9baee250cb458f62e54c45a}{mbuff}[iwrd + *\hyperlink{MCXTRN_8c_ae7df1492c7a0488cd6581cefc9fbae9d}{mbptr} * 350 - 351];
+236     \textcolor{keywordflow}{goto} L400;
+237 
+238 
+239 \textcolor{comment}{/* ...     NUMBER TABLE OVERFLOW PROCESSING */}
+240 
+241 L500:
+242     ibrtmp = *ibr - 2;
+243     \textcolor{keywordflow}{switch} (ibrtmp) \{
+244     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L530;
+245     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L540;
+246     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L550;
+247     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L560;
+248     \}
+249 
+250 \textcolor{comment}{/* ...  WRITE FIRST PART OF TABLE */}
+251 
+252 L530:
+253     l = *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} * 6;
+254     j = 0;
+255 \textcolor{comment}{/* ... 4TH ARGUMENT OF CHWRIT IS NUMBER OF BYTES */}
+256     \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.xnum, &j, \hyperlink{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnumtb + (
+      \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst - 1) * 12, 
+257         &l, &iret, (ftnlen)12);
+258     ++(*nlast);
+259     *\hyperlink{MCXTRN_8c_a1ab11117a6c69aa7af847ff904996424}{nndx} += *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} / 2;
+260     l = \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst + *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} / 2 - 1;
+261     i\_\_1 = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+262     \textcolor{keywordflow}{for} (i\_\_ = \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst; i\_\_ <= i\_\_1; ++i\_\_) \{
+263     s\_copy(\hyperlink{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnumtb + (i\_\_ - 1) * 12, \textcolor{stringliteral}{" "}, (ftnlen)12, (ftnlen)1);
+264 \textcolor{comment}{/* L544: */}
+265     \}
+266     \textcolor{keywordflow}{goto} L400;
+267 
+268 \textcolor{comment}{/* .... WRITE SECOND PART OF TABLE */}
+269 
+270 L540:
+271     \textcolor{keywordflow}{if} (*\hyperlink{MCXTRN_8c_a789af315155d8da28a7c4ec5cc346d7f}{assemb}) \{
+272     \textcolor{keywordflow}{goto} L805;
+273     \}
+274     j = 0;
+275     i\_\_ = \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst + *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} / 2;
+276     l = *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} * 6;
+277 \textcolor{comment}{/* ... 4TH ARGUMENT OF CHWRIT IS NUMBER OF BYTES */}
+278     \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.xnum, &j, \hyperlink{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnumtb + (i\_\_ - 1) * 12, &l, &iret, (
+279         ftnlen)12);
+280     ++(*nlast);
+281     *\hyperlink{MCXTRN_8c_a1ab11117a6c69aa7af847ff904996424}{nndx} += *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} / 2;
+282     *\hyperlink{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}{ncrnt} = 2;
+283     \textcolor{keywordflow}{goto} L400;
+284 
+285 \textcolor{comment}{/* .... READ IN BLOCK CONTAINING INDEX */}
+286 
+287 L550:
+288     l = *\hyperlink{MCXTRN_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod} / 2;
+289     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} < \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst) \{
+290     \textcolor{keywordflow}{goto} L400;
+291     \}
+292     itmp = (*\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} - \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst) / l;
+293     *\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} -= itmp * \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+294     \textcolor{keywordflow}{if} (itmp == *\hyperlink{MCXTRN_8c_a6ba48f069acda86145a51df290260fae}{nlast}) \{
+295     \textcolor{keywordflow}{goto} L400;
+296     \}
+297     *\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index} += \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+298     \textcolor{keywordflow}{if} (itmp + 1 == *\hyperlink{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}{ncrnt}) \{
+299     \textcolor{keywordflow}{goto} L400;
+300     \}
+301     nrec = itmp + 1;
+302     i\_\_ = \hyperlink{MCXTRN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst + \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+303     l *= 12;
+304 \textcolor{comment}{/* ... 4TH ARGUMENT OF CHREAD IS NUMBER OF BYTES */}
+305     \hyperlink{AREAD_8c_ae15c3d1a1b7ec1486e35c266f9f86549}{aread\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.xnum, &nrec, \hyperlink{MCXTRN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnumtb + (i\_\_ - 1) * 12, &l, &iret)
+306         ;
+307     *\hyperlink{MCXTRN_8c_aea02c44c764760c0433da64208358b4c}{ncrnt} = \hyperlink{AERR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec};
+308     \textcolor{keywordflow}{goto} L400;
+309 
+310 
+311 \textcolor{comment}{/* .... WRITE OUT FINAL RECORD */}
+312 
+313 L560:
+314     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{MCXTRN_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.xnum, &\hyperlink{MCXTRN_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2});
+315 L400:
+316     \textcolor{keywordflow}{return} 0;
+317 L805:
+318     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{MCXTRN_8c_a88e5d19fe152923364ef58b34b8543e4}{c\_\_36}, &\hyperlink{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"MCXTRN  "}, (ftnlen)8);
+319     \hyperlink{HELP_8c_aee5524b7b93e83211e32f9ae3247a832}{help\_}();
+320     \textcolor{keywordflow}{return} 0;
+321 \} \textcolor{comment}{/* mcxtrn\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{MCXTRN_8c_a593551ce60d42f9de4c9e858aaa5a8ab_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{MCXTRN_8c_a593551ce60d42f9de4c9e858aaa5a8ab_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{MCXTRN_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{MCXTRN_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{MCXTRN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 66 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+\+\_\+35@{c\+\_\+\+\_\+35}}
+\index{c\+\_\+\+\_\+35@{c\+\_\+\+\_\+35}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+35}{c__35}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+35 = 35\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a4b2c0f7aaf62a0f3f90c77c86ab7fd3d}{}\label{MCXTRN_8c_a4b2c0f7aaf62a0f3f90c77c86ab7fd3d}
+
+
+Definition at line 65 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+\+\_\+350@{c\+\_\+\+\_\+350}}
+\index{c\+\_\+\+\_\+350@{c\+\_\+\+\_\+350}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+350}{c__350}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+350 = 350\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a1dbd779e98b334c910b2f5a2d8a66434}{}\label{MCXTRN_8c_a1dbd779e98b334c910b2f5a2d8a66434}
+
+
+Definition at line 68 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+\+\_\+36@{c\+\_\+\+\_\+36}}
+\index{c\+\_\+\+\_\+36@{c\+\_\+\+\_\+36}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+36}{c__36}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+36 = 36\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a88e5d19fe152923364ef58b34b8543e4}{}\label{MCXTRN_8c_a88e5d19fe152923364ef58b34b8543e4}
+
+
+Definition at line 70 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{MCXTRN_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 67 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!c\+\_\+n2@{c\+\_\+n2}}
+\index{c\+\_\+n2@{c\+\_\+n2}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n2}{c_n2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n2 = -\/2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MCXTRN_8c_a4c6b1b990826a12828133f47fb011d77}{}\label{MCXTRN_8c_a4c6b1b990826a12828133f47fb011d77}
+
+
+Definition at line 69 of file M\+C\+X\+T\+R\+N.\+c.
+
+
+
+Referenced by mcxtrn\+\_\+().
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{MCXTRN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{MCXTRN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!charst@{charst}}
+\index{charst@{charst}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{MCXTRN_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{MCXTRN_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{MCXTRN_8c_afddbf18370447268640d26c983890fd1}{}\label{MCXTRN_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{MCXTRN_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{MCXTRN_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{MCXTRN_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{MCXTRN_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{MCXTRN_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{MCXTRN_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{MCXTRN_8c_ae27e2371797e49751345ff13d4b88e02}{}\label{MCXTRN_8c_ae27e2371797e49751345ff13d4b88e02}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{MCXTRN_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{MCXTRN_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{MCXTRN_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{MCXTRN_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{MCXTRN_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{MCXTRN_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{MCXTRN_8c_a995bd688c87d82736860b413de2416d4}{}\label{MCXTRN_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{MCXTRN_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{MCXTRN_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{MCXTRN_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{MCXTRN_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{MCXTRN_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{MCXTRN_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{MCXTRN_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{MCXTRN_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{MCXTRN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{MCXTRN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{MCXTRN_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{MCXTRN_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{MCXTRN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{MCXTRN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{MCXTRN_8c_a373010e90fb1cd08bf263255a111920d}{}\label{MCXTRN_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{MCXTRN_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{MCXTRN_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{MCXTRN_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{MCXTRN_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{MCXTRN_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{MCXTRN_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{MCXTRN_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{MCXTRN_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{MCXTRN_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{MCXTRN_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx1@{macxx1}}
+\index{macxx1@{macxx1}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1}{macxx1}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx1\mbox{[}71\mbox{]}}\hypertarget{MCXTRN_8c_a62736b21eda0cd16ae1b6bef6723680a}{}\label{MCXTRN_8c_a62736b21eda0cd16ae1b6bef6723680a}
+
+
+Definition at line 37 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx1\+\_\+@{macxx1\+\_\+}}
+\index{macxx1\+\_\+@{macxx1\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+}{macxx1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx1\+\_\+}\hypertarget{MCXTRN_8c_a521c3a731818cdac594cc4841ad5f2b5}{}\label{MCXTRN_8c_a521c3a731818cdac594cc4841ad5f2b5}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx2@{macxx2}}
+\index{macxx2@{macxx2}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx2}{macxx2}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx2\mbox{[}902\mbox{]}}\hypertarget{MCXTRN_8c_a53d8d2c587c2918d236749e46efbc30b}{}\label{MCXTRN_8c_a53d8d2c587c2918d236749e46efbc30b}
+
+
+Definition at line 43 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!macxx2\+\_\+@{macxx2\+\_\+}}
+\index{macxx2\+\_\+@{macxx2\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx2\+\_\+}{macxx2_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx2\+\_\+}\hypertarget{MCXTRN_8c_a3c08414299977988976d7cebd1bedb30}{}\label{MCXTRN_8c_a3c08414299977988976d7cebd1bedb30}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!namest@{namest}}
+\index{namest@{namest}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{MCXTRN_8c_ab97202700d22183890e79bc8791f4bff}{}\label{MCXTRN_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{MCXTRN_8c_a0e80322eb6b0b15e0b2da78bc97ab2f9}{}\label{MCXTRN_8c_a0e80322eb6b0b15e0b2da78bc97ab2f9}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{MCXTRN_8c_a12351fe75bd822dfa233783a24bab726}{}\label{MCXTRN_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{MCXTRN_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{MCXTRN_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{MCXTRN_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{MCXTRN_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{MCXTRN_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{MCXTRN_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ntbl@{ntbl}}
+\index{ntbl@{ntbl}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ntbl}{ntbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer ntbl\mbox{[}6\mbox{]}}\hypertarget{MCXTRN_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}{}\label{MCXTRN_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}
+
+
+Definition at line 58 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!ntbl\+\_\+@{ntbl\+\_\+}}
+\index{ntbl\+\_\+@{ntbl\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{ntbl\+\_\+}{ntbl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ntbl\+\_\+}\hypertarget{MCXTRN_8c_a204ddeb8ea06c7fc86185314087b1b27}{}\label{MCXTRN_8c_a204ddeb8ea06c7fc86185314087b1b27}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{MCXTRN_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{MCXTRN_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{MCXTRN_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{MCXTRN_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{MCXTRN_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{MCXTRN_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{MCXTRN_8c_af29300e691e97a062da856325402d3e9}{}\label{MCXTRN_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!prt@{prt}}
+\index{prt@{prt}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{prt}{prt}}]{\setlength{\rightskip}{0pt plus 5cm}integer prt\mbox{[}7\mbox{]}}\hypertarget{MCXTRN_8c_a0e54cc4380ebd714be40c0f5d63ba335}{}\label{MCXTRN_8c_a0e54cc4380ebd714be40c0f5d63ba335}
+
+
+Definition at line 31 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!prt\+\_\+@{prt\+\_\+}}
+\index{prt\+\_\+@{prt\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+}{prt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   prt\+\_\+}\hypertarget{MCXTRN_8c_ae72da9c34a9b66af11328fff848044e1}{}\label{MCXTRN_8c_ae72da9c34a9b66af11328fff848044e1}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{MCXTRN_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{MCXTRN_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{MCXTRN_8c_a9ec37b315b52796d2ae675f1e7ea1242}{}\label{MCXTRN_8c_a9ec37b315b52796d2ae675f1e7ea1242}
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{MCXTRN_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{MCXTRN_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{MCXTRN_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{MCXTRN_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{MCXTRN_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{MCXTRN_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+
+\index{M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!M\+C\+X\+T\+R\+N.\+c@{M\+C\+X\+T\+R\+N.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{MCXTRN_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{MCXTRN_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 49 of file M\+C\+X\+T\+R\+N.\+c.
+

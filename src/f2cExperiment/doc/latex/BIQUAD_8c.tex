@@ -1,0 +1,164 @@
+\hypertarget{BIQUAD_8c}{}\section{B\+I\+Q\+U\+A\+D.\+c File Reference}
+\label{BIQUAD_8c}\index{B\+I\+Q\+U\+A\+D.\+c@{B\+I\+Q\+U\+A\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+I\+Q\+U\+A\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{BIQUAD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BIQUAD_8c_a9d030851473002077954bf2f9e02de66}{biquad\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{APT089_8c_a94df4a6e89f6e2db9dd02be6115040f6}{d\+\_\+\+\_\+}, doublereal $\ast$e, doublereal $\ast$rts, integer $\ast$nz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+I\+Q\+U\+A\+D.\+c@{B\+I\+Q\+U\+A\+D.\+c}!biquad\+\_\+@{biquad\+\_\+}}
+\index{biquad\+\_\+@{biquad\+\_\+}!B\+I\+Q\+U\+A\+D.\+c@{B\+I\+Q\+U\+A\+D.\+c}}
+\subsubsection[{\texorpdfstring{biquad\+\_\+(doublereal $\ast$a, doublereal $\ast$b, doublereal $\ast$c\+\_\+\+\_\+, doublereal $\ast$d\+\_\+\+\_\+, doublereal $\ast$e, doublereal $\ast$rts, integer $\ast$nz)}{biquad_(doublereal *a, doublereal *b, doublereal *c__, doublereal *d__, doublereal *e, doublereal *rts, integer *nz)}}]{\setlength{\rightskip}{0pt plus 5cm}int biquad\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{d\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{e, }
+\item[{doublereal $\ast$}]{rts, }
+\item[{integer $\ast$}]{nz}
+\end{DoxyParamCaption}
+)}\hypertarget{BIQUAD_8c_a9d030851473002077954bf2f9e02de66}{}\label{BIQUAD_8c_a9d030851473002077954bf2f9e02de66}
+
+
+Definition at line 17 of file B\+I\+Q\+U\+A\+D.\+c.
+
+
+
+References a1, al, b1, c1, c\+\_\+\+\_\+, d1, d\+\_\+\+\_\+, f, gcubic\+\_\+(), i\+\_\+\+\_\+, p, q, r\+\_\+\+\_\+, s, temp, and zero.
+
+
+
+Referenced by clocub\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+23     \textcolor{keyword}{static} doublereal smal = 1e-14;
+24 
+25     \textcolor{comment}{/* System generated locals */}
+26     integer i\_\_1;
+27 
+28     \textcolor{comment}{/* Builtin functions */}
+29     \textcolor{keywordtype}{double} sqrt(doublereal);
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+33     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}, \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}, \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}, \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}, \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{DDTABC_8c_a8f9aca421a560153a31ebb326da34216}{c1}, \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, e1, dd, ak, \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al}, am, tr, 
+34         res, disc, trcb;
+35     \textcolor{keyword}{static} integer ntem;
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[3], trsq;
+37     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\_}(doublereal *, doublereal *, 
+38         doublereal *, doublereal *, doublereal *, integer *);
+39 
+40 \textcolor{comment}{/* ------THIS PROGRAM SOLVES FOR THE REAL ROOTS OF A BIQUADRATIC */}
+41 \textcolor{comment}{/* ------A*X**4+B*X**3+C*X**2+D*X+E=0.  THE ROOTS ARE THEN LOADED */}
+42 \textcolor{comment}{/* ------INTO THE ARRAY RTS.  NZ GIVES THE TOTAL NUMBER OF ROOTS. */}
+43     \textcolor{comment}{/* Parameter adjustments */}
+44     --rts;
+45 
+46     \textcolor{comment}{/* Function Body */}
+47     rts[1] = 9999.f;
+48     rts[2] = 9999.f;
+49     rts[3] = 9999.f;
+50     rts[4] = 9999.f;
+51     \textcolor{keywordflow}{if} (abs(*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}) < smal) \{
+52     \textcolor{keywordflow}{goto} L100;
+53     \}
+54 \textcolor{comment}{/* ------ TRANSFORM THE POLYNOM BY THE EQUATION X=Y-B/4A TO ELIM- */}
+55 \textcolor{comment}{/* ------ INATE THE CUBIC TERM.  THEN UNITIZE THE COEFFICIENT */}
+56 \textcolor{comment}{/* ------ OF THE RESULTING QUARTIC EQUATION */}
+57     tr = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} / (*\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} * 4.f);
+58     trsq = tr * tr;
+59     trcb = tr * trsq;
+60     a1 = 1.f;
+61     b1 = 0.f;
+62     c1 = trsq * 6.f + (*\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} * -3.f * tr + *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}) / *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+63     d1 = trcb * -4.f + (*\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} * 3.f * trsq - *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_} * 2.f * tr + *\hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}) / *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+64     e1 = trsq * trsq + (-(*b) * trcb + *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_} * trsq - *\hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_} * tr + *e) / *\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+65 \textcolor{comment}{/* ------ SETUP AND SOLVE THE RESOLVENT CUBIC(HALL KNIGHT,SEC 583) */}
+66     p = 1.f;
+67     q = c1 + \hyperlink{DDTABC_8c_a8f9aca421a560153a31ebb326da34216}{c1};
+68     r\_\_ = c1 * c1 - e1 * 4.f;
+69     s = -d1 * \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+70     \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\_}(&p, &q, &r\_\_, &s, temp, &ntem);
+71     res = -1.f;
+72     i\_\_1 = ntem;
+73     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+74     res = temp[i\_\_ - 1];
+75     \textcolor{keywordflow}{if} (res > zero) \{
+76         \textcolor{keywordflow}{goto} L30;
+77     \}
+78 \textcolor{comment}{/* L20: */}
+79     \}
+80     *nz = 0;
+81     \textcolor{keywordflow}{return} 0;
+82 L30:
+83     ak = sqrt(res);
+84     am = (res + c1 + d1 / ak) * .5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+85     al = (res + c1 - d1 / ak) * .5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+86 \textcolor{comment}{/* ------ NOW THE BIQUADRATIC RESOLVES INTO TWO QUADRATICS */}
+87 \textcolor{comment}{/* ------THE FIRST QUADRATIC IS Y**2+AK*Y+AL=0  OTHER IS Y**2-AK*Y+AM=0 */}
+88     disc = ak * ak - al * 4.f;
+89     *nz = 0;
+90     \textcolor{keywordflow}{if} (disc < zero) \{
+91     \textcolor{keywordflow}{goto} L40;
+92     \}
+93     *nz = 2;
+94     dd = sqrt(disc);
+95     rts[1] = (-ak + dd) / 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - tr;
+96     rts[2] = (-ak - dd) / 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - tr;
+97 L40:
+98     disc = ak * ak - am * 4.f;
+99     \textcolor{keywordflow}{if} (disc < zero) \{
+100     \textcolor{keywordflow}{goto} L50;
+101     \}
+102     dd = sqrt(disc);
+103     rts[*nz + 1] = (ak + dd) / 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - tr;
+104     rts[*nz + 2] = (ak - dd) / 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - tr;
+105     *nz += 2;
+106 L50:
+107     \textcolor{keywordflow}{return} 0;
+108 L100:
+109     \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\_}(\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e, &rts[1], nz);
+110     \textcolor{keywordflow}{return} 0;
+111 \} \textcolor{comment}{/* biquad\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{BIQUAD_8c_a9d030851473002077954bf2f9e02de66_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BIQUAD_8c_a9d030851473002077954bf2f9e02de66_icgraph}
+\end{center}
+\end{figure}
+
+

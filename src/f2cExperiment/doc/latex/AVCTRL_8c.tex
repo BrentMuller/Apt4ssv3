@@ -1,0 +1,1072 @@
+\hypertarget{AVCTRL_8c}{}\section{A\+V\+C\+T\+R\+L.\+c File Reference}
+\label{AVCTRL_8c}\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+V\+C\+T\+R\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{AVCTRL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{AVCTRL_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\+\_\+1}~\hyperlink{SSPATH_8c_ab2d7525d5b039d62b9078fd9c60458a7}{rmflgs\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\+\_\+1}~\hyperlink{PRINT_8c_a4686cbe68120d18b638cbf449773dcee}{avcprm\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\+\_\+1}~\hyperlink{ZVECT_8c_a3f367900c9f9d0188db1e3d2bd2e94c1}{znumbr\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\item 
+\#define \hyperlink{AVCTRL_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{AVCTRL_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{AVCTRL_8c_a412df5388b3b8bc9d0207e3a8de3327b}{avctrl\+\_\+} (doublereal $\ast$donoff, doublereal $\ast$davtp1, doublereal $\ast$\hyperlink{ZSURF_8c_a4b844110bdc6a857d17ab8289ff9a043}{g}, doublereal $\ast$bmn, doublereal $\ast$bmx, doublereal $\ast$davtp2, doublereal $\ast$dmx)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{AVCTRL_8c_a00b7f3cd5ad4fababc11a3060589a4bd}{lgchk}\\
+\>logical \hyperlink{AVCTRL_8c_acc230d34145fd26bef6aa51a20927619}{lintck}\\
+\>logical \hyperlink{AVCTRL_8c_a3ecfdca8cd552de5ca5f0158591044b1}{lavctl}\\
+\>logical \hyperlink{AVCTRL_8c_ac5742e89e268886a777335aba5adbe4b}{lvaxis}\\
+\} \hyperlink{AVCTRL_8c_a7151f9db8fabb7869b86cdfa2d06ddc8}{rmflgs\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{AVCTRL_8c_a017bbe0c7b567bef414c6081174305e3}{ctang}\\
+\>doublereal \hyperlink{AVCTRL_8c_a59bb258ebc7c3a08c2d270357d1c8564}{bmin}\\
+\>doublereal \hyperlink{AVCTRL_8c_ad3b61834ddc39364ec0906574b152bfd}{bmax}\\
+\>doublereal \hyperlink{AVCTRL_8c_aabdf0482f8572b46a4ea0e69e8721721}{dmax\_\_}\\
+\>logical \hyperlink{AVCTRL_8c_a20fb5f019c0ac40fcd8f653860e4f16d}{latyp1}\\
+\>logical \hyperlink{AVCTRL_8c_a90fc47e0cc18bed61d668a710bea5ee6}{lanps}\\
+\>logical \hyperlink{AVCTRL_8c_aabc63516f280dfb18320a598c682d42e}{avlist}\\
+\} \hyperlink{AVCTRL_8c_a9aeb2809f1edb63c21d4e72ee65d02de}{avcprm\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{AVCTRL_8c_a481b969667dca33a978c50980dd5480c}{z0}\\
+\>doublereal \hyperlink{AVCTRL_8c_a41055aeef4eac887032302f59c372d57}{z1}\\
+\>doublereal \hyperlink{AVCTRL_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{z2}\\
+\>doublereal \hyperlink{AVCTRL_8c_a8f55453e5803c6b7e40916652c5d1a1d}{z3}\\
+\>doublereal \hyperlink{AVCTRL_8c_aa4fd0f4665690f94ffacd9717fe96527}{z5}\\
+\>doublereal \hyperlink{AVCTRL_8c_aa269f590808672b62394f95529f5eed9}{z10}\\
+\>doublereal \hyperlink{AVCTRL_8c_ae13651cd40a033422260cdc23ffec6ee}{z90}\\
+\>doublereal \hyperlink{AVCTRL_8c_aadeb12cf35e33207bf3909df1ca2df8a}{z1e6}\\
+\>doublereal \hyperlink{AVCTRL_8c_a54466da286c37008238f319ca2c1fcc8}{z1e38}\\
+\>doublereal \hyperlink{AVCTRL_8c_a73fab3947fdf80ebb30f5648a8d00fc2}{z5em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_ad989bf7970831e6fdd01873f41330efe}{z6em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_a7baed3711543adae0b30175a6f65bb05}{z9em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_a3f1f266b30d3b7eba90480d3f539a117}{z11em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_ad973ea9385b44d34c6e2e80f960cb440}{z12em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_accbaaca0db62b7e3c5cbb58ac70362d8}{z1em2}\\
+\>doublereal \hyperlink{AVCTRL_8c_a01b2258ff2d4f29acf4d08abeaa3a452}{z1em3}\\
+\>doublereal \hyperlink{AVCTRL_8c_aac8d9f7631d21b7d6c4d8df398b64160}{z1em5}\\
+\>doublereal \hyperlink{AVCTRL_8c_a762dda37f2f2be01802d7bf687a99b04}{z5em6}\\
+\>doublereal \hyperlink{AVCTRL_8c_ab9643fe633c5a36a67e387b1c88d5179}{z1em6}\\
+\>doublereal \hyperlink{AVCTRL_8c_a34884c645f1e0e39c41d505703dc3f13}{z1em7}\\
+\>doublereal \hyperlink{AVCTRL_8c_a80fb270da2439b4d5e3b4e50c88548e8}{z1em9}\\
+\>doublereal \hyperlink{AVCTRL_8c_aa5631b46f057869bf9f5e283710470bf}{z1em1}\\
+\>doublereal \hyperlink{AVCTRL_8c_a9b8d263c925eaec48eeefcbb2319e2b9}{zm1}\\
+\>doublereal \hyperlink{AVCTRL_8c_a4873cbd96c87e32cd7745b96c5a00484}{degrad}\\
+\>doublereal \hyperlink{AVCTRL_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi}\\
+\} \hyperlink{AVCTRL_8c_ac5a657aa3ea6ea3cf31409a04bceaba9}{znumbr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{AVCTRL_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{AVCTRL_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{AVCTRL_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{AVCTRL_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{AVCTRL_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{AVCTRL_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{AVCTRL_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{AVCTRL_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{AVCTRL_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{AVCTRL_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{AVCTRL_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{AVCTRL_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{AVCTRL_8c_afa5ce3933aaf601c178ce61b7527df34}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{AVCTRL_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{AVCTRL_8c_a35816f4fc074e82560a799fcd54d7c18}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{AVCTRL_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{AVCTRL_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{AVCTRL_8c_a3af1beb468b87d52dcfd083896385375}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{AVCTRL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{AVCTRL_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{AVCTRL_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{AVCTRL_8c_ac8a84a936fb4e35611466e63d2b1307c}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\+\_\+\+\_\+6} = 6
+\item 
+static integer \hyperlink{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!avcprm\+\_\+1@{avcprm\+\_\+1}}
+\index{avcprm\+\_\+1@{avcprm\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{avcprm\+\_\+1}{avcprm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define avcprm\+\_\+1~{\bf avcprm\+\_\+}}\hypertarget{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{}\label{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}
+
+
+Definition at line 28 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{AVCTRL_8c_a5d8742d837dd932468df10068bbc1875}{}\label{AVCTRL_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 51 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{AVCTRL_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{AVCTRL_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{AVCTRL_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{AVCTRL_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 45 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{AVCTRL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{AVCTRL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 64 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!rmflgs\+\_\+1@{rmflgs\+\_\+1}}
+\index{rmflgs\+\_\+1@{rmflgs\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{rmflgs\+\_\+1}{rmflgs_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rmflgs\+\_\+1~{\bf rmflgs\+\_\+}}\hypertarget{AVCTRL_8c_afde4b6162223aa26a1fa5c412fc67b94}{}\label{AVCTRL_8c_afde4b6162223aa26a1fa5c412fc67b94}
+
+
+Definition at line 21 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{AVCTRL_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{AVCTRL_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{AVCTRL_8c_ac473806d761bac6bbdc70810932acff0}{}\label{AVCTRL_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 58 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!znumbr\+\_\+1@{znumbr\+\_\+1}}
+\index{znumbr\+\_\+1@{znumbr\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+1}{znumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define znumbr\+\_\+1~{\bf znumbr\+\_\+}}\hypertarget{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{}\label{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}
+
+
+Definition at line 36 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!avctrl\+\_\+@{avctrl\+\_\+}}
+\index{avctrl\+\_\+@{avctrl\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{avctrl\+\_\+(doublereal $\ast$donoff, doublereal $\ast$davtp1, doublereal $\ast$g, doublereal $\ast$bmn, doublereal $\ast$bmx, doublereal $\ast$davtp2, doublereal $\ast$dmx)}{avctrl_(doublereal *donoff, doublereal *davtp1, doublereal *g, doublereal *bmn, doublereal *bmx, doublereal *davtp2, doublereal *dmx)}}]{\setlength{\rightskip}{0pt plus 5cm}int avctrl\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{donoff, }
+\item[{doublereal $\ast$}]{davtp1, }
+\item[{doublereal $\ast$}]{g, }
+\item[{doublereal $\ast$}]{bmn, }
+\item[{doublereal $\ast$}]{bmx, }
+\item[{doublereal $\ast$}]{davtp2, }
+\item[{doublereal $\ast$}]{dmx}
+\end{DoxyParamCaption}
+)}\hypertarget{AVCTRL_8c_a412df5388b3b8bc9d0207e3a8de3327b}{}\label{AVCTRL_8c_a412df5388b3b8bc9d0207e3a8de3327b}
+
+
+Definition at line 75 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+References avcprm\+\_\+1, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+6, c\+\_\+n1, cprint\+\_\+(), fxcor\+\_\+1, holfrm\+\_\+(), ibugg\+\_\+1, rmflgs\+\_\+1, and znumbr\+\_\+1.
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{comment}{/* System generated locals */}
+80     doublereal d\_\_1;
+81 
+82     \textcolor{comment}{/* Builtin functions */}
+83     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+84     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+85 
+86     \textcolor{comment}{/* Local variables */}
+87     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+88     \textcolor{keyword}{static} \textcolor{keywordtype}{char} msg[30];
+89     \textcolor{keyword}{static} integer nwd;
+90 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+91 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+92     \textcolor{keyword}{static} \textcolor{keywordtype}{char} onoff[6], avtyp1[6], avtyp2[6];
+93     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+94         integer *, integer *, ftnlen), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+95 
+96 
+97 \textcolor{comment}{/*     PURPOSE: TO PROCESS THE AVCTRL STATEMENT */}
+98 \textcolor{comment}{/*              SET FLAGS AND STORE PARAMETERS */}
+99 
+100 \textcolor{comment}{/*     ARGUMENTS: */}
+101 \textcolor{comment}{/*               DONOFF   D.P.   ON OR OFF */}
+102 \textcolor{comment}{/*                               INVOKES OR CANCELS AVOIDANCE CONTROL */}
+103 \textcolor{comment}{/*               DAVTP1   D.P.   TYPE1 AVOIDANCE CONTROL */}
+104 \textcolor{comment}{/*                               (MODIFICATION OF TOOL AXIS) */}
+105 \textcolor{comment}{/*                                 CUTANG - MODIFY PITCH ANGLE */}
+106 \textcolor{comment}{/*                                 NULL   - NO MODIFICATION OF TOOL AXIS */}
+107 \textcolor{comment}{/*               G        D.P.   CONSTANT TECHNOLOGICAL ANGLE (DEGREES) */}
+108 \textcolor{comment}{/*               BMN      D.P.   MINIMUM PITCH ANGLE (DEGREES) */}
+109 \textcolor{comment}{/*               BMX      D.P.   MAXIMUM PITCH ANGLE (DEGREES) */}
+110 \textcolor{comment}{/*               DAVTP2   D.P.   TYPE2 AVOIDANCE CONTROL (LIFT OFF) */}
+111 \textcolor{comment}{/*                                 NORMPS - LIFT OFF NORMAL TO PS */}
+112 \textcolor{comment}{/*                                 AXIS   - LIFT OFF PARLLEL TO TOOL AXIS */}
+113 \textcolor{comment}{/*                                 NULL   - NONE SPECIFIED (AXIS ASSUMED) */}
+114 \textcolor{comment}{/*               DMX      D.P.   MAXIMUM LIFT OFF DISTANCE */}
+115 
+116 \textcolor{comment}{/*     LOCAL VARIABLES: */}
+117 
+118 \textcolor{comment}{/*               ONOFF    C*6    CHARACTER VERSION OF DONOFF */}
+119 \textcolor{comment}{/*               AVTYP1   C*6        "        "    "  DAVTP1 */}
+120 \textcolor{comment}{/*               AVTYP2   C*6        "        "    "  DAVTP2 */}
+121 \textcolor{comment}{/*               NWD      I      NO OF INTEGER WORDS OCCUPIED BY */}
+122 \textcolor{comment}{/*                               ENCODED CHARACTER STRING */}
+123 \textcolor{comment}{/*               MSG      C*30   DEBUG PRINT MESSAGE */}
+124 
+125 
+126 
+127 \textcolor{comment}{/* .... NEW REGIONAL MILLING FLAGS */}
+128 
+129 
+130 
+131 \textcolor{comment}{/*     LGCHK  - GOUGE CHECK FLAG */}
+132 \textcolor{comment}{/*     LINTCK - INTERFERENCE CHECKING FLAG */}
+133 \textcolor{comment}{/*     LAVCTL - AVOIDANCE CONTROL FLAG */}
+134 \textcolor{comment}{/*     LVAXIS - VARIABLE TOOL AXIS FLAG */}
+135 
+136 
+137 \textcolor{comment}{/*       AVOIDANCE CONTROL PARAMETERS */}
+138 
+139 
+140 
+141 \textcolor{comment}{/*     CTANG    CONSTANT TECHNOLOGICAL ANGLE */}
+142 \textcolor{comment}{/*     BMIN     MINIMUM PITCH ANGLE */}
+143 \textcolor{comment}{/*     BMAX     MAXIMUM PITCH ANGLE */}
+144 \textcolor{comment}{/*     DMAX     MAXIMUM LINEAR LIFT OFF */}
+145 \textcolor{comment}{/*     LATYP1   FLAG INDICATING IF TYPE1 (TILT) AVOIDANCE REQUIRED */}
+146 \textcolor{comment}{/*     LANPS    FLAG INDICATING TYPE OF LINEAR LIFT OFF */}
+147 \textcolor{comment}{/*              .TRUE.  - LIFT OFF NORMAL TO PS */}
+148 \textcolor{comment}{/*              .FALSE. - LIFT OFF PARALLEL TO TOOL AXIS */}
+149 \textcolor{comment}{/*     AVLIST   FLAG INDICATING THAT AVOIDANCE DETAILS ARE TO BE PRINTED */}
+150 
+151 
+152 \textcolor{comment}{/*   ***  10.  ZNUMBR BLOCK  *** */}
+153 
+154 \textcolor{comment}{/*   REAL LITERALS */}
+155 
+156 
+157 
+158 
+159 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+160 
+161 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+162 
+163 
+164 
+165 
+166 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+167 
+168 
+169 
+170 
+171 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+172 
+173 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+174 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+175 
+176 
+177 
+178 
+179 
+180 
+181 \textcolor{comment}{/* .... DEBUG FLAGS */}
+182 
+183 
+184     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(donoff, onoff, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+185     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(davtp1, avtyp1, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+186     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(davtp2, avtyp2, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+187 
+188 \textcolor{comment}{/* .... SET AVOIDANCE CONTROL FLAG */}
+189 
+190     \textcolor{keywordflow}{if} (s\_cmp(onoff, \textcolor{stringliteral}{"ON"}, (ftnlen)6, (ftnlen)2) == 0) \{
+191     \hyperlink{AVCTRL_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\_1}.lavctl = TRUE\_;
+192     \} \textcolor{keywordflow}{else} \{
+193     \hyperlink{AVCTRL_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\_1}.lavctl = FALSE\_;
+194     \}
+195 
+196 \textcolor{comment}{/* .... STORE PARAMETERS */}
+197 
+198     \textcolor{keywordflow}{if} (s\_cmp(avtyp1, \textcolor{stringliteral}{"NULL"}, (ftnlen)6, (ftnlen)4) == 0 && s\_cmp(avtyp2, 
+199         \textcolor{stringliteral}{"NULL"}, (ftnlen)6, (ftnlen)4) == 0) \{
+200 
+201 \textcolor{comment}{/* .... DO NOT ALTER PARAMETERS SINCE AVCTRL/ON OR AVCTRL/OFF */}
+202 
+203     \} \textcolor{keywordflow}{else} \{
+204 
+205 \textcolor{comment}{/* .... TYPE 1 AVOIDANCE CONTROL */}
+206 
+207     \textcolor{keywordflow}{if} (s\_cmp(avtyp1, \textcolor{stringliteral}{"CUTANG"}, (ftnlen)6, (ftnlen)6) == 0) \{
+208         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.latyp1 = TRUE\_;
+209 \textcolor{comment}{/* .... CONVERT ANGLES TO RADIANS BEFORE STORING */}
+210         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.ctang = *\hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g} * \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.degrad;
+211         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmin = *bmn * \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.degrad;
+212         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmax = *bmx * \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.degrad;
+213     \} \textcolor{keywordflow}{else} \{
+214         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.latyp1 = FALSE\_;
+215         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.ctang = \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.z0;
+216         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmin = \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.z0;
+217         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmax = \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.z0;
+218     \}
+219 
+220 \textcolor{comment}{/* .... TYPE 2 AVOIDANCE CONTROL */}
+221 
+222     \textcolor{keywordflow}{if} (s\_cmp(avtyp2, \textcolor{stringliteral}{"NORMPS"}, (ftnlen)6, (ftnlen)6) == 0) \{
+223         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.lanps = TRUE\_;
+224     \} \textcolor{keywordflow}{else} \{
+225         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.lanps = FALSE\_;
+226     \}
+227 
+228 \textcolor{comment}{/* .... LIFT OFF LIMIT */}
+229 
+230     \textcolor{keywordflow}{if} ((d\_\_1 = *dmx - \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.z0, abs(d\_\_1)) < \hyperlink{AVCTRL_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\_1}.z1em6) \{
+231 \textcolor{comment}{/* .... NO LIMIT SPECIFIED - TAKE DPMAX AS DEFAULT */}
+232         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.dmax\_\_ = \hyperlink{AVCTRL_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.dpmax;
+233     \} \textcolor{keywordflow}{else} \{
+234         \hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.dmax\_\_ = *dmx;
+235     \}
+236     \}
+237 
+238 \textcolor{comment}{/* .... DEBUG PRINT */}
+239 
+240     \textcolor{keywordflow}{if} (\hyperlink{AVCTRL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+241     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+242     s\_copy(msg, \textcolor{stringliteral}{"0 AVOIDANCE CONTROL PARAMETERS"}, (ftnlen)30, (ftnlen)30);
+243     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(msg, (ftnlen)30);
+244     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"CANG"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.ctang, (ftnlen)4);
+245     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"BMIN"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmin, (ftnlen)4);
+246     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"BMAX"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.bmax, (ftnlen)4);
+247     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DMAX"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.dmax\_\_, (ftnlen)4);
+248     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"LTYP"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.latyp1, (ftnlen)4);
+249     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"LNPS"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.lanps, (ftnlen)4);
+250     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ALST"}, &\hyperlink{AVCTRL_8c_ac00e28b04390af9c02234688445e0d08}{avcprm\_1}.avlist, (ftnlen)4);
+251     \}
+252 
+253     \textcolor{keywordflow}{return} 0;
+254 \} \textcolor{comment}{/* avctrl\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AVCTRL_8c_a412df5388b3b8bc9d0207e3a8de3327b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AVCTRL_8c_a412df5388b3b8bc9d0207e3a8de3327b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!alp@{alp}}
+\index{alp@{alp}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{AVCTRL_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{AVCTRL_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!avcprm\+\_\+@{avcprm\+\_\+}}
+\index{avcprm\+\_\+@{avcprm\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{avcprm\+\_\+}{avcprm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   avcprm\+\_\+}\hypertarget{AVCTRL_8c_a9aeb2809f1edb63c21d4e72ee65d02de}{}\label{AVCTRL_8c_a9aeb2809f1edb63c21d4e72ee65d02de}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!avlist@{avlist}}
+\index{avlist@{avlist}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{avlist}{avlist}}]{\setlength{\rightskip}{0pt plus 5cm}logical avlist}\hypertarget{AVCTRL_8c_aabc63516f280dfb18320a598c682d42e}{}\label{AVCTRL_8c_aabc63516f280dfb18320a598c682d42e}
+
+
+Definition at line 25 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{AVCTRL_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!bmax@{bmax}}
+\index{bmax@{bmax}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{bmax}{bmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bmax}\hypertarget{AVCTRL_8c_ad3b61834ddc39364ec0906574b152bfd}{}\label{AVCTRL_8c_ad3b61834ddc39364ec0906574b152bfd}
+
+
+Definition at line 24 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!bmin@{bmin}}
+\index{bmin@{bmin}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{bmin}{bmin}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bmin}\hypertarget{AVCTRL_8c_a59bb258ebc7c3a08c2d270357d1c8564}{}\label{AVCTRL_8c_a59bb258ebc7c3a08c2d270357d1c8564}
+
+
+Definition at line 24 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{AVCTRL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 71 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{AVCTRL_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 68 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}}
+\index{c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+6}{c__6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+6 = 6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{}\label{AVCTRL_8c_a3543660f1ae989ebc88144db7ea3ecfd}
+
+
+Definition at line 69 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}{}\label{AVCTRL_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 70 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by avctrl\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{AVCTRL_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{AVCTRL_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{AVCTRL_8c_a35816f4fc074e82560a799fcd54d7c18}{}\label{AVCTRL_8c_a35816f4fc074e82560a799fcd54d7c18}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{AVCTRL_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ctang@{ctang}}
+\index{ctang@{ctang}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ctang}{ctang}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ctang}\hypertarget{AVCTRL_8c_a017bbe0c7b567bef414c6081174305e3}{}\label{AVCTRL_8c_a017bbe0c7b567bef414c6081174305e3}
+
+
+Definition at line 24 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{AVCTRL_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{AVCTRL_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!degrad@{degrad}}
+\index{degrad@{degrad}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{degrad}{degrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal degrad}\hypertarget{AVCTRL_8c_a4873cbd96c87e32cd7745b96c5a00484}{}\label{AVCTRL_8c_a4873cbd96c87e32cd7745b96c5a00484}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!dmax\+\_\+\+\_\+@{dmax\+\_\+\+\_\+}}
+\index{dmax\+\_\+\+\_\+@{dmax\+\_\+\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{dmax\+\_\+\+\_\+}{dmax__}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dmax\+\_\+\+\_\+}\hypertarget{AVCTRL_8c_aabdf0482f8572b46a4ea0e69e8721721}{}\label{AVCTRL_8c_aabdf0482f8572b46a4ea0e69e8721721}
+
+
+Definition at line 24 of file A\+V\+C\+T\+R\+L.\+c.
+
+
+
+Referenced by pchprc\+\_\+().
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{AVCTRL_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{AVCTRL_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{AVCTRL_8c_afa5ce3933aaf601c178ce61b7527df34}{}\label{AVCTRL_8c_afa5ce3933aaf601c178ce61b7527df34}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{AVCTRL_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{AVCTRL_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!hi@{hi}}
+\index{hi@{hi}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{AVCTRL_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{AVCTRL_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{AVCTRL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{AVCTRL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 61 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{AVCTRL_8c_ac8a84a936fb4e35611466e63d2b1307c}{}\label{AVCTRL_8c_ac8a84a936fb4e35611466e63d2b1307c}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{AVCTRL_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{AVCTRL_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 61 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{AVCTRL_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{AVCTRL_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 61 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!lanps@{lanps}}
+\index{lanps@{lanps}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{lanps}{lanps}}]{\setlength{\rightskip}{0pt plus 5cm}logical lanps}\hypertarget{AVCTRL_8c_a90fc47e0cc18bed61d668a710bea5ee6}{}\label{AVCTRL_8c_a90fc47e0cc18bed61d668a710bea5ee6}
+
+
+Definition at line 25 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!latyp1@{latyp1}}
+\index{latyp1@{latyp1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{latyp1}{latyp1}}]{\setlength{\rightskip}{0pt plus 5cm}logical latyp1}\hypertarget{AVCTRL_8c_a20fb5f019c0ac40fcd8f653860e4f16d}{}\label{AVCTRL_8c_a20fb5f019c0ac40fcd8f653860e4f16d}
+
+
+Definition at line 25 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!lavctl@{lavctl}}
+\index{lavctl@{lavctl}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{lavctl}{lavctl}}]{\setlength{\rightskip}{0pt plus 5cm}logical lavctl}\hypertarget{AVCTRL_8c_a3ecfdca8cd552de5ca5f0158591044b1}{}\label{AVCTRL_8c_a3ecfdca8cd552de5ca5f0158591044b1}
+
+
+Definition at line 18 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!lgchk@{lgchk}}
+\index{lgchk@{lgchk}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{lgchk}{lgchk}}]{\setlength{\rightskip}{0pt plus 5cm}logical lgchk}\hypertarget{AVCTRL_8c_a00b7f3cd5ad4fababc11a3060589a4bd}{}\label{AVCTRL_8c_a00b7f3cd5ad4fababc11a3060589a4bd}
+
+
+Definition at line 18 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!lintck@{lintck}}
+\index{lintck@{lintck}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{lintck}{lintck}}]{\setlength{\rightskip}{0pt plus 5cm}logical lintck}\hypertarget{AVCTRL_8c_acc230d34145fd26bef6aa51a20927619}{}\label{AVCTRL_8c_acc230d34145fd26bef6aa51a20927619}
+
+
+Definition at line 18 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!lvaxis@{lvaxis}}
+\index{lvaxis@{lvaxis}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{lvaxis}{lvaxis}}]{\setlength{\rightskip}{0pt plus 5cm}logical lvaxis}\hypertarget{AVCTRL_8c_ac5742e89e268886a777335aba5adbe4b}{}\label{AVCTRL_8c_ac5742e89e268886a777335aba5adbe4b}
+
+
+Definition at line 18 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{AVCTRL_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{AVCTRL_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 48 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!pi@{pi}}
+\index{pi@{pi}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{pi}{pi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pi}\hypertarget{AVCTRL_8c_a7f0cd6132604ba32b060b73483eabcf9}{}\label{AVCTRL_8c_a7f0cd6132604ba32b060b73483eabcf9}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{AVCTRL_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ra@{ra}}
+\index{ra@{ra}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{AVCTRL_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{AVCTRL_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{AVCTRL_8c_abed92b12a9406febedd1333e63fac677}{}\label{AVCTRL_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ri@{ri}}
+\index{ri@{ri}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{AVCTRL_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!rmflgs\+\_\+@{rmflgs\+\_\+}}
+\index{rmflgs\+\_\+@{rmflgs\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{rmflgs\+\_\+}{rmflgs_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   rmflgs\+\_\+}\hypertarget{AVCTRL_8c_a7151f9db8fabb7869b86cdfa2d06ddc8}{}\label{AVCTRL_8c_a7151f9db8fabb7869b86cdfa2d06ddc8}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{AVCTRL_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{AVCTRL_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{AVCTRL_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{AVCTRL_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!surd@{surd}}
+\index{surd@{surd}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{AVCTRL_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{AVCTRL_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ta@{ta}}
+\index{ta@{ta}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_aa38365a06b4e51426459eba3db71f888}{}\label{AVCTRL_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tak@{tak}}
+\index{tak@{tak}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{AVCTRL_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tal@{tal}}
+\index{tal@{tal}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{AVCTRL_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{AVCTRL_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{AVCTRL_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{AVCTRL_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{AVCTRL_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!te@{te}}
+\index{te@{te}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{AVCTRL_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tek@{tek}}
+\index{tek@{tek}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{AVCTRL_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tel@{tel}}
+\index{tel@{tel}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{AVCTRL_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tem@{tem}}
+\index{tem@{tem}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{AVCTRL_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{AVCTRL_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!temp@{temp}}
+\index{temp@{temp}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{AVCTRL_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{AVCTRL_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!ti@{ti}}
+\index{ti@{ti}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{AVCTRL_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tik@{tik}}
+\index{tik@{tik}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{AVCTRL_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!til@{til}}
+\index{til@{til}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{AVCTRL_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{AVCTRL_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{AVCTRL_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{AVCTRL_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{AVCTRL_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{AVCTRL_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{AVCTRL_8c_a3af1beb468b87d52dcfd083896385375}{}\label{AVCTRL_8c_a3af1beb468b87d52dcfd083896385375}
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!tm@{tm}}
+\index{tm@{tm}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{AVCTRL_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{AVCTRL_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!umax@{umax}}
+\index{umax@{umax}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{AVCTRL_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{AVCTRL_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 54 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{AVCTRL_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{AVCTRL_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 39 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z0@{z0}}
+\index{z0@{z0}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z0}{z0}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z0}\hypertarget{AVCTRL_8c_a481b969667dca33a978c50980dd5480c}{}\label{AVCTRL_8c_a481b969667dca33a978c50980dd5480c}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1@{z1}}
+\index{z1@{z1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1}{z1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1}\hypertarget{AVCTRL_8c_a41055aeef4eac887032302f59c372d57}{}\label{AVCTRL_8c_a41055aeef4eac887032302f59c372d57}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z10@{z10}}
+\index{z10@{z10}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z10}{z10}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z10}\hypertarget{AVCTRL_8c_aa269f590808672b62394f95529f5eed9}{}\label{AVCTRL_8c_aa269f590808672b62394f95529f5eed9}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z11em1@{z11em1}}
+\index{z11em1@{z11em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z11em1}{z11em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z11em1}\hypertarget{AVCTRL_8c_a3f1f266b30d3b7eba90480d3f539a117}{}\label{AVCTRL_8c_a3f1f266b30d3b7eba90480d3f539a117}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z12em1@{z12em1}}
+\index{z12em1@{z12em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z12em1}{z12em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z12em1}\hypertarget{AVCTRL_8c_ad973ea9385b44d34c6e2e80f960cb440}{}\label{AVCTRL_8c_ad973ea9385b44d34c6e2e80f960cb440}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1e38@{z1e38}}
+\index{z1e38@{z1e38}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1e38}{z1e38}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1e38}\hypertarget{AVCTRL_8c_a54466da286c37008238f319ca2c1fcc8}{}\label{AVCTRL_8c_a54466da286c37008238f319ca2c1fcc8}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1e6@{z1e6}}
+\index{z1e6@{z1e6}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1e6}{z1e6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1e6}\hypertarget{AVCTRL_8c_aadeb12cf35e33207bf3909df1ca2df8a}{}\label{AVCTRL_8c_aadeb12cf35e33207bf3909df1ca2df8a}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em1@{z1em1}}
+\index{z1em1@{z1em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em1}{z1em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em1}\hypertarget{AVCTRL_8c_aa5631b46f057869bf9f5e283710470bf}{}\label{AVCTRL_8c_aa5631b46f057869bf9f5e283710470bf}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em2@{z1em2}}
+\index{z1em2@{z1em2}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em2}{z1em2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em2}\hypertarget{AVCTRL_8c_accbaaca0db62b7e3c5cbb58ac70362d8}{}\label{AVCTRL_8c_accbaaca0db62b7e3c5cbb58ac70362d8}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em3@{z1em3}}
+\index{z1em3@{z1em3}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em3}{z1em3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em3}\hypertarget{AVCTRL_8c_a01b2258ff2d4f29acf4d08abeaa3a452}{}\label{AVCTRL_8c_a01b2258ff2d4f29acf4d08abeaa3a452}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em5@{z1em5}}
+\index{z1em5@{z1em5}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em5}{z1em5}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em5}\hypertarget{AVCTRL_8c_aac8d9f7631d21b7d6c4d8df398b64160}{}\label{AVCTRL_8c_aac8d9f7631d21b7d6c4d8df398b64160}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em6@{z1em6}}
+\index{z1em6@{z1em6}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em6}{z1em6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em6}\hypertarget{AVCTRL_8c_ab9643fe633c5a36a67e387b1c88d5179}{}\label{AVCTRL_8c_ab9643fe633c5a36a67e387b1c88d5179}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em7@{z1em7}}
+\index{z1em7@{z1em7}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em7}{z1em7}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em7}\hypertarget{AVCTRL_8c_a34884c645f1e0e39c41d505703dc3f13}{}\label{AVCTRL_8c_a34884c645f1e0e39c41d505703dc3f13}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z1em9@{z1em9}}
+\index{z1em9@{z1em9}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z1em9}{z1em9}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em9}\hypertarget{AVCTRL_8c_a80fb270da2439b4d5e3b4e50c88548e8}{}\label{AVCTRL_8c_a80fb270da2439b4d5e3b4e50c88548e8}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z2@{z2}}
+\index{z2@{z2}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z2}{z2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z2}\hypertarget{AVCTRL_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{}\label{AVCTRL_8c_abfdc129c6ee76e75eed3135f0ce25a7c}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z3@{z3}}
+\index{z3@{z3}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z3}{z3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z3}\hypertarget{AVCTRL_8c_a8f55453e5803c6b7e40916652c5d1a1d}{}\label{AVCTRL_8c_a8f55453e5803c6b7e40916652c5d1a1d}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z5@{z5}}
+\index{z5@{z5}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z5}{z5}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5}\hypertarget{AVCTRL_8c_aa4fd0f4665690f94ffacd9717fe96527}{}\label{AVCTRL_8c_aa4fd0f4665690f94ffacd9717fe96527}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z5em1@{z5em1}}
+\index{z5em1@{z5em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z5em1}{z5em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5em1}\hypertarget{AVCTRL_8c_a73fab3947fdf80ebb30f5648a8d00fc2}{}\label{AVCTRL_8c_a73fab3947fdf80ebb30f5648a8d00fc2}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z5em6@{z5em6}}
+\index{z5em6@{z5em6}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z5em6}{z5em6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5em6}\hypertarget{AVCTRL_8c_a762dda37f2f2be01802d7bf687a99b04}{}\label{AVCTRL_8c_a762dda37f2f2be01802d7bf687a99b04}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z6em1@{z6em1}}
+\index{z6em1@{z6em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z6em1}{z6em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z6em1}\hypertarget{AVCTRL_8c_ad989bf7970831e6fdd01873f41330efe}{}\label{AVCTRL_8c_ad989bf7970831e6fdd01873f41330efe}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z90@{z90}}
+\index{z90@{z90}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z90}{z90}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z90}\hypertarget{AVCTRL_8c_ae13651cd40a033422260cdc23ffec6ee}{}\label{AVCTRL_8c_ae13651cd40a033422260cdc23ffec6ee}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!z9em1@{z9em1}}
+\index{z9em1@{z9em1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{z9em1}{z9em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z9em1}\hypertarget{AVCTRL_8c_a7baed3711543adae0b30175a6f65bb05}{}\label{AVCTRL_8c_a7baed3711543adae0b30175a6f65bb05}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!zm1@{zm1}}
+\index{zm1@{zm1}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{zm1}{zm1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal zm1}\hypertarget{AVCTRL_8c_a9b8d263c925eaec48eeefcbb2319e2b9}{}\label{AVCTRL_8c_a9b8d263c925eaec48eeefcbb2319e2b9}
+
+
+Definition at line 31 of file A\+V\+C\+T\+R\+L.\+c.
+
+\index{A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}!znumbr\+\_\+@{znumbr\+\_\+}}
+\index{znumbr\+\_\+@{znumbr\+\_\+}!A\+V\+C\+T\+R\+L.\+c@{A\+V\+C\+T\+R\+L.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+}{znumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   znumbr\+\_\+}\hypertarget{AVCTRL_8c_ac5a657aa3ea6ea3cf31409a04bceaba9}{}\label{AVCTRL_8c_ac5a657aa3ea6ea3cf31409a04bceaba9}

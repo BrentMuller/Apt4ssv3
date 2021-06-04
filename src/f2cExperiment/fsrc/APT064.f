@@ -1,0 +1,63 @@
+**** SOURCE FILE : M0000814.V03   ***
+*
+C.....FORTRAN SUBROUTINE  ....APT064         8/68                    RN
+C.....FORTRAN SUBROUTINE             APT064...              3/1/68   GK
+C
+C              FORTRAN SUBROUTINE APT064
+C
+C PURPOSE      TO GENERATE A ROTATION MATRIX WITHIN A COORDINATE
+C              PLANE FROM THE FOLLOWING APT STATEMENT
+C              RESULT = MATRIX/****, BETA
+C                **** = XYROT, YZROT, OR ZXROT
+C
+C LINKAGE      CALL APT064 (RESULT, MN, BETA)
+C
+C ARGUMENTS    RESULT  ARRAY TO CONTAIN THE CANONICAL FORM OF
+C                      THE RESULTING MATRIX
+C              MN      INTEGER EQUIVALENT OF THE MODIFIER
+C                      1 = XYROT     2 = YZROT    3 = ZXROT
+C              BETA    REAL VARIABLE CONTAING THE VALUE OF
+C                      ROTATION ANGLE
+C
+C SUBSIDIARIES TYPE                ENTRY
+C              REAL FUNCTION       COS
+C              REAL FUNCTION       SIN
+C              REAL FUNCTION       MOD
+C
+      SUBROUTINE APT064 (RESULT,MN,BETA)
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION (O-Z)
+      DIMENSION RESULT(4,3)
+C
+C
+C
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'DEF.INC'
+      INCLUDE 'DSHAR3.INC'
+      INCLUDE 'ZNUMBR.INC'
+      INCLUDE 'ISHR16.INC'
+      INCLUDE 'KNUMBR.INC'
+C
+      EQUIVALENCE (S1,SC(1)),  (S2,SC(2))
+C
+C
+      S1=BETA*DEGRAD
+      S2=DCOS(S1)
+      S1=DSIN(S1)
+      IF (DABS(S2) .LT. Z1EM9) S2=Z0
+      IF (DABS(S1) .LT. Z1EM9) S1=Z0
+      DO 10 I=1,4
+      DO 10 K=1,3
+   10 RESULT(I,K) = Z0
+C
+C...     FORM ROTATION MATRIX
+C
+      J=MN
+      K=MOD(J,K3)+K1
+      I=MOD(K,K3)+K1
+      RESULT(J,J) = S2
+      RESULT(K,K) = S2
+      RESULT(J,K) = S1
+      RESULT(K,J) = -S1
+      RESULT(I,I) = Z1
+      RETURN
+       END

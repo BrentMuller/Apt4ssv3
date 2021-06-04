@@ -1,0 +1,1909 @@
+\hypertarget{GORETR_8c}{}\section{G\+O\+R\+E\+T\+R.\+c File Reference}
+\label{GORETR_8c}\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+O\+R\+E\+T\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{GORETR_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1}~\hyperlink{TLCONV_8c_af2554a06c6606c36c0403398413bc0e9}{plgol\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\+\_\+1}~\hyperlink{REGION_8c_abb0ed8235b116f59d4353f1d4d53196e}{cclear\+\_\+}
+\item 
+\#define \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}~((doublereal $\ast$)\&equiv\+\_\+6 + 1)
+\item 
+\#define \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}~((doublereal $\ast$)\&equiv\+\_\+7 + 1)
+\item 
+\#define \hyperlink{GORETR_8c_a33e7f9e84a54322e0dd86b86c65471b8}{pt1}~((doublereal $\ast$)\&equiv\+\_\+6)
+\item 
+\#define \hyperlink{GORETR_8c_ab1f6e47f70c0719d3ee2e3be5df04dcc}{vt1}~((doublereal $\ast$)\&equiv\+\_\+7)
+\item 
+\#define \hyperlink{GORETR_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}~(equiv\+\_\+10)
+\item 
+\#define \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}~((doublereal $\ast$)\&equiv\+\_\+9)
+\item 
+\#define \hyperlink{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}{iart}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 12)
+\item 
+\#define \hyperlink{GORETR_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{GORETR_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}~((integer $\ast$)\&equiv\+\_\+12)
+\item 
+\#define \hyperlink{GORETR_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{GORETR_8c_a97fcd4069b7f53fed11d1898108de8b7}{imodf}~((integer $\ast$)equiv\+\_\+10)
+\item 
+\#define \hyperlink{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}{rapid}~((doublereal $\ast$)\&equiv\+\_\+11)
+\item 
+\#define \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}~((integer $\ast$)\&equiv\+\_\+11)
+\item 
+\#define \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}~((integer $\ast$)\&equiv\+\_\+9)
+\item 
+\#define \hyperlink{GORETR_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GORETR_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GORETR_8c_a8103a0a16b517cdc878f08cd9cfb0a87}{obname}~((doublereal $\ast$)\&equiv\+\_\+9 + 6)
+\item 
+\#define \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}~((doublereal $\ast$)\&equiv\+\_\+12)
+\item 
+\#define \hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 13)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GORETR_8c_abf638417d3daadcea22b6f70dc2313a6}{goretr\+\_\+} (integer $\ast$lseg, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{INTTPL_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, integer $\ast$\hyperlink{DDST_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, integer $\ast$iret)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}{id} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_afead18f0fcd108ac2e08a23292236dae}{obnam1}\\
+\} \hyperlink{GORETR_8c_ad3bef449e7dfb5437fb2b67f784c0f16}{plgol\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GORETR_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{GORETR_8c_ae07c25b50b761cb384cf9ad5c23d315e}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GORETR_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{GORETR_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{GORETR_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{GORETR_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{GORETR_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{GORETR_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{GORETR_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{GORETR_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{GORETR_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{GORETR_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{GORETR_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{GORETR_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{GORETR_8c_a0332202e5a6a974ea10e7baa5fd3249f}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{GORETR_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{GORETR_8c_a35d30d0b7eed889cb65adedbfcc97fd5}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GORETR_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{GORETR_8c_aa20dc06de66aa1a186f2da8e7adbccc1}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GORETR_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{GORETR_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{GORETR_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{GORETR_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{GORETR_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{GORETR_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{GORETR_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{GORETR_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{GORETR_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{GORETR_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{GORETR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{GORETR_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{GORETR_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{GORETR_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{GORETR_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{GORETR_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{GORETR_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{GORETR_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{GORETR_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{GORETR_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{GORETR_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{GORETR_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{GORETR_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{GORETR_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{GORETR_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{GORETR_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{GORETR_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{GORETR_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{GORETR_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{GORETR_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{GORETR_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{GORETR_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{GORETR_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{GORETR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{GORETR_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{GORETR_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{GORETR_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{GORETR_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{GORETR_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{GORETR_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{GORETR_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{GORETR_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{GORETR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{GORETR_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{GORETR_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{GORETR_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{GORETR_8c_a0a335f4c6ab2deaa15d206c7a0f4ff62}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GORETR_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{GORETR_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{GORETR_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{GORETR_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{GORETR_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{GORETR_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{GORETR_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{GORETR_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{GORETR_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{GORETR_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{GORETR_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{GORETR_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{GORETR_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{GORETR_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{GORETR_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{GORETR_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{GORETR_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{GORETR_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{GORETR_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{GORETR_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{GORETR_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{GORETR_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{GORETR_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{GORETR_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{GORETR_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{GORETR_8c_a7b7c772bd3e8317068c04464cb296095}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GORETR_8c_a432266f39d4fe86448fc0ab420ac18de}{dirmot} \mbox{[}12\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_abdd3f57e29177541d35484168108b99f}{gofeed} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{GORETR_8c_a2add67c170d9cfdec41723a464460c99}{glfeed}\\
+\>doublereal \hyperlink{GORETR_8c_a6935796ccae96fc01f29a0f78d8b4495}{reglda} \mbox{[}2\mbox{]}\\
+\>integer \hyperlink{GORETR_8c_aa3c4509650a51b27f1ea67fd4290a284}{iretro} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{GORETR_8c_aac88f44f9e561c3c8582d8ffa203c8b1}{idirmo} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{GORETR_8c_a3e4ab5ec87bd322c25e159116104ca4b}{icanin} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{GORETR_8c_a25690000a97205449008fda7d52298fa}{ifeedf}\\
+\} \hyperlink{GORETR_8c_a906350f2c5e46c3990ff635f247aed0d}{cclear\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{GORETR_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 28 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GORETR_8c_a2f226f15c00130b05db70054f6514916}{}\label{GORETR_8c_a2f226f15c00130b05db70054f6514916}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!can@{can}}
+\index{can@{can}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GORETR_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{GORETR_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!canon@{canon}}
+\index{canon@{canon}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{GORETR_8c_a68d3ba380c16e286247bb69367760615}{}\label{GORETR_8c_a68d3ba380c16e286247bb69367760615}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cclear\+\_\+1@{cclear\+\_\+1}}
+\index{cclear\+\_\+1@{cclear\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cclear\+\_\+1}{cclear_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cclear\+\_\+1~{\bf cclear\+\_\+}}\hypertarget{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{}\label{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}
+
+
+Definition at line 77 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{GORETR_8c_a5d8742d837dd932468df10068bbc1875}{}\label{GORETR_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 43 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{GORETR_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{GORETR_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!fedrat@{fedrat}}
+\index{fedrat@{fedrat}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{fedrat}{fedrat}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fedrat~((doublereal $\ast$)\&equiv\+\_\+12)}\hypertarget{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{}\label{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 37 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iart@{iart}}
+\index{iart@{iart}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iart}{iart}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iart~((integer $\ast$)\&{\bf plgol\+\_\+1} + 12)}\hypertarget{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}{}\label{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ifedr@{ifedr}}
+\index{ifedr@{ifedr}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ifedr}{ifedr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifedr~((integer $\ast$)\&equiv\+\_\+12)}\hypertarget{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{}\label{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 60 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ileit@{ileit}}
+\index{ileit@{ileit}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ileit}{ileit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ileit~((integer $\ast$)\&equiv\+\_\+9)}\hypertarget{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{}\label{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!imodf@{imodf}}
+\index{imodf@{imodf}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{imodf}{imodf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define imodf~((integer $\ast$)equiv\+\_\+10)}\hypertarget{GORETR_8c_a97fcd4069b7f53fed11d1898108de8b7}{}\label{GORETR_8c_a97fcd4069b7f53fed11d1898108de8b7}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!invers@{invers}}
+\index{invers@{invers}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{invers}{invers}}]{\setlength{\rightskip}{0pt plus 5cm}\#define invers~((integer $\ast$)\&{\bf plgol\+\_\+1} + 13)}\hypertarget{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{}\label{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!irapi@{irapi}}
+\index{irapi@{irapi}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{irapi}{irapi}}]{\setlength{\rightskip}{0pt plus 5cm}\#define irapi~((integer $\ast$)\&equiv\+\_\+11)}\hypertarget{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{}\label{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!leit@{leit}}
+\index{leit@{leit}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{leit}{leit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define leit~((doublereal $\ast$)\&equiv\+\_\+9)}\hypertarget{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{}\label{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!modf@{modf}}
+\index{modf@{modf}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{modf}{modf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modf~(equiv\+\_\+10)}\hypertarget{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{}\label{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!obname@{obname}}
+\index{obname@{obname}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{obname}{obname}}]{\setlength{\rightskip}{0pt plus 5cm}\#define obname~((doublereal $\ast$)\&equiv\+\_\+9 + 6)}\hypertarget{GORETR_8c_a8103a0a16b517cdc878f08cd9cfb0a87}{}\label{GORETR_8c_a8103a0a16b517cdc878f08cd9cfb0a87}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!plgol\+\_\+1@{plgol\+\_\+1}}
+\index{plgol\+\_\+1@{plgol\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+1}{plgol_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define plgol\+\_\+1~{\bf plgol\+\_\+}}\hypertarget{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{}\label{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}
+
+
+Definition at line 22 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pt@{pt}}
+\index{pt@{pt}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pt}{pt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pt~((doublereal $\ast$)\&equiv\+\_\+6 + 1)}\hypertarget{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{}\label{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pt1@{pt1}}
+\index{pt1@{pt1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pt1}{pt1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pt1~((doublereal $\ast$)\&equiv\+\_\+6)}\hypertarget{GORETR_8c_a33e7f9e84a54322e0dd86b86c65471b8}{}\label{GORETR_8c_a33e7f9e84a54322e0dd86b86c65471b8}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!rapid@{rapid}}
+\index{rapid@{rapid}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{rapid}{rapid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rapid~((doublereal $\ast$)\&equiv\+\_\+11)}\hypertarget{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}{}\label{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{GORETR_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{GORETR_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GORETR_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{GORETR_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 69 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{GORETR_8c_ac473806d761bac6bbdc70810932acff0}{}\label{GORETR_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 50 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!vt@{vt}}
+\index{vt@{vt}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{vt}{vt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vt~((doublereal $\ast$)\&equiv\+\_\+7 + 1)}\hypertarget{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{}\label{GORETR_8c_a17f989650cc751d43d2f74f741c76813}
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!vt1@{vt1}}
+\index{vt1@{vt1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{vt1}{vt1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vt1~((doublereal $\ast$)\&equiv\+\_\+7)}\hypertarget{GORETR_8c_ab1f6e47f70c0719d3ee2e3be5df04dcc}{}\label{GORETR_8c_ab1f6e47f70c0719d3ee2e3be5df04dcc}
+
+
+\subsection{Function Documentation}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!goretr\+\_\+@{goretr\+\_\+}}
+\index{goretr\+\_\+@{goretr\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{goretr\+\_\+(integer $\ast$lseg, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$spv, integer $\ast$j11, integer $\ast$iret)}{goretr_(integer *lseg, doublereal *u, doublereal *v, doublereal *spv, integer *j11, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int goretr\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{lseg, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{spv, }
+\item[{integer $\ast$}]{j11, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{GORETR_8c_abf638417d3daadcea22b6f70dc2313a6}{}\label{GORETR_8c_abf638417d3daadcea22b6f70dc2313a6}
+
+
+Definition at line 88 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+References \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1, atape\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, c\+\_\+\+\_\+3, cclear\+\_\+1, e\+\_\+1, e\+\_\+2, ewrite\+\_\+(), fedrat, first, fxcor\+\_\+1, gop\+\_\+(), i\+\_\+\+\_\+, iart, ifedr, ifxcor\+\_\+1, ileit, imodf, invers, ir, irapi, j, leit, modf, plgol\+\_\+1, pt, rapid, record\+\_\+(), spv, symfil\+\_\+1, transm\+\_\+(), and vt.
+
+
+
+Referenced by gol\+\_\+().
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{comment}{/* Initialized data */}
+92 
+93     \textcolor{keyword}{static} \textcolor{keywordtype}{char} cmodf[8*9] = \textcolor{stringliteral}{"PLOTKP  "} \textcolor{stringliteral}{"PLOTKF  "} \textcolor{stringliteral}{"PLOTFU  "} \textcolor{stringliteral}{"PLOTFV  "} 
+94         \textcolor{stringliteral}{"PLOTGR  "} \textcolor{stringliteral}{"GOFLU   "} \textcolor{stringliteral}{"GOFLV   "} \textcolor{stringliteral}{"CLEARS  "} \textcolor{stringliteral}{"CLEARP  "};
+95     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+96     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+97     integer \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[10];
+98     doublereal \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+99     \} equiv\_11 = \{ 0, 0, 1308622848, 0, 1308622848, 2, 1308622848, 2, 0, 
+100         0, 0. \};
+101 
+102     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+103     integer \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[10];
+104     doublereal \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+105     \} equiv\_12 = \{ 0, 0, 1308622848, 0, 1308622848, 2, 1308622848, 1, 0, 
+106         0, 0. \};
+107 
+108     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+109     doublereal \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[4];
+110     \} equiv\_6 = \{ 1.903e7, 0., 0., 0. \};
+111 
+112     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+113     doublereal \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[4];
+114     \} equiv\_7 = \{ 2.003e7, 0., 0., 0. \};
+115 
+116     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+117     integer \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[18];
+118     doublereal \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+119     \} equiv\_9 = \{ 0, 0, 1308622848, 0, 1308622848, 6, 1308622848, 1, 0, 0,
+120          1308622848, 0, 0, 0, 1308622848, 0, 1308622848, 0, 0. \};
+121 
+122 
+123     \textcolor{comment}{/* System generated locals */}
+124     \textcolor{keyword}{static} doublereal equiv\_10[9];
+125 
+126     \textcolor{comment}{/* Builtin functions */}
+127     \textcolor{keywordtype}{double} sqrt(doublereal);
+128 
+129     \textcolor{comment}{/* Local variables */}
+130     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+131     \textcolor{keyword}{static} doublereal dm[3], cp[3];
+132     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, nr;
+133 \textcolor{preprocessor}{#define pt ((doublereal *)&equiv\_6 + 1)}
+134 \textcolor{preprocessor}{#define vt ((doublereal *)&equiv\_7 + 1)}
+135 \textcolor{preprocessor}{#define pt1 ((doublereal *)&equiv\_6)}
+136 \textcolor{preprocessor}{#define vt1 ((doublereal *)&equiv\_7)}
+137 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+138     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(integer *, doublereal *, doublereal *, 
+139         doublereal *, integer *, integer *);
+140     \textcolor{keyword}{static} doublereal vll;
+141     \textcolor{keyword}{static} integer iwo;
+142     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+143 \textcolor{preprocessor}{#define modf (equiv\_10)}
+144     \textcolor{keyword}{static} integer icls;
+145 \textcolor{preprocessor}{#define leit ((doublereal *)&equiv\_9)}
+146 \textcolor{preprocessor}{#define iart ((integer *)&plgol\_1 + 12)}
+147 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+148 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+149 \textcolor{preprocessor}{#define ifedr ((integer *)&equiv\_12)}
+150     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}(\textcolor{keywordtype}{void});
+151 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+152 \textcolor{preprocessor}{#define imodf ((integer *)equiv\_10)}
+153 \textcolor{preprocessor}{#define rapid ((doublereal *)&equiv\_11)}
+154     \textcolor{keyword}{static} integer iblnk;
+155 \textcolor{preprocessor}{#define irapi ((integer *)&equiv\_11)}
+156 \textcolor{preprocessor}{#define ileit ((integer *)&equiv\_9)}
+157 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+158 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+159 \textcolor{preprocessor}{#define obname ((doublereal *)&equiv\_9 + 6)}
+160 \textcolor{preprocessor}{#define fedrat ((doublereal *)&equiv\_12)}
+161     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(integer *), \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(integer *, 
+162         integer *, doublereal *, integer *, integer *);
+163 \textcolor{preprocessor}{#define invers ((integer *)&plgol\_1 + 13)}
+164     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(doublereal *, doublereal *, integer *,
+165          integer *, integer *);
+166 
+167 
+168 \textcolor{comment}{/*  RETRACT AND MOVEIN ROUTINE FOR >GOL< */}
+169 
+170 
+171 \textcolor{comment}{/*  GOLOFT COMMON */}
+172 
+173 \textcolor{comment}{/* IART:      IART = 1   PLOTFT/SCURV,.........,PARAM,.... */}
+174 \textcolor{comment}{/*            IART = 2   PLOTFT/SCURV,.........,FLOW ,.... */}
+175 \textcolor{comment}{/*            IART = 3   PLOTFT/SSURF,UCONST,U,........... */}
+176 \textcolor{comment}{/*            IART = 4   PLOTFT/SSURF,VCONST,V,........... */}
+177 \textcolor{comment}{/*            IART = 5   PLOTFT/SSURF,GRID,............... */}
+178 \textcolor{comment}{/*            IART = 6   GOLOFT/SSURF,UCONST,U,........... */}
+179 \textcolor{comment}{/*            IART = 7   GOLOFT/SSURF,VCONST,V,........... */}
+180 
+181 \textcolor{comment}{/* INVERS:    INVERSION OF THE POINT-SEQUENCE */}
+182 
+183 \textcolor{comment}{/*  BLANK-COMMON */}
+184 
+185 \textcolor{comment}{/*   POINT STORAGE FOR TRANSFORMATION PURPOSE */}
+186 
+187 \textcolor{comment}{/*     UNLABELLED COMMON */}
+188 
+189 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+190 
+191 
+192 
+193 
+194 
+195 \textcolor{comment}{/*   VECTOR STORAGE FOR TRANSFORMATION PURPOSE */}
+196 
+197 \textcolor{comment}{/*  OUTPUT-ARRAY OF THE HEADER */}
+198 
+199 
+200 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+201 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+202 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+203 
+204 
+205 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+206 
+207 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+208 
+209 
+210 
+211 
+212 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+213 
+214 
+215 
+216 
+217 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+218 
+219 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+220 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+221 
+222 
+223 
+224 
+225 
+226 \textcolor{comment}{/*  SYSTEM - INPUT/OUTPUT-NAMES */}
+227 
+228 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+229 
+230 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+231 
+232 
+233 
+234 
+235 \textcolor{comment}{/*  STORAGE OF POINTS */}
+236 
+237 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+238 
+239 
+240 
+241 
+242 \textcolor{comment}{/*  MOTION DIRECTIONS (LATER RETRACT POINT), CLEAR POINT */}
+243 
+244 
+245 
+246     \textcolor{comment}{/* Parameter adjustments */}
+247     --\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv};
+248 
+249     \textcolor{comment}{/* Function Body */}
+250 
+251 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+252 
+253 \textcolor{comment}{/* .... INITIALIZE CHARACTER ITEMS FOR EXFILE RECORD */}
+254 
+255     \textcolor{keywordflow}{if} (first) \{
+256     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 9; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+257         \hyperlink{GORETR_8c_a97fcd4069b7f53fed11d1898108de8b7}{imodf}[(i\_\_ << 1) - 2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(cmodf + (i\_\_ - 1 << 3), (ftnlen)4);
+258         \hyperlink{GORETR_8c_a97fcd4069b7f53fed11d1898108de8b7}{imodf}[(i\_\_ << 1) - 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(cmodf + ((i\_\_ - 1 << 3) + 4), (
+259             ftnlen)4);
+260 \textcolor{comment}{/* L5: */}
+261     \}
+262     \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"CLDA"}, (ftnlen)4);
+263     \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"TA  "}, (ftnlen)4);
+264     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"RAPI"}, (ftnlen)4);
+265     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"D   "}, (ftnlen)4);
+266     \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"FEDR"}, (ftnlen)4);
+267     \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"AT  "}, (ftnlen)4);
+268     iblnk = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"    "}, (ftnlen)4);
+269     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[8] = iblnk;
+270     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[9] = iblnk;
+271     first = FALSE\_;
+272     \}
+273 
+274 \textcolor{comment}{/*  SET FLAG FOR GLOBAL FEED */}
+275     \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.ifeedf = 0;
+276 
+277 \textcolor{comment}{/*  SAVE CL-FLAG */}
+278     icls = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl;
+279 
+280 \textcolor{comment}{/*  RETRACT AND FEEDRAT ONLY FOR GOLOFT */}
+281     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} <= 5) \{
+282     \textcolor{keywordflow}{goto} L90;
+283     \}
+284 
+285 \textcolor{comment}{/*  EXTRA MOTION IF FLAG IS ONE */}
+286     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.iretro[*lseg - 1] == 0) \{
+287     \textcolor{keywordflow}{goto} L90;
+288     \}
+289 
+290 \textcolor{comment}{/*  COMPUTE THE POINT IF PLUNGE IN MOTION */}
+291     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 0 && (*lseg == 1 || *lseg == 3) || *\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1 && (*lseg 
+292         == 2 || *lseg == 4)) \{
+293     \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(&\hyperlink{GORETR_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[1], \hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, iret);
+294     \}
+295 
+296 \textcolor{comment}{/*  CALCULATION OF MOTION DIRECTION */}
+297     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+298 \textcolor{comment}{/* L9: */}
+299     dm[i\_\_ - 1] = 0.;
+300     \}
+301     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.idirmo[*lseg - 1] != 1) \{
+302     \textcolor{keywordflow}{goto} L20;
+303     \}
+304     iwo = 8;
+305     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} == 7) \{
+306     iwo = 4;
+307     \}
+308     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+309 \textcolor{comment}{/* L10: */}
+310     dm[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[iwo + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+311     \}
+312 
+313 \textcolor{comment}{/*  LENGTH OF MOTION DIRECTION */}
+314     vll = sqrt(dm[0] * dm[0] + dm[1] * dm[1] + dm[2] * dm[2]);
+315 \textcolor{comment}{/*  INVERT LENGTH IF MOTION DIRECTION IS INVERS */}
+316     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1) \{
+317     vll = -vll;
+318     \}
+319 \textcolor{comment}{/*  NORMALIZE MOTION DIRECTION */}
+320     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+321     dm[i\_\_ - 1] /= vll;
+322 \textcolor{comment}{/* L11: */}
+323     \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}[i\_\_ - 1] = dm[i\_\_ - 1];
+324     \}
+325 
+326 \textcolor{comment}{/*  CALCULATE EXTRA MOTION */}
+327     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+328 \textcolor{comment}{/* L12: */}
+329     dm[i\_\_ - 1] = dm[i\_\_ - 1] * \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.dirmot[*lseg * 3 - 3] + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ 
+330         + 28] * \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.dirmot[*lseg * 3 - 2];
+331     \}
+332     \textcolor{keywordflow}{goto} L30;
+333 
+334 \textcolor{comment}{/*  VECTOR MOTION */}
+335 L20:
+336     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.idirmo[*lseg - 1] != 2) \{
+337     \textcolor{keywordflow}{goto} L30;
+338     \}
+339     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+340 \textcolor{comment}{/* L22: */}
+341     dm[i\_\_ - 1] = \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.dirmot[i\_\_ + *lseg * 3 - 4];
+342     \}
+343 
+344 \textcolor{comment}{/*  COMPUTE STEP IN OR RETRACT POINT */}
+345 L30:
+346     vll = 1.;
+347     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1) \{
+348     vll = -1.;
+349     \}
+350     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 0 && (*lseg == 1 || *lseg == 3) || *\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1 && (*lseg 
+351         == 2 || *lseg == 4)) \{
+352     vll = -vll;
+353     \}
+354     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+355 \textcolor{comment}{/* L32: */}
+356     dm[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 32] + dm[i\_\_ - 1] * vll;
+357     \}
+358 
+359 \textcolor{comment}{/*  COMPUTE CLEARENCE POSITION */}
+360     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] == 0) \{
+361     \textcolor{keywordflow}{goto} L45;
+362     \}
+363 
+364 \textcolor{comment}{/*  COMPUTE POINT DISTANCE */}
+365     vll = \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\_BLNK\_\_1}.com[\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] - 1] * dm[0] + 
+      \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\_BLNK\_\_1}.com[
+366         \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1]] * dm[1] + \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\_BLNK\_\_1}.com[
+367         \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] + 1] * dm[2] - \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\_BLNK\_\_1}.com[
+368         \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] + 2];
+369 
+370 \textcolor{comment}{/*  COMPUTE CLEAR POINT ON CLEAR PLANE */}
+371     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+372 \textcolor{comment}{/* L40: */}
+373     cp[i\_\_ - 1] = dm[i\_\_ - 1] - \hyperlink{GORETR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\_BLNK\_\_1}.com[\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] + 
+374         i\_\_ - 2] * vll;
+375     \}
+376 L45:
+377 
+378 \textcolor{comment}{/*  DECISION IF STEP IN OR STEP OUT */}
+379     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 0 && (*lseg == 2 || *lseg == 4) || *\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1 && (*lseg 
+380         == 1 || *lseg == 3)) \{
+381     \textcolor{keywordflow}{goto} L70;
+382     \}
+383 
+384 \textcolor{comment}{/*  STEP IN ****************************** */}
+385     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] == 0) \{
+386     \textcolor{keywordflow}{goto} L55;
+387     \}
+388 
+389 \textcolor{comment}{/*   RAPID */}
+390     nr = 0;
+391     j = 10;
+392     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+393     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+394     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}{rapid}, &j, &ir);
+395 
+396 \textcolor{comment}{/*   CLEAR POINT */}
+397     nr = 0;
+398     j = 18;
+399     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3]);
+400     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno = \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3];
+401     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[4] = \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}[7];
+402     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[6] = \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.obnam1;
+403     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}, &j, &ir);
+404     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 3;
+405 
+406 \textcolor{comment}{/*  STORING TOOL AXIS */}
+407     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+408     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tak[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1];
+409 \textcolor{comment}{/* L50: */}
+410     \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 36];
+411     \}
+412     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta, \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+413 
+414 \textcolor{comment}{/*  STORING TOOL TIP */}
+415     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+416     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tek[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1];
+417 \textcolor{comment}{/* L51: */}
+418     \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}[i\_\_ - 1] = cp[i\_\_ - 1];
+419     \}
+420     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te, \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}, &\hyperlink{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+421     \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}();
+422 
+423 \textcolor{comment}{/* NEAR POINT ? */}
+424 L55:
+425     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.idirmo[*lseg - 1] == 0) \{
+426     \textcolor{keywordflow}{goto} L90;
+427     \}
+428 
+429 \textcolor{comment}{/*   RAPID */}
+430     nr = 0;
+431     j = 10;
+432     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+433     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+434     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}{rapid}, &j, &ir);
+435 
+436 \textcolor{comment}{/*  NEAR POINT */}
+437     nr = 0;
+438     j = 18;
+439     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3]);
+440     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno = \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3];
+441     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[4] = \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}[8];
+442     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[6] = \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.obnam1;
+443     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}, &j, &ir);
+444     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 3;
+445 
+446 \textcolor{comment}{/*  STORING TOOL AXIS */}
+447     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+448     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tak[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1];
+449 \textcolor{comment}{/* L61: */}
+450     \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 36];
+451     \}
+452     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta, \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+453 
+454 \textcolor{comment}{/*  STORING TOOL TIP */}
+455     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+456     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tek[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1];
+457 \textcolor{comment}{/* L62: */}
+458     \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}[i\_\_ - 1] = dm[i\_\_ - 1];
+459     \}
+460     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te, \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}, &\hyperlink{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+461     \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}();
+462 
+463 \textcolor{comment}{/* FEDRATE FOR NEAR POINT */}
+464     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.gofeed[*lseg - 1] == 0.) \{
+465     \textcolor{keywordflow}{goto} L90;
+466     \}
+467     nr = 0;
+468     j = 10;
+469     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+470     \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+471     \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}[4] = \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.gofeed[*lseg - 1];
+472     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}, &j, &ir);
+473 
+474 \textcolor{comment}{/*  SET FLAG FOR GLOBAL FEEDRAT OUTPUT IN >GOP< */}
+475     \textcolor{keywordflow}{if} (icls == 2) \{
+476     \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.ifeedf = 1;
+477     \}
+478 
+479 \textcolor{comment}{/*  CONTINUE WITH NORMAL PATH */}
+480     \textcolor{keywordflow}{goto} L90;
+481 
+482 \textcolor{comment}{/*  STEP OUT ******************************** */}
+483 
+484 \textcolor{comment}{/*  NEAR POINT ? */}
+485 L70:
+486     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.idirmo[*lseg - 1] == 0) \{
+487     \textcolor{keywordflow}{goto} L80;
+488     \}
+489 
+490 \textcolor{comment}{/* FEDRATE FOR NEAR POINT */}
+491     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.gofeed[*lseg - 1] == 0.) \{
+492     \textcolor{keywordflow}{goto} L75;
+493     \}
+494     nr = 0;
+495     j = 10;
+496     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+497     \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+498     \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}[4] = \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.gofeed[*lseg - 1];
+499     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}, &j, &ir);
+500 
+501 \textcolor{comment}{/*  NEAR POINT */}
+502 L75:
+503     nr = 0;
+504     j = 18;
+505     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3]);
+506     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno = \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3];
+507     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[4] = \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}[8];
+508     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[6] = \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.obnam1;
+509     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}, &j, &ir);
+510     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 3;
+511 
+512 \textcolor{comment}{/*  STORING TOOL AXIS */}
+513     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+514     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tak[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1];
+515 \textcolor{comment}{/* L76: */}
+516     \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 36];
+517     \}
+518     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta, \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+519 
+520 \textcolor{comment}{/*  STORING TOOL TIP */}
+521     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+522     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tek[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1];
+523 \textcolor{comment}{/* L77: */}
+524     \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}[i\_\_ - 1] = dm[i\_\_ - 1];
+525     \}
+526     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te, \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}, &\hyperlink{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+527     \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}();
+528 
+529 \textcolor{comment}{/*  FEDRAT FOR NORMAL GOLOFT */}
+530     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.gofeed[*lseg - 1] == 0. || *lseg == 2 || *lseg == 3) \{
+531     \textcolor{keywordflow}{goto} L80;
+532     \}
+533     nr = 0;
+534     j = 10;
+535     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+536     \hyperlink{GORETR_8c_a7cff08885b4f18e93aa20afe06a6f006}{ifedr}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+537     \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}[4] = \hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.glfeed;
+538     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9eaa490e21546cf1bc3a051c0f435c7b}{fedrat}, &j, &ir);
+539 
+540 \textcolor{comment}{/*  CLEAR POINT */}
+541 L80:
+542     \textcolor{keywordflow}{if} (\hyperlink{GORETR_8c_a697474157d3c43376cea66a0fdca2bd1}{cclear\_1}.icanin[*lseg - 1] == 0) \{
+543     \textcolor{keywordflow}{goto} L99;
+544     \}
+545 
+546 \textcolor{comment}{/*   RAPID */}
+547     nr = 0;
+548     j = 10;
+549     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+550     \hyperlink{GORETR_8c_a964aac892b590cbf7cd4d2a991fdd77e}{irapi}[3] = \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+551     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a067fe2663b104339de5d6c647915c8b6}{rapid}, &j, &ir);
+552 
+553 \textcolor{comment}{/*   CLEAR POINT */}
+554     nr = 0;
+555     j = 18;
+556     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3]);
+557     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno = \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3];
+558     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[4] = \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}[7];
+559     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[6] = \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.obnam1;
+560     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}, &j, &ir);
+561     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 3;
+562 
+563 \textcolor{comment}{/*  STORING TOOL AXIS */}
+564     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+565     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tak[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1];
+566 \textcolor{comment}{/* L81: */}
+567     \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 36];
+568     \}
+569     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta, \hyperlink{GORETR_8c_a17f989650cc751d43d2f74f741c76813}{vt}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+570 
+571 \textcolor{comment}{/*  STORING TOOL TIP */}
+572     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+573     \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tek[i\_\_ - 1] = \hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1];
+574 \textcolor{comment}{/* L82: */}
+575     \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}[i\_\_ - 1] = cp[i\_\_ - 1];
+576     \}
+577     \hyperlink{TRANSM_8c_a97650ed061f4217b8de19ff7a6fb9bc7}{transm\_}(\hyperlink{GORETR_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te, \hyperlink{GORETR_8c_a71bd2d6b182eaf2826e52179d0a62da9}{pt}, &\hyperlink{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &\hyperlink{GORETR_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+578     \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}();
+579     \textcolor{keywordflow}{goto} L99;
+580 
+581 \textcolor{comment}{/*  OUTPUT OF THE HEADER */}
+582 L90:
+583     \textcolor{keywordflow}{if} (*\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 0 && (*lseg == 2 || *lseg == 4) || *\hyperlink{GORETR_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} == 1 && (*lseg 
+584         == 1 || *lseg == 3)) \{
+585     \textcolor{keywordflow}{goto} L99;
+586     \}
+587     nr = 0;
+588     j = 18;
+589     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3]);
+590     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno = \hyperlink{GORETR_8c_a7aced8b37d8dccb54cc5756b620e8ed1}{ileit}[3];
+591     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[4] = \hyperlink{GORETR_8c_a796bb24cb570d8d46fc6844d8112e9e3}{modf}[*\hyperlink{GORETR_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} - 1];
+592     \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}[6] = \hyperlink{GORETR_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.obnam1;
+593     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{GORETR_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{GORETR_8c_a9dd654f81d00e9e677f8e541886b17f7}{leit}, &j, &ir);
+594     \hyperlink{GORETR_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = icls;
+595 
+596 L99:
+597     \textcolor{keywordflow}{return} 0;
+598 \} \textcolor{comment}{/* goretr\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{GORETR_8c_abf638417d3daadcea22b6f70dc2313a6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GORETR_8c_abf638417d3daadcea22b6f70dc2313a6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{GORETR_8c_ae07c25b50b761cb384cf9ad5c23d315e}{}\label{GORETR_8c_ae07c25b50b761cb384cf9ad5c23d315e}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!alp@{alp}}
+\index{alp@{alp}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{GORETR_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{GORETR_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{GORETR_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{GORETR_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{GORETR_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{GORETR_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 83 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GORETR_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{GORETR_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 81 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{GORETR_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 84 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GORETR_8c_a5e7359f78743350865398325d9155f20}{}\label{GORETR_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 82 of file G\+O\+R\+E\+T\+R.\+c.
+
+
+
+Referenced by goretr\+\_\+().
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{GORETR_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{GORETR_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cclear\+\_\+@{cclear\+\_\+}}
+\index{cclear\+\_\+@{cclear\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cclear\+\_\+}{cclear_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cclear\+\_\+}\hypertarget{GORETR_8c_a906350f2c5e46c3990ff635f247aed0d}{}\label{GORETR_8c_a906350f2c5e46c3990ff635f247aed0d}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{GORETR_8c_a35d30d0b7eed889cb65adedbfcc97fd5}{}\label{GORETR_8c_a35d30d0b7eed889cb65adedbfcc97fd5}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{GORETR_8c_afddbf18370447268640d26c983890fd1}{}\label{GORETR_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{GORETR_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{GORETR_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{GORETR_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{GORETR_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!com@{com}}
+\index{com@{com}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{GORETR_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{GORETR_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 25 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{GORETR_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{GORETR_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{GORETR_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{GORETR_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{GORETR_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!dirmot@{dirmot}}
+\index{dirmot@{dirmot}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{dirmot}{dirmot}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dirmot\mbox{[}12\mbox{]}}\hypertarget{GORETR_8c_a432266f39d4fe86448fc0ab420ac18de}{}\label{GORETR_8c_a432266f39d4fe86448fc0ab420ac18de}
+
+
+Definition at line 72 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{GORETR_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{GORETR_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{GORETR_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{GORETR_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{GORETR_8c_a995bd688c87d82736860b413de2416d4}{}\label{GORETR_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{GORETR_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{GORETR_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{GORETR_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{GORETR_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{GORETR_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{GORETR_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{GORETR_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{GORETR_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{GORETR_8c_a0332202e5a6a974ea10e7baa5fd3249f}{}\label{GORETR_8c_a0332202e5a6a974ea10e7baa5fd3249f}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{GORETR_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{GORETR_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!glfeed@{glfeed}}
+\index{glfeed@{glfeed}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{glfeed}{glfeed}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal glfeed}\hypertarget{GORETR_8c_a2add67c170d9cfdec41723a464460c99}{}\label{GORETR_8c_a2add67c170d9cfdec41723a464460c99}
+
+
+Definition at line 72 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!gofeed@{gofeed}}
+\index{gofeed@{gofeed}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{gofeed}{gofeed}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gofeed\mbox{[}4\mbox{]}}\hypertarget{GORETR_8c_abdd3f57e29177541d35484168108b99f}{}\label{GORETR_8c_abdd3f57e29177541d35484168108b99f}
+
+
+Definition at line 72 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!hi@{hi}}
+\index{hi@{hi}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{GORETR_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{GORETR_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{GORETR_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{GORETR_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{GORETR_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{GORETR_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{GORETR_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{GORETR_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{GORETR_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{GORETR_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ic@{ic}}
+\index{ic@{ic}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{GORETR_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{GORETR_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!icanin@{icanin}}
+\index{icanin@{icanin}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{icanin}{icanin}}]{\setlength{\rightskip}{0pt plus 5cm}integer icanin\mbox{[}4\mbox{]}}\hypertarget{GORETR_8c_a3e4ab5ec87bd322c25e159116104ca4b}{}\label{GORETR_8c_a3e4ab5ec87bd322c25e159116104ca4b}
+
+
+Definition at line 74 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{GORETR_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{GORETR_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!icl@{icl}}
+\index{icl@{icl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{GORETR_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{GORETR_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ics@{ics}}
+\index{ics@{ics}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{GORETR_8c_a7217a40b82199af56087b578a9bef158}{}\label{GORETR_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{GORETR_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{GORETR_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{GORETR_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{GORETR_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!icut@{icut}}
+\index{icut@{icut}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{GORETR_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{GORETR_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!id@{id}}
+\index{id@{id}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}integer id\mbox{[}24\mbox{]}}\hypertarget{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}{}\label{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}
+
+
+Definition at line 18 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!idirmo@{idirmo}}
+\index{idirmo@{idirmo}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{idirmo}{idirmo}}]{\setlength{\rightskip}{0pt plus 5cm}integer idirmo\mbox{[}4\mbox{]}}\hypertarget{GORETR_8c_aac88f44f9e561c3c8582d8ffa203c8b1}{}\label{GORETR_8c_aac88f44f9e561c3c8582d8ffa203c8b1}
+
+
+Definition at line 74 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ids@{ids}}
+\index{ids@{ids}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{GORETR_8c_a312fee9680413e72b1ed128af2de8822}{}\label{GORETR_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ier@{ier}}
+\index{ier@{ier}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{GORETR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{GORETR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ifeedf@{ifeedf}}
+\index{ifeedf@{ifeedf}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ifeedf}{ifeedf}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifeedf}\hypertarget{GORETR_8c_a25690000a97205449008fda7d52298fa}{}\label{GORETR_8c_a25690000a97205449008fda7d52298fa}
+
+
+Definition at line 74 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{GORETR_8c_a0a335f4c6ab2deaa15d206c7a0f4ff62}{}\label{GORETR_8c_a0a335f4c6ab2deaa15d206c7a0f4ff62}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!igo@{igo}}
+\index{igo@{igo}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{GORETR_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{GORETR_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{GORETR_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{GORETR_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{GORETR_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{GORETR_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!igs@{igs}}
+\index{igs@{igs}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{GORETR_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{GORETR_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{GORETR_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{GORETR_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!inops@{inops}}
+\index{inops@{inops}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{GORETR_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{GORETR_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ips@{ips}}
+\index{ips@{ips}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{GORETR_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{GORETR_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{GORETR_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{GORETR_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{GORETR_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{GORETR_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iretro@{iretro}}
+\index{iretro@{iretro}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iretro}{iretro}}]{\setlength{\rightskip}{0pt plus 5cm}integer iretro\mbox{[}4\mbox{]}}\hypertarget{GORETR_8c_aa3c4509650a51b27f1ea67fd4290a284}{}\label{GORETR_8c_aa3c4509650a51b27f1ea67fd4290a284}
+
+
+Definition at line 74 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!is@{is}}
+\index{is@{is}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{GORETR_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{GORETR_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{GORETR_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{GORETR_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{GORETR_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{GORETR_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{GORETR_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{GORETR_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{GORETR_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{GORETR_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{GORETR_8c_a71eb31c84997c0822663e9391c14d998}{}\label{GORETR_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!it@{it}}
+\index{it@{it}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{GORETR_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{GORETR_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{GORETR_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{GORETR_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{GORETR_8c_a10effd66f46b95c77726e50c3d371477}{}\label{GORETR_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{GORETR_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{GORETR_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{GORETR_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{GORETR_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{GORETR_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{GORETR_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{GORETR_8c_a15ffd813a44621365b809bd790efc487}{}\label{GORETR_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{GORETR_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{GORETR_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{GORETR_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{GORETR_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{GORETR_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{GORETR_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 40 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{GORETR_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{GORETR_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!msav@{msav}}
+\index{msav@{msav}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{GORETR_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{GORETR_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{GORETR_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{GORETR_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{GORETR_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{GORETR_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{GORETR_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{GORETR_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{GORETR_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{GORETR_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{GORETR_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{GORETR_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{GORETR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{GORETR_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!numax@{numax}}
+\index{numax@{numax}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{GORETR_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{GORETR_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{GORETR_8c_a5123b60c8419619c6c2debf212d28208}{}\label{GORETR_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nump@{nump}}
+\index{nump@{nump}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{GORETR_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{GORETR_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{GORETR_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{GORETR_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{GORETR_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{GORETR_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{GORETR_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{GORETR_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nw@{nw}}
+\index{nw@{nw}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{GORETR_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{GORETR_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{GORETR_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{GORETR_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 53 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!obnam1@{obnam1}}
+\index{obnam1@{obnam1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{obnam1}{obnam1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal obnam1}\hypertarget{GORETR_8c_afead18f0fcd108ac2e08a23292236dae}{}\label{GORETR_8c_afead18f0fcd108ac2e08a23292236dae}
+
+
+Definition at line 19 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!plgol\+\_\+@{plgol\+\_\+}}
+\index{plgol\+\_\+@{plgol\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+}{plgol_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   plgol\+\_\+}\hypertarget{GORETR_8c_ad3bef449e7dfb5437fb2b67f784c0f16}{}\label{GORETR_8c_ad3bef449e7dfb5437fb2b67f784c0f16}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{GORETR_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{GORETR_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{GORETR_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{GORETR_8c_af29300e691e97a062da856325402d3e9}{}\label{GORETR_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{GORETR_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{GORETR_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ra@{ra}}
+\index{ra@{ra}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{GORETR_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{GORETR_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{GORETR_8c_abed92b12a9406febedd1333e63fac677}{}\label{GORETR_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!reglda@{reglda}}
+\index{reglda@{reglda}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{reglda}{reglda}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal reglda\mbox{[}2\mbox{]}}\hypertarget{GORETR_8c_a6935796ccae96fc01f29a0f78d8b4495}{}\label{GORETR_8c_a6935796ccae96fc01f29a0f78d8b4495}
+
+
+Definition at line 72 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ri@{ri}}
+\index{ri@{ri}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{GORETR_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{GORETR_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{GORETR_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{GORETR_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{GORETR_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!surd@{surd}}
+\index{surd@{surd}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{GORETR_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{GORETR_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{GORETR_8c_a7b7c772bd3e8317068c04464cb296095}{}\label{GORETR_8c_a7b7c772bd3e8317068c04464cb296095}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ta@{ta}}
+\index{ta@{ta}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_aa38365a06b4e51426459eba3db71f888}{}\label{GORETR_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tak@{tak}}
+\index{tak@{tak}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{GORETR_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tal@{tal}}
+\index{tal@{tal}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{GORETR_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{GORETR_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{GORETR_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{GORETR_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{GORETR_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!te@{te}}
+\index{te@{te}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{GORETR_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tek@{tek}}
+\index{tek@{tek}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{GORETR_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tel@{tel}}
+\index{tel@{tel}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{GORETR_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tem@{tem}}
+\index{tem@{tem}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{GORETR_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{GORETR_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!temp@{temp}}
+\index{temp@{temp}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{GORETR_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{GORETR_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!ti@{ti}}
+\index{ti@{ti}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{GORETR_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{GORETR_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{GORETR_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tik@{tik}}
+\index{tik@{tik}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{GORETR_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!til@{til}}
+\index{til@{til}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{GORETR_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{GORETR_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{GORETR_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{GORETR_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{GORETR_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{GORETR_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{GORETR_8c_aa20dc06de66aa1a186f2da8e7adbccc1}{}\label{GORETR_8c_aa20dc06de66aa1a186f2da8e7adbccc1}
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!tm@{tm}}
+\index{tm@{tm}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{GORETR_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{GORETR_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!umax@{umax}}
+\index{umax@{umax}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{GORETR_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{GORETR_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 46 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{GORETR_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{GORETR_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{GORETR_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{GORETR_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 31 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{GORETR_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{GORETR_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+
+\index{G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!G\+O\+R\+E\+T\+R.\+c@{G\+O\+R\+E\+T\+R.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{GORETR_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{GORETR_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 63 of file G\+O\+R\+E\+T\+R.\+c.
+

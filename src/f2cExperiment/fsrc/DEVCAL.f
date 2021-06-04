@@ -1,0 +1,63 @@
+**** SOURCE FILE : DEVCAL.V01   ***
+*
+      SUBROUTINE DEVCAL(Q,TN,P0,P1,DEV)
+C
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+      DIMENSION Q(3),TN(3),P0(3),P1(3),V(3),VQ(3),H(3)
+      CHARACTER*20 BADMSG
+C
+      INCLUDE 'IBUGG.INC'
+C
+      DATA Z1EM10/1.0D-10/,Z1EM20/1.0D-20/,ZERO/0.0D0/
+C
+C.... COMPUTE (P1-P0) AND (Q-P0)
+C
+      DO 10 I=1,3
+        V(I)=P1(I)-P0(I)
+        VQ(I)=Q(I)-P0(I)
+   10 CONTINUE
+C
+C.... COMPUTE LOCAL U WHERE MAX DEVIATION OCCURS
+C
+      CALL DOTF(A,V,VQ)
+      CALL DOTF(B,V,V)
+      IF (B.GT.Z1EM10) THEN
+        U=A/B
+      ELSE
+        U=0.5
+      ENDIF
+C
+C.... COMPUTE DEVIATION
+C
+      DO 20 I=1,3
+        H(I)=Q(I)-P0(I)-U*V(I)
+   20 CONTINUE
+C
+      CALL DOTF(H2,H,H)
+C
+C.... ADD SIGN TO INDICATE WHETHER TOWARDS OR AWAY FROM TOOL
+C     POSITIVE TOWARDS TOOL, NEGATIVE AWAY FROM TOOL
+C
+      CALL DOTF(S,H,TN)
+      S=SIGN(1.D0,S)
+C
+      IF (H2.GT.Z1EM20) THEN
+        DEV=S*DSQRT(H2)
+      ELSE
+        DEV=ZERO
+      ENDIF
+C
+      IF (IBUG.EQ.11) THEN
+         BADMSG=' AFTER DEVCAL'
+         CALL CPRINT(BADMSG)
+         CALL BAD(3,1,'P0  ',P0)
+         CALL BAD(-3,1,'P1  ',P1)
+         CALL BAD(3,1,'Q   ',Q)
+         CALL BAD(-3,1,'TN  ',TN)
+         CALL BAD(3,1,'H   ',H)
+         CALL BAD(1,1,'S   ',S)
+         CALL BAD(-1,1,'DEV ',DEV)
+      ENDIF
+C
+      END

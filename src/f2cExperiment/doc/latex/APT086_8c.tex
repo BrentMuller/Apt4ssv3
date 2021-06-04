@@ -1,0 +1,100 @@
+\hypertarget{APT086_8c}{}\section{A\+P\+T086.\+c File Reference}
+\label{APT086_8c}\index{A\+P\+T086.\+c@{A\+P\+T086.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T086.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT086_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT086_8c_a498e5898b0bb651a5e59ce511b4a95a6}{apt086\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$ain, integer $\ast$nm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T086.\+c@{A\+P\+T086.\+c}!apt086\+\_\+@{apt086\+\_\+}}
+\index{apt086\+\_\+@{apt086\+\_\+}!A\+P\+T086.\+c@{A\+P\+T086.\+c}}
+\subsubsection[{\texorpdfstring{apt086\+\_\+(doublereal $\ast$result, doublereal $\ast$ain, integer $\ast$nm)}{apt086_(doublereal *result, doublereal *ain, integer *nm)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt086\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{ain, }
+\item[{integer $\ast$}]{nm}
+\end{DoxyParamCaption}
+)}\hypertarget{APT086_8c_a498e5898b0bb651a5e59ce511b4a95a6}{}\label{APT086_8c_a498e5898b0bb651a5e59ce511b4a95a6}
+
+
+Definition at line 35 of file A\+P\+T086.\+c.
+
+
+
+References i\+\_\+\+\_\+, and j.
+
+
+
+Referenced by transf\+\_\+().
+
+
+\begin{DoxyCode}
+36 \{
+37     \textcolor{comment}{/* System generated locals */}
+38     integer result\_dim1, result\_offset, ain\_dim1, ain\_offset, i\_\_1, i\_\_2;
+39 
+40     \textcolor{comment}{/* Local variables */}
+41     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+42 
+43 
+44 
+45 
+46 
+47 
+48 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+49 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+50 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+51 
+52 
+53 
+54 
+55 
+56 \textcolor{comment}{/*   *** 16.  ISHARE16 BLOCK *** */}
+57 
+58 \textcolor{comment}{/*   THESE ALL APPEAR TO BE USED AS LOCAL VARIABLES */}
+59 
+60 \textcolor{comment}{/*   I.E.  I,J,K,M,N,J11,L11,M11 */}
+61 
+62     \textcolor{comment}{/* Parameter adjustments */}
+63     ain\_dim1 = *nm;
+64     ain\_offset = 1 + ain\_dim1;
+65     ain -= ain\_offset;
+66     result\_dim1 = *nm;
+67     result\_offset = 1 + result\_dim1;
+68     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= result\_offset;
+69 
+70     \textcolor{comment}{/* Function Body */}
+71     i\_\_1 = *nm;
+72     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+73     i\_\_2 = *nm;
+74     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+75 \textcolor{comment}{/* L10: */}
+76         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[j + i\_\_ * result\_dim1] = ain[i\_\_ + j * ain\_dim1];
+77     \}
+78     \}
+79     \textcolor{keywordflow}{return} 0;
+80 \} \textcolor{comment}{/* apt086\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{APT086_8c_a498e5898b0bb651a5e59ce511b4a95a6_icgraph}
+\end{center}
+\end{figure}
+
+

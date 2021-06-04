@@ -1,0 +1,70 @@
+\hypertarget{VECMOD_8c}{}\section{V\+E\+C\+M\+O\+D.\+c File Reference}
+\label{VECMOD_8c}\index{V\+E\+C\+M\+O\+D.\+c@{V\+E\+C\+M\+O\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for V\+E\+C\+M\+O\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{VECMOD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\+\_\+} (doublereal $\ast$\hyperlink{PUNCH_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, doublereal $\ast$xmod)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{V\+E\+C\+M\+O\+D.\+c@{V\+E\+C\+M\+O\+D.\+c}!vecmod\+\_\+@{vecmod\+\_\+}}
+\index{vecmod\+\_\+@{vecmod\+\_\+}!V\+E\+C\+M\+O\+D.\+c@{V\+E\+C\+M\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{vecmod\+\_\+(doublereal $\ast$x, doublereal $\ast$xmod)}{vecmod_(doublereal *x, doublereal *xmod)}}]{\setlength{\rightskip}{0pt plus 5cm}int vecmod\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{x, }
+\item[{doublereal $\ast$}]{xmod}
+\end{DoxyParamCaption}
+)}\hypertarget{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{}\label{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}
+
+
+Definition at line 17 of file V\+E\+C\+M\+O\+D.\+c.
+
+
+
+References x.
+
+
+
+Referenced by algo1\+\_\+(), calct\+\_\+(), hulcut\+\_\+(), norma\+\_\+(), remscn\+\_\+(), shellb\+\_\+(), and txhull\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* Builtin functions */}
+20     \textcolor{keywordtype}{double} sqrt(doublereal);
+21 
+22 
+23 \textcolor{comment}{/*     GIVEN 3-D VECTOR X, CALCULATES MODULUS XMOD */}
+24 
+25 
+26     \textcolor{comment}{/* Parameter adjustments */}
+27     --\hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+28 
+29     \textcolor{comment}{/* Function Body */}
+30     *xmod = sqrt(\hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[1] * \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[1] + \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[2] * \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[2] + \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[3] * \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[3]);
+31 
+32     \textcolor{keywordflow}{return} 0;
+33 \} \textcolor{comment}{/* vecmod\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f_icgraph}
+\end{center}
+\end{figure}
+
+

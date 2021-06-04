@@ -1,0 +1,140 @@
+\hypertarget{BINBCD_8c}{}\section{B\+I\+N\+B\+C\+D.\+c File Reference}
+\label{BINBCD_8c}\index{B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+I\+N\+B\+C\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{BINBCD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\+\_\+} (integer $\ast$jntger, char $\ast$symbol, integer $\ast$\hyperlink{SSDEF_8c_ac74ae34e9c58234aacabb6867b245c58}{count}, ftnlen symbol\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{BINBCD_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{BINBCD_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}!binbcd\+\_\+@{binbcd\+\_\+}}
+\index{binbcd\+\_\+@{binbcd\+\_\+}!B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}}
+\subsubsection[{\texorpdfstring{binbcd\+\_\+(integer $\ast$jntger, char $\ast$symbol, integer $\ast$count, ftnlen symbol\+\_\+len)}{binbcd_(integer *jntger, char *symbol, integer *count, ftnlen symbol_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int binbcd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{jntger, }
+\item[{char $\ast$}]{symbol, }
+\item[{integer $\ast$}]{count, }
+\item[{ftnlen}]{symbol\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{}\label{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}
+
+
+Definition at line 25 of file B\+I\+N\+B\+C\+D.\+c.
+
+
+
+References blank, c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, i\+\_\+\+\_\+, and j.
+
+
+
+Referenced by alarm\+\_\+(), gettmp\+\_\+(), goloft\+\_\+(), inpat\+\_\+(), isscod\+\_\+(), labcon\+\_\+(), lcanon\+\_\+(), macrec\+\_\+(), oppair\+\_\+(), prtil\+\_\+(), puttmp\+\_\+(), recog\+\_\+(), rlslin\+\_\+(), ssdef\+\_\+(), and tssmil\+\_\+().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{comment}{/* Initialized data */}
+29 
+30     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}[1] = \textcolor{stringliteral}{" "};
+31 
+32     \textcolor{comment}{/* System generated locals */}
+33     address a\_\_1[2];
+34     integer i\_\_1[2];
+35 
+36     \textcolor{comment}{/* Builtin functions */}
+37     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+38     integer s\_wsfi(icilist *), do\_fio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_wsfi(\textcolor{keywordtype}{void})
+39         ;
+40     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_cat(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} **, integer *, integer *, ftnlen);
+41 
+42     \textcolor{comment}{/* Local variables */}
+43     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+44     \textcolor{keyword}{static} \textcolor{keywordtype}{char} bcd[8];
+45     \textcolor{keyword}{static} integer intger;
+46 
+47     \textcolor{comment}{/* Fortran I/O blocks */}
+48     \textcolor{keyword}{static} icilist io\_\_\_5 = \{ 0, bcd, 0, \textcolor{stringliteral}{"(I8)"}, 8, 1 \};
+49 
+50 
+51 
+52     intger = *jntger;
+53     *\hyperlink{APT301_8c_ac74ae34e9c58234aacabb6867b245c58}{count} = 0;
+54     s\_copy(bcd, blank, (ftnlen)8, (ftnlen)1);
+55     \textcolor{keywordflow}{if} (intger < 0) \{
+56     s\_copy(symbol, bcd, symbol\_len, (ftnlen)8);
+57     \} \textcolor{keywordflow}{else} \{
+58     s\_wsfi(&io\_\_\_5);
+59     do\_fio(&\hyperlink{BINBCD_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&intger, (ftnlen)\textcolor{keyword}{sizeof}(integer));
+60     e\_wsfi();
+61     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 8; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+62         \textcolor{keywordflow}{if} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&bcd[i\_\_ - 1] != *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&blank[0]
+63             ) \{
+64         j = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+65         \textcolor{keywordflow}{goto} L20;
+66         \}
+67 \textcolor{comment}{/* L10: */}
+68     \}
+69 
+70 L20:
+71     *\hyperlink{APT301_8c_ac74ae34e9c58234aacabb6867b245c58}{count} = 9 - \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+72 \textcolor{comment}{/* Writing concatenation */}
+73     i\_\_1[0] = 8 - (j - 1), a\_\_1[0] = bcd + (j - 1);
+74     i\_\_1[1] = 1, a\_\_1[1] = \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank};
+75     s\_cat(symbol, a\_\_1, i\_\_1, &\hyperlink{BINBCD_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, symbol\_len);
+76     \}
+77     \textcolor{keywordflow}{return} 0;
+78 \} \textcolor{comment}{/* binbcd\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{BINBCD_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{BINBCD_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file B\+I\+N\+B\+C\+D.\+c.
+
+
+
+Referenced by binbcd\+\_\+().
+
+\index{B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!B\+I\+N\+B\+C\+D.\+c@{B\+I\+N\+B\+C\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{BINBCD_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{BINBCD_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 18 of file B\+I\+N\+B\+C\+D.\+c.
+
+
+
+Referenced by binbcd\+\_\+().
+

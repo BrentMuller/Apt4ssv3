@@ -1,0 +1,209 @@
+**** SOURCE FILE : M0000717.W02   ***
+*
+C.....FORTRAN SUBROUTINE  ....GET            8/68                 HG
+C.....FORTRAN FUNCTION             ..GET..     HL GRAY 3/68         *ID*
+      DOUBLE PRECISION FUNCTION   GET(OD)
+C
+C FORTRAN FUNCTION 'GET(OD)'--GET ARGUMENT FROM OPERAND, OD
+C
+C PURPOSE      TO GET THE VALUE OF AN ARGUMENT GIVEN THE
+C              INTERMEDIATE LANGUAGE OPERAND POINTER, OD.
+C
+C LINKAGE      GET(OD)
+C
+C              WHERE
+C              OD IS THE POINTER TO THE OPERAND IN THE PART
+C                 PROGRAM
+C
+C METHOD       THE OPERAND IS EVALUATED ACCORDING TO TYPE
+C              (SEE INTRODUCTORY DOCUMENTATION).  THE VALUE
+C              OF THE ARGUMENT IS THEN TAKEN FROM THE APPRO-
+C              PRIATE LOCATION.
+C
+C              TYPE     VALUE
+C               0        INDEX TO NAME TABLE WHICH CONTAINS POINTER
+C                        TO STORED VARIABLE
+C               1        INDEX TO FLOATING POINT NUMBER TABLE
+C               2        INDEX TO ALPHANUMERIC CONSTANTS
+C               3        INDEX TO NAME TABLE(POINTS TO VARIABLE)
+C               4        PROCEDURE NUMBER
+C               5        INTEGER
+C               6        UNFRACTIONAL NUMBER (I4-FORMAT)
+C               7        FRACTIONAL NUMBER   (R8-FORMAT)
+C              -N        INDEX TO NAME TABLE WHICH CONTAINS POINTER
+C                        TO BASE ADDRESS.  EFFECTIVE ADDRESS IS--
+C
+C                           BA + N-1
+C
+C                        AND ALWAYS REFERS TO INTERNAL ARRAYS
+C
+C--------------------------------------------------------------CDE PAK
+C
+C
+C
+C UNLABELED COMMON
+C
+C
+      INCLUDE 'BLANKCOM.INC'
+      INCLUDE 'INTRPEQ.INC'
+C
+C
+C
+C STOR--COMMON CONTAINING STORAGE PARAMETERS
+C
+C
+      COMMON/STOR/  NTB,      FPB,      PPB,      COMN,  CFB,  NBLK
+      INTEGER       NTB,      FPB,      PPB,      COMN,  CFB,  NBLK
+C
+C   ADDITIONAL STOR PARAMETERS USED FOR NUMBER TABLE DIRECT ACCESS
+C
+      COMMON/STOR/  NRECRD,  NTPARM
+      DIMENSION     NRECRD(10), NTPARM(10)
+      EQUIVALENCE   (NTPARM(1),NUMBST), (NTPARM(2),NUMOD ),
+     .              (NTPARM(3),NDAFLG), (NTPARM(4),NRECST),
+     .              (NTPARM(5),IPAGE )
+C
+C WORK--COMMON CONTAINING WORKING VARIABLES
+C
+C
+      COMMON/WORK/  PGC,      PGCN,     ILC,      IXC
+      INTEGER       PGC,      PGCN,     ILC,      IXC
+C
+      COMMON/WORK/  SCP,      SAP,      NSP,      IAP,   CFP,   COMP
+      INTEGER       SCP,      SAP,      NSP,      IAP,   CFP,   COMP
+C
+      COMMON/WORK/         NTP,   LNA,   RTP
+      INTEGER  FPP,    NTP,    LNA,    RTP
+      EQUIVALENCE  (FPP,   NTP)
+      DIMENSION                   LNA(2,20)
+C
+C
+C CONST--COMMON CONTAINING CONSTANTS
+C
+C
+      COMMON/CONST/KCOMT,KCOMF
+C
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'LDEF.INC'
+C
+      COMMON/ILD/ILD
+C
+C---------------------------------------------------------------------
+C
+C
+C
+      EXTERNAL XCANON
+      INTEGER   XCANON,OD,K,L
+      DATA ISPECL /319951634/
+C
+C
+C        EXTRACT TYPE AND ADD ONE FOR 'GO TO' (L)
+C
+      J = ILC + ILD + OD
+      L = PP(J) + 1
+C
+C        EXTRACT VALUE OF OPERAND (K)
+C
+      K = PP(J+1)
+C
+C        GET OPERAND ACCORDING TO TYPE
+C
+      IF (L .LE. 0) GO TO 70
+C
+C             0   1   2   3   4   5   6   7  TYPE
+C
+      GO TO (10, 20, 30, 10, 50, 60, 60, 80),L
+C
+C
+C
+C
+C
+C        TYPE 0.,3.
+C
+C        GET NAME TABLE POINTER
+C
+   10 CONTINUE
+      NTP=NTB+K
+      K=NT(1,NTP)
+C---     SPECIAL LOGIC FOR INDIRECT ADRS AND NUMBER REFERENCE
+      IF(L.NE.4) GO TO 11
+      IF(NT(2,NTP).NE.ISPECL) GO TO 11
+C---     INVOKE NUMBER TABLE PAGE AN ADDRESS REASSIGNMENT, IF NECESSARY
+      IF(NDAFLG.NE.0) CALL XNUMBR(K)
+      COMP=FPB+K
+      GET=FP(COMP)
+      RETURN
+C---     NORMAL PATH FOR FETCHING CAN FORM OR NUMBER
+   11 CONTINUE
+      COMP=K
+      GO TO 100
+C
+C
+C
+C
+C        TYPE 1.
+C
+C        COMPUTE FLOATING TABLE POINTER, EXTRACT VARIABLE AND EXIT
+C
+   20 IF (NDAFLG .NE. 0) CALL XNUMBR(K)
+      COMP=FPB+K
+      GET = FP(COMP)
+      RETURN
+C
+C
+C
+C
+C        TYPE 2.
+C
+C        COMPUTE NAME TABLE POINTER, EXTRACT VARIABLE AND EXIT
+C
+ 30   COMP = NTB + K
+      GET = NB(COMP)
+      RETURN
+C
+C
+C
+C
+C        TYPE 4.
+C
+C
+C
+ 50   COMP = K
+      GET = 0.0
+      RETURN
+C
+C
+C
+C
+C        TYPE 5 AND TYPE 6.
+C
+ 60   COMP = KCOMT
+      COM(COMP) = K
+      GET = COM(COMP)
+      RETURN
+C
+C        TYPE 7.
+C     RECEIVE FRACTIONAL NUMBER FROM INPUT FILE
+C
+ 80   COMP = KCOMT
+      CM(1,COMP)=PP(J+1)
+      CM(2,COMP)=PP(J+2)
+      ILD = ILD+1
+      GET = COM(COMP)
+      RETURN
+C
+C
+C
+C        TYPE (-N)
+C
+C
+C        COMPUTE EFFECTIVE ADDRESS = BASE ADDRESS + INDEX,
+C        STORE ARGUMENT AND EXIT
+ 70   NTP = NTB + K
+      COMP = NT(1,NTP) - L
+  100 I=COMP
+      IF(CANFLG) I = XCANON(I)
+      GET = COM(I)
+C
+  110 RETURN
+      END

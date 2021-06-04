@@ -1,0 +1,19 @@
+**** SOURCE FILE : M0012393.V01   ***
+*
+      SUBROUTINE INTFA1 (FACE,PL,PF,IRC1)
+C
+      DOUBLE PRECISION FACE(6,3),PL(4),PF(3),V2(3),V3(3)
+C
+      IRC1=0
+      DO 10 I=1,3
+      V2(1)=PF(1)-FACE(1,I)
+      V2(2)=PF(2)-FACE(2,I)
+      V2(3)=PF(3)-FACE(3,I)
+      CALL CROSS (V2,FACE(4,I),V3)
+      IF(PL(1)*V3(1)+PL(2)*V3(2)+PL(3)*V3(3).LT.0.D0) GOTO 20
+   10 CONTINUE
+      IRC1=1
+   20 CONTINUE
+C
+      RETURN
+      END

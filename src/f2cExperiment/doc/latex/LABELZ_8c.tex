@@ -1,0 +1,134 @@
+\hypertarget{LABELZ_8c}{}\section{L\+A\+B\+E\+L\+Z.\+c File Reference}
+\label{LABELZ_8c}\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for L\+A\+B\+E\+L\+Z.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{LABELZ_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{LABELZ_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1}~\hyperlink{TSSMIL_8c_afbe97352b0a7b81f71ad1f9d9b682017}{il\+\_\+}
+\item 
+\#define \hyperlink{LABELZ_8c_afc6678ff422d637fcf7c5d613a54c1a8}{labelx}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 5)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{LABELZ_8c_a518bec8a4632eba8893728620b662241}{labelz\+\_\+} (integer $\ast$\hyperlink{UNITS_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{index})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{LABELZ_8c_a5524c41368cc6530a9c6a9ccab6163db}{il} \mbox{[}21\mbox{]}\\
+\} \hyperlink{LABELZ_8c_ab9fc2088cd4a19cfd3dbc055dd816407}{il\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}!il\+\_\+1@{il\+\_\+1}}
+\index{il\+\_\+1@{il\+\_\+1}!L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+1}{il_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define il\+\_\+1~{\bf il\+\_\+}}\hypertarget{LABELZ_8c_abcc19ac3deb5a72995081498826879ac}{}\label{LABELZ_8c_abcc19ac3deb5a72995081498826879ac}
+
+
+Definition at line 21 of file L\+A\+B\+E\+L\+Z.\+c.
+
+\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}!labelx@{labelx}}
+\index{labelx@{labelx}!L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+\subsubsection[{\texorpdfstring{labelx}{labelx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define labelx~((integer $\ast$)\&{\bf il\+\_\+1} + 5)}\hypertarget{LABELZ_8c_afc6678ff422d637fcf7c5d613a54c1a8}{}\label{LABELZ_8c_afc6678ff422d637fcf7c5d613a54c1a8}
+
+
+Referenced by labelz\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}!labelz\+\_\+@{labelz\+\_\+}}
+\index{labelz\+\_\+@{labelz\+\_\+}!L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+\subsubsection[{\texorpdfstring{labelz\+\_\+(integer $\ast$index)}{labelz_(integer *index)}}]{\setlength{\rightskip}{0pt plus 5cm}int labelz\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{LABELZ_8c_a518bec8a4632eba8893728620b662241}{}\label{LABELZ_8c_a518bec8a4632eba8893728620b662241}
+
+
+Definition at line 39 of file L\+A\+B\+E\+L\+Z.\+c.
+
+
+
+References labelx, onearg\+\_\+(), opcode\+\_\+(), and rlslin\+\_\+().
+
+
+
+Referenced by boolif\+\_\+(), comstr\+\_\+(), loop\+\_\+(), macrec\+\_\+(), match\+\_\+(), and recog\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* Local variables */}
+42 \textcolor{preprocessor}{#define labelx ((integer *)&il\_1 + 5)}
+43     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(integer *), \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(integer *), 
+44         \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}(\textcolor{keywordtype}{void});
+45 
+46 
+47 
+48 \textcolor{comment}{/*       16.    LITERALS FOR I. L. OPERATION CODES */}
+49 
+50 \textcolor{comment}{/* LABELX:      CONTAINS COMMAND CODE ( 6) FOR LABEL COMMAND */}
+51 \textcolor{comment}{/* * */}
+52 \textcolor{comment}{/* PURPOSE      TO GENERATE AND OUTPUT TO THE I.L. RECORD IMAGE */}
+53 \textcolor{comment}{/*              (ILFILE) THE LABEL I.L. COMMAND. */}
+54 
+55 \textcolor{comment}{/* ARGUMENTS    INDEX    NAME TABLE (NAMTBL) INDEX OF LABEL. */}
+56 \textcolor{comment}{/* ** */}
+57     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{LABELZ_8c_afc6678ff422d637fcf7c5d613a54c1a8}{labelx});
+58     \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(\hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index});
+59     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+60     \textcolor{keywordflow}{return} 0;
+61 \} \textcolor{comment}{/* labelz\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LABELZ_8c_a518bec8a4632eba8893728620b662241_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LABELZ_8c_a518bec8a4632eba8893728620b662241_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}!il@{il}}
+\index{il@{il}!L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il\mbox{[}21\mbox{]}}\hypertarget{LABELZ_8c_a5524c41368cc6530a9c6a9ccab6163db}{}\label{LABELZ_8c_a5524c41368cc6530a9c6a9ccab6163db}
+
+
+Definition at line 18 of file L\+A\+B\+E\+L\+Z.\+c.
+
+\index{L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}!il\+\_\+@{il\+\_\+}}
+\index{il\+\_\+@{il\+\_\+}!L\+A\+B\+E\+L\+Z.\+c@{L\+A\+B\+E\+L\+Z.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+}{il_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   il\+\_\+}\hypertarget{LABELZ_8c_ab9fc2088cd4a19cfd3dbc055dd816407}{}\label{LABELZ_8c_ab9fc2088cd4a19cfd3dbc055dd816407}

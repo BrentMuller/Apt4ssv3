@@ -1,0 +1,207 @@
+\hypertarget{GCYL_8c}{}\section{G\+C\+Y\+L.\+c File Reference}
+\label{GCYL_8c}\index{G\+C\+Y\+L.\+c@{G\+C\+Y\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+C\+Y\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{GCYL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GCYL_8c_ab059e52d2eb98a289cb138912e6027a7}{gcyl\+\_\+} (doublereal $\ast$\hyperlink{XNUMBR_8c_a68d3ba380c16e286247bb69367760615}{canon}, doublereal $\ast$quadbf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+C\+Y\+L.\+c@{G\+C\+Y\+L.\+c}!gcyl\+\_\+@{gcyl\+\_\+}}
+\index{gcyl\+\_\+@{gcyl\+\_\+}!G\+C\+Y\+L.\+c@{G\+C\+Y\+L.\+c}}
+\subsubsection[{\texorpdfstring{gcyl\+\_\+(doublereal $\ast$canon, doublereal $\ast$quadbf)}{gcyl_(doublereal *canon, doublereal *quadbf)}}]{\setlength{\rightskip}{0pt plus 5cm}int gcyl\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{canon, }
+\item[{doublereal $\ast$}]{quadbf}
+\end{DoxyParamCaption}
+)}\hypertarget{GCYL_8c_ab059e52d2eb98a289cb138912e6027a7}{}\label{GCYL_8c_ab059e52d2eb98a289cb138912e6027a7}
+
+
+Definition at line 29 of file G\+C\+Y\+L.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, canon, f, j, and r\+\_\+\+\_\+.
+
+
+
+Referenced by gsurf\+\_\+().
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{comment}{/* System generated locals */}
+32     doublereal d\_\_1, d\_\_2, d\_\_3, d\_\_4, d\_\_5, d\_\_6, d\_\_7, d\_\_8, d\_\_9, d\_\_10, 
+33         d\_\_11, d\_\_12, d\_\_13;
+34 
+35     \textcolor{comment}{/* Local variables */}
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+37     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+38     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}, di, xo, yo, zo;
+39 
+40 
+41 \textcolor{comment}{/*        INITALIZATION */}
+42 
+43     \textcolor{comment}{/* Parameter adjustments */}
+44     --quadbf;
+45     --\hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon};
+46 
+47     \textcolor{comment}{/* Function Body */}
+48     xo = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[1];
+49     yo = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[2];
+50     zo = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[3];
+51     a = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[4];
+52     b = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[5];
+53     c\_\_ = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[6];
+54     r\_\_ = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[7];
+55 \textcolor{comment}{/* Computing 2nd power */}
+56     d\_\_1 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+57     di = 1.f - d\_\_1 * d\_\_1;
+58 
+59 
+60 \textcolor{comment}{/*       DEFAULT CASE */}
+61 
+62     \textcolor{keywordflow}{if} (a != b) \{
+63     \textcolor{keywordflow}{goto} L10;
+64     \}
+65     \textcolor{keywordflow}{if} (a != 0.) \{
+66     \textcolor{keywordflow}{goto} L10;
+67     \}
+68 
+69     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+70 \textcolor{comment}{/* L2: */}
+71     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 1.f;
+72     \}
+73 
+74     \textcolor{keywordflow}{for} (j = 3; j <= 6; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+75 \textcolor{comment}{/* L3: */}
+76     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 0.f;
+77     \}
+78 
+79     quadbf[7] = xo * -2.f;
+80     quadbf[8] = yo * -2.f;
+81     quadbf[9] = 0.f;
+82 \textcolor{comment}{/* Computing 2nd power */}
+83     d\_\_1 = xo;
+84 \textcolor{comment}{/* Computing 2nd power */}
+85     d\_\_2 = yo;
+86 \textcolor{comment}{/* Computing 2nd power */}
+87     d\_\_3 = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+88     quadbf[10] = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 - d\_\_3 * d\_\_3;
+89 
+90     \textcolor{keywordflow}{goto} L50;
+91 
+92 
+93 
+94 L10:
+95 \textcolor{comment}{/* Computing 2nd power */}
+96     d\_\_1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+97 \textcolor{comment}{/* Computing 2nd power */}
+98     d\_\_2 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+99 \textcolor{comment}{/* Computing 2nd power */}
+100     d\_\_3 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+101     quadbf[1] = (d\_\_1 * d\_\_1 * (d\_\_2 * d\_\_2) + d\_\_3 * d\_\_3) / di;
+102 
+103 \textcolor{comment}{/* Computing 2nd power */}
+104     d\_\_1 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+105 \textcolor{comment}{/* Computing 2nd power */}
+106     d\_\_2 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+107 \textcolor{comment}{/* Computing 2nd power */}
+108     d\_\_3 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+109     quadbf[2] = (d\_\_1 * d\_\_1 * (d\_\_2 * d\_\_2) + d\_\_3 * d\_\_3) / di;
+110 
+111     quadbf[3] = di;
+112 
+113     quadbf[4] = b * -2.f * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+114 
+115     quadbf[5] = a * -2.f * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+116 
+117 \textcolor{comment}{/* Computing 2nd power */}
+118     d\_\_1 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+119     quadbf[6] = (a * b * (d\_\_1 * d\_\_1) - a * b) / di * 2.f;
+120 
+121 \textcolor{comment}{/* Computing 2nd power */}
+122     d\_\_1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+123 \textcolor{comment}{/* Computing 2nd power */}
+124     d\_\_2 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+125 \textcolor{comment}{/* Computing 2nd power */}
+126     d\_\_3 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+127 \textcolor{comment}{/* Computing 2nd power */}
+128     d\_\_4 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+129     quadbf[7] = ((-xo * (d\_\_1 * d\_\_1) * (d\_\_2 * d\_\_2) - yo * a * b * (d\_\_3 * 
+130         d\_\_3) - xo * (d\_\_4 * d\_\_4) + yo * a * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}) / di + zo * a * c\_\_) * 
+131         2.f;
+132 
+133 \textcolor{comment}{/* Computing 2nd power */}
+134     d\_\_1 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+135 \textcolor{comment}{/* Computing 2nd power */}
+136     d\_\_2 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+137 \textcolor{comment}{/* Computing 2nd power */}
+138     d\_\_3 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+139 \textcolor{comment}{/* Computing 2nd power */}
+140     d\_\_4 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+141     quadbf[8] = ((-yo * (d\_\_1 * d\_\_1) * (d\_\_2 * d\_\_2) - xo * a * b * (d\_\_3 * 
+142         d\_\_3) + xo * a * b - yo * (d\_\_4 * d\_\_4)) / di + zo * b * c\_\_) * 
+143         2.f;
+144 
+145     quadbf[9] = (-zo * di + a * c\_\_ * xo + yo * b * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}) * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+146 
+147 \textcolor{comment}{/* Computing 2nd power */}
+148     d\_\_1 = xo;
+149 \textcolor{comment}{/* Computing 2nd power */}
+150     d\_\_2 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+151 \textcolor{comment}{/* Computing 2nd power */}
+152     d\_\_3 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+153 \textcolor{comment}{/* Computing 2nd power */}
+154     d\_\_4 = yo;
+155 \textcolor{comment}{/* Computing 2nd power */}
+156     d\_\_5 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+157 \textcolor{comment}{/* Computing 2nd power */}
+158     d\_\_6 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+159 \textcolor{comment}{/* Computing 2nd power */}
+160     d\_\_7 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+161 \textcolor{comment}{/* Computing 2nd power */}
+162     d\_\_8 = xo;
+163 \textcolor{comment}{/* Computing 2nd power */}
+164     d\_\_9 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+165 \textcolor{comment}{/* Computing 2nd power */}
+166     d\_\_10 = yo;
+167 \textcolor{comment}{/* Computing 2nd power */}
+168     d\_\_11 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+169 \textcolor{comment}{/* Computing 2nd power */}
+170     d\_\_12 = zo;
+171 \textcolor{comment}{/* Computing 2nd power */}
+172     d\_\_13 = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+173     quadbf[10] = (d\_\_1 * d\_\_1 * (d\_\_2 * d\_\_2) * (d\_\_3 * d\_\_3) + d\_\_4 * d\_\_4 * 
+174         (d\_\_5 * d\_\_5) * (d\_\_6 * d\_\_6) + xo * 2.f * yo * a * b * (d\_\_7 * 
+175         d\_\_7) + d\_\_8 * d\_\_8 * (d\_\_9 * d\_\_9) - xo * 2.f * yo * a * b + 
+176         d\_\_10 * d\_\_10 * (d\_\_11 * d\_\_11)) / di + d\_\_12 * d\_\_12 * di - xo * 
+177         2.f * zo * a * c\_\_ - yo * 2.f * zo * b * c\_\_ - d\_\_13 * d\_\_13;
+178 
+179 L50:
+180 \textcolor{comment}{/*       RETURN TO CALLING PROGRAM */}
+181     \textcolor{keywordflow}{return} 0;
+182 \} \textcolor{comment}{/* gcyl\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GCYL_8c_ab059e52d2eb98a289cb138912e6027a7_icgraph}
+\end{center}
+\end{figure}
+
+

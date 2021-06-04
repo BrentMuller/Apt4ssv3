@@ -1,0 +1,255 @@
+\hypertarget{CHKSET_8c}{}\section{C\+H\+K\+S\+E\+T.\+c File Reference}
+\label{CHKSET_8c}\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+H\+K\+S\+E\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{CHKSET_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CHKSET_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CHKSET_8c_ad224a987553339d436567ef6da04161f}{chkset\+\_\+} (integer $\ast$idtype, doublereal $\ast$pdir, doublereal $\ast$par, integer $\ast$ifin)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CHKSET_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{CHKSET_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{CHKSET_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{CHKSET_8c_a4999853d627db952b97124f783e2c934}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CHKSET_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CHKSET_8c_a4c6b1b990826a12828133f47fb011d77}{c\+\_\+n2} = -\/2
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{CHKSET_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{CHKSET_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+Referenced by chkset\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!chkset\+\_\+@{chkset\+\_\+}}
+\index{chkset\+\_\+@{chkset\+\_\+}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{chkset\+\_\+(integer $\ast$idtype, doublereal $\ast$pdir, doublereal $\ast$par, integer $\ast$ifin)}{chkset_(integer *idtype, doublereal *pdir, doublereal *par, integer *ifin)}}]{\setlength{\rightskip}{0pt plus 5cm}int chkset\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{idtype, }
+\item[{doublereal $\ast$}]{pdir, }
+\item[{doublereal $\ast$}]{par, }
+\item[{integer $\ast$}]{ifin}
+\end{DoxyParamCaption}
+)}\hypertarget{CHKSET_8c_ad224a987553339d436567ef6da04161f}{}\label{CHKSET_8c_ad224a987553339d436567ef6da04161f}
+
+
+Definition at line 32 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, c\+\_\+n2, cprint\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, index, and zero.
+
+
+
+Referenced by sspath\+\_\+().
+
+
+\begin{DoxyCode}
+34 \{
+35     \textcolor{comment}{/* Initialized data */}
+36 
+37     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+38     \textcolor{keyword}{static} doublereal smal = 1e-14;
+39 
+40     \textcolor{comment}{/* Builtin functions */}
+41     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+42 
+43     \textcolor{comment}{/* Local variables */}
+44     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+45     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+46     \textcolor{keyword}{static} doublereal plim[4];
+47     \textcolor{keyword}{static} integer ityp, \hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index};
+48     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+50 
+51     \textcolor{comment}{/* Parameter adjustments */}
+52     --par;
+53 
+54     \textcolor{comment}{/* Function Body */}
+55 \textcolor{comment}{/* ---PURPOSE IS TO CHECK WHETHER PARAMETER PAIR PAR(1-2) IS */}
+56 \textcolor{comment}{/* --- WITHIN LEGITIMATE BOUNDS.  THESE BOUNDS ARE SET WHEN */}
+57 \textcolor{comment}{/* --- IFIN=-121 ON INPUT.  OTHERWISE IFIN NON ZERO ON OUTPUT */}
+58 \textcolor{comment}{/* --- MEANS THAT P IS OUT OF BOUNDS.  P WILL ALSO BE TRUNCATED */}
+59 \textcolor{comment}{/* --- TO LIE WITHIN BOUNDS. */}
+60 
+61     \textcolor{keywordflow}{if} (*ifin != -121) \{
+62     \textcolor{keywordflow}{goto} L15;
+63     \}
+64     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+65 \textcolor{comment}{/* L10: */}
+66     plim[i\_\_ - 1] = par[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+67     \}
+68     \textcolor{keywordflow}{goto} L999;
+69 
+70 L15:
+71     *ifin = 0;
+72     ityp = 2;
+73     \textcolor{keywordflow}{if} (*idtype < 2) \{
+74     ityp = 1;
+75     \}
+76     i\_\_ = ityp;
+77     index = (i\_\_ << 1) - 1;
+78     \textcolor{keywordflow}{if} (par[i\_\_] > plim[index - 1] + smal) \{
+79     \textcolor{keywordflow}{goto} L20;
+80     \}
+81     par[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = plim[index - 1];
+82     \textcolor{keywordflow}{if} (*pdir > zero) \{
+83     \textcolor{keywordflow}{goto} L20;
+84     \}
+85     *ifin = 1;
+86 L20:
+87     index = i\_\_ << 1;
+88     \textcolor{keywordflow}{if} (par[i\_\_] < plim[index - 1] - smal) \{
+89     \textcolor{keywordflow}{goto} L40;
+90     \}
+91     par[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = plim[index - 1];
+92     \textcolor{keywordflow}{if} (*pdir < zero) \{
+93     \textcolor{keywordflow}{goto} L40;
+94     \}
+95     *ifin = 1;
+96 L40:
+97 
+98 L999:
+99     \textcolor{keywordflow}{if} (\hyperlink{CHKSET_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+100     \textcolor{keywordflow}{goto} L1999;
+101     \}
+102     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CHKSET_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+103     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER CHKSET"}, (ftnlen)20, (ftnlen)13);
+104     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+105     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PDIR"}, pdir, (ftnlen)4);
+106     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IFIN"}, ifin, (ftnlen)4);
+107     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CHKSET_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2}, &\hyperlink{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PAR "}, &par[1], (ftnlen)4);
+108 L1999:
+109     \textcolor{keywordflow}{return} 0;
+110 \} \textcolor{comment}{/* chkset\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CHKSET_8c_ad224a987553339d436567ef6da04161f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CHKSET_8c_ad224a987553339d436567ef6da04161f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{CHKSET_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+Referenced by chkset\+\_\+().
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CHKSET_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 27 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+Referenced by chkset\+\_\+().
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSET_8c_a9e9287f317ef3436252a395791a899f6}{}\label{CHKSET_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+Referenced by chkset\+\_\+().
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!c\+\_\+n2@{c\+\_\+n2}}
+\index{c\+\_\+n2@{c\+\_\+n2}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n2}{c_n2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n2 = -\/2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSET_8c_a4c6b1b990826a12828133f47fb011d77}{}\label{CHKSET_8c_a4c6b1b990826a12828133f47fb011d77}
+
+
+Definition at line 28 of file C\+H\+K\+S\+E\+T.\+c.
+
+
+
+Referenced by chkset\+\_\+().
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{CHKSET_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{CHKSET_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file C\+H\+K\+S\+E\+T.\+c.
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{CHKSET_8c_a4999853d627db952b97124f783e2c934}{}\label{CHKSET_8c_a4999853d627db952b97124f783e2c934}
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{CHKSET_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{CHKSET_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file C\+H\+K\+S\+E\+T.\+c.
+
+\index{C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!C\+H\+K\+S\+E\+T.\+c@{C\+H\+K\+S\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{CHKSET_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{CHKSET_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file C\+H\+K\+S\+E\+T.\+c.
+

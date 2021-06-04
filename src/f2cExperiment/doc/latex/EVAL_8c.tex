@@ -1,0 +1,189 @@
+\hypertarget{EVAL_8c}{}\section{E\+V\+A\+L.\+c File Reference}
+\label{EVAL_8c}\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for E\+V\+A\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{EVAL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{EVAL_8c_a64df9f8a0665781c04785fa774479c58}{eval\+\_\+} (char $\ast$\hyperlink{PRINT_8c_a44eba5597ae72d3907c6ad1c7620acd8}{name\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}, doublereal $\ast$spw, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, ftnlen name\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{EVAL_8c_ad8149129b0ac5c966968e55ba6106146}{darray} \mbox{[}120\mbox{]}\\
+\} \hyperlink{EVAL_8c_a61031d065c776fe5d72683c7d30700e8}{darray\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{EVAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{EVAL_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~{\bf darray\+\_\+}}\hypertarget{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 21 of file E\+V\+A\+L.\+c.
+
+
+
+Referenced by eval\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!eval\+\_\+@{eval\+\_\+}}
+\index{eval\+\_\+@{eval\+\_\+}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{eval\+\_\+(char $\ast$name\+\_\+\+\_\+, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$array, doublereal $\ast$spw, integer $\ast$mode, ftnlen name\+\_\+len)}{eval_(char *name__, doublereal *u, doublereal *v, doublereal *array, doublereal *spw, integer *mode, ftnlen name_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int eval\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{array, }
+\item[{doublereal $\ast$}]{spw, }
+\item[{integer $\ast$}]{mode, }
+\item[{ftnlen}]{name\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{EVAL_8c_a64df9f8a0665781c04785fa774479c58}{}\label{EVAL_8c_a64df9f8a0665781c04785fa774479c58}
+
+
+Definition at line 30 of file E\+V\+A\+L.\+c.
+
+
+
+References abnend\+\_\+(), array, c\+\_\+\+\_\+1, c\+\_\+\+\_\+8, cform\+\_\+(), cprint\+\_\+(), darray\+\_\+1, emdcs\+\_\+(), etorus\+\_\+(), and evdafs\+\_\+().
+
+
+
+Referenced by cnsurf\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{comment}{/* Builtin functions */}
+34     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+35 
+36     \textcolor{comment}{/* Local variables */}
+37     \textcolor{keyword}{static} integer slen, ipos;
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1}{emdcs\_}(doublereal *, doublereal *, doublereal 
+39         *, doublereal *, integer *), \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, 
+40         integer *, ftnlen, ftnlen), \hyperlink{SPRVIS_8c_acda9789fbe9f7fc9804e4b42f6d9c518}{abnend\_}(\textcolor{keywordtype}{void}), \hyperlink{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16}{evdafs\_}(doublereal *, 
+41         doublereal *, doublereal *, doublereal *, integer *), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(
+42         \textcolor{keywordtype}{char} *, ftnlen), \hyperlink{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044}{etorus\_}(doublereal *, doublereal *, doublereal *,
+43          doublereal *, integer *);
+44 
+45 
+46 
+47 
+48 \textcolor{comment}{/*   ***  20.  DARRAY BLOCK  *** */}
+49 
+50 \textcolor{comment}{/*   PRINT BUFFER */}
+51 
+52 
+53 
+54 
+55 
+56     \textcolor{comment}{/* Parameter adjustments */}
+57     --spw;
+58     --\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array};
+59 
+60     \textcolor{comment}{/* Function Body */}
+61     \textcolor{keywordflow}{if} (s\_cmp(\hyperlink{APT330_8c_a44eba5597ae72d3907c6ad1c7620acd8}{name\_\_}, \textcolor{stringliteral}{"MDCS"}, (ftnlen)8, (ftnlen)4) == 0) \{
+62     \hyperlink{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1}{emdcs\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}[1], &spw[1], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode});
+63     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s\_cmp(\hyperlink{APT330_8c_a44eba5597ae72d3907c6ad1c7620acd8}{name\_\_}, \textcolor{stringliteral}{"TORUS"}, (ftnlen)8, (ftnlen)5) == 0) \{
+64     \hyperlink{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044}{etorus\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}[1], &spw[1], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode});
+65     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s\_cmp(\hyperlink{APT330_8c_a44eba5597ae72d3907c6ad1c7620acd8}{name\_\_}, \textcolor{stringliteral}{"VDAFS"}, (ftnlen)8, (ftnlen)5) == 0) \{
+66     \hyperlink{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16}{evdafs\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}[1], &spw[1], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode});
+67     \} \textcolor{keywordflow}{else} \{
+68     slen = 0;
+69     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{"0 EVALUATOR FOR NON-NATIVE SURFACE TYPE :"}, \hyperlink{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &
+70         \hyperlink{EVAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &slen, (ftnlen)41, (ftnlen)120);
+71     ipos = slen + 2;
+72     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\hyperlink{APT330_8c_a44eba5597ae72d3907c6ad1c7620acd8}{name\_\_}, \hyperlink{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &ipos, &\hyperlink{EVAL_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, (ftnlen)8, (ftnlen)120);
+73     ipos += 10;
+74     slen = 0;
+75     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{": NOT AVAILABLE"}, \hyperlink{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &ipos, &slen, (ftnlen)15, (
+76         ftnlen)120);
+77     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{EVAL_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+78     \hyperlink{SPRVIS_8c_acda9789fbe9f7fc9804e4b42f6d9c518}{abnend\_}();
+79     \}
+80     \textcolor{keywordflow}{return} 0;
+81 \} \textcolor{comment}{/* eval\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVAL_8c_a64df9f8a0665781c04785fa774479c58_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVAL_8c_a64df9f8a0665781c04785fa774479c58_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{EVAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{EVAL_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 25 of file E\+V\+A\+L.\+c.
+
+
+
+Referenced by eval\+\_\+().
+
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{EVAL_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{EVAL_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 26 of file E\+V\+A\+L.\+c.
+
+
+
+Referenced by eval\+\_\+().
+
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!darray@{darray}}
+\index{darray@{darray}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{darray}{darray}}]{\setlength{\rightskip}{0pt plus 5cm}char darray\mbox{[}120\mbox{]}}\hypertarget{EVAL_8c_ad8149129b0ac5c966968e55ba6106146}{}\label{EVAL_8c_ad8149129b0ac5c966968e55ba6106146}
+
+
+Definition at line 18 of file E\+V\+A\+L.\+c.
+
+\index{E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!E\+V\+A\+L.\+c@{E\+V\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{EVAL_8c_a61031d065c776fe5d72683c7d30700e8}{}\label{EVAL_8c_a61031d065c776fe5d72683c7d30700e8}

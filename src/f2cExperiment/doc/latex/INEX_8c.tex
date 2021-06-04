@@ -1,0 +1,417 @@
+\hypertarget{INEX_8c}{}\section{I\+N\+E\+X.\+c File Reference}
+\label{INEX_8c}\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+E\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{INEX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\+\_\+1}~\hyperlink{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{inidat\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INEX_8c_a6fbb925ebfd05b98c43993b3ace69a56}{inex\+\_\+} (doublereal $\ast$geo, doublereal $\ast$side, doublereal $\ast$toli, doublereal $\ast$tolo)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{INEX_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{cxhull} \mbox{[}24000\mbox{]}\\
+\>doublereal \hyperlink{INEX_8c_a4788dc961e15ca382588a6f41cd0d1c4}{dulim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{INEX_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{dvlim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{INEX_8c_aa23f53bbfcad76998f955271d679887c}{curmax} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{INEX_8c_a4fbfc91a456d854b82c05cb9394040a3}{curmin} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{INEX_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{ncxhul} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{INEX_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{ngp}\\
+\>integer \hyperlink{INEX_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{icursf}\\
+\} \hyperlink{INEX_8c_a226d5d44f2213f4aae8871437c96c7f3}{inidat\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!inidat\+\_\+1@{inidat\+\_\+1}}
+\index{inidat\+\_\+1@{inidat\+\_\+1}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+1}{inidat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inidat\+\_\+1~{\bf inidat\+\_\+}}\hypertarget{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{}\label{INEX_8c_a9ff25d2ea8047e287870096f5289243d}
+
+
+Definition at line 23 of file I\+N\+E\+X.\+c.
+
+
+
+Referenced by inex\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!inex\+\_\+@{inex\+\_\+}}
+\index{inex\+\_\+@{inex\+\_\+}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{inex\+\_\+(doublereal $\ast$geo, doublereal $\ast$side, doublereal $\ast$toli, doublereal $\ast$tolo)}{inex_(doublereal *geo, doublereal *side, doublereal *toli, doublereal *tolo)}}]{\setlength{\rightskip}{0pt plus 5cm}int inex\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{geo, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{toli, }
+\item[{doublereal $\ast$}]{tolo}
+\end{DoxyParamCaption}
+)}\hypertarget{INEX_8c_a6fbb925ebfd05b98c43993b3ace69a56}{}\label{INEX_8c_a6fbb925ebfd05b98c43993b3ace69a56}
+
+
+Definition at line 27 of file I\+N\+E\+X.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, curcal\+\_\+(), evalss\+\_\+(), i\+\_\+\+\_\+, inidat\+\_\+1, irec, isize, j, k, l, m, mode, n, r\+\_\+\+\_\+, shella\+\_\+(), shellb\+\_\+(), u, v, and w.
+
+
+
+Referenced by smil\+\_\+().
+
+
+\begin{DoxyCode}
+29 \{
+30     \textcolor{comment}{/* Initialized data */}
+31 
+32     \textcolor{keyword}{static} integer m1[4] = \{ 1,2,4,3 \};
+33     \textcolor{keyword}{static} integer m2[4] = \{ 4,1,3,2 \};
+34 
+35     \textcolor{comment}{/* System generated locals */}
+36     integer i\_\_1, i\_\_2, i\_\_3;
+37     doublereal d\_\_1;
+38 
+39     \textcolor{comment}{/* Builtin functions */}
+40     integer i\_dnnt(doublereal *);
+41     \textcolor{keywordtype}{double} sqrt(doublereal);
+42 
+43     \textcolor{comment}{/* Local variables */}
+44     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+45     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+46     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[3], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}[3];
+47     \textcolor{keyword}{static} integer n3, n4;
+48     \textcolor{keyword}{static} doublereal ru[3], rv[3], cv1[12] \textcolor{comment}{/* was [4][3] */}, cv2[12]   
+49         \textcolor{comment}{/* was [4][3] */}, rad, ruu[3], ruv[3], rvv[3];
+50     \textcolor{keyword}{static} integer \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec}, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+51     \textcolor{keyword}{static} doublereal srad[4];
+52     \textcolor{keyword}{static} integer ncor[4];
+53     \textcolor{keyword}{static} doublereal rnet[75]  \textcolor{comment}{/* was [25][3] */}, amesh, scent[12] \textcolor{comment}{/* }
+54 \textcolor{comment}{        was [4][3] */};
+55     \textcolor{keyword}{static} integer nhull, \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize};
+56     \textcolor{keyword}{static} doublereal tolin, rnorm[3], rcorn1[12]   \textcolor{comment}{/* was [4][3] */}, 
+57         rcorn2[12]  \textcolor{comment}{/* was [4][3] */}, curve1, curve2;
+58     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e}{shella\_}(doublereal *, doublereal *, integer *,
+59          integer *, doublereal *, doublereal *), \hyperlink{CURCAL_8c_a8439cdbf1a3fb9a8a7bac81f1fd989d8}{curcal\_}(doublereal *, 
+60         doublereal *, doublereal *, doublereal *, doublereal *, 
+61         doublereal *, doublereal *, doublereal *, doublereal *);
+62     \textcolor{keyword}{static} integer nflags[4];
+63     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375}{shellb\_}(integer *, integer *, integer *, 
+64         doublereal *, doublereal *, doublereal *, doublereal *, 
+65         doublereal *, doublereal *, doublereal *, integer *);
+66     \textcolor{keyword}{static} integer npatch, nngrid;
+67     \textcolor{keyword}{static} doublereal crvmin, crvmax;
+68     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{evalss\_}(integer *, doublereal *, doublereal *,
+69          integer *, doublereal *, integer *, doublereal *, doublereal *, 
+70         doublereal *, doublereal *, doublereal *, doublereal *, 
+71         doublereal *, integer *);
+72     \textcolor{keyword}{static} integer normok;
+73 
+74 
+75 \textcolor{comment}{/*     INTERFERENCE CHECKING INITIALISATION PROCEDURE */}
+76 
+77 \textcolor{comment}{/*     CALCULATES: MAXIMUM AND MINIMUM CURVATURES      CURMAX,CURMIN */}
+78 \textcolor{comment}{/*                 ITERATION LIMITS                    DULIM, DVLIM */}
+79 \textcolor{comment}{/*                 CONVEX HULLS                        CXHULL */}
+80 
+81 \textcolor{comment}{/*     ARGUMENTS: */}
+82 \textcolor{comment}{/*            GEO   SURFACE CANONICAL FORM */}
+83 \textcolor{comment}{/*            SIDE  TOOL SIDE OF SURFACE W.R.T. SURFACE NORMAL */}
+84 \textcolor{comment}{/*            TOLI  SURFACE INTOL */}
+85 \textcolor{comment}{/*            TOLO  SURFACE OUTTOL */}
+86 
+87 
+88 
+89 
+90 \textcolor{comment}{/* .... INTERFERENCE CHECKING INITIAL DATA */}
+91 
+92 
+93 
+94 \textcolor{comment}{/* .... SPHERICAL SURFACE ENCLOSURES (HULLS) */}
+95 \textcolor{comment}{/* .... NUMBER OF HULLS */}
+96 \textcolor{comment}{/* .... DU ITERATION LIMIT FOR PATCHES */}
+97 \textcolor{comment}{/* .... DV ITERATION LIMIT FOR PATCHES */}
+98 \textcolor{comment}{/* .... MAXIMUM AND MINIMUM CURVATURE OF PATCHES */}
+99 
+100 \textcolor{comment}{/*     MXNP   -  MAXIMUM NUMBER OF PATCHES PER SURFACE */}
+101 \textcolor{comment}{/*     NGP    -  NUMBER OF PATCHES IN CURRENT SURFACE */}
+102 \textcolor{comment}{/*     ICURSF -  EXTERNAL LDA FILE RECORD NUMBER FOR CURRENT SURFACE */}
+103 
+104 
+105 
+106 \textcolor{comment}{/* .... MESH DIMENSION */}
+107 \textcolor{comment}{/* .... MESH POINTS */}
+108 \textcolor{comment}{/* .... PATCH CORNER POINTS */}
+109 \textcolor{comment}{/* .... PATCH CORNER VECTORS */}
+110 \textcolor{comment}{/* .... POINTERS FOR ABOVE */}
+111 
+112 \textcolor{comment}{/*     CXHULL(I,J,K)   RETURNS CONVEX HULL DATA FOR K TH PATCH */}
+113 \textcolor{comment}{/*     I = 1 TO 3      CENTRE COORDINATES */}
+114 \textcolor{comment}{/*     I = 4           RADIUS */}
+115 \textcolor{comment}{/*     WHERE HULLS ARE CALCULATED, LOADED IN J-ORDER:- */}
+116 \textcolor{comment}{/*     MINIMUM ENCLOSING SPHERE */}
+117 \textcolor{comment}{/*     UP TO 4 "EDGE" SPHERES */}
+118 \textcolor{comment}{/*     "LID" SPHERE */}
+119 \textcolor{comment}{/*     NCXHUL(K)       NUMBER OF HULLS FOR THE K TH PATCH */}
+120 
+121     \textcolor{comment}{/* Parameter adjustments */}
+122     --geo;
+123 
+124     \textcolor{comment}{/* Function Body */}
+125 
+126 \textcolor{comment}{/* .... CHECK IF THIS SURFACE HAS ALREADY BEEN PROCESSED BY INEX */}
+127 
+128 \textcolor{comment}{/* .... EXTERNAL LDA FILE RECORD NUMBER FOR THIS SURFACE */}
+129 
+130     irec = i\_dnnt(&geo[1]);
+131 
+132     \textcolor{keywordflow}{if} (\hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.icursf == 0 || irec != \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.icursf) \{
+133 \textcolor{comment}{/* .... CURRENT SURFACE NOT PREVIOUSLY PROCESSED BY INEX */}
+134 
+135     \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.icursf = \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec};
+136 \textcolor{comment}{/* .... NUMBER OF PATCHES */}
+137     \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ngp = i\_dnnt(&geo[4]);
+138 \textcolor{comment}{/* .... SIZE OF CANONICAL FORM */}
+139     isize = i\_dnnt(&geo[8]);
+140 
+141     n3 = 3;
+142     n4 = 4;
+143 
+144 \textcolor{comment}{/*     TO SET UP MESH PARAMETERS */}
+145 
+146 \textcolor{comment}{/* .... NUMBER OF MESH POINTS */}
+147     nngrid = 25;
+148     n = 4;
+149 \textcolor{comment}{/* .... MESH SIZE */}
+150     amesh = 1.f / (real) n;
+151     ncor[0] = 1;
+152     ncor[1] = 5;
+153     ncor[3] = nngrid;
+154     ncor[2] = ncor[3] - 4;
+155 \textcolor{comment}{/* .... ALL DERIVATIVES FROM EVALUATOR */}
+156     mode = 3;
+157 \textcolor{comment}{/* .... DISTANCE TOLERANCE */}
+158     tolin = (*toli + *tolo) * .5;
+159 
+160 \textcolor{comment}{/* .... FOR ALL PATCHES */}
+161     i\_\_1 = \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ngp;
+162     \textcolor{keywordflow}{for} (npatch = 1; npatch <= i\_\_1; ++npatch) \{
+163         crvmin = 1e6;
+164         crvmax = -1e6;
+165         m = 1;
+166 \textcolor{comment}{/*     CALC. MESH U,V */}
+167         i\_\_2 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+168         \textcolor{keywordflow}{for} (k = 0; k <= i\_\_2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+169         u = k * amesh;
+170         i\_\_3 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+171         \textcolor{keywordflow}{for} (j = 0; j <= i\_\_3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+172             v = j * amesh;
+173             l = k * 5 + j + 1;
+174 
+175             \hyperlink{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{evalss\_}(&npatch, &u, &v, &isize, &geo[1], &mode, r\_\_, ru, 
+176                 rv, ruu, ruv, rvv, rnorm, &normok);
+177             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+178             rnet[l + i\_\_ * 25 - 26] = r\_\_[i\_\_ - 1];
+179 \textcolor{comment}{/* L20: */}
+180             \}
+181 \textcolor{comment}{/*     IF CORNER, STORE CORNER POINTS AND EDGE VECTORS */}
+182             \textcolor{keywordflow}{if} (l == ncor[m - 1]) \{
+183             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+184                 rcorn1[m1[m - 1] + (i\_\_ << 2) - 5] = r\_\_[i\_\_ - 1];
+185                 rcorn2[m2[m - 1] + (i\_\_ << 2) - 5] = r\_\_[i\_\_ - 1];
+186 
+187                 \textcolor{keywordflow}{if} (m == 1 || m == 4) \{
+188                 cv1[m1[m - 1] + (i\_\_ << 2) - 5] = rv[i\_\_ - 1];
+189                 cv2[m2[m - 1] + (i\_\_ << 2) - 5] = ru[i\_\_ - 1];
+190                 \} \textcolor{keywordflow}{else} \{
+191                 cv1[m1[m - 1] + (i\_\_ << 2) - 5] = ru[i\_\_ - 1];
+192                 cv2[m2[m - 1] + (i\_\_ << 2) - 5] = rv[i\_\_ - 1];
+193                 \}
+194 
+195 \textcolor{comment}{/* L30: */}
+196             \}
+197             ++\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+198             \}
+199 
+200 \textcolor{comment}{/*     CALC. PRINCIPAL CURVATURES */}
+201 
+202             \hyperlink{CURCAL_8c_a8439cdbf1a3fb9a8a7bac81f1fd989d8}{curcal\_}(ru, rv, ruu, ruv, rvv, rnorm, side, &curve1, &
+203                 curve2);
+204 
+205 \textcolor{comment}{/* Computing MAX */}
+206             d\_\_1 = max(crvmax,curve1);
+207             crvmax = max(d\_\_1,curve2);
+208 \textcolor{comment}{/* Computing MIN */}
+209             d\_\_1 = min(crvmin,curve1);
+210             crvmin = min(d\_\_1,curve2);
+211 \textcolor{comment}{/* L400: */}
+212         \}
+213 \textcolor{comment}{/* L500: */}
+214         \}
+215 
+216 \textcolor{comment}{/*     TO STORE MAXIMUM AND MINIMUM CURVATURE */}
+217         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.curmax[npatch - 1] = crvmax;
+218         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.curmin[npatch - 1] = crvmin;
+219 
+220 \textcolor{comment}{/*     TO CALCULATE DULIM, DVLIM */}
+221 \textcolor{comment}{/* .... A IS SUM OF U-DISTANCES BETWEEN CORNER POINTS */}
+222         a = 0.;
+223 \textcolor{comment}{/* .... B IS SUM OF V-DISTANCES BETWEEN CORNER POINTS */}
+224         b = 0.;
+225         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+226         \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+227             c\_\_ = rcorn1[j + (i\_\_ << 2) - 5] - rcorn2[j + (i\_\_ << 2) 
+228                 - 5];
+229             \textcolor{keywordflow}{if} (j == 1 || j == 3) \{
+230             b += c\_\_ * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+231             \} \textcolor{keywordflow}{else} \{
+232             a += c\_\_ * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+233             \}
+234 \textcolor{comment}{/* L100: */}
+235         \}
+236 \textcolor{comment}{/* L150: */}
+237         \}
+238 
+239         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dulim[npatch - 1] = tolin / sqrt(a);
+240         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dvlim[npatch - 1] = tolin / sqrt(b);
+241 \textcolor{comment}{/*     DU, DV LIMITS CALCULATED */}
+242 
+243 \textcolor{comment}{/*     TO CALCULATE SPHERICAL CONVEX HULLS */}
+244         nhull = 0;
+245         \hyperlink{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e}{shella\_}(rcorn1, rnet, &nngrid, &n3, w, &rad);
+246         \textcolor{keywordflow}{if} (rad > tolin) \{
+247         ++nhull;
+248         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+249             \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[i\_\_ + (nhull + npatch * 6 << 2) - 29] = w[
+250                 i\_\_ - 1];
+251 \textcolor{comment}{/* L200: */}
+252         \}
+253         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(nhull + npatch * 6 << 2) - 25] = rad;
+254         \}
+255 
+256         \hyperlink{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375}{shellb\_}(&nngrid, &n3, &n4, rcorn1, rcorn2, cv1, cv2, rnet, scent, 
+257             srad, nflags);
+258         \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+259         \textcolor{keywordflow}{if} (nflags[k - 1] == 1) \{
+260             ++nhull;
+261             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+262             \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[i\_\_ + (nhull + npatch * 6 << 2) - 29] 
+263                 = scent[k + (i\_\_ << 2) - 5];
+264 \textcolor{comment}{/* L220: */}
+265             \}
+266             \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(nhull + npatch * 6 << 2) - 25] = srad[k 
+267                 - 1];
+268         \}
+269 \textcolor{comment}{/* L210: */}
+270         \}
+271         \hyperlink{INEX_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ncxhul[npatch - 1] = nhull;
+272 
+273 \textcolor{comment}{/* L1000: */}
+274     \}
+275 
+276     \}
+277 
+278     \textcolor{keywordflow}{return} 0;
+279 \} \textcolor{comment}{/* inex\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INEX_8c_a6fbb925ebfd05b98c43993b3ace69a56_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INEX_8c_a6fbb925ebfd05b98c43993b3ace69a56_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!curmax@{curmax}}
+\index{curmax@{curmax}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{curmax}{curmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmax\mbox{[}1000\mbox{]}}\hypertarget{INEX_8c_aa23f53bbfcad76998f955271d679887c}{}\label{INEX_8c_aa23f53bbfcad76998f955271d679887c}
+
+
+Definition at line 18 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!curmin@{curmin}}
+\index{curmin@{curmin}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{curmin}{curmin}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmin\mbox{[}1000\mbox{]}}\hypertarget{INEX_8c_a4fbfc91a456d854b82c05cb9394040a3}{}\label{INEX_8c_a4fbfc91a456d854b82c05cb9394040a3}
+
+
+Definition at line 18 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!cxhull@{cxhull}}
+\index{cxhull@{cxhull}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{cxhull}{cxhull}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cxhull\mbox{[}24000\mbox{]}}\hypertarget{INEX_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{}\label{INEX_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}
+
+
+Definition at line 18 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!dulim@{dulim}}
+\index{dulim@{dulim}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{dulim}{dulim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dulim\mbox{[}1000\mbox{]}}\hypertarget{INEX_8c_a4788dc961e15ca382588a6f41cd0d1c4}{}\label{INEX_8c_a4788dc961e15ca382588a6f41cd0d1c4}
+
+
+Definition at line 18 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!dvlim@{dvlim}}
+\index{dvlim@{dvlim}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{dvlim}{dvlim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dvlim\mbox{[}1000\mbox{]}}\hypertarget{INEX_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{}\label{INEX_8c_a2ad7fd4434a6687cbee351c9f0a91b85}
+
+
+Definition at line 18 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!icursf@{icursf}}
+\index{icursf@{icursf}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{icursf}{icursf}}]{\setlength{\rightskip}{0pt plus 5cm}integer icursf}\hypertarget{INEX_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{}\label{INEX_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}
+
+
+Definition at line 20 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!inidat\+\_\+@{inidat\+\_\+}}
+\index{inidat\+\_\+@{inidat\+\_\+}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+}{inidat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inidat\+\_\+}\hypertarget{INEX_8c_a226d5d44f2213f4aae8871437c96c7f3}{}\label{INEX_8c_a226d5d44f2213f4aae8871437c96c7f3}
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!ncxhul@{ncxhul}}
+\index{ncxhul@{ncxhul}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{ncxhul}{ncxhul}}]{\setlength{\rightskip}{0pt plus 5cm}integer ncxhul\mbox{[}1000\mbox{]}}\hypertarget{INEX_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{}\label{INEX_8c_a6af1d3fdc983ce604b95999d82d8ddaf}
+
+
+Definition at line 20 of file I\+N\+E\+X.\+c.
+
+\index{I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}!ngp@{ngp}}
+\index{ngp@{ngp}!I\+N\+E\+X.\+c@{I\+N\+E\+X.\+c}}
+\subsubsection[{\texorpdfstring{ngp}{ngp}}]{\setlength{\rightskip}{0pt plus 5cm}integer ngp}\hypertarget{INEX_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{}\label{INEX_8c_aff4428bb5e4d31d51a2be097fd6cba1b}
+
+
+Definition at line 20 of file I\+N\+E\+X.\+c.
+

@@ -1,0 +1,126 @@
+\hypertarget{RDSATZ_8c}{}\section{R\+D\+S\+A\+T\+Z.\+c File Reference}
+\label{RDSATZ_8c}\index{R\+D\+S\+A\+T\+Z.\+c@{R\+D\+S\+A\+T\+Z.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+D\+S\+A\+T\+Z.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{RDSATZ_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RDSATZ_8c_a2b03594623225737389218e16b41d4a8}{rdsatz\+\_\+} (integer $\ast$\hyperlink{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}{id}, doublereal $\ast$\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}, integer $\ast$ianz, integer $\ast$nrsatz, integer $\ast$iret)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{RDSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{R\+D\+S\+A\+T\+Z.\+c@{R\+D\+S\+A\+T\+Z.\+c}!rdsatz\+\_\+@{rdsatz\+\_\+}}
+\index{rdsatz\+\_\+@{rdsatz\+\_\+}!R\+D\+S\+A\+T\+Z.\+c@{R\+D\+S\+A\+T\+Z.\+c}}
+\subsubsection[{\texorpdfstring{rdsatz\+\_\+(integer $\ast$id, doublereal $\ast$array, integer $\ast$ianz, integer $\ast$nrsatz, integer $\ast$iret)}{rdsatz_(integer *id, doublereal *array, integer *ianz, integer *nrsatz, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int rdsatz\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{id, }
+\item[{doublereal $\ast$}]{array, }
+\item[{integer $\ast$}]{ianz, }
+\item[{integer $\ast$}]{nrsatz, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{RDSATZ_8c_a2b03594623225737389218e16b41d4a8}{}\label{RDSATZ_8c_a2b03594623225737389218e16b41d4a8}
+
+
+Definition at line 21 of file R\+D\+S\+A\+T\+Z.\+c.
+
+
+
+References array, c\+\_\+\+\_\+1, i\+\_\+\+\_\+, and id.
+
+
+
+Referenced by ldard\+\_\+(), and pro027\+\_\+().
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* System generated locals */}
+25     integer i\_\_1;
+26 
+27     \textcolor{comment}{/* Builtin functions */}
+28     integer s\_rsue(cilist *), do\_uio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_rsue(\textcolor{keywordtype}{void});
+29 
+30     \textcolor{comment}{/* Local variables */}
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+32 
+33     \textcolor{comment}{/* Fortran I/O blocks */}
+34     \textcolor{keyword}{static} cilist io\_\_\_1 = \{ 1, 0, 1, 0, 0 \};
+35 
+36 
+37 
+38 
+39     \textcolor{comment}{/* Parameter adjustments */}
+40     --\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array};
+41 
+42     \textcolor{comment}{/* Function Body */}
+43     io\_\_\_1.ciunit = *\hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id};
+44     i\_\_1 = s\_rsue(&io\_\_\_1);
+45     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+46     \textcolor{keywordflow}{goto} L100001;
+47     \}
+48     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 10; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+49     i\_\_1 = do\_uio(&\hyperlink{RDSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}[i\_\_], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+50     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+51         \textcolor{keywordflow}{goto} L100001;
+52     \}
+53     \}
+54     i\_\_1 = e\_rsue();
+55 L100001:
+56     \textcolor{keywordflow}{if} (i\_\_1 < 0) \{
+57     \textcolor{keywordflow}{goto} L95;
+58     \}
+59     \textcolor{keywordflow}{if} (i\_\_1 > 0) \{
+60     \textcolor{keywordflow}{goto} L90;
+61     \}
+62     *iret = 0;
+63     \textcolor{keywordflow}{return} 0;
+64 
+65 L90:
+66     *iret = 3;
+67     \textcolor{keywordflow}{return} 0;
+68 
+69 L95:
+70     *iret = -1;
+71     \textcolor{keywordflow}{return} 0;
+72 \} \textcolor{comment}{/* rdsatz\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RDSATZ_8c_a2b03594623225737389218e16b41d4a8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+D\+S\+A\+T\+Z.\+c@{R\+D\+S\+A\+T\+Z.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!R\+D\+S\+A\+T\+Z.\+c@{R\+D\+S\+A\+T\+Z.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RDSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{RDSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file R\+D\+S\+A\+T\+Z.\+c.
+
+
+
+Referenced by rdsatz\+\_\+().
+

@@ -1,0 +1,71 @@
+**** SOURCE FILE : LIBOPC00.W01   ***
+*
+      SUBROUTINE LIBOPC(IND,FLAG)
+*
+*  * LIBOPC *  VAX-11 FORTRAN VERSION  27.09.82  E.MCLELLAN
+*              PORTABLE F77 VERSION REVISED  8-OCT-1987 E.MCLELLAN
+*
+*  PURPOSE     TO CHECK THE EXISTENCE OF APTLIB
+*              OR CLOSE UNIT REFERENCING APTLIB
+*  CALLING SEQUENCE
+*              CALL LIBOPC(IND,FLAG)
+*  ARGUMENTS
+*              IND   =1 DOES APTLIB EXIST
+*                    =2 CLOSE UNIT WHICH REFERENCES APTLIB
+*              FLAG  =0 APTLIB EXISTS
+*                    =1 APTLIB DOES NOT EXIST
+*                    =2 NOT USED
+*                    =3 ALREADY CLOSED (IND=2)
+*                    =4 IND IS NOT 1 OR 2
+*
+      INTEGER FLAG
+      LOGICAL OD,EX
+C
+      INCLUDE 'FILTAB.INC'
+C
+      INCLUDE 'LIBCOM.INC'
+C
+C.....UNIT NUMBER FOR APTLIB
+C
+      ID=U(24)
+C
+      IF (IND.EQ.1) THEN
+C
+C.....DOES APTLIB EXIST
+C
+         INQUIRE(FILE=APTLIB//'INDEX',EXIST=EX)
+         IF (EX) THEN
+C
+C.....APTLIB EXISTS
+            FLAG=0
+            RETURN
+         ELSE
+C
+C.....APTLIB DOES NOT EXIST
+         FLAG=1
+         RETURN
+         END IF
+C
+      ELSE IF (IND.EQ.2) THEN
+C
+C.....IS UNIT OPEN
+         INQUIRE(UNIT=ID,OPENED=OD)
+         IF (OD) THEN
+C
+C.....CLOSE UNIT
+            CLOSE (UNIT=ID,STATUS=CLSTAT(24))
+            RETURN
+C
+         ELSE
+C.....UNIT ALREADY CLOSED
+         FLAG=3
+         RETURN
+         END IF
+C
+      ELSE
+C
+C.....IND NOT 1 OR 2
+      FLAG=4
+      END IF
+      RETURN
+      END

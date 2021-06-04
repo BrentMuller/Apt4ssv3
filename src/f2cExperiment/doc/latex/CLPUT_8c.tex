@@ -1,0 +1,1292 @@
+\hypertarget{CLPUT_8c}{}\section{C\+L\+P\+U\+T.\+c File Reference}
+\label{CLPUT_8c}\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+P\+U\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{CLPUT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CLPUT_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{CLPUT_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{CLPUT_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLPUT_8c_a6a832523d0cc05ecdaf9d03c5bb30058}{clput\+\_\+} (doublereal $\ast$atex, doublereal $\ast$atax, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{CLPUT_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{CLPUT_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{CLPUT_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{CLPUT_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{CLPUT_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{CLPUT_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{CLPUT_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{CLPUT_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{CLPUT_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{CLPUT_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{CLPUT_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{CLPUT_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{CLPUT_8c_a1339c67c49b4ce04a8e8f0cc481bb7a4}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{CLPUT_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{CLPUT_8c_a84a1274e840471e7d2e39cd7f87bf652}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{CLPUT_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{CLPUT_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{CLPUT_8c_a15c03e884aeeb60b17c339416c767b99}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CLPUT_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{CLPUT_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{CLPUT_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{CLPUT_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{CLPUT_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{CLPUT_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{CLPUT_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{CLPUT_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{CLPUT_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{CLPUT_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{CLPUT_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{CLPUT_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{CLPUT_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{CLPUT_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{CLPUT_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{CLPUT_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{CLPUT_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{CLPUT_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{CLPUT_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{CLPUT_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{CLPUT_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{CLPUT_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{CLPUT_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{CLPUT_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{CLPUT_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{CLPUT_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{CLPUT_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{CLPUT_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{CLPUT_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{CLPUT_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{CLPUT_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{CLPUT_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{CLPUT_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{CLPUT_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{CLPUT_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{CLPUT_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{CLPUT_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{CLPUT_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{CLPUT_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{CLPUT_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{CLPUT_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{CLPUT_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{CLPUT_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{CLPUT_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{CLPUT_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{CLPUT_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{CLPUT_8c_ad1f8158fa24bdfa1f66e3286e9c51ec8}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CLPUT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{CLPUT_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{CLPUT_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{CLPUT_8c_ad534b0a178fb391fccdf392fb69ff63b}{ibugg\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CLPUT_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{CLPUT_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{CLPUT_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{CLPUT_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{CLPUT_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{CLPUT_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{CLPUT_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{CLPUT_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{CLPUT_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{CLPUT_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{CLPUT_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{CLPUT_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{CLPUT_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{CLPUT_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{CLPUT_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{CLPUT_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{CLPUT_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{CLPUT_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{CLPUT_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{CLPUT_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{CLPUT_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{CLPUT_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{CLPUT_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{CLPUT_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{CLPUT_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{CLPUT_8c_adb33398582935d5a171bd5e0cb38e52d}{symfil\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CLPUT_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\+\_\+\+\_\+10} = 10
+\item 
+static integer \hyperlink{CLPUT_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{CLPUT_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{CLPUT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CLPUT_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{CLPUT_8c_a5d8742d837dd932468df10068bbc1875}{}\label{CLPUT_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 30 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{CLPUT_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{CLPUT_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{CLPUT_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{CLPUT_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 24 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{CLPUT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{CLPUT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 53 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 47 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{CLPUT_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{CLPUT_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{CLPUT_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{CLPUT_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 62 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{CLPUT_8c_ac473806d761bac6bbdc70810932acff0}{}\label{CLPUT_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 37 of file C\+L\+P\+U\+T.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!clput\+\_\+@{clput\+\_\+}}
+\index{clput\+\_\+@{clput\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{clput\+\_\+(doublereal $\ast$atex, doublereal $\ast$atax, integer $\ast$mode)}{clput_(doublereal *atex, doublereal *atax, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int clput\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{atex, }
+\item[{doublereal $\ast$}]{atax, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{CLPUT_8c_a6a832523d0cc05ecdaf9d03c5bb30058}{}\label{CLPUT_8c_a6a832523d0cc05ecdaf9d03c5bb30058}
+
+
+Definition at line 75 of file C\+L\+P\+U\+T.\+c.
+
+
+
+References atape\+\_\+(), bad\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+10, c\+\_\+\+\_\+3, c\+\_\+n1, c\+\_\+n3, cprint\+\_\+(), ewrite\+\_\+(), first, fxcor\+\_\+1, i\+\_\+\+\_\+, ibugg\+\_\+1, ifxcor\+\_\+1, ir, kcldat, record\+\_\+(), and symfil\+\_\+1.
+
+
+
+Referenced by cutreg\+\_\+(), smil\+\_\+(), and sspath\+\_\+().
+
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{comment}{/* Initialized data */}
+78 
+79     \textcolor{keyword}{static} integer \hyperlink{APT233_8c_acb39e89efe57e1a0d37cc75831be1021}{kcldat}[10] = \{ 0,0,1308622848,0,1308622848,2,1308622848,1,
+80         0,0 \};
+81     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+82 
+83     \textcolor{comment}{/* Builtin functions */}
+84     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+85 
+86     \textcolor{comment}{/* Local variables */}
+87     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, nr;
+88     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+89     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+90 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+91 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+92     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}(\textcolor{keywordtype}{void});
+93     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+94     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(integer *), \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(integer *, 
+95         integer *, integer *, integer *, integer *), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, 
+96         ftnlen);
+97 
+98 
+99 
+100 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+101 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+102 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+103 
+104 
+105 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+106 
+107 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+108 
+109 
+110 
+111 
+112 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+113 
+114 
+115 
+116 
+117 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+118 
+119 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+120 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+121 
+122 
+123 
+124 
+125 
+126 
+127 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+128 
+129 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+130 
+131 
+132 
+133 
+134 
+135 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+136 
+137 
+138 
+139     \textcolor{comment}{/* Parameter adjustments */}
+140     --atax;
+141     --atex;
+142 
+143     \textcolor{comment}{/* Function Body */}
+144 
+145 
+146     \textcolor{keywordflow}{if} (first) \{
+147     kcldat[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"CLDA"}, (ftnlen)4);
+148     kcldat[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"TA  "}, (ftnlen)4);
+149     kcldat[8] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"GOTO"}, (ftnlen)4);
+150     kcldat[9] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"    "}, (ftnlen)4);
+151     first = FALSE\_;
+152     \}
+153 
+154     \hyperlink{RECORD_8c_a5ae034bc2e7d0a9925598fd6a3d576d8}{record\_}(&\hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno);
+155     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} >= 0) \{
+156     \textcolor{keywordflow}{goto} L100;
+157     \}
+158     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} < -1) \{
+159     \textcolor{keywordflow}{goto} L999;
+160     \}
+161 \textcolor{comment}{/* --OUTPUT HEADER FOR A RECORD OF CL DATA */}
+162     kcldat[3] = \hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+163     nr = 0;
+164     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{CLPUT_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, kcldat, &\hyperlink{CLPUT_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\_\_10}, &ir);
+165     \textcolor{keywordflow}{goto} L999;
+166 
+167 L100:
+168     \hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 0;
+169     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+170     \hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 2;
+171     \}
+172     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 1) \{
+173     \hyperlink{CLPUT_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl = 3;
+174     \}
+175     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+176     \hyperlink{CLPUT_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1] = atex[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+177     \hyperlink{CLPUT_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1] = atax[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+178 \textcolor{comment}{/* L110: */}
+179     \}
+180     \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\_}();
+181     \textcolor{keywordflow}{goto} L999;
+182 
+183 L999:
+184     \textcolor{keywordflow}{if} (\hyperlink{CLPUT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+185     \textcolor{keywordflow}{goto} L1999;
+186     \}
+187     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CLPUT_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+188     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER CLPUT"}, (ftnlen)20, (ftnlen)12);
+189     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+190     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CLPUT_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"MODE"}, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, (ftnlen)4);
+191     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CLPUT_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{CLPUT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ATEX"}, &atex[1], (ftnlen)4);
+192     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CLPUT_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{CLPUT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ATAX"}, &atax[1], (ftnlen)4);
+193 L1999:
+194 
+195     \textcolor{keywordflow}{return} 0;
+196 \} \textcolor{comment}{/* clput\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLPUT_8c_a6a832523d0cc05ecdaf9d03c5bb30058_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLPUT_8c_a6a832523d0cc05ecdaf9d03c5bb30058_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!alp@{alp}}
+\index{alp@{alp}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{CLPUT_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{CLPUT_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{CLPUT_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{CLPUT_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{CLPUT_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{CLPUT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 68 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CLPUT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 70 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}}
+\index{c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+10}{c__10}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+10 = 10\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_aa084e2bf75ab962319da4c4c7dddea02}{}\label{CLPUT_8c_aa084e2bf75ab962319da4c4c7dddea02}
+
+
+Definition at line 66 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_a5e7359f78743350865398325d9155f20}{}\label{CLPUT_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 69 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_a9e9287f317ef3436252a395791a899f6}{}\label{CLPUT_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 67 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLPUT_8c_a6d165623735ee520885e84b5052c252b}{}\label{CLPUT_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 71 of file C\+L\+P\+U\+T.\+c.
+
+
+
+Referenced by clput\+\_\+().
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{CLPUT_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{CLPUT_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{CLPUT_8c_a84a1274e840471e7d2e39cd7f87bf652}{}\label{CLPUT_8c_a84a1274e840471e7d2e39cd7f87bf652}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{CLPUT_8c_afddbf18370447268640d26c983890fd1}{}\label{CLPUT_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{CLPUT_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{CLPUT_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{CLPUT_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{CLPUT_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{CLPUT_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{CLPUT_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{CLPUT_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{CLPUT_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{CLPUT_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{CLPUT_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{CLPUT_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{CLPUT_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{CLPUT_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{CLPUT_8c_a995bd688c87d82736860b413de2416d4}{}\label{CLPUT_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{CLPUT_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{CLPUT_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{CLPUT_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{CLPUT_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{CLPUT_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{CLPUT_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{CLPUT_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{CLPUT_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{CLPUT_8c_a1339c67c49b4ce04a8e8f0cc481bb7a4}{}\label{CLPUT_8c_a1339c67c49b4ce04a8e8f0cc481bb7a4}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{CLPUT_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{CLPUT_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!hi@{hi}}
+\index{hi@{hi}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{CLPUT_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{CLPUT_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{CLPUT_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{CLPUT_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{CLPUT_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{CLPUT_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{CLPUT_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{CLPUT_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{CLPUT_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{CLPUT_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{CLPUT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{CLPUT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 50 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{CLPUT_8c_ad534b0a178fb391fccdf392fb69ff63b}{}\label{CLPUT_8c_ad534b0a178fb391fccdf392fb69ff63b}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ic@{ic}}
+\index{ic@{ic}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{CLPUT_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{CLPUT_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{CLPUT_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{CLPUT_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!icl@{icl}}
+\index{icl@{icl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{CLPUT_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{CLPUT_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ics@{ics}}
+\index{ics@{ics}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{CLPUT_8c_a7217a40b82199af56087b578a9bef158}{}\label{CLPUT_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{CLPUT_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{CLPUT_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{CLPUT_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{CLPUT_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!icut@{icut}}
+\index{icut@{icut}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{CLPUT_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{CLPUT_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ids@{ids}}
+\index{ids@{ids}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{CLPUT_8c_a312fee9680413e72b1ed128af2de8822}{}\label{CLPUT_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ier@{ier}}
+\index{ier@{ier}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{CLPUT_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{CLPUT_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{CLPUT_8c_ad1f8158fa24bdfa1f66e3286e9c51ec8}{}\label{CLPUT_8c_ad1f8158fa24bdfa1f66e3286e9c51ec8}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!igo@{igo}}
+\index{igo@{igo}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{CLPUT_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{CLPUT_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{CLPUT_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{CLPUT_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{CLPUT_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{CLPUT_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!igs@{igs}}
+\index{igs@{igs}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{CLPUT_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{CLPUT_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{CLPUT_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{CLPUT_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!inops@{inops}}
+\index{inops@{inops}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{CLPUT_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{CLPUT_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{CLPUT_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{CLPUT_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 50 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{CLPUT_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{CLPUT_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 50 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ips@{ips}}
+\index{ips@{ips}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{CLPUT_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{CLPUT_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{CLPUT_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{CLPUT_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{CLPUT_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{CLPUT_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!is@{is}}
+\index{is@{is}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{CLPUT_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{CLPUT_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{CLPUT_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{CLPUT_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{CLPUT_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{CLPUT_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{CLPUT_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{CLPUT_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{CLPUT_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{CLPUT_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{CLPUT_8c_a71eb31c84997c0822663e9391c14d998}{}\label{CLPUT_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!it@{it}}
+\index{it@{it}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{CLPUT_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{CLPUT_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{CLPUT_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{CLPUT_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{CLPUT_8c_a10effd66f46b95c77726e50c3d371477}{}\label{CLPUT_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{CLPUT_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{CLPUT_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{CLPUT_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{CLPUT_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{CLPUT_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{CLPUT_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{CLPUT_8c_a15ffd813a44621365b809bd790efc487}{}\label{CLPUT_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{CLPUT_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{CLPUT_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{CLPUT_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{CLPUT_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{CLPUT_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{CLPUT_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 27 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{CLPUT_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{CLPUT_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!msav@{msav}}
+\index{msav@{msav}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{CLPUT_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{CLPUT_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{CLPUT_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{CLPUT_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{CLPUT_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{CLPUT_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{CLPUT_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{CLPUT_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{CLPUT_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{CLPUT_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{CLPUT_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{CLPUT_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{CLPUT_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{CLPUT_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!numax@{numax}}
+\index{numax@{numax}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{CLPUT_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{CLPUT_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{CLPUT_8c_a5123b60c8419619c6c2debf212d28208}{}\label{CLPUT_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nump@{nump}}
+\index{nump@{nump}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{CLPUT_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{CLPUT_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{CLPUT_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{CLPUT_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{CLPUT_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{CLPUT_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{CLPUT_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{CLPUT_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nw@{nw}}
+\index{nw@{nw}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{CLPUT_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{CLPUT_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{CLPUT_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{CLPUT_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 40 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{CLPUT_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{CLPUT_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{CLPUT_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{CLPUT_8c_af29300e691e97a062da856325402d3e9}{}\label{CLPUT_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{CLPUT_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{CLPUT_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ra@{ra}}
+\index{ra@{ra}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{CLPUT_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{CLPUT_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{CLPUT_8c_abed92b12a9406febedd1333e63fac677}{}\label{CLPUT_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ri@{ri}}
+\index{ri@{ri}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{CLPUT_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{CLPUT_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{CLPUT_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{CLPUT_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{CLPUT_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!surd@{surd}}
+\index{surd@{surd}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{CLPUT_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{CLPUT_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{CLPUT_8c_adb33398582935d5a171bd5e0cb38e52d}{}\label{CLPUT_8c_adb33398582935d5a171bd5e0cb38e52d}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ta@{ta}}
+\index{ta@{ta}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_aa38365a06b4e51426459eba3db71f888}{}\label{CLPUT_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tak@{tak}}
+\index{tak@{tak}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{CLPUT_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tal@{tal}}
+\index{tal@{tal}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{CLPUT_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{CLPUT_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{CLPUT_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{CLPUT_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{CLPUT_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!te@{te}}
+\index{te@{te}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{CLPUT_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tek@{tek}}
+\index{tek@{tek}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{CLPUT_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tel@{tel}}
+\index{tel@{tel}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{CLPUT_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tem@{tem}}
+\index{tem@{tem}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{CLPUT_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{CLPUT_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!temp@{temp}}
+\index{temp@{temp}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{CLPUT_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{CLPUT_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!ti@{ti}}
+\index{ti@{ti}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{CLPUT_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{CLPUT_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{CLPUT_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tik@{tik}}
+\index{tik@{tik}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{CLPUT_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!til@{til}}
+\index{til@{til}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{CLPUT_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{CLPUT_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{CLPUT_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{CLPUT_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{CLPUT_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{CLPUT_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{CLPUT_8c_a15c03e884aeeb60b17c339416c767b99}{}\label{CLPUT_8c_a15c03e884aeeb60b17c339416c767b99}
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!tm@{tm}}
+\index{tm@{tm}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{CLPUT_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{CLPUT_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!umax@{umax}}
+\index{umax@{umax}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{CLPUT_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{CLPUT_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 33 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{CLPUT_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{CLPUT_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{CLPUT_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{CLPUT_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 18 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{CLPUT_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{CLPUT_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+
+\index{C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!C\+L\+P\+U\+T.\+c@{C\+L\+P\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{CLPUT_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{CLPUT_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 56 of file C\+L\+P\+U\+T.\+c.
+

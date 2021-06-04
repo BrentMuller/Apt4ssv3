@@ -1,0 +1,6 @@
+*
+      PROGRAM SSV3
+      INCLUDE 'COMMONS.INC'
+      CALL SPRVIS
+      STOP
+      END

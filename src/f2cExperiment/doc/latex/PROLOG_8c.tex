@@ -1,0 +1,129 @@
+\hypertarget{PROLOG_8c}{}\section{P\+R\+O\+L\+O\+G.\+c File Reference}
+\label{PROLOG_8c}\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+R\+O\+L\+O\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{PROLOG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PROLOG_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1}~\hyperlink{SSV3_8c_af95d7ffd44b6fd3eb0d18bdf27e830c6}{prt\+\_\+}
+\item 
+\#define \hyperlink{PROLOG_8c_acb4d9181bd8248015c7117132559b01b}{interp}~((logical $\ast$)\&\hyperlink{SSV3_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1} + 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PROLOG_8c_a04a6f67d05267f24739ae18da0c82be0}{prolog\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PROLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}{prt} \mbox{[}7\mbox{]}\\
+\} \hyperlink{PROLOG_8c_a1382b52c2c4ebfc11bfeed9725b1c809}{prt\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}!interp@{interp}}
+\index{interp@{interp}!P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{interp}{interp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define interp~((logical $\ast$)\&{\bf prt\+\_\+1} + 2)}\hypertarget{PROLOG_8c_acb4d9181bd8248015c7117132559b01b}{}\label{PROLOG_8c_acb4d9181bd8248015c7117132559b01b}
+
+
+Referenced by prolog\+\_\+().
+
+\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}!prt\+\_\+1@{prt\+\_\+1}}
+\index{prt\+\_\+1@{prt\+\_\+1}!P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+1}{prt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define prt\+\_\+1~{\bf prt\+\_\+}}\hypertarget{PROLOG_8c_ad5af17232611476e9b7239fc1c909844}{}\label{PROLOG_8c_ad5af17232611476e9b7239fc1c909844}
+
+
+Definition at line 21 of file P\+R\+O\+L\+O\+G.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}!prolog\+\_\+@{prolog\+\_\+}}
+\index{prolog\+\_\+@{prolog\+\_\+}!P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prolog\+\_\+(void)}{prolog_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int prolog\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{PROLOG_8c_a04a6f67d05267f24739ae18da0c82be0}{}\label{PROLOG_8c_a04a6f67d05267f24739ae18da0c82be0}
+
+
+Definition at line 34 of file P\+R\+O\+L\+O\+G.\+c.
+
+
+
+References interp, and iprlog\+\_\+().
+
+
+
+Referenced by comprs\+\_\+().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{comment}{/* Local variables */}
+37     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{IPRLOG_8c_a97d345ab54a219179f6cd9877826a07b}{iprlog\_}(\textcolor{keywordtype}{void});
+38 \textcolor{preprocessor}{#define interp ((logical *)&prt\_1 + 2)}
+39 
+40 
+41 
+42 \textcolor{comment}{/*       14.    I. L. LIST OPTION FLAGS */}
+43 
+44 \textcolor{comment}{/* INTERP:      NORMALLY TRUE,INDICATING INTERPRETIVE APPROACH DEFAULT */}
+45 \textcolor{comment}{/* ** */}
+46 \textcolor{comment}{/*     IF(ASSEMB)CALL APRLOG */}
+47     \textcolor{keywordflow}{if} (*\hyperlink{PROLOG_8c_acb4d9181bd8248015c7117132559b01b}{interp}) \{
+48     \hyperlink{IPRLOG_8c_a97d345ab54a219179f6cd9877826a07b}{iprlog\_}();
+49     \}
+50     \textcolor{keywordflow}{return} 0;
+51 \} \textcolor{comment}{/* prolog\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PROLOG_8c_a04a6f67d05267f24739ae18da0c82be0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PROLOG_8c_a04a6f67d05267f24739ae18da0c82be0_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}!prt@{prt}}
+\index{prt@{prt}!P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt}{prt}}]{\setlength{\rightskip}{0pt plus 5cm}integer prt\mbox{[}7\mbox{]}}\hypertarget{PROLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}{}\label{PROLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}
+
+
+Definition at line 18 of file P\+R\+O\+L\+O\+G.\+c.
+
+\index{P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}!prt\+\_\+@{prt\+\_\+}}
+\index{prt\+\_\+@{prt\+\_\+}!P\+R\+O\+L\+O\+G.\+c@{P\+R\+O\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+}{prt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   prt\+\_\+}\hypertarget{PROLOG_8c_a1382b52c2c4ebfc11bfeed9725b1c809}{}\label{PROLOG_8c_a1382b52c2c4ebfc11bfeed9725b1c809}

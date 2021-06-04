@@ -1,0 +1,216 @@
+\hypertarget{ASERCH_8c}{}\section{A\+S\+E\+R\+C\+H.\+c File Reference}
+\label{ASERCH_8c}\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+S\+E\+R\+C\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{ASERCH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ASERCH_8c_a40c7724680c93591a14787a24522d6b5}{aserch\+\_\+} (integer $\ast$\hyperlink{PUNCH_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no}, integer $\ast$irecno, integer $\ast$iret)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{ASERCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{ASERCH_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{ASERCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{ASERCH_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}!aserch\+\_\+@{aserch\+\_\+}}
+\index{aserch\+\_\+@{aserch\+\_\+}!A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{aserch\+\_\+(integer $\ast$no, integer $\ast$irecno, integer $\ast$iret)}{aserch_(integer *no, integer *irecno, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int aserch\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{no, }
+\item[{integer $\ast$}]{irecno, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{ASERCH_8c_a40c7724680c93591a14787a24522d6b5}{}\label{ASERCH_8c_a40c7724680c93591a14787a24522d6b5}
+
+
+Definition at line 24 of file A\+S\+E\+R\+C\+H.\+c.
+
+
+
+References atapop\+\_\+(), ataprd\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, c\+\_\+\+\_\+3, i\+\_\+\+\_\+, irec, n, no, nwds, and rec.
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* System generated locals */}
+27     integer i\_\_1;
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+31     \textcolor{keyword}{static} doublereal \hyperlink{ATAPRD_8c_aa4588df772100eeab1c9c0c125e6a288}{rec}[256];
+32     \textcolor{keyword}{static} integer \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec}[3], irew, \hyperlink{AERR_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds};
+33     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPRD_8c_a623805ab090df7f6df86bf4e2bd8ecb6}{ataprd\_}(integer *, integer *, integer *, 
+34         integer *, integer *, integer *, doublereal *, integer *), 
+35         \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(integer *, integer *, integer *);
+36 
+37 
+38 \textcolor{comment}{/*  * ASERCH *  VAX-11 FORTRAN 77 VERSION   13.10.82  E.MCLELLAN */}
+39 
+40 \textcolor{comment}{/*  PURPOSE     TO POSITION A FILE TO START OF REQUIRED RECORD */}
+41 
+42 \textcolor{comment}{/*  CALLING SEQUENCE */}
+43 \textcolor{comment}{/*              CALL ASERCH(NO,IRECNO,IRET) */}
+44 \textcolor{comment}{/*  ARGUMENTS */}
+45 \textcolor{comment}{/*              NO         FILE NUMBER */}
+46 \textcolor{comment}{/*              IRECNO     REQUIRED RECORD */}
+47 \textcolor{comment}{/*              IRET.LT.0  NORMAL RETURN */}
+48 \textcolor{comment}{/*                  .EQ.0  ZERO OR NEGATIVE RECORD NUMBER */}
+49 \textcolor{comment}{/*                  .EQ.2  ABNORMAL CONDITION RETURNED BY ATAPRD */}
+50 \textcolor{comment}{/*                  .EQ.3  ERROR BACKSPACING FILE */}
+51 \textcolor{comment}{/*                  .EQ.4  ERROR REWINDING FILE */}
+52 
+53 \textcolor{comment}{/*  ALTERNATE ENTRY    ****    COMMENTED OUTT   **** */}
+54 \textcolor{comment}{/*              CALL SEARCH(NO,IRECNO,IRET) */}
+55 
+56 
+57 
+58 \textcolor{comment}{/*      ENTRY SEARCH(NO,IRECNO,IRET) */}
+59 
+60 \textcolor{comment}{/* .....CHECK VALUE IN IRECNO - MUST BE GT ZERO */}
+61     \textcolor{comment}{/* Parameter adjustments */}
+62     --\hyperlink{PRINT_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no};
+63 
+64     \textcolor{comment}{/* Function Body */}
+65     \textcolor{keywordflow}{if} (*irecno <= 0) \{
+66     *iret = 0;
+67     \textcolor{keywordflow}{return} 0;
+68     \} \textcolor{keywordflow}{else} \{
+69     irew = 0;
+70 
+71 \textcolor{comment}{/* .....READ NEXT RECORD FROM FILE */}
+72 L10:
+73     \hyperlink{ATAPRD_8c_a623805ab090df7f6df86bf4e2bd8ecb6}{ataprd\_}(&\hyperlink{PRINT_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no}[1], iret, &nwds, &\hyperlink{ASERCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, irec, &\hyperlink{ASERCH_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, rec, &\hyperlink{ASERCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+74     \textcolor{keywordflow}{if} (*iret < 0) \{
+75 \textcolor{comment}{/* .....IS THIS THE RECORD BEFORE THE REQUIRED RECORD */}
+76         \textcolor{keywordflow}{if} (irec[0] == *irecno - 1) \{
+77 \textcolor{comment}{/* .....YES SO NEXT RECORD WILL BE THE REQUIRED RECORD */}
+78         \textcolor{keywordflow}{return} 0;
+79 \textcolor{comment}{/* .....NO IS NEXT RECORD LT REQUIRED RECORD - READ NEXT RECORD */}
+80         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (irec[0] + 1 < *irecno) \{
+81 \textcolor{comment}{/* .....YES */}
+82         \textcolor{keywordflow}{goto} L10;
+83 \textcolor{comment}{/* .....N0  IS REQUIRED RECORD NEARER START OF FILE OR CURRENT RECORD */}
+84         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*irecno > irec[0] / 2) \{
+85 \textcolor{comment}{/* .....NEARER CURRENT RECORD - BACKSPACE N TIMES BY CALLING ATAPOP */}
+86         n = irec[0] - *irecno + 1;
+87         i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+88         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+89             \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(&\hyperlink{PRINT_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no}[1], &\hyperlink{ASERCH_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, iret);
+90             \textcolor{keywordflow}{if} (*iret > 0) \{
+91             *iret = 3;
+92             \textcolor{keywordflow}{return} 0;
+93             \}
+94 \textcolor{comment}{/* L20: */}
+95         \}
+96         \textcolor{keywordflow}{return} 0;
+97 \textcolor{comment}{/* .....NEARER START - REWIND AND SEARCH */}
+98         \} \textcolor{keywordflow}{else} \{
+99         \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(&\hyperlink{PRINT_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no}[1], &\hyperlink{ASERCH_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, iret);
+100         \textcolor{keywordflow}{if} (*iret > 0) \{
+101             *iret = 4;
+102             \textcolor{keywordflow}{return} 0;
+103         \} \textcolor{keywordflow}{else} \{
+104             \textcolor{keywordflow}{goto} L10;
+105         \}
+106         \}
+107 \textcolor{comment}{/* .....NON NORMAL RETURN FROM ATAPRD */}
+108     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*iret == 0) \{
+109 \textcolor{comment}{/* .....EOF ENCOUNTERED */}
+110         \textcolor{keywordflow}{if} (irew == 1) \{
+111         *iret = 0;
+112         \textcolor{keywordflow}{return} 0;
+113         \} \textcolor{keywordflow}{else} \{
+114 \textcolor{comment}{/* .....REWIND FILE */}
+115         \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(&\hyperlink{PRINT_8c_a2f3b7fca220397a5c9ca7a2e4e336eaa}{no}[1], &\hyperlink{ASERCH_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, iret);
+116         \textcolor{keywordflow}{if} (*iret > 0) \{
+117             *iret = 4;
+118             \textcolor{keywordflow}{return} 0;
+119         \} \textcolor{keywordflow}{else} \{
+120             irew = 1;
+121             \textcolor{keywordflow}{goto} L10;
+122         \}
+123         \}
+124     \} \textcolor{keywordflow}{else} \{
+125 \textcolor{comment}{/* .....ABNORMAL CONDITION RETURNED BY ATAPRD */}
+126         *iret = 2;
+127         \textcolor{keywordflow}{return} 0;
+128     \}
+129     \}
+130     \textcolor{keywordflow}{return} 0;
+131 \} \textcolor{comment}{/* aserch\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ASERCH_8c_a40c7724680c93591a14787a24522d6b5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ASERCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{ASERCH_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 19 of file A\+S\+E\+R\+C\+H.\+c.
+
+
+
+Referenced by aserch\+\_\+().
+
+\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ASERCH_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ASERCH_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 20 of file A\+S\+E\+R\+C\+H.\+c.
+
+
+
+Referenced by aserch\+\_\+().
+
+\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ASERCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{ASERCH_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file A\+S\+E\+R\+C\+H.\+c.
+
+
+
+Referenced by aserch\+\_\+().
+
+\index{A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!A\+S\+E\+R\+C\+H.\+c@{A\+S\+E\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ASERCH_8c_a5e7359f78743350865398325d9155f20}{}\label{ASERCH_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 18 of file A\+S\+E\+R\+C\+H.\+c.
+
+
+
+Referenced by aserch\+\_\+().
+

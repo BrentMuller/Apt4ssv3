@@ -1,0 +1,156 @@
+\hypertarget{ATAPXC_8c}{}\section{A\+T\+A\+P\+X\+C.\+c File Reference}
+\label{ATAPXC_8c}\index{A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+T\+A\+P\+X\+C.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{ATAPXC_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31}{atapxc\+\_\+0\+\_\+} (int n\+\_\+\+\_\+, integer $\ast$file1, integer $\ast$file2)
+\item 
+int \hyperlink{ATAPXC_8c_a63a0ac2c3fe0fa8e17b6b3612fa3ddb9}{atapxc\+\_\+} (integer $\ast$file1, integer $\ast$file2)
+\item 
+int \hyperlink{ATAPXC_8c_a153b8c75bf22d5eb86f6b2952dac484b}{tapech\+\_\+} (integer $\ast$file1, integer $\ast$file2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}!atapxc\+\_\+@{atapxc\+\_\+}}
+\index{atapxc\+\_\+@{atapxc\+\_\+}!A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}}
+\subsubsection[{\texorpdfstring{atapxc\+\_\+(integer $\ast$file1, integer $\ast$file2)}{atapxc_(integer *file1, integer *file2)}}]{\setlength{\rightskip}{0pt plus 5cm}int atapxc\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{file1, }
+\item[{integer $\ast$}]{file2}
+\end{DoxyParamCaption}
+)}\hypertarget{ATAPXC_8c_a63a0ac2c3fe0fa8e17b6b3612fa3ddb9}{}\label{ATAPXC_8c_a63a0ac2c3fe0fa8e17b6b3612fa3ddb9}
+
+
+Definition at line 48 of file A\+T\+A\+P\+X\+C.\+c.
+
+
+
+References atapxc\+\_\+0\+\_\+().
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordflow}{return} \hyperlink{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31}{atapxc\_0\_}(0, file1, file2);
+51     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{ATAPXC_8c_a63a0ac2c3fe0fa8e17b6b3612fa3ddb9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}!atapxc\+\_\+0\+\_\+@{atapxc\+\_\+0\+\_\+}}
+\index{atapxc\+\_\+0\+\_\+@{atapxc\+\_\+0\+\_\+}!A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}}
+\subsubsection[{\texorpdfstring{atapxc\+\_\+0\+\_\+(int n\+\_\+\+\_\+, integer $\ast$file1, integer $\ast$file2)}{atapxc_0_(int n__, integer *file1, integer *file2)}}]{\setlength{\rightskip}{0pt plus 5cm}int atapxc\+\_\+0\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+\+\_\+, }
+\item[{integer $\ast$}]{file1, }
+\item[{integer $\ast$}]{file2}
+\end{DoxyParamCaption}
+)}\hypertarget{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31}{}\label{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31}
+
+
+Definition at line 17 of file A\+T\+A\+P\+X\+C.\+c.
+
+
+
+References i\+\_\+\+\_\+.
+
+
+
+Referenced by atapxc\+\_\+(), and tapech\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+20 
+21 
+22 \textcolor{comment}{/*  * ATAPXC *  VAX11 FORTRAN 77 VERSION  27.8.82 E.MCLELLAN */}
+23 
+24 \textcolor{comment}{/*  PURPOSE     TO INTERCHANGE TWO FILES */}
+25 
+26 \textcolor{comment}{/*  CALLING SEQUENCE */}
+27 \textcolor{comment}{/*              CALL ATAPXC(FILE1,FILE2) */}
+28 
+29 \textcolor{comment}{/*  ARGUMENTS */}
+30 \textcolor{comment}{/*              FILE1  FILE NUMBER OF FIRST FILE */}
+31 \textcolor{comment}{/*              FILE2  FILE NUMBER OF SECOND FILE */}
+32 \textcolor{comment}{/*  ALTERNATE ENTRY */}
+33 \textcolor{comment}{/*              CALL TAPECH(FILE1,FILE2) */}
+34 
+35 
+36     \textcolor{keywordflow}{switch}(n\_\_) \{
+37     \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{goto} L\_tapech;
+38     \}
+39 
+40 
+41 L\_tapech:
+42     i\_\_ = *file1;
+43     *file1 = *file2;
+44     *file2 = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+45     \textcolor{keywordflow}{return} 0;
+46 \} \textcolor{comment}{/* atapxc\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}!tapech\+\_\+@{tapech\+\_\+}}
+\index{tapech\+\_\+@{tapech\+\_\+}!A\+T\+A\+P\+X\+C.\+c@{A\+T\+A\+P\+X\+C.\+c}}
+\subsubsection[{\texorpdfstring{tapech\+\_\+(integer $\ast$file1, integer $\ast$file2)}{tapech_(integer *file1, integer *file2)}}]{\setlength{\rightskip}{0pt plus 5cm}int tapech\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{file1, }
+\item[{integer $\ast$}]{file2}
+\end{DoxyParamCaption}
+)}\hypertarget{ATAPXC_8c_a153b8c75bf22d5eb86f6b2952dac484b}{}\label{ATAPXC_8c_a153b8c75bf22d5eb86f6b2952dac484b}
+
+
+Definition at line 53 of file A\+T\+A\+P\+X\+C.\+c.
+
+
+
+References atapxc\+\_\+0\+\_\+().
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{keywordflow}{return} \hyperlink{ATAPXC_8c_a021e2754241dee97aa8b8a608e395c31}{atapxc\_0\_}(1, file1, file2);
+56     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{ATAPXC_8c_a153b8c75bf22d5eb86f6b2952dac484b_cgraph}
+\end{center}
+\end{figure}
+
+

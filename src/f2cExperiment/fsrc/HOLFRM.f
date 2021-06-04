@@ -1,0 +1,70 @@
+**** SOURCE FILE : HOLFRM00.W01   ***
+*
+*
+*  * HOLFRM *  FORTRAN 77 SUBROUTINE  16.7.86  E.MCLELLAN
+*                MODIFIED                 2-FEB-1988  E.MCLELLAN
+*
+*  PURPOSE:  TO INSERT SPECIFIED NUMBER OF CHARACTERS IN BCDF FORM
+*            FROM INTEGER ARRAY INTO CHARACTER VARIABLE
+*            STARTING FROM SPECIFIED LOCATION - RETURNING THE NUMBER
+*            OF INTEGER WORDS OCCUPIED
+*
+*  CALLING SEQUENCE:
+*                   CALL HOLFRM(IARR,STR,IST,NCHR,NWD)
+*
+*  ARGUMENTS:
+*                   TYPE       DESCRIPTION
+*       IARR        INTEGER    ARRAY CONTAINING BCDF CHARACTERS
+*       STR         CHARACTER  STRING INTO WHICH CHARACTERS ARE
+*                              TO BE LOADED
+*       IST         INTEGER    START LOCATION IN STR
+*       NCHR        INTEGER    NUMBER OF CHARACTERS TO BE INSERTED
+*       NWD         INTEGER    NUMBER OF WORDS OCCUPIED
+*
+*  GLOBAL VARIABLES:
+*
+*---------------------------------------------------
+*   VARIABLE        BLOCK     TYPE       DESCRIPTION
+*---------------------------------------------------
+*     IWRD          SDP       INTEGER    NO OF BYTES PER WORD
+*     NBCHAR        SDP       INTEGER    NO OF BITS PER BYTE
+*
+*  LOCAL VARIABLES:
+*                   TYPE       DESCRIPTION
+*     IVAL          INTEGER    VALUE OF INTEGER WORD
+*     JVAL          INTEGER    INDEX OF CHARACTER IN CONCATINATION
+*                              SEQUENCE
+*
+*  FILES:  NONE
+*
+*  SUBSIDIARIES:  NONE
+*
+      SUBROUTINE HOLFRM(IARR,STR,IST,NCHR,NWD)
+C
+C.... SYSTEM DEPENDENT PARAMETERS
+C
+      INCLUDE 'SDP.INC'
+C
+      INTEGER IARR(*),IST,NCHR,NWD,IVAL,JVAL,SLEN
+C
+      CHARACTER*(*) STR
+C
+      SLEN=LEN(STR)
+      NWD=NCHR/IWRD
+      IF (NCHR.GT.NWD*IWRD) NWD=NWD+1
+      DO 20 I=1,NWD
+        IVAL=IARR(I)
+        K1=IST+I*IWRD
+        DO 10 J=IWRD,1,-1
+          K=K1-J
+          JJ=NBCHAR*(J-1)
+          JVAL=ISHFT(IVAL,-JJ)
+          IF (K.LE.SLEN) THEN
+            STR(K:K)=CHAR(JVAL)
+          ENDIF
+          IVAL=(IVAL-ISHFT(JVAL,JJ))
+  10    CONTINUE
+  20  CONTINUE
+C
+      RETURN
+      END

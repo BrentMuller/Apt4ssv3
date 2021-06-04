@@ -1,0 +1,586 @@
+\hypertarget{MIXAL_8c}{}\section{M\+I\+X\+A\+L.\+c File Reference}
+\label{MIXAL_8c}\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+I\+X\+A\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{MIXAL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MIXAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{mixal\+\_\+} (integer $\ast$npatch, integer $\ast$\hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize}, doublereal $\ast$geo, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tul, doublereal $\ast$toolce, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$dumin, doublereal $\ast$dvmin, doublereal $\ast$upen, doublereal $\ast$vpen, doublereal $\ast$ppoint, doublereal $\ast$tpoint, doublereal $\ast$pnorm, doublereal $\ast$penmax, integer $\ast$ipen, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$iedge, integer $\ast$nitera)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MIXAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{MIXAL_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{MIXAL_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{MIXAL_8c_ad8537ebfc8b29f1ba5aab8d2412ff04d}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MIXAL_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{MIXAL_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{MIXAL_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\item 
+static integer \hyperlink{MIXAL_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\+\_\+\+\_\+9} = 9
+\item 
+static integer \hyperlink{MIXAL_8c_ac4bf04464586e2299a47666364303b99}{c\+\_\+\+\_\+11} = 11
+\item 
+static integer \hyperlink{MIXAL_8c_a3214c9dd853694f2bcb708239319b343}{c\+\_\+\+\_\+13} = 13
+\item 
+static integer \hyperlink{MIXAL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\+\_\+\+\_\+6} = 6
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{MIXAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{MIXAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!mixal\+\_\+@{mixal\+\_\+}}
+\index{mixal\+\_\+@{mixal\+\_\+}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{mixal\+\_\+(integer $\ast$npatch, integer $\ast$isize, doublereal $\ast$geo, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tul, doublereal $\ast$toolce, doublereal $\ast$ta, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$dumin, doublereal $\ast$dvmin, doublereal $\ast$upen, doublereal $\ast$vpen, doublereal $\ast$ppoint, doublereal $\ast$tpoint, doublereal $\ast$pnorm, doublereal $\ast$penmax, integer $\ast$ipen, integer $\ast$iflag, integer $\ast$iedge, integer $\ast$nitera)}{mixal_(integer *npatch, integer *isize, doublereal *geo, doublereal *pside, doublereal *pthick, doublereal *tul, doublereal *toolce, doublereal *ta, doublereal *u, doublereal *v, doublereal *dumin, doublereal *dvmin, doublereal *upen, doublereal *vpen, doublereal *ppoint, doublereal *tpoint, doublereal *pnorm, doublereal *penmax, integer *ipen, integer *iflag, integer *iedge, integer *nitera)}}]{\setlength{\rightskip}{0pt plus 5cm}int mixal\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{npatch, }
+\item[{integer $\ast$}]{isize, }
+\item[{doublereal $\ast$}]{geo, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{toolce, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{dumin, }
+\item[{doublereal $\ast$}]{dvmin, }
+\item[{doublereal $\ast$}]{upen, }
+\item[{doublereal $\ast$}]{vpen, }
+\item[{doublereal $\ast$}]{ppoint, }
+\item[{doublereal $\ast$}]{tpoint, }
+\item[{doublereal $\ast$}]{pnorm, }
+\item[{doublereal $\ast$}]{penmax, }
+\item[{integer $\ast$}]{ipen, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{iedge, }
+\item[{integer $\ast$}]{nitera}
+\end{DoxyParamCaption}
+)}\hypertarget{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{}\label{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}
+
+
+Definition at line 37 of file M\+I\+X\+A\+L.\+c.
+
+
+
+References algo1\+\_\+(), algo2\+\_\+(), bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+11, c\+\_\+\+\_\+13, c\+\_\+\+\_\+3, c\+\_\+\+\_\+6, c\+\_\+\+\_\+9, c\+\_\+n1, c\+\_\+n3, calct\+\_\+(), cform\+\_\+(), cprint\+\_\+(), dotf\+\_\+(), evalss\+\_\+(), fconv\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, iold, it, jmplt2\+\_\+(), mode, p, pencut\+\_\+(), r\+\_\+\+\_\+, sp, t, ta, tn, tp, u, up, v, and vp.
+
+
+
+Referenced by curint\+\_\+(), and remint\+\_\+().
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{comment}{/* System generated locals */}
+46     doublereal d\_\_1;
+47 
+48     \textcolor{comment}{/* Builtin functions */}
+49     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+50 
+51     \textcolor{comment}{/* Local variables */}
+52     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+53     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[3], \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[3], \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[3], ca, du, dv;
+54     \textcolor{keyword}{static} integer \hyperlink{AERR_8c_a2fc191e6fd72910e48dd9086f31038ed}{it};
+55     \textcolor{keyword}{static} doublereal pn[3], rn[3], \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[12]    \textcolor{comment}{/* was [3][4] */}, \hyperlink{APT331_8c_a8d40798874dab99986478ef00ff3e297}{sp}[12]  
+56         \textcolor{comment}{/* was [3][4] */}, \hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[12]  \textcolor{comment}{/* was [3][4] */}, \hyperlink{DDTABC_8c_a0337592b74197133c4203f6dce657a76}{up}[4], \hyperlink{DDRLSR_8c_a2a38a8952a41e00cab30267196540522}{vp}[4], ru[3],
+57          rv[3], du1, dv1, du2, dv2;
+58     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+59     \textcolor{keyword}{static} logical iok;
+60     \textcolor{keyword}{static} doublereal pen[4];
+61     \textcolor{keyword}{static} \textcolor{keywordtype}{char} msg[120];
+62     \textcolor{keyword}{static} doublereal ruu[3], ruv[3], rvv[3];
+63     \textcolor{keyword}{static} integer iedg[4], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, \hyperlink{APT089_8c_ade5e25c2e98bb173da606c809effc207}{iold}, jpen[4];
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+65         );
+66     \textcolor{keyword}{static} doublereal ucon, vcon;
+67     \textcolor{keyword}{static} integer iext;
+68     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALGO1_8c_a9cd624e99a797244828fd5623514d950}{algo1\_}(doublereal *, doublereal *, doublereal 
+69         *, doublereal *, doublereal *, doublereal *, doublereal *), 
+70         \hyperlink{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd}{algo2\_}(doublereal *, doublereal *, doublereal *, doublereal *, 
+71         doublereal *, doublereal *, doublereal *, doublereal *, logical *)
+72         ;
+73     \textcolor{keyword}{static} doublereal difca;
+74     \textcolor{keyword}{static} logical lbase;
+75     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CALCT_8c_a82d1b6f17abf713541f6982a043e3c25}{calct\_}(doublereal *, doublereal *, doublereal 
+76         *, doublereal *, doublereal *, doublereal *, doublereal *, 
+77         logical *);
+78     \textcolor{keyword}{static} integer iedgp, ialgo;
+79     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+80         ftnlen, ftnlen), \hyperlink{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{fconv\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, integer *
+81         , integer *, ftnlen), \hyperlink{JMPLT2_8c_ae1a759b63e5299c803711a91c3e975f4}{jmplt2\_}(doublereal *, doublereal *, 
+82         doublereal *, doublereal *, integer *), \hyperlink{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{evalss\_}(integer *, 
+83         doublereal *, doublereal *, integer *, doublereal *, integer *, 
+84         doublereal *, doublereal *, doublereal *, doublereal *, 
+85         doublereal *, doublereal *, doublereal *, integer *), \hyperlink{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6}{pencut\_}(
+86         doublereal *, doublereal *, doublereal *, doublereal *, 
+87         doublereal *, doublereal *, doublereal *, doublereal *, 
+88         doublereal *, doublereal *, integer *), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+89     \textcolor{keyword}{static} doublereal prevdu, prevdv;
+90     \textcolor{keyword}{static} integer normok;
+91     \textcolor{keyword}{static} doublereal ustart, vstart;
+92 
+93 
+94 \textcolor{comment}{/*     PURPOSE: INTERFERENCE SEARCH USING MIXED ALGORITHMS */}
+95 
+96 \textcolor{comment}{/*     METHOD: */}
+97 
+98 \textcolor{comment}{/*     FOR INITIAL ESTIMATE U, V ON PATCH NPATCH */}
+99 \textcolor{comment}{/*     EVALUATES SURFACE POINT R, DERIVATIVES, AND NORMAL AT U,V */}
+100 \textcolor{comment}{/*     CALCULATES POINT T ON TOOL WITH SAME NORMAL */}
+101 \textcolor{comment}{/*     CALCULATES ASSOCIATED POINT P ON TOOL, AND TOOL NORMAL PN AT P */}
+102 \textcolor{comment}{/*     ESTIMATES DU,DV TO GIVE A BETTER ESTIMATE OF PENETRATION POINT */}
+103 \textcolor{comment}{/*     USING VALUES COMPUTED BY BOTH ALGO1 (DU1,DV1) AND ALGO2 (DU2,DV2) */}
+104 \textcolor{comment}{/*     WHERE POSSIBLE OTHERWISE RESULTS OF EITHER ALGO1 OR ALGO2 ARE USED */}
+105 
+106 \textcolor{comment}{/*          DU1*DU2             DV1*DV2 */}
+107 \textcolor{comment}{/*     DU = -------        DV = ------- */}
+108 \textcolor{comment}{/*          DU1+DU2             DV1+DV2 */}
+109 
+110 \textcolor{comment}{/*     ARGUMENTS: */}
+111 \textcolor{comment}{/*         ISIZE  - DIMENSION OF GEO */}
+112 \textcolor{comment}{/*         PSIDE  - TOOL SIDE OF SURFACE */}
+113 \textcolor{comment}{/*         PTHICK - THICK ALLOWANCE REQUIRED */}
+114 \textcolor{comment}{/*         TUL    - TOOL GEOMETRY */}
+115 
+116 
+117 
+118 \textcolor{comment}{/*     LOCAL VARIABLES : */}
+119 
+120 \textcolor{comment}{/* .... TOOL NORMAL AT P */}
+121 \textcolor{comment}{/* .... WORKSPACE */}
+122 
+123 
+124 \textcolor{comment}{/* .... STORAGE FOR DATA FROM LAST FOUR ITERATIONS IF CONVERGENCE */}
+125 \textcolor{comment}{/*     NOT ACHIEVED BY NITLIM */}
+126 
+127 
+128 \textcolor{comment}{/*     RETURNS:- */}
+129 \textcolor{comment}{/* .... MAXIMUM PENETRATION FOUND, FOR UPEN, VPEN */}
+130 \textcolor{comment}{/*     MAY NOT BE FINAL POINT IN ITERATION, BUT IS FOR TRUE (EVALUATED, N */}
+131 \textcolor{comment}{/*     EXTRAPOLATED) SURFACE POINT */}
+132 \textcolor{comment}{/* .... CORRESPONDING TOOL POINT */}
+133 \textcolor{comment}{/* .... COMMON NORMAL AT PPOINT, TPOINT */}
+134 
+135 \textcolor{comment}{/*     PENMAX      PENETRATION (+VE FOR HIT) */}
+136 
+137 \textcolor{comment}{/*     IFLAG = -1  NO CONVERGENCE */}
+138 \textcolor{comment}{/*              0  CONVERGENCE */}
+139 
+140 \textcolor{comment}{/*     IPEN  =  0  CONVERGENCE ON BOTTOM FLAT OF CRC */}
+141 \textcolor{comment}{/*              1  CONVERGENCE ON SPHERE FOR BE CUTTER, ON CR FOR CRC */}
+142 \textcolor{comment}{/*              2  CONVERGENCE ON SHANK */}
+143 
+144 \textcolor{comment}{/*     IEDGE =  0  LAST DU, DV NOT LIMITED */}
+145 \textcolor{comment}{/*              1  LAST DU,DV LIMITED */}
+146 
+147 
+148 
+149 
+150 \textcolor{comment}{/* .... DEBUG FLAGS */}
+151 
+152 
+153 
+154     \textcolor{comment}{/* Parameter adjustments */}
+155     --geo;
+156     --tul;
+157     --toolce;
+158     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+159     --ppoint;
+160     --tpoint;
+161     --pnorm;
+162 
+163     \textcolor{comment}{/* Function Body */}
+164     ucon = 1.;
+165     vcon = 1.;
+166     ialgo = 0;
+167     ustart = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+168     vstart = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+169 
+170     *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 0;
+171 \textcolor{comment}{/* .... 1ST AND 2ND DERIVATIVES FROM EVALUATOR */}
+172     mode = 2;
+173 \textcolor{comment}{/* .... ITERATION COUNT */}
+174     *nitera = 0;
+175     iext = 0;
+176     du = 0.;
+177     dv = 0.;
+178     *penmax = -1e6f;
+179 \textcolor{comment}{/* .... LOOP START */}
+180 L10:
+181     ++(*nitera);
+182 
+183     iold = ialgo;
+184     prevdu = du;
+185     prevdv = dv;
+186     ialgo = 0;
+187     iok = TRUE\_;
+188 
+189     \hyperlink{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{evalss\_}(npatch, \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize}, &geo[1], &mode, r\_\_, ru, rv, ruu, ruv, rvv, 
+190         rn, &normok);
+191 
+192     \hyperlink{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6}{pencut\_}(r\_\_, rn, &toolce[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &tul[1], \hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside}, \hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick}, p, pn, 
+193         penmax, ipen);
+194 
+195 \textcolor{comment}{/* .... CALCULATE POINT T ON TOOL CORRESPONDING TO SURFACE NORMAL RN */}
+196 
+197     \hyperlink{CALCT_8c_a82d1b6f17abf713541f6982a043e3c25}{calct\_}(&tul[1], &toolce[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], r\_\_, rn, \hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside}, t, &lbase);
+198     \textcolor{keywordflow}{if} (lbase) \{
+199 \textcolor{comment}{/* .... T ON BASE FLAT OF TOOL - FORCE ALGORITHM 2 WHERE POSSIBLE */}
+200     ialgo = 2;
+201     \}
+202 
+203 \textcolor{comment}{/* .... ESTIMATE DU AND DV USING ALGORITHM 1 */}
+204 
+205     \hyperlink{ALGO1_8c_a9cd624e99a797244828fd5623514d950}{algo1\_}(t, r\_\_, rn, ru, rv, &du1, &dv1);
+206 
+207 \textcolor{comment}{/* .... ESTIMATE DU AND DV USING ALGORITHM 2 */}
+208 
+209     \hyperlink{ALGO2_8c_a88482b6bdbbc5b65b306df7b26e0b4fd}{algo2\_}(pn, ru, rv, ruu, ruv, rvv, &du2, &dv2, &iok);
+210     \textcolor{keywordflow}{if} (! iok) \{
+211 \textcolor{comment}{/* .... UNABLE TO COMPUTE DU,DV USING ALGORITHM 2, FORCE USE OF DU1,DV1 */}
+212 
+213     ialgo = 1;
+214     \}
+215 
+216 \textcolor{comment}{/* .... SELECT DU,DV */}
+217 
+218     \textcolor{keywordflow}{if} (ialgo == 1) \{
+219     du = du1;
+220     dv = dv1;
+221     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ialgo == 2) \{
+222     du = du2;
+223     dv = dv2;
+224     \} \textcolor{keywordflow}{else} \{
+225 \textcolor{comment}{/* .... MIX ALGORITHMS */}
+226     \textcolor{keywordflow}{if} ((d\_\_1 = du1 + du2, abs(d\_\_1)) <= 1e-6 || abs(du2) <= 1e-6) \{
+227         du = du1;
+228     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (abs(du1) <= 1e-6) \{
+229         du = du2;
+230     \} \textcolor{keywordflow}{else} \{
+231         du = du1 * du2 / (du1 + du2);
+232     \}
+233     \textcolor{keywordflow}{if} ((d\_\_1 = dv1 + dv2, abs(d\_\_1)) <= 1e-6 || abs(dv2) <= 1e-6) \{
+234         dv = dv1;
+235     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (abs(dv1) <= 1e-6) \{
+236         dv = dv2;
+237     \} \textcolor{keywordflow}{else} \{
+238         dv = dv1 * dv2 / (dv1 + dv2);
+239     \}
+240     \}
+241 
+242 \textcolor{comment}{/* .... SAVE PREVIOUS SETTING OF IEDGE BEFORE CALLING JMPLT2 */}
+243     iedgp = *iedge;
+244 
+245     \hyperlink{JMPLT2_8c_ae1a759b63e5299c803711a91c3e975f4}{jmplt2\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &du, &dv, iedge);
+246 
+247 \textcolor{comment}{/* .... COMPUTE COSINE OF ANGLE BETWEEN TOOL AND SURFACE NORMALS */}
+248 
+249     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&ca, pn, rn);
+250     difca = 1. - *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside} * ca;
+251 
+252     \textcolor{keywordflow}{if} (abs(du) < *dumin && abs(dv) < *dvmin || difca < 1e-8) \{
+253 \textcolor{comment}{/* .... CONVERGENCE */}
+254     \} \textcolor{keywordflow}{else} \{
+255     \textcolor{keywordflow}{if} (*nitera >= 20) \{
+256 \textcolor{comment}{/* .... NO CONVERGENCE AFTER NITLIM ITERATIONS */}
+257 \textcolor{comment}{/*     CARRY OUT THREE MORE ITERATIONS AND INTERROGATE PENETRATION VALUES */}
+258         \textcolor{keywordflow}{if} (*nitera <= 23) \{
+259         ++iext;
+260 \textcolor{comment}{/* .... SAVE VALUES FOR SUBSEQUENT INTERROGATION */}
+261         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+262             sp[i\_\_ + iext * 3 - 4] = r\_\_[i\_\_ - 1];
+263             tp[i\_\_ + iext * 3 - 4] = p[i\_\_ - 1];
+264             tn[i\_\_ + iext * 3 - 4] = pn[i\_\_ - 1];
+265 \textcolor{comment}{/* L12: */}
+266         \}
+267         up[iext - 1] = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+268         vp[iext - 1] = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+269         pen[iext - 1] = *penmax;
+270         jpen[iext - 1] = *ipen;
+271         iedg[iext - 1] = iedgp;
+272         \textcolor{keywordflow}{if} (*nitera < 23) \{
+273 \textcolor{comment}{/* .... TRY AGAIN */}
+274             *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} += du;
+275             *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} += dv;
+276             \textcolor{keywordflow}{goto} L10;
+277         \} \textcolor{keywordflow}{else} \{
+278             \textcolor{keywordflow}{if} (\hyperlink{MIXAL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+279 
+280 \textcolor{comment}{/* .... DEBUG PRINT */}
+281 
+282             \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+283             s\_copy(msg, \textcolor{stringliteral}{" NO CONVERGENCE IN MIXAL - LAST FOUR IT"}
+284                 \textcolor{stringliteral}{"ERATIONS"}, (ftnlen)120, (ftnlen)47);
+285             \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(msg, (ftnlen)120);
+286             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+287                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IEXT"}, &i\_\_, (ftnlen)4);
+288                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"UP  "}, &up[i\_\_ - 1], (ftnlen)
+289                     4);
+290                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VP  "}, &vp[i\_\_ - 1], (ftnlen)
+291                     4);
+292                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PEN "}, &pen[i\_\_ - 1], (ftnlen)
+293                     4);
+294                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"JPEN"}, &jpen[i\_\_ - 1], (
+295                     ftnlen)4);
+296                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IEDG"}, &iedg[i\_\_ - 1], (
+297                     ftnlen)4);
+298                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SP  "}, &sp[i\_\_ * 3 - 3], (
+299                     ftnlen)4);
+300                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TP  "}, &tp[i\_\_ * 3 - 3], (
+301                     ftnlen)4);
+302                 \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{MIXAL_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TN  "}, &tn[i\_\_ * 3 - 3], (
+303                     ftnlen)4);
+304 \textcolor{comment}{/* L13: */}
+305             \}
+306             \}
+307 \textcolor{comment}{/* .... THREE MORE ITERATIONS COMPLETED - INTERROGATE PENETRATIONS */}
+308             it = 1;
+309             *penmax = pen[it - 1];
+310             \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+311             \textcolor{keywordflow}{if} (pen[i\_\_ - 1] > *penmax) \{
+312                 *penmax = pen[i\_\_ - 1];
+313                 it = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+314             \}
+315 \textcolor{comment}{/* L14: */}
+316             \}
+317 \textcolor{comment}{/* .... RETURN WORST CASE (I.E. LARGEST PENETRATION) */}
+318             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+319             r\_\_[i\_\_ - 1] = sp[i\_\_ + it * 3 - 4];
+320             p[i\_\_ - 1] = tp[i\_\_ + it * 3 - 4];
+321             pn[i\_\_ - 1] = tn[i\_\_ + it * 3 - 4];
+322 \textcolor{comment}{/* L16: */}
+323             \}
+324             *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = up[it - 1];
+325             *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = vp[it - 1];
+326             *ipen = jpen[it - 1];
+327             *iedge = iedg[it - 1];
+328 
+329             \textcolor{keywordflow}{if} (*penmax > 0.) \{
+330 \textcolor{comment}{/* .... PENETRATION WITHOUT CONVERGENCE */}
+331             *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = -1;
+332             s\_copy(msg, \textcolor{stringliteral}{"0PENETRATION DETECTED WITHOUT CONVERGEN"}
+333                 \textcolor{stringliteral}{"CE"}, (ftnlen)120, (ftnlen)41);
+334             \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(msg, (ftnlen)120);
+335             \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" PENMAX ="}, msg, &\hyperlink{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{MIXAL_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\_\_9}, (ftnlen)9, (
+336                 ftnlen)120);
+337             \hyperlink{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{fconv\_}(penmax, msg, &\hyperlink{MIXAL_8c_ac4bf04464586e2299a47666364303b99}{c\_\_11}, &\hyperlink{MIXAL_8c_a3214c9dd853694f2bcb708239319b343}{c\_\_13}, &\hyperlink{MIXAL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, (ftnlen)
+338                 120);
+339             \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(msg, (ftnlen)120);
+340             \} \textcolor{keywordflow}{else} \{
+341 \textcolor{comment}{/* .... NO CONVERGENCE AND NO OBSERVED PENETRATION */}
+342             *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 0;
+343             \}
+344         \}
+345         \}
+346     \} \textcolor{keywordflow}{else} \{
+347 \textcolor{comment}{/* .... TRY AGAIN */}
+348         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} += du;
+349         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} += dv;
+350         \textcolor{keywordflow}{goto} L10;
+351     \}
+352 
+353     \}
+354 
+355 \textcolor{comment}{/* .... STORE SURFACE POINT, TOOL POINT AND NORMAL AT CONVERGENCE */}
+356 \textcolor{comment}{/*     OR FINAL ATTEMPT AT CONVERGENCE */}
+357     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+358     ppoint[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = r\_\_[i\_\_ - 1];
+359     tpoint[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = p[i\_\_ - 1];
+360     pnorm[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = pn[i\_\_ - 1];
+361 \textcolor{comment}{/* L20: */}
+362     \}
+363 \textcolor{comment}{/* ... STORE U,V OF SURFACE POINT */}
+364     *upen = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+365     *vpen = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+366 
+367     \textcolor{keywordflow}{return} 0;
+368 \} \textcolor{comment}{/* mixal\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{MIXAL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{MIXAL_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 27 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+11@{c\+\_\+\+\_\+11}}
+\index{c\+\_\+\+\_\+11@{c\+\_\+\+\_\+11}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+11}{c__11}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+11 = 11\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_ac4bf04464586e2299a47666364303b99}{}\label{MIXAL_8c_ac4bf04464586e2299a47666364303b99}
+
+
+Definition at line 31 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+13@{c\+\_\+\+\_\+13}}
+\index{c\+\_\+\+\_\+13@{c\+\_\+\+\_\+13}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+13}{c__13}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+13 = 13\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a3214c9dd853694f2bcb708239319b343}{}\label{MIXAL_8c_a3214c9dd853694f2bcb708239319b343}
+
+
+Definition at line 32 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a5e7359f78743350865398325d9155f20}{}\label{MIXAL_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 28 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}}
+\index{c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+6}{c__6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+6 = 6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a3543660f1ae989ebc88144db7ea3ecfd}{}\label{MIXAL_8c_a3543660f1ae989ebc88144db7ea3ecfd}
+
+
+Definition at line 33 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}}
+\index{c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+9}{c__9}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+9 = 9\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{}\label{MIXAL_8c_aed3f4fb9d6f2b035e8f1179887bcd024}
+
+
+Definition at line 30 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a9e9287f317ef3436252a395791a899f6}{}\label{MIXAL_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MIXAL_8c_a6d165623735ee520885e84b5052c252b}{}\label{MIXAL_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 29 of file M\+I\+X\+A\+L.\+c.
+
+
+
+Referenced by mixal\+\_\+().
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{MIXAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{MIXAL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file M\+I\+X\+A\+L.\+c.
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{MIXAL_8c_ad8537ebfc8b29f1ba5aab8d2412ff04d}{}\label{MIXAL_8c_ad8537ebfc8b29f1ba5aab8d2412ff04d}
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{MIXAL_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{MIXAL_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file M\+I\+X\+A\+L.\+c.
+
+\index{M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!M\+I\+X\+A\+L.\+c@{M\+I\+X\+A\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{MIXAL_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{MIXAL_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file M\+I\+X\+A\+L.\+c.
+

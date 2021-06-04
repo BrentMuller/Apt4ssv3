@@ -1,0 +1,262 @@
+\hypertarget{CNSURG_8c}{}\section{C\+N\+S\+U\+R\+G.\+c File Reference}
+\label{CNSURG_8c}\index{C\+N\+S\+U\+R\+G.\+c@{C\+N\+S\+U\+R\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+N\+S\+U\+R\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{CNSURG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CNSURG_8c_aeb337d8584ab211289ab0b5c0bbc770a}{cnsurg\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{INTTPL_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+N\+S\+U\+R\+G.\+c@{C\+N\+S\+U\+R\+G.\+c}!cnsurg\+\_\+@{cnsurg\+\_\+}}
+\index{cnsurg\+\_\+@{cnsurg\+\_\+}!C\+N\+S\+U\+R\+G.\+c@{C\+N\+S\+U\+R\+G.\+c}}
+\subsubsection[{\texorpdfstring{cnsurg\+\_\+(doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$b, doublereal $\ast$spv, integer $\ast$iflag, integer $\ast$mode)}{cnsurg_(doublereal *u, doublereal *v, doublereal *b, doublereal *spv, integer *iflag, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int cnsurg\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{spv, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{CNSURG_8c_aeb337d8584ab211289ab0b5c0bbc770a}{}\label{CNSURG_8c_aeb337d8584ab211289ab0b5c0bbc770a}
+
+
+Definition at line 17 of file C\+N\+S\+U\+R\+G.\+c.
+
+
+
+References b, blendf\+\_\+(), f, g, i\+\_\+\+\_\+, iflag, k, l, m, n, nt, one, spv, t, u, v, and zero.
+
+
+
+Referenced by cnsurf\+\_\+(), and cnsurh\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt}[6] = \{ 1,5,1,9,5,1 \};
+23     \textcolor{keyword}{static} integer ng[6] = \{ 1,1,5,1,5,9 \};
+24     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+25     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+26 
+27     \textcolor{comment}{/* System generated locals */}
+28     integer i\_\_1;
+29     doublereal d\_\_1;
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}[12], \hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g}[12];
+33     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+34     \textcolor{keyword}{static} doublereal \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[12];
+35     \textcolor{keyword}{static} integer lg, lv, klim;
+36     \textcolor{keyword}{static} logical imode;
+37     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(doublereal *, doublereal *);
+38 
+39 \textcolor{comment}{/* --  MODULAR.  PURPOSE IS TO GENERATE SURFACE POINT AND DIFFERENTIAL */}
+40 \textcolor{comment}{/* --  ELEMENTS ON A COONS PATCH (B) FROM INPUT COORDINATES U,V. */}
+41 \textcolor{comment}{/* --  U,V = INPUT SURFACE COORDINATES */}
+42 \textcolor{comment}{/* --  B   = INPUT COONS PATCH COEFFICIENTS */}
+43 \textcolor{comment}{/* --  IFLAG = INPUT ARRAY WHICH RECORDS THE TYPE OF EACH 16-COMPONENT */}
+44 \textcolor{comment}{/* --           MATRIX IN THE ARRAY B( 1=CONSTANT,2=LINEAR,3,4=FULL) */}
+45 \textcolor{comment}{/* --  MODE  = INPUT.  MODE=0 MEANS ONLY SURFACE POINT REQD. */}
+46 \textcolor{comment}{/* --               OTHERWISE FIRST AND SECOND ORDER DIFFERENTIAL ELEMENTS */}
+47 \textcolor{comment}{/* --                ARE ALSO REQUIRED */}
+48 \textcolor{comment}{/* --  SPV   = OUTPUT  SPV(1-4)= PROJECTIVE COORDINATES OF SURFACE POINT */}
+49 \textcolor{comment}{/* --               SPV(5-8) = P.C. OF FIRST DERIV WRT U */}
+50 \textcolor{comment}{/* --                SPV(9-12)=  P.C. OF FIRST DERIV WRT V */}
+51 \textcolor{comment}{/* --                SPV(13-16)= P.C. OF SECOND DERIV WRT U */}
+52 \textcolor{comment}{/* --                SPV(17-20) = P.C. OF MIXED PARTIAL WRT U,V */}
+53 \textcolor{comment}{/* --                SPV(21-24) = P.C. OF SECOND DERIV WRT TO V */}
+54 \textcolor{comment}{/* ---     POINTERS FOR RAPID EVALUATION OF SPV THRU PRODUCTS OF T AND G. */}
+55     \textcolor{comment}{/* Parameter adjustments */}
+56     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+57     --\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv};
+58     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+59 
+60     \textcolor{comment}{/* Function Body */}
+61 
+62 
+63 
+64     imode = FALSE\_;
+65     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+66     imode = TRUE\_;
+67     \}
+68 \textcolor{comment}{/* ------ EVALUATE COONS BLEND FUNCTIONS AND THEIR DERIVATIVES */}
+69 \textcolor{comment}{/* ------ FOR PARAMETER VALUES U AND V */}
+70     \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, f);
+71     \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, g);
+72 \textcolor{comment}{/* ------ EVALUATE THE PROJECTIVE SURFACE POINT AND PARTIAL DERIVATIVE */}
+73 \textcolor{comment}{/* ------ COORDINATES.  EACH COORDINATE SET(X,Y,Z,W) IS EVALUATED */}
+74 \textcolor{comment}{/* ------ ON SUCCESSIVE PASSES THRU THE 10 LOOP AND SPECIAL SPEED */}
+75 \textcolor{comment}{/* ------ ROUTES ARE TAKEN FOR A LINEAR OR CONSTANT COORDINATE */}
+76 \textcolor{comment}{/* ------ MATRIX */}
+77     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+78     k = \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+79     \textcolor{keywordflow}{switch} (k) \{
+80         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L100;
+81         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L200;
+82         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L300;
+83         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L300;
+84     \}
+85 L300:
+86     n = (i\_\_ << 4) - 16;
+87     klim = 9;
+88     \textcolor{keywordflow}{if} (imode) \{
+89         klim = 1;
+90     \}
+91     i\_\_1 = klim;
+92     \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; l += 4) \{
+93         t[l - 1] = f[l - 1] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[n + 1] + f[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[n + 2] + f[l + 1] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[n 
+94             + 3] + f[l + 2] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[n + 4];
+95         t[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = f[l - 1] * b[n + 5] + f[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * b[n + 6] + f[l + 1] * b[n + 7]
+96              + f[l + 2] * b[n + 8];
+97         t[l + 1] = f[l - 1] * b[n + 9] + f[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * b[n + 10] + f[l + 1] * b[
+98             n + 11] + f[l + 2] * b[n + 12];
+99         t[l + 2] = f[l - 1] * b[n + 13] + f[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * b[n + 14] + f[l + 1] * b[
+100             n + 15] + f[l + 2] * b[n + 16];
+101 \textcolor{comment}{/* L310: */}
+102     \}
+103     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = t[0] * g[0] + t[1] * g[1] + t[2] * g[2] + t[3] * g[3];
+104     \textcolor{keywordflow}{if} (imode) \{
+105         \textcolor{keywordflow}{goto} L10;
+106     \}
+107 
+108     lv = 0;
+109     \textcolor{keywordflow}{for} (l = 1; l <= 5; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+110         lv += 4;
+111         m = nt[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+112         lg = ng[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+113         \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + lv] = t[m - 1] * g[lg - 1] + t[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}] * g[lg] + t[m + 1] * 
+114             g[lg + 1] + t[m + 2] * g[lg + 2];
+115 \textcolor{comment}{/* L320: */}
+116     \}
+117     \textcolor{keywordflow}{goto} L10;
+118 
+119 L100:
+120     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[(i\_\_ << 4) - 15];
+121     \textcolor{keywordflow}{if} (imode) \{
+122         \textcolor{keywordflow}{goto} L10;
+123     \}
+124     \textcolor{keywordflow}{for} (l = 4; l <= 20; l += 4) \{
+125 \textcolor{comment}{/* L110: */}
+126         \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+127     \}
+128     \textcolor{keywordflow}{goto} L10;
+129 
+130 L200:
+131     n = (i\_\_ << 4) - 15;
+132     t[0] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}];
+133     t[1] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[n + 1] - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}];
+134     t[2] = b[n + 4] - b[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}];
+135     t[3] = b[n + 5] - b[n + 4] - t[1];
+136     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = t[0] + t[1] * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} + (t[2] + t[3] * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}) * *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+137     \textcolor{keywordflow}{if} (imode) \{
+138         \textcolor{keywordflow}{goto} L10;
+139     \}
+140     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 4] = t[1] + t[3] * *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+141     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 8] = t[2] + t[3] * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+142     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 12] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+143     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 16] = t[3];
+144     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 20] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+145 L10:
+146     ;
+147     \}
+148 
+149     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[4] == 1) \{
+150     \textcolor{keywordflow}{goto} L400;
+151     \}
+152 
+153 \textcolor{comment}{/* --  INTERPOLATE EUCLIDEAN QUANTITIES FROM PROJECTIVE QUANTITIES */}
+154 \textcolor{comment}{/* ---     PATCH IS OF RATIONAL FORM SO COMPUTE DERIVATIVES BY RATIOS. */}
+155 \textcolor{comment}{/* ---     FIRST EVALUATE FIXED W DERIVATIVES AND RATIOS. */}
+156     \textcolor{keywordflow}{if} (imode) \{
+157     \textcolor{keywordflow}{goto} L360;
+158     \}
+159 \textcolor{comment}{/* ---     T(1)=WSQ, 2=WU, 3=WV, 4=TWU, 5=TWV, 6=WUU, 7=WUV, 8=WVV */}
+160 \textcolor{comment}{/* Computing 2nd power */}
+161     d\_\_1 = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4];
+162     t[0] = d\_\_1 * d\_\_1;
+163     t[1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[8] / t[0];
+164     t[2] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[12] / t[0];
+165     t[3] = (\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[8] + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[8]) / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4];
+166     t[4] = (\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[12] + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[12]) / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4];
+167     t[5] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[16] / t[0];
+168     t[6] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[20] / t[0];
+169     t[7] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[24] / t[0];
+170 \textcolor{comment}{/* ---     LOOP TO EVALUATE RATIONAL DERIVATIVES FOR X,Y,Z COMPONENTS */}
+171     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+172 \textcolor{comment}{/* ---     PARTIAL OF F WITH RESPECT TO U =FU. */}
+173     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 4] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 4] / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * t[1];
+174 \textcolor{comment}{/* ---     PARTIAL OF F WITH RESPECT TO V */}
+175     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 8] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 8] / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * t[2];
+176 \textcolor{comment}{/* ---     SECOND PARTIAL OF F WITH RESPECT TO U. */}
+177     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 12] = -t[3] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 4] + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 12] / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[
+      \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * t[
+178         5];
+179 \textcolor{comment}{/* ---     SECOND PARTIAL OF F WITH RESPECT TO V. */}
+180     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 20] = -t[4] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 8] + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 20] / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[
+      \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] * t[
+181         7];
+182 \textcolor{comment}{/* ---     MIXED SECOND PARTIAL OF F WITH RESPECT TO U AND V. */}
+183     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 16] = -(t[4] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 4] + t[3] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l + 8]) / 2.f + \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l 
+184         + 16] / \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[l] * t[6];
+185 \textcolor{comment}{/* ---     NOTE THAT THE ORDER OF THE ABOVE CALCULATIONS IS SENSITIVE */}
+186 \textcolor{comment}{/* L350: */}
+187     \}
+188 
+189 L360:
+190     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+191     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] /= \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4];
+192 \textcolor{comment}{/* L370: */}
+193     \}
+194 
+195 L400:
+196 \textcolor{comment}{/* ---     SET INDICATOR VALUES FOR QUANTITIES COMPUTED */}
+197     \textcolor{keywordflow}{if} (imode) \{
+198     \textcolor{keywordflow}{goto} L501;
+199     \}
+200     \textcolor{keywordflow}{for} (i\_\_ = 8; i\_\_ <= 24; i\_\_ += 4) \{
+201 \textcolor{comment}{/* L500: */}
+202     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+203     \}
+204 L501:
+205     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+206 
+207     \textcolor{keywordflow}{return} 0;
+208 \} \textcolor{comment}{/* cnsurg\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{CNSURG_8c_aeb337d8584ab211289ab0b5c0bbc770a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNSURG_8c_aeb337d8584ab211289ab0b5c0bbc770a_icgraph}
+\end{center}
+\end{figure}
+
+

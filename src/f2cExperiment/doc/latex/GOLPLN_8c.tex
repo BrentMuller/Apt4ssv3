@@ -1,0 +1,1475 @@
+\hypertarget{GOLPLN_8c}{}\section{G\+O\+L\+P\+L\+N.\+c File Reference}
+\label{GOLPLN_8c}\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+O\+L\+P\+L\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{GOLPLN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GOLPLN_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\+\_\+1}~\hyperlink{TLCONV_8c_aa3e0350b693a9ca63e1c219a5cbf8b7a}{ssprt\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1}~\hyperlink{TLCONV_8c_af2554a06c6606c36c0403398413bc0e9}{plgol\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\+\_\+1}~\hyperlink{UNITS_8c_adb6a68aa9fbad846f4d8d0f30dc08ccd}{sv\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_a7d7892a40c1228c7ca311a419a2f34a6}{sv1\+\_\+1}~\hyperlink{UNITS_8c_a538c754ca86c03b265c2c267b61e7b26}{sv1\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{GOLPLN_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLPLN_8c_ac0a280dfbdae2e88edfbf16561dc7831}{iat}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 17)
+\item 
+\#define \hyperlink{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{uva}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 1)
+\item 
+\#define \hyperlink{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 2)
+\item 
+\#define \hyperlink{GOLPLN_8c_a14e694bf128a0d68985bc7ba5db00fa5}{ipl1}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 20)
+\item 
+\#define \hyperlink{GOLPLN_8c_aee28fbbb48cac35060082382bb369f86}{ipl2}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 21)
+\item 
+\#define \hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 12)
+\item 
+\#define \hyperlink{GOLPLN_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLPLN_8c_a7fc306fc3938b6a40734f61e04446945}{ithru}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 19)
+\item 
+\#define \hyperlink{GOLPLN_8c_ab361c4637a4787c81d2d9059e7379b70}{istrt}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 18)
+\item 
+\#define \hyperlink{GOLPLN_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLPLN_8c_aa40a1175bb25725a6a022d07ca71fdc6}{uvcons}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GOLPLN_8c_aee08f5bbd136a9bb1dd942970a170cc7}{golpln\+\_\+} (integer $\ast$\hyperlink{DDST_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, integer $\ast$iret)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{GOLPLN_8c_aabdefdae02ca0201c3c281c4bdde30ee}{ssprt}\\
+\>logical \hyperlink{GOLPLN_8c_a6f4ecf11f208ba0b39a3243a1c308209}{sstest}\\
+\} \hyperlink{GOLPLN_8c_a0f90c0462e342366a7dbbf584e189566}{ssprt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLPLN_8c_a787a59b8a72ef092fc411618dc0c257d}{id} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_afead18f0fcd108ac2e08a23292236dae}{obnam1}\\
+\} \hyperlink{GOLPLN_8c_a540cbe7c35ca2daf0e417a254c91f684}{plgol\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLPLN_8c_a4a672b1cc1657e411e2094d8631246c2}{cc} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a306d2abf316a42b2d06c636c581fbc05}{eps1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a2fd05e25992e6a9456646532a7ed3148}{eps2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a13ab03ebf3099fa722e8584f54a14f94}{eps3} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ad4286f6c2b33f25799d6156480bd622d}{eps4} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a68951ca3ed42d540274e5dd702aa30b2}{eps6} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{eps8} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_aae4751b2b0e0fe3b5f62f710ef406288}{past} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{plnd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_abcbe27eb4ab55c21433ba237b064da23}{plnv} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a8fafde5aff46b55bddfc42a93803fffc}{rc} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_aade1308b2b48aaa8db461e4665eb7e19}{save} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a6a6f46271f4c2c8e68568b8bee68f673}{sfvct} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_affaf74dabdb513fe55fa48a1091a82f0}{sn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_aa584da8857a16c65bd611d5b5686d8ec}{snk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a4c96f9ead3daa534244888dd312b3595}{snl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ae1ea305557352179a5595123e4f7bef9}{sp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a5eb35651944d7d53ca1371c8f4403522}{spk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a032b8e76f8a4cec214831255a4b77e7a}{spl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a3ef97769b90b935351a0da2c5c17f1ba}{tau} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a3293541b256a7b52a653b554ec1eef71}{tau1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a7cc16120d8b89a97df6d011487794d7a}{tau2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a5e192eb5193c9ab9e167e2554641adad}{th} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a66b316fa3299925e5c7630d5af6601fd}{tn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{toolht} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_acfdd4327e78cee83f784e0081fd71ead}{toolwd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_acd57028107f202bf733ae94db320fd40}{tpk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a86f48fbc667fd3e391a5a60472a760d9}{u1} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a76207f20e8ae300641df122e994c2374}{vndir} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a20c7b8bac268c28674d17aa05f813d9f}{vt} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a6587d13eed8675f3bf2284fc673780f2}{varble} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_aef9f4548d89972753d95640b4cf4c502}{u1k} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk} \mbox{[}15\mbox{]}\\
+\} \hyperlink{GOLPLN_8c_a23254c5532852b28eb0e90a7550aa987}{sv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLPLN_8c_aa061b11706c46e4e7299be7f1dd355ef}{cos1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a17ab077f9704191cec3623b32182b8ba}{cplfl} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a826f9bb61ad3ef7b009c7631b75374f6}{cptst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{csd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a819ff3967ced7fbb549308a6e4b91bcb}{dplan} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a4360acf0e48136e91364bd7cce121547}{dpmx1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{plncs} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{plnd1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_acc41d3833fec2bd10e8f654e00d49fa6}{pltst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a0c07ccb74eb243d4d456e818d258bce8}{stck} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a94fa54ae2c242297cc118d31155ab356}{stckn} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{stck1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a4b0340102da75d0c19859ea11879a4f4}{stck2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a5ca1f63566c2594f3e3868b91d997b73}{tee} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{GOLPLN_8c_a51ea6eff10429675b532a43be770e881}{tnl} \mbox{[}15\mbox{]}\\
+\} \hyperlink{GOLPLN_8c_a4d6cf7bdf582c0168995488a80552b06}{sv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLPLN_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{GOLPLN_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{GOLPLN_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{GOLPLN_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{GOLPLN_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{GOLPLN_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{GOLPLN_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{GOLPLN_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{GOLPLN_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{GOLPLN_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{GOLPLN_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{GOLPLN_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{GOLPLN_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{GOLPLN_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{GOLPLN_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{GOLPLN_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{GOLPLN_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{GOLPLN_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{GOLPLN_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{GOLPLN_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{GOLPLN_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{GOLPLN_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{GOLPLN_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{GOLPLN_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{GOLPLN_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{GOLPLN_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{GOLPLN_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{GOLPLN_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{GOLPLN_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{GOLPLN_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{GOLPLN_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{GOLPLN_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{GOLPLN_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{GOLPLN_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{GOLPLN_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{GOLPLN_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{GOLPLN_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{GOLPLN_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{GOLPLN_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{GOLPLN_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{GOLPLN_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{GOLPLN_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{GOLPLN_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{GOLPLN_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{GOLPLN_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{GOLPLN_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{GOLPLN_8c_a9d4a71a90ab6801a7f07580e26ab4ba2}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLPLN_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{GOLPLN_8c_ad66058c7ba8b3fdc10be65399b1e8d65}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{GOLPLN_8c_ae7d28f7b18a83d13d71b196bc7a7b7fd}{c\+\_\+\+\_\+22220} = 22220
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{GOLPLN_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{GOLPLN_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 70 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLPLN_8c_a2f226f15c00130b05db70054f6514916}{}\label{GOLPLN_8c_a2f226f15c00130b05db70054f6514916}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!can@{can}}
+\index{can@{can}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLPLN_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{GOLPLN_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!canon@{canon}}
+\index{canon@{canon}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{GOLPLN_8c_a68d3ba380c16e286247bb69367760615}{}\label{GOLPLN_8c_a68d3ba380c16e286247bb69367760615}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iart@{iart}}
+\index{iart@{iart}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iart}{iart}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iart~((integer $\ast$)\&{\bf plgol\+\_\+1} + 12)}\hypertarget{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{}\label{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iat@{iat}}
+\index{iat@{iat}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iat}{iat}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iat~((integer $\ast$)\&{\bf plgol\+\_\+1} + 17)}\hypertarget{GOLPLN_8c_ac0a280dfbdae2e88edfbf16561dc7831}{}\label{GOLPLN_8c_ac0a280dfbdae2e88edfbf16561dc7831}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 64 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ipl1@{ipl1}}
+\index{ipl1@{ipl1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipl1}{ipl1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ipl1~((integer $\ast$)\&{\bf plgol\+\_\+1} + 20)}\hypertarget{GOLPLN_8c_a14e694bf128a0d68985bc7ba5db00fa5}{}\label{GOLPLN_8c_a14e694bf128a0d68985bc7ba5db00fa5}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ipl2@{ipl2}}
+\index{ipl2@{ipl2}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipl2}{ipl2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ipl2~((integer $\ast$)\&{\bf plgol\+\_\+1} + 21)}\hypertarget{GOLPLN_8c_aee28fbbb48cac35060082382bb369f86}{}\label{GOLPLN_8c_aee28fbbb48cac35060082382bb369f86}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!istrt@{istrt}}
+\index{istrt@{istrt}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{istrt}{istrt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define istrt~((integer $\ast$)\&{\bf plgol\+\_\+1} + 18)}\hypertarget{GOLPLN_8c_ab361c4637a4787c81d2d9059e7379b70}{}\label{GOLPLN_8c_ab361c4637a4787c81d2d9059e7379b70}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ithru@{ithru}}
+\index{ithru@{ithru}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ithru}{ithru}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ithru~((integer $\ast$)\&{\bf plgol\+\_\+1} + 19)}\hypertarget{GOLPLN_8c_a7fc306fc3938b6a40734f61e04446945}{}\label{GOLPLN_8c_a7fc306fc3938b6a40734f61e04446945}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plgol\+\_\+1@{plgol\+\_\+1}}
+\index{plgol\+\_\+1@{plgol\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+1}{plgol_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define plgol\+\_\+1~{\bf plgol\+\_\+}}\hypertarget{GOLPLN_8c_ada4eab56c22c6c3ebe764c82d62935f7}{}\label{GOLPLN_8c_ada4eab56c22c6c3ebe764c82d62935f7}
+
+
+Definition at line 28 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ssprt\+\_\+1@{ssprt\+\_\+1}}
+\index{ssprt\+\_\+1@{ssprt\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssprt\+\_\+1}{ssprt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssprt\+\_\+1~{\bf ssprt\+\_\+}}\hypertarget{GOLPLN_8c_a4f6a451659f56122d7a5cf4a86b974cb}{}\label{GOLPLN_8c_a4f6a451659f56122d7a5cf4a86b974cb}
+
+
+Definition at line 21 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sv1\+\_\+1@{sv1\+\_\+1}}
+\index{sv1\+\_\+1@{sv1\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+1}{sv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv1\+\_\+1~{\bf sv1\+\_\+}}\hypertarget{GOLPLN_8c_a7d7892a40c1228c7ca311a419a2f34a6}{}\label{GOLPLN_8c_a7d7892a40c1228c7ca311a419a2f34a6}
+
+
+Definition at line 54 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sv\+\_\+1@{sv\+\_\+1}}
+\index{sv\+\_\+1@{sv\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+1}{sv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv\+\_\+1~{\bf sv\+\_\+}}\hypertarget{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{}\label{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}
+
+
+Definition at line 45 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!uva@{uva}}
+\index{uva@{uva}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{uva}{uva}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uva~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 1)}\hypertarget{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{}\label{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!uvcons@{uvcons}}
+\index{uvcons@{uvcons}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{uvcons}{uvcons}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uvcons~((doublereal $\ast$)\&{\bf plgol\+\_\+1})}\hypertarget{GOLPLN_8c_aa40a1175bb25725a6a022d07ca71fdc6}{}\label{GOLPLN_8c_aa40a1175bb25725a6a022d07ca71fdc6}
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!uve@{uve}}
+\index{uve@{uve}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{uve}{uve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uve~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 2)}\hypertarget{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{}\label{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}
+
+
+Referenced by golpln\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!golpln\+\_\+@{golpln\+\_\+}}
+\index{golpln\+\_\+@{golpln\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{golpln\+\_\+(integer $\ast$j11, integer $\ast$iret)}{golpln_(integer *j11, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int golpln\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{j11, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{GOLPLN_8c_aee08f5bbd136a9bb1dd942970a170cc7}{}\label{GOLPLN_8c_aee08f5bbd136a9bb1dd942970a170cc7}
+
+
+Definition at line 79 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+References aerr\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+\+\_\+22220, cpldst\+\_\+(), dist, gop\+\_\+(), i\+\_\+\+\_\+, iart, iat, ifxcor\+\_\+1, ipl, ipl1, ipl2, istrt, ithru, j, spv, sscan, ssprt\+\_\+1, sv\+\_\+1, u, uva, uvcons, uve, and v.
+
+
+
+Referenced by gol\+\_\+().
+
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{comment}{/* System generated locals */}
+82     doublereal d\_\_1, d\_\_2, d\_\_3;
+83 
+84     \textcolor{comment}{/* Builtin functions */}
+85     \textcolor{keywordtype}{double} sqrt(doublereal);
+86 
+87     \textcolor{comment}{/* Local variables */}
+88     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+89     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, di, du, ue, dv, ve, ou, ov, um, vm;
+90 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+91     \textcolor{keyword}{static} integer iic;
+92 \textcolor{preprocessor}{#define iat ((integer *)&plgol\_1 + 17)}
+93     \textcolor{keyword}{static} integer \hyperlink{AERR2_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl};
+94     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(integer *, doublereal *, doublereal *, 
+95         doublereal *, integer *, integer *);
+96 \textcolor{preprocessor}{#define uva ((doublereal *)&plgol\_1 + 1)}
+97 \textcolor{preprocessor}{#define uve ((doublereal *)&plgol\_1 + 2)}
+98     \textcolor{keyword}{static} doublereal vll, \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[52];
+99 \textcolor{preprocessor}{#define ipl1 ((integer *)&plgol\_1 + 20)}
+100 \textcolor{preprocessor}{#define ipl2 ((integer *)&plgol\_1 + 21)}
+101     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+102 \textcolor{preprocessor}{#define iart ((integer *)&plgol\_1 + 12)}
+103     \textcolor{keyword}{static} integer iwas;
+104     \textcolor{keyword}{static} doublereal \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+105 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+106 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+107     \textcolor{keyword}{static} doublereal distm, odist;
+108 \textcolor{preprocessor}{#define ithru ((integer *)&plgol\_1 + 19)}
+109 \textcolor{preprocessor}{#define istrt ((integer *)&plgol\_1 + 18)}
+110 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+111     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPLDST_8c_a7d4081085029427e4dfe09927b09ffc1}{cpldst\_}(doublereal *, doublereal *, 
+112         doublereal *, integer *, doublereal *, integer *);
+113 \textcolor{preprocessor}{#define uvcons ((doublereal *)&plgol\_1)}
+114 
+115 
+116 \textcolor{comment}{/*   ROUTINE TO TEST, IF A PLANE IS INVOLVED AND TO CALCULATE A UV VALUE */}
+117 
+118 
+119 
+120 \textcolor{comment}{/*  CONTROL OF TEST-OUTPUT */}
+121 
+122 
+123 \textcolor{comment}{/* UVCONS:    U-, V- CONSTANT, GIVEN AT  "UCONST,U" OR "VCONST,V" */}
+124 
+125 \textcolor{comment}{/* UVA:       START-PRAMETER, GIVEN BY "START,S" */}
+126 
+127 \textcolor{comment}{/* UVE:       END-PARAMETER, GIVEN BY "THRU,T" */}
+128 
+129 \textcolor{comment}{/* IART:      IART = 1   PLOTFT/SCURV,.........,PARAM,.... */}
+130 \textcolor{comment}{/*            IART = 2   PLOTFT/SCURV,.........,FLOW ,.... */}
+131 \textcolor{comment}{/*            IART = 3   PLOTFT/SSURF,UCONST,U,........... */}
+132 \textcolor{comment}{/*            IART = 4   PLOTFT/SSURF,VCONST,V,........... */}
+133 \textcolor{comment}{/*            IART = 5   PLOTFT/SSURF,GRID,............... */}
+134 \textcolor{comment}{/*            IART = 6   GOLOFT/SSURF,UCONST,U,........... */}
+135 \textcolor{comment}{/*            IART = 7   GOLOFT/SSURF,VCONST,V,........... */}
+136 
+137 \textcolor{comment}{/* IAT:       IAT   = 0 : AT NOT PROGRAMMED */}
+138 \textcolor{comment}{/*            IAT   = 1 : AT   "AT,A",        = 2 AT   "AT,TO,PL1" */}
+139 \textcolor{comment}{/*            IAT   = 3 : AT   "AT,ON,PL1,    = 4 AT   "AT,PAST,PL1 */}
+140 
+141 \textcolor{comment}{/* ISTRT:     ISTRT = 0 : START NOT PROGRAMMED */}
+142 \textcolor{comment}{/*            ISTRT = 1 : AT   "START,A",     = 2 AT   "START,TO,PL1" */}
+143 \textcolor{comment}{/*            ISTRT = 3 : AT   "START,ON,PL1, = 4 AT   "START,PAST,PL1 */}
+144 
+145 \textcolor{comment}{/* ITHRU:     ITHRU = 0 : THRU NOT PROGRAMMED */}
+146 \textcolor{comment}{/*            ITHRU = 1 : AT   "THRU,A",      = 2 AT   "THRU,TO,PL1" */}
+147 \textcolor{comment}{/*            ITHRU = 3 : AT   "THRU,ON,PL1,  = 4 AT   "THRU,PAST,PL1 */}
+148 
+149 \textcolor{comment}{/* IPL1:      CF-BEGIN OF THE "AT" OR "START" PLANE IN THE ARRAY SSCAN */}
+150 
+151 \textcolor{comment}{/* IPL2:      CF-BEGIN OF THE  "THRU" PLANE IN THE ARRAY SSCAN */}
+152 
+153 \textcolor{comment}{/*  COMMON TOTAL */}
+154 
+155 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+156 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+157 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+158 
+159 
+160 
+161 \textcolor{comment}{/*   *** 9.  SV BLOCK *** */}
+162 
+163 \textcolor{comment}{/*   REAL SURFACE VARIABLES */}
+164 
+165 
+166 
+167 
+168 
+169 
+170 \textcolor{comment}{/*  BLANK COMMON */}
+171 
+172 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+173 
+174 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+175 
+176 
+177 
+178 
+179 \textcolor{comment}{/*  EVALUATION RESULTS */}
+180 
+181 \textcolor{comment}{/*     UNLABELLED COMMON */}
+182 
+183 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+184 
+185 
+186 
+187 
+188 
+189 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+190 
+191 \textcolor{comment}{/* RETURN IF NOT >GOLOFT< */}
+192     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} != 6 && *\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} != 7) \{
+193     \textcolor{keywordflow}{return} 0;
+194     \}
+195 
+196 \textcolor{comment}{/* LOOP OVER THE 3 POSSIBLE PLANE CONDITIONS: >AT<,>START<,>THRU< */}
+197     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+198 
+199 \textcolor{comment}{/* >AT< CONDITION */}
+200     iwas = *\hyperlink{GOLPLN_8c_ac0a280dfbdae2e88edfbf16561dc7831}{iat};
+201     ipl = *\hyperlink{GOLPLN_8c_a14e694bf128a0d68985bc7ba5db00fa5}{ipl1};
+202     iic = \hyperlink{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ics;
+203     \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+204         \textcolor{keywordflow}{goto} L1;
+205     \}
+206 
+207 \textcolor{comment}{/* >START< CONDITION */}
+208     iwas = *\hyperlink{GOLPLN_8c_ab361c4637a4787c81d2d9059e7379b70}{istrt};
+209     \textcolor{keywordflow}{if} (i\_\_ == 2) \{
+210         \textcolor{keywordflow}{goto} L1;
+211     \}
+212 
+213 \textcolor{comment}{/* >THRU< CONDITION */}
+214     iwas = *\hyperlink{GOLPLN_8c_a7fc306fc3938b6a40734f61e04446945}{ithru};
+215     ipl = *\hyperlink{GOLPLN_8c_aee28fbbb48cac35060082382bb369f86}{ipl2};
+216     iic = \hyperlink{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ics + \hyperlink{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.lsv1;
+217 
+218 \textcolor{comment}{/* WITH AT CONDITION,  SET THRU PARAMETER EQUAL START PARAMETER */}
+219 L1:
+220     \textcolor{keywordflow}{if} (i\_\_ == 1 && iwas != 0) \{
+221         *\hyperlink{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve} = *\hyperlink{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{uva};
+222     \}
+223 
+224 \textcolor{comment}{/* CHECK,  IF PLANE CONDITION */}
+225     \textcolor{keywordflow}{if} (iwas < 2 || iwas > 4) \{
+226         \textcolor{keywordflow}{goto} L90;
+227     \}
+228 
+229 \textcolor{comment}{/* PROLOG FOR >UCONST< */}
+230     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} != 6) \{
+231         \textcolor{keywordflow}{goto} L10;
+232     \}
+233     u = *\hyperlink{GOLPLN_8c_aa40a1175bb25725a6a022d07ca71fdc6}{uvcons};
+234     du = 0.;
+235     ue = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+236     v = 0.;
+237     dv = .5;
+238     ve = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[*\hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11} + 8] - 1.;
+239     \textcolor{keywordflow}{goto} L20;
+240 
+241 \textcolor{comment}{/* PROLOG FOR >VCONST< */}
+242 L10:
+243     u = 0.;
+244     du = .5;
+245     ue = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[*\hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11} + 9] - 1.;
+246     v = *\hyperlink{GOLPLN_8c_aa40a1175bb25725a6a022d07ca71fdc6}{uvcons};
+247     dv = 0.;
+248     ve = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+249 
+250 \textcolor{comment}{/* COMPUTE PLANE ORIENTATION AND SWITCH IF NECESSARY */}
+251 \textcolor{comment}{/*  FIRST TOOL TIP IS INVESTIGATED */}
+252 L20:
+253     \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(&\hyperlink{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &u, &v, spv, \hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, iret);
+254 
+255 \textcolor{comment}{/* NORMALISATION OF INPUT PLANE */}
+256 \textcolor{comment}{/* Computing 2nd power */}
+257     d\_\_1 = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl - 1];
+258 \textcolor{comment}{/* Computing 2nd power */}
+259     d\_\_2 = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[\hyperlink{AERR2_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl}];
+260 \textcolor{comment}{/* Computing 2nd power */}
+261     d\_\_3 = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl + 1];
+262     vll = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+263     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+264 \textcolor{comment}{/* L21: */}
+265         \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl + j - 2] /= vll;
+266     \}
+267 
+268 \textcolor{comment}{/* DISTANCE OF FIRST POINT TO PLANE (DIST=AX+BY+CZ-D) */}
+269     di = \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl - 1] * spv[32] + \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[\hyperlink{AERR2_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl}] * spv[33] + \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl + 1] 
+270         * spv[34] - \hyperlink{GOLPLN_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[ipl + 2];
+271 
+272 \textcolor{comment}{/* INVERSION OF PLANE IF DISTANCE IS NEGETIVE */}
+273     \textcolor{keywordflow}{if} (di > 0.) \{
+274         \textcolor{keywordflow}{goto} L25;
+275     \}
+276     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+277 \textcolor{comment}{/* L22: */}
+278         sscan[ipl + j - 2] = -sscan[ipl + j - 2];
+279     \}
+280 
+281 \textcolor{comment}{/* PRESET OLD DISTANCE */}
+282 L25:
+283     \hyperlink{CPLDST_8c_a7d4081085029427e4dfe09927b09ffc1}{cpldst\_}(spv, &sscan[ipl - 1], &\hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.th[iic - 1], &iwas, &odist, iret);
+284     dist = odist;
+285     ou = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+286     ov = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+287     \textcolor{keywordflow}{goto} L35;
+288 
+289 \textcolor{comment}{/* FIND INTERSECTION (OUTER LOOP) */}
+290 \textcolor{comment}{/*  OLD DISTANCE AND OLD PARAMETERS */}
+291 L30:
+292     odist = \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+293     ou = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+294     ov = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+295 
+296 \textcolor{comment}{/* NEW PARAMETERS */}
+297     u += du;
+298     v += dv;
+299     \textcolor{keywordflow}{if} (u > ue || v > ve) \{
+300         \textcolor{keywordflow}{goto} L80;
+301     \}
+302     \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(&\hyperlink{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &u, &v, spv, \hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, iret);
+303     \hyperlink{CPLDST_8c_a7d4081085029427e4dfe09927b09ffc1}{cpldst\_}(spv, &sscan[ipl - 1], &\hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.th[iic - 1], &iwas, &dist, iret);
+304 
+305 \textcolor{comment}{/*  TOLERANCE INVESTIGATION (OUTTOL) */}
+306 L35:
+307     \textcolor{keywordflow}{if} (dist > \hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tau1[iic - 1]) \{
+308         \textcolor{keywordflow}{goto} L30;
+309     \}
+310 
+311 \textcolor{comment}{/*  INTOL: */}
+312     \textcolor{keywordflow}{if} (dist >= \hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tau2[iic - 1]) \{
+313         \textcolor{keywordflow}{goto} L50;
+314     \}
+315 
+316 \textcolor{comment}{/* FIND INTERSECTION (INNER LOOP): NESTED INTERVALS */}
+317 L40:
+318     um = (ou + \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}) / 2.;
+319     vm = (ov + \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}) / 2.;
+320     \hyperlink{GOP_8c_aa5b821dac478ef497038bae0448a3309}{gop\_}(&\hyperlink{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &um, &vm, spv, \hyperlink{APT240_8c_a9cdea0d670a97b76a383c62b87fd0962}{j11}, iret);
+321     \hyperlink{CPLDST_8c_a7d4081085029427e4dfe09927b09ffc1}{cpldst\_}(spv, &sscan[ipl - 1], &\hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.th[iic - 1], &iwas, &distm, iret);
+322 
+323 \textcolor{comment}{/* INSIDE OUTTOL TOLERANCE ? */}
+324     \textcolor{keywordflow}{if} (distm <= \hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tau1[iic - 1]) \{
+325         \textcolor{keywordflow}{goto} L45;
+326     \}
+327 \textcolor{comment}{/* NO */}
+328     ou = um;
+329     ov = vm;
+330     odist = distm;
+331 
+332 \textcolor{comment}{/* BREAK FOR UNLIMITED LOOP */}
+333     \textcolor{keywordflow}{if} (odist - dist < 1e-5) \{
+334         \textcolor{keywordflow}{goto} L50;
+335     \}
+336     \textcolor{keywordflow}{goto} L40;
+337 
+338 \textcolor{comment}{/* INSIDE INTOL TOLERANCE ? */}
+339 L45:
+340     \textcolor{keywordflow}{if} (dist >= \hyperlink{GOLPLN_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tau2[iic - 1]) \{
+341         \textcolor{keywordflow}{goto} L50;
+342     \}
+343 \textcolor{comment}{/* NO */}
+344     u = um;
+345     v = vm;
+346     dist = distm;
+347 
+348 \textcolor{comment}{/* BREAK FOR UNLIMITED LOOP */}
+349     \textcolor{keywordflow}{if} (odist - dist < 1e-5) \{
+350         \textcolor{keywordflow}{goto} L50;
+351     \}
+352     \textcolor{keywordflow}{goto} L40;
+353 
+354 \textcolor{comment}{/*  ONE FINAL POINT FOUND */}
+355 L50:
+356     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} == 6 && i\_\_ != 3) \{
+357         *\hyperlink{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{uva} = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+358     \}
+359     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} == 6 && i\_\_ == 3) \{
+360         *\hyperlink{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve} = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+361     \}
+362     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} == 7 && i\_\_ != 3) \{
+363         *\hyperlink{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{uva} = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+364     \}
+365     \textcolor{keywordflow}{if} (*\hyperlink{GOLPLN_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} == 7 && i\_\_ == 3) \{
+366         *\hyperlink{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve} = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+367     \}
+368     \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+369         *\hyperlink{GOLPLN_8c_ac0a280dfbdae2e88edfbf16561dc7831}{iat} = 1;
+370     \}
+371 
+372 \textcolor{comment}{/* WITH AT CONDITION,  SET THRU PARAMETER EQUAL START PARAMETER */}
+373     \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+374         *\hyperlink{GOLPLN_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve} = *\hyperlink{GOLPLN_8c_acba14ef7f85d72e63b3471abc1c15236}{uva};
+375     \}
+376     \textcolor{keywordflow}{if} (i\_\_ == 2) \{
+377         *\hyperlink{GOLPLN_8c_ab361c4637a4787c81d2d9059e7379b70}{istrt} = 1;
+378     \}
+379     \textcolor{keywordflow}{if} (i\_\_ == 3) \{
+380         *\hyperlink{GOLPLN_8c_a7fc306fc3938b6a40734f61e04446945}{ithru} = 1;
+381     \}
+382     \textcolor{keywordflow}{goto} L90;
+383 
+384 \textcolor{comment}{/* NO INTERSECTION BETWEEN GOLOFT CUTTER PATH AND PLANE FOUND */}
+385 L80:
+386 
+387 \textcolor{comment}{/*  POINT OUTSIDE OF U/V PARAMETERS OF THE PATCH */}
+388 
+389 \textcolor{comment}{/*  POINT IS OUTSIDE OF THE U/V PARAMETERS OF THE PATCH. */}
+390     \textcolor{keywordflow}{if} (\hyperlink{GOLPLN_8c_a4f6a451659f56122d7a5cf4a86b974cb}{ssprt\_1}.sstest) \{
+391         \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(&\hyperlink{GOLPLN_8c_ae7d28f7b18a83d13d71b196bc7a7b7fd}{c\_\_22220}, \textcolor{stringliteral}{"GOLPLN  "}, (ftnlen)8);
+392     \}
+393     \hyperlink{GOLPLN_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iaerr = 1;
+394     *iret = max(*iret,3);
+395     \textcolor{keywordflow}{goto} L90;
+396 
+397 L90:
+398     ;
+399     \}
+400     \textcolor{keywordflow}{return} 0;
+401 \} \textcolor{comment}{/* golpln\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{GOLPLN_8c_aee08f5bbd136a9bb1dd942970a170cc7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GOLPLN_8c_aee08f5bbd136a9bb1dd942970a170cc7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{GOLPLN_8c_ad66058c7ba8b3fdc10be65399b1e8d65}{}\label{GOLPLN_8c_ad66058c7ba8b3fdc10be65399b1e8d65}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{GOLPLN_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 74 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!c\+\_\+\+\_\+22220@{c\+\_\+\+\_\+22220}}
+\index{c\+\_\+\+\_\+22220@{c\+\_\+\+\_\+22220}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+22220}{c__22220}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+22220 = 22220\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOLPLN_8c_ae7d28f7b18a83d13d71b196bc7a7b7fd}{}\label{GOLPLN_8c_ae7d28f7b18a83d13d71b196bc7a7b7fd}
+
+
+Definition at line 75 of file G\+O\+L\+P\+L\+N.\+c.
+
+
+
+Referenced by golpln\+\_\+().
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!cc@{cc}}
+\index{cc@{cc}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{cc}{cc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cc\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a4a672b1cc1657e411e2094d8631246c2}{}\label{GOLPLN_8c_a4a672b1cc1657e411e2094d8631246c2}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!com@{com}}
+\index{com@{com}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{GOLPLN_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{GOLPLN_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 67 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!cos1@{cos1}}
+\index{cos1@{cos1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{cos1}{cos1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cos1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_aa061b11706c46e4e7299be7f1dd355ef}{}\label{GOLPLN_8c_aa061b11706c46e4e7299be7f1dd355ef}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!cplfl@{cplfl}}
+\index{cplfl@{cplfl}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{cplfl}{cplfl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cplfl\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a17ab077f9704191cec3623b32182b8ba}{}\label{GOLPLN_8c_a17ab077f9704191cec3623b32182b8ba}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!cptst@{cptst}}
+\index{cptst@{cptst}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{cptst}{cptst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cptst\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a826f9bb61ad3ef7b009c7631b75374f6}{}\label{GOLPLN_8c_a826f9bb61ad3ef7b009c7631b75374f6}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!csd@{csd}}
+\index{csd@{csd}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{csd}{csd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal csd\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{}\label{GOLPLN_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!dplan@{dplan}}
+\index{dplan@{dplan}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{dplan}{dplan}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dplan\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a819ff3967ced7fbb549308a6e4b91bcb}{}\label{GOLPLN_8c_a819ff3967ced7fbb549308a6e4b91bcb}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!dpmx1@{dpmx1}}
+\index{dpmx1@{dpmx1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{dpmx1}{dpmx1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmx1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a4360acf0e48136e91364bd7cce121547}{}\label{GOLPLN_8c_a4360acf0e48136e91364bd7cce121547}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps1@{eps1}}
+\index{eps1@{eps1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps1}{eps1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a306d2abf316a42b2d06c636c581fbc05}{}\label{GOLPLN_8c_a306d2abf316a42b2d06c636c581fbc05}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps2@{eps2}}
+\index{eps2@{eps2}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps2}{eps2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps2\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a2fd05e25992e6a9456646532a7ed3148}{}\label{GOLPLN_8c_a2fd05e25992e6a9456646532a7ed3148}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps3@{eps3}}
+\index{eps3@{eps3}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps3}{eps3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps3\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a13ab03ebf3099fa722e8584f54a14f94}{}\label{GOLPLN_8c_a13ab03ebf3099fa722e8584f54a14f94}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps4@{eps4}}
+\index{eps4@{eps4}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps4}{eps4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps4\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_ad4286f6c2b33f25799d6156480bd622d}{}\label{GOLPLN_8c_ad4286f6c2b33f25799d6156480bd622d}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps6@{eps6}}
+\index{eps6@{eps6}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps6}{eps6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps6\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a68951ca3ed42d540274e5dd702aa30b2}{}\label{GOLPLN_8c_a68951ca3ed42d540274e5dd702aa30b2}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!eps8@{eps8}}
+\index{eps8@{eps8}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{eps8}{eps8}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps8\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{}\label{GOLPLN_8c_ab85a8b6ebe95fd76a0fccc74ece19726}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{GOLPLN_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{GOLPLN_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{GOLPLN_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{GOLPLN_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{GOLPLN_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{GOLPLN_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{GOLPLN_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{GOLPLN_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ic@{ic}}
+\index{ic@{ic}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{GOLPLN_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{GOLPLN_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{GOLPLN_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{GOLPLN_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!icl@{icl}}
+\index{icl@{icl}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{GOLPLN_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{GOLPLN_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ics@{ics}}
+\index{ics@{ics}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{GOLPLN_8c_a7217a40b82199af56087b578a9bef158}{}\label{GOLPLN_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{GOLPLN_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{GOLPLN_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{GOLPLN_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{GOLPLN_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!icut@{icut}}
+\index{icut@{icut}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{GOLPLN_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{GOLPLN_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!id@{id}}
+\index{id@{id}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}integer id\mbox{[}24\mbox{]}}\hypertarget{GOLPLN_8c_a787a59b8a72ef092fc411618dc0c257d}{}\label{GOLPLN_8c_a787a59b8a72ef092fc411618dc0c257d}
+
+
+Definition at line 24 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ids@{ids}}
+\index{ids@{ids}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{GOLPLN_8c_a312fee9680413e72b1ed128af2de8822}{}\label{GOLPLN_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ier@{ier}}
+\index{ier@{ier}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{GOLPLN_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{GOLPLN_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{GOLPLN_8c_a9d4a71a90ab6801a7f07580e26ab4ba2}{}\label{GOLPLN_8c_a9d4a71a90ab6801a7f07580e26ab4ba2}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!igo@{igo}}
+\index{igo@{igo}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{GOLPLN_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{GOLPLN_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{GOLPLN_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{GOLPLN_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{GOLPLN_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{GOLPLN_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!igs@{igs}}
+\index{igs@{igs}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{GOLPLN_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{GOLPLN_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!inops@{inops}}
+\index{inops@{inops}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{GOLPLN_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{GOLPLN_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ips@{ips}}
+\index{ips@{ips}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{GOLPLN_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{GOLPLN_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{GOLPLN_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{GOLPLN_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{GOLPLN_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{GOLPLN_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!is@{is}}
+\index{is@{is}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{GOLPLN_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{GOLPLN_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{GOLPLN_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{GOLPLN_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{GOLPLN_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{GOLPLN_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{GOLPLN_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{GOLPLN_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{GOLPLN_8c_a71eb31c84997c0822663e9391c14d998}{}\label{GOLPLN_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!it@{it}}
+\index{it@{it}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{GOLPLN_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{GOLPLN_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{GOLPLN_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{GOLPLN_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{GOLPLN_8c_a10effd66f46b95c77726e50c3d371477}{}\label{GOLPLN_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{GOLPLN_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{GOLPLN_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{GOLPLN_8c_a15ffd813a44621365b809bd790efc487}{}\label{GOLPLN_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{GOLPLN_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{GOLPLN_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{GOLPLN_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{GOLPLN_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!msav@{msav}}
+\index{msav@{msav}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{GOLPLN_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{GOLPLN_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{GOLPLN_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{GOLPLN_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{GOLPLN_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{GOLPLN_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{GOLPLN_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{GOLPLN_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{GOLPLN_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{GOLPLN_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!numax@{numax}}
+\index{numax@{numax}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{GOLPLN_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{GOLPLN_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{GOLPLN_8c_a5123b60c8419619c6c2debf212d28208}{}\label{GOLPLN_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nump@{nump}}
+\index{nump@{nump}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{GOLPLN_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{GOLPLN_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{GOLPLN_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{GOLPLN_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{GOLPLN_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{GOLPLN_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{GOLPLN_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{GOLPLN_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nw@{nw}}
+\index{nw@{nw}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{GOLPLN_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{GOLPLN_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{GOLPLN_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{GOLPLN_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 57 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!obnam1@{obnam1}}
+\index{obnam1@{obnam1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{obnam1}{obnam1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal obnam1}\hypertarget{GOLPLN_8c_afead18f0fcd108ac2e08a23292236dae}{}\label{GOLPLN_8c_afead18f0fcd108ac2e08a23292236dae}
+
+
+Definition at line 25 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!past@{past}}
+\index{past@{past}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{past}{past}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal past\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_aae4751b2b0e0fe3b5f62f710ef406288}{}\label{GOLPLN_8c_aae4751b2b0e0fe3b5f62f710ef406288}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plgol\+\_\+@{plgol\+\_\+}}
+\index{plgol\+\_\+@{plgol\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+}{plgol_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   plgol\+\_\+}\hypertarget{GOLPLN_8c_a540cbe7c35ca2daf0e417a254c91f684}{}\label{GOLPLN_8c_a540cbe7c35ca2daf0e417a254c91f684}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plncs@{plncs}}
+\index{plncs@{plncs}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plncs}{plncs}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plncs\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{}\label{GOLPLN_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plnd@{plnd}}
+\index{plnd@{plnd}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plnd}{plnd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{}\label{GOLPLN_8c_ae9d5f1bcba61472b35fba9e981c5b18c}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plnd1@{plnd1}}
+\index{plnd1@{plnd1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plnd1}{plnd1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{}\label{GOLPLN_8c_a92d5298997ed1dcb1f9a65bc9126dd52}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!plnv@{plnv}}
+\index{plnv@{plnv}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{plnv}{plnv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnv\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_abcbe27eb4ab55c21433ba237b064da23}{}\label{GOLPLN_8c_abcbe27eb4ab55c21433ba237b064da23}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!pltst@{pltst}}
+\index{pltst@{pltst}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{pltst}{pltst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pltst\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_acc41d3833fec2bd10e8f654e00d49fa6}{}\label{GOLPLN_8c_acc41d3833fec2bd10e8f654e00d49fa6}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!rc@{rc}}
+\index{rc@{rc}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{rc}{rc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a8fafde5aff46b55bddfc42a93803fffc}{}\label{GOLPLN_8c_a8fafde5aff46b55bddfc42a93803fffc}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!s@{s}}
+\index{s@{s}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal s\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{}\label{GOLPLN_8c_a5422687d8f9c4b1da3d7a65d7535fa60}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!save@{save}}
+\index{save@{save}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{save}{save}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal save\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_aade1308b2b48aaa8db461e4665eb7e19}{}\label{GOLPLN_8c_aade1308b2b48aaa8db461e4665eb7e19}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sfvct@{sfvct}}
+\index{sfvct@{sfvct}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sfvct}{sfvct}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sfvct\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a6a6f46271f4c2c8e68568b8bee68f673}{}\label{GOLPLN_8c_a6a6f46271f4c2c8e68568b8bee68f673}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sk@{sk}}
+\index{sk@{sk}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sk}{sk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sk\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a2fa00cfd358735b40f5b16a114238bdc}{}\label{GOLPLN_8c_a2fa00cfd358735b40f5b16a114238bdc}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!slx@{slx}}
+\index{slx@{slx}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{slx}{slx}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal slx\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_ad5ff78be6acc9653b09598f6df0c1522}{}\label{GOLPLN_8c_ad5ff78be6acc9653b09598f6df0c1522}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sn@{sn}}
+\index{sn@{sn}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sn}{sn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sn\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_affaf74dabdb513fe55fa48a1091a82f0}{}\label{GOLPLN_8c_affaf74dabdb513fe55fa48a1091a82f0}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!snk@{snk}}
+\index{snk@{snk}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{snk}{snk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snk\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_aa584da8857a16c65bd611d5b5686d8ec}{}\label{GOLPLN_8c_aa584da8857a16c65bd611d5b5686d8ec}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!snl@{snl}}
+\index{snl@{snl}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{snl}{snl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snl\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a4c96f9ead3daa534244888dd312b3595}{}\label{GOLPLN_8c_a4c96f9ead3daa534244888dd312b3595}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sp@{sp}}
+\index{sp@{sp}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sp}{sp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sp\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_ae1ea305557352179a5595123e4f7bef9}{}\label{GOLPLN_8c_ae1ea305557352179a5595123e4f7bef9}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!spk@{spk}}
+\index{spk@{spk}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{spk}{spk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spk\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a5eb35651944d7d53ca1371c8f4403522}{}\label{GOLPLN_8c_a5eb35651944d7d53ca1371c8f4403522}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!spl@{spl}}
+\index{spl@{spl}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{spl}{spl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spl\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a032b8e76f8a4cec214831255a4b77e7a}{}\label{GOLPLN_8c_a032b8e76f8a4cec214831255a4b77e7a}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ssprt@{ssprt}}
+\index{ssprt@{ssprt}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssprt}{ssprt}}]{\setlength{\rightskip}{0pt plus 5cm}logical ssprt}\hypertarget{GOLPLN_8c_aabdefdae02ca0201c3c281c4bdde30ee}{}\label{GOLPLN_8c_aabdefdae02ca0201c3c281c4bdde30ee}
+
+
+Definition at line 18 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!ssprt\+\_\+@{ssprt\+\_\+}}
+\index{ssprt\+\_\+@{ssprt\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssprt\+\_\+}{ssprt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssprt\+\_\+}\hypertarget{GOLPLN_8c_a0f90c0462e342366a7dbbf584e189566}{}\label{GOLPLN_8c_a0f90c0462e342366a7dbbf584e189566}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sstest@{sstest}}
+\index{sstest@{sstest}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sstest}{sstest}}]{\setlength{\rightskip}{0pt plus 5cm}logical sstest}\hypertarget{GOLPLN_8c_a6f4ecf11f208ba0b39a3243a1c308209}{}\label{GOLPLN_8c_a6f4ecf11f208ba0b39a3243a1c308209}
+
+
+Definition at line 18 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!stck@{stck}}
+\index{stck@{stck}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{stck}{stck}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a0c07ccb74eb243d4d456e818d258bce8}{}\label{GOLPLN_8c_a0c07ccb74eb243d4d456e818d258bce8}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!stck1@{stck1}}
+\index{stck1@{stck1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{stck1}{stck1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{}\label{GOLPLN_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!stck2@{stck2}}
+\index{stck2@{stck2}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{stck2}{stck2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck2\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a4b0340102da75d0c19859ea11879a4f4}{}\label{GOLPLN_8c_a4b0340102da75d0c19859ea11879a4f4}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!stckn@{stckn}}
+\index{stckn@{stckn}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{stckn}{stckn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stckn\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a94fa54ae2c242297cc118d31155ab356}{}\label{GOLPLN_8c_a94fa54ae2c242297cc118d31155ab356}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sv1\+\_\+@{sv1\+\_\+}}
+\index{sv1\+\_\+@{sv1\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+}{sv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv1\+\_\+}\hypertarget{GOLPLN_8c_a4d6cf7bdf582c0168995488a80552b06}{}\label{GOLPLN_8c_a4d6cf7bdf582c0168995488a80552b06}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!sv\+\_\+@{sv\+\_\+}}
+\index{sv\+\_\+@{sv\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+}{sv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv\+\_\+}\hypertarget{GOLPLN_8c_a23254c5532852b28eb0e90a7550aa987}{}\label{GOLPLN_8c_a23254c5532852b28eb0e90a7550aa987}
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tau@{tau}}
+\index{tau@{tau}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tau}{tau}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a3ef97769b90b935351a0da2c5c17f1ba}{}\label{GOLPLN_8c_a3ef97769b90b935351a0da2c5c17f1ba}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tau1@{tau1}}
+\index{tau1@{tau1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tau1}{tau1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau1\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a3293541b256a7b52a653b554ec1eef71}{}\label{GOLPLN_8c_a3293541b256a7b52a653b554ec1eef71}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tau2@{tau2}}
+\index{tau2@{tau2}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tau2}{tau2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau2\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a7cc16120d8b89a97df6d011487794d7a}{}\label{GOLPLN_8c_a7cc16120d8b89a97df6d011487794d7a}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tee@{tee}}
+\index{tee@{tee}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tee}{tee}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tee\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a5ca1f63566c2594f3e3868b91d997b73}{}\label{GOLPLN_8c_a5ca1f63566c2594f3e3868b91d997b73}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!th@{th}}
+\index{th@{th}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{th}{th}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal th\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a5e192eb5193c9ab9e167e2554641adad}{}\label{GOLPLN_8c_a5e192eb5193c9ab9e167e2554641adad}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tn@{tn}}
+\index{tn@{tn}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tn}{tn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tn\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a66b316fa3299925e5c7630d5af6601fd}{}\label{GOLPLN_8c_a66b316fa3299925e5c7630d5af6601fd}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tnl@{tnl}}
+\index{tnl@{tnl}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tnl}{tnl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tnl\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a51ea6eff10429675b532a43be770e881}{}\label{GOLPLN_8c_a51ea6eff10429675b532a43be770e881}
+
+
+Definition at line 48 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!toolht@{toolht}}
+\index{toolht@{toolht}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{toolht}{toolht}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolht\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{}\label{GOLPLN_8c_ae71e1021e0fe5c37d631777a82ac9dfe}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!toolwd@{toolwd}}
+\index{toolwd@{toolwd}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{toolwd}{toolwd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolwd\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_acfdd4327e78cee83f784e0081fd71ead}{}\label{GOLPLN_8c_acfdd4327e78cee83f784e0081fd71ead}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tp@{tp}}
+\index{tp@{tp}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tp}{tp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tp\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{}\label{GOLPLN_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!tpk@{tpk}}
+\index{tpk@{tpk}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{tpk}{tpk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tpk\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_acd57028107f202bf733ae94db320fd40}{}\label{GOLPLN_8c_acd57028107f202bf733ae94db320fd40}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!u1@{u1}}
+\index{u1@{u1}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{u1}{u1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a86f48fbc667fd3e391a5a60472a760d9}{}\label{GOLPLN_8c_a86f48fbc667fd3e391a5a60472a760d9}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!u1k@{u1k}}
+\index{u1k@{u1k}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{u1k}{u1k}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1k\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_aef9f4548d89972753d95640b4cf4c502}{}\label{GOLPLN_8c_aef9f4548d89972753d95640b4cf4c502}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!varble@{varble}}
+\index{varble@{varble}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{varble}{varble}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal varble\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_a6587d13eed8675f3bf2284fc673780f2}{}\label{GOLPLN_8c_a6587d13eed8675f3bf2284fc673780f2}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!vndir@{vndir}}
+\index{vndir@{vndir}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{vndir}{vndir}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vndir\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a76207f20e8ae300641df122e994c2374}{}\label{GOLPLN_8c_a76207f20e8ae300641df122e994c2374}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!vt@{vt}}
+\index{vt@{vt}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{vt}{vt}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vt\mbox{[}15\mbox{]}}\hypertarget{GOLPLN_8c_a20c7b8bac268c28674d17aa05f813d9f}{}\label{GOLPLN_8c_a20c7b8bac268c28674d17aa05f813d9f}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+
+\index{G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}!z\+\_\+\+\_\+@{z\+\_\+\+\_\+}}
+\index{z\+\_\+\+\_\+@{z\+\_\+\+\_\+}!G\+O\+L\+P\+L\+N.\+c@{G\+O\+L\+P\+L\+N.\+c}}
+\subsubsection[{\texorpdfstring{z\+\_\+\+\_\+}{z__}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{GOLPLN_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{}\label{GOLPLN_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}
+
+
+Definition at line 31 of file G\+O\+L\+P\+L\+N.\+c.
+

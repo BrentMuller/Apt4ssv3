@@ -1,0 +1,202 @@
+\hypertarget{FCONV_8c}{}\section{F\+C\+O\+N\+V.\+c File Reference}
+\label{FCONV_8c}\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for F\+C\+O\+N\+V.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{FCONV_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{fconv\+\_\+} (doublereal $\ast$\hyperlink{DDRLSR_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}, char $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, integer $\ast$\hyperlink{SSV3_8c_a6eafbdd3f6baaaa16ad8f018d5f57256}{i\+\_\+\+\_\+}, integer $\ast$\hyperlink{SSV3_8c_a798dde07bae7a0c6cb5b618e3f7d4def}{j}, ftnlen a\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static real \hyperlink{FCONV_8c_a235e4a4045bf7aa0aee1588b63312040}{c\+\_\+b2} = 10.\hyperlink{DDRLSR_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}
+\item 
+static integer \hyperlink{FCONV_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static doublereal \hyperlink{FCONV_8c_a363bfb94356458e5fcc5cf5a7e4c7ac4}{c\+\_\+b7} = 10.
+\item 
+static doublereal \hyperlink{FCONV_8c_a9e3de42da634766b363a777a3c6653a6}{c\+\_\+b8} = .\+5
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}!fconv\+\_\+@{fconv\+\_\+}}
+\index{fconv\+\_\+@{fconv\+\_\+}!F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{fconv\+\_\+(doublereal $\ast$f, char $\ast$a, integer $\ast$n, integer $\ast$i\+\_\+\+\_\+, integer $\ast$j, ftnlen a\+\_\+len)}{fconv_(doublereal *f, char *a, integer *n, integer *i__, integer *j, ftnlen a_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int fconv\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{f, }
+\item[{char $\ast$}]{a, }
+\item[{integer $\ast$}]{n, }
+\item[{integer $\ast$}]{i\+\_\+\+\_\+, }
+\item[{integer $\ast$}]{j, }
+\item[{ftnlen}]{a\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{}\label{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}
+
+
+Definition at line 42 of file F\+C\+O\+N\+V.\+c.
+
+
+
+References c\+\_\+\+\_\+1, c\+\_\+b2, c\+\_\+b7, c\+\_\+b8, i1, i2, j, k, k1, l, and n.
+
+
+
+Referenced by apt089\+\_\+(), apt302\+\_\+(), apt330\+\_\+(), apt331\+\_\+(), avmsg\+\_\+(), avoid\+\_\+(), bad\+\_\+(), gol\+\_\+(), gop\+\_\+(), intmsg\+\_\+(), intout\+\_\+(), intrp\+\_\+(), mixal\+\_\+(), print\+\_\+(), punch\+\_\+(), scpict\+\_\+(), sctra\+\_\+(), sprvis\+\_\+0\+\_\+(), sspath\+\_\+(), sspict\+\_\+(), and sstra\+\_\+().
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{comment}{/* System generated locals */}
+46     integer i\_\_1, i\_\_2;
+47 
+48     \textcolor{comment}{/* Builtin functions */}
+49     \textcolor{keywordtype}{double} pow\_ri(real *, integer *);
+50     integer s\_wsfi(icilist *), do\_fio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_wsfi(\textcolor{keywordtype}{void})
+51         ;
+52     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+53     \textcolor{keywordtype}{double} pow\_di(doublereal *, integer *), d\_sign(doublereal *, doublereal *)
+54         ;
+55 
+56     \textcolor{comment}{/* Local variables */}
+57     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{CUTREG_8c_a5f589bc83e55eecc5b1c372de3376ea9}{i2}, \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1};
+58     \textcolor{keyword}{static} doublereal fj;
+59     \textcolor{keyword}{static} integer lsd, msd;
+60     \textcolor{keyword}{static} doublereal dlsd;
+61     \textcolor{keyword}{static} \textcolor{keywordtype}{char} infil[35];
+62     \textcolor{keyword}{static} doublereal tentoj;
+63 
+64     \textcolor{comment}{/* Fortran I/O blocks */}
+65     \textcolor{keyword}{static} icilist io\_\_\_2 = \{ 0, infil, 0, \textcolor{stringliteral}{"(D35.15)"}, 35, 1 \};
+66     \textcolor{keyword}{static} icilist io\_\_\_12 = \{ 0, infil, 0, \textcolor{stringliteral}{"(F35.10)"}, 35, 1 \};
+67 
+68 
+69 
+70 
+71 \textcolor{comment}{/* .... CHECK SIZE OF VALUE F */}
+72 
+73     i\_\_1 = *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} - *\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} - 2;
+74     i\_\_2 = *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} - *j - 1;
+75     \textcolor{keywordflow}{if} (*f < -2147483648.f || *f > 2147483647.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} || *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} <= -pow\_ri(&\hyperlink{FCONV_8c_a235e4a4045bf7aa0aee1588b63312040}{c\_b2}, &i\_\_1)
+76          || *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} >= pow\_ri(&\hyperlink{FCONV_8c_a235e4a4045bf7aa0aee1588b63312040}{c\_b2}, &i\_\_2)) \{
+77 \textcolor{comment}{/* .... FOR LARGE NUMBERS AND VALUES WHICH WOULD OVERFLOW */}
+78 \textcolor{comment}{/*     REQUESTED FIELD - OUTPUT IN D FORMAT */}
+79 
+80     s\_wsfi(&io\_\_\_2);
+81     do\_fio(&\hyperlink{FCONV_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&(*\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}), (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+82     e\_wsfi();
+83     k = 14;
+84     \textcolor{keywordflow}{if} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&infil[k - 1] == \textcolor{charliteral}{' '}) \{
+85         k = 15;
+86     \}
+87 \textcolor{comment}{/* .... STORE MANTISSA TO MAX NO OF SIGNIFICANT FIGS FOR FIELD */}
+88     i1 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+89     i2 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} + *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} - 5;
+90     k1 = k + *i\_\_ - 5;
+91     s\_copy(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} + (i1 - 1), infil + (k - 1), i2 - (i1 - 1), k1 - (k - 1));
+92 \textcolor{comment}{/* .... NOW ADD EXPONENT */}
+93     i1 = i2 + 1;
+94     i2 += 4;
+95     s\_copy(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} + (i1 - 1), infil + 31, i2 - (i1 - 1), (ftnlen)4);
+96 
+97     \} \textcolor{keywordflow}{else} \{
+98 
+99 \textcolor{comment}{/* .... NORMAL ROUTE */}
+100 
+101 \textcolor{comment}{/* .... ROUND F TO J DECIMAL PLACES */}
+102     tentoj = pow\_di(&\hyperlink{FCONV_8c_a363bfb94356458e5fcc5cf5a7e4c7ac4}{c\_b7}, j);
+103     msd = (integer) (*\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+104     dlsd = *\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - (doublereal) msd;
+105     lsd = (integer) (dlsd * tentoj + d\_sign(&\hyperlink{FCONV_8c_a9e3de42da634766b363a777a3c6653a6}{c\_b8}, \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}));
+106     fj = (doublereal) msd + (doublereal) lsd / tentoj;
+107     s\_wsfi(&io\_\_\_12);
+108     do\_fio(&\hyperlink{FCONV_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&fj, (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+109     e\_wsfi();
+110     \textcolor{keywordflow}{for} (k = 1; k <= 35; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+111         \textcolor{keywordflow}{if} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&infil[k - 1] != \textcolor{charliteral}{' '}) \{
+112         \textcolor{keywordflow}{goto} L20;
+113         \}
+114 \textcolor{comment}{/* L10: */}
+115     \}
+116     k = 35;
+117 
+118 L20:
+119     l = 25 - k + 1 + *\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+120 
+121     i2 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} + *i\_\_ - 1;
+122     i1 = i2 - l + 1;
+123     k1 = *j + 25;
+124     s\_copy(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} + (i1 - 1), infil + (k - 1), i2 - (i1 - 1), k1 - (k - 1));
+125 
+126     \}
+127 
+128     \textcolor{keywordflow}{return} 0;
+129 \} \textcolor{comment}{/* fconv\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{FCONV_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{FCONV_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 18 of file F\+C\+O\+N\+V.\+c.
+
+
+
+Referenced by fconv\+\_\+().
+
+\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}!c\+\_\+b2@{c\+\_\+b2}}
+\index{c\+\_\+b2@{c\+\_\+b2}!F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b2}{c_b2}}]{\setlength{\rightskip}{0pt plus 5cm}real c\+\_\+b2 = 10.{\bf f}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{FCONV_8c_a235e4a4045bf7aa0aee1588b63312040}{}\label{FCONV_8c_a235e4a4045bf7aa0aee1588b63312040}
+
+
+Definition at line 17 of file F\+C\+O\+N\+V.\+c.
+
+
+
+Referenced by fconv\+\_\+().
+
+\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}!c\+\_\+b7@{c\+\_\+b7}}
+\index{c\+\_\+b7@{c\+\_\+b7}!F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b7}{c_b7}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+b7 = 10.\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{FCONV_8c_a363bfb94356458e5fcc5cf5a7e4c7ac4}{}\label{FCONV_8c_a363bfb94356458e5fcc5cf5a7e4c7ac4}
+
+
+Definition at line 19 of file F\+C\+O\+N\+V.\+c.
+
+
+
+Referenced by fconv\+\_\+().
+
+\index{F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}!c\+\_\+b8@{c\+\_\+b8}}
+\index{c\+\_\+b8@{c\+\_\+b8}!F\+C\+O\+N\+V.\+c@{F\+C\+O\+N\+V.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b8}{c_b8}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+b8 = .\+5\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{FCONV_8c_a9e3de42da634766b363a777a3c6653a6}{}\label{FCONV_8c_a9e3de42da634766b363a777a3c6653a6}
+
+
+Definition at line 20 of file F\+C\+O\+N\+V.\+c.
+
+
+
+Referenced by fconv\+\_\+().
+

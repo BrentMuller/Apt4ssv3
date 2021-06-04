@@ -22,7 +22,7 @@
       INTEGER FLAG
       LOGICAL OD,EX
 C
-      INCLUDE (FILTAB)
+      INCLUDE 'FILTAB.INC'
 C
 C
 C
@@ -34,7 +34,8 @@ C
         FLAG=0
 C
       ELSE IF (IND.EQ.2) THEN
-        CALL UCLOSE(ID,2,JRET)
+c        CALL UCLOSE(ID,2,JRET)
+      write(*,*)'TODO: uclose command-LIBOPC.f'
         IF (JRET.EQ.4) THEN
           FLAG=3
         ELSE

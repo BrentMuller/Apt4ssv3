@@ -1,0 +1,135 @@
+**** SOURCE FILE : CALCT.V01   ***
+*
+      SUBROUTINE CALCT(TUL,TOOLCE,TOOLAX,R,RN,PSIDE,T,LBASE)
+C
+C     PURPOSE: TO CALCULATE T, POINT ON TOOL WITH SAME NORMAL AS
+C              SURFACE AT POINT R, RN
+C
+C     ARGUMENTS:
+C         TUL     - TOOL GEOMETRY
+C         TOOLCE  - TOOL CENTER POINT
+C         TOOLAX  - TOOLAXIS VECTOR
+C         R       - SURFACE POINT
+C         RN      - SURFACE NORMAL
+C         PSIDE   - TOOL SIDE OF SURFACE
+C         T       - POINT ON TOOL WITH SAME NORMAL
+C         LBASE   - FLAG INDICATING THAT T IS ON BASE FLAT OF CUTTER
+C
+      DOUBLE PRECISION TUL,TOOLCE,TOOLAX,R,RN,PSIDE,T
+      DIMENSION TUL(7),TOOLCE(3),TOOLAX(3),R(3),RN(3),T(3)
+      LOGICAL LBASE
+C
+C     LOCAL VARIABLES:
+C
+      DOUBLE PRECISION ETA6,V1,V2,A,A1,B,C,D,SN,ZERO,TCYLEN
+      DIMENSION V1(3),V2(3),SN(3)
+      PARAMETER (ETA6=1.D-6, ZERO=0.D0)
+C
+      LBASE=.FALSE.
+C
+C.... COMPUTE LENGTH OF TOOL CYLINDER
+C
+      TCYLEN=TUL(7)-TUL(4)+TUL(1)
+C
+C.... ADJUST DIRECTION OF SURFACE NORMAL
+C
+      DO 10 I=1,3
+        SN(I)=PSIDE*RN(I)
+  10  CONTINUE
+C
+C.... DIRECTION OF SURFACE NORMAL WRT TO TOOLAXIS
+C
+      CALL DOTF(A1,SN,TOOLAX)
+C
+      IF ((A1.LT.ZERO).AND.(ABS(A1).GT.ETA6)) THEN
+C.... TAKE T AT TOP OF UPPER LINE SEGMENT
+        DO 100 I=1,3
+          V1(I)=R(I) - TOOLCE(I)
+  100   CONTINUE
+        CALL DOTF(A,V1,TOOLAX)
+        DO 102 I=1,3
+          V2(I)=V1(I) - A*TOOLAX(I)
+  102   CONTINUE
+        CALL VNORM(V2,V2)
+        DO 104 I=1,3
+          T(I)=TOOLCE(I) + TUL(2)*V2(I) + TCYLEN*TOOLAX(I)
+  104   CONTINUE
+      ELSE
+C
+C.... COMPUTATION DEPENDENT ON TYPE OF TOOL
+C
+C
+        IF (ABS(TUL(1)-TUL(2)).LE.ETA6) THEN
+C.... BALL-ENDED CUTTER
+            DO 110 I=1,3
+              V1(I)=R(I)-TOOLCE(I)
+              T(I)=TOOLCE(I)-TUL(1)*SN(I)
+110         CONTINUE
+            CALL DOTF(A,V1,TOOLAX)
+C.... LIMIT A TO VALID RANGE FOR TOOL CYLINDER
+            IF (A.LT.ZERO) A=ZERO
+            IF (A.GT.TCYLEN) A=TCYLEN
+C
+            IF (ABS(A1).LT.ETA6) THEN
+C.... ON CYLINDER
+                  DO 120 I=1,3
+                    T(I)=T(I)+A*TOOLAX(I)
+120               CONTINUE
+            END IF
+        ELSE
+C
+C     CORNER RADIUS CUTTER
+C     FIND TOOL POINT T WITH SAME NORMAL
+C
+          IF (ABS(A1).LT.ETA6) THEN
+C
+C.... CYLINDER CASE
+C
+            DO 130 I=1,3
+              V1(I)=R(I)-TOOLCE(I)
+130         CONTINUE
+            CALL DOTF(A,V1,TOOLAX)
+C.... LIMIT A TO VALID RANGE FOR TOOL CYLINDER
+            IF (A.LT.ZERO) A=ZERO
+            IF (A.GT.TCYLEN) A=TCYLEN
+C.... NOTE IN THIS CASE SN IS PERP. TO TA SO T WILL LIE ON CYLINDER
+            DO 140 I=1,3
+              T(I)=TOOLCE(I)+A*TOOLAX(I)-TUL(2)*SN(I)
+140         CONTINUE
+          ELSE IF ((1.D0-A1).LT.ETA6) THEN
+C
+C.... BOTTOM FLAT CASE
+C
+            DO 150 I=1,3
+              V1(I)=TOOLCE(I)-R(I)
+150         CONTINUE
+            CALL DOTF(B,V1,TOOLAX)
+            DO 155 I=1,3
+             V1(I)=V1(I) - B*TOOLAX(I)
+155         CONTINUE
+            CALL NORMA(V1,V2,D)
+            IF (D.GT.TUL(3)) D=TUL(3)
+            C=TUL(4)+TUL(2)
+            DO 160 I=1,3
+              T(I)=TOOLCE(I) -  C*TOOLAX(I) - D*V2(I)
+160         CONTINUE
+C.... INDICATE T IS ON FLAT BASE OF CUTTER
+            LBASE=.TRUE.
+          ELSE
+C.... CORNER RADIUS CASE
+            DO 170 I=1,3
+              V1(I)=SN(I)-A1*TOOLAX(I)
+170         CONTINUE
+            CALL VECMOD(V1,A)
+            C=TUL(3)/A
+            DO 180 I=1,3
+              T(I)=TOOLCE(I)-C*V1(I)-TUL(1)*SN(I)
+180         CONTINUE
+C
+          ENDIF
+C
+        ENDIF
+C
+      ENDIF
+C
+      END

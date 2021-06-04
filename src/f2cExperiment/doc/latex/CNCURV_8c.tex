@@ -1,0 +1,224 @@
+\hypertarget{CNCURV_8c}{}\section{C\+N\+C\+U\+R\+V.\+c File Reference}
+\label{CNCURV_8c}\index{C\+N\+C\+U\+R\+V.\+c@{C\+N\+C\+U\+R\+V.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+N\+C\+U\+R\+V.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{CNCURV_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{cncurv\+\_\+} (doublereal $\ast$uin, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+}, doublereal $\ast$cv, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+N\+C\+U\+R\+V.\+c@{C\+N\+C\+U\+R\+V.\+c}!cncurv\+\_\+@{cncurv\+\_\+}}
+\index{cncurv\+\_\+@{cncurv\+\_\+}!C\+N\+C\+U\+R\+V.\+c@{C\+N\+C\+U\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cncurv\+\_\+(doublereal $\ast$uin, doublereal $\ast$c\+\_\+\+\_\+, doublereal $\ast$cv, integer $\ast$mode)}{cncurv_(doublereal *uin, doublereal *c__, doublereal *cv, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int cncurv\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{uin, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{cv, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}{}\label{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5}
+
+
+Definition at line 17 of file C\+N\+C\+U\+R\+V.\+c.
+
+
+
+References blendf\+\_\+(), c\+\_\+\+\_\+, f, i\+\_\+\+\_\+, one, two, u, and zero.
+
+
+
+Referenced by ader\+\_\+(), angseg\+\_\+(), apt108\+\_\+(), apt109\+\_\+(), arcseg\+\_\+(), chdseg\+\_\+(), curflo\+\_\+(), floseg\+\_\+(), gencrv\+\_\+(), revolv\+\_\+(), and scpict\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+24     \textcolor{keyword}{static} doublereal smal = 1e-14;
+25     \textcolor{keyword}{static} doublereal \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two} = 2.;
+26 
+27     \textcolor{comment}{/* System generated locals */}
+28     integer i\_\_1;
+29     doublereal d\_\_1;
+30 
+31     \textcolor{comment}{/* Builtin functions */}
+32     \textcolor{keywordtype}{double} sqrt(doublereal);
+33 
+34     \textcolor{comment}{/* Local variables */}
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}[12];
+36     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+37     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, wsq;
+38     \textcolor{keyword}{static} integer klim;
+39     \textcolor{keyword}{static} doublereal uinc, twpw;
+40     \textcolor{keyword}{static} integer iuout;
+41     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(doublereal *, doublereal *);
+42 
+43 \textcolor{comment}{/* ---    PURPOSE IS TO RETRIEVE CURVE POINT, DERIVATIVE AND SECOND */}
+44 \textcolor{comment}{/* ---    DERIVATIVE AT A PARAMETER VALUE U */}
+45 \textcolor{comment}{/* ---    C IS THE CANON FORM OF A RATIONAL PARAMETRIC CUBIC CURVE */}
+46 \textcolor{comment}{/* ---    CV(1 THRU 3) CONTAINS THE CURVE POINT OUTPUT, */}
+47 \textcolor{comment}{/* ---    CV(5 THRU 7) THE FIRST DERIVATIVE, CV(9 THRU 11), THE */}
+48 \textcolor{comment}{/* ---    SECOND DERIVATIVE AND CV(13 THRU 15 ) THE NORMALISED */}
+49 \textcolor{comment}{/* ---    FIRST DERIVATIVE. */}
+50     \textcolor{comment}{/* Parameter adjustments */}
+51     --cv;
+52     --\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+53 
+54     \textcolor{comment}{/* Function Body */}
+55 
+56 \textcolor{comment}{/* ---      SET IUOUT FLAG TO 1 WHEN U IS OUTSIDE (0,1) */}
+57     iuout = 0;
+58     u = *uin;
+59     \textcolor{keywordflow}{if} (u >= zero && u <= one) \{
+60     \textcolor{keywordflow}{goto} L9;
+61     \}
+62     iuout = 1;
+63     \textcolor{keywordflow}{if} (u < zero) \{
+64     u = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+65     \}
+66     \textcolor{keywordflow}{if} (u > one) \{
+67     u = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+68     \}
+69 L9:
+70 
+71     \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(&u, f);
+72 
+73 \textcolor{comment}{/* ---  CV(1)=F(1)*C(1)+F(2)*C(2)+F(3)*C(3)+F(4)*C(4) */}
+74 \textcolor{comment}{/* ---  CV(2)=F(1)*C(5)+F(2)*C(6)+F(3)*C(7)+F(4)*C(8) */}
+75 \textcolor{comment}{/* ---  CV(3)=F(1)*C(9)+F(2)*C(10)+F(3)*C(11)+F(4)*C(12) */}
+76 \textcolor{comment}{/* ---  CV(4)=F(1)*C(13)+F(2)*C(14)+F(3)*C(15)+F(4)*C(16) */}
+77 \textcolor{comment}{/* ---  CV(5)=F(5)*C(1)+F(6)*C(2)+F(7)*C(3)+F(8)*C(4) */}
+78 \textcolor{comment}{/* ---  CV(6)=F(5)*C(5)+F(6)*C(6)+F(7)*C(7)+F(8)*C(8) */}
+79 \textcolor{comment}{/* ---  CV(7)=F(5)*C(9)+F(6)*C(10)+F(7)*C(11)+F(8)*C(12) */}
+80 \textcolor{comment}{/* ---  CV(8)=F(5)*C(13)+F(6)*C(14)+F(7)*C(15)+F(8)*C(16) */}
+81 \textcolor{comment}{/* ---  CV(9)=F(9)*C(1)+F(10)*C(2)+F(11)*C(3)+F(12)*C(4) */}
+82 \textcolor{comment}{/* ---  CV(10)=F(9)*C(5)+F(10)*C(6)+F(11)*C(7)+F(12)*C(8) */}
+83 \textcolor{comment}{/* ---  CV(11)=F(9)*C(9)+F(10)*C(10)+F(11)*C(11)+F(12)*C(12) */}
+84 \textcolor{comment}{/* ---  CV(12)=F(9)*C(13)+F(10)*C(14)+F(11)*C(15)+F(12)*C(16) */}
+85     klim = 9;
+86     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+87     klim = 1;
+88     \}
+89     i\_\_1 = klim;
+90     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; i\_\_ += 4) \{
+91     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = f[i\_\_ - 1] * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[1] + f[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[2] + f[i\_\_ + 1] * 
+      \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[3] 
+92         + f[i\_\_ + 2] * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[4];
+93     cv[i\_\_ + 1] = f[i\_\_ - 1] * c\_\_[5] + f[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * c\_\_[6] + f[i\_\_ + 1] * 
+94         c\_\_[7] + f[i\_\_ + 2] * c\_\_[8];
+95     cv[i\_\_ + 2] = f[i\_\_ - 1] * c\_\_[9] + f[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * c\_\_[10] + f[i\_\_ + 1] * 
+96         c\_\_[11] + f[i\_\_ + 2] * c\_\_[12];
+97     cv[i\_\_ + 3] = f[i\_\_ - 1] * c\_\_[13] + f[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * c\_\_[14] + f[i\_\_ + 1] * 
+98         c\_\_[15] + f[i\_\_ + 2] * c\_\_[16];
+99 \textcolor{comment}{/* L10: */}
+100     \}
+101     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+102     \textcolor{keywordflow}{goto} L100;
+103     \}
+104 \textcolor{comment}{/* ---     NOW CHECK IF THE FORM IS RATIONAL OR SIMPLE */}
+105     wsq = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+106     \textcolor{keywordflow}{for} (i\_\_ = 13; i\_\_ <= 16; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+107     \textcolor{keywordflow}{if} (i\_\_ > 14) \{
+108         wsq = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+109     \}
+110     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[i\_\_] - wsq, abs(d\_\_1)) > smal) \{
+111         \textcolor{keywordflow}{goto} L30;
+112     \}
+113 \textcolor{comment}{/* L25: */}
+114     \}
+115 \textcolor{comment}{/* ---     FORM IS SIMPLE NON-RATIONAL SO SKIP THESE CALCULATIONS */}
+116     \textcolor{keywordflow}{goto} L100;
+117 \textcolor{comment}{/* ---     CALCULATE DERIVATIVES BASED ON FORMULA PV(I)=CV(I)/CV(4) */}
+118 L30:
+119     wsq = cv[4] * cv[4];
+120     twpw = two * cv[8] / cv[4];
+121     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+122     cv[i\_\_ + 4] = (cv[i\_\_ + 4] * cv[4] - cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cv[8]) / wsq;
+123     cv[i\_\_ + 8] = (cv[i\_\_ + 8] * cv[4] - cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cv[12]) / wsq - cv[i\_\_ 
+124         + 4] * twpw;
+125 \textcolor{comment}{/* L40: */}
+126     \}
+127 
+128 L100:
+129     wsq = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+130     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+131     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] /= cv[4];
+132     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+133         \textcolor{keywordflow}{goto} L110;
+134     \}
+135 \textcolor{comment}{/* Computing 2nd power */}
+136     d\_\_1 = cv[i\_\_ + 4];
+137     wsq += d\_\_1 * d\_\_1;
+138 L110:
+139     ;
+140     \}
+141     cv[4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+142     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+143     \textcolor{keywordflow}{goto} L200;
+144     \}
+145 \textcolor{comment}{/* ---      UNITIZE FIRST DERIVATIVE */}
+146     wsq = sqrt(wsq);
+147     \textcolor{keywordflow}{if} (wsq < smal) \{
+148     wsq = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+149     \}
+150     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+151     cv[i\_\_ + 12] = cv[i\_\_ + 4] / wsq;
+152     cv[(i\_\_ << 2) + 4] = one;
+153 \textcolor{comment}{/* L120: */}
+154     \}
+155 
+156 L200:
+157 
+158     \textcolor{keywordflow}{if} (iuout == 0 || *\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+159     \textcolor{keywordflow}{goto} L999;
+160     \}
+161     uinc = *uin;
+162     \textcolor{keywordflow}{if} (*uin > one) \{
+163     uinc = *uin - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+164     \}
+165     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+166     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] += uinc * cv[i\_\_ + 4];
+167     cv[i\_\_ + 8] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+168 \textcolor{comment}{/* L210: */}
+169     \}
+170 
+171 L999:
+172     \textcolor{keywordflow}{return} 0;
+173 \} \textcolor{comment}{/* cncurv\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNCURV_8c_a04761b7674edc68920b6ae1f87beb0b5_icgraph}
+\end{center}
+\end{figure}
+
+

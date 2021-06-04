@@ -28,12 +28,14 @@ C
 C
 C.... INQUIRE IF FILE EXISTS
 C
-      CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'U',0,JRET)
+c      CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'U',0,JRET)
+      write(*,*)'TODO: uopen command, WTDIRE.f'
       IF (JRET.EQ.0) THEN
 C.... FILE ALREADY EXISTS - SHOULD A NEW VERSION BE WRITTEN
         IF (IU.LT.0) THEN
 C.... YES - OPEN ATTACHED TO UNIT ID
-          CALL UOPEN(ID,FLNAME(:NLEN),1,2,80,0,'U',0,JRET)
+c          CALL UOPEN(ID,FLNAME(:NLEN),1,2,80,0,'U',0,JRET)
+      write(*,*)'TODO: uopen command, WTDIRE.f'
           IF (JRET.NE.0) GOTO 20
           IRET=0
         ELSE
@@ -41,7 +43,8 @@ C.... YES - OPEN ATTACHED TO UNIT ID
         ENDIF
       ELSE
 C.... FILE DOES NOT EXIST - OPEN ATTACHED TO UNIT ID
-          CALL UOPEN(ID,FLNAME(:NLEN),1,2,80,0,'U',0,JRET)
+c          CALL UOPEN(ID,FLNAME(:NLEN),1,2,80,0,'U',0,JRET)
+      write(*,*)'TODO: uopen command, WTDIRE.f'
           IF (JRET.NE.0) GOTO 20
         IRET=0
       ENDIF

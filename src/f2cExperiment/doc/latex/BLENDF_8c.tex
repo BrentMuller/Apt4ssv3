@@ -1,0 +1,115 @@
+\hypertarget{BLENDF_8c}{}\section{B\+L\+E\+N\+D\+F.\+c File Reference}
+\label{BLENDF_8c}\index{B\+L\+E\+N\+D\+F.\+c@{B\+L\+E\+N\+D\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+L\+E\+N\+D\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{BLENDF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$fu)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+L\+E\+N\+D\+F.\+c@{B\+L\+E\+N\+D\+F.\+c}!blendf\+\_\+@{blendf\+\_\+}}
+\index{blendf\+\_\+@{blendf\+\_\+}!B\+L\+E\+N\+D\+F.\+c@{B\+L\+E\+N\+D\+F.\+c}}
+\subsubsection[{\texorpdfstring{blendf\+\_\+(doublereal $\ast$u, doublereal $\ast$fu)}{blendf_(doublereal *u, doublereal *fu)}}]{\setlength{\rightskip}{0pt plus 5cm}int blendf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{fu}
+\end{DoxyParamCaption}
+)}\hypertarget{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{}\label{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}
+
+
+Definition at line 17 of file B\+L\+E\+N\+D\+F.\+c.
+
+
+
+References dif, four, i\+\_\+\+\_\+, one, six, three, two, u, u2, and zero.
+
+
+
+Referenced by cncurv\+\_\+(), cnsurg\+\_\+(), cnsurh\+\_\+(), crblen\+\_\+(), and crsfit\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* Initialized data */}
+20 
+21     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+23     \textcolor{keyword}{static} doublereal \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two} = 2.;
+24     \textcolor{keyword}{static} doublereal \hyperlink{PRO021_8c_a07e800919e864a03d92799035517e67e}{three} = 3.;
+25     \textcolor{keyword}{static} doublereal \hyperlink{INPAT_8c_ae88501af11d627bf97daf24bfefa9461}{four} = 4.;
+26     \textcolor{keyword}{static} doublereal \hyperlink{PRO026_8c_aa4bcfcd33d448b1c8eb917f0df2ae83a}{six} = 6.;
+27 
+28     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+29     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2}, u3, \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif};
+30 
+31     \textcolor{comment}{/* Parameter adjustments */}
+32     --fu;
+33 
+34     \textcolor{comment}{/* Function Body */}
+35 \textcolor{comment}{/* ------ INPUT IS A SCALAR U */}
+36 \textcolor{comment}{/* ------ OUTPUT ARE VALUES OF COONS CUBIC BLEND FUNCTIONS */}
+37 \textcolor{comment}{/* ------ (FU(I),I=1,4), THEIR FIRST AND SECOND */}
+38     \textcolor{keywordflow}{if} (*u < zero || *u > one) \{
+39     \textcolor{keywordflow}{goto} L100;
+40     \}
+41 \textcolor{comment}{/* ------ DERIVATIVES (FU(I),I=5,12) */}
+42     u2 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+43     u3 = u2 * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+44     dif = u3 - \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2};
+45     fu[1] = dif + dif - u2 + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+46     fu[2] = -fu[1] + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+47     fu[3] = dif - u2 + *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+48     fu[4] = \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif};
+49     dif = three * (u2 - *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+50     fu[5] = dif + \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif};
+51     fu[6] = -fu[5];
+52     fu[7] = dif - *u + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+53     fu[8] = dif + *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+54     dif = six * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+55     fu[9] = dif + dif - \hyperlink{PRO026_8c_aa4bcfcd33d448b1c8eb917f0df2ae83a}{six};
+56     fu[10] = -fu[9];
+57     fu[11] = dif - \hyperlink{INPAT_8c_ae88501af11d627bf97daf24bfefa9461}{four};
+58     fu[12] = dif - \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two};
+59     \textcolor{keywordflow}{return} 0;
+60 L100:
+61     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 12; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+62 \textcolor{comment}{/* L110: */}
+63     fu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+64     \}
+65     \textcolor{keywordflow}{if} (*u > one) \{
+66     \textcolor{keywordflow}{goto} L200;
+67     \}
+68 \textcolor{comment}{/* ---  U IS LESS THAN ZERO */}
+69     fu[1] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+70     fu[3] = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+71     fu[7] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+72     \textcolor{keywordflow}{return} 0;
+73 L200:
+74     fu[2] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+75     fu[4] = *u - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+76     fu[8] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+77     \textcolor{keywordflow}{return} 0;
+78 \} \textcolor{comment}{/* blendf\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BLENDF_8c_adcd0358291353ee31352d01d46b864c9_icgraph}
+\end{center}
+\end{figure}
+
+

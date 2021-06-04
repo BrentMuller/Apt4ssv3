@@ -1,0 +1,96 @@
+\hypertarget{TVDAFS_8c}{}\section{T\+V\+D\+A\+F\+S.\+c File Reference}
+\label{TVDAFS_8c}\index{T\+V\+D\+A\+F\+S.\+c@{T\+V\+D\+A\+F\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+V\+D\+A\+F\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{TVDAFS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TVDAFS_8c_afe383d4f3b52c29baf53184f6b6c7c7b}{tvdafs\+\_\+} (doublereal $\ast$trm, doublereal $\ast$geo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+V\+D\+A\+F\+S.\+c@{T\+V\+D\+A\+F\+S.\+c}!tvdafs\+\_\+@{tvdafs\+\_\+}}
+\index{tvdafs\+\_\+@{tvdafs\+\_\+}!T\+V\+D\+A\+F\+S.\+c@{T\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{tvdafs\+\_\+(doublereal $\ast$trm, doublereal $\ast$geo)}{tvdafs_(doublereal *trm, doublereal *geo)}}]{\setlength{\rightskip}{0pt plus 5cm}int tvdafs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{trm, }
+\item[{doublereal $\ast$}]{geo}
+\end{DoxyParamCaption}
+)}\hypertarget{TVDAFS_8c_afe383d4f3b52c29baf53184f6b6c7c7b}{}\label{TVDAFS_8c_afe383d4f3b52c29baf53184f6b6c7c7b}
+
+
+Definition at line 17 of file T\+V\+D\+A\+F\+S.\+c.
+
+
+
+References a, i\+\_\+\+\_\+, j, and n.
+
+
+
+Referenced by teval\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* System generated locals */}
+20     integer i\_\_1;
+21 
+22     \textcolor{comment}{/* Local variables */}
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3];
+24     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}, ix, mu, mv, iy, iz;
+25 
+26 \textcolor{comment}{/* TRANSFORMATOR ROUTINE FOR VDAFS SURFACE PATCH USING */}
+27 \textcolor{comment}{/* APT TRANSFORMATION MATRIX TRM */}
+28     \textcolor{comment}{/* Parameter adjustments */}
+29     --geo;
+30     trm -= 5;
+31 
+32     \textcolor{comment}{/* Function Body */}
+33     mu = (integer) geo[1];
+34     mv = (integer) geo[2];
+35     n = mu * mv;
+36 \textcolor{comment}{/* 1ST 2 LOCATIONS OF GEO CONTAIN DIMENSIONS OF ARRAYS AX,AY,AZ OF COEFFI */}
+37 \textcolor{comment}{/* THESE COEFFICIENT MATRICES FOLLOW IN CONSECUTIVE LOCATIONS IN GEO. */}
+38 \textcolor{comment}{/* ALL COEFFICIENT VECTORS MUST BE ROTATED. */}
+39     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+40     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+41     ix = i\_\_ + 2;
+42     iy = ix + \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+43     iz = iy + \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+44     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+45 \textcolor{comment}{/* L5: */}
+46         a[j - 1] = trm[(j << 2) + 1] * geo[ix] + trm[(j << 2) + 2] * geo[
+47             iy] + trm[(j << 2) + 3] * geo[iz];
+48     \}
+49     geo[ix] = a[0];
+50     geo[iy] = a[1];
+51     geo[iz] = a[2];
+52 \textcolor{comment}{/* L10: */}
+53     \}
+54 \textcolor{comment}{/* (0,0) COEFFICIENT IN EACH ARRAY IS ALSO TRANSLATED */}
+55     geo[3] += trm[8];
+56     geo[n + 3] += trm[12];
+57     geo[(n << 1) + 3] += trm[16];
+58     \textcolor{keywordflow}{return} 0;
+59 \} \textcolor{comment}{/* tvdafs\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TVDAFS_8c_afe383d4f3b52c29baf53184f6b6c7c7b_icgraph}
+\end{center}
+\end{figure}
+
+

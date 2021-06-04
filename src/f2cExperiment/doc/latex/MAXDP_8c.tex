@@ -1,0 +1,1062 @@
+\hypertarget{MAXDP_8c}{}\section{M\+A\+X\+D\+P.\+c File Reference}
+\label{MAXDP_8c}\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for M\+A\+X\+D\+P.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{MAXDP_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MAXDP_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1}~\hyperlink{UNITS_8c_a04f922ec6d84a0f05071d2b4fead7769}{addcom\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{hold\+\_\+1}~\hyperlink{TOLER_8c_a73c7f9e8f57baa63e71a8cdb47fc95a5}{hold\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_abc1346aa06c8253f8f5e51153b357986}{hsave\+\_\+1}~\hyperlink{TOLER_8c_a44d4b25938c6f6e8954fb4ba50066f0f}{hsave\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{modess\+\_\+1}~\hyperlink{TLNORM_8c_ad9b35e44b83651cf9aca47d405c59f8b}{modess\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\item 
+\#define \hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin}~((integer $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 46)
+\item 
+\#define \hyperlink{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh}~((doublereal $\ast$)\&\hyperlink{TOLER_8c_abc1346aa06c8253f8f5e51153b357986}{hsave\+\_\+1} + 26)
+\item 
+\#define \hyperlink{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{elmax}~((doublereal $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1})
+\item 
+\#define \hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal}~((doublereal $\ast$)\&\hyperlink{TOLER_8c_abc1346aa06c8253f8f5e51153b357986}{hsave\+\_\+1} + 25)
+\item 
+\#define \hyperlink{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}{ibtflg}~((integer $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 44)
+\item 
+\#define \hyperlink{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}{clngth}~((doublereal $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 1)
+\item 
+\#define \hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin}~((integer $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 46)
+\item 
+\#define \hyperlink{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh}~((doublereal $\ast$)\&\hyperlink{TOLER_8c_abc1346aa06c8253f8f5e51153b357986}{hsave\+\_\+1} + 26)
+\item 
+\#define \hyperlink{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{elmax}~((doublereal $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1})
+\item 
+\#define \hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal}~((doublereal $\ast$)\&\hyperlink{TOLER_8c_abc1346aa06c8253f8f5e51153b357986}{hsave\+\_\+1} + 25)
+\item 
+\#define \hyperlink{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}{ibtflg}~((integer $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 44)
+\item 
+\#define \hyperlink{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}{clngth}~((doublereal $\ast$)\&\hyperlink{UNITS_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1} + 1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MAXDP_8c_a1d315d2ddb99d6c3089ed48da7da426e}{maxdp\+\_\+} (doublereal $\ast$dcml, doublereal $\ast$elngth)
+\item 
+int \hyperlink{MAXDP_8c_aa83eb2378deabf57b6b0150c3e30c629}{maxdph\+\_\+} (doublereal $\ast$dcml, doublereal $\ast$elngth)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{MAXDP_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{MAXDP_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{MAXDP_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{MAXDP_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{MAXDP_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{MAXDP_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{MAXDP_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{MAXDP_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{MAXDP_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{MAXDP_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{MAXDP_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{MAXDP_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{MAXDP_8c_a6efa17e8338c940556ba5d28c5f62f2f}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{MAXDP_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{MAXDP_8c_ae55908b20f4ef5cabe520b612dab0125}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{MAXDP_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{MAXDP_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{MAXDP_8c_a0bcc3ea58afb64146e34d6d7187346a1}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{MAXDP_8c_ac5f21e069a4da2a20122d6dfd1388062}{addcom} \mbox{[}25\mbox{]}\\
+\} \hyperlink{MAXDP_8c_a0cb17db45f69bf48c3e3297f52acf811}{addcom\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MAXDP_8c_a9df220b36baeefdebacd50c591a50ae0}{jhldfg}\\
+\>integer \hyperlink{MAXDP_8c_a07b98b2b9d86ad8728f2ca989f3ea5fb}{ithcnt}\\
+\>integer \hyperlink{MAXDP_8c_a91fa18fd11260d9118b8cf77b7280a76}{itabh} \mbox{[}100\mbox{]}\\
+\} \hyperlink{MAXDP_8c_a85b6055b3f0fa30e98df4699a745c516}{hold\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{MAXDP_8c_a8e20a930e9e04c68cfd888dcbb22e947}{saveh} \mbox{[}50\mbox{]}\\
+\} \hyperlink{MAXDP_8c_a3c63b2a41ea0d76593bbff1ab02e9a36}{hsave\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MAXDP_8c_a7240ca3e0112e61cd600534cf902d1e7}{modess}\\
+\>integer \hyperlink{MAXDP_8c_a311dc8c3151c7ebaf2bd700484c955d3}{msschk}\\
+\>integer \hyperlink{MAXDP_8c_acedf5cb0c3e68837e5659a12dbfe74fb}{mssarl}\\
+\} \hyperlink{MAXDP_8c_a6a1631220522b665e898acc5129faff8}{modess\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{MAXDP_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{MAXDP_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{MAXDP_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\} \hyperlink{MAXDP_8c_a781025a0b95b9919bd3e18f93137a2c3}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!addcom\+\_\+1@{addcom\+\_\+1}}
+\index{addcom\+\_\+1@{addcom\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{addcom\+\_\+1}{addcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define addcom\+\_\+1~{\bf addcom\+\_\+}}\hypertarget{MAXDP_8c_a5f276675dccab4f64076d59a9cff054d}{}\label{MAXDP_8c_a5f276675dccab4f64076d59a9cff054d}
+
+
+Definition at line 43 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{MAXDP_8c_a5d8742d837dd932468df10068bbc1875}{}\label{MAXDP_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 30 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!clngth@{clngth}}
+\index{clngth@{clngth}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{clngth}{clngth}}]{\setlength{\rightskip}{0pt plus 5cm}\#define clngth~((doublereal $\ast$)\&{\bf addcom\+\_\+1} + 1)}\hypertarget{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}{}\label{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!clngth@{clngth}}
+\index{clngth@{clngth}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{clngth}{clngth}}]{\setlength{\rightskip}{0pt plus 5cm}\#define clngth~((doublereal $\ast$)\&{\bf addcom\+\_\+1} + 1)}\hypertarget{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}{}\label{MAXDP_8c_a9515c9e338510d49f048f153eb9f32ca}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{MAXDP_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!decmal@{decmal}}
+\index{decmal@{decmal}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{decmal}{decmal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define decmal~((doublereal $\ast$)\&{\bf hsave\+\_\+1} + 25)}\hypertarget{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{}\label{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!decmal@{decmal}}
+\index{decmal@{decmal}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{decmal}{decmal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define decmal~((doublereal $\ast$)\&{\bf hsave\+\_\+1} + 25)}\hypertarget{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{}\label{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!elmax@{elmax}}
+\index{elmax@{elmax}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{elmax}{elmax}}]{\setlength{\rightskip}{0pt plus 5cm}\#define elmax~((doublereal $\ast$)\&{\bf addcom\+\_\+1})}\hypertarget{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{}\label{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!elmax@{elmax}}
+\index{elmax@{elmax}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{elmax}{elmax}}]{\setlength{\rightskip}{0pt plus 5cm}\#define elmax~((doublereal $\ast$)\&{\bf addcom\+\_\+1})}\hypertarget{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{}\label{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!elngh@{elngh}}
+\index{elngh@{elngh}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{elngh}{elngh}}]{\setlength{\rightskip}{0pt plus 5cm}\#define elngh~((doublereal $\ast$)\&{\bf hsave\+\_\+1} + 26)}\hypertarget{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{}\label{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!elngh@{elngh}}
+\index{elngh@{elngh}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{elngh}{elngh}}]{\setlength{\rightskip}{0pt plus 5cm}\#define elngh~((doublereal $\ast$)\&{\bf hsave\+\_\+1} + 26)}\hypertarget{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{}\label{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{MAXDP_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{MAXDP_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 24 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!hold\+\_\+1@{hold\+\_\+1}}
+\index{hold\+\_\+1@{hold\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{hold\+\_\+1}{hold_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define hold\+\_\+1~{\bf hold\+\_\+}}\hypertarget{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{}\label{MAXDP_8c_a9033c9018e81f440c9967624058f3228}
+
+
+Definition at line 49 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!hsave\+\_\+1@{hsave\+\_\+1}}
+\index{hsave\+\_\+1@{hsave\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{hsave\+\_\+1}{hsave_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define hsave\+\_\+1~{\bf hsave\+\_\+}}\hypertarget{MAXDP_8c_abc1346aa06c8253f8f5e51153b357986}{}\label{MAXDP_8c_abc1346aa06c8253f8f5e51153b357986}
+
+
+Definition at line 55 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ibtflg@{ibtflg}}
+\index{ibtflg@{ibtflg}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ibtflg}{ibtflg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibtflg~((integer $\ast$)\&{\bf addcom\+\_\+1} + 44)}\hypertarget{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}{}\label{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ibtflg@{ibtflg}}
+\index{ibtflg@{ibtflg}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ibtflg}{ibtflg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibtflg~((integer $\ast$)\&{\bf addcom\+\_\+1} + 44)}\hypertarget{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}{}\label{MAXDP_8c_afa0e8f187316b3ef7270da781755eed4}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{MAXDP_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{MAXDP_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 67 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!jlin@{jlin}}
+\index{jlin@{jlin}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{jlin}{jlin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jlin~((integer $\ast$)\&{\bf addcom\+\_\+1} + 46)}\hypertarget{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{}\label{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!jlin@{jlin}}
+\index{jlin@{jlin}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{jlin}{jlin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jlin~((integer $\ast$)\&{\bf addcom\+\_\+1} + 46)}\hypertarget{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{}\label{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!modess\+\_\+1@{modess\+\_\+1}}
+\index{modess\+\_\+1@{modess\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{modess\+\_\+1}{modess_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modess\+\_\+1~{\bf modess\+\_\+}}\hypertarget{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{}\label{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}
+
+
+Definition at line 61 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{MAXDP_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{MAXDP_8c_ac473806d761bac6bbdc70810932acff0}{}\label{MAXDP_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 37 of file M\+A\+X\+D\+P.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!maxdp\+\_\+@{maxdp\+\_\+}}
+\index{maxdp\+\_\+@{maxdp\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{maxdp\+\_\+(doublereal $\ast$dcml, doublereal $\ast$elngth)}{maxdp_(doublereal *dcml, doublereal *elngth)}}]{\setlength{\rightskip}{0pt plus 5cm}int maxdp\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{dcml, }
+\item[{doublereal $\ast$}]{elngth}
+\end{DoxyParamCaption}
+)}\hypertarget{MAXDP_8c_a1d315d2ddb99d6c3089ed48da7da426e}{}\label{MAXDP_8c_a1d315d2ddb99d6c3089ed48da7da426e}
+
+
+Definition at line 81 of file M\+A\+X\+D\+P.\+c.
+
+
+
+References apt299\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, decmal, elmax, elngh, f, fxcor\+\_\+1, hold\+\_\+1, ibugg\+\_\+1, jlin, modess\+\_\+1, z2, and z3.
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+82 \{
+83     \textcolor{comment}{/* Initialized data */}
+84 
+85     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{z2} = 2.;
+86     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_a8f55453e5803c6b7e40916652c5d1a1d}{z3} = 3.;
+87     \textcolor{keyword}{static} doublereal z4 = 4.;
+88     \textcolor{keyword}{static} doublereal smal = 1e-12;
+89     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ppword[8] = \textcolor{stringliteral}{"MAXDP   "};
+90 
+91     \textcolor{comment}{/* System generated locals */}
+92     doublereal d\_\_1;
+93 
+94     \textcolor{comment}{/* Local variables */}
+95     \textcolor{keyword}{static} integer kk;
+96     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+97 \textcolor{preprocessor}{#define jlin ((integer *)&addcom\_1 + 46)}
+98 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+99 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+100     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}();
+101 \textcolor{preprocessor}{#define elngh ((doublereal *)&hsave\_1 + 26)}
+102 \textcolor{preprocessor}{#define elmax ((doublereal *)&addcom\_1)}
+103 \textcolor{preprocessor}{#define decmal ((doublereal *)&hsave\_1 + 25)}
+104 \textcolor{preprocessor}{#define ibtflg ((integer *)&addcom\_1 + 44)}
+105 \textcolor{preprocessor}{#define clngth ((doublereal *)&addcom\_1 + 1)}
+106     \textcolor{keyword}{static} integer ippwrd[2];
+107 
+108 
+109 
+110 
+111 
+112 \textcolor{comment}{/* ...  21. ADDCOM BLOCK */}
+113 
+114 
+115 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+116 
+117 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+118 
+119 
+120 
+121 
+122 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+123 
+124 
+125 
+126 
+127 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+128 
+129 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+130 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+131 
+132 
+133 
+134 
+135 
+136 
+137 
+138 
+139 
+140     *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} = *dcml;
+141     *\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh} = *elngth;
+142     \textcolor{keywordflow}{if} (\hyperlink{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{hold\_1}.jhldfg == 0) \{
+143     \textcolor{keywordflow}{goto} L1;
+144     \}
+145 \textcolor{comment}{/*             /-IF JHLDFG IS NOT ZERO, ARELEM IS SEARCHING FOR A CHECK */}
+146 \textcolor{comment}{/*             /-SURFACE.  INTERVENING COMMANDS NOT TO BE EXECUTED YET. */}
+147     \hyperlink{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{hold\_1}.itabh[\hyperlink{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{hold\_1}.ithcnt - 1] = 10;
+148     ++\hyperlink{MAXDP_8c_a9033c9018e81f440c9967624058f3228}{hold\_1}.ithcnt;
+149     \textcolor{keywordflow}{return} 0;
+150 L1:
+151 
+152 \textcolor{comment}{/*             /-SPECIAL FLAG FOR SS ARELEM MODE AND DEBUGGING LEVEL PRIN */}
+153 \textcolor{comment}{/*             /-MAXDP/-K,L WHERE -K IS -2 OR LESS AND IBUG=L */}
+154     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} > -z2) \{
+155     \textcolor{keywordflow}{goto} L200;
+156     \}
+157 \textcolor{comment}{/*             /-SET SWITCH FOR SS SPECIAL ARELEM(ON FOR-2, OFF FOR -3) */}
+158     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z2, abs(d\_\_1)) < smal) \{
+159     \hyperlink{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{modess\_1}.mssarl = 1;
+160     \}
+161     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z3, abs(d\_\_1)) < smal) \{
+162     \hyperlink{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{modess\_1}.mssarl = 0;
+163     \}
+164 \textcolor{comment}{/*             /-SET VALUE OF IBUG FROM SECOND ARGUMENT IF DECMAL=-4 */}
+165     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z4, abs(d\_\_1)) < smal) \{
+166     \hyperlink{MAXDP_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug = (integer) (*\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh});
+167     \}
+168 \textcolor{comment}{/*             /-OMIT WRITING A MAXDP RECORD FOR THESE CASES */}
+169     \textcolor{keywordflow}{goto} L100;
+170 
+171 L200:
+172     ippwrd[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(ppword, (ftnlen)4);
+173     ippwrd[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(ppword + 4, (ftnlen)4);
+174 \textcolor{comment}{/* ...  USE THIS MAXIMUM STEP IN ALL ARITHMETIC CALCULATIONS */}
+175     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh} <= 0.) \{
+176     \textcolor{keywordflow}{goto} L30;
+177     \} \textcolor{keywordflow}{else} \{
+178     \textcolor{keywordflow}{goto} L10;
+179     \}
+180 L10:
+181     *\hyperlink{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{elmax} = *\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh};
+182     kk = 2;
+183 L20:
+184     \hyperlink{MAXDP_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.dpmax = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal};
+185     \textcolor{keywordflow}{goto} L70;
+186 
+187 L30:
+188     kk = 1;
+189     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} < 0.) \{
+190     \textcolor{keywordflow}{goto} L50;
+191     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} == 0) \{
+192     \textcolor{keywordflow}{goto} L40;
+193     \} \textcolor{keywordflow}{else} \{
+194     \textcolor{keywordflow}{goto} L20;
+195     \}
+196 L40:
+197     *\hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin} = 0;
+198     \textcolor{keywordflow}{goto} L70;
+199 
+200 \textcolor{comment}{/* ...     THE COMMAND MAXDP/-1 IS NOT IMPLEMENTED */}
+201 L50:
+202     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) < 0.) \{
+203     \textcolor{keywordflow}{goto} L60;
+204     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d\_\_1 == 0) \{
+205     \textcolor{keywordflow}{goto} L70;
+206     \} \textcolor{keywordflow}{else} \{
+207     \textcolor{keywordflow}{goto} L40;
+208     \}
+209 L60:
+210     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + 1.1\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} > 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+211     *\hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin} = 1;
+212     \}
+213 
+214 L70:
+215     \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(&kk, ippwrd, &\hyperlink{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal});
+216     \textcolor{keywordflow}{if} (kk == 1) \{
+217     \textcolor{keywordflow}{goto} L100;
+218     \}
+219     \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(&\hyperlink{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh}, &\hyperlink{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+220 
+221 L100:
+222     \textcolor{keywordflow}{return} 0;
+223 \} \textcolor{comment}{/* maxdp\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MAXDP_8c_a1d315d2ddb99d6c3089ed48da7da426e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MAXDP_8c_a1d315d2ddb99d6c3089ed48da7da426e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!maxdph\+\_\+@{maxdph\+\_\+}}
+\index{maxdph\+\_\+@{maxdph\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{maxdph\+\_\+(doublereal $\ast$dcml, doublereal $\ast$elngth)}{maxdph_(doublereal *dcml, doublereal *elngth)}}]{\setlength{\rightskip}{0pt plus 5cm}int maxdph\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{dcml, }
+\item[{doublereal $\ast$}]{elngth}
+\end{DoxyParamCaption}
+)}\hypertarget{MAXDP_8c_aa83eb2378deabf57b6b0150c3e30c629}{}\label{MAXDP_8c_aa83eb2378deabf57b6b0150c3e30c629}
+
+
+Definition at line 243 of file M\+A\+X\+D\+P.\+c.
+
+
+
+References apt299\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, decmal, elmax, elngh, f, fxcor\+\_\+1, ibugg\+\_\+1, jlin, modess\+\_\+1, z2, and z3.
+
+
+
+Referenced by apt211\+\_\+().
+
+
+\begin{DoxyCode}
+244 \{
+245     \textcolor{comment}{/* Initialized data */}
+246 
+247     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ppword[8] = \textcolor{stringliteral}{"MAXDP   "};
+248     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{z2} = 2.;
+249     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_a8f55453e5803c6b7e40916652c5d1a1d}{z3} = 3.;
+250     \textcolor{keyword}{static} doublereal z4 = 4.;
+251     \textcolor{keyword}{static} doublereal smal = 1e-12;
+252 
+253     \textcolor{comment}{/* System generated locals */}
+254     doublereal d\_\_1;
+255 
+256     \textcolor{comment}{/* Local variables */}
+257     \textcolor{keyword}{static} integer kk;
+258     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+259 \textcolor{preprocessor}{#define jlin ((integer *)&addcom\_1 + 46)}
+260 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+261 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+262     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}();
+263 \textcolor{preprocessor}{#define elngh ((doublereal *)&hsave\_1 + 26)}
+264 \textcolor{preprocessor}{#define elmax ((doublereal *)&addcom\_1)}
+265 \textcolor{preprocessor}{#define decmal ((doublereal *)&hsave\_1 + 25)}
+266 \textcolor{preprocessor}{#define ibtflg ((integer *)&addcom\_1 + 44)}
+267 \textcolor{preprocessor}{#define clngth ((doublereal *)&addcom\_1 + 1)}
+268     \textcolor{keyword}{static} integer ippwrd[2];
+269 
+270 
+271 
+272 
+273 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+274 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+275 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+276 
+277 
+278 \textcolor{comment}{/* ...  21. ADDCOM BLOCK */}
+279 
+280 
+281 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+282 
+283 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+284 
+285 
+286 
+287 
+288 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+289 
+290 
+291 
+292 
+293 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+294 
+295 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+296 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+297 
+298 
+299 
+300 
+301 
+302 
+303 
+304 
+305 
+306 
+307 \textcolor{comment}{/*             /-SPECIAL FLAG FOR SS ARELEM MODE AND DEBUGGING LEVEL PRIN */}
+308 \textcolor{comment}{/*             /-MAXDP/-K,L WHERE -K IS -2 OR LESS AND IBUG=L */}
+309     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} > -z2) \{
+310     \textcolor{keywordflow}{goto} L200;
+311     \}
+312 \textcolor{comment}{/*             /-SET SWITCH FOR SS SPECIAL ARELEM(ON FOR-2, OFF FOR -3) */}
+313     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z2, abs(d\_\_1)) < smal) \{
+314     \hyperlink{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{modess\_1}.mssarl = 1;
+315     \}
+316     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z3, abs(d\_\_1)) < smal) \{
+317     \hyperlink{MAXDP_8c_ab0ea6ae800a507f0b827c25530ab25e8}{modess\_1}.mssarl = 0;
+318     \}
+319 \textcolor{comment}{/*             /-SET VALUE OF IBUG FROM SECOND ARGUMENT IF DECMAL=-4 */}
+320     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + z4, abs(d\_\_1)) < smal) \{
+321     \hyperlink{MAXDP_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug = (integer) (*\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh});
+322     \}
+323 \textcolor{comment}{/*             /-OMIT WRITING A MAXDP RECORD FOR THESE CASES */}
+324     \textcolor{keywordflow}{goto} L100;
+325 
+326 L200:
+327     ippwrd[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(ppword, (ftnlen)4);
+328     ippwrd[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(ppword + 4, (ftnlen)4);
+329 \textcolor{comment}{/* ...  USE THIS MAXIMUM STEP IN ALL ARITHMETIC CALCULATIONS */}
+330     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh} <= 0.) \{
+331     \textcolor{keywordflow}{goto} L30;
+332     \} \textcolor{keywordflow}{else} \{
+333     \textcolor{keywordflow}{goto} L10;
+334     \}
+335 L10:
+336     *\hyperlink{MAXDP_8c_ac9b18398bc94de386632b6043df6bcbf}{elmax} = *\hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh};
+337     kk = 2;
+338 L20:
+339     \hyperlink{MAXDP_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.dpmax = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal};
+340     \textcolor{keywordflow}{goto} L70;
+341 
+342 L30:
+343     kk = 1;
+344     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} < 0.) \{
+345     \textcolor{keywordflow}{goto} L50;
+346     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} == 0) \{
+347     \textcolor{keywordflow}{goto} L40;
+348     \} \textcolor{keywordflow}{else} \{
+349     \textcolor{keywordflow}{goto} L20;
+350     \}
+351 L40:
+352     *\hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin} = 0;
+353     \textcolor{keywordflow}{goto} L70;
+354 
+355 \textcolor{comment}{/* ...     THE COMMAND MAXDP/-1 IS NOT IMPLEMENTED */}
+356 L50:
+357     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) < 0.) \{
+358     \textcolor{keywordflow}{goto} L60;
+359     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d\_\_1 == 0) \{
+360     \textcolor{keywordflow}{goto} L70;
+361     \} \textcolor{keywordflow}{else} \{
+362     \textcolor{keywordflow}{goto} L40;
+363     \}
+364 L60:
+365     \textcolor{keywordflow}{if} (*\hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal} + 1.1\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} > 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+366     *\hyperlink{MAXDP_8c_a8b744d6a771c5c6c4b51caa68465f7ab}{jlin} = 1;
+367     \}
+368 
+369 L70:
+370     \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(&kk, ippwrd, &\hyperlink{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{MAXDP_8c_afa9700107068af27fcd4fe0ec6e6321d}{decmal});
+371     \textcolor{keywordflow}{if} (kk == 1) \{
+372     \textcolor{keywordflow}{goto} L100;
+373     \}
+374     \hyperlink{APT299_8c_ac8226b22b57e669e8a601b717f6f0888}{apt299\_}(&\hyperlink{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{MAXDP_8c_a2a627fcb04a21db045d24168ff8030a7}{elngh}, &\hyperlink{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+375 
+376 L100:
+377     \textcolor{keywordflow}{return} 0;
+378 \} \textcolor{comment}{/* maxdph\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MAXDP_8c_aa83eb2378deabf57b6b0150c3e30c629_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MAXDP_8c_aa83eb2378deabf57b6b0150c3e30c629_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!addcom@{addcom}}
+\index{addcom@{addcom}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{addcom}{addcom}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal addcom\mbox{[}25\mbox{]}}\hypertarget{MAXDP_8c_ac5f21e069a4da2a20122d6dfd1388062}{}\label{MAXDP_8c_ac5f21e069a4da2a20122d6dfd1388062}
+
+
+Definition at line 40 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!addcom\+\_\+@{addcom\+\_\+}}
+\index{addcom\+\_\+@{addcom\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{addcom\+\_\+}{addcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   addcom\+\_\+}\hypertarget{MAXDP_8c_a0cb17db45f69bf48c3e3297f52acf811}{}\label{MAXDP_8c_a0cb17db45f69bf48c3e3297f52acf811}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!alp@{alp}}
+\index{alp@{alp}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{MAXDP_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{MAXDP_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{MAXDP_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{MAXDP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 72 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{MAXDP_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 71 of file M\+A\+X\+D\+P.\+c.
+
+
+
+Referenced by maxdp\+\_\+(), and maxdph\+\_\+().
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{MAXDP_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{MAXDP_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{MAXDP_8c_ae55908b20f4ef5cabe520b612dab0125}{}\label{MAXDP_8c_ae55908b20f4ef5cabe520b612dab0125}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{MAXDP_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{MAXDP_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{MAXDP_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{MAXDP_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{MAXDP_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{MAXDP_8c_a6efa17e8338c940556ba5d28c5f62f2f}{}\label{MAXDP_8c_a6efa17e8338c940556ba5d28c5f62f2f}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{MAXDP_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{MAXDP_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!hi@{hi}}
+\index{hi@{hi}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{MAXDP_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{MAXDP_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!hold\+\_\+@{hold\+\_\+}}
+\index{hold\+\_\+@{hold\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{hold\+\_\+}{hold_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hold\+\_\+}\hypertarget{MAXDP_8c_a85b6055b3f0fa30e98df4699a745c516}{}\label{MAXDP_8c_a85b6055b3f0fa30e98df4699a745c516}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!hsave\+\_\+@{hsave\+\_\+}}
+\index{hsave\+\_\+@{hsave\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{hsave\+\_\+}{hsave_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hsave\+\_\+}\hypertarget{MAXDP_8c_a3c63b2a41ea0d76593bbff1ab02e9a36}{}\label{MAXDP_8c_a3c63b2a41ea0d76593bbff1ab02e9a36}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{MAXDP_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{MAXDP_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 64 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{MAXDP_8c_a781025a0b95b9919bd3e18f93137a2c3}{}\label{MAXDP_8c_a781025a0b95b9919bd3e18f93137a2c3}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{MAXDP_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{MAXDP_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 64 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{MAXDP_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{MAXDP_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 64 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!itabh@{itabh}}
+\index{itabh@{itabh}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{itabh}{itabh}}]{\setlength{\rightskip}{0pt plus 5cm}integer itabh\mbox{[}100\mbox{]}}\hypertarget{MAXDP_8c_a91fa18fd11260d9118b8cf77b7280a76}{}\label{MAXDP_8c_a91fa18fd11260d9118b8cf77b7280a76}
+
+
+Definition at line 46 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ithcnt@{ithcnt}}
+\index{ithcnt@{ithcnt}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ithcnt}{ithcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer ithcnt}\hypertarget{MAXDP_8c_a07b98b2b9d86ad8728f2ca989f3ea5fb}{}\label{MAXDP_8c_a07b98b2b9d86ad8728f2ca989f3ea5fb}
+
+
+Definition at line 46 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!jhldfg@{jhldfg}}
+\index{jhldfg@{jhldfg}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{jhldfg}{jhldfg}}]{\setlength{\rightskip}{0pt plus 5cm}integer jhldfg}\hypertarget{MAXDP_8c_a9df220b36baeefdebacd50c591a50ae0}{}\label{MAXDP_8c_a9df220b36baeefdebacd50c591a50ae0}
+
+
+Definition at line 46 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!modess@{modess}}
+\index{modess@{modess}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{modess}{modess}}]{\setlength{\rightskip}{0pt plus 5cm}integer modess}\hypertarget{MAXDP_8c_a7240ca3e0112e61cd600534cf902d1e7}{}\label{MAXDP_8c_a7240ca3e0112e61cd600534cf902d1e7}
+
+
+Definition at line 58 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!modess\+\_\+@{modess\+\_\+}}
+\index{modess\+\_\+@{modess\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{modess\+\_\+}{modess_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   modess\+\_\+}\hypertarget{MAXDP_8c_a6a1631220522b665e898acc5129faff8}{}\label{MAXDP_8c_a6a1631220522b665e898acc5129faff8}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{MAXDP_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{MAXDP_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 27 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!mssarl@{mssarl}}
+\index{mssarl@{mssarl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{mssarl}{mssarl}}]{\setlength{\rightskip}{0pt plus 5cm}integer mssarl}\hypertarget{MAXDP_8c_acedf5cb0c3e68837e5659a12dbfe74fb}{}\label{MAXDP_8c_acedf5cb0c3e68837e5659a12dbfe74fb}
+
+
+Definition at line 58 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!msschk@{msschk}}
+\index{msschk@{msschk}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{msschk}{msschk}}]{\setlength{\rightskip}{0pt plus 5cm}integer msschk}\hypertarget{MAXDP_8c_a311dc8c3151c7ebaf2bd700484c955d3}{}\label{MAXDP_8c_a311dc8c3151c7ebaf2bd700484c955d3}
+
+
+Definition at line 58 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{MAXDP_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ra@{ra}}
+\index{ra@{ra}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{MAXDP_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{MAXDP_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{MAXDP_8c_abed92b12a9406febedd1333e63fac677}{}\label{MAXDP_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ri@{ri}}
+\index{ri@{ri}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{MAXDP_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{MAXDP_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{MAXDP_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!saveh@{saveh}}
+\index{saveh@{saveh}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{saveh}{saveh}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal saveh\mbox{[}50\mbox{]}}\hypertarget{MAXDP_8c_a8e20a930e9e04c68cfd888dcbb22e947}{}\label{MAXDP_8c_a8e20a930e9e04c68cfd888dcbb22e947}
+
+
+Definition at line 52 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{MAXDP_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{MAXDP_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!surd@{surd}}
+\index{surd@{surd}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{MAXDP_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{MAXDP_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ta@{ta}}
+\index{ta@{ta}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_aa38365a06b4e51426459eba3db71f888}{}\label{MAXDP_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tak@{tak}}
+\index{tak@{tak}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{MAXDP_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tal@{tal}}
+\index{tal@{tal}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{MAXDP_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{MAXDP_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{MAXDP_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{MAXDP_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{MAXDP_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!te@{te}}
+\index{te@{te}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{MAXDP_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tek@{tek}}
+\index{tek@{tek}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{MAXDP_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tel@{tel}}
+\index{tel@{tel}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{MAXDP_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tem@{tem}}
+\index{tem@{tem}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{MAXDP_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{MAXDP_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!temp@{temp}}
+\index{temp@{temp}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{MAXDP_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{MAXDP_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!ti@{ti}}
+\index{ti@{ti}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{MAXDP_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tik@{tik}}
+\index{tik@{tik}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{MAXDP_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!til@{til}}
+\index{til@{til}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{MAXDP_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{MAXDP_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{MAXDP_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{MAXDP_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{MAXDP_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{MAXDP_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{MAXDP_8c_a0bcc3ea58afb64146e34d6d7187346a1}{}\label{MAXDP_8c_a0bcc3ea58afb64146e34d6d7187346a1}
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!tm@{tm}}
+\index{tm@{tm}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{MAXDP_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{MAXDP_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!umax@{umax}}
+\index{umax@{umax}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{MAXDP_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{MAXDP_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 33 of file M\+A\+X\+D\+P.\+c.
+
+\index{M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!M\+A\+X\+D\+P.\+c@{M\+A\+X\+D\+P.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{MAXDP_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{MAXDP_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 18 of file M\+A\+X\+D\+P.\+c.
+

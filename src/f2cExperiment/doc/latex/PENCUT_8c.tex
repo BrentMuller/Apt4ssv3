@@ -1,0 +1,232 @@
+\hypertarget{PENCUT_8c}{}\section{P\+E\+N\+C\+U\+T.\+c File Reference}
+\label{PENCUT_8c}\index{P\+E\+N\+C\+U\+T.\+c@{P\+E\+N\+C\+U\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+E\+N\+C\+U\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{PENCUT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6}{pencut\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$rn, doublereal $\ast$toolce, doublereal $\ast$toolax, doublereal $\ast$tul, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$\hyperlink{ZSURF_8c_a1f148515a08a71c3280eeb1528f86455}{t}, doublereal $\ast$\hyperlink{UNITS_8c_a66b316fa3299925e5c7630d5af6601fd}{tn}, doublereal $\ast$pen, integer $\ast$\hyperlink{UTILTY_8c_abdc936055e6863ee32f47ab3666ef718}{iseg})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static doublereal \hyperlink{PENCUT_8c_a214e6217ab050c782d4ba71a0cc5019a}{c\+\_\+b4} = 1.
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+E\+N\+C\+U\+T.\+c@{P\+E\+N\+C\+U\+T.\+c}!pencut\+\_\+@{pencut\+\_\+}}
+\index{pencut\+\_\+@{pencut\+\_\+}!P\+E\+N\+C\+U\+T.\+c@{P\+E\+N\+C\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{pencut\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$rn, doublereal $\ast$toolce, doublereal $\ast$toolax, doublereal $\ast$tul, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$t, doublereal $\ast$tn, doublereal $\ast$pen, integer $\ast$iseg)}{pencut_(doublereal *r__, doublereal *rn, doublereal *toolce, doublereal *toolax, doublereal *tul, doublereal *pside, doublereal *pthick, doublereal *t, doublereal *tn, doublereal *pen, integer *iseg)}}]{\setlength{\rightskip}{0pt plus 5cm}int pencut\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{rn, }
+\item[{doublereal $\ast$}]{toolce, }
+\item[{doublereal $\ast$}]{toolax, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{t, }
+\item[{doublereal $\ast$}]{tn, }
+\item[{doublereal $\ast$}]{pen, }
+\item[{integer $\ast$}]{iseg}
+\end{DoxyParamCaption}
+)}\hypertarget{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6}{}\label{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6}
+
+
+Definition at line 21 of file P\+E\+N\+C\+U\+T.\+c.
+
+
+
+References a, b, c\+\_\+b4, dotf\+\_\+(), k, norma\+\_\+(), pside, pthick, r\+\_\+\+\_\+, s, t, tn, v, v1, w, and x.
+
+
+
+Referenced by mixal\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* Builtin functions */}
+27     \textcolor{keywordtype}{double} d\_sign(doublereal *, doublereal *);
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+31     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[3], \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}[3], \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3], xr[3];
+33     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+34         ), \hyperlink{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{norma\_}(doublereal *, doublereal *, doublereal *);
+35 
+36 
+37 \textcolor{comment}{/*     CALCS. PENETRATION OF POINT R INTO CUTTER */}
+38 
+39 
+40 \textcolor{comment}{/*     T            NEAREST POINT ON TOOL TO R */}
+41 \textcolor{comment}{/*     TN           TOOL NORMAL AT T */}
+42 \textcolor{comment}{/*     ISEG  =  0   T ON:-   BOTTOM FLAT */}
+43 \textcolor{comment}{/*              1            BALL OR CORNER RADIUS */}
+44 \textcolor{comment}{/*              2            CYLINDRICAL SHANK */}
+45 \textcolor{comment}{/*     PEN      = PENETRATION: DISTANCE R-T (+VE FOR HIT) */}
+46 \textcolor{comment}{/*     PSIDE    = TOOL SIDE OF SURFACE */}
+47 \textcolor{comment}{/*     PTHICK   = PART SURFACE THICKNESS */}
+48 \textcolor{comment}{/* .... SURFACE POINT AND NORMAL */}
+49 \textcolor{comment}{/* .... TOOL AXIS */}
+50 \textcolor{comment}{/* .... TOOLCENTRE */}
+51 \textcolor{comment}{/* .... CUTTER GEOMETRY */}
+52 
+53 \textcolor{comment}{/* .... WORKSPACE */}
+54 \textcolor{comment}{/* .... ASSOCIATED CORNER RADIUS CENTER */}
+55 \textcolor{comment}{/* .... ASSOCIATED POINT ON TOOL AND TOOL NORMAL */}
+56 
+57 
+58 \textcolor{comment}{/* .... CALCULATE HEIGHT,A OF POINT R ABOVE TOOL CENTER */}
+59 
+60     \textcolor{comment}{/* Parameter adjustments */}
+61     --\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn};
+62     --\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+63     --tul;
+64     --toolax;
+65     --toolce;
+66     --rn;
+67     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+68 
+69     \textcolor{comment}{/* Function Body */}
+70     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+71     v[k - 1] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] - toolce[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+72 \textcolor{comment}{/* L10: */}
+73     \}
+74     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, v, &toolax[1]);
+75 
+76 \textcolor{comment}{/* .... CALCULATE RADIAL DIRECTION,W AND DISTANCE,B FROM TOOL AXIS */}
+77 
+78     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+79     v1[k - 1] = v[k - 1] - a * toolax[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+80 \textcolor{comment}{/* L20: */}
+81     \}
+82     \hyperlink{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{norma\_}(v1, w, &b);
+83 
+84 \textcolor{comment}{/* .... COMPUTE SURFACE SIDE OF TOOL */}
+85 
+86     \textcolor{keywordflow}{if} (b > tul[2]) \{
+87     s = -(*pside);
+88     \} \textcolor{keywordflow}{else} \{
+89     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&s, &rn[1], w);
+90     s *= *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside};
+91     s = d\_sign(&\hyperlink{PENCUT_8c_a214e6217ab050c782d4ba71a0cc5019a}{c\_b4}, &s);
+92     \}
+93 
+94 \textcolor{comment}{/* .... COMPUTATION OF ASSOCIATED POINT, TOOL NORMAL AND PENETRATION */}
+95 \textcolor{comment}{/*     WILL DEPEND ON RELATIVE LOCATION OF SURFACE POINT TO TOOL CENTER */}
+96 
+97     \textcolor{keywordflow}{if} (a >= 0.) \{
+98 \textcolor{comment}{/* .... CYLINDER CASES */}
+99     \textcolor{keywordflow}{if} (b >= tul[3]) \{
+100 \textcolor{comment}{/* .... 'OUTER' CYLINDER CASE */}
+101         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 2;
+102         *pen = tul[2] + s * b + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick};
+103         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+104         \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = s * w[k - 1];
+105         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = toolce[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] - tul[2] * \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + a * toolax[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+106 \textcolor{comment}{/* L30: */}
+107         \}
+108 
+109     \} \textcolor{keywordflow}{else} \{
+110 \textcolor{comment}{/* .... 'INNER' CYLINDER CASE */}
+111         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+112         xr[k - 1] = toolce[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] - s * tul[3] * w[k - 1];
+113         v1[k - 1] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] - xr[k - 1];
+114 \textcolor{comment}{/* L40: */}
+115         \}
+116         \hyperlink{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{norma\_}(v1, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &x);
+117         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 1;
+118         *pen = x + tul[1] + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick};
+119         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+120         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = xr[k - 1] - tul[1] * \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+121 \textcolor{comment}{/* L50: */}
+122         \}
+123     \}
+124 
+125     \} \textcolor{keywordflow}{else} \{
+126 \textcolor{comment}{/* .... CORNER RADIUS OR BASE */}
+127     \textcolor{keywordflow}{if} (b <= tul[3]) \{
+128 \textcolor{comment}{/*     BOTTOM FLAT CASE */}
+129         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 0;
+130         *pen = tul[4] + tul[1] + a + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick};
+131         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+132         \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = toolax[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+133         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = toolce[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + v1[k - 1] - (tul[4] + tul[1]) * toolax[k];
+134 \textcolor{comment}{/* L60: */}
+135         \}
+136     \} \textcolor{keywordflow}{else} \{
+137 \textcolor{comment}{/*     CORNER RADIUS */}
+138         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 1;
+139         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+140         xr[k - 1] = toolce[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + tul[3] * w[k - 1];
+141 \textcolor{comment}{/* L70: */}
+142         \}
+143 
+144         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+145         v1[k - 1] = xr[k - 1] - \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+146 \textcolor{comment}{/* L80: */}
+147         \}
+148         \hyperlink{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{norma\_}(v1, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &x);
+149 
+150         *pen = tul[1] - x + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick};
+151 
+152         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+153         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = xr[k - 1] - tul[1] * \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+154 \textcolor{comment}{/* L90: */}
+155         \}
+156 
+157     \}
+158 
+159     \}
+160 
+161     \textcolor{keywordflow}{return} 0;
+162 \} \textcolor{comment}{/* pencut\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PENCUT_8c_ab9fc21a5ea5f5ad706054a1aea3fe9e6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+E\+N\+C\+U\+T.\+c@{P\+E\+N\+C\+U\+T.\+c}!c\+\_\+b4@{c\+\_\+b4}}
+\index{c\+\_\+b4@{c\+\_\+b4}!P\+E\+N\+C\+U\+T.\+c@{P\+E\+N\+C\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b4}{c_b4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+b4 = 1.\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PENCUT_8c_a214e6217ab050c782d4ba71a0cc5019a}{}\label{PENCUT_8c_a214e6217ab050c782d4ba71a0cc5019a}
+
+
+Definition at line 17 of file P\+E\+N\+C\+U\+T.\+c.
+
+
+
+Referenced by pencut\+\_\+().
+

@@ -1,4 +1,4 @@
-*** SOURCE FILE : PUNCHA00.IBM;2   ***
+**** SOURCE FILE : PUNCHA00.IBM;2   ***
 *
       SUBROUTINE PUNCHA(N,A,J,K)
 *
@@ -25,16 +25,20 @@ C...LOGICAL*1 VARIABLES IN THIS IBM IMPLEMENTATION MIGHT BE ABLE TO BE
 C...BYTE VARIABLES ON OTHER SYSTEMS E.G. VAX
 C
       COMMON/PUNTAB/PUNCOD
-      LOGICAL*1 PUNCOD(128),ILEGAL
+c      LOGICAL*1 PUNCOD(128),ILEGAL
+      integer*2 puncod(128)
+      integer*2 ilegal
 *
       DOUBLE PRECISION A(64)
       CHARACTER*512 INFIL,OUTFIL
-      LOGICAL*1 PUNOUT(512)
+c      LOGICAL*1 PUNOUT(512)
+      integer*2 punout(512)
       LOGICAL OD
 C
-      INCLUDE (DARRAY)
+      INCLUDE 'DARRAY.INC'
 C
-      DATA ILEGAL/ZEE/
+c      DATA ILEGAL/ZEE/
+      data ilegal/238/
 C
 C
       ENTRY PUNCHB(N,A,J,K)
@@ -67,7 +71,8 @@ C
       JC=0
       DO 100 I=1,M
       IC=ICHAR(OUTFIL(I:I))+1
-      IF (PUNCOD(IC).EQV.ILEGAL) THEN
+c      IF (PUNCOD(IC).EQV.ILEGAL) THEN
+      if (puncod(ic).eq.ilegal) then
          CALL CFORM('**** ILLEGAL CHARACTER CONVERSION IN PUNCHA ****',
      1              DARRAY,2,48)
          CALL CPRINT(DARRAY)

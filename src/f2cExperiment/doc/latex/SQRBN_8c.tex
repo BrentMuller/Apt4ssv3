@@ -1,0 +1,341 @@
+\hypertarget{SQRBN_8c}{}\section{S\+Q\+R\+B\+N.\+c File Reference}
+\label{SQRBN_8c}\index{S\+Q\+R\+B\+N.\+c@{S\+Q\+R\+B\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+Q\+R\+B\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{SQRBN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf}{sqrbn\+\_\+} (doublereal $\ast$u0, doublereal $\ast$v0, doublereal $\ast$zu1, doublereal $\ast$zv1, doublereal $\ast$zu2, doublereal $\ast$zv2, doublereal $\ast$dummy, integer $\ast$ickbn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+Q\+R\+B\+N.\+c@{S\+Q\+R\+B\+N.\+c}!sqrbn\+\_\+@{sqrbn\+\_\+}}
+\index{sqrbn\+\_\+@{sqrbn\+\_\+}!S\+Q\+R\+B\+N.\+c@{S\+Q\+R\+B\+N.\+c}}
+\subsubsection[{\texorpdfstring{sqrbn\+\_\+(doublereal $\ast$u0, doublereal $\ast$v0, doublereal $\ast$zu1, doublereal $\ast$zv1, doublereal $\ast$zu2, doublereal $\ast$zv2, doublereal $\ast$dummy, integer $\ast$ickbn)}{sqrbn_(doublereal *u0, doublereal *v0, doublereal *zu1, doublereal *zv1, doublereal *zu2, doublereal *zv2, doublereal *dummy, integer *ickbn)}}]{\setlength{\rightskip}{0pt plus 5cm}int sqrbn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u0, }
+\item[{doublereal $\ast$}]{v0, }
+\item[{doublereal $\ast$}]{zu1, }
+\item[{doublereal $\ast$}]{zv1, }
+\item[{doublereal $\ast$}]{zu2, }
+\item[{doublereal $\ast$}]{zv2, }
+\item[{doublereal $\ast$}]{dummy, }
+\item[{integer $\ast$}]{ickbn}
+\end{DoxyParamCaption}
+)}\hypertarget{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf}{}\label{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf}
+
+
+Definition at line 17 of file S\+Q\+R\+B\+N.\+c.
+
+
+
+References a1, a2, d2, d\+\_\+\+\_\+, i1, i2, one, two, u, u1, u2, ut, v, v1, v2, vt, and zero.
+
+
+
+Referenced by balloc\+\_\+(), and balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Initialized data */}
+22 
+23     \textcolor{keyword}{static} integer ibchk[16]    \textcolor{comment}{/* was [4][4] */} = \{ 2,3,0,0,1,0,4,0,0,1,0,4,
+24         0,0,2,3 \};
+25     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+27     \textcolor{keyword}{static} doublereal \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two} = 2.;
+28     \textcolor{keyword}{static} doublereal vsmal = 1e-25;
+29 
+30     \textcolor{comment}{/* System generated locals */}
+31     doublereal d\_\_1, d\_\_2;
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, a3, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{CUTREG_8c_a5f589bc83e55eecc5b1c372de3376ea9}{i2};
+36     \textcolor{keyword}{static} doublereal \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2}, \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}, dt;
+37     \textcolor{keyword}{static} integer iu, iv;
+38     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut}, \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+39     \textcolor{keyword}{static} integer ic0, ic1, ic2;
+40 
+41 \textcolor{comment}{/* ------INPUT IS AN OLD POINT U0,V0 IN UV SPACE AND A TRIAL */}
+42 \textcolor{comment}{/* ------ NEW POINT U1,V1.  IF THESE TWO PTS ARE IN THE SAME */}
+43 \textcolor{comment}{/* ------ SECTOR OF SPACE( UNIT SQUARE DIVIDES SPACE INTO NINE */}
+44 \textcolor{comment}{/* ------ SECTORS) THEN U,V IS SET EQUAL TO U1,V1 AND NO */}
+45 \textcolor{comment}{/* ------ BOUNDARY CHECKING IS REQUIRED( I.E. SET ICKBN=0). */}
+46 \textcolor{comment}{/* ------ OTHERWISE U,V IS SET EQUAL TO THE CLOSEST */}
+47 \textcolor{comment}{/* ------ BOUNDARY POINT TO U0,V0 WHICH LIES BETWEEN U0,V0 AND */}
+48 \textcolor{comment}{/* ------ U1,V1.  IN ADDITION THE ROUTINE DETERMINES WHICH */}
+49 \textcolor{comment}{/* ------  BOUNDARY OF THE PATCH SHOULD BE CHECKED. */}
+50 
+51 \textcolor{comment}{/* ---      ARRAY WHICH RECORDS BOUNDARY TO CHECK IN MOVING FROM SECTOR */}
+52 \textcolor{comment}{/* ---      J TO SECTOR I (IBCHK(I,J)). */}
+53 
+54 \textcolor{comment}{/* ---      FUNCTION F GIVES SQUARE OF DISTANCE FROM (A,B) TO (C,D) */}
+55 \textcolor{comment}{/* ---      FUNCTION G IS POSITIVE WHEN C IS OUTSIDE THE A,B INTERVAL */}
+56 
+57     u1 = *u0 + *zu1;
+58     v1 = *v0 + *zv1;
+59     *ickbn = 0;
+60     u = \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+61     v = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+62     iu = 2;
+63     \textcolor{keywordflow}{if} (*u0 < zero) \{
+64     iu = 1;
+65     \}
+66     \textcolor{keywordflow}{if} (*u0 > one) \{
+67     iu = 3;
+68     \}
+69     iv = 3;
+70     \textcolor{keywordflow}{if} (*v0 < zero) \{
+71     iv = 0;
+72     \}
+73     \textcolor{keywordflow}{if} (*v0 > one) \{
+74     iv = 6;
+75     \}
+76     ic0 = iu + iv;
+77     iu = 2;
+78     \textcolor{keywordflow}{if} (u1 < zero) \{
+79     iu = 1;
+80     \}
+81     \textcolor{keywordflow}{if} (u1 > one) \{
+82     iu = 3;
+83     \}
+84     iv = 3;
+85     \textcolor{keywordflow}{if} (v1 < zero) \{
+86     iv = 0;
+87     \}
+88     \textcolor{keywordflow}{if} (v1 > one) \{
+89     iv = 6;
+90     \}
+91     ic1 = iu + iv;
+92     \textcolor{keywordflow}{if} (ic0 == ic1) \{
+93     \textcolor{keywordflow}{goto} L999;
+94     \}
+95 
+96 \textcolor{comment}{/* ------DETERMINE THE BOUNDARY INTERCEPT CLOSEST TO U0,V0 */}
+97 \textcolor{comment}{/* ---      EQN OF LINE IS (U0-U1)*V+(V1-V0)*U+(V0*U1-U0*V1)=0 */}
+98 \textcolor{comment}{/* ---      EQN OF LINE IS      A1*V+     A2*U+     A3      =0 */}
+99     a1 = *u0 - \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+100     a2 = v1 - *v0;
+101     a3 = *v0 * u1 - v1 * *u0;
+102 \textcolor{comment}{/* ---      SET U,V AND DISTANCE D TO DEFAULT VALUES */}
+103     u = \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+104     v = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+105 \textcolor{comment}{/* Computing 2nd power */}
+106     d\_\_1 = u1 - *u0;
+107 \textcolor{comment}{/* Computing 2nd power */}
+108     d\_\_2 = v1 - *v0;
+109     d\_\_ = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+110 \textcolor{comment}{/* ---      SET INITIAL VALUES FOR SECOND POINT BETWEEN P0 AND P1. */}
+111     d2 = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+112     u2 = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+113     v2 = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+114 
+115 \textcolor{comment}{/* ---      LINE IS HORIZONTAL, SKIP INTERCEPT CALCULATION WITH U=0 OR U=1 */}
+116     \textcolor{keywordflow}{if} (abs(a1) < vsmal) \{
+117     \textcolor{keywordflow}{goto} L100;
+118     \}
+119     ut = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+120     vt = -a3 / \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+121 \textcolor{comment}{/* Computing 2nd power */}
+122     d\_\_1 = ut - *u0;
+123 \textcolor{comment}{/* Computing 2nd power */}
+124     d\_\_2 = vt - *v0;
+125     dt = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+126     \textcolor{keywordflow}{if} ((*u0 - ut) * (u1 - ut) >= zero || dt > d\_\_) \{
+127     \textcolor{keywordflow}{goto} L10;
+128     \}
+129     d\_\_ = dt;
+130     u = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+131     v = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+132 L10:
+133     ut = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+134     vt = -(a2 + a3) / a1;
+135 \textcolor{comment}{/* Computing 2nd power */}
+136     d\_\_1 = ut - *u0;
+137 \textcolor{comment}{/* Computing 2nd power */}
+138     d\_\_2 = vt - *v0;
+139     dt = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+140     \textcolor{keywordflow}{if} ((*u0 - ut) * (u1 - \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut}) >= zero || dt >= d2) \{
+141     \textcolor{keywordflow}{goto} L100;
+142     \}
+143 \textcolor{comment}{/* ---      SAVE THE SECOND CLOSEST INTERCEPT TO UO,VO FIRST */}
+144     \textcolor{keywordflow}{if} (dt < d\_\_) \{
+145     \textcolor{keywordflow}{goto} L20;
+146     \}
+147 \textcolor{comment}{/* ---      U2,V2 IS NEW SECOND CLOSEST INTERCEPT ( DT.GT.D) */}
+148     \textcolor{keywordflow}{if} (dt == d\_\_) \{
+149     \textcolor{keywordflow}{goto} L100;
+150     \}
+151     u2 = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+152     v2 = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+153     d2 = dt;
+154     \textcolor{keywordflow}{goto} L100;
+155 L20:
+156 \textcolor{comment}{/* ---      U2,V2 TAKES ON THE OLD U,V VALUE OF CLOSEST INTERCEPT */}
+157     u2 = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+158     v2 = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+159     d2 = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+160 \textcolor{comment}{/* ---      CLOSEST INTERCEPT U,V IS NOW UT,VT */}
+161     u = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+162     v = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+163     d\_\_ = dt;
+164 \textcolor{comment}{/* ---      LINE IS VERTICAL, SKIP INTERCEPT CALC WITH V=0 OR V=1. */}
+165 L100:
+166     \textcolor{keywordflow}{if} (abs(a2) < vsmal) \{
+167     \textcolor{keywordflow}{goto} L200;
+168     \}
+169     vt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+170     ut = -a3 / \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+171 \textcolor{comment}{/* Computing 2nd power */}
+172     d\_\_1 = ut - *u0;
+173 \textcolor{comment}{/* Computing 2nd power */}
+174     d\_\_2 = vt - *v0;
+175     dt = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+176     \textcolor{keywordflow}{if} ((*v0 - vt) * (v1 - \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt}) >= zero || dt >= d2) \{
+177     \textcolor{keywordflow}{goto} L110;
+178     \}
+179 \textcolor{comment}{/* ---      SAVE THE SECOND CLOSEST INTERCEPT TO UO,VO FIRST */}
+180     \textcolor{keywordflow}{if} (dt < d\_\_) \{
+181     \textcolor{keywordflow}{goto} L40;
+182     \}
+183 \textcolor{comment}{/* ---      U2,V2 IS NEW SECOND CLOSEST INTERCEPT ( DT.GT.D) */}
+184     \textcolor{keywordflow}{if} (dt == d\_\_) \{
+185     \textcolor{keywordflow}{goto} L110;
+186     \}
+187     u2 = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+188     v2 = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+189     d2 = dt;
+190     \textcolor{keywordflow}{goto} L110;
+191 L40:
+192 \textcolor{comment}{/* ---      U2,V2 TAKES ON THE OLD U,V VALUE OF CLOSEST INTERCEPT */}
+193     u2 = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+194     v2 = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+195     d2 = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+196 \textcolor{comment}{/* ---      CLOSEST INTERCEPT U,V IS NOW UT,VT */}
+197     u = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+198     v = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+199     d\_\_ = dt;
+200 L110:
+201     vt = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+202     ut = -(a1 + a3) / a2;
+203 \textcolor{comment}{/* Computing 2nd power */}
+204     d\_\_1 = ut - *u0;
+205 \textcolor{comment}{/* Computing 2nd power */}
+206     d\_\_2 = vt - *v0;
+207     dt = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+208     \textcolor{keywordflow}{if} ((*v0 - vt) * (v1 - \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt}) >= zero || dt >= d2) \{
+209     \textcolor{keywordflow}{goto} L200;
+210     \}
+211 \textcolor{comment}{/* ---      SAVE THE SECOND CLOSEST INTERCEPT TO UO,VO FIRST */}
+212     \textcolor{keywordflow}{if} (dt < d\_\_) \{
+213     \textcolor{keywordflow}{goto} L60;
+214     \}
+215 \textcolor{comment}{/* ---      U2,V2 IS NEW SECOND CLOSEST INTERCEPT ( DT.GT.D) */}
+216     \textcolor{keywordflow}{if} (dt == d\_\_) \{
+217     \textcolor{keywordflow}{goto} L200;
+218     \}
+219     u2 = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+220     v2 = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+221     d2 = dt;
+222     \textcolor{keywordflow}{goto} L200;
+223 L60:
+224 \textcolor{comment}{/* ---      U2,V2 TAKES ON THE OLD U,V VALUE OF CLOSEST INTERCEPT */}
+225     u2 = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+226     v2 = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+227     d2 = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+228 \textcolor{comment}{/* ---      CLOSEST INTERCEPT U,V IS NOW UT,VT */}
+229     u = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+230     v = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+231     d\_\_ = dt;
+232 L200:
+233 \textcolor{comment}{/* ---      DETERMINE UT,VT JUST INSIDE THE SECTOR BEYOND U,V */}
+234 \textcolor{comment}{/* ---      ICKBN IS SET TO ZERO IF NO ADJACENT PATCH NEED BE CHECKED */}
+235 \textcolor{comment}{/* ---      OTHERWISE ICKBN SHOULD POINT TO THE PATCH BOUNDARY (1,2,3,OR 4 */}
+236 \textcolor{comment}{/* ---      WHICH SHOULD BE CHECKED. */}
+237     *ickbn = 0;
+238 \textcolor{comment}{/* ---      NEXT DETERMINE THE SECTOR WHICH THE PATH FROM U0,V0 TO U,V */}
+239 \textcolor{comment}{/* ---      IS ENTERING. */}
+240     ut = (u + \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2}) / two;
+241     vt = (v + \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}) / two;
+242     \textcolor{keywordflow}{if} ((zero - *u0) * (one - *u0) != zero && (zero - *v0) * (one - *v0) != 
+243         zero) \{
+244     \textcolor{keywordflow}{goto} L210;
+245     \}
+246 \textcolor{comment}{/* ---      STARTING POINT IS ON BOUNDARY, SO CUT UT,VT BACK */}
+247     ut = (*u0 + \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}) / two;
+248     vt = (*v0 + \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}) / two;
+249 L210:
+250 
+251     iu = 2;
+252     \textcolor{keywordflow}{if} (ut < zero) \{
+253     iu = 1;
+254     \}
+255     \textcolor{keywordflow}{if} (ut > one) \{
+256     iu = 3;
+257     \}
+258     iv = 3;
+259     \textcolor{keywordflow}{if} (vt < zero) \{
+260     iv = 0;
+261     \}
+262     \textcolor{keywordflow}{if} (vt > one) \{
+263     iv = 6;
+264     \}
+265 \textcolor{comment}{/* ---      IC2 IS THE SECTOR NUMBER ( 1 THRU 9) WHICH IS BEING ENTERED. */}
+266     ic2 = iu + iv;
+267 \textcolor{comment}{/* ---      IF THE CENTER SQUARE IS BEING ENTERED, THEN CHECK NO BOUNDARY */}
+268     \textcolor{keywordflow}{if} (ic2 == 5) \{
+269     \textcolor{keywordflow}{goto} L999;
+270     \}
+271     \textcolor{keywordflow}{if} (ic2 % 2 == 0) \{
+272     \textcolor{keywordflow}{goto} L310;
+273     \}
+274     \textcolor{keywordflow}{if} (ic2 % 2 == 1) \{
+275     \textcolor{keywordflow}{goto} L320;
+276     \}
+277 
+278 L310:
+279 \textcolor{comment}{/* ---      AN EVEN-NUMBERED SECTOR IS BEING ENTERED -- BOUNDARY CALCULATI */}
+280 \textcolor{comment}{/* ---      IS STRAIGHT FORWARD. */}
+281     *ickbn = ic2 / 2;
+282     \textcolor{keywordflow}{goto} L999;
+283 
+284 L320:
+285 \textcolor{comment}{/* ---      AN ODD SECTOR IS BEING ENTERED, BOUNDARY DEPENDS ON BOTH POINT */}
+286 \textcolor{comment}{/* ---      (I.E. ON SECTOR OF UT,VT AND ON SECTOR OF U0,V0) */}
+287     i1 = ic2 / 3 + 1;
+288     \textcolor{keywordflow}{if} (ic0 % 2 != 0) \{
+289     \textcolor{keywordflow}{goto} L999;
+290     \}
+291     i2 = ic0 / 2;
+292     *ickbn = ibchk[i1 + (i2 << 2) - 5];
+293     \textcolor{keywordflow}{goto} L999;
+294 
+295 L999:
+296 
+297     *zu2 = u - *u0;
+298     *zv2 = v - *v0;
+299     \textcolor{keywordflow}{return} 0;
+300 \} \textcolor{comment}{/* sqrbn\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,96 @@
+\hypertarget{APT315_8c}{}\section{A\+P\+T315.\+c File Reference}
+\label{APT315_8c}\index{A\+P\+T315.\+c@{A\+P\+T315.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T315.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT315_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT315_8c_a17d71844f80239907580cfa1b7f5b9d0}{apt315\+\_\+} (doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T315.\+c@{A\+P\+T315.\+c}!apt315\+\_\+@{apt315\+\_\+}}
+\index{apt315\+\_\+@{apt315\+\_\+}!A\+P\+T315.\+c@{A\+P\+T315.\+c}}
+\subsubsection[{\texorpdfstring{apt315\+\_\+(doublereal $\ast$b, doublereal $\ast$c\+\_\+\+\_\+)}{apt315_(doublereal *b, doublereal *c__)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt315\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{APT315_8c_a17d71844f80239907580cfa1b7f5b9d0}{}\label{APT315_8c_a17d71844f80239907580cfa1b7f5b9d0}
+
+
+Definition at line 24 of file A\+P\+T315.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, i\+\_\+\+\_\+, and s.
+
+
+
+Referenced by apt301\+\_\+(), and apt341\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* System generated locals */}
+27     doublereal d\_\_1;
+28 
+29     \textcolor{comment}{/* Builtin functions */}
+30     \textcolor{keywordtype}{double} sqrt(doublereal);
+31 
+32     \textcolor{comment}{/* Local variables */}
+33     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3];
+34     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+36 
+37 
+38 \textcolor{comment}{/*      NORM NORMALIZES A VECTOR V---NORM= VX/V + VY/V + VZ/V */}
+39     \textcolor{comment}{/* Parameter adjustments */}
+40     --\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+41     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+42 
+43     \textcolor{comment}{/* Function Body */}
+44     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+45 \textcolor{comment}{/* L10: */}
+46     a[i\_\_ - 1] = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+47     \}
+48     s = sqrt(a[0] * a[0] + a[1] * a[1] + a[2] * a[2]);
+49     \textcolor{keywordflow}{if} (s < 1e-6) \{
+50     s = 1.f;
+51     \}
+52 
+53     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+54     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = a[i\_\_ - 1] / \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+55     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[i\_\_], abs(d\_\_1)) - 1e-6 <= 0.) \{
+56         \textcolor{keywordflow}{goto} L1;
+57     \} \textcolor{keywordflow}{else} \{
+58         \textcolor{keywordflow}{goto} L2;
+59     \}
+60 L1:
+61     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 0.f;
+62 L2:
+63     ;
+64     \}
+65     \textcolor{keywordflow}{return} 0;
+66 \} \textcolor{comment}{/* apt315\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT315_8c_a17d71844f80239907580cfa1b7f5b9d0_icgraph}
+\end{center}
+\end{figure}
+
+

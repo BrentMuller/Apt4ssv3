@@ -1,0 +1,119 @@
+\hypertarget{PARMPT_8c}{}\section{P\+A\+R\+M\+P\+T.\+c File Reference}
+\label{PARMPT_8c}\index{P\+A\+R\+M\+P\+T.\+c@{P\+A\+R\+M\+P\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+A\+R\+M\+P\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{PARMPT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa}{parmpt\+\_\+} (doublereal $\ast$pa, doublereal $\ast$pd, doublereal $\ast$pb, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$pc, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$td, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+A\+R\+M\+P\+T.\+c@{P\+A\+R\+M\+P\+T.\+c}!parmpt\+\_\+@{parmpt\+\_\+}}
+\index{parmpt\+\_\+@{parmpt\+\_\+}!P\+A\+R\+M\+P\+T.\+c@{P\+A\+R\+M\+P\+T.\+c}}
+\subsubsection[{\texorpdfstring{parmpt\+\_\+(doublereal $\ast$pa, doublereal $\ast$pd, doublereal $\ast$pb, doublereal $\ast$b, doublereal $\ast$pc, doublereal $\ast$c\+\_\+\+\_\+, doublereal $\ast$ta, doublereal $\ast$td, integer $\ast$irr)}{parmpt_(doublereal *pa, doublereal *pd, doublereal *pb, doublereal *b, doublereal *pc, doublereal *c__, doublereal *ta, doublereal *td, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int parmpt\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pa, }
+\item[{doublereal $\ast$}]{pd, }
+\item[{doublereal $\ast$}]{pb, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{pc, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{td, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa}{}\label{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa}
+
+
+Definition at line 17 of file P\+A\+R\+M\+P\+T.\+c.
+
+
+
+References a1, a2, b, b1, b2, c1, c\+\_\+\+\_\+, i\+\_\+\+\_\+, and ta.
+
+
+
+Referenced by curfit\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* System generated locals */}
+22     doublereal d\_\_1;
+23 
+24     \textcolor{comment}{/* Local variables */}
+25     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2}, \hyperlink{DDTABC_8c_a8f9aca421a560153a31ebb326da34216}{c1}, c2, df[3], bsq, csq, disc;
+27     \textcolor{keyword}{static} integer idiag;
+28 
+29 \textcolor{comment}{/* ------ A COMPLETELY MODULAR SCULPTURED SURFACE ROUTINE  APRIL 1970 JKH */}
+30 \textcolor{comment}{/* ------ INPUT CONSISTS OF TWO END POINTS PA,PD AND TWO INTERIOR POINTS */}
+31 \textcolor{comment}{/* ------PB WITH PARAMETER VALUE B AND PC WITH PARAMETER VALUE C THRU */}
+32 \textcolor{comment}{/* ------WHICH A CUBIC CURVE MUST PASS. */}
+33 \textcolor{comment}{/* ------OUTPUT CONSISTS OF TWO COONS TANGENT VECTORS TA AND TD WHICH */}
+34 \textcolor{comment}{/* -------DEFINE THE DESIRED CURVE.  A CASE OF TROUBLE IS THAT THE */}
+35 \textcolor{comment}{/* ------PARAMETER VALUES B AND C ARE NEARLY EQUAL */}
+36     \textcolor{comment}{/* Parameter adjustments */}
+37     --td;
+38     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+39     --pc;
+40     --pb;
+41     --pd;
+42     --pa;
+43 
+44     \textcolor{comment}{/* Function Body */}
+45     idiag = 23000;
+46     bsq = *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b} * *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+47     csq = *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_} * *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+48     disc = *b * *c\_\_ * (*b - 1) * (*c\_\_ - 1) * (*b - *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_});
+49     *irr = idiag + 1;
+50     \textcolor{keywordflow}{if} (abs(disc) < 1e-12) \{
+51     \textcolor{keywordflow}{return} 0;
+52     \}
+53 \textcolor{comment}{/* ------SET UP THE LINEAR EQUATION A * TA() + B * TB() = C() */}
+54 \textcolor{comment}{/* Computing 2nd power */}
+55     d\_\_1 = 1 - *\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+56     a1 = *b * (d\_\_1 * d\_\_1);
+57 \textcolor{comment}{/* Computing 2nd power */}
+58     d\_\_1 = 1 - *\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+59     a2 = *c\_\_ * (d\_\_1 * d\_\_1);
+60     b1 = bsq * (*b - 1);
+61     b2 = csq * (*c\_\_ - 1);
+62     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+63 \textcolor{comment}{/* L20: */}
+64     df[i\_\_ - 1] = pd[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+65     \}
+66 \textcolor{comment}{/* ------DETERMINE EACH COMPONENT OF TA() AND TD() BY SOLVING TWO EQUNS */}
+67 \textcolor{comment}{/* ------IN TWO UNKNOWNS */}
+68     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+69     c1 = pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - (pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + df[i\_\_ - 1] * bsq * (3 - *b * 2));
+70     c2 = pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - (pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + df[i\_\_ - 1] * csq * (3 - *c\_\_ * 2));
+71     \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (c1 * b2 - c2 * \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}) / disc;
+72     td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (a1 * c2 - a2 * \hyperlink{DDTABC_8c_a8f9aca421a560153a31ebb326da34216}{c1}) / disc;
+73 \textcolor{comment}{/* L10: */}
+74     \}
+75     *irr = 0;
+76     \textcolor{keywordflow}{return} 0;
+77 \} \textcolor{comment}{/* parmpt\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PARMPT_8c_aef75c1614f0b318941986639aba5e1fa_icgraph}
+\end{center}
+\end{figure}
+
+

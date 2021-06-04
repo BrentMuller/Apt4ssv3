@@ -1,0 +1,10 @@
+**** SOURCE FILE : M0000957.V01   ***
+*
+C.....FORTRAN SUBROUTINE             RECORD...              3/1/68   GK
+      SUBROUTINE RECORD (ISEQNO)
+      COMMON/SQNC/SQNO
+      INTEGER SQNO
+C
+      ISEQNO = SQNO
+      RETURN
+      END

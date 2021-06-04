@@ -1,0 +1,65 @@
+**** SOURCE FILE : M0004176.V02   ***
+*
+C
+C
+C.....FORTRAN SUBROUTINE             CLEROR...
+C
+C PURPOSE      TO PRINT DIAGNOSTICS
+C
+C LINKAGE      CALL CLEROR(NERR)
+C
+C ARGUMENTS    NERR       INTEGER ERROR NUMBER
+C
+C
+      SUBROUTINE CLEROR(NERR)
+C
+C...                ...ERROR DIAGNOSTICS
+C
+      INCLUDE 'EXERR.INC'
+C
+      CHARACTER B*120,NOTEXT*54
+C
+      DATA B/'                                                       ' /
+      DATA NOTEXT/'THERE IS NO DIAGNOSTIC MESSAGE FOR THIS ERROR NUMBER
+     * '/
+C
+C...     POSITION OF THE CURRENT ERROR NUMBER
+C
+      I=0
+      NUMMIN=1
+      NUMMAX=ERRDM
+      NUMBER=IABS(NERR)
+   10 NUMMER=(NUMMIN+NUMMAX)/2
+      NUMB=ERRAD1(NUMMER)
+      IF(I.GT.ERND)GOTO  40
+      I=I+1
+      IF(NUMBER-NUMB)30,60,20
+   20 NUMMIN=NUMMER+1
+      GOTO 10
+   30 NUMMAX=NUMMER-1
+      GOTO 10
+   40 CALL CFORM(NOTEXT,B,14,54)
+      CALL CPRINT(B)
+      GOTO 150
+C
+   60 KK=ERRAD2(NUMMER)
+      IF (NUMMER.EQ.1) THEN
+        II=1
+      ELSE
+        II=ERRAD2(NUMMER-1)+1
+      END IF
+C
+      K=10
+      DO 70 I=II,KK
+        IF (K.GE.113) THEN
+          CALL CPRINT(B)
+          K=10
+        END IF
+        K=K+4
+        B(K:K+3)=ERRTXT(I)
+   70 CONTINUE
+      CALL CPRINT(B)
+C
+  150 RETURN
+C
+      END

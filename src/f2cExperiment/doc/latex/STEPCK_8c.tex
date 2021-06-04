@@ -1,0 +1,251 @@
+\hypertarget{STEPCK_8c}{}\section{S\+T\+E\+P\+C\+K.\+c File Reference}
+\label{STEPCK_8c}\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+T\+E\+P\+C\+K.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{STEPCK_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{STEPCK_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{STEPCK_8c_a4cca0ffb391ae54110a397d3c59b37cc}{stepck\+\_\+} (doublereal $\ast$side, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$rx, doublereal $\ast$\hyperlink{CNSURH_8c_a4bd01ba35ed38a5f61d31ae8e2a8d949}{rk}, doublereal $\ast$\hyperlink{TAPOP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}, doublereal $\ast$rxl, doublereal $\ast$rkl, doublereal $\ast$efrad, doublereal $\ast$\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, doublereal $\ast$srmin, doublereal $\ast$tlmin)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{STEPCK_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{STEPCK_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{STEPCK_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{STEPCK_8c_a1845284f4bf21a8b187ddb7659add7a0}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{STEPCK_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{STEPCK_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{STEPCK_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file S\+T\+E\+P\+C\+K.\+c.
+
+
+
+Referenced by stepck\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!stepck\+\_\+@{stepck\+\_\+}}
+\index{stepck\+\_\+@{stepck\+\_\+}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{stepck\+\_\+(doublereal $\ast$side, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$rx, doublereal $\ast$rk, doublereal $\ast$rl, doublereal $\ast$rxl, doublereal $\ast$rkl, doublereal $\ast$efrad, doublereal $\ast$tol, doublereal $\ast$srmin, doublereal $\ast$tlmin)}{stepck_(doublereal *side, doublereal *r__, doublereal *rx, doublereal *rk, doublereal *rl, doublereal *rxl, doublereal *rkl, doublereal *efrad, doublereal *tol, doublereal *srmin, doublereal *tlmin)}}]{\setlength{\rightskip}{0pt plus 5cm}int stepck\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{rx, }
+\item[{doublereal $\ast$}]{rk, }
+\item[{doublereal $\ast$}]{rl, }
+\item[{doublereal $\ast$}]{rxl, }
+\item[{doublereal $\ast$}]{rkl, }
+\item[{doublereal $\ast$}]{efrad, }
+\item[{doublereal $\ast$}]{tol, }
+\item[{doublereal $\ast$}]{srmin, }
+\item[{doublereal $\ast$}]{tlmin}
+\end{DoxyParamCaption}
+)}\hypertarget{STEPCK_8c_a4cca0ffb391ae54110a397d3c59b37cc}{}\label{STEPCK_8c_a4cca0ffb391ae54110a397d3c59b37cc}
+
+
+Definition at line 31 of file S\+T\+E\+P\+C\+K.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, cprint\+\_\+(), dotf\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, r\+\_\+\+\_\+, rl, srftol\+\_\+(), and w.
+
+
+
+Referenced by sspath\+\_\+().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{comment}{/* Initialized data */}
+37 
+38     \textcolor{keyword}{static} doublereal smal = 1e-38;
+39     \textcolor{keyword}{static} doublereal big = 1e10;
+40 
+41     \textcolor{comment}{/* Builtin functions */}
+42     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+43 
+44     \textcolor{comment}{/* Local variables */}
+45     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+46     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+47     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+48     \textcolor{keyword}{static} doublereal rsq, rdif[3];
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+50         );
+51     \textcolor{keyword}{static} doublereal smin, tmin;
+52     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+53     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\_}(doublereal *,
+54          doublereal *, doublereal *, doublereal *, doublereal *);
+55 
+56     \textcolor{comment}{/* Parameter adjustments */}
+57     --rxl;
+58     --\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl};
+59     --rx;
+60     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+61 
+62     \textcolor{comment}{/* Function Body */}
+63 \textcolor{comment}{/* --PURPOSE IS TO COMPUTE MINIMUM SURFACE (SRMIN) AND TOOL STEPS */}
+64 \textcolor{comment}{/* --(TLMIN) BASED ON CURRENT AND LAST CONTACT POINTS */}
+65 
+66     *srmin = big;
+67     *tlmin = big;
+68     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+69 \textcolor{comment}{/* L10: */}
+70     rdif[i\_\_ - 1] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+71     \}
+72     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&rsq, rdif, rdif);
+73 
+74     \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\_}(\hyperlink{CNSURH_8c_a4bd01ba35ed38a5f61d31ae8e2a8d949}{rk}, efrad, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, &smin, &tmin);
+75     *srmin = min(*srmin,smin);
+76     *tlmin = min(*tlmin,tmin);
+77 
+78     \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\_}(rkl, efrad, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, &smin, &tmin);
+79     *srmin = min(*srmin,smin);
+80     *tlmin = min(*tlmin,tmin);
+81 
+82     \textcolor{keywordflow}{if} (rsq < smal) \{
+83     \textcolor{keywordflow}{goto} L999;
+84     \}
+85     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&w, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], rdif);
+86     w = w * -2.f * *side / rsq;
+87     \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\_}(&w, efrad, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, &smin, &tmin);
+88     *srmin = min(*srmin,smin);
+89     *tlmin = min(*tlmin,tmin);
+90 
+91     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&w, &\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[29], rdif);
+92     w = w * 2.f * *side / rsq;
+93     \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\_}(&w, efrad, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, &smin, &tmin);
+94     *srmin = min(*srmin,smin);
+95     *tlmin = min(*tlmin,tmin);
+96 
+97 L999:
+98     \textcolor{keywordflow}{if} (\hyperlink{STEPCK_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+99     \textcolor{keywordflow}{goto} L1999;
+100     \}
+101     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{STEPCK_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{STEPCK_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+102     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER STEPCK"}, (ftnlen)20, (ftnlen)13);
+103     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+104     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SIDE"}, side, (ftnlen)4);
+105     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"RK  "}, \hyperlink{CNSURH_8c_a4bd01ba35ed38a5f61d31ae8e2a8d949}{rk}, (ftnlen)4);
+106     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"RKL "}, rkl, (ftnlen)4);
+107     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ERAD"}, efrad, (ftnlen)4);
+108     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TOL "}, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, (ftnlen)4);
+109     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SRMN"}, srmin, (ftnlen)4);
+110     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TLMN"}, tlmin, (ftnlen)4);
+111 L1999:
+112     \textcolor{keywordflow}{return} 0;
+113 \} \textcolor{comment}{/* stepck\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{STEPCK_8c_a4cca0ffb391ae54110a397d3c59b37cc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{STEPCK_8c_a4cca0ffb391ae54110a397d3c59b37cc_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{STEPCK_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{STEPCK_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file S\+T\+E\+P\+C\+K.\+c.
+
+
+
+Referenced by stepck\+\_\+().
+
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{STEPCK_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 27 of file S\+T\+E\+P\+C\+K.\+c.
+
+
+
+Referenced by stepck\+\_\+().
+
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}{}\label{STEPCK_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file S\+T\+E\+P\+C\+K.\+c.
+
+
+
+Referenced by stepck\+\_\+().
+
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{STEPCK_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{STEPCK_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file S\+T\+E\+P\+C\+K.\+c.
+
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{STEPCK_8c_a1845284f4bf21a8b187ddb7659add7a0}{}\label{STEPCK_8c_a1845284f4bf21a8b187ddb7659add7a0}
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{STEPCK_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{STEPCK_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file S\+T\+E\+P\+C\+K.\+c.
+
+\index{S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!S\+T\+E\+P\+C\+K.\+c@{S\+T\+E\+P\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{STEPCK_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{STEPCK_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file S\+T\+E\+P\+C\+K.\+c.
+

@@ -1,0 +1,104 @@
+\hypertarget{INTFA2_8c}{}\section{I\+N\+T\+F\+A2.\+c File Reference}
+\label{INTFA2_8c}\index{I\+N\+T\+F\+A2.\+c@{I\+N\+T\+F\+A2.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+T\+F\+A2.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{INTFA2_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INTFA2_8c_a9d92a6fe997d67fc1c913b1db30bb7ce}{intfa2\+\_\+} (doublereal $\ast$\hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face}, doublereal $\ast$\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}, doublereal $\ast$\hyperlink{TLNORM_8c_ae00530def7fb9219b16d51f103557608}{p1}, doublereal $\ast$\hyperlink{TLNORM_8c_a4355b783bf60e3970c7d8e37144b1f4e}{p2}, integer $\ast$irc1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{I\+N\+T\+F\+A2.\+c@{I\+N\+T\+F\+A2.\+c}!intfa2\+\_\+@{intfa2\+\_\+}}
+\index{intfa2\+\_\+@{intfa2\+\_\+}!I\+N\+T\+F\+A2.\+c@{I\+N\+T\+F\+A2.\+c}}
+\subsubsection[{\texorpdfstring{intfa2\+\_\+(doublereal $\ast$face, doublereal $\ast$pl, doublereal $\ast$p1, doublereal $\ast$p2, integer $\ast$irc1)}{intfa2_(doublereal *face, doublereal *pl, doublereal *p1, doublereal *p2, integer *irc1)}}]{\setlength{\rightskip}{0pt plus 5cm}int intfa2\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{face, }
+\item[{doublereal $\ast$}]{pl, }
+\item[{doublereal $\ast$}]{p1, }
+\item[{doublereal $\ast$}]{p2, }
+\item[{integer $\ast$}]{irc1}
+\end{DoxyParamCaption}
+)}\hypertarget{INTFA2_8c_a9d92a6fe997d67fc1c913b1db30bb7ce}{}\label{INTFA2_8c_a9d92a6fe997d67fc1c913b1db30bb7ce}
+
+
+Definition at line 17 of file I\+N\+T\+F\+A2.\+c.
+
+
+
+References dist, i\+\_\+\+\_\+, intfa1\+\_\+(), p1, p2, pi, and pl.
+
+
+
+Referenced by polpol\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+21     \textcolor{keyword}{static} doublereal \hyperlink{ALTCMV_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi}[3], \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, dist1;
+22     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{INTFA1_8c_abd64064c89bf02b4e3998e377023e408}{intfa1\_}(doublereal *, doublereal *, 
+23         doublereal *, integer *);
+24 
+25 
+26 
+27     \textcolor{comment}{/* Parameter adjustments */}
+28     --\hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2};
+29     --\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1};
+30     --\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl};
+31     \hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face} -= 7;
+32 
+33     \textcolor{comment}{/* Function Body */}
+34     dist1 = -\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[4];
+35     dist = 0.;
+36 
+37     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+38     dist1 += \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+39 \textcolor{comment}{/* L10: */}
+40     dist += (\hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - p1[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[i\_\_];
+41     \}
+42 
+43     dist = dist1 / \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+44 
+45     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+46 \textcolor{comment}{/* L20: */}
+47     pi[i\_\_ - 1] = \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + (\hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * dist;
+48     \}
+49 
+50     \hyperlink{INTFA1_8c_abd64064c89bf02b4e3998e377023e408}{intfa1\_}(&\hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face}[7], &\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[1], pi, irc1);
+51 
+52     \textcolor{keywordflow}{return} 0;
+53 \} \textcolor{comment}{/* intfa2\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{INTFA2_8c_a9d92a6fe997d67fc1c913b1db30bb7ce_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTFA2_8c_a9d92a6fe997d67fc1c913b1db30bb7ce_icgraph}
+\end{center}
+\end{figure}
+
+

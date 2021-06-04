@@ -1,0 +1,188 @@
+\hypertarget{BALSCN_8c}{}\section{B\+A\+L\+S\+C\+N.\+c File Reference}
+\label{BALSCN_8c}\index{B\+A\+L\+S\+C\+N.\+c@{B\+A\+L\+S\+C\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+A\+L\+S\+C\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{BALSCN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BALSCN_8c_ac1a743f33f3e21335e21d72e5942c5b6}{balscn\+\_\+} (doublereal $\ast$surf, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, integer $\ast$npat, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{BALSCN_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+A\+L\+S\+C\+N.\+c@{B\+A\+L\+S\+C\+N.\+c}!balscn\+\_\+@{balscn\+\_\+}}
+\index{balscn\+\_\+@{balscn\+\_\+}!B\+A\+L\+S\+C\+N.\+c@{B\+A\+L\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{balscn\+\_\+(doublereal $\ast$surf, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$dist, integer $\ast$npat, integer $\ast$irr)}{balscn_(doublereal *surf, doublereal *side, doublereal *tc, doublereal *rad, doublereal *td, doublereal *u, doublereal *v, doublereal *dist, integer *npat, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int balscn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{surf, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{tc, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{doublereal $\ast$}]{td, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{dist, }
+\item[{integer $\ast$}]{npat, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{BALSCN_8c_ac1a743f33f3e21335e21d72e5942c5b6}{}\label{BALSCN_8c_ac1a743f33f3e21335e21d72e5942c5b6}
+
+
+Definition at line 21 of file B\+A\+L\+S\+C\+N.\+c.
+
+
+
+References b, balloc\+\_\+(), c\+\_\+\+\_\+3, chktop\+\_\+(), i\+\_\+\+\_\+, iflag, ir, itop, lodpch\+\_\+(), u1, and v1.
+
+
+
+Referenced by balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{comment}{/* Initialized data */}
+26 
+27     \textcolor{keyword}{static} doublereal half = .5;
+28     \textcolor{keyword}{static} doublereal big = 1e22;
+29 
+30     \textcolor{comment}{/* System generated locals */}
+31     integer i\_\_1;
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[64];
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+36     \textcolor{keyword}{static} doublereal \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, da;
+37     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, iok, \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[24]  \textcolor{comment}{/* was [6][4] */}, \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[6], ifree;
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}{balloc\_}(doublereal *, integer *, integer *, 
+39         doublereal *, doublereal *, doublereal *, doublereal *, 
+40         doublereal *, doublereal *, doublereal *, integer *, integer *, 
+41         integer *), \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, integer *, 
+42         integer *, integer *, integer *), \hyperlink{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{chktop\_}(doublereal *, 
+43         doublereal *, integer *, integer *);
+44     \textcolor{keyword}{static} integer maxrep, numpat;
+45 
+46 \textcolor{comment}{/*           /-PURPOSE IS TO SCAN ALL PATCHES IN SURFACE AND SELECT */}
+47 \textcolor{comment}{/*           /-BEST CANDIDATE FOR LINEUP WITH TOOL */}
+48 \textcolor{comment}{/*           /-INPUT */}
+49 \textcolor{comment}{/*           /-SURF- INPUT SCULPTURED SURFACE LARGE DATA ARRAY */}
+50 \textcolor{comment}{/*           /-OUTPUT */}
+51 \textcolor{comment}{/*           /-NPAT PATCH NUMBER OF BEST CANDIDATE */}
+52 \textcolor{comment}{/*           /-PATCH U,V COORDINATES AT ESTIMATED CONTACT POINT */}
+53 \textcolor{comment}{/*           /-DIST ESTIMATED DISPLACEMENT FROM CURRENT CUTTER POSN TO SU */}
+54 
+55     \textcolor{comment}{/* Parameter adjustments */}
+56     --td;
+57     --tc;
+58     --surf;
+59 
+60     \textcolor{comment}{/* Function Body */}
+61 
+62     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = half;
+63     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = half;
+64     *npat = 1;
+65     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} = big;
+66     ir = 1;
+67     numpat = (integer) surf[4];
+68 
+69     i\_\_1 = numpat;
+70     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+71 \textcolor{comment}{/*           /-LOAD THE ITH PATCH */}
+72     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&surf[1], b, iflag, itop, &i\_\_, &\hyperlink{BALSCN_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+73     maxrep = 5;
+74     ifree = 0;
+75     u1 = half;
+76     v1 = half;
+77     *irr = 0;
+78     \hyperlink{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}{balloc\_}(b, iflag, itop, side, &tc[1], rad, &td[1], &u1, &v1, &da, &
+79         maxrep, &ifree, irr);
+80     \textcolor{keywordflow}{if} (*irr != 0) \{
+81         \textcolor{keywordflow}{goto} L20;
+82     \}
+83     \hyperlink{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{chktop\_}(&u1, &v1, itop, &iok);
+84     \textcolor{keywordflow}{if} (iok == 0) \{
+85         \textcolor{keywordflow}{goto} L30;
+86     \}
+87 L20:
+88     \textcolor{keywordflow}{if} (abs(*\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}) < big) \{
+89         \textcolor{keywordflow}{goto} L10;
+90     \}
+91     u1 = half;
+92     v1 = half;
+93     maxrep = 1;
+94     ifree = 1;
+95     *irr = 0;
+96     \hyperlink{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}{balloc\_}(b, iflag, itop, side, &tc[1], rad, &td[1], &u1, &v1, &da, &
+97         maxrep, &ifree, irr);
+98     \textcolor{keywordflow}{if} (*irr != 0) \{
+99         \textcolor{keywordflow}{goto} L10;
+100     \}
+101 L30:
+102     \textcolor{keywordflow}{if} (abs(*\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}) < abs(da)) \{
+103         \textcolor{keywordflow}{goto} L10;
+104     \}
+105 \textcolor{comment}{/*           /-UPDATE BEST PATCH BASED ON SMALLEST DISTANCE */}
+106     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} = da;
+107     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+108     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+109     *npat = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+110     ir = 0;
+111 \textcolor{comment}{/*           /-UPDATE ERROR FLAG TO INDICATE SUCCESS */}
+112 L10:
+113     ;
+114     \}
+115 
+116     *irr = \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir};
+117     \textcolor{keywordflow}{return} 0;
+118 \} \textcolor{comment}{/* balscn\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALSCN_8c_ac1a743f33f3e21335e21d72e5942c5b6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALSCN_8c_ac1a743f33f3e21335e21d72e5942c5b6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{B\+A\+L\+S\+C\+N.\+c@{B\+A\+L\+S\+C\+N.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!B\+A\+L\+S\+C\+N.\+c@{B\+A\+L\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{BALSCN_8c_a5e7359f78743350865398325d9155f20}{}\label{BALSCN_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 17 of file B\+A\+L\+S\+C\+N.\+c.
+
+
+
+Referenced by balscn\+\_\+().
+

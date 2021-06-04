@@ -1,0 +1,228 @@
+\hypertarget{PCHG_8c}{}\section{P\+C\+H\+G.\+c File Reference}
+\label{PCHG_8c}\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+C\+H\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{PCHG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PCHG_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PCHG_8c_ab718c01308483153b905bc89f19fd102}{pchg\+\_\+} (doublereal $\ast$pcur, doublereal $\ast$pdir, doublereal $\ast$pdel)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{PCHG_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{PCHG_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{PCHG_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{PCHG_8c_ab0d81778e351fba702ec394c4fd2a675}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{PCHG_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{PCHG_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{PCHG_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{PCHG_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file P\+C\+H\+G.\+c.
+
+
+
+Referenced by pchg\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!pchg\+\_\+@{pchg\+\_\+}}
+\index{pchg\+\_\+@{pchg\+\_\+}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{pchg\+\_\+(doublereal $\ast$pcur, doublereal $\ast$pdir, doublereal $\ast$pdel)}{pchg_(doublereal *pcur, doublereal *pdir, doublereal *pdel)}}]{\setlength{\rightskip}{0pt plus 5cm}int pchg\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pcur, }
+\item[{doublereal $\ast$}]{pdir, }
+\item[{doublereal $\ast$}]{pdel}
+\end{DoxyParamCaption}
+)}\hypertarget{PCHG_8c_ab718c01308483153b905bc89f19fd102}{}\label{PCHG_8c_ab718c01308483153b905bc89f19fd102}
+
+
+Definition at line 31 of file P\+C\+H\+G.\+c.
+
+
+
+References a, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, cprint\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, smal1, and zero.
+
+
+
+Referenced by cutreg\+\_\+(), and sspath\+\_\+().
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{comment}{/* Initialized data */}
+35 
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+37     \textcolor{keyword}{static} doublereal half = .5;
+38     \textcolor{keyword}{static} doublereal smal = 1e-14;
+39     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1} = 1e-10;
+40 
+41     \textcolor{comment}{/* System generated locals */}
+42     doublereal d\_\_1;
+43 
+44     \textcolor{comment}{/* Builtin functions */}
+45     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+46 
+47     \textcolor{comment}{/* Local variables */}
+48     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+49     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+50     \textcolor{keyword}{static} doublereal xx;
+51     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+52     \textcolor{keyword}{static} doublereal pin, pmax, phalf, ptarg;
+53     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+54     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+55 
+56 \textcolor{comment}{/* --PURPOSE IS TO MODIFY THE PARAMETRIC CHANGE PDEL SO AS */}
+57 \textcolor{comment}{/* --TO HIT OR APPROACH A JUNCTION POINT SMOOTHLY. */}
+58 
+59     pin = *pdel;
+60     a = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+61     xx = *pcur;
+62     i\_\_ = (integer) xx;
+63     a = (doublereal) i\_\_;
+64     \textcolor{keywordflow}{if} ((d\_\_1 = a - *pcur, abs(d\_\_1)) > smal) \{
+65     \textcolor{keywordflow}{goto} L10;
+66     \}
+67     *pdel = min(half,*pdel);
+68     \textcolor{keywordflow}{goto} L999;
+69 
+70 L10:
+71     ptarg = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+72     xx = *pdir + *pcur;
+73     i\_\_ = (integer) xx;
+74     ptarg = (doublereal) i\_\_;
+75     pmax = (d\_\_1 = ptarg - *pcur, abs(d\_\_1));
+76     *pdel = min(pmax,*pdel);
+77     phalf = half * pmax;
+78     \textcolor{keywordflow}{if} (*pdel < pmax && *pdel > phalf) \{
+79     *pdel = phalf;
+80     \}
+81 
+82 L999:
+83     *pdel += \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1};
+84     \textcolor{keywordflow}{if} (\hyperlink{PCHG_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+85     \textcolor{keywordflow}{goto} L1999;
+86     \}
+87     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHG_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHG_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{PCHG_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+88     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER PCHG"}, (ftnlen)20, (ftnlen)11);
+89     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+90     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PCUR"}, pcur, (ftnlen)4);
+91     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PDIR"}, pdir, (ftnlen)4);
+92     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PDEL"}, pdel, (ftnlen)4);
+93     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{PCHG_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"PIN "}, &pin, (ftnlen)4);
+94 L1999:
+95     \textcolor{keywordflow}{return} 0;
+96 \} \textcolor{comment}{/* pchg\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PCHG_8c_ab718c01308483153b905bc89f19fd102_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PCHG_8c_ab718c01308483153b905bc89f19fd102_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHG_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{PCHG_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file P\+C\+H\+G.\+c.
+
+
+
+Referenced by pchg\+\_\+().
+
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{PCHG_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 27 of file P\+C\+H\+G.\+c.
+
+
+
+Referenced by pchg\+\_\+().
+
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{PCHG_8c_a9e9287f317ef3436252a395791a899f6}{}\label{PCHG_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file P\+C\+H\+G.\+c.
+
+
+
+Referenced by pchg\+\_\+().
+
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{PCHG_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{PCHG_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file P\+C\+H\+G.\+c.
+
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{PCHG_8c_ab0d81778e351fba702ec394c4fd2a675}{}\label{PCHG_8c_ab0d81778e351fba702ec394c4fd2a675}
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{PCHG_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{PCHG_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file P\+C\+H\+G.\+c.
+
+\index{P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!P\+C\+H\+G.\+c@{P\+C\+H\+G.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{PCHG_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{PCHG_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file P\+C\+H\+G.\+c.
+

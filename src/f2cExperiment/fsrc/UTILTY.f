@@ -1,0 +1,163 @@
+*
+*
+*  * UTILTY PACKAGE *  VAX11 VERSION  6.6.85  E.MCLELLAN
+*
+*
+*  * ABSF *
+*
+*
+      SUBROUTINE ABSF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      RES=DABS(ARG)
+      RETURN
+      END
+*
+*  * ATANF *
+*
+      SUBROUTINE ATANF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      RES=DATAN(ARG)/0.0174532925
+      RETURN
+      END
+*
+*  * COSF *
+*
+      SUBROUTINE COSF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      RES=DCOS(ARG*0.0174532925)
+      RETURN
+      END
+*
+*  * SINF *
+*
+      SUBROUTINE SINF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      RES=DSIN(ARG*0.0174532925)
+      RETURN
+      END
+*
+*  EXPF *
+*
+      SUBROUTINE EXPF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      RES=DEXP(ARG)
+      RETURN
+      END
+*
+*  * SQRTF *
+*
+      SUBROUTINE SQRTF(RES,ARG)
+C
+      DOUBLE PRECISION RES,ARG
+C
+      IF (ARG.LT.0.0D0) THEN
+        CALL ERROR(20,'SQRTF   ')
+        ARG=DABS(ARG)
+      END IF
+      RES=DSQRT(ARG)
+      RETURN
+      END
+*
+*  * VNORM *
+*
+*  PURPOSE    NORMALIZE A VECTOR   V3=NORM(VA)
+*
+*  CALLING SEQUENCE
+*
+*             CALL VNORM(VA,V3)
+*
+      SUBROUTINE VNORM(VA,V3)
+C
+      INCLUDE 'IFXCOR.INC'
+C
+      INCLUDE 'FXCOR.INC'
+C
+      DOUBLE PRECISION VA(3),V3(3)
+C
+      VTEM=DSQRT(VA(1)*VA(1)+VA(2)*VA(2)+VA(3)*VA(3))
+      IF (DABS(VTEM).LT.1.0E-24) THEN
+        IER=1
+        DO 25 I=1,3
+          V3(I)=VA(I)
+   25   CONTINUE
+C
+      ELSE
+        IER=0
+        DO 26 I=1,3
+          V3(I)=VA(I)/VTEM
+   26   CONTINUE
+C
+      END IF
+C
+      RETURN
+      END
+*
+*  * CROSS *
+*
+*  PURPOSE    EVALUATE V3=V1 X V2
+*
+*  CALLING SEQUENCE
+*
+*             CALL CROSS(V1,V2,V3)
+*
+      SUBROUTINE CROSS(V1,V2,V3)
+C
+      DOUBLE PRECISION V1(3),V2(3),V3(3),VT(3)
+C
+      VT(1)=V1(2)*V2(3)-V1(3)*V2(2)
+      VT(2)=V1(3)*V2(1)-V1(1)*V2(3)
+      VT(3)=V1(1)*V2(2)-V1(2)*V2(1)
+C
+      DO 10 I=1,3
+      V3(I)=VT(I)
+  10  CONTINUE
+C
+      RETURN
+      END
+*
+*  * CROSSV *
+*
+*  PURPOSE    EVALUATE CROSS PRODUCT AND NORMALIZE
+*
+*  CALLING SEQUENCE
+*
+*             CALL CROSSV(V1,V2,V3)
+*
+      SUBROUTINE CROSSV(V1,V2,V3)
+C
+      DOUBLE PRECISION V1(3),V2(3),V3(3),VT(3)
+C
+      CALL CROSS(V1,V2,VT)
+C
+      CALL VNORM(VT,V3)
+C
+      RETURN
+      END
+*
+*
+*  * DOTV *
+*
+*  PURPOSE    EVALUATE DOT PRODUCT   RES=V1.V2
+*
+*  CALLING SEQUENCE
+*
+*             CALL DOTV(RES,V1,V2)
+*
+      SUBROUTINE DOTV(RES,V1,V2)
+C
+      DOUBLE PRECISION RES,V1(3),V2(3)
+C
+      RES=V1(1)*V2(1)+V1(2)*V2(2)+V1(3)*V2(3)
+C
+      RETURN
+      END

@@ -1,0 +1,339 @@
+\hypertarget{ANGLFB_8c}{}\section{A\+N\+G\+L\+F\+B.\+c File Reference}
+\label{ANGLFB_8c}\index{A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+N\+G\+L\+F\+B.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{ANGLFB_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ANGLFB_8c_a191d098b023027c2eb8b2671627844b1}{anglf\+\_\+} (doublereal $\ast$res, doublereal $\ast$\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}, doublereal $\ast$\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2})
+\item 
+int \hyperlink{ANGLFB_8c_aa517ea52e7887bef7da7563a532adc31}{anglb\+\_\+} (doublereal $\ast$res, doublereal $\ast$\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}, doublereal $\ast$\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{ANGLFB_8c_af4bc02a600e5866ae12752c7c77208db}{c\+\_\+\+\_\+80} = 80
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}!anglb\+\_\+@{anglb\+\_\+}}
+\index{anglb\+\_\+@{anglb\+\_\+}!A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}}
+\subsubsection[{\texorpdfstring{anglb\+\_\+(doublereal $\ast$res, doublereal $\ast$arg1, doublereal $\ast$arg2)}{anglb_(doublereal *res, doublereal *arg1, doublereal *arg2)}}]{\setlength{\rightskip}{0pt plus 5cm}int anglb\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{res, }
+\item[{doublereal $\ast$}]{arg1, }
+\item[{doublereal $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}\hypertarget{ANGLFB_8c_aa517ea52e7887bef7da7563a532adc31}{}\label{ANGLFB_8c_aa517ea52e7887bef7da7563a532adc31}
+
+
+Definition at line 173 of file A\+N\+G\+L\+F\+B.\+c.
+
+
+
+References a1, a2, arg1, arg2, b1, b2, c\+\_\+\+\_\+0, c\+\_\+\+\_\+80, ckdef\+\_\+(), d\+\_\+\+\_\+, darcos\+\_\+(), error\+\_\+(), i\+\_\+\+\_\+, ir, transf\+\_\+(), and unpack\+\_\+().
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+175 \{
+176     \textcolor{comment}{/* Initialized data */}
+177 
+178     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}[20] = \{ 4,4,5,5,2,1,1,1,5,1,0,0,0,1,0,0,0,0,2,3 \};
+179     \textcolor{keyword}{static} integer iw[20] = \{ 1,1,2,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,2,1 \};
+180 
+181     \textcolor{comment}{/* Builtin functions */}
+182     \textcolor{keywordtype}{double} sqrt(doublereal), atan2(doublereal, doublereal);
+183 
+184     \textcolor{comment}{/* Local variables */}
+185     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+186     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+187     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}[12], \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}[12], \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2}, b3, sr[2];
+188     \textcolor{keyword}{static} integer iww, mode1, mode2, isub1, isub2;
+189     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+190     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+191     \textcolor{keyword}{static} integer isize1, isize2;
+192     \textcolor{keyword}{extern} doublereal \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(doublereal *);
+193     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(doublereal *, integer *, integer *, 
+194         integer *), \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(doublereal *, doublereal *, integer *, 
+195         integer *, integer *);
+196 
+197 \textcolor{comment}{/* SCHALTANGABE FUER TRANSFORMATIONSROUTINE TRANSF */}
+198     \textcolor{comment}{/* Parameter adjustments */}
+199     --\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2};
+200     --\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1};
+201     --res;
+202 
+203     \textcolor{comment}{/* Function Body */}
+204 \textcolor{comment}{/* SCHALTZIFFERN FUER ANGLB-AUFGABENERKENNUNG */}
+205 
+206 
+207 \textcolor{comment}{/* L1: */}
+208     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1]) || \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1])) \{
+209     \textcolor{keywordflow}{goto} L30;
+210     \}
+211     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &mode1, &isize1, &isub1);
+212     \textcolor{keywordflow}{if} (mode1 <= 0 || mode1 > 20 || ir[mode1 - 1] == 0) \{
+213     \textcolor{keywordflow}{goto} L30;
+214     \}
+215     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &mode2, &isize2, &isub2);
+216     \textcolor{keywordflow}{if} (mode2 <= 0 || mode2 > 20 || ir[mode2 - 1] == 0) \{
+217     \textcolor{keywordflow}{goto} L30;
+218     \}
+219     iww = iw[mode1 - 1] * iw[mode2 - 1];
+220     \textcolor{keywordflow}{switch} (iww) \{
+221     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L10;
+222     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L9;
+223     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L9;
+224     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L20;
+225     \}
+226 L9:
+227     \textcolor{keywordflow}{goto} L30;
+228 \textcolor{comment}{/*   WINKEL ZWISCHEN VEKTOREN (AUCH EBENEN-NORMALEN) */}
+229 L10:
+230     b1 = 0.;
+231     b2 = 0.;
+232     b3 = 0.;
+233     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+234     b1 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1};
+235     b2 = \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2};
+236 \textcolor{comment}{/* L11: */}
+237     b3 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + b3;
+238     \}
+239     \textcolor{keywordflow}{if} (b1 < 1e-12 || b2 < 1e-12) \{
+240     \textcolor{keywordflow}{goto} L30;
+241     \}
+242     res[1] = b3 / sqrt(b1) / sqrt(b2);
+243     res[1] = max(-1.,res[1]);
+244     res[1] = min(1.,res[1]);
+245     res[1] = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&res[1]);
+246     \textcolor{keywordflow}{goto} L25;
+247 \textcolor{comment}{/*    2-D-VERARBEITUNG,WINKEL ZUR POSITIVEN X-ACHSE */}
+248 L20:
+249     \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(a1, &\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &ir[mode1 - 1], &isize1, &\hyperlink{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+250     \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(a2, &\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &ir[mode2 - 1], &isize2, &\hyperlink{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+251     sr[0] = a2[0] - a1[0];
+252     sr[1] = a2[1] - a1[1];
+253     \textcolor{keywordflow}{if} (abs(sr[0]) + abs(sr[1]) < d\_\_ - 12) \{
+254     \textcolor{keywordflow}{goto} L30;
+255     \}
+256     res[1] = atan2(sr[1], sr[0]);
+257     \textcolor{keywordflow}{if} (res[1] < 0.) \{
+258     res[1] += 6.283185306;
+259     \}
+260 L25:
+261     \textcolor{keywordflow}{return} 0;
+262 \textcolor{comment}{/*  'MINDESTENS EINE EINGABE IST UNDEFINIERT ODER ERGEBNIS NICHT */}
+263 \textcolor{comment}{/*                                                   BERECHENBAR' */}
+264 L30:
+265     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{ANGLFB_8c_af4bc02a600e5866ae12752c7c77208db}{c\_\_80}, \textcolor{stringliteral}{"ANGLB   "}, (ftnlen)8);
+266     res[1] = 0.;
+267     \textcolor{keywordflow}{return} 0;
+268 \} \textcolor{comment}{/* anglb\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGLFB_8c_aa517ea52e7887bef7da7563a532adc31_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGLFB_8c_aa517ea52e7887bef7da7563a532adc31_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}!anglf\+\_\+@{anglf\+\_\+}}
+\index{anglf\+\_\+@{anglf\+\_\+}!A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}}
+\subsubsection[{\texorpdfstring{anglf\+\_\+(doublereal $\ast$res, doublereal $\ast$arg1, doublereal $\ast$arg2)}{anglf_(doublereal *res, doublereal *arg1, doublereal *arg2)}}]{\setlength{\rightskip}{0pt plus 5cm}int anglf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{res, }
+\item[{doublereal $\ast$}]{arg1, }
+\item[{doublereal $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}\hypertarget{ANGLFB_8c_a191d098b023027c2eb8b2671627844b1}{}\label{ANGLFB_8c_a191d098b023027c2eb8b2671627844b1}
+
+
+Definition at line 48 of file A\+N\+G\+L\+F\+B.\+c.
+
+
+
+References a1, a2, arg1, arg2, b1, b2, c\+\_\+\+\_\+0, c\+\_\+\+\_\+80, ckdef\+\_\+(), d\+\_\+\+\_\+, darcos\+\_\+(), error\+\_\+(), i\+\_\+\+\_\+, ir, transf\+\_\+(), and unpack\+\_\+().
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{comment}{/* Initialized data */}
+52 
+53     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}[20] = \{ 4,4,5,5,2,1,1,1,5,1,0,0,0,1,0,0,0,0,2,3 \};
+54     \textcolor{keyword}{static} integer iw[20] = \{ 1,1,2,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,2,1 \};
+55     \textcolor{keyword}{static} doublereal fact = .0174532925;
+56 
+57     \textcolor{comment}{/* Builtin functions */}
+58     \textcolor{keywordtype}{double} sqrt(doublereal), atan2(doublereal, doublereal);
+59 
+60     \textcolor{comment}{/* Local variables */}
+61     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+62     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+63     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}[12], \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}[12], \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1}, \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2}, b3, sr[2];
+64     \textcolor{keyword}{static} integer iww, mode1, mode2, isub1, isub2;
+65     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+66     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+67     \textcolor{keyword}{static} integer isize1, isize2;
+68     \textcolor{keyword}{extern} doublereal \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(doublereal *);
+69     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(doublereal *, integer *, integer *, 
+70         integer *), \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(doublereal *, doublereal *, integer *, 
+71         integer *, integer *);
+72 
+73 \textcolor{comment}{/* SCHALTANGABE FUER TRANSFORMATIONSROUTINE TRANSF */}
+74     \textcolor{comment}{/* Parameter adjustments */}
+75     --\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2};
+76     --\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1};
+77     --res;
+78 
+79     \textcolor{comment}{/* Function Body */}
+80 \textcolor{comment}{/* SCHALTZIFFERN FUER ANGLF-AUFGABENERKENNUNG */}
+81 
+82 
+83 \textcolor{comment}{/* L1: */}
+84     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1]) || \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1])) \{
+85     \textcolor{keywordflow}{goto} L30;
+86     \}
+87     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &mode1, &isize1, &isub1);
+88     \textcolor{keywordflow}{if} (mode1 <= 0 || mode1 > 20 || ir[mode1 - 1] == 0) \{
+89     \textcolor{keywordflow}{goto} L30;
+90     \}
+91     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &mode2, &isize2, &isub2);
+92     \textcolor{keywordflow}{if} (mode2 <= 0 || mode2 > 20 || ir[mode2 - 1] == 0) \{
+93     \textcolor{keywordflow}{goto} L30;
+94     \}
+95     iww = iw[mode1 - 1] * iw[mode2 - 1];
+96     \textcolor{keywordflow}{switch} (iww) \{
+97     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L10;
+98     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L9;
+99     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L9;
+100     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L20;
+101     \}
+102 L9:
+103     \textcolor{keywordflow}{goto} L30;
+104 \textcolor{comment}{/*   WINKEL ZWISCHEN VEKTOREN (AUCH EBENEN-NORMALEN) */}
+105 L10:
+106     b1 = 0.;
+107     b2 = 0.;
+108     b3 = 0.;
+109     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+110     b1 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_a4d46c8a35daf7c9b9e71edfae7eb1bce}{b1};
+111     b2 = \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_acff3bec713fd324f76ac8042293272bf}{b2};
+112 \textcolor{comment}{/* L11: */}
+113     b3 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + b3;
+114     \}
+115     \textcolor{keywordflow}{if} (b1 < 1e-12 || b2 < 1e-12) \{
+116     \textcolor{keywordflow}{goto} L30;
+117     \}
+118     res[1] = b3 / sqrt(b1) / sqrt(b2);
+119     res[1] = max(-1.,res[1]);
+120     res[1] = min(1.,res[1]);
+121     res[1] = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&res[1]);
+122     \textcolor{keywordflow}{goto} L25;
+123 \textcolor{comment}{/*    2-D-VERARBEITUNG,WINKEL ZUR POSITIVEN X-ACHSE */}
+124 L20:
+125     \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(a1, &\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &ir[mode1 - 1], &isize1, &\hyperlink{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+126     \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(a2, &\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &ir[mode2 - 1], &isize2, &\hyperlink{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+127     sr[0] = a2[0] - a1[0];
+128     sr[1] = a2[1] - a1[1];
+129     \textcolor{keywordflow}{if} (abs(sr[0]) + abs(sr[1]) < d\_\_ - 12) \{
+130     \textcolor{keywordflow}{goto} L30;
+131     \}
+132     res[1] = atan2(sr[1], sr[0]);
+133     \textcolor{keywordflow}{if} (res[1] < 0.) \{
+134     res[1] += 6.283185306;
+135     \}
+136 L25:
+137     res[1] /= fact;
+138     \textcolor{keywordflow}{return} 0;
+139 \textcolor{comment}{/*  'MINDESTENS EINE EINGABE IST UNDEFINIERT ODER ERGEBNIS NICHT */}
+140 \textcolor{comment}{/*                                                   BERECHENBAR' */}
+141 L30:
+142     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{ANGLFB_8c_af4bc02a600e5866ae12752c7c77208db}{c\_\_80}, \textcolor{stringliteral}{"ANGLF   "}, (ftnlen)8);
+143     res[1] = 0.;
+144     \textcolor{keywordflow}{return} 0;
+145 \} \textcolor{comment}{/* anglf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGLFB_8c_a191d098b023027c2eb8b2671627844b1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGLFB_8c_a191d098b023027c2eb8b2671627844b1_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{ANGLFB_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 17 of file A\+N\+G\+L\+F\+B.\+c.
+
+
+
+Referenced by anglb\+\_\+(), and anglf\+\_\+().
+
+\index{A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}!c\+\_\+\+\_\+80@{c\+\_\+\+\_\+80}}
+\index{c\+\_\+\+\_\+80@{c\+\_\+\+\_\+80}!A\+N\+G\+L\+F\+B.\+c@{A\+N\+G\+L\+F\+B.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+80}{c__80}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+80 = 80\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ANGLFB_8c_af4bc02a600e5866ae12752c7c77208db}{}\label{ANGLFB_8c_af4bc02a600e5866ae12752c7c77208db}
+
+
+Definition at line 18 of file A\+N\+G\+L\+F\+B.\+c.
+
+
+
+Referenced by anglb\+\_\+(), and anglf\+\_\+().
+

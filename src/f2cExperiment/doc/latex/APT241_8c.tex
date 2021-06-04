@@ -1,0 +1,168 @@
+\hypertarget{APT241_8c}{}\section{A\+P\+T241.\+c File Reference}
+\label{APT241_8c}\index{A\+P\+T241.\+c@{A\+P\+T241.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T241.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT241_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT241_8c_af3fe62a6473af3d53b2701896333cd84}{apt241\+\_\+} (void)
+\item 
+int \hyperlink{APT241_8c_ab9b9f8b874d54576cfbc460195d76773}{apt242\+\_\+} (void)
+\item 
+integer \hyperlink{APT241_8c_a5240f3329777a366c9d641f68f643495}{handl\+\_\+} (integer $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s}, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T241.\+c@{A\+P\+T241.\+c}!apt241\+\_\+@{apt241\+\_\+}}
+\index{apt241\+\_\+@{apt241\+\_\+}!A\+P\+T241.\+c@{A\+P\+T241.\+c}}
+\subsubsection[{\texorpdfstring{apt241\+\_\+(void)}{apt241_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt241\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{APT241_8c_af3fe62a6473af3d53b2701896333cd84}{}\label{APT241_8c_af3fe62a6473af3d53b2701896333cd84}
+
+
+Definition at line 17 of file A\+P\+T241.\+c.
+
+
+
+References handl\+\_\+(), and libsestablish\+\_\+().
+
+
+
+Referenced by apt201\+\_\+(), cutter\+\_\+(), and go\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keyword}{extern} integer \hyperlink{APT241_8c_a5240f3329777a366c9d641f68f643495}{handl\_}();
+20     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{dummy_8c_a5e9b2fd87323f4df9ef05a17b3601141}{libsestablish\_}(I\_fp);
+21 
+22 \textcolor{comment}{/*      CALL LIB$ESTABLISH(HANDL) */}
+23     \hyperlink{dummy_8c_a5e9b2fd87323f4df9ef05a17b3601141}{libsestablish\_}((I\_fp)\hyperlink{APT241_8c_a5240f3329777a366c9d641f68f643495}{handl\_});
+24     \textcolor{keywordflow}{return} 0;
+25 \} \textcolor{comment}{/* apt241\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{APT241_8c_af3fe62a6473af3d53b2701896333cd84_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT241_8c_af3fe62a6473af3d53b2701896333cd84_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+P\+T241.\+c@{A\+P\+T241.\+c}!apt242\+\_\+@{apt242\+\_\+}}
+\index{apt242\+\_\+@{apt242\+\_\+}!A\+P\+T241.\+c@{A\+P\+T241.\+c}}
+\subsubsection[{\texorpdfstring{apt242\+\_\+(void)}{apt242_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt242\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{APT241_8c_ab9b9f8b874d54576cfbc460195d76773}{}\label{APT241_8c_ab9b9f8b874d54576cfbc460195d76773}
+
+
+Definition at line 29 of file A\+P\+T241.\+c.
+
+
+
+Referenced by aerr2\+\_\+().
+
+
+\begin{DoxyCode}
+30 \{
+31 \textcolor{comment}{/*      CALL LIB$SIGNAL(%VAL(SS$\_ACCVIO)) */}
+32     \textcolor{keywordflow}{return} 0;
+33 \} \textcolor{comment}{/* apt242\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT241_8c_ab9b9f8b874d54576cfbc460195d76773_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+P\+T241.\+c@{A\+P\+T241.\+c}!handl\+\_\+@{handl\+\_\+}}
+\index{handl\+\_\+@{handl\+\_\+}!A\+P\+T241.\+c@{A\+P\+T241.\+c}}
+\subsubsection[{\texorpdfstring{handl\+\_\+(integer $\ast$s, integer $\ast$m)}{handl_(integer *s, integer *m)}}]{\setlength{\rightskip}{0pt plus 5cm}integer handl\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{s, }
+\item[{integer $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{APT241_8c_a5240f3329777a366c9d641f68f643495}{}\label{APT241_8c_a5240f3329777a366c9d641f68f643495}
+
+
+Definition at line 37 of file A\+P\+T241.\+c.
+
+
+
+References m, and s.
+
+
+
+Referenced by apt241\+\_\+().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{comment}{/* System generated locals */}
+40     integer ret\_val;
+41 
+42     \textcolor{comment}{/* Local variables */}
+43     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} abort\_(\textcolor{keywordtype}{void});
+44 
+45 \textcolor{comment}{/*      INCLUDE 'SYS$LIBRARY:SIGDEF' */}
+46 \textcolor{comment}{/*      HANDL=SS$\_RESIGNAL */}
+47 \textcolor{comment}{/*      IF (S(2).EQ.SS$\_UNWIND) THEN */}
+48 \textcolor{comment}{/*      RETURN */}
+49 \textcolor{comment}{/*      END IF */}
+50 \textcolor{comment}{/*      CALL SYS$UNWIND(,) */}
+51 \textcolor{comment}{/*   i don't know what to replace this with right now, so.. */}
+52     \textcolor{comment}{/* Parameter adjustments */}
+53     --\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+54     --\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+55 
+56     \textcolor{comment}{/* Function Body */}
+57     abort\_();
+58     \textcolor{keywordflow}{return} ret\_val;
+59 \} \textcolor{comment}{/* handl\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT241_8c_a5240f3329777a366c9d641f68f643495_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,98 @@
+\hypertarget{INTFA1_8c}{}\section{I\+N\+T\+F\+A1.\+c File Reference}
+\label{INTFA1_8c}\index{I\+N\+T\+F\+A1.\+c@{I\+N\+T\+F\+A1.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+T\+F\+A1.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{INTFA1_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INTFA1_8c_abd64064c89bf02b4e3998e377023e408}{intfa1\+\_\+} (doublereal $\ast$\hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face}, doublereal $\ast$\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}, doublereal $\ast$pf, integer $\ast$irc1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{I\+N\+T\+F\+A1.\+c@{I\+N\+T\+F\+A1.\+c}!intfa1\+\_\+@{intfa1\+\_\+}}
+\index{intfa1\+\_\+@{intfa1\+\_\+}!I\+N\+T\+F\+A1.\+c@{I\+N\+T\+F\+A1.\+c}}
+\subsubsection[{\texorpdfstring{intfa1\+\_\+(doublereal $\ast$face, doublereal $\ast$pl, doublereal $\ast$pf, integer $\ast$irc1)}{intfa1_(doublereal *face, doublereal *pl, doublereal *pf, integer *irc1)}}]{\setlength{\rightskip}{0pt plus 5cm}int intfa1\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{face, }
+\item[{doublereal $\ast$}]{pl, }
+\item[{doublereal $\ast$}]{pf, }
+\item[{integer $\ast$}]{irc1}
+\end{DoxyParamCaption}
+)}\hypertarget{INTFA1_8c_abd64064c89bf02b4e3998e377023e408}{}\label{INTFA1_8c_abd64064c89bf02b4e3998e377023e408}
+
+
+Definition at line 17 of file I\+N\+T\+F\+A1.\+c.
+
+
+
+References cross\+\_\+(), i\+\_\+\+\_\+, pl, v2, and v3.
+
+
+
+Referenced by intfa2\+\_\+(), and polpol\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+21     \textcolor{keyword}{static} doublereal \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3], \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[3];
+22     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+23         *);
+24 
+25 
+26 
+27     \textcolor{comment}{/* Parameter adjustments */}
+28     --pf;
+29     --\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl};
+30     \hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face} -= 7;
+31 
+32     \textcolor{comment}{/* Function Body */}
+33     *irc1 = 0;
+34     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+35     v2[0] = pf[1] - \hyperlink{POLPOL_8c_aa574b210d99dd618615812561cf6d696}{face}[i\_\_ * 6 + 1];
+36     v2[1] = pf[2] - face[i\_\_ * 6 + 2];
+37     v2[2] = pf[3] - face[i\_\_ * 6 + 3];
+38     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(v2, &face[i\_\_ * 6 + 4], v3);
+39     \textcolor{keywordflow}{if} (\hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[1] * v3[0] + \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[2] * v3[1] + \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[3] * v3[2] < 0.) \{
+40         \textcolor{keywordflow}{goto} L20;
+41     \}
+42 \textcolor{comment}{/* L10: */}
+43     \}
+44     *irc1 = 1;
+45 L20:
+46 
+47     \textcolor{keywordflow}{return} 0;
+48 \} \textcolor{comment}{/* intfa1\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{INTFA1_8c_abd64064c89bf02b4e3998e377023e408_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTFA1_8c_abd64064c89bf02b4e3998e377023e408_icgraph}
+\end{center}
+\end{figure}
+
+

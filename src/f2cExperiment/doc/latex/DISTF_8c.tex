@@ -1,0 +1,207 @@
+\hypertarget{DISTF_8c}{}\section{D\+I\+S\+T\+F.\+c File Reference}
+\label{DISTF_8c}\index{D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for D\+I\+S\+T\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{DISTF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DISTF_8c_aa12555abf6ade100bb7c1de408eed3ee}{distf\+\_\+} (doublereal $\ast$res, doublereal $\ast$\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}, doublereal $\ast$\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{DISTF_8c_a0de7be36c0e182134e697f29f5c954a4}{c\+\_\+\+\_\+55} = 55
+\item 
+static integer \hyperlink{DISTF_8c_a751732540ac5095e2d12db6a06044967}{c\+\_\+\+\_\+61} = 61
+\item 
+static integer \hyperlink{DISTF_8c_a1d0d493d2b3e475eb52ae42ae46f9948}{c\+\_\+\+\_\+62} = 62
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}!distf\+\_\+@{distf\+\_\+}}
+\index{distf\+\_\+@{distf\+\_\+}!D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{distf\+\_\+(doublereal $\ast$res, doublereal $\ast$arg1, doublereal $\ast$arg2)}{distf_(doublereal *res, doublereal *arg1, doublereal *arg2)}}]{\setlength{\rightskip}{0pt plus 5cm}int distf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{res, }
+\item[{doublereal $\ast$}]{arg1, }
+\item[{doublereal $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}\hypertarget{DISTF_8c_aa12555abf6ade100bb7c1de408eed3ee}{}\label{DISTF_8c_aa12555abf6ade100bb7c1de408eed3ee}
+
+
+Definition at line 43 of file D\+I\+S\+T\+F.\+c.
+
+
+
+References arg1, arg2, c\+\_\+\+\_\+55, c\+\_\+\+\_\+61, c\+\_\+\+\_\+62, ckdef\+\_\+(), error\+\_\+(), isize, isub, mode, undef\+\_\+(), and unpack\+\_\+().
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+45 \{
+46     \textcolor{comment}{/* Initialized data */}
+47 
+48     \textcolor{keyword}{static} integer ient[20] = \{ 1,1,2,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,2,0 \};
+49 
+50     \textcolor{comment}{/* System generated locals */}
+51     doublereal d\_\_1, d\_\_2, d\_\_3;
+52 
+53     \textcolor{comment}{/* Builtin functions */}
+54     \textcolor{keywordtype}{double} sqrt(doublereal);
+55 
+56     \textcolor{comment}{/* Local variables */}
+57     \textcolor{keyword}{static} doublereal ab;
+58     \textcolor{keyword}{static} integer mod, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, \hyperlink{APT331_8c_a0d23b6d61c40090519c85873d65b78bd}{isub};
+59     \textcolor{keyword}{static} doublereal cosw;
+60     \textcolor{keyword}{static} integer iarg1, iarg2;
+61     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+62     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(doublereal *);
+63     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize};
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen), \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(
+65         doublereal *, integer *, integer *, integer *);
+66 
+67     \textcolor{comment}{/* Parameter adjustments */}
+68     --\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2};
+69     --\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1};
+70     --res;
+71 
+72     \textcolor{comment}{/* Function Body */}
+73     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1]) || \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1])) \{
+74     \textcolor{keywordflow}{goto} L50;
+75     \}
+76     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &mode, &isize, &isub);
+77     \textcolor{keywordflow}{if} (mode < 1 || mode > 20) \{
+78     \textcolor{keywordflow}{goto} L51;
+79     \}
+80     iarg1 = ient[mode - 1];
+81     \textcolor{keywordflow}{if} (iarg1 == 0) \{
+82     \textcolor{keywordflow}{goto} L51;
+83     \}
+84     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &mode, &isize, &isub);
+85     \textcolor{keywordflow}{if} (mode < 1 || mode > 20) \{
+86     \textcolor{keywordflow}{goto} L51;
+87     \}
+88     iarg2 = ient[mode - 1];
+89     \textcolor{keywordflow}{if} (iarg2 == 0) \{
+90     \textcolor{keywordflow}{goto} L51;
+91     \}
+92     mod = iarg1 + iarg2 - 1;
+93     \textcolor{keywordflow}{switch} (mod) \{
+94     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L10;
+95     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L20;
+96     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L30;
+97     \}
+98 \textcolor{comment}{/*    DISTANCE OF TWO PLANES */}
+99 L10:
+100     cosw = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1] + \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[2] * \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[2] + \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[3] * 
+      \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[3];
+101     \textcolor{keywordflow}{if} ((d\_\_1 = abs(cosw) - 1., abs(d\_\_1)) > 1e-6) \{
+102     \textcolor{keywordflow}{goto} L52;
+103     \}
+104     res[1] = (d\_\_1 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[4] - cosw * arg2[4], abs(d\_\_1));
+105     \textcolor{keywordflow}{return} 0;
+106 \textcolor{comment}{/*    DISTANCE OF POINT AND PLANE */}
+107 L20:
+108     ab = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[4];
+109     \textcolor{keywordflow}{if} (iarg1 == 2) \{
+110     ab = arg2[4];
+111     \}
+112     res[1] = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1] * arg2[1] + \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[2] * arg2[2] + \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[3] * arg2[3] - ab;
+113     \textcolor{keywordflow}{return} 0;
+114 \textcolor{comment}{/*     DISTANCE OF TWO POINTS */}
+115 L30:
+116 \textcolor{comment}{/* Computing 2nd power */}
+117     d\_\_1 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1] - arg2[1];
+118 \textcolor{comment}{/* Computing 2nd power */}
+119     d\_\_2 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[2] - arg2[2];
+120 \textcolor{comment}{/* Computing 2nd power */}
+121     d\_\_3 = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[3] - arg2[3];
+122     res[1] = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+123     \textcolor{keywordflow}{return} 0;
+124 \textcolor{comment}{/*     'ONE ELEMENT OR BOTH ARE UNDEFINED' */}
+125 L50:
+126     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{DISTF_8c_a0de7be36c0e182134e697f29f5c954a4}{c\_\_55}, \textcolor{stringliteral}{"DISTF   "}, (ftnlen)8);
+127     \textcolor{keywordflow}{goto} L53;
+128 \textcolor{comment}{/*     'WRONG INPUT' */}
+129 L51:
+130     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{DISTF_8c_a751732540ac5095e2d12db6a06044967}{c\_\_61}, \textcolor{stringliteral}{"DISTF   "}, (ftnlen)8);
+131     \textcolor{keywordflow}{goto} L53;
+132 \textcolor{comment}{/*     'PLANES NOT PARALLEL' */}
+133 L52:
+134     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{DISTF_8c_a1d0d493d2b3e475eb52ae42ae46f9948}{c\_\_62}, \textcolor{stringliteral}{"DISTF   "}, (ftnlen)8);
+135 L53:
+136     \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(&res[1]);
+137     \textcolor{keywordflow}{return} 0;
+138 \} \textcolor{comment}{/* distf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DISTF_8c_aa12555abf6ade100bb7c1de408eed3ee_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DISTF_8c_aa12555abf6ade100bb7c1de408eed3ee_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}!c\+\_\+\+\_\+55@{c\+\_\+\+\_\+55}}
+\index{c\+\_\+\+\_\+55@{c\+\_\+\+\_\+55}!D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+55}{c__55}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+55 = 55\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DISTF_8c_a0de7be36c0e182134e697f29f5c954a4}{}\label{DISTF_8c_a0de7be36c0e182134e697f29f5c954a4}
+
+
+Definition at line 17 of file D\+I\+S\+T\+F.\+c.
+
+
+
+Referenced by distf\+\_\+().
+
+\index{D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}!c\+\_\+\+\_\+61@{c\+\_\+\+\_\+61}}
+\index{c\+\_\+\+\_\+61@{c\+\_\+\+\_\+61}!D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+61}{c__61}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+61 = 61\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DISTF_8c_a751732540ac5095e2d12db6a06044967}{}\label{DISTF_8c_a751732540ac5095e2d12db6a06044967}
+
+
+Definition at line 18 of file D\+I\+S\+T\+F.\+c.
+
+
+
+Referenced by distf\+\_\+().
+
+\index{D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}!c\+\_\+\+\_\+62@{c\+\_\+\+\_\+62}}
+\index{c\+\_\+\+\_\+62@{c\+\_\+\+\_\+62}!D\+I\+S\+T\+F.\+c@{D\+I\+S\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+62}{c__62}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+62 = 62\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DISTF_8c_a1d0d493d2b3e475eb52ae42ae46f9948}{}\label{DISTF_8c_a1d0d493d2b3e475eb52ae42ae46f9948}
+
+
+Definition at line 19 of file D\+I\+S\+T\+F.\+c.
+
+
+
+Referenced by distf\+\_\+().
+

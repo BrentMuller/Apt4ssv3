@@ -1,0 +1,130 @@
+\hypertarget{SPATF_8c}{}\section{S\+P\+A\+T\+F.\+c File Reference}
+\label{SPATF_8c}\index{S\+P\+A\+T\+F.\+c@{S\+P\+A\+T\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+P\+A\+T\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{SPATF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SPATF_8c_a638f0f015ae62eb6311d97336d6df138}{spatf\+\_\+} (doublereal $\ast$res, doublereal $\ast$\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}, doublereal $\ast$\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}, doublereal $\ast$arg3)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{SPATF_8c_a341aa4b115ce62d74c75b75c4efd03b2}{c\+\_\+\+\_\+54} = 54
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+P\+A\+T\+F.\+c@{S\+P\+A\+T\+F.\+c}!spatf\+\_\+@{spatf\+\_\+}}
+\index{spatf\+\_\+@{spatf\+\_\+}!S\+P\+A\+T\+F.\+c@{S\+P\+A\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{spatf\+\_\+(doublereal $\ast$res, doublereal $\ast$arg1, doublereal $\ast$arg2, doublereal $\ast$arg3)}{spatf_(doublereal *res, doublereal *arg1, doublereal *arg2, doublereal *arg3)}}]{\setlength{\rightskip}{0pt plus 5cm}int spatf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{res, }
+\item[{doublereal $\ast$}]{arg1, }
+\item[{doublereal $\ast$}]{arg2, }
+\item[{doublereal $\ast$}]{arg3}
+\end{DoxyParamCaption}
+)}\hypertarget{SPATF_8c_a638f0f015ae62eb6311d97336d6df138}{}\label{SPATF_8c_a638f0f015ae62eb6311d97336d6df138}
+
+
+Definition at line 38 of file S\+P\+A\+T\+F.\+c.
+
+
+
+References arg1, arg2, c\+\_\+\+\_\+54, ckdef\+\_\+(), error\+\_\+(), is, mode, undef\+\_\+(), and unpack\+\_\+().
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* Initialized data */}
+42 
+43     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_a9870e0caa2f8e3e5700c4cbb21d73c07}{is}[20] = \{ 1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1 \};
+44 
+45     \textcolor{keyword}{static} integer isi, isu, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+46     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+47     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(doublereal *), \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *
+48         , ftnlen), \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(doublereal *, integer *, integer *, integer *);
+49 
+50     \textcolor{comment}{/* Parameter adjustments */}
+51     --arg3;
+52     --\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2};
+53     --\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1};
+54     --res;
+55 
+56     \textcolor{comment}{/* Function Body */}
+57     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1]) || \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1]) || \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&arg3[1])) \{
+58     \textcolor{keywordflow}{goto} L30;
+59     \}
+60     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1], &mode, &isi, &isu);
+61     \textcolor{keywordflow}{if} (mode < 1 || mode > 20 || is[mode - 1] != 1) \{
+62     \textcolor{keywordflow}{goto} L30;
+63     \}
+64     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1], &mode, &isi, &isu);
+65     \textcolor{keywordflow}{if} (mode < 1 || mode > 20 || is[mode - 1] != 1) \{
+66     \textcolor{keywordflow}{goto} L30;
+67     \}
+68     \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\_}(&arg3[1], &mode, &isi, &isu);
+69     \textcolor{keywordflow}{if} (mode < 1 || mode > 20 || is[mode - 1] != 1) \{
+70     \textcolor{keywordflow}{goto} L30;
+71     \}
+72     res[1] = \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[1] * (\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[2] * arg3[3] - \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[3] * arg3[2]) + 
+      \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[2] * (
+73         \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[3] * arg3[1] - \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1] * arg3[3]) + \hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}[3] * (\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[1] * 
+74         arg3[2] - \hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}[2] * arg3[1]);
+75     \textcolor{keywordflow}{return} 0;
+76 \textcolor{comment}{/*     'AT LEAST ONE OF THE VECTORS UNDEFINED OR WRONG INPUT' */}
+77 L30:
+78     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{SPATF_8c_a341aa4b115ce62d74c75b75c4efd03b2}{c\_\_54}, \textcolor{stringliteral}{"SPATF   "}, (ftnlen)8);
+79     \hyperlink{UNDEF_8c_a941387e7e5d56fd28b7c0586269cc20c}{undef\_}(&res[1]);
+80     \textcolor{keywordflow}{return} 0;
+81 \} \textcolor{comment}{/* spatf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPATF_8c_a638f0f015ae62eb6311d97336d6df138_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPATF_8c_a638f0f015ae62eb6311d97336d6df138_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+P\+A\+T\+F.\+c@{S\+P\+A\+T\+F.\+c}!c\+\_\+\+\_\+54@{c\+\_\+\+\_\+54}}
+\index{c\+\_\+\+\_\+54@{c\+\_\+\+\_\+54}!S\+P\+A\+T\+F.\+c@{S\+P\+A\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+54}{c__54}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+54 = 54\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SPATF_8c_a341aa4b115ce62d74c75b75c4efd03b2}{}\label{SPATF_8c_a341aa4b115ce62d74c75b75c4efd03b2}
+
+
+Definition at line 17 of file S\+P\+A\+T\+F.\+c.
+
+
+
+Referenced by spatf\+\_\+().
+

@@ -1,0 +1,533 @@
+\hypertarget{QSD_8c}{}\section{Q\+S\+D.\+c File Reference}
+\label{QSD_8c}\index{Q\+S\+D.\+c@{Q\+S\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for Q\+S\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{QSD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{QSD_8c_ae30bb69a20b66cd671346512e78f4337}{qsd\+\_\+} (doublereal $\ast$\hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}, integer $\ast$iq, doublereal $\ast$\hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}, doublereal $\ast$\hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Q\+S\+D.\+c@{Q\+S\+D.\+c}!qsd\+\_\+@{qsd\+\_\+}}
+\index{qsd\+\_\+@{qsd\+\_\+}!Q\+S\+D.\+c@{Q\+S\+D.\+c}}
+\subsubsection[{\texorpdfstring{qsd\+\_\+(doublereal $\ast$canfrm, integer $\ast$iq, doublereal $\ast$coeff, doublereal $\ast$trans)}{qsd_(doublereal *canfrm, integer *iq, doublereal *coeff, doublereal *trans)}}]{\setlength{\rightskip}{0pt plus 5cm}int qsd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{canfrm, }
+\item[{integer $\ast$}]{iq, }
+\item[{doublereal $\ast$}]{coeff, }
+\item[{doublereal $\ast$}]{trans}
+\end{DoxyParamCaption}
+)}\hypertarget{QSD_8c_ae30bb69a20b66cd671346512e78f4337}{}\label{QSD_8c_ae30bb69a20b66cd671346512e78f4337}
+
+
+Definition at line 20 of file Q\+S\+D.\+c.
+
+
+
+References all, c\+\_\+\+\_\+, canfrm, cc, coeff, f, i1, i\+\_\+\+\_\+, il, j, k, l, ll, n, one, p, psign\+\_\+(), q, r\+\_\+\+\_\+, s, and sc.
+
+
+
+Referenced by aerr2\+\_\+().
+
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{comment}{/* System generated locals */}
+24     doublereal d\_\_1, d\_\_2, d\_\_3;
+25 
+26     \textcolor{comment}{/* Builtin functions */}
+27     \textcolor{keywordtype}{double} sqrt(doublereal);
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}, \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}, \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}, \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+33     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1};
+34     \textcolor{keyword}{static} doublereal \hyperlink{APT331_8c_ab4f83dc456530b76524da0756cc48dad}{cc};
+35     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a1102a8dadcd21d7952427507857411d8}{il};
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc};
+37     \textcolor{keyword}{static} integer kk, \hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll};
+38     \textcolor{keyword}{static} doublereal ql[16]    \textcolor{comment}{/* was [4][4] */}, ss, akk, akl, \hyperlink{APT301_8c_a574be7661106f058a9fc9748a9a0e7ec}{all}, \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+39     \textcolor{keyword}{static} integer iit;
+40     \textcolor{keyword}{static} doublereal amin, amax;
+41     \textcolor{keyword}{extern} doublereal \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(doublereal *, doublereal *);
+42 
+43 
+44 \textcolor{comment}{/*  PURPOSE         TO IDENTIFY QUADRIC, LCONIC, AND GCONIC SURFACES */}
+45 
+46 \textcolor{comment}{/*  CALLING SEQNCE  CALL  QSD(CANFRM,IQ,COEFF,TRANS) */}
+47 
+48 \textcolor{comment}{/*  ARGUMENTS       CANFRM....ARRAY CONTAINING ORIGINAL CANONICAL FORM */}
+49 \textcolor{comment}{/*                  IQ .......FLAG SET TO INDICATE TYPE OF QUADRIC */}
+50 \textcolor{comment}{/*                            SURFACE FOUND BY THIS ROUTINE */}
+51 \textcolor{comment}{/*                  COEFF.....ARRAY CONTAINING NEW VALUES CALCULATED */}
+52 \textcolor{comment}{/*                            FOR THE QUADRIC EQUATION */}
+53 \textcolor{comment}{/*                  TRANS.....TRANSFORMATION MATRIX FROM THE ORIGINAL */}
+54 \textcolor{comment}{/*                            TO THE LOCAL COORDINATE SYSTEM */}
+55 
+56 \textcolor{comment}{/*  CALLED BY       AERR */}
+57 
+58 \textcolor{comment}{/*  SUBSIDIARIES    REAL FUNCTION SUBPROGRAM - PSIGN */}
+59 
+60 \textcolor{comment}{/*  DIAGNOSTICS     NONE */}
+61 
+62 \textcolor{comment}{/*     ----------------------------------------------------------- */}
+63 
+64 \textcolor{comment}{/*              ** INITIALIZE ** */}
+65 
+66     \textcolor{comment}{/* Parameter adjustments */}
+67     \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans} -= 4;
+68     --\hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff};
+69     --\hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm};
+70 
+71     \textcolor{comment}{/* Function Body */}
+72     one = 1.f;
+73     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+74     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+75 \textcolor{comment}{/* L20: */}
+76         ql[i\_\_ + (j << 2) - 5] = 0.;
+77     \}
+78     \}
+79     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+80     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+81 \textcolor{comment}{/* L30: */}
+82         \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[i\_\_ + j * 3] = 0.;
+83     \}
+84     \}
+85     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+86 \textcolor{comment}{/* L40: */}
+87     \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[i\_\_ + i\_\_ * 3] = 1.;
+88     \}
+89 
+90 \textcolor{comment}{/*        ** SET UP INITIAL CANONICAL VALUES */}
+91 
+92     ql[0] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[1];
+93     ql[5] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[2];
+94     ql[10] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[3];
+95     ql[15] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[4];
+96     ql[9] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[5];
+97     ql[6] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[5];
+98     ql[8] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[6];
+99     ql[2] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[6];
+100     ql[4] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[7];
+101     ql[1] = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[7];
+102     p = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[8];
+103     q = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[9];
+104     r\_\_ = \hyperlink{APT331_8c_acc9efc580a0fd474159e5238c2aa9796}{canfrm}[10];
+105 
+106 \textcolor{comment}{/*               * FIND ROTATION MATRIX AND LOCAL QL */}
+107 
+108 L100:
+109     amax = 0.;
+110     amin = abs(ql[10]);
+111     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+112     \textcolor{keywordflow}{if} ((d\_\_1 = ql[i\_\_ + (i\_\_ << 2) - 5], abs(d\_\_1)) - amin >= 0.) \{
+113         \textcolor{keywordflow}{goto} L103;
+114     \} \textcolor{keywordflow}{else} \{
+115         \textcolor{keywordflow}{goto} L102;
+116     \}
+117 L102:
+118     amin = (d\_\_1 = ql[i\_\_ + (i\_\_ << 2) - 5], abs(d\_\_1));
+119 L103:
+120     i1 = i\_\_ + 1;
+121     \textcolor{keywordflow}{for} (j = i1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+122         \textcolor{keywordflow}{if} ((d\_\_1 = ql[i\_\_ + (j << 2) - 5], abs(d\_\_1)) - amax <= 0.) \{
+123         \textcolor{keywordflow}{goto} L120;
+124         \} \textcolor{keywordflow}{else} \{
+125         \textcolor{keywordflow}{goto} L110;
+126         \}
+127 L110:
+128         amax = (d\_\_1 = ql[i\_\_ + (j << 2) - 5], abs(d\_\_1));
+129         k = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+130         l = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+131 L120:
+132         ;
+133     \}
+134     \}
+135 \textcolor{comment}{/*               * SET SMALL TERMS TO ZERO */}
+136 
+137     \textcolor{keywordflow}{if} (amin != 0.) \{
+138     \textcolor{keywordflow}{goto} L130;
+139     \} \textcolor{keywordflow}{else} \{
+140     \textcolor{keywordflow}{goto} L140;
+141     \}
+142 L130:
+143     \textcolor{keywordflow}{if} (amax / amin - 1e-15\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} >= 0.) \{
+144     \textcolor{keywordflow}{goto} L140;
+145     \} \textcolor{keywordflow}{else} \{
+146     \textcolor{keywordflow}{goto} L160;
+147     \}
+148 L140:
+149     \textcolor{keywordflow}{if} (amax - 1e-25\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} >= 0.) \{
+150     \textcolor{keywordflow}{goto} L200;
+151     \} \textcolor{keywordflow}{else} \{
+152     \textcolor{keywordflow}{goto} L160;
+153     \}
+154 L160:
+155     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+156     i1 = i\_\_ + 1;
+157     \textcolor{keywordflow}{for} (j = i1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+158         ql[i\_\_ + (j << 2) - 5] = 0.;
+159         ql[j + (i\_\_ << 2) - 5] = 0.;
+160 \textcolor{comment}{/* L170: */}
+161     \}
+162     \}
+163     \textcolor{keywordflow}{goto} L250;
+164 
+165 \textcolor{comment}{/*               * JACOBI CALCULATION */}
+166 L200:
+167     akk = ql[k + (k << 2) - 5];
+168     akl = ql[k + (l << 2) - 5];
+169     all = ql[l + (l << 2) - 5];
+170     \textcolor{keywordflow}{if} (all - akk != 0.) \{
+171     \textcolor{keywordflow}{goto} L205;
+172     \} \textcolor{keywordflow}{else} \{
+173     \textcolor{keywordflow}{goto} L208;
+174     \}
+175 L205:
+176     s = akl / (all - akk);
+177     \textcolor{keywordflow}{goto} L210;
+178 L208:
+179     s = \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &akl);
+180 L210:
+181     \textcolor{keywordflow}{if} (abs(s) - .5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} >= 0.) \{
+182     \textcolor{keywordflow}{goto} L212;
+183     \} \textcolor{keywordflow}{else} \{
+184     \textcolor{keywordflow}{goto} L214;
+185     \}
+186 L212:
+187     d\_\_1 = one * .5f;
+188     s = \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&d\_\_1, &s);
+189 L214:
+190     ss = s * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+191     cc = 1 - ss;
+192     c\_\_ = sqrt(cc);
+193     sc = s * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+194     ql[k + (k << 2) - 5] = cc * akk - sc * 2 * akl + ss * all;
+195     ql[l + (l << 2) - 5] = ss * akk + sc * 2 * akl + cc * all;
+196     ql[l + (k << 2) - 5] = (cc - ss) * akl + sc * (akk - \hyperlink{APT301_8c_a574be7661106f058a9fc9748a9a0e7ec}{all});
+197     ql[k + (l << 2) - 5] = ql[l + (k << 2) - 5];
+198     j = 6 - k - \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+199     akk = ql[j + (k << 2) - 5];
+200     all = ql[j + (l << 2) - 5];
+201     ql[j + (k << 2) - 5] = c\_\_ * akk - s * all;
+202     ql[k + (j << 2) - 5] = ql[j + (k << 2) - 5];
+203     ql[j + (l << 2) - 5] = s * akk + c\_\_ * all;
+204     ql[l + (j << 2) - 5] = ql[j + (l << 2) - 5];
+205     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+206     akk = \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[k + i\_\_ * 3];
+207     all = \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[l + i\_\_ * 3];
+208     \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[k + i\_\_ * 3] = c\_\_ * akk - s * \hyperlink{APT301_8c_a574be7661106f058a9fc9748a9a0e7ec}{all};
+209     \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[l + i\_\_ * 3] = s * akk + c\_\_ * \hyperlink{APT301_8c_a574be7661106f058a9fc9748a9a0e7ec}{all};
+210 \textcolor{comment}{/* L230: */}
+211     \}
+212     \textcolor{keywordflow}{goto} L100;
+213 
+214 \textcolor{comment}{/*               * ROTATION COMPLETE */}
+215 L250:
+216     all = 0.;
+217     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+218     ql[i\_\_ + 11] = p * .5f * \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[i\_\_ + 3] + q * .5f * \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[i\_\_ + 6] + 
+219         r\_\_ * .5f * \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[i\_\_ + 9];
+220     ql[(i\_\_ << 2) - 1] = ql[i\_\_ + 11];
+221 \textcolor{comment}{/* L280: */}
+222     all += (d\_\_1 = ql[i\_\_ + (i\_\_ << 2) - 5], abs(d\_\_1));
+223     \}
+224     all /= 3e10f;
+225 
+226 \textcolor{comment}{/*               * COMPUTE TRANSLATION */}
+227     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+228     akk = ql[k + (k << 2) - 5];
+229     \textcolor{keywordflow}{if} (abs(akk) - all <= 0.) \{
+230         \textcolor{keywordflow}{goto} L290;
+231     \} \textcolor{keywordflow}{else} \{
+232         \textcolor{keywordflow}{goto} L285;
+233     \}
+234 L285:
+235     \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[k + 12] = ql[k + 11] / akk;
+236     akl = \hyperlink{APT331_8c_a6c7f78a9409f8996ce2cd71bba82142e}{trans}[k + 12];
+237     ql[15] -= akl * ql[k + 11];
+238     ql[k + 11] = 0.;
+239     ql[(k << 2) - 1] = 0.;
+240     \textcolor{keywordflow}{goto} L300;
+241 L290:
+242     ql[k + (k << 2) - 5] = 0.;
+243 L300:
+244     ;
+245     \}
+246     \textcolor{keywordflow}{if} (abs(ql[15]) - all <= 0.) \{
+247     \textcolor{keywordflow}{goto} L305;
+248     \} \textcolor{keywordflow}{else} \{
+249     \textcolor{keywordflow}{goto} L310;
+250     \}
+251 L305:
+252     ql[15] = 0.;
+253 L310:
+254     akk = 0.;
+255     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+256     \textcolor{keywordflow}{if} ((d\_\_1 = ql[j + (j << 2) - 5], abs(d\_\_1)) - akk <= 0.) \{
+257         \textcolor{keywordflow}{goto} L320;
+258     \} \textcolor{keywordflow}{else} \{
+259         \textcolor{keywordflow}{goto} L315;
+260     \}
+261 L315:
+262     akk = (d\_\_1 = ql[j + (j << 2) - 5], abs(d\_\_1));
+263 L320:
+264     ;
+265     \}
+266     \textcolor{keywordflow}{if} (akk != 0.) \{
+267     \textcolor{keywordflow}{goto} L325;
+268     \} \textcolor{keywordflow}{else} \{
+269     \textcolor{keywordflow}{goto} L330;
+270     \}
+271 L325:
+272     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+273     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+274 \textcolor{comment}{/* L328: */}
+275         ql[i\_\_ + (j << 2) - 5] /= akk;
+276     \}
+277     \}
+278 L330:
+279 
+280 \textcolor{comment}{/*               * CLASSIFY SURFACE TYPE */}
+281 
+282     i\_\_ = 0;
+283     j = 0;
+284     l = 0;
+285     n = 0;
+286     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+287     kk = (integer) \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &ql[k + (k << 2) - 5]);
+288 \textcolor{comment}{/* L340: */}
+289     d\_\_2 = (d\_\_1 = ql[k + (k << 2) - 5], abs(d\_\_1));
+290     i\_\_ = (integer) (i\_\_ + \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &d\_\_2));
+291     j += kk;
+292     d\_\_2 = (d\_\_1 = ql[k + 11], abs(d\_\_1));
+293     l = (integer) (l + \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &d\_\_2));
+294 \textcolor{comment}{/* L400: */}
+295     n = (integer) (n + \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &ql[k + (k << 2) - 5]));
+296     \}
+297     k = (d\_\_1 = j + \hyperlink{PSIGN_8c_a45c3b1da3262a2492c3334f81b8c770c}{psign\_}(&one, &ql[15]), (integer) abs(d\_\_1));
+298     j = abs(j);
+299 
+300 \textcolor{comment}{/*        ** SURFACE TYPE MARKER IS IIT ** */}
+301     iit = i\_\_ * 10 + j + k + l * 3 + 1;
+302 
+303     \textcolor{keywordflow}{if} (n < 0) \{
+304     \textcolor{keywordflow}{goto} L404;
+305     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n == 0) \{
+306     \textcolor{keywordflow}{goto} L402;
+307     \} \textcolor{keywordflow}{else} \{
+308     \textcolor{keywordflow}{goto} L410;
+309     \}
+310 L402:
+311     \textcolor{keywordflow}{if} (ql[15] >= 0.) \{
+312     \textcolor{keywordflow}{goto} L410;
+313     \} \textcolor{keywordflow}{else} \{
+314     \textcolor{keywordflow}{goto} L404;
+315     \}
+316 L404:
+317     \textcolor{keywordflow}{for} (il = 1; il <= 4; ++\hyperlink{APT301_8c_a1102a8dadcd21d7952427507857411d8}{il}) \{
+318     \textcolor{keywordflow}{for} (ll = 1; ll <= 4; ++\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}) \{
+319 \textcolor{comment}{/* L408: */}
+320         ql[il + (ll << 2) - 5] = -ql[il + (ll << 2) - 5];
+321     \}
+322     \}
+323 
+324 \textcolor{comment}{/*        SET IQ TO 1 - NO RECOGNIZABLE SURFACE - AND BRANCH */}
+325 \textcolor{comment}{/*                  IF SURFACE TYPE SHOULD BE RESET ACCORDING */}
+326 \textcolor{comment}{/*                  TO SURFACE TYPE MARKER (IIT) */}
+327 L410:
+328     *iq = 1;
+329 
+330     \textcolor{keywordflow}{switch} (iit) \{
+331     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L1000;
+332     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L1000;
+333     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L1000;
+334     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L520;
+335     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L520;
+336     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L1000;
+337     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L520;
+338     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L520;
+339     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L1000;
+340     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L520;
+341     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L520;
+342     \textcolor{keywordflow}{case} 12:  \textcolor{keywordflow}{goto} L530;
+343     \textcolor{keywordflow}{case} 13:  \textcolor{keywordflow}{goto} L530;
+344     \textcolor{keywordflow}{case} 14:  \textcolor{keywordflow}{goto} L530;
+345     \textcolor{keywordflow}{case} 15:  \textcolor{keywordflow}{goto} L540;
+346     \textcolor{keywordflow}{case} 16:  \textcolor{keywordflow}{goto} L540;
+347     \textcolor{keywordflow}{case} 17:  \textcolor{keywordflow}{goto} L540;
+348     \textcolor{keywordflow}{case} 18:  \textcolor{keywordflow}{goto} L540;
+349     \textcolor{keywordflow}{case} 19:  \textcolor{keywordflow}{goto} L540;
+350     \textcolor{keywordflow}{case} 20:  \textcolor{keywordflow}{goto} L1000;
+351     \textcolor{keywordflow}{case} 21:  \textcolor{keywordflow}{goto} L550;
+352     \textcolor{keywordflow}{case} 22:  \textcolor{keywordflow}{goto} L560;
+353     \textcolor{keywordflow}{case} 23:  \textcolor{keywordflow}{goto} L1000;
+354     \textcolor{keywordflow}{case} 24:  \textcolor{keywordflow}{goto} L570;
+355     \textcolor{keywordflow}{case} 25:  \textcolor{keywordflow}{goto} L550;
+356     \textcolor{keywordflow}{case} 26:  \textcolor{keywordflow}{goto} L580;
+357     \textcolor{keywordflow}{case} 27:  \textcolor{keywordflow}{goto} L590;
+358     \textcolor{keywordflow}{case} 28:  \textcolor{keywordflow}{goto} L590;
+359     \textcolor{keywordflow}{case} 29:  \textcolor{keywordflow}{goto} L590;
+360     \textcolor{keywordflow}{case} 30:  \textcolor{keywordflow}{goto} L1000;
+361     \textcolor{keywordflow}{case} 31:  \textcolor{keywordflow}{goto} L1000;
+362     \textcolor{keywordflow}{case} 32:  \textcolor{keywordflow}{goto} L610;
+363     \textcolor{keywordflow}{case} 33:  \textcolor{keywordflow}{goto} L620;
+364     \textcolor{keywordflow}{case} 34:  \textcolor{keywordflow}{goto} L630;
+365     \textcolor{keywordflow}{case} 35:  \textcolor{keywordflow}{goto} L1000;
+366     \textcolor{keywordflow}{case} 36:  \textcolor{keywordflow}{goto} L640;
+367     \textcolor{keywordflow}{case} 37:  \textcolor{keywordflow}{goto} L650;
+368     \textcolor{keywordflow}{case} 38:  \textcolor{keywordflow}{goto} L660;
+369     \}
+370 
+371 \textcolor{comment}{/*        PLANE SURFACE */}
+372 L520:
+373     *iq = 2;
+374 \textcolor{comment}{/* Computing 2nd power */}
+375     d\_\_1 = ql[12];
+376 \textcolor{comment}{/* Computing 2nd power */}
+377     d\_\_2 = ql[13];
+378 \textcolor{comment}{/* Computing 2nd power */}
+379     d\_\_3 = ql[14];
+380     cc = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+381     \textcolor{keywordflow}{for} (il = 1; il <= 4; ++\hyperlink{APT301_8c_a1102a8dadcd21d7952427507857411d8}{il}) \{
+382     ql[il + 11] /= \hyperlink{APT331_8c_ab4f83dc456530b76524da0756cc48dad}{cc};
+383     ql[(il << 2) - 1] = ql[il + 11];
+384 \textcolor{comment}{/* L525: */}
+385     \}
+386     \textcolor{keywordflow}{goto} L1000;
+387 
+388 \textcolor{comment}{/*        TWO PARALLEL OR COINCIDENT PLANES */}
+389 L530:
+390     *iq = 3;
+391     \textcolor{keywordflow}{goto} L1000;
+392 
+393 \textcolor{comment}{/*        PARABOLIC CYLINDER */}
+394 L540:
+395     *iq = 4;
+396     \textcolor{keywordflow}{goto} L1000;
+397 
+398 L550:
+399     \textcolor{keywordflow}{if} (l - 1 != 0) \{
+400     \textcolor{keywordflow}{goto} L552;
+401     \} \textcolor{keywordflow}{else} \{
+402     \textcolor{keywordflow}{goto} L600;
+403     \}
+404 
+405 \textcolor{comment}{/*        TWO INTERSECTING PLANES */}
+406 L552:
+407     *iq = 5;
+408     \textcolor{keywordflow}{goto} L1000;
+409 
+410 \textcolor{comment}{/*        HYPERBOLIC CYLINDER */}
+411 L560:
+412     *iq = 6;
+413     \textcolor{keywordflow}{goto} L1000;
+414 
+415 L570:
+416     \textcolor{keywordflow}{if} (l - 1 != 0) \{
+417     \textcolor{keywordflow}{goto} L572;
+418     \} \textcolor{keywordflow}{else} \{
+419     \textcolor{keywordflow}{goto} L600;
+420     \}
+421 
+422 \textcolor{comment}{/*        ELLIPTIC CYLINDER */}
+423 L572:
+424     *iq = 7;
+425     \textcolor{keywordflow}{goto} L1000;
+426 
+427 \textcolor{comment}{/*        IMAGINARY ELLIPTIC CYLINDER */}
+428 L580:
+429     *iq = 9;
+430     \textcolor{keywordflow}{goto} L1000;
+431 
+432 \textcolor{comment}{/*        ELLIPTIC PARABOLOID */}
+433 L590:
+434     *iq = 10;
+435     \textcolor{keywordflow}{goto} L1000;
+436 
+437 \textcolor{comment}{/*        HYPERBOLIC PARABOLOID */}
+438 L600:
+439     *iq = 8;
+440     \textcolor{keywordflow}{goto} L1000;
+441 
+442 \textcolor{comment}{/*        HYPERBOLOID OF ONE SHEET */}
+443 L610:
+444     *iq = 11;
+445     \textcolor{keywordflow}{goto} L1000;
+446 
+447 \textcolor{comment}{/*        CONE */}
+448 L620:
+449     *iq = 12;
+450     \textcolor{keywordflow}{goto} L1000;
+451 
+452 \textcolor{comment}{/*        HYPERBOLOID OF TWO SHEETS */}
+453 L630:
+454     *iq = 13;
+455     \textcolor{keywordflow}{goto} L1000;
+456 
+457 \textcolor{comment}{/*        ELLIPSOID */}
+458 L640:
+459     *iq = 14;
+460     \textcolor{keywordflow}{goto} L1000;
+461 
+462 \textcolor{comment}{/*        POINT ELLIPSOID */}
+463 L650:
+464     *iq = 15;
+465     \textcolor{keywordflow}{goto} L1000;
+466 
+467 \textcolor{comment}{/*        IMAGINARY ELLIPSOID */}
+468 L660:
+469     *iq = 16;
+470 
+471 \textcolor{comment}{/*            ** RESET COEFFICIENTS INTO PROPER ORDER ** */}
+472 
+473 L1000:
+474     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[1] = ql[0];
+475     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[2] = ql[5];
+476     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[3] = ql[10];
+477     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[4] = ql[15];
+478     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[5] = ql[9];
+479     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[6] = ql[8];
+480     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[7] = ql[4];
+481     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[8] = ql[12];
+482     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[9] = ql[13];
+483     \hyperlink{APT331_8c_a48c0427129074c7d5749199b9363ecf9}{coeff}[10] = ql[14];
+484 
+485     \textcolor{keywordflow}{return} 0;
+486 \} \textcolor{comment}{/* qsd\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{QSD_8c_ae30bb69a20b66cd671346512e78f4337_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{QSD_8c_ae30bb69a20b66cd671346512e78f4337_icgraph}
+\end{center}
+\end{figure}
+
+

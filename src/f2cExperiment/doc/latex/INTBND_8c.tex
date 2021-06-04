@@ -1,0 +1,690 @@
+\hypertarget{INTBND_8c}{}\section{I\+N\+T\+B\+N\+D.\+c File Reference}
+\label{INTBND_8c}\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+T\+B\+N\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{INTBND_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{INTBND_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\+\_\+1}~\hyperlink{SSV3_8c_a0ceef444afd5929ce4d4096c6dfc2f22}{ssarlm\+\_\+}
+\item 
+\#define \hyperlink{INTBND_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1}~\hyperlink{INTTRC_8c_a976032dda65999149c437cd37a92897b}{intcom\+\_\+}
+\item 
+\#define \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 82)
+\item 
+\#define \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 64)
+\item 
+\#define \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 116)
+\item 
+\#define \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 108)
+\item 
+\#define \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 112)
+\item 
+\#define \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1})
+\item 
+\#define \hyperlink{INTBND_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 105)
+\item 
+\#define \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 102)
+\item 
+\#define \hyperlink{INTBND_8c_a6e8c37b3a9e09df09ba66ce16017c99a}{thick}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 100)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}{intbnd\+\_\+} (integer $\ast$ns, integer $\ast$irc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{INTBND_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{bb} \mbox{[}256\mbox{]}\\
+\>doublereal \hyperlink{INTBND_8c_a92a9ddacaa39a881012df9cfbd55134a}{uu} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{INTBND_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{vv} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{INTBND_8c_ad4159f737847a828654fd6bd050aff25}{iitop} \mbox{[}96\mbox{]}\\
+\>integer \hyperlink{INTBND_8c_af00895acd217dfa45b2e2e9716ebff70}{iiflag} \mbox{[}16\mbox{]}\\
+\>integer \hyperlink{INTBND_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} \mbox{[}4\mbox{]}\\
+\} \hyperlink{INTBND_8c_a83e2d220c09f10b1a8a82e9d5b2c76df}{ssarlm\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{INTBND_8c_aaf1570c45aa1901e9b51476d09a19e02}{ikeep} \mbox{[}255\mbox{]}\\
+\} \hyperlink{INTBND_8c_a7ebadefba3be1f13eff9bd17be190b41}{intcom\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{INTBND_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{INTBND_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{INTBND_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ctp@{ctp}}
+\index{ctp@{ctp}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ctp}{ctp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ctp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 116)}\hypertarget{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{}\label{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!dtp@{dtp}}
+\index{dtp@{dtp}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{dtp}{dtp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dtp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 108)}\hypertarget{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{}\label{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!intcom\+\_\+1@{intcom\+\_\+1}}
+\index{intcom\+\_\+1@{intcom\+\_\+1}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+1}{intcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define intcom\+\_\+1~{\bf intcom\+\_\+}}\hypertarget{INTBND_8c_a739fbcd4259007d7c95f0abf445e11cf}{}\label{INTBND_8c_a739fbcd4259007d7c95f0abf445e11cf}
+
+
+Definition at line 29 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!oxyz@{oxyz}}
+\index{oxyz@{oxyz}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{oxyz}{oxyz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define oxyz~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 105)}\hypertarget{INTBND_8c_a845d03bb14bf598a9643a8d4be002ba0}{}\label{INTBND_8c_a845d03bb14bf598a9643a8d4be002ba0}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ptp@{ptp}}
+\index{ptp@{ptp}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ptp}{ptp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ptp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 112)}\hypertarget{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{}\label{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!pxyz@{pxyz}}
+\index{pxyz@{pxyz}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{pxyz}{pxyz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pxyz~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 102)}\hypertarget{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{}\label{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!spv@{spv}}
+\index{spv@{spv}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{spv}{spv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define spv~((doublereal $\ast$)\&{\bf intcom\+\_\+1})}\hypertarget{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{}\label{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}
+
+
+Referenced by aprix\+\_\+(), apt109\+\_\+(), cmesh\+\_\+(), cnsurf\+\_\+(), cnsurg\+\_\+(), cnsurh\+\_\+(), cpldst\+\_\+(), evalss\+\_\+(), gochor\+\_\+(), gol\+\_\+(), golpln\+\_\+(), gop\+\_\+(), goretr\+\_\+(), intbnd\+\_\+(), pchprc\+\_\+(), puvloc\+\_\+(), and srfcom\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ssarlm\+\_\+1@{ssarlm\+\_\+1}}
+\index{ssarlm\+\_\+1@{ssarlm\+\_\+1}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+1}{ssarlm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssarlm\+\_\+1~{\bf ssarlm\+\_\+}}\hypertarget{INTBND_8c_a4c8b5d1a175b60e8225f362516b59daf}{}\label{INTBND_8c_a4c8b5d1a175b60e8225f362516b59daf}
+
+
+Definition at line 23 of file I\+N\+T\+B\+N\+D.\+c.
+
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!thick@{thick}}
+\index{thick@{thick}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{thick}{thick}}]{\setlength{\rightskip}{0pt plus 5cm}\#define thick~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 100)}\hypertarget{INTBND_8c_a6e8c37b3a9e09df09ba66ce16017c99a}{}\label{INTBND_8c_a6e8c37b3a9e09df09ba66ce16017c99a}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!un@{un}}
+\index{un@{un}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{un}{un}}]{\setlength{\rightskip}{0pt plus 5cm}\#define un~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 82)}\hypertarget{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{}\label{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!uv@{uv}}
+\index{uv@{uv}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{uv}{uv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uv~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 64)}\hypertarget{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{}\label{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}
+
+
+Referenced by baltwo\+\_\+(), gol\+\_\+(), and intbnd\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!intbnd\+\_\+@{intbnd\+\_\+}}
+\index{intbnd\+\_\+@{intbnd\+\_\+}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{intbnd\+\_\+(integer $\ast$ns, integer $\ast$irc)}{intbnd_(integer *ns, integer *irc)}}]{\setlength{\rightskip}{0pt plus 5cm}int intbnd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ns, }
+\item[{integer $\ast$}]{irc}
+\end{DoxyParamCaption}
+)}\hypertarget{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}{}\label{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}
+
+
+Definition at line 39 of file I\+N\+T\+B\+N\+D.\+c.
+
+
+
+References c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, cnsurf\+\_\+(), ctp, d1, d2, dtp, i1, intnrm\+\_\+(), inttpl\+\_\+(), is, j, j1, jj, k, k1, l, m, nt, p1, p2, pl, ptp, pxyz, spv, ssarlm\+\_\+1, thick, u, un, uv, and v.
+
+
+
+Referenced by intcon\+\_\+(), and intsrf\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* System generated locals */}
+42     integer i\_\_1;
+43     doublereal d\_\_1, d\_\_2, d\_\_3;
+44 
+45     \textcolor{comment}{/* Builtin functions */}
+46     \textcolor{keywordtype}{double} sqrt(doublereal);
+47 
+48     \textcolor{comment}{/* Local variables */}
+49     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+50     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, d3;
+51     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}, \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1};
+52     \textcolor{keyword}{static} doublereal \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[3], \hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}[3];
+53     \textcolor{keyword}{static} integer \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}, kk;
+54     \textcolor{keyword}{static} doublereal \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[12]  \textcolor{comment}{/* was [4][3] */};
+55     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_a9870e0caa2f8e3e5700c4cbb21d73c07}{is};
+56     \textcolor{keyword}{static} doublereal hu, hv;
+57     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt};
+58 \textcolor{preprocessor}{#define un ((doublereal *)&intcom\_1 + 82)}
+59 \textcolor{preprocessor}{#define uv ((doublereal *)&intcom\_1 + 64)}
+60     \textcolor{keyword}{static} doublereal cal, den, sec, det, sal, dis;
+61 \textcolor{preprocessor}{#define ctp ((doublereal *)&intcom\_1 + 116)}
+62 \textcolor{preprocessor}{#define dtp ((doublereal *)&intcom\_1 + 108)}
+63     \textcolor{keyword}{static} doublereal duv;
+64 \textcolor{preprocessor}{#define ptp ((doublereal *)&intcom\_1 + 112)}
+65     \textcolor{keyword}{static} doublereal htx, hty, htz;
+66 \textcolor{preprocessor}{#define spv ((doublereal *)&intcom\_1)}
+67     \textcolor{keyword}{static} doublereal uuu, vvv, ubnd, vbnd, ctpi[4];
+68     \textcolor{keyword}{static} integer iypl;
+69     \textcolor{keyword}{static} doublereal dxyz[6]   \textcolor{comment}{/* was [3][2] */};
+70 \textcolor{preprocessor}{#define oxyz ((doublereal *)&intcom\_1 + 105)}
+71 \textcolor{preprocessor}{#define pxyz ((doublereal *)&intcom\_1 + 102)}
+72 \textcolor{preprocessor}{#define thick ((doublereal *)&intcom\_1 + 100)}
+73     \textcolor{keyword}{static} doublereal calsq;
+74     \textcolor{keyword}{static} logical uxbnd, vxbnd;
+75     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *, doublereal *, 
+76         doublereal *, doublereal *, integer *, integer *), \hyperlink{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29}{intnrm\_}(
+77         integer *, doublereal *, doublereal *, doublereal *, doublereal *,
+78          integer *), \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(integer *, doublereal *, doublereal *, 
+79         integer *);
+80 
+81 
+82 \textcolor{comment}{/*     CALCULATES A SURFACE BOUNDARY PT ON THE INTERSECTION OF */}
+83 \textcolor{comment}{/*     TWO SURFACES. */}
+84 
+85 \textcolor{comment}{/* SS - ARELEM - COMMON */}
+86 
+87 \textcolor{comment}{/*   COMMON FOR 2 SURFACE INTERSECTION */}
+88 \textcolor{comment}{/*   EVALUATION VECTOR FOR PS AND DS */}
+89 \textcolor{comment}{/*   LAST THREE U,V PAIRS OF PS AND DS */}
+90 \textcolor{comment}{/*   HISTORY OF UNIT NORMALS AT INTERSECTION POINTS ON PS AND DS */}
+91 \textcolor{comment}{/*   THICKNESS ON PS AND DS */}
+92 \textcolor{comment}{/*   POINT OF INTERSECTION */}
+93 \textcolor{comment}{/*   OLD POINT OF INTERSECTION */}
+94 \textcolor{comment}{/*   DS TANGENT PLANE */}
+95 \textcolor{comment}{/*   PS TANGENT PLANE */}
+96 \textcolor{comment}{/*   PLANE PERPENTICULAR TO INTERSECTION DIRECTION */}
+97 \textcolor{comment}{/*  TRACE */}
+98 \textcolor{comment}{/* CCCC EQUIVALENCE (IKEEP(249),ITRACE) */}
+99 
+100 
+101 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+102 
+103 \textcolor{comment}{/* CCCC IF(ITRACE.EQ.1) */}
+104 \textcolor{comment}{/* CCCC*WRITE(6,1000)KS */}
+105 \textcolor{comment}{/* 1000 FORMAT(' ***TRACE***INTBND-KS=',I5) */}
+106     uxbnd = FALSE\_;
+107     vxbnd = FALSE\_;
+108     u = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 8];
+109     v = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 7];
+110 
+111 \textcolor{comment}{/* DETERMINE PARAMETRIC VALUE OF BOUNDARY (UBND OR VBND) */}
+112 \textcolor{comment}{/* ----------------------------------------------------- */}
+113 \textcolor{comment}{/*  TEST FIRST FOR U OR V OR U&V OUT OF BOUNDS */}
+114     uuu = (d\_\_1 = u - .5, abs(d\_\_1)) + 1e-12;
+115     vvv = (d\_\_1 = v - .5, abs(d\_\_1)) + 1e-12;
+116     nt = 0;
+117     ubnd = 0.;
+118 \textcolor{comment}{/* IS U OUT OF BOUNDS? */}
+119     \textcolor{keywordflow}{if} (uuu < .5) \{
+120     \textcolor{keywordflow}{goto} L30;
+121     \}
+122 \textcolor{comment}{/* U OUT OF BOUNDS; LIMIT: 0 <= UBND <= 1. */}
+123     \textcolor{keywordflow}{if} (u > .5) \{
+124     ubnd = 1.;
+125     \}
+126     ++\hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt};
+127     uxbnd = TRUE\_;
+128 L30:
+129     vbnd = 0.;
+130 \textcolor{comment}{/* IS V OUT OF BOUNDS? */}
+131     \textcolor{keywordflow}{if} (vvv < .5) \{
+132     \textcolor{keywordflow}{goto} L50;
+133     \}
+134 \textcolor{comment}{/* V OUT OF BOUNDS; LIMIT: 0 <= VBND <= 1. */}
+135     \textcolor{keywordflow}{if} (v > .5) \{
+136     vbnd = 1.;
+137     \}
+138     ++\hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt};
+139     vxbnd = TRUE\_;
+140 L50:
+141 \textcolor{comment}{/* RESET U,V HISTORY TABLE: */}
+142     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 8] = u;
+143     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 2 << 1) - 8] = u;
+144     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 3 << 1) - 8] = u;
+145     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 7] = v;
+146     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 2 << 1) - 7] = v;
+147     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 3 << 1) - 7] = v;
+148     \textcolor{keywordflow}{if} (! uxbnd) \{
+149     \textcolor{keywordflow}{goto} L60;
+150     \}
+151 \textcolor{comment}{/* SET UUU AT APPROPRIATE BOUNDARY: */}
+152     uuu = ubnd;
+153     j = 2;
+154     jj = 3;
+155     \textcolor{keywordflow}{goto} L80;
+156 L60:
+157     \textcolor{keywordflow}{if} (! vxbnd) \{
+158     \textcolor{keywordflow}{goto} L70;
+159     \}
+160 \textcolor{comment}{/* SET VVV AT APPROPRIATE BOUNDARY: */}
+161     vvv = vbnd;
+162     j = 3;
+163     jj = 2;
+164     \textcolor{keywordflow}{goto} L80;
+165 L70:
+166     \textcolor{keywordflow}{goto} L999;
+167 L80:
+168 
+169 \textcolor{comment}{/* EXECUTE THIS CODE FOR U BOUNDARY OR V BOUNDARY (OR BOTH): */}
+170     i\_\_1 = \hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt};
+171     \textcolor{keywordflow}{for} (is = 1; is <= i\_\_1; ++\hyperlink{APT331_8c_a9870e0caa2f8e3e5700c4cbb21d73c07}{is}) \{
+172 
+173 \textcolor{comment}{/* ITERATE (MAX. 15 TIMES) TO FIND INTERSECTION PT PXYZ ON BOUNDARY */}
+174 \textcolor{comment}{/* ---------------------------------------------------------------- */}
+175     \textcolor{keywordflow}{for} (k = 1; k <= 15; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+176         kk = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+177         htx = \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[0];
+178         hty = \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[1];
+179         htz = \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[2];
+180 
+181 \textcolor{comment}{/* USE PXYZ FROM PREVIOUS LOOP: */}
+182         \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+183         p1[l - 1] = \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[l - 1];
+184         p2[l - 1] = \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[l - 1];
+185 \textcolor{comment}{/* L240: */}
+186         \}
+187 
+188 \textcolor{comment}{/* EVALUATE POINT, NORMAL & PARTIALS ALONG BOUNDARY: */}
+189         duv = -1e-4;
+190         \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+191         \textcolor{keywordflow}{if} (l == 3) \{
+192             duv = 0.;
+193         \}
+194 \textcolor{comment}{/* ON V BOUNDARY, SET UUU = U-DUV, U+DUV, U. */}
+195         \textcolor{keywordflow}{if} (j == 3) \{
+196             uuu = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 8] + duv;
+197         \}
+198 \textcolor{comment}{/* ON U BOUNDARY, SET VVV = V-DUV, V+DUV, V. */}
+199         \textcolor{keywordflow}{if} (j == 2) \{
+200             vvv = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 7] + duv;
+201         \}
+202 \textcolor{comment}{/* COMPUTE POINT, NORMAL & PARTIALS AT UUU,VVV ON SURFACE I: */}
+203         \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&uuu, &vvv, &\hyperlink{INTBND_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns 
+204             << 3) + 1 << 2) - 36], &\hyperlink{INTBND_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*ns << 2) - 
+205             4], &\hyperlink{INTBND_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+206         \textcolor{keywordflow}{if} (l > 2) \{
+207             \textcolor{keywordflow}{goto} L250;
+208         \}
+209 \textcolor{comment}{/* ON U BOUNDARY, SAVE V-PARTIALS; ON V BOUNDARY, SAVE U-PARTIALS: */}
+210         dxyz[l * 3 - 3] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 36];
+211         dxyz[l * 3 - 2] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 35];
+212         dxyz[l * 3 - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 34];
+213 L250:
+214         duv = -duv;
+215 \textcolor{comment}{/* L190: */}
+216         \}
+217 
+218 \textcolor{comment}{/* COMPUTE YPL = NORMAL TO PLANE OF BOUNDARY: */}
+219 \textcolor{comment}{/* ------------------------------------------ */}
+220 
+221 \textcolor{comment}{/* TRY YPL = CROSS PRODUCT OF V-PARTIAL & NORMAL VECTOR: */}
+222         ctpi[0] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 35] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 3) + 8 
+223             << 2) - 34] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 34] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*
+224             ns << 3) + 8 << 2) - 35];
+225         ctpi[1] = spv[(jj + (*ns << 3) << 2) - 34] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 3) + 8 
+226             << 2) - 36] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 36] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*
+227             ns << 3) + 8 << 2) - 34];
+228         ctpi[2] = spv[(jj + (*ns << 3) << 2) - 36] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 3) + 8 
+229             << 2) - 35] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(jj + (*ns << 3) << 2) - 35] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*
+230             ns << 3) + 8 << 2) - 36];
+231         iypl = 1;
+232 \textcolor{comment}{/* Computing 2nd power */}
+233         d\_\_1 = ctpi[0];
+234 \textcolor{comment}{/* Computing 2nd power */}
+235         d\_\_2 = ctpi[1];
+236 \textcolor{comment}{/* Computing 2nd power */}
+237         d\_\_3 = ctpi[2];
+238         sec = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+239 \textcolor{comment}{/* IS VECTOR LARGE ENOUGH? ... */}
+240         \textcolor{keywordflow}{if} (sec <= 1e-10) \{
+241         \textcolor{keywordflow}{goto} L260;
+242         \}
+243 \textcolor{comment}{/* NORMALIZE YPL: */}
+244         ctpi[0] /= sec;
+245         ctpi[1] /= sec;
+246         ctpi[2] /= sec;
+247 \textcolor{comment}{/* CTPI(4) = DOT PRODUCT OF YPL & BOUNDARY POINT: */}
+248         ctpi[3] = ctpi[0] * spv[((*ns << 3) + 1 << 2) - 36] + ctpi[1] * 
+249             spv[((*ns << 3) + 1 << 2) - 35] + ctpi[2] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 
+250             3) + 1 << 2) - 34];
+251         \textcolor{keywordflow}{goto} L270;
+252 L260:
+253 
+254 \textcolor{comment}{/* TRY YPL = CROSS PRODUCT OF V-PARTIALS AT V +/- DELTA: */}
+255 
+256         iypl = 0;
+257         ctpi[0] = dxyz[1] * dxyz[5] - dxyz[2] * dxyz[4];
+258         ctpi[1] = dxyz[2] * dxyz[3] - dxyz[0] * dxyz[5];
+259         ctpi[2] = dxyz[0] * dxyz[4] - dxyz[1] * dxyz[3];
+260 \textcolor{comment}{/* Computing 2nd power */}
+261         d\_\_1 = ctpi[0];
+262 \textcolor{comment}{/* Computing 2nd power */}
+263         d\_\_2 = ctpi[1];
+264 \textcolor{comment}{/* Computing 2nd power */}
+265         d\_\_3 = ctpi[2];
+266         sec = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+267 \textcolor{comment}{/* IS VECTOR LARGE ENOUGH? *** */}
+268         \textcolor{keywordflow}{if} (sec >= 1e-20) \{
+269         \textcolor{keywordflow}{goto} L280;
+270         \}
+271 
+272 \textcolor{comment}{/* USE YPL = U-PARTIAL AT U,V: */}
+273 
+274         iypl = 0;
+275         ctpi[0] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} + (*ns << 3) << 2) - 36];
+276         ctpi[1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} + (*ns << 3) << 2) - 35];
+277         ctpi[2] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[(\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} + (*ns << 3) << 2) - 34];
+278 \textcolor{comment}{/* Computing 2nd power */}
+279         d\_\_1 = ctpi[0];
+280 \textcolor{comment}{/* Computing 2nd power */}
+281         d\_\_2 = ctpi[1];
+282 \textcolor{comment}{/* Computing 2nd power */}
+283         d\_\_3 = ctpi[2];
+284         sec = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+285 L280:
+286 \textcolor{comment}{/* NORMALIZE CTPI: */}
+287         ctpi[0] /= sec;
+288         ctpi[1] /= sec;
+289         ctpi[2] /= sec;
+290 L270:
+291 
+292 \textcolor{comment}{/* COMPUTE PLANES TANGENT TO S1 & S2 BELOW PXYZ: */}
+293 \textcolor{comment}{/* --------------------------------------------- */}
+294 \textcolor{comment}{/*  COMPUTE PLANE DTP TANGENT TO DS: */}
+295         \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTBND_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}, \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}, irc);
+296 \textcolor{comment}{/* COMPUTE PLANE PTP TANGENT TO PS: */}
+297         \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTBND_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}, \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}, irc);
+298 
+299 \textcolor{comment}{/* RELOAD DT TABLES WITH SURFACE NORMAL OFFSETS */}
+300         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[9] = \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[0];
+301         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[10] = \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[1];
+302         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[11] = \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[2];
+303         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[0] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0];
+304         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[1] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1];
+305         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[2] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2];
+306         \textcolor{keywordflow}{for} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} = 1; \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+307         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 2] = \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 1];
+308         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 11] = \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 8];
+309         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 5] = \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 2];
+310         \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 14] = \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 11];
+311 \textcolor{comment}{/* EVALUATE THICKNESS */}
+312         \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + ((*ns << 3) + 1 << 2) - 37] += \hyperlink{INTBND_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + (*ns * 3 + 1) * 
+313             3 - 13] * \hyperlink{INTBND_8c_a6e8c37b3a9e09df09ba66ce16017c99a}{thick}[*ns - 1];
+314 \textcolor{comment}{/* L290: */}
+315         \}
+316 \textcolor{comment}{/* IF BOUNDARY ALGORITHM 2 OR 3, YPL(4) = DOT PRODUCT OF YPL AND */}
+317 \textcolor{comment}{/*  OFFSET BOUNDARY POINT: */}
+318         \textcolor{keywordflow}{if} (iypl == 0) \{
+319         ctpi[3] = ctpi[0] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 3) + 1 << 2) - 36] + ctpi[1] 
+320             * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*ns << 3) + 1 << 2) - 35] + ctpi[2] * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[((*
+321             ns << 3) + 1 << 2) - 34];
+322         \}
+323 
+324 \textcolor{comment}{/* LOAD PL TABLE */}
+325         \textcolor{keywordflow}{for} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} = 1; \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+326         \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 1] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 1];
+327         \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 3] = ctpi[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 1];
+328         \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} + 7] = \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 1];
+329 \textcolor{comment}{/* L300: */}
+330         \}
+331 
+332 \textcolor{comment}{/* SOLVE FOR PXYZ AT INTERSECTION OF PLANES PTP,YPL,DTP: */}
+333 \textcolor{comment}{/* ----------------------------------------------------- */}
+334         \textcolor{keywordflow}{for} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} = 1; \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+335         \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} = 1;
+336         \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} = 2;
+337         \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} = 3;
+338         \textcolor{keywordflow}{if} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} == 2) \{
+339             \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} = 4;
+340         \}
+341         \textcolor{keywordflow}{if} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} == 3) \{
+342             \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} = 4;
+343         \}
+344         \textcolor{keywordflow}{if} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} == 4) \{
+345             \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} = 4;
+346         \}
+347 \textcolor{comment}{/* CRAMER'S RULE: */}
+348         det = \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} - 1] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} + 3] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} + 7] + \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} + 3] * 
+      \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[
+349             \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} + 7] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} - 1] + \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} + 7] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} - 1] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[
+350             \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} + 3] - \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} + 7] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} + 3] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} - 1] - \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[
+351             \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} + 3] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} - 1] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} + 7] - \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1} - 1] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[
+352             \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1} + 7] * \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[\hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1} + 3];
+353         \textcolor{keywordflow}{if} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} != 1) \{
+354             \textcolor{keywordflow}{goto} L330;
+355         \}
+356         den = det;
+357 \textcolor{comment}{/* DEGENERATE SOLUTION? */}
+358         \textcolor{keywordflow}{if} (abs(den) < 1e-16) \{
+359             \textcolor{keywordflow}{goto} L320;
+360         \}
+361         \textcolor{keywordflow}{goto} L340;
+362 L330:
+363         \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} - 2] = det / den;
+364 L340:
+365 \textcolor{comment}{/* L310: */}
+366         ;
+367         \}
+368 L320:
+369         \textcolor{keywordflow}{if} (abs(den) >= 1e-16) \{
+370         \textcolor{keywordflow}{goto} L350;
+371         \}
+372 \textcolor{comment}{/* DEGENERATE SOLN; COMPUTE TANGENT YABC & PXYZ ON DTP & PTP: */}
+373         sal = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[0] + \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[1] + \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * \hyperlink{INTBND_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[2];
+374         calsq = 1. - sal * sal;
+375         \textcolor{keywordflow}{if} (calsq <= 1e-20) \{
+376         \textcolor{keywordflow}{goto} L360;
+377         \}
+378         cal = sqrt(calsq) * \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[3];
+379         \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] = (dtp[1] * \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] - \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * dtp[2]) / cal;
+380         \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] = (dtp[2] * \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] - \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * dtp[0]) / cal;
+381         \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] = (dtp[0] * \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] - \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * dtp[1]) / cal;
+382         \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1} = (\hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[3] - sal * dtp[3]) / calsq;
+383         \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2} = dtp[3] - sal * \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+384         d3 = \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[0] + \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[1] + \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * 
+      \hyperlink{INTBND_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[2];
+385         pxyz[0] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * d1 + dtp[0] * \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2} + \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * d3;
+386         pxyz[1] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * d1 + dtp[1] * \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2} + \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * d3;
+387         pxyz[2] = \hyperlink{INTBND_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * d1 + dtp[2] * \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2} + \hyperlink{INTBND_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * d3;
+388 L360:
+389 L350:
+390 \textcolor{comment}{/* Computing 2nd power */}
+391         d\_\_1 = pxyz[0] - htx;
+392 \textcolor{comment}{/* Computing 2nd power */}
+393         d\_\_2 = pxyz[1] - hty;
+394 \textcolor{comment}{/* Computing 2nd power */}
+395         d\_\_3 = pxyz[2] - htz;
+396         dis = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+397 \textcolor{comment}{/* CONVERGENCE? */}
+398         \textcolor{keywordflow}{if} (dis < 1e-12) \{
+399         \textcolor{keywordflow}{goto} L230;
+400         \}
+401 \textcolor{comment}{/* L220: */}
+402     \}
+403 L230:
+404 
+405 \textcolor{comment}{/* DONE WITH THIS BOUNDARY; CHECK BOUNDS & TRY OTHER ONE IF NECESSARY */}
+406 \textcolor{comment}{/* ------------------------------------------------------------------ */}
+407     \textcolor{keywordflow}{if} (\hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt} == 1) \{
+408         \textcolor{keywordflow}{goto} L210;
+409     \}
+410 
+411 \textcolor{comment}{/* BOTH U & V ARE OUT OF BOUNDS, CHECK IF NOW IN BOUNDS: */}
+412     hu = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 8];
+413     hv = \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(*ns * 3 + 1 << 1) - 7];
+414     \hyperlink{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29}{intnrm\_}(ns, &hu, &hv, pxyz, \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, irc);
+415 \textcolor{comment}{/* POINT IS ALONG U BOUNDARY; IF TRULY WITHIN BOUNDS, RETURN: *** */}
+416     \textcolor{keywordflow}{if} (*irc == 0 || \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} == 3) \{
+417         \textcolor{keywordflow}{goto} L210;
+418     \}
+419 
+420 \textcolor{comment}{/* SET VVV AT APPROPRIATE BOUNDARY: */}
+421     vvv = vbnd;
+422     \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j} = 3;
+423     \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} = 2;
+424 \textcolor{comment}{/* L200: */}
+425     \}
+426 L210:
+427 
+428 \textcolor{comment}{/* LOAD THIS UV FOR LAST CALL TO INTTPL IN INTCON */}
+429     \textcolor{keywordflow}{for} (\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 1; \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} <= 3; ++\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+430     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} + *ns * 3 << 1) - 8] = uuu;
+431     \hyperlink{INTBND_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} + *ns * 3 << 1) - 7] = vvv;
+432 \textcolor{comment}{/* L370: */}
+433     \}
+434 
+435 L999:
+436     \textcolor{keywordflow}{return} 0;
+437 \} \textcolor{comment}{/* intbnd\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!bb@{bb}}
+\index{bb@{bb}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{bb}{bb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bb\mbox{[}256\mbox{]}}\hypertarget{INTBND_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{}\label{INTBND_8c_a02df207cc55dd8e5a55b6f9d78d942d6}
+
+
+Definition at line 18 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTBND_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{INTBND_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 33 of file I\+N\+T\+B\+N\+D.\+c.
+
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTBND_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{INTBND_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 35 of file I\+N\+T\+B\+N\+D.\+c.
+
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTBND_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{INTBND_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 34 of file I\+N\+T\+B\+N\+D.\+c.
+
+
+
+Referenced by intbnd\+\_\+().
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!iiflag@{iiflag}}
+\index{iiflag@{iiflag}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{iiflag}{iiflag}}]{\setlength{\rightskip}{0pt plus 5cm}integer iiflag\mbox{[}16\mbox{]}}\hypertarget{INTBND_8c_af00895acd217dfa45b2e2e9716ebff70}{}\label{INTBND_8c_af00895acd217dfa45b2e2e9716ebff70}
+
+
+Definition at line 19 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!iitop@{iitop}}
+\index{iitop@{iitop}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{iitop}{iitop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iitop\mbox{[}96\mbox{]}}\hypertarget{INTBND_8c_ad4159f737847a828654fd6bd050aff25}{}\label{INTBND_8c_ad4159f737847a828654fd6bd050aff25}
+
+
+Definition at line 19 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ikeep@{ikeep}}
+\index{ikeep@{ikeep}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ikeep}{ikeep}}]{\setlength{\rightskip}{0pt plus 5cm}integer ikeep\mbox{[}255\mbox{]}}\hypertarget{INTBND_8c_aaf1570c45aa1901e9b51476d09a19e02}{}\label{INTBND_8c_aaf1570c45aa1901e9b51476d09a19e02}
+
+
+Definition at line 26 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!intcom\+\_\+@{intcom\+\_\+}}
+\index{intcom\+\_\+@{intcom\+\_\+}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+}{intcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   intcom\+\_\+}\hypertarget{INTBND_8c_a7ebadefba3be1f13eff9bd17be190b41}{}\label{INTBND_8c_a7ebadefba3be1f13eff9bd17be190b41}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ipnum@{ipnum}}
+\index{ipnum@{ipnum}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ipnum}{ipnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipnum\mbox{[}4\mbox{]}}\hypertarget{INTBND_8c_ad9ba103b57834a3db27b426fcafa58fe}{}\label{INTBND_8c_ad9ba103b57834a3db27b426fcafa58fe}
+
+
+Definition at line 19 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!ssarlm\+\_\+@{ssarlm\+\_\+}}
+\index{ssarlm\+\_\+@{ssarlm\+\_\+}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+}{ssarlm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssarlm\+\_\+}\hypertarget{INTBND_8c_a83e2d220c09f10b1a8a82e9d5b2c76df}{}\label{INTBND_8c_a83e2d220c09f10b1a8a82e9d5b2c76df}
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!uu@{uu}}
+\index{uu@{uu}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{uu}{uu}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uu\mbox{[}4\mbox{]}}\hypertarget{INTBND_8c_a92a9ddacaa39a881012df9cfbd55134a}{}\label{INTBND_8c_a92a9ddacaa39a881012df9cfbd55134a}
+
+
+Definition at line 18 of file I\+N\+T\+B\+N\+D.\+c.
+
+\index{I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}!vv@{vv}}
+\index{vv@{vv}!I\+N\+T\+B\+N\+D.\+c@{I\+N\+T\+B\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{vv}{vv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vv\mbox{[}4\mbox{]}}\hypertarget{INTBND_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{}\label{INTBND_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}
+
+
+Definition at line 18 of file I\+N\+T\+B\+N\+D.\+c.
+

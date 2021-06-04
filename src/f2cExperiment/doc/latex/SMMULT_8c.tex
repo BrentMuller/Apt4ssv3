@@ -1,0 +1,124 @@
+\hypertarget{SMMULT_8c}{}\section{S\+M\+M\+U\+L\+T.\+c File Reference}
+\label{SMMULT_8c}\index{S\+M\+M\+U\+L\+T.\+c@{S\+M\+M\+U\+L\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+M\+M\+U\+L\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{SMMULT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SMMULT_8c_ab1bd5fb925e01e778002e49ec7b1a470}{smmult\+\_\+} (integer $\ast$\hyperlink{ZSURF_8c_ad7684a4576040833776882c791cfabf0}{l}, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, integer $\ast$ks, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+M\+M\+U\+L\+T.\+c@{S\+M\+M\+U\+L\+T.\+c}!smmult\+\_\+@{smmult\+\_\+}}
+\index{smmult\+\_\+@{smmult\+\_\+}!S\+M\+M\+U\+L\+T.\+c@{S\+M\+M\+U\+L\+T.\+c}}
+\subsubsection[{\texorpdfstring{smmult\+\_\+(integer $\ast$l, integer $\ast$m, integer $\ast$n, integer $\ast$ks, doublereal $\ast$a, doublereal $\ast$b, doublereal $\ast$c\+\_\+\+\_\+)}{smmult_(integer *l, integer *m, integer *n, integer *ks, doublereal *a, doublereal *b, doublereal *c__)}}]{\setlength{\rightskip}{0pt plus 5cm}int smmult\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{l, }
+\item[{integer $\ast$}]{m, }
+\item[{integer $\ast$}]{n, }
+\item[{integer $\ast$}]{ks, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{SMMULT_8c_ab1bd5fb925e01e778002e49ec7b1a470}{}\label{SMMULT_8c_ab1bd5fb925e01e778002e49ec7b1a470}
+
+
+Definition at line 17 of file S\+M\+M\+U\+L\+T.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, d\+\_\+\+\_\+, ir, k, l, m, and n.
+
+
+
+Referenced by ctrans\+\_\+(), and revolv\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* System generated locals */}
+21     integer i\_\_1, i\_\_2, i\_\_3;
+22 
+23     \textcolor{comment}{/* Local variables */}
+24     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}[16];
+25     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, ka, jc, kb, kk, \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, kloc, msize;
+26 
+27 \textcolor{comment}{/* --- SCULPTURED SURFACE ROUTINE FOR MATRIX MULTIPLY */}
+28 \textcolor{comment}{/* ---  A IS AN INPUT MATRIX L ROWS BY M COLUMNS */}
+29 \textcolor{comment}{/* --- B IS AN INPUT MATRIX M ROWS X N COLUMNS */}
+30 \textcolor{comment}{/* --- KS DETERMINES WHERE THE OUTPUT IS LOADED */}
+31 \textcolor{comment}{/* --- KS =1 A  KS=2 B  KS=3 C */}
+32 \textcolor{comment}{/* --- NO INPUT MATRIX IS ALTERED UNLESS REQUESTED */}
+33     \textcolor{comment}{/* Parameter adjustments */}
+34     --\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+35     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+36     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+37 
+38     \textcolor{comment}{/* Function Body */}
+39     i\_\_1 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+40     \textcolor{keywordflow}{for} (jc = 1; jc <= i\_\_1; ++jc) \{
+41     i\_\_2 = *\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+42     \textcolor{keywordflow}{for} (ir = 1; ir <= i\_\_2; ++\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}) \{
+43         kloc = ir + (jc - 1) * *\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+44         d\_\_[kloc - 1] = 0.f;
+45         i\_\_3 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+46         \textcolor{keywordflow}{for} (kk = 1; kk <= i\_\_3; ++kk) \{
+47         ka = ir + (kk - 1) * *\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+48         kb = kk + (jc - 1) * *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+49         d\_\_[kloc - 1] += \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[ka] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[kb];
+50 \textcolor{comment}{/* L20: */}
+51         \}
+52 \textcolor{comment}{/* L10: */}
+53     \}
+54     \}
+55     msize = *\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} * *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+56     \textcolor{keywordflow}{switch} (*ks) \{
+57     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L100;
+58     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L200;
+59     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L300;
+60     \}
+61 L100:
+62     i\_\_2 = msize;
+63     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+64 \textcolor{comment}{/* L110: */}
+65     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = d\_\_[k - 1];
+66     \}
+67     \textcolor{keywordflow}{goto} L999;
+68 L200:
+69     i\_\_2 = msize;
+70     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+71 \textcolor{comment}{/* L210: */}
+72     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = d\_\_[k - 1];
+73     \}
+74     \textcolor{keywordflow}{goto} L999;
+75 L300:
+76     i\_\_2 = msize;
+77     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+78 \textcolor{comment}{/* L310: */}
+79     \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = d\_\_[k - 1];
+80     \}
+81 L999:
+82     \textcolor{keywordflow}{return} 0;
+83 \} \textcolor{comment}{/* smmult\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SMMULT_8c_ab1bd5fb925e01e778002e49ec7b1a470_icgraph}
+\end{center}
+\end{figure}
+
+

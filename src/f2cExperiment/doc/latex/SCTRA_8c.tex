@@ -1,0 +1,338 @@
+\hypertarget{SCTRA_8c}{}\section{S\+C\+T\+R\+A.\+c File Reference}
+\label{SCTRA_8c}\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+C\+T\+R\+A.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{SCTRA_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4}{sctra\+\_\+} (doublereal $\ast$xma, doublereal $\ast$ana, doublereal $\ast$\hyperlink{XNUMBR_8c_a5ba45740712660000cfa0d00672aea0c}{can}, integer $\ast$isprnt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{SCTRA_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{SCTRA_8c_aa145f341a275374069f39c5c8d1b2e40}{c\+\_\+\+\_\+34} = 34
+\item 
+static integer \hyperlink{SCTRA_8c_a88e5d19fe152923364ef58b34b8543e4}{c\+\_\+\+\_\+36} = 36
+\item 
+static integer \hyperlink{SCTRA_8c_a605b483ffb4d7726905c815add4d5bea}{c\+\_\+\+\_\+25} = 25
+\item 
+static integer \hyperlink{SCTRA_8c_a9487df54522c0ab766971df4932ddfad}{c\+\_\+\+\_\+12} = 12
+\item 
+static integer \hyperlink{SCTRA_8c_ac1b28bfdd6ccb89299c47817c082755e}{c\+\_\+\+\_\+5} = 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!sctra\+\_\+@{sctra\+\_\+}}
+\index{sctra\+\_\+@{sctra\+\_\+}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sctra\+\_\+(doublereal $\ast$xma, doublereal $\ast$ana, doublereal $\ast$can, integer $\ast$isprnt)}{sctra_(doublereal *xma, doublereal *ana, doublereal *can, integer *isprnt)}}]{\setlength{\rightskip}{0pt plus 5cm}int sctra\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{xma, }
+\item[{doublereal $\ast$}]{ana, }
+\item[{doublereal $\ast$}]{can, }
+\item[{integer $\ast$}]{isprnt}
+\end{DoxyParamCaption}
+)}\hypertarget{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4}{}\label{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4}
+
+
+Definition at line 27 of file S\+C\+T\+R\+A.\+c.
+
+
+
+References a, b, blank, c\+\_\+\+\_\+, c\+\_\+\+\_\+1, c\+\_\+\+\_\+12, c\+\_\+\+\_\+25, c\+\_\+\+\_\+34, c\+\_\+\+\_\+36, c\+\_\+\+\_\+5, c\+\_\+\+\_\+8, can, cform\+\_\+(), cprint\+\_\+(), d\+\_\+\+\_\+, darray, f, fconv\+\_\+(), holfrm\+\_\+(), i\+\_\+\+\_\+, ia, ib, ic, ii, j, jj, k, ll, m, n, and scpict\+\_\+().
+
+
+
+Referenced by apt108\+\_\+().
+
+
+\begin{DoxyCode}
+29 \{
+30     \textcolor{comment}{/* Initialized data */}
+31 
+32     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}[8] = \textcolor{stringliteral}{"        "};
+33 
+34     \textcolor{comment}{/* System generated locals */}
+35     integer i\_\_1, i\_\_2;
+36 
+37     \textcolor{comment}{/* Builtin functions */}
+38     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+39 
+40     \textcolor{comment}{/* Local variables */}
+41     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[16]    \textcolor{comment}{/* was [4][4] */}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[96]    \textcolor{comment}{/* was [4][24] */}, 
+42         \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[96]  \textcolor{comment}{/* was [4][24] */}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+43     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}, \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}, \hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}, \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}, ka, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}, kk, 
+      \hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}, ml, iv, 
+44         ia1, ia2, nwd, npt, ignc, narc;
+45     \textcolor{keyword}{static} \textcolor{keywordtype}{char} aname[16];
+46     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+47         ftnlen, ftnlen), \hyperlink{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{fconv\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, integer *
+48         , integer *, ftnlen);
+49     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{SPRVIS_8c_adec9b12288715baf6855672ba7580e3c}{darray}[120];
+50     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+51         ftnlen), \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+52         integer *, ftnlen), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+53 
+54 \textcolor{comment}{/* ----------  THE PURPOSE OF THIS SUBROUTINE IS TO PERFORM GEOMETRY */}
+55 \textcolor{comment}{/* ----------  TRANSFORMATION FOR THE SYNTHETIC CURVESS. */}
+56 \textcolor{comment}{/* ----------      XMA     TRANSFORMATION MATRIX */}
+57 \textcolor{comment}{/* ----------      ANA     CURVE NAME */}
+58 \textcolor{comment}{/* ----------      CAN     CANON OF THE CURVE */}
+59 \textcolor{comment}{/* ----------      ISPRNT  PRINT FLAG */}
+60 \textcolor{comment}{/* ---------- */}
+61     \textcolor{comment}{/* Parameter adjustments */}
+62     --\hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can};
+63     --ana;
+64     --xma;
+65 
+66     \textcolor{comment}{/* Function Body */}
+67     ignc = 0;
+68     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&ana[3], aname, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SCTRA_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)16);
+69     s\_copy(aname + 8, blank, (ftnlen)8, (ftnlen)8);
+70     s\_copy(darray, blank, (ftnlen)120, (ftnlen)8);
+71     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{"1THE FOLLOWING SSURF OR SCURV WAS "}, darray, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SCTRA_8c_aa145f341a275374069f39c5c8d1b2e40}{c\_\_34}, (
+72         ftnlen)34, (ftnlen)120);
+73     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{"TRANSFORMED BY THE MATRIX"}, darray, &\hyperlink{SCTRA_8c_a88e5d19fe152923364ef58b34b8543e4}{c\_\_36}, &\hyperlink{SCTRA_8c_a605b483ffb4d7726905c815add4d5bea}{c\_\_25}, (ftnlen)25, (
+74         ftnlen)120);
+75     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+76     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{"0"}, darray, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (ftnlen)1, (ftnlen)120);
+77     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+78 \textcolor{comment}{/* ***  INPUT MATRIX */}
+79     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+80     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+81         ll = (i\_\_ - 1 << 2) + j;
+82         a[i\_\_ + (j << 2) - 5] = xma[ll];
+83 \textcolor{comment}{/* L7: */}
+84     \}
+85     \}
+86     a[3] = 0.f;
+87     a[7] = 0.f;
+88     a[11] = 0.f;
+89     a[15] = 1.f;
+90 \textcolor{comment}{/* ***  ************ */}
+91     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+92     k = 2;
+93     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+94         \hyperlink{FCONV_8c_a5e6d2f8bad9a5ffa37258e4f525edaa6}{fconv\_}(&a[i\_\_ + (j << 2) - 5], darray, &k, &\hyperlink{SCTRA_8c_a9487df54522c0ab766971df4932ddfad}{c\_\_12}, &\hyperlink{SCTRA_8c_ac1b28bfdd6ccb89299c47817c082755e}{c\_\_5}, (ftnlen)
+95             120);
+96         k += 12;
+97 \textcolor{comment}{/* L11: */}
+98     \}
+99     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+100 \textcolor{comment}{/* L12: */}
+101     \}
+102     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{"0"}, darray, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (ftnlen)1, (ftnlen)120);
+103     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+104     narc = (integer) \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[4];
+105     npt = narc + 1;
+106     iv = (integer) \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[5];
+107     ia = iv;
+108     i\_\_1 = narc;
+109     \textcolor{keywordflow}{for} (n = 1; n <= i\_\_1; ++\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}) \{
+110     ib = \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+111     \textcolor{keywordflow}{for} (m = 1; m <= 4; ++\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+112         b[(m << 2) - 4] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ib];
+113         b[(m << 2) - 3] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ib + 4];
+114         b[(m << 2) - 2] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ib + 8];
+115         b[(m << 2) - 1] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ib + 12];
+116         ++\hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib};
+117 \textcolor{comment}{/* L2100: */}
+118     \}
+119     ib = \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+120 \textcolor{comment}{/* ----------  CRSSPL  OR  NORMAL */}
+121     \textcolor{keywordflow}{for} (k = 1; k <= 2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+122         kk = k + 4;
+123         ic = ib - (3 - k << 2);
+124         b[(kk << 2) - 4] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic];
+125         b[(kk << 2) - 3] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic + 1];
+126         b[(kk << 2) - 2] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic + 2];
+127         b[(kk << 2) - 1] = 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+128 \textcolor{comment}{/* L2300: */}
+129     \}
+130     ml = 6;
+131     \textcolor{keywordflow}{if} (n != narc) \{
+132         \textcolor{keywordflow}{goto} L2500;
+133     \}
+134     ia1 = ia + 19;
+135     ia2 = ia + 23;
+136     \textcolor{keywordflow}{if} (\hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ia1] == 0. && \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ia2] == 0.) \{
+137         \textcolor{keywordflow}{goto} L2500;
+138     \}
+139     \textcolor{keywordflow}{for} (k = 1; k <= 2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+140         kk = k + 6;
+141         ic = ib + 16 + (k - 1 << 2);
+142         b[(kk << 2) - 4] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic];
+143         b[(kk << 2) - 3] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic + 1];
+144         b[(kk << 2) - 2] = \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ic + 2];
+145         b[(kk << 2) - 1] = 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+146 \textcolor{comment}{/* L2310: */}
+147     \}
+148     ml = 8;
+149 L2500:
+150     i\_\_2 = ml;
+151     \textcolor{keywordflow}{for} (ka = 1; ka <= i\_\_2; ++ka) \{
+152         \textcolor{keywordflow}{for} (ii = 1; ii <= 4; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+153         d\_\_ = 0.f;
+154         \textcolor{keywordflow}{for} (jj = 1; jj <= 4; ++\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}) \{
+155             c\_\_[ii + (ka << 2) - 5] = a[ii + (jj << 2) - 5] * b[jj + (
+156                 ka << 2) - 5] + d\_\_;
+157 \textcolor{comment}{/* L220: */}
+158             d\_\_ = c\_\_[ii + (ka << 2) - 5];
+159         \}
+160 \textcolor{comment}{/* L230: */}
+161         \}
+162 \textcolor{comment}{/* L240: */}
+163     \}
+164     ib = \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+165     \textcolor{keywordflow}{for} (m = 1; m <= 4; ++\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+166         \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[\hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}] = c\_\_[(m << 2) - 4];
+167         \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[ib + 4] = c\_\_[(m << 2) - 3];
+168         can[ib + 8] = c\_\_[(m << 2) - 2];
+169         can[ib + 12] = c\_\_[(m << 2) - 1];
+170         ++\hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib};
+171 \textcolor{comment}{/* L2600: */}
+172     \}
+173     ib = \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+174     \textcolor{keywordflow}{for} (k = 1; k <= 2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+175         kk = k + 4;
+176         ic = ib - (3 - k << 2);
+177         \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[\hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}] = c\_\_[(kk << 2) - 4];
+178         can[ic + 1] = c\_\_[(kk << 2) - 3];
+179         can[ic + 2] = c\_\_[(kk << 2) - 2];
+180 \textcolor{comment}{/* L2700: */}
+181     \}
+182     \textcolor{keywordflow}{if} (ml == 6) \{
+183         \textcolor{keywordflow}{goto} L2800;
+184     \}
+185     \textcolor{keywordflow}{for} (k = 1; k <= 2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+186         kk = k + 6;
+187         ic = ib + 16 + (k - 1 << 2);
+188         \hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[\hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}] = c\_\_[(kk << 2) - 4];
+189         can[ic + 1] = c\_\_[(kk << 2) - 3];
+190         can[ic + 2] = c\_\_[(kk << 2) - 2];
+191 \textcolor{comment}{/* L2710: */}
+192     \}
+193 L2800:
+194     ia += 24;
+195 \textcolor{comment}{/* L2200: */}
+196     \}
+197     \hyperlink{SCPICT_8c_a493b063354e079eb4d149f810c57a48d}{scpict\_}(&\hyperlink{ADV_8c_a5ba45740712660000cfa0d00672aea0c}{can}[1], aname, isprnt, (ftnlen)16);
+198 \textcolor{comment}{/* L999: */}
+199     \textcolor{keywordflow}{return} 0;
+200 \} \textcolor{comment}{/* sctra\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SCTRA_8c_aabed72e5a8da725dacb91a743d93eaa4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{SCTRA_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+12@{c\+\_\+\+\_\+12}}
+\index{c\+\_\+\+\_\+12@{c\+\_\+\+\_\+12}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+12}{c__12}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+12 = 12\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_a9487df54522c0ab766971df4932ddfad}{}\label{SCTRA_8c_a9487df54522c0ab766971df4932ddfad}
+
+
+Definition at line 22 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+25@{c\+\_\+\+\_\+25}}
+\index{c\+\_\+\+\_\+25@{c\+\_\+\+\_\+25}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+25}{c__25}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+25 = 25\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_a605b483ffb4d7726905c815add4d5bea}{}\label{SCTRA_8c_a605b483ffb4d7726905c815add4d5bea}
+
+
+Definition at line 21 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+34@{c\+\_\+\+\_\+34}}
+\index{c\+\_\+\+\_\+34@{c\+\_\+\+\_\+34}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+34}{c__34}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+34 = 34\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_aa145f341a275374069f39c5c8d1b2e40}{}\label{SCTRA_8c_aa145f341a275374069f39c5c8d1b2e40}
+
+
+Definition at line 19 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+36@{c\+\_\+\+\_\+36}}
+\index{c\+\_\+\+\_\+36@{c\+\_\+\+\_\+36}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+36}{c__36}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+36 = 36\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_a88e5d19fe152923364ef58b34b8543e4}{}\label{SCTRA_8c_a88e5d19fe152923364ef58b34b8543e4}
+
+
+Definition at line 20 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+5@{c\+\_\+\+\_\+5}}
+\index{c\+\_\+\+\_\+5@{c\+\_\+\+\_\+5}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+5}{c__5}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+5 = 5\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_ac1b28bfdd6ccb89299c47817c082755e}{}\label{SCTRA_8c_ac1b28bfdd6ccb89299c47817c082755e}
+
+
+Definition at line 23 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+
+\index{S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!S\+C\+T\+R\+A.\+c@{S\+C\+T\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCTRA_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{SCTRA_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 18 of file S\+C\+T\+R\+A.\+c.
+
+
+
+Referenced by sctra\+\_\+().
+

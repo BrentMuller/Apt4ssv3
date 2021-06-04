@@ -1,0 +1,216 @@
+\hypertarget{PARINT_8c}{}\section{P\+A\+R\+I\+N\+T.\+c File Reference}
+\label{PARINT_8c}\index{P\+A\+R\+I\+N\+T.\+c@{P\+A\+R\+I\+N\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+A\+R\+I\+N\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{PARINT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\+\_\+} (doublereal $\ast$pa, doublereal $\ast$pd, doublereal $\ast$pc, doublereal $\ast$udir, doublereal $\ast$rad, integer $\ast$kk, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+A\+R\+I\+N\+T.\+c@{P\+A\+R\+I\+N\+T.\+c}!parint\+\_\+@{parint\+\_\+}}
+\index{parint\+\_\+@{parint\+\_\+}!P\+A\+R\+I\+N\+T.\+c@{P\+A\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{parint\+\_\+(doublereal $\ast$pa, doublereal $\ast$pd, doublereal $\ast$pc, doublereal $\ast$udir, doublereal $\ast$rad, integer $\ast$kk, integer $\ast$irr)}{parint_(doublereal *pa, doublereal *pd, doublereal *pc, doublereal *udir, doublereal *rad, integer *kk, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int parint\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pa, }
+\item[{doublereal $\ast$}]{pd, }
+\item[{doublereal $\ast$}]{pc, }
+\item[{doublereal $\ast$}]{udir, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{integer $\ast$}]{kk, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{}\label{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}
+
+
+Definition at line 18 of file P\+A\+R\+I\+N\+T.\+c.
+
+
+
+References b, c\+\_\+\+\_\+, dx, dy, f, i\+\_\+\+\_\+, s, slope, w, x, x1, x2, y2, and ycc.
+
+
+
+Referenced by curfit\+\_\+(), forcub\+\_\+(), and ssplin\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* System generated locals */}
+22     doublereal d\_\_1, d\_\_2, d\_\_3;
+23 
+24     \textcolor{comment}{/* Builtin functions */}
+25     \textcolor{keywordtype}{double} sqrt(doublereal);
+26 
+27     \textcolor{comment}{/* Local variables */}
+28     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+29     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}, \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}, \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}, \hyperlink{APT301_8c_aa0945bac227f165377047f609a79b28b}{y2}, pb[3], wa, wb, \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx}[3], \hyperlink{APT301_8c_a1aa95347d299564b1d20a922f0d7eb97}{dy}[3], rd2, 
+31         \hyperlink{APT301_8c_ab15d264eaeb6afb08213d141ffbdf016}{ycc}, vela, velb, crit, hdst, pdst;
+32     \textcolor{keyword}{static} integer idiag, kcase;
+33     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_a9a069172a65a2718f6e9033262659ecd}{slope};
+34 
+35 \textcolor{comment}{/* ------ALRP SCULPTURED SURFACE ROUTINE--MARCH 1970 JKH */}
+36 \textcolor{comment}{/* ------THIS SUBROUTINE IS MODULAR AND SHOULD NOT HAVE ANY COMMON BLOCKS */}
+37 \textcolor{comment}{/* ------INPUT IS THREE SPACE POINTS PA,PB,PC */}
+38 \textcolor{comment}{/* ------KCASE=1,2,3 INDICATES THAT OUTPUT OF CURVATURE AND TANGENT */}
+39 \textcolor{comment}{/* ------ IS DESIRED AT POINT P= PA, PB OR PC RESPECTIVELY */}
+40 \textcolor{comment}{/* ------OUTPUT SHOULD CONSIST OF A UNITIZED DIRECTION VECTOR UDIR AND A */}
+41 \textcolor{comment}{/* ------RADIUS AT POINT P  OF A PARABOLA WHICH PASSES THROUGH PA,PB,PC */}
+42 \textcolor{comment}{/* ------IRR NE 0 INDICATES A FAILURE IN INPUT */}
+43     \textcolor{comment}{/* Parameter adjustments */}
+44     --udir;
+45     --pc;
+46     --pd;
+47     --pa;
+48 
+49     \textcolor{comment}{/* Function Body */}
+50     idiag = 2000;
+51     crit = 1e-10;
+52 \textcolor{comment}{/* Computing 2nd power */}
+53     d\_\_1 = pc[1] - pa[1];
+54 \textcolor{comment}{/* Computing 2nd power */}
+55     d\_\_2 = pc[2] - pa[2];
+56 \textcolor{comment}{/* Computing 2nd power */}
+57     d\_\_3 = pc[3] - pa[3];
+58     x1 = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+59     *irr = idiag + 1;
+60     \textcolor{keywordflow}{if} (x1 < crit) \{
+61     \textcolor{keywordflow}{return} 0;
+62     \}
+63     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+64 \textcolor{comment}{/* L10: */}
+65     dx[i\_\_ - 1] = (pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) / x1;
+66     \}
+67     kcase = *kk % 10;
+68     \textcolor{keywordflow}{if} (*kk > 10) \{
+69     \textcolor{keywordflow}{goto} L100;
+70     \}
+71     pb[0] = pd[1];
+72     pb[1] = pd[2];
+73     pb[2] = pd[3];
+74     \textcolor{keywordflow}{goto} L200;
+75 L100:
+76     wa = sqrt(pd[1] * pd[1] + pd[2] * pd[2] + pd[3] * pd[3]);
+77     *irr = idiag + 3;
+78     \textcolor{keywordflow}{if} (wa < crit) \{
+79     \textcolor{keywordflow}{return} 0;
+80     \}
+81     wb = (dx[0] * pd[1] + dx[1] * pd[2] + dx[2] * pd[3]) / wa;
+82     s = 1.f / wa;
+83     \textcolor{keywordflow}{if} (wb < 0.) \{
+84     s = -\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+85     \}
+86     pb[0] = s * pd[1];
+87     pb[1] = s * pd[2];
+88     pb[2] = s * pd[3];
+89     hdst = x1 / 2.f;
+90     wb = abs(wb);
+91     \textcolor{keywordflow}{if} (wb > crit) \{
+92     \textcolor{keywordflow}{goto} L130;
+93     \}
+94     *irr = idiag + 5;
+95     \textcolor{keywordflow}{return} 0;
+96 L130:
+97     pdst = hdst / wb;
+98     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+99     pb[i\_\_ - 1] = (pdst * pb[i\_\_ - 1] - hdst * dx[i\_\_ - 1]) / 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + hdst *
+100          dx[i\_\_ - 1];
+101     \textcolor{keywordflow}{if} (*kk < 20) \{
+102         pb[i\_\_ - 1] = pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + pb[i\_\_ - 1];
+103     \}
+104     \textcolor{keywordflow}{if} (*kk > 20) \{
+105         pb[i\_\_ - 1] = pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pb[i\_\_ - 1];
+106     \}
+107 \textcolor{comment}{/* L150: */}
+108     \}
+109 L200:
+110 \textcolor{comment}{/* ------PROJECT THE THIRD POINT PB ONTO THE PA,PC AXIS */}
+111     x2 = (pb[0] - pa[1]) * dx[0] + (pb[1] - pa[2]) * dx[1] + (pb[2] - pa[3]) *
+112          dx[2];
+113     *irr = idiag + 2;
+114     \textcolor{keywordflow}{if} (x2 < crit || x2 > x1 - crit) \{
+115     \textcolor{keywordflow}{return} 0;
+116     \}
+117     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+118 \textcolor{comment}{/* L20: */}
+119     dy[i\_\_ - 1] = pb[i\_\_ - 1] - (pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + x2 * dx[i\_\_ - 1]);
+120     \}
+121     y2 = sqrt(dy[0] * dy[0] + dy[1] * dy[1] + dy[2] * dy[2]);
+122     \textcolor{keywordflow}{if} (y2 < crit) \{
+123     \textcolor{keywordflow}{goto} L5000;
+124     \}
+125     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+126 \textcolor{comment}{/* L30: */}
+127     dy[i\_\_ - 1] /= \hyperlink{APT301_8c_aa0945bac227f165377047f609a79b28b}{y2};
+128     \}
+129 \textcolor{comment}{/* ------NOW DX,DY FORM A PLANAR RECTANGULAR COORDINATE SYSTEM IN WHICH */}
+130 \textcolor{comment}{/* ------A PARABOLA Y=B*X+C*X**2 CAN BE DETERMINED SO THAT IT LIES ON */}
+131 \textcolor{comment}{/* ------PA = (0,0), PC = (X1,0), PB = (X2,Y2) */}
+132     c\_\_ = y2 / (x2 * (x2 - \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}));
+133     b = -c\_\_ * \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1};
+134     x = 0.;
+135     \textcolor{keywordflow}{if} (kcase == 2) \{
+136     x = \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2};
+137     \}
+138     \textcolor{keywordflow}{if} (kcase == 3) \{
+139     x = \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1};
+140     \}
+141     w = c\_\_ + \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+142     slope = b + w * \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+143     vela = sqrt(slope * slope + 1);
+144     velb = slope / vela;
+145 \textcolor{comment}{/* -------RAD IS THE RADIUS OF THE CIRCLE THRU THREE POINTS */}
+146     rd2 = 1e6;
+147     \textcolor{keywordflow}{if} (y2 > 1e-6) \{
+148 \textcolor{comment}{/* Computing 2nd power */}
+149     d\_\_1 = \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2};
+150 \textcolor{comment}{/* Computing 2nd power */}
+151     d\_\_2 = \hyperlink{APT301_8c_aa0945bac227f165377047f609a79b28b}{y2};
+152     ycc = (d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 - x1 * \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}) / (y2 * 2);
+153     \}
+154     \textcolor{keywordflow}{if} (y2 > 1e-6) \{
+155 \textcolor{comment}{/* Computing 2nd power */}
+156     d\_\_1 = \hyperlink{APT301_8c_ab15d264eaeb6afb08213d141ffbdf016}{ycc};
+157     rd2 = sqrt(d\_\_1 * d\_\_1 + x1 * x1 / 4);
+158     \}
+159     *rad = rd2;
+160 \textcolor{comment}{/* ------UDIR IS CHOSEN TO POINT IN THE DIRECTION OF PA TO PB */}
+161     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+162 \textcolor{comment}{/* L40: */}
+163     udir[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = dx[i\_\_ - 1] / vela + dy[i\_\_ - 1] * velb;
+164     \}
+165     *irr = 0;
+166     \textcolor{keywordflow}{return} 0;
+167 \textcolor{comment}{/* ------STRAIGHT LINE CASE */}
+168 L5000:
+169     *rad = 1.f / crit;
+170     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+171 \textcolor{comment}{/* L5010: */}
+172     udir[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = dx[i\_\_ - 1];
+173     \}
+174     *irr = 0;
+175     \textcolor{keywordflow}{return} 0;
+176 \} \textcolor{comment}{/* parint\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59_icgraph}
+\end{center}
+\end{figure}
+
+

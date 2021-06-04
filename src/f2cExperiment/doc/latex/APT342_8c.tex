@@ -1,0 +1,67 @@
+\hypertarget{APT342_8c}{}\section{A\+P\+T342.\+c File Reference}
+\label{APT342_8c}\index{A\+P\+T342.\+c@{A\+P\+T342.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T342.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT342_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT342_8c_ae866caac43e9bd46945b044e280fc9a1}{apt342\+\_\+} (doublereal $\ast$cra, doublereal $\ast$crb, doublereal $\ast$crc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T342.\+c@{A\+P\+T342.\+c}!apt342\+\_\+@{apt342\+\_\+}}
+\index{apt342\+\_\+@{apt342\+\_\+}!A\+P\+T342.\+c@{A\+P\+T342.\+c}}
+\subsubsection[{\texorpdfstring{apt342\+\_\+(doublereal $\ast$cra, doublereal $\ast$crb, doublereal $\ast$crc)}{apt342_(doublereal *cra, doublereal *crb, doublereal *crc)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt342\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{cra, }
+\item[{doublereal $\ast$}]{crb, }
+\item[{doublereal $\ast$}]{crc}
+\end{DoxyParamCaption}
+)}\hypertarget{APT342_8c_ae866caac43e9bd46945b044e280fc9a1}{}\label{APT342_8c_ae866caac43e9bd46945b044e280fc9a1}
+
+
+Definition at line 23 of file A\+P\+T342.\+c.
+
+
+
+Referenced by apt341\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keyword}{static} doublereal crtem1, crtem2;
+27 
+28     \textcolor{comment}{/* Parameter adjustments */}
+29     --crc;
+30     --crb;
+31     --cra;
+32 
+33     \textcolor{comment}{/* Function Body */}
+34     crtem1 = cra[2] * crb[3] - cra[3] * crb[2];
+35     crtem2 = cra[3] * crb[1] - cra[1] * crb[3];
+36     crc[3] = cra[1] * crb[2] - cra[2] * crb[1];
+37     crc[1] = crtem1;
+38     crc[2] = crtem2;
+39     \textcolor{keywordflow}{return} 0;
+40 \} \textcolor{comment}{/* apt342\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT342_8c_ae866caac43e9bd46945b044e280fc9a1_icgraph}
+\end{center}
+\end{figure}
+
+

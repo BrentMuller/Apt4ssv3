@@ -1,0 +1,74 @@
+\hypertarget{VSCALE_8c}{}\section{V\+S\+C\+A\+L\+E.\+c File Reference}
+\label{VSCALE_8c}\index{V\+S\+C\+A\+L\+E.\+c@{V\+S\+C\+A\+L\+E.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for V\+S\+C\+A\+L\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{VSCALE_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}{vscale\+\_\+} (doublereal $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s}, doublereal $\ast$\hyperlink{REGION_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, doublereal $\ast$\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{V\+S\+C\+A\+L\+E.\+c@{V\+S\+C\+A\+L\+E.\+c}!vscale\+\_\+@{vscale\+\_\+}}
+\index{vscale\+\_\+@{vscale\+\_\+}!V\+S\+C\+A\+L\+E.\+c@{V\+S\+C\+A\+L\+E.\+c}}
+\subsubsection[{\texorpdfstring{vscale\+\_\+(doublereal $\ast$s, doublereal $\ast$v1, doublereal $\ast$v2)}{vscale_(doublereal *s, doublereal *v1, doublereal *v2)}}]{\setlength{\rightskip}{0pt plus 5cm}int vscale\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{s, }
+\item[{doublereal $\ast$}]{v1, }
+\item[{doublereal $\ast$}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}{}\label{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}
+
+
+Definition at line 17 of file V\+S\+C\+A\+L\+E.\+c.
+
+
+
+References i\+\_\+\+\_\+, v1, and v2.
+
+
+
+Referenced by avoid\+\_\+(), sspath\+\_\+(), and tulpos\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+20 
+21 
+22 \textcolor{comment}{/*    PURPOSE: TO APPLY A SCALE FACTOR TO A VECTOR  ( V2=S*V1 ) */}
+23 
+24 
+25     \textcolor{comment}{/* Parameter adjustments */}
+26     --\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2};
+27     --\hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+28 
+29     \textcolor{comment}{/* Function Body */}
+30     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+31     \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} * \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+32 \textcolor{comment}{/* L10: */}
+33     \}
+34 
+35     \textcolor{keywordflow}{return} 0;
+36 \} \textcolor{comment}{/* vscale\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8_icgraph}
+\end{center}
+\end{figure}
+
+

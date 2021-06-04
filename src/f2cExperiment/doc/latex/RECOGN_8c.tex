@@ -1,0 +1,1902 @@
+\hypertarget{RECOGN_8c}{}\section{R\+E\+C\+O\+G\+N.\+c File Reference}
+\label{RECOGN_8c}\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+E\+C\+O\+G\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{RECOGN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1}~\hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1}~\hyperlink{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}{srctbl\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{flags\+\_\+1}~\hyperlink{VCTPRD_8c_a1ffc2c06059b0ea96a284de96d88b6e4}{flags\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\+\_\+1}~\hyperlink{TSSMIL_8c_aaf4c7aeade4c408729a5b161b7cf665f}{tmp\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1}~\hyperlink{TSSMIL_8c_abc2557c634cfcded62395d4b4fa74866}{numptr\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a2041b70af6984fea1d4a7e344408993c}{sbscpt\+\_\+1}~\hyperlink{SUBCOD_8c_a106f16c178c43878c8ebb0236baa00ac}{sbscpt\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1}~\hyperlink{TSSMIL_8c_afbe97352b0a7b81f71ad1f9d9b682017}{il\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1}~\hyperlink{TSSMIL_8c_a90cb1ad7bdad1d33f36d4ff1d0975969}{modx\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1}~\hyperlink{VCTPRD_8c_a0e0d83f76604f0edc3754a1eff3a1f91}{macxx1\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{opmod\+\_\+1}~\hyperlink{TWOARG_8c_aa06fa10eaee06051b520e98892ffb105}{opmod\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_acbe9fb91999009613a2fe3b01509dcae}{sublst\+\_\+1}~\hyperlink{TSSMIL_8c_a0d9407ee7e0ee1d198641f99beb798ea}{sublst\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}{canstr\+\_\+1}~\hyperlink{SSV3_8c_a4ac10070c961e87c7f5004aa29dce6b8}{canstr\+\_\+}
+\item 
+\#define \hyperlink{RECOGN_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 2)
+\item 
+\#define \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 60)
+\item 
+\#define \hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1})
+\item 
+\#define \hyperlink{RECOGN_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 4)
+\item 
+\#define \hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\+\_\+\+\_\+}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 20)
+\item 
+\#define \hyperlink{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1} + 2)
+\item 
+\#define \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 30)
+\item 
+\#define \hyperlink{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}{five}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 7)
+\item 
+\#define \hyperlink{RECOGN_8c_a80e4f7e9bf963c8bf4982cee5bf830bb}{repl}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 16)
+\item 
+\#define \hyperlink{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{temp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 32)
+\item 
+\#define \hyperlink{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}{move}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 18)
+\item 
+\#define \hyperlink{RECOGN_8c_ae88501af11d627bf97daf24bfefa9461}{four}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 6)
+\item 
+\#define \hyperlink{RECOGN_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1})
+\item 
+\#define \hyperlink{RECOGN_8c_a62d748d5186f81531f7f1fb70a262c51}{range}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a2041b70af6984fea1d4a7e344408993c}{sbscpt\+\_\+1} + 1)
+\item 
+\#define \hyperlink{RECOGN_8c_a68d3ba380c16e286247bb69367760615}{canon}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 82)
+\item 
+\#define \hyperlink{RECOGN_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 68)
+\item 
+\#define \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 3)
+\item 
+\#define \hyperlink{RECOGN_8c_a07e800919e864a03d92799035517e67e}{three}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 5)
+\item 
+\#define \hyperlink{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}{slash}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 8)
+\item 
+\#define \hyperlink{RECOGN_8c_a7bff2da864fb642dcbfa06bc2ac74fa7}{point}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 18)
+\item 
+\#define \hyperlink{RECOGN_8c_a2ee879c34978a91e67394afea5cfeb53}{rngpt}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a2041b70af6984fea1d4a7e344408993c}{sbscpt\+\_\+1})
+\item 
+\#define \hyperlink{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}{canchk}~((integer $\ast$)\&\hyperlink{SSV3_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}{canstr\+\_\+1} + 1)
+\item 
+\#define \hyperlink{RECOGN_8c_a0136accb06d55e87607bd4c0cd17505e}{biggeo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 86)
+\item 
+\#define \hyperlink{RECOGN_8c_a7681e25b15d55498b9511ec96c8417f2}{conbig}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 84)
+\item 
+\#define \hyperlink{RECOGN_8c_aabee3b4a59c9aa6e62ac7cef57dc1fc4}{refflg}~((logical $\ast$)\&\hyperlink{VCTPRD_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{flags\+\_\+1} + 3)
+\item 
+\#define \hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1} + 1)
+\item 
+\#define \hyperlink{RECOGN_8c_a45ad543e116354f8e60c2235b97d0b8c}{congeo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 76)
+\item 
+\#define \hyperlink{RECOGN_8c_a8bd5562ec1da70ad6f7fbaa150f7dc9e}{intmed}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{macxx1\+\_\+1} + 21)
+\item 
+\#define \hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}~((integer $\ast$)\&\hyperlink{SSV3_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}{canstr\+\_\+1} + 2)
+\item 
+\#define \hyperlink{RECOGN_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 201)
+\item 
+\#define \hyperlink{RECOGN_8c_ae157b988f5222e270f494b81959e9bfc}{argtop}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 1)
+\item 
+\#define \hyperlink{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}{rldsrf}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 11)
+\item 
+\#define \hyperlink{RECOGN_8c_addea613f8b9f62e62e672dd4ddc95ca4}{conpro}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 78)
+\item 
+\#define \hyperlink{RECOGN_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{opmod\+\_\+1} + 5)
+\item 
+\#define \hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\item 
+\#define \hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr}~((integer $\ast$)\&\hyperlink{SSV3_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}{canstr\+\_\+1})
+\item 
+\#define \hyperlink{RECOGN_8c_a8e639ac2483fa40b33479fe744f2a1b9}{trpdlr}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{opmod\+\_\+1} + 3)
+\item 
+\#define \hyperlink{RECOGN_8c_a6c3fa8a41e42716cea6156e1e911d487}{aptxxx}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_acbe9fb91999009613a2fe3b01509dcae}{sublst\+\_\+1})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RECOGN_8c_af61d9b0242096845ca1b3a76e8dba72c}{recogn\+\_\+} (integer $\ast$\hyperlink{SSV3_8c_a6eafbdd3f6baaaa16ad8f018d5f57256}{i\+\_\+\+\_\+}, integer $\ast$iasnrt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{RECOGN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{RECOGN_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{RECOGN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{RECOGN_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{RECOGN_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{RECOGN_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{RECOGN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{RECOGN_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{RECOGN_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{RECOGN_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{RECOGN_8c_ab9e0e7b9a93dbeac8c175a6313707146}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{RECOGN_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{RECOGN_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{RECOGN_8c_ab8c33635dfa59fa29fba868d54ed9d6a}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_ada93478ed3a7b6732d0c4af5a026499f}{stklst} \mbox{[}300\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a55293a2af9e8d35cc138b60828cecd42}{stklst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a3eba4c250f830ba3541ea47199c0413e}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a38885177dc5a2cd93e037c3eba1ca855}{srctbl} \mbox{[}502\mbox{]}\\
+\} \hyperlink{RECOGN_8c_aa3c5c6a8780e1cf45b75c96a3c87ee8a}{srctbl\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}{flags} \mbox{[}4\mbox{]}\\
+\} \hyperlink{RECOGN_8c_adba137ba250817f50b02660aca1d2271}{flags\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a657fa5a9b5a6ae364c3fa30985067c38}{txxxx} \mbox{[}64\mbox{]}\\
+\} \hyperlink{RECOGN_8c_ad30c2fc4b3cd297e1a80cee98c14fa24}{tmp\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_af6c7c8757673aa092837c252bf431adf}{numptr} \mbox{[}12\mbox{]}\\
+\} \hyperlink{RECOGN_8c_aaccc2dd89748b9b9b1d51fc3e8b07a77}{numptr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_ad43a066c4f6a869dadf86e565a80bbee}{sbscpt} \mbox{[}101\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a6c172c9994087dd61b89eb8f3bde52eb}{sbscpt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a5524c41368cc6530a9c6a9ccab6163db}{il} \mbox{[}21\mbox{]}\\
+\} \hyperlink{RECOGN_8c_aa899a2a492558361addb373a428cb3bd}{il\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_abd1eef3c1b001e65bada11247921ce11}{modx} \mbox{[}32\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a5160e451245a355e830b4bde1f4ea2e3}{modx\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a62736b21eda0cd16ae1b6bef6723680a}{macxx1} \mbox{[}71\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a4dd58368ae4ac581c193830b9b48be6d}{macxx1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_aa04120ffc54a13b636597a71b87fedd2}{opmod} \mbox{[}6\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a2e67ada8489633b3b2f0a930a40472c1}{opmod\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_ab607b14b01bf08fe56a3d23c8784386a}{sublst} \mbox{[}136\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a80b44ea22313ddfe82a1b6bc65404afb}{sublst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a1e4ebd42bd0dc2384c580865c2d1a9b3}{moduli\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RECOGN_8c_a3aa33d9a1bac4535c011a6eaf3996ef1}{canstr} \mbox{[}18\mbox{]}\\
+\} \hyperlink{RECOGN_8c_a5300d0ae980ae29284fcc652a97faf48}{canstr\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{RECOGN_8c_a971d71910d48259ece8acc1aac27c6d3}{c\+\_\+\+\_\+19} = 19
+\item 
+static integer \hyperlink{RECOGN_8c_a23dace354fecb282846c43adea071fa7}{c\+\_\+\+\_\+1024} = 1024
+\item 
+static integer \hyperlink{RECOGN_8c_a85dfc71d4394ee59fd1d42a26ee0ba32}{c\+\_\+\+\_\+2032} = 2032
+\item 
+static integer \hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{RECOGN_8c_ad5c5ef09ecbcc6eaf2d4d10ec5ba4237}{c\+\_\+\+\_\+2013} = 2013
+\item 
+static integer \hyperlink{RECOGN_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\+\_\+\+\_\+4} = 4
+\item 
+static integer \hyperlink{RECOGN_8c_a6db99092dfdecc03ad34892157cee886}{c\+\_\+\+\_\+1001} = 1001
+\item 
+static integer \hyperlink{RECOGN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{RECOGN_8c_a922310c606ec69d2bb2be81db7a756ee}{c\+\_\+\+\_\+50} = 50
+\item 
+static integer \hyperlink{RECOGN_8c_a447a2d27be811a2df1252caaa8f5cb58}{c\+\_\+\+\_\+18} = 18
+\item 
+static integer \hyperlink{RECOGN_8c_a7023746715aa8808c6226c81131400ba}{c\+\_\+\+\_\+1050} = 1050
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!aptxxx@{aptxxx}}
+\index{aptxxx@{aptxxx}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{aptxxx}{aptxxx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aptxxx~((integer $\ast$)\&{\bf sublst\+\_\+1})}\hypertarget{RECOGN_8c_a6c3fa8a41e42716cea6156e1e911d487}{}\label{RECOGN_8c_a6c3fa8a41e42716cea6156e1e911d487}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!argstk@{argstk}}
+\index{argstk@{argstk}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{argstk}{argstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argstk~((integer $\ast$)\&{\bf stklst\+\_\+1} + 201)}\hypertarget{RECOGN_8c_ad6c61c6f71063a50b22ae5a47d036a13}{}\label{RECOGN_8c_ad6c61c6f71063a50b22ae5a47d036a13}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!argtop@{argtop}}
+\index{argtop@{argtop}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{argtop}{argtop}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argtop~((integer $\ast$)\&{\bf stklst\+\_\+1} + 1)}\hypertarget{RECOGN_8c_ae157b988f5222e270f494b81959e9bfc}{}\label{RECOGN_8c_ae157b988f5222e270f494b81959e9bfc}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!biggeo@{biggeo}}
+\index{biggeo@{biggeo}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{biggeo}{biggeo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define biggeo~((integer $\ast$)\&{\bf code\+\_\+1} + 86)}\hypertarget{RECOGN_8c_a0136accb06d55e87607bd4c0cd17505e}{}\label{RECOGN_8c_a0136accb06d55e87607bd4c0cd17505e}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canchk@{canchk}}
+\index{canchk@{canchk}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canchk}{canchk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canchk~((integer $\ast$)\&{\bf canstr\+\_\+1} + 1)}\hypertarget{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}{}\label{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canon@{canon}}
+\index{canon@{canon}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((integer $\ast$)\&{\bf code\+\_\+1} + 82)}\hypertarget{RECOGN_8c_a68d3ba380c16e286247bb69367760615}{}\label{RECOGN_8c_a68d3ba380c16e286247bb69367760615}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canptr@{canptr}}
+\index{canptr@{canptr}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canptr}{canptr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canptr~((integer $\ast$)\&{\bf canstr\+\_\+1})}\hypertarget{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{}\label{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canstk@{canstk}}
+\index{canstk@{canstk}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canstk}{canstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canstk~((integer $\ast$)\&{\bf canstr\+\_\+1} + 2)}\hypertarget{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{}\label{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canstr\+\_\+1@{canstr\+\_\+1}}
+\index{canstr\+\_\+1@{canstr\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canstr\+\_\+1}{canstr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canstr\+\_\+1~{\bf canstr\+\_\+}}\hypertarget{RECOGN_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}{}\label{RECOGN_8c_aa0f967b86f0b84c54dfaa47098bc7dd9}
+
+
+Definition at line 112 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{RECOGN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{RECOGN_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{RECOGN_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{RECOGN_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 40 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!conbig@{conbig}}
+\index{conbig@{conbig}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{conbig}{conbig}}]{\setlength{\rightskip}{0pt plus 5cm}\#define conbig~((integer $\ast$)\&{\bf code\+\_\+1} + 84)}\hypertarget{RECOGN_8c_a7681e25b15d55498b9511ec96c8417f2}{}\label{RECOGN_8c_a7681e25b15d55498b9511ec96c8417f2}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!congeo@{congeo}}
+\index{congeo@{congeo}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{congeo}{congeo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define congeo~((integer $\ast$)\&{\bf code\+\_\+1} + 76)}\hypertarget{RECOGN_8c_a45ad543e116354f8e60c2235b97d0b8c}{}\label{RECOGN_8c_a45ad543e116354f8e60c2235b97d0b8c}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!conpro@{conpro}}
+\index{conpro@{conpro}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{conpro}{conpro}}]{\setlength{\rightskip}{0pt plus 5cm}\#define conpro~((integer $\ast$)\&{\bf code\+\_\+1} + 78)}\hypertarget{RECOGN_8c_addea613f8b9f62e62e672dd4ddc95ca4}{}\label{RECOGN_8c_addea613f8b9f62e62e672dd4ddc95ca4}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!five@{five}}
+\index{five@{five}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{five}{five}}]{\setlength{\rightskip}{0pt plus 5cm}\#define five~((integer $\ast$)\&{\bf numptr\+\_\+1} + 7)}\hypertarget{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}{}\label{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!flags\+\_\+1@{flags\+\_\+1}}
+\index{flags\+\_\+1@{flags\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{flags\+\_\+1}{flags_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define flags\+\_\+1~{\bf flags\+\_\+}}\hypertarget{RECOGN_8c_ab9c16f9ce00e07b1bd55590608dad1aa}{}\label{RECOGN_8c_ab9c16f9ce00e07b1bd55590608dad1aa}
+
+
+Definition at line 52 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!four@{four}}
+\index{four@{four}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{four}{four}}]{\setlength{\rightskip}{0pt plus 5cm}\#define four~((integer $\ast$)\&{\bf numptr\+\_\+1} + 6)}\hypertarget{RECOGN_8c_ae88501af11d627bf97daf24bfefa9461}{}\label{RECOGN_8c_ae88501af11d627bf97daf24bfefa9461}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!geom@{geom}}
+\index{geom@{geom}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{geom}{geom}}]{\setlength{\rightskip}{0pt plus 5cm}\#define geom~((integer $\ast$)\&{\bf code\+\_\+1} + 30)}\hypertarget{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{}\label{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!ident@{ident}}
+\index{ident@{ident}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{ident}{ident}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ident~((integer $\ast$)\&{\bf code\+\_\+1} + 68)}\hypertarget{RECOGN_8c_a5d2f1cb80879c49ab774b8e180397ae0}{}\label{RECOGN_8c_a5d2f1cb80879c49ab774b8e180397ae0}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!il\+\_\+1@{il\+\_\+1}}
+\index{il\+\_\+1@{il\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+1}{il_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define il\+\_\+1~{\bf il\+\_\+}}\hypertarget{RECOGN_8c_abcc19ac3deb5a72995081498826879ac}{}\label{RECOGN_8c_abcc19ac3deb5a72995081498826879ac}
+
+
+Definition at line 76 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!intmed@{intmed}}
+\index{intmed@{intmed}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{intmed}{intmed}}]{\setlength{\rightskip}{0pt plus 5cm}\#define intmed~((integer $\ast$)\&{\bf macxx1\+\_\+1} + 21)}\hypertarget{RECOGN_8c_a8bd5562ec1da70ad6f7fbaa150f7dc9e}{}\label{RECOGN_8c_a8bd5562ec1da70ad6f7fbaa150f7dc9e}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!macxx1\+\_\+1@{macxx1\+\_\+1}}
+\index{macxx1\+\_\+1@{macxx1\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+1}{macxx1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define macxx1\+\_\+1~{\bf macxx1\+\_\+}}\hypertarget{RECOGN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}{}\label{RECOGN_8c_a0ec105cf88fc59f5e6e839cc0756c06d}
+
+
+Definition at line 88 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!meta@{meta}}
+\index{meta@{meta}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{meta}{meta}}]{\setlength{\rightskip}{0pt plus 5cm}\#define meta~((integer $\ast$)\&{\bf srctbl\+\_\+1} + 2)}\hypertarget{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{}\label{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!modhlf@{modhlf}}
+\index{modhlf@{modhlf}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{modhlf}{modhlf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modhlf~((integer $\ast$)\&{\bf moduli\+\_\+1} + 1)}\hypertarget{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{}\label{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{RECOGN_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{RECOGN_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 106 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!modx\+\_\+1@{modx\+\_\+1}}
+\index{modx\+\_\+1@{modx\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+1}{modx_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modx\+\_\+1~{\bf modx\+\_\+}}\hypertarget{RECOGN_8c_a0827be493b63e8b953d7efdff31266fe}{}\label{RECOGN_8c_a0827be493b63e8b953d7efdff31266fe}
+
+
+Definition at line 82 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!move@{move}}
+\index{move@{move}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{move}{move}}]{\setlength{\rightskip}{0pt plus 5cm}\#define move~((integer $\ast$)\&{\bf il\+\_\+1} + 18)}\hypertarget{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}{}\label{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!numptr\+\_\+1@{numptr\+\_\+1}}
+\index{numptr\+\_\+1@{numptr\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{numptr\+\_\+1}{numptr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numptr\+\_\+1~{\bf numptr\+\_\+}}\hypertarget{RECOGN_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{}\label{RECOGN_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}
+
+
+Definition at line 64 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!one@{one}}
+\index{one@{one}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{one}{one}}]{\setlength{\rightskip}{0pt plus 5cm}\#define one~((integer $\ast$)\&{\bf numptr\+\_\+1} + 2)}\hypertarget{RECOGN_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{}\label{RECOGN_8c_a7cf126dbeb6f30c606e3b42fea65cfef}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!opmod\+\_\+1@{opmod\+\_\+1}}
+\index{opmod\+\_\+1@{opmod\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{opmod\+\_\+1}{opmod_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define opmod\+\_\+1~{\bf opmod\+\_\+}}\hypertarget{RECOGN_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{}\label{RECOGN_8c_a66e60fa6f09eca77f1c4880e30adbcc9}
+
+
+Definition at line 94 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!point@{point}}
+\index{point@{point}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{point}{point}}]{\setlength{\rightskip}{0pt plus 5cm}\#define point~((integer $\ast$)\&{\bf modx\+\_\+1} + 18)}\hypertarget{RECOGN_8c_a7bff2da864fb642dcbfa06bc2ac74fa7}{}\label{RECOGN_8c_a7bff2da864fb642dcbfa06bc2ac74fa7}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!quidlr@{quidlr}}
+\index{quidlr@{quidlr}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{quidlr}{quidlr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quidlr~((integer $\ast$)\&{\bf opmod\+\_\+1} + 5)}\hypertarget{RECOGN_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{}\label{RECOGN_8c_a3cdc8a0d13c3091f7a97d984e10dca55}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!range@{range}}
+\index{range@{range}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{range}{range}}]{\setlength{\rightskip}{0pt plus 5cm}\#define range~((integer $\ast$)\&{\bf sbscpt\+\_\+1} + 1)}\hypertarget{RECOGN_8c_a62d748d5186f81531f7f1fb70a262c51}{}\label{RECOGN_8c_a62d748d5186f81531f7f1fb70a262c51}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!real\+\_\+\+\_\+@{real\+\_\+\+\_\+}}
+\index{real\+\_\+\+\_\+@{real\+\_\+\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{real\+\_\+\+\_\+}{real__}}]{\setlength{\rightskip}{0pt plus 5cm}\#define real\+\_\+\+\_\+~((integer $\ast$)\&{\bf modx\+\_\+1} + 20)}\hypertarget{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{}\label{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!refflg@{refflg}}
+\index{refflg@{refflg}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{refflg}{refflg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define refflg~((logical $\ast$)\&{\bf flags\+\_\+1} + 3)}\hypertarget{RECOGN_8c_aabee3b4a59c9aa6e62ac7cef57dc1fc4}{}\label{RECOGN_8c_aabee3b4a59c9aa6e62ac7cef57dc1fc4}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!repl@{repl}}
+\index{repl@{repl}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{repl}{repl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define repl~((integer $\ast$)\&{\bf il\+\_\+1} + 16)}\hypertarget{RECOGN_8c_a80e4f7e9bf963c8bf4982cee5bf830bb}{}\label{RECOGN_8c_a80e4f7e9bf963c8bf4982cee5bf830bb}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!rldsrf@{rldsrf}}
+\index{rldsrf@{rldsrf}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{rldsrf}{rldsrf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rldsrf~((integer $\ast$)\&{\bf modx\+\_\+1} + 11)}\hypertarget{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}{}\label{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!rngpt@{rngpt}}
+\index{rngpt@{rngpt}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{rngpt}{rngpt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rngpt~((integer $\ast$)\&{\bf sbscpt\+\_\+1})}\hypertarget{RECOGN_8c_a2ee879c34978a91e67394afea5cfeb53}{}\label{RECOGN_8c_a2ee879c34978a91e67394afea5cfeb53}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sbscpt\+\_\+1@{sbscpt\+\_\+1}}
+\index{sbscpt\+\_\+1@{sbscpt\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sbscpt\+\_\+1}{sbscpt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbscpt\+\_\+1~{\bf sbscpt\+\_\+}}\hypertarget{RECOGN_8c_a2041b70af6984fea1d4a7e344408993c}{}\label{RECOGN_8c_a2041b70af6984fea1d4a7e344408993c}
+
+
+Definition at line 70 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!slash@{slash}}
+\index{slash@{slash}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{slash}{slash}}]{\setlength{\rightskip}{0pt plus 5cm}\#define slash~((integer $\ast$)\&{\bf code\+\_\+1} + 8)}\hypertarget{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}{}\label{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!srctbl\+\_\+1@{srctbl\+\_\+1}}
+\index{srctbl\+\_\+1@{srctbl\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+1}{srctbl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define srctbl\+\_\+1~{\bf srctbl\+\_\+}}\hypertarget{RECOGN_8c_af63f2d13d75dda2af60a5620a33b05c2}{}\label{RECOGN_8c_af63f2d13d75dda2af60a5620a33b05c2}
+
+
+Definition at line 46 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!stack@{stack}}
+\index{stack@{stack}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{stack}{stack}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stack~((integer $\ast$)\&{\bf stklst\+\_\+1} + 3)}\hypertarget{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{}\label{RECOGN_8c_ab151537536988a2190d2cac79f964c52}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!stklst\+\_\+1@{stklst\+\_\+1}}
+\index{stklst\+\_\+1@{stklst\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+1}{stklst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stklst\+\_\+1~{\bf stklst\+\_\+}}\hypertarget{RECOGN_8c_a3341ad96672b1b8b33fe8a6a195faad0}{}\label{RECOGN_8c_a3341ad96672b1b8b33fe8a6a195faad0}
+
+
+Definition at line 34 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sublst\+\_\+1@{sublst\+\_\+1}}
+\index{sublst\+\_\+1@{sublst\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sublst\+\_\+1}{sublst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sublst\+\_\+1~{\bf sublst\+\_\+}}\hypertarget{RECOGN_8c_acbe9fb91999009613a2fe3b01509dcae}{}\label{RECOGN_8c_acbe9fb91999009613a2fe3b01509dcae}
+
+
+Definition at line 100 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!temp@{temp}}
+\index{temp@{temp}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define temp~((integer $\ast$)\&{\bf code\+\_\+1} + 32)}\hypertarget{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{}\label{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!three@{three}}
+\index{three@{three}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{three}{three}}]{\setlength{\rightskip}{0pt plus 5cm}\#define three~((integer $\ast$)\&{\bf numptr\+\_\+1} + 5)}\hypertarget{RECOGN_8c_a07e800919e864a03d92799035517e67e}{}\label{RECOGN_8c_a07e800919e864a03d92799035517e67e}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!tmp\+\_\+1@{tmp\+\_\+1}}
+\index{tmp\+\_\+1@{tmp\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{tmp\+\_\+1}{tmp_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tmp\+\_\+1~{\bf tmp\+\_\+}}\hypertarget{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{}\label{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}
+
+
+Definition at line 58 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!top@{top}}
+\index{top@{top}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{top}{top}}]{\setlength{\rightskip}{0pt plus 5cm}\#define top~((integer $\ast$)\&{\bf stklst\+\_\+1})}\hypertarget{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{}\label{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!trpdlr@{trpdlr}}
+\index{trpdlr@{trpdlr}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{trpdlr}{trpdlr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define trpdlr~((integer $\ast$)\&{\bf opmod\+\_\+1} + 3)}\hypertarget{RECOGN_8c_a8e639ac2483fa40b33479fe744f2a1b9}{}\label{RECOGN_8c_a8e639ac2483fa40b33479fe744f2a1b9}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!two@{two}}
+\index{two@{two}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{two}{two}}]{\setlength{\rightskip}{0pt plus 5cm}\#define two~((integer $\ast$)\&{\bf numptr\+\_\+1} + 4)}\hypertarget{RECOGN_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{}\label{RECOGN_8c_a282f45bc7cdc923f2937b85bbd8d3c10}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!vbl@{vbl}}
+\index{vbl@{vbl}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{vbl}{vbl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vbl~((integer $\ast$)\&{\bf code\+\_\+1} + 60)}\hypertarget{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{}\label{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!zero@{zero}}
+\index{zero@{zero}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{zero}{zero}}]{\setlength{\rightskip}{0pt plus 5cm}\#define zero~((integer $\ast$)\&{\bf numptr\+\_\+1})}\hypertarget{RECOGN_8c_a361b1d0588e13a7b5994f24b40138ec0}{}\label{RECOGN_8c_a361b1d0588e13a7b5994f24b40138ec0}
+
+
+Referenced by recogn\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!recogn\+\_\+@{recogn\+\_\+}}
+\index{recogn\+\_\+@{recogn\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{recogn\+\_\+(integer $\ast$i\+\_\+\+\_\+, integer $\ast$iasnrt)}{recogn_(integer *i__, integer *iasnrt)}}]{\setlength{\rightskip}{0pt plus 5cm}int recogn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{i\+\_\+\+\_\+, }
+\item[{integer $\ast$}]{iasnrt}
+\end{DoxyParamCaption}
+)}\hypertarget{RECOGN_8c_af61d9b0242096845ca1b3a76e8dba72c}{}\label{RECOGN_8c_af61d9b0242096845ca1b3a76e8dba72c}
+
+
+Definition at line 154 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+References alarm\+\_\+(), aptxxx, argcvt\+\_\+(), argstk, argtop, biggeo, c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+1001, c\+\_\+\+\_\+1024, c\+\_\+\+\_\+1050, c\+\_\+\+\_\+18, c\+\_\+\+\_\+19, c\+\_\+\+\_\+2013, c\+\_\+\+\_\+2032, c\+\_\+\+\_\+4, c\+\_\+\+\_\+50, c\+\_\+\+\_\+8, callzz\+\_\+(), canchk, canflg, canon, canptr, canstk, conbig, congeo, conpro, five, four, geom, gettmp\+\_\+(), ident, iftmp\+\_\+(), ii, index, intmed, ir, j, jj, k, l, maclbl\+\_\+(), meta, mode\+\_\+(), modhlf, modulo, move, n, name\+\_\+(), nametb\+\_\+1, one, onearg\+\_\+(), opcode\+\_\+(), point, puttmp\+\_\+(), quidlr, range, real\+\_\+\+\_\+, refflg, refgen\+\_\+(), repl, resrvz\+\_\+(), rldsrf, rlslin\+\_\+(), rngpt, setmod\+\_\+(), slash, stack, temp, three, tmp\+\_\+1, top, tp, trpdlr, two, twoarg\+\_\+(), vbl, and zero.
+
+
+
+Referenced by recog\+\_\+().
+
+
+\begin{DoxyCode}
+155 \{
+156     \textcolor{comment}{/* Initialized data */}
+157 
+158     \textcolor{keyword}{static} logical \hyperlink{APT001_8c_a6e444b9edc732d6c210c21ce34bd2b25}{canflg} = FALSE\_;
+159     \textcolor{keyword}{static} integer stmtyp = 0;
+160     \textcolor{keyword}{static} integer candat = 0;
+161     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ppoint[6] = \textcolor{stringliteral}{"POINT "};
+162 
+163     \textcolor{comment}{/* System generated locals */}
+164     integer i\_\_1, i\_\_2;
+165 
+166     \textcolor{comment}{/* Local variables */}
+167     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}, n5, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}, kk, \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, \hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}, iii, kkk;
+168 \textcolor{preprocessor}{#define one ((integer *)&numptr\_1 + 2)}
+169 \textcolor{preprocessor}{#define vbl ((integer *)&code\_1 + 60)}
+170 \textcolor{preprocessor}{#define top ((integer *)&stklst\_1)}
+171 \textcolor{preprocessor}{#define two ((integer *)&numptr\_1 + 4)}
+172     \textcolor{keyword}{extern} integer \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{keywordtype}{char} *, ftnlen);
+173     \textcolor{keyword}{static} integer modc;
+174 \textcolor{preprocessor}{#define real\_\_ ((integer *)&modx\_1 + 20)}
+175     \textcolor{keyword}{extern} integer \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(integer *);
+176     \textcolor{keyword}{static} integer iref;
+177 \textcolor{preprocessor}{#define meta ((integer *)&srctbl\_1 + 2)}
+178 \textcolor{preprocessor}{#define geom ((integer *)&code\_1 + 30)}
+179 \textcolor{preprocessor}{#define five ((integer *)&numptr\_1 + 7)}
+180 \textcolor{preprocessor}{#define repl ((integer *)&il\_1 + 16)}
+181 \textcolor{preprocessor}{#define temp ((integer *)&code\_1 + 32)}
+182 \textcolor{preprocessor}{#define move ((integer *)&il\_1 + 18)}
+183 \textcolor{preprocessor}{#define four ((integer *)&numptr\_1 + 6)}
+184 \textcolor{preprocessor}{#define zero ((integer *)&numptr\_1)}
+185     \textcolor{keyword}{static} integer canch;
+186 \textcolor{preprocessor}{#define range ((integer *)&sbscpt\_1 + 1)}
+187 \textcolor{preprocessor}{#define canon ((integer *)&code\_1 + 82)}
+188     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+189         , ftnlen);
+190 \textcolor{preprocessor}{#define ident ((integer *)&code\_1 + 68)}
+191 \textcolor{preprocessor}{#define stack ((integer *)&stklst\_1 + 3)}
+192 \textcolor{preprocessor}{#define three ((integer *)&numptr\_1 + 5)}
+193     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index};
+194 \textcolor{preprocessor}{#define slash ((integer *)&code\_1 + 8)}
+195     \textcolor{keyword}{extern} logical \hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(integer *);
+196 \textcolor{preprocessor}{#define point ((integer *)&modx\_1 + 18)}
+197 \textcolor{preprocessor}{#define rngpt ((integer *)&sbscpt\_1)}
+198 \textcolor{preprocessor}{#define canchk ((integer *)&canstr\_1 + 1)}
+199     \textcolor{keyword}{static} integer canend;
+200 \textcolor{preprocessor}{#define biggeo ((integer *)&code\_1 + 86)}
+201     \textcolor{keyword}{static} integer cannam;
+202     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{MACLBL_8c_a03ec9a6955dcadbedce6f850023a6a08}{maclbl\_}(integer *, integer *, integer *);
+203 \textcolor{preprocessor}{#define conbig ((integer *)&code\_1 + 84)}
+204 \textcolor{preprocessor}{#define refflg ((logical *)&flags\_1 + 3)}
+205     \textcolor{keyword}{static} integer canmax;
+206     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{REFGEN_8c_aeb817c591d1e91e37b71a9af9e5be697}{refgen\_}(integer *, integer *);
+207 \textcolor{preprocessor}{#define modhlf ((integer *)&moduli\_1 + 1)}
+208 \textcolor{preprocessor}{#define congeo ((integer *)&code\_1 + 76)}
+209     \textcolor{keyword}{static} integer canerr;
+210     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(integer *), \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(integer *);
+211 \textcolor{preprocessor}{#define intmed ((integer *)&macxx1\_1 + 21)}
+212 \textcolor{preprocessor}{#define canstk ((integer *)&canstr\_1 + 2)}
+213     \textcolor{keyword}{static} logical errflg;
+214 \textcolor{preprocessor}{#define argstk ((integer *)&stklst\_1 + 201)}
+215 \textcolor{preprocessor}{#define argtop ((integer *)&stklst\_1 + 1)}
+216 \textcolor{preprocessor}{#define rldsrf ((integer *)&modx\_1 + 11)}
+217 \textcolor{preprocessor}{#define conpro ((integer *)&code\_1 + 78)}
+218 \textcolor{preprocessor}{#define quidlr ((integer *)&opmod\_1 + 5)}
+219 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+220 \textcolor{preprocessor}{#define canptr ((integer *)&canstr\_1)}
+221 \textcolor{preprocessor}{#define trpdlr ((integer *)&opmod\_1 + 3)}
+222     \textcolor{keyword}{extern} integer \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(integer *);
+223     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SETMOD_8c_a87c32f5784df42b502a3b61657f4bf30}{setmod\_}(integer *, integer *);
+224     \textcolor{keyword}{static} integer refsav;
+225     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CALLZZ_8c_a22340ad3c429feec107b14a590802e21}{callzz\_}(integer *), \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(integer *), 
+226         \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(integer *, integer *), \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}(\textcolor{keywordtype}{void});
+227     \textcolor{keyword}{static} integer cantmp;
+228     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(integer *), \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(integer *, 
+229         integer *, integer *, integer *);
+230 \textcolor{preprocessor}{#define aptxxx ((integer *)&sublst\_1)}
+231 
+232 
+233 
+234 \textcolor{comment}{/*              FUNCTION DECLARATION */}
+235 
+236 
+237 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+238 
+239 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+240 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+241 \textcolor{comment}{/* NAMMAX:      NAMTBL INDEX OF END OF THE PART PROGRAM NAME SECTION */}
+242 
+243 \textcolor{comment}{/*        2.    STACK AND POINTER STORAGE */}
+244 
+245 
+246 
+247 
+248 
+249 
+250 
+251 \textcolor{comment}{/* TOP:         POINTER TO LAST STACK ENTRY */}
+252 \textcolor{comment}{/* ARGTOP:      POINTER TO LAST ARGSTK ENTRY */}
+253 \textcolor{comment}{/* STACK:       WORKING STACK */}
+254 \textcolor{comment}{/* ARGSTK:      ARGUMENT STACK */}
+255 
+256 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+257 
+258 \textcolor{comment}{/* SLASH:       (1)=CODE CLASS  5000,(2)=NAMTBL INDEX OF '/     ' */}
+259 \textcolor{comment}{/* GEOM:        (1)=CODE CLASS 16000,(2)=NAMTBL INDEX OF 'GEOM  ' */}
+260 \textcolor{comment}{/* TEMP:        (1)=CODE CLASS 17000,(2)=NAMTBL INDEX OF 'TEMP  ' */}
+261 \textcolor{comment}{/* VBL:         (1)=CODE CLASS 31000,(2)=NAMTBL INDEX OF 'VBL   ' */}
+262 \textcolor{comment}{/* IDENT:       (1)=CODE CLASS 35000,(2)=NAMTBL INDEX OF 'IDENT ' */}
+263 \textcolor{comment}{/* CONGEO:      (1)=CODE CLASS 39000,(2)=NAMTBL INDEX OF 'CONGEO' */}
+264 \textcolor{comment}{/* CONPRO:      (1)=CODE CLASS 40000,(2)=NAMTBL INDEX OF 'CONPRO' */}
+265 \textcolor{comment}{/* CONBIG:      (1)=CODE CLASS 43000,(2)=NAMTBL INDEX OF 'CONBIG' */}
+266 \textcolor{comment}{/* CANON:       (1)=CODE CLASS 42000,(2)=NAMTBL INDEX OF 'CANON ' */}
+267 \textcolor{comment}{/* BIGGEO:      (1)=CODE CLASS 44000,(2)=NAMTBL INDEX OF 'BIGGEO' */}
+268 
+269 \textcolor{comment}{/*        4.    PRODUCTION TABLE */}
+270 
+271 \textcolor{comment}{/* META:        CONTAINS INTERNAL BIT CODES FOR METALINGUISTIC CLASSES */}
+272 
+273 \textcolor{comment}{/*        5.    PROGRAM CONTROL FLAGS */}
+274 
+275 \textcolor{comment}{/* REFFLG:      TRUE WHEN A REFSYS COMMAND ENCOUNTERED */}
+276 
+277 \textcolor{comment}{/*        6.    GHOST STACK FOR OBJECT TIME TEMPORARY ALLOCATION */}
+278 \textcolor{comment}{/*              LENGTH AND CURRENT NUMBER OF ACTIVE TEMPORARY STORAGE */}
+279 
+280 \textcolor{comment}{/*        9.    NAME TABLE POINTERS TO NUMBERS */}
+281 
+282 \textcolor{comment}{/* ZERO:        NAMTBL POINTER TO '0     ' */}
+283 \textcolor{comment}{/* ONE:         NAMTBL POINTER TO '1     ' */}
+284 \textcolor{comment}{/* TWO:         NAMTBL POINTER TO '2     ' */}
+285 \textcolor{comment}{/* THREE:       NAMTBL POINTER TO '3     ' */}
+286 \textcolor{comment}{/* FOUR:        NAMTBL POINTER TO '4     ' */}
+287 \textcolor{comment}{/* FIVE:        NAMTBL POINTER TO '5     ' */}
+288 
+289 \textcolor{comment}{/*       15.    ARRAY LIMIT STORAGE */}
+290 
+291 \textcolor{comment}{/* RNGPT:       POINTER TO NEXT RANGE ENTRY */}
+292 \textcolor{comment}{/* RANGE:       STORAGE FOR APT RESERVE STATEMENT INFORMATION */}
+293 
+294 \textcolor{comment}{/*       16.    LITERALS FOR I. L. OPERATION CODES */}
+295 
+296 \textcolor{comment}{/* REPL:        CONTAINS COMMAND CODE (17) FOR REPL COMMAND */}
+297 \textcolor{comment}{/* MOVE:        CONTAINS COMMAND CODE (19) FOR MOVE COMMAND */}
+298 
+299 \textcolor{comment}{/*       17.    MODE CODES */}
+300 
+301 \textcolor{comment}{/* RLDSRF:      MODE CODE (12) FOR RULED SURFACE */}
+302 \textcolor{comment}{/* POINT:       MODE CODE (19) FOR POINT */}
+303 \textcolor{comment}{/* REAL:        MODE CODE (24) FOR A SCALAR */}
+304 
+305 \textcolor{comment}{/*       22.    MACRO PROCESSING VARIABLES */}
+306 
+307 \textcolor{comment}{/* INTMED:      0=NO -,-1=INTERMEDIATE-,+1=FINAL MACRO PROCESSING */}
+308 
+309 \textcolor{comment}{/*       27.    OPERAND MODIFIERS */}
+310 
+311 \textcolor{comment}{/* TRPDLR:      CONTAINS OPERAND TYPE CODE 3 */}
+312 \textcolor{comment}{/* QUIDLR:      CONTAINS OPERAND TYPE CODE 5 */}
+313 
+314 \textcolor{comment}{/*       28.    OPERAND MODIFIERS */}
+315 
+316 \textcolor{comment}{/* APTXXX:      NAMTBL POINTERS FOR XECUTION SUBROUTINE NAMES */}
+317 
+318 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+319 
+320 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+321 \textcolor{comment}{/* MODHLF:      NORMAL MODE CODE LIMIT 500 */}
+322 
+323 \textcolor{comment}{/*       42.    COMMON BLOCK FOR CANON AND OBTAIN ARGUMENT STORAGE */}
+324 
+325 \textcolor{comment}{/* CANPTR:      POINTER TO LAST CANSTK ENTRY */}
+326 \textcolor{comment}{/* CANCHK:      CONTAINS DIMENSION OF ARRAY CANSTK */}
+327 \textcolor{comment}{/* CANSTK:      ARGUMENT STACK FOR CANON AND OBTAIN STATEMENTS */}
+328 \textcolor{comment}{/* * */}
+329 \textcolor{comment}{/* ARGUMENTS    I       CURRENT PRODUCTION NUMBER */}
+330 \textcolor{comment}{/*              IASNRT  INTEGER USED BY RECOG TO BRANCH TO THE */}
+331 \textcolor{comment}{/*              APPROPRIATE CODING AFTER RETURN FROM RECOGN */}
+332 
+333 \textcolor{comment}{/* ** */}
+334     index = *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} - 40;
+335     \textcolor{keywordflow}{switch} (index) \{
+336     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L4100;
+337     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L4200;
+338     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L4300;
+339     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L4400;
+340     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L4500;
+341     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L4600;
+342     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L4700;
+343     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L4800;
+344     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L4900;
+345     \}
+346 
+347 \textcolor{comment}{/* ...  STORE NEXT ELEMENT */}
+348 
+349 L4100:
+350     n5 = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 2];
+351     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} != 0) \{
+352     \textcolor{keywordflow}{goto} L4150;
+353     \}
+354     j = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[n5 - 1] - \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}[0];
+355     \textcolor{keywordflow}{if} (j == *\hyperlink{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}{rldsrf}) \{
+356     \textcolor{keywordflow}{goto} L4110;
+357     \}
+358     j -= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+359     \textcolor{keywordflow}{if} (j != *\hyperlink{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}{rldsrf}) \{
+360     \textcolor{keywordflow}{goto} L4150;
+361     \}
+362 L4110:
+363     n5 = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(\hyperlink{RECOGN_8c_ac115b05324003f7407fee9d0a06aff06}{rldsrf});
+364     \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[n5 - 1] = \hyperlink{RECOGN_8c_a0136accb06d55e87607bd4c0cd17505e}{biggeo}[0] + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+365     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 2] = n5;
+366     j = \hyperlink{RECOGN_8c_a0136accb06d55e87607bd4c0cd17505e}{biggeo}[0] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+367     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 1] = \hyperlink{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[j - 1];
+368     \textcolor{keywordflow}{goto} L220;
+369 L4150:
+370     ++(*canptr);
+371     ++candat;
+372     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == 1) \{
+373     \textcolor{keywordflow}{goto} L4175;
+374     \}
+375 L4155:
+376     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} != canerr) \{
+377     \textcolor{keywordflow}{goto} L4156;
+378     \}
+379     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1;
+380     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&iii, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+381     \textcolor{keywordflow}{goto} L4403;
+382 L4156:
+383     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} <= *\hyperlink{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}{canchk}) \{
+384     \textcolor{keywordflow}{goto} L4160;
+385     \}
+386     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == canch) \{
+387     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1;
+388     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a971d71910d48259ece8acc1aac27c6d3}{c\_\_19}, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+389     \}
+390     \textcolor{keywordflow}{goto} L4170;
+391 L4160:
+392     j = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2];
+393     kk = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j);
+394     \textcolor{keywordflow}{if} (stmtyp != 3) \{
+395     \textcolor{keywordflow}{goto} L4161;
+396     \}
+397     \textcolor{keywordflow}{if} (j > \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+398     \textcolor{keywordflow}{goto} L4172;
+399     \}
+400     jj = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+401     \textcolor{keywordflow}{if} (jj != \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] && jj != \hyperlink{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0]) \{
+402     \textcolor{keywordflow}{goto} L4165;
+403     \}
+404 L4161:
+405     \textcolor{keywordflow}{if} (kk != *\hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_}) \{
+406     \textcolor{keywordflow}{goto} L4172;
+407     \}
+408 L4165:
+409     \hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2];
+410 L4170:
+411     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 2];
+412     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 1];
+413     *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} += -2;
+414     \textcolor{keywordflow}{goto} L220;
+415 L4172:
+416     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1;
+417     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&kkk, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+418     errflg = TRUE\_;
+419     \textcolor{keywordflow}{switch} (index) \{
+420     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L4165;
+421     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L4212;
+422     \}
+423 
+424 \textcolor{comment}{/* ...  STORE NEGATIVE MODIFIER */}
+425 
+426 L4200:
+427     ++(*canptr);
+428     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == 1) \{
+429     \textcolor{keywordflow}{goto} L4175;
+430     \}
+431 L4205:
+432     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} != canmax) \{
+433     \textcolor{keywordflow}{goto} L4206;
+434     \}
+435 L4207:
+436     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&iii, \hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+437     \textcolor{keywordflow}{goto} L4403;
+438 L4206:
+439     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} <= *\hyperlink{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}{canchk}) \{
+440     \textcolor{keywordflow}{goto} L4210;
+441     \}
+442     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == canch) \{
+443     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a971d71910d48259ece8acc1aac27c6d3}{c\_\_19}, \hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+444     \}
+445     \textcolor{keywordflow}{goto} L4220;
+446 L4210:
+447     \textcolor{keywordflow}{if} (stmtyp == 1) \{
+448     \textcolor{keywordflow}{goto} L4230;
+449     \}
+450 L4212:
+451     \hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} - 1] = -(*canptr);
+452 L4220:
+453     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 2];
+454     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 1];
+455     --(*top);
+456     \textcolor{keywordflow}{goto} L220;
+457 L4230:
+458     iii = 1008;
+459     \textcolor{keywordflow}{goto} L4207;
+460 
+461 L4175:
+462     tp = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 6 + \hyperlink{APT331_8c_a8227c495a4fdf3385a170810f90c2b78}{index};
+463     errflg = FALSE\_;
+464     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(tp + 1 << 1) - 2] == \hyperlink{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}{slash}[1]) \{
+465     \textcolor{keywordflow}{goto} L4180;
+466     \}
+467     tp += -2;
+468     stmtyp = 2;
+469     \textcolor{keywordflow}{goto} L4185;
+470 L4180:
+471     stmtyp = 3;
+472     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[\hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(tp + 2 << 1) - 2] - 1] == \hyperlink{RECOGN_8c_a68d3ba380c16e286247bb69367760615}{canon}[0]) \{
+473     stmtyp = 1;
+474     \}
+475 L4185:
+476     modc = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[\hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(tp << 1) - 2] - 1] % *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+477     canmax = \hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(modc << 1) - 2];
+478     canerr = canmax + 1;
+479     canch = *\hyperlink{RECOGN_8c_a0158cdafb0cc2ea93063a284788697cf}{canchk} + 1;
+480     iii = 2032;
+481     kkk = 2033;
+482     \textcolor{keywordflow}{if} (stmtyp != 3) \{
+483     \textcolor{keywordflow}{goto} L4190;
+484     \}
+485     iii = 1035;
+486     kkk = 2051;
+487 L4190:
+488     \textcolor{keywordflow}{switch} (index) \{
+489     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L4155;
+490     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L4205;
+491     \}
+492 
+493 \textcolor{comment}{/* ...  REMOVE VARIABLE NAME FROM CANON DEFINITION */}
+494 
+495 L4300:
+496     cannam = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2];
+497     j = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 2];
+498     jj = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&cannam);
+499     modc = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] % *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+500     \textcolor{keywordflow}{if} (jj == modc) \{
+501     \textcolor{keywordflow}{goto} L4301;
+502     \}
+503     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3;
+504     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a23dace354fecb282846c43adea071fa7}{c\_\_1024}, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+505     \textcolor{keywordflow}{goto} L4403;
+506 L4301:
+507     canflg = TRUE\_;
+508     canmax = \hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(modc << 1) - 2];
+509     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 2];
+510     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 1 << 1) - 1];
+511     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 2];
+512     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 2 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} << 1) - 1];
+513     *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} += -2;
+514     \textcolor{keywordflow}{goto} L220;
+515 
+516 \textcolor{comment}{/* ...  END OF CANON DEFINITION STATEMENT */}
+517 
+518 L4400:
+519     canend = 1;
+520 L4401:
+521     \textcolor{keywordflow}{if} (errflg) \{
+522     \textcolor{keywordflow}{goto} L4403;
+523     \}
+524     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} > 0) \{
+525     \textcolor{keywordflow}{goto} L4415;
+526     \}
+527     \textcolor{keywordflow}{if} (stmtyp == 2 || candat == canmax) \{
+528     \textcolor{keywordflow}{goto} L4411;
+529     \}
+530     \textcolor{keywordflow}{if} (candat == 0) \{
+531     \textcolor{keywordflow}{goto} L4416;
+532     \}
+533 \textcolor{comment}{/* L4402: */}
+534     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a85dfc71d4394ee59fd1d42a26ee0ba32}{c\_\_2032}, &\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+535     \textcolor{keywordflow}{goto} L4403;
+536 L4415:
+537     i\_\_1 = -(*argtop);
+538     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_ad5c5ef09ecbcc6eaf2d4d10ec5ba4237}{c\_\_2013}, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+539     \textcolor{keywordflow}{goto} L4403;
+540 L4416:
+541     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a85dfc71d4394ee59fd1d42a26ee0ba32}{c\_\_2032}, &\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{RECOGN_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+542 L4411:
+543     j = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 2];
+544     jj = *modulo * (\hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo});
+545     k = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 3 << 1) - 2];
+546     kk = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] - \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}[0];
+547     \textcolor{keywordflow}{if} (kk >= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}) \{
+548     kk -= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+549     \}
+550 L4420:
+551     \textcolor{keywordflow}{if} (jj != \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] && jj != \hyperlink{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0]) \{
+552     \textcolor{keywordflow}{goto} L4425;
+553     \}
+554     \textcolor{keywordflow}{if} (\hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j) == kk) \{
+555     \textcolor{keywordflow}{goto} L4404;
+556     \}
+557     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5;
+558     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a6db99092dfdecc03ad34892157cee886}{c\_\_1001}, &i\_\_1, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+559 L4403:
+560     canflg = FALSE\_;
+561     \textcolor{keywordflow}{goto} L600;
+562 
+563 L4425:
+564     \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(&j, &kk, &canmax, &\hyperlink{RECOGN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+565     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5;
+566     \hyperlink{SETMOD_8c_a87c32f5784df42b502a3b61657f4bf30}{setmod\_}(&i\_\_1, \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl});
+567     \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] += kk;
+568 
+569 \textcolor{comment}{/* ...  CHECK FOR REFSYS */}
+570 
+571 L4404:
+572     \textcolor{keywordflow}{if} (jj == \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] && *\hyperlink{RECOGN_8c_a8bd5562ec1da70ad6f7fbaa150f7dc9e}{intmed} == 0) \{
+573     i\_\_1 = *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5;
+574     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a922310c606ec69d2bb2be81db7a756ee}{c\_\_50}, &i\_\_1, &\hyperlink{RECOGN_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+575     \}
+576     iref = 0;
+577     refsav = 0;
+578     \textcolor{keywordflow}{if} (! (*\hyperlink{RECOGN_8c_aabee3b4a59c9aa6e62ac7cef57dc1fc4}{refflg})) \{
+579     \textcolor{keywordflow}{goto} L4445;
+580     \}
+581     \textcolor{keywordflow}{if} (kk < 1 || kk > 20) \{
+582     \textcolor{keywordflow}{goto} L4445;
+583     \}
+584     \textcolor{keywordflow}{switch} (kk) \{
+585     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L4431;
+586     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L4431;
+587     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L4432;
+588     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L4432;
+589     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L4433;
+590     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L4434;
+591     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L4434;
+592     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L4434;
+593     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L4435;
+594     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L4434;
+595     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L4445;
+596     \textcolor{keywordflow}{case} 12:  \textcolor{keywordflow}{goto} L4445;
+597     \textcolor{keywordflow}{case} 13:  \textcolor{keywordflow}{goto} L4445;
+598     \textcolor{keywordflow}{case} 14:  \textcolor{keywordflow}{goto} L4434;
+599     \textcolor{keywordflow}{case} 15:  \textcolor{keywordflow}{goto} L4445;
+600     \textcolor{keywordflow}{case} 16:  \textcolor{keywordflow}{goto} L4445;
+601     \textcolor{keywordflow}{case} 17:  \textcolor{keywordflow}{goto} L4445;
+602     \textcolor{keywordflow}{case} 18:  \textcolor{keywordflow}{goto} L4445;
+603     \textcolor{keywordflow}{case} 19:  \textcolor{keywordflow}{goto} L4433;
+604     \textcolor{keywordflow}{case} 20:  \textcolor{keywordflow}{goto} L4436;
+605     \}
+606 L4431:
+607     ir = *\hyperlink{RECOGN_8c_ae88501af11d627bf97daf24bfefa9461}{four};
+608     iref = 4;
+609     \textcolor{keywordflow}{goto} L4440;
+610 L4432:
+611     ir = *\hyperlink{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}{five};
+612     iref = 2;
+613     \textcolor{keywordflow}{goto} L4440;
+614 L4433:
+615     ir = *\hyperlink{RECOGN_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two};
+616     iref = 1;
+617     \textcolor{keywordflow}{goto} L4440;
+618 L4434:
+619     ir = *\hyperlink{RECOGN_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+620     iref = 5;
+621     \textcolor{keywordflow}{goto} L4440;
+622 L4435:
+623     ir = *\hyperlink{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}{five};
+624     iref = 2;
+625     \textcolor{keywordflow}{goto} L4440;
+626 L4436:
+627     ir = *\hyperlink{RECOGN_8c_a07e800919e864a03d92799035517e67e}{three};
+628     iref = 3;
+629 L4440:
+630     \textcolor{keywordflow}{if} (! canflg) \{
+631     \textcolor{keywordflow}{goto} L4445;
+632     \}
+633 
+634 \textcolor{comment}{/* ...  GENERATE CALL TO TRANSF TO MOVE REFERENCED C.F. TO LOCAL SYSTEM */}
+635 
+636     refsav = cannam;
+637     cannam = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(&kk);
+638     \hyperlink{CALLZZ_8c_a22340ad3c429feec107b14a590802e21}{callzz\_}(&\hyperlink{RECOGN_8c_a6c3fa8a41e42716cea6156e1e911d487}{aptxxx}[102]);
+639     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&cannam);
+640     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&refsav);
+641     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&ir);
+642     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{RECOGN_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}, &canmax);
+643     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(\hyperlink{RECOGN_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero});
+644     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+645 L4445:
+646     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}{move});
+647     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&j);
+648     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == 0) \{
+649     \textcolor{keywordflow}{goto} L4414;
+650     \}
+651     i\_\_1 = *\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr};
+652     \textcolor{keywordflow}{for} (ii = 1; ii <= i\_\_1; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+653     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[ii - 1] <= 0) \{
+654         \textcolor{keywordflow}{goto} L4406;
+655     \} \textcolor{keywordflow}{else} \{
+656         \textcolor{keywordflow}{goto} L4407;
+657     \}
+658 L4406:
+659     \textcolor{keywordflow}{if} (canflg) \{
+660         \textcolor{keywordflow}{goto} L4408;
+661     \}
+662     iii = 2033;
+663     \textcolor{keywordflow}{goto} L4403;
+664 L4408:
+665     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&\hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[ii - 1], &cannam);
+666     \textcolor{keywordflow}{goto} L4405;
+667 L4407:
+668     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&\hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[ii - 1]);
+669     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&\hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[ii - 1])) \{
+670         i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&\hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[ii - 1]);
+671         \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+672     \}
+673 L4405:
+674     ;
+675     \}
+676     \textcolor{keywordflow}{if} (! canflg) \{
+677     \textcolor{keywordflow}{goto} L4410;
+678     \}
+679     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} == canmax) \{
+680     \textcolor{keywordflow}{goto} L4480;
+681     \}
+682 L4414:
+683     jj = *\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} + 1;
+684     i\_\_1 = canmax;
+685     \textcolor{keywordflow}{for} (ii = jj; ii <= i\_\_1; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+686 \textcolor{comment}{/* L4409: */}
+687     i\_\_2 = -\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii};
+688     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&i\_\_2, &cannam);
+689     \}
+690 L4480:
+691     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&cannam)) \{
+692     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&cannam);
+693     \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+694     \}
+695     \textcolor{keywordflow}{if} (refsav == 0) \{
+696     \textcolor{keywordflow}{goto} L4410;
+697     \}
+698     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&refsav)) \{
+699     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&refsav);
+700     \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+701     \}
+702 L4410:
+703     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+704 
+705 \textcolor{comment}{/* ...  IF REFSYS APPLIES,GENERATE I.L. TO MOVE RESULT TO BASE SYSTEM */}
+706 
+707     \textcolor{keywordflow}{if} (iref != 0) \{
+708     \hyperlink{REFGEN_8c_aeb817c591d1e91e37b71a9af9e5be697}{refgen\_}(&iref, &j);
+709     \}
+710     \textcolor{keywordflow}{switch} (canend) \{
+711     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L600;
+712     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L4412;
+713     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L4413;
+714     \}
+715 L4412:
+716     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 6 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 2];
+717     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 6 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 5 << 1) - 1];
+718     *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} += -6;
+719     \textcolor{keywordflow}{goto} L2900;
+720 L4413:
+721     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 4 << 1) - 2] = cantmp;
+722     l = \hyperlink{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+723     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} - 4 << 1) - 1] = \hyperlink{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[l - 1];
+724     *\hyperlink{RECOGN_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} += -4;
+725     \textcolor{keywordflow}{goto} L2900;
+726 
+727 \textcolor{comment}{/* ...  END OF NESTED NAMED CANON DEFINITION */}
+728 
+729 L4500:
+730     canend = 2;
+731     \textcolor{keywordflow}{goto} L4401;
+732 
+733 \textcolor{comment}{/* ...  END OF NESTED UNNAMED CANON DEFINITION */}
+734 
+735 
+736 L4600:
+737     k = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 3 << 1) - 2];
+738     kk = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] - \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}[0];
+739     \textcolor{keywordflow}{if} (kk >= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}) \{
+740     kk -= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+741     \}
+742     j = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(&kk);
+743     jj = \hyperlink{RECOGN_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0];
+744     cantmp = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+745     canend = 3;
+746     \textcolor{keywordflow}{goto} L4420;
+747 
+748 \textcolor{comment}{/* **********   O B T A I N   P R O C E S S I N G   ********** */}
+749 
+750 L4700:
+751     j = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 1 << 1) - 2];
+752     \textcolor{keywordflow}{if} (*\hyperlink{RECOGN_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} > 0) \{
+753     \textcolor{keywordflow}{goto} L7015;
+754     \}
+755     \textcolor{keywordflow}{if} (candat > 0) \{
+756     \textcolor{keywordflow}{goto} L7010;
+757     \}
+758     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a447a2d27be811a2df1252caaa8f5cb58}{c\_\_18}, &\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+759     \textcolor{keywordflow}{goto} L7080;
+760 L7010:
+761     \textcolor{keywordflow}{if} (\hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j) == modc) \{
+762     \textcolor{keywordflow}{goto} L7020;
+763     \}
+764 
+765 \textcolor{comment}{/* ... VARIABLE ASSIGNED WRONG MODE. */}
+766 
+767     i\_\_2 = *top - 1;
+768     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_a7023746715aa8808c6226c81131400ba}{c\_\_1050}, &i\_\_2, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+769     \textcolor{keywordflow}{goto} L7080;
+770 L7015:
+771     i\_\_2 = -(*argtop);
+772     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&\hyperlink{RECOGN_8c_ad5c5ef09ecbcc6eaf2d4d10ec5ba4237}{c\_\_2013}, &i\_\_2, &\hyperlink{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"RECOGN  "}, (ftnlen)8);
+773     \textcolor{keywordflow}{goto} L7080;
+774 L7020:
+775     \textcolor{keywordflow}{if} (errflg) \{
+776     \textcolor{keywordflow}{goto} L7080;
+777     \}
+778     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[j - 1] % *modulo <= *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}) \{
+779     \textcolor{keywordflow}{goto} L7030;
+780     \}
+781     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j);
+782     j = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(&i\_\_2);
+783     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{RECOGN_8c_a80e4f7e9bf963c8bf4982cee5bf830bb}{repl});
+784     \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(&\hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(modc << 1) - 2]);
+785     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &j);
+786     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{RECOGN_8c_a8e639ac2483fa40b33479fe744f2a1b9}{trpdlr}, &\hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 1 << 1) - 2]);
+787     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+788 
+789 \textcolor{comment}{/* ...  IF REFSYS APPLIES,MOVE C.F. TO LOCAL SYSTEM */}
+790 
+791 L7030:
+792     refsav = 0;
+793     \textcolor{keywordflow}{if} (! (*\hyperlink{RECOGN_8c_aabee3b4a59c9aa6e62ac7cef57dc1fc4}{refflg})) \{
+794     \textcolor{keywordflow}{goto} L7032;
+795     \}
+796     jj = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j);
+797     \textcolor{keywordflow}{if} (jj < 1 || jj > 20) \{
+798     \textcolor{keywordflow}{goto} L7032;
+799     \}
+800     \textcolor{keywordflow}{switch} (jj) \{
+801     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L7061;
+802     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L7061;
+803     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L7062;
+804     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L7062;
+805     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L7063;
+806     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L7064;
+807     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L7064;
+808     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L7064;
+809     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L7062;
+810     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L7064;
+811     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L7032;
+812     \textcolor{keywordflow}{case} 12:  \textcolor{keywordflow}{goto} L7032;
+813     \textcolor{keywordflow}{case} 13:  \textcolor{keywordflow}{goto} L7032;
+814     \textcolor{keywordflow}{case} 14:  \textcolor{keywordflow}{goto} L7064;
+815     \textcolor{keywordflow}{case} 15:  \textcolor{keywordflow}{goto} L7032;
+816     \textcolor{keywordflow}{case} 16:  \textcolor{keywordflow}{goto} L7032;
+817     \textcolor{keywordflow}{case} 17:  \textcolor{keywordflow}{goto} L7032;
+818     \textcolor{keywordflow}{case} 18:  \textcolor{keywordflow}{goto} L7032;
+819     \textcolor{keywordflow}{case} 19:  \textcolor{keywordflow}{goto} L7063;
+820     \textcolor{keywordflow}{case} 20:  \textcolor{keywordflow}{goto} L7066;
+821     \}
+822 L7061:
+823     ir = *\hyperlink{RECOGN_8c_ae88501af11d627bf97daf24bfefa9461}{four};
+824     \textcolor{keywordflow}{goto} L7070;
+825 L7062:
+826     ir = *\hyperlink{RECOGN_8c_ad53f7c619ab1cb59a71e807c9a007cfe}{five};
+827     \textcolor{keywordflow}{goto} L7070;
+828 L7063:
+829     ir = *\hyperlink{RECOGN_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two};
+830     \textcolor{keywordflow}{goto} L7070;
+831 L7064:
+832     ir = *\hyperlink{RECOGN_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+833     \textcolor{keywordflow}{goto} L7070;
+834 L7066:
+835     ir = *\hyperlink{RECOGN_8c_a07e800919e864a03d92799035517e67e}{three};
+836 L7070:
+837     refsav = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+838     j = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(&jj);
+839     \hyperlink{CALLZZ_8c_a22340ad3c429feec107b14a590802e21}{callzz\_}(&\hyperlink{RECOGN_8c_a6c3fa8a41e42716cea6156e1e911d487}{aptxxx}[102]);
+840     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&j);
+841     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&refsav);
+842     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&ir);
+843     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{RECOGN_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}, &\hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(jj << 1) - 2]);
+844     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(\hyperlink{RECOGN_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero});
+845     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+846 
+847 L7032:
+848     i\_\_2 = *\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr};
+849     \textcolor{keywordflow}{for} (n = 1; n <= i\_\_2; ++\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}) \{
+850     k = \hyperlink{RECOGN_8c_a4259f43cbc7ebcdca435dcbb52ea3c9b}{canstk}[n - 1];
+851     \textcolor{keywordflow}{if} (k < 0) \{
+852         \textcolor{keywordflow}{goto} L7050;
+853     \}
+854     l = \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] / *modulo * *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+855     \textcolor{keywordflow}{if} (l != \hyperlink{RECOGN_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}[0] && l != \hyperlink{RECOGN_8c_a45ad543e116354f8e60c2235b97d0b8c}{congeo}[0] && l != \hyperlink{RECOGN_8c_a7681e25b15d55498b9511ec96c8417f2}{conbig}[0] && l != 
+      \hyperlink{RECOGN_8c_addea613f8b9f62e62e672dd4ddc95ca4}{conpro}[
+856         0]) \{
+857         \textcolor{keywordflow}{goto} L7035;
+858     \}
+859     \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(&k, \hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_}, &\hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(*\hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_} << 1) - 2], &
+      \hyperlink{RECOGN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+860     \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] = \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] + *\hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_};
+861     \textcolor{keywordflow}{goto} L7040;
+862 L7035:
+863     \textcolor{keywordflow}{if} (l == \hyperlink{RECOGN_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] && \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&k) == *real\_\_) \{
+864         \textcolor{keywordflow}{goto} L7040;
+865     \}
+866     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] % *modulo > *\hyperlink{RECOGN_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf} && \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&k) == *
+867         real\_\_) \{
+868         \textcolor{keywordflow}{goto} L7045;
+869     \}
+870 L7040:
+871     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}{move});
+872     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &k);
+873 L7043:
+874     i\_\_1 = -\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+875     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&i\_\_1, &j);
+876     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+877     \textcolor{keywordflow}{goto} L7050;
+878 L7045:
+879     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{RECOGN_8c_a00adb2751bf683d55228e0b14f945340}{move});
+880     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{RECOGN_8c_a8e639ac2483fa40b33479fe744f2a1b9}{trpdlr}, &k);
+881     \textcolor{keywordflow}{goto} L7043;
+882 L7050:
+883     ;
+884     \}
+885     \textcolor{keywordflow}{if} (refsav == 0) \{
+886     \textcolor{keywordflow}{goto} L7080;
+887     \}
+888     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&refsav)) \{
+889     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&refsav);
+890     \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+891     \}
+892 L7080:
+893     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&j)) \{
+894     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&j);
+895     \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+896     \}
+897     \textcolor{keywordflow}{goto} L600;
+898 
+899 
+900 \textcolor{comment}{/* ... SUBSCRIPTED ARGUMENT IN OBTAIN STATEMENT */}
+901 
+902 L4800:
+903     *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 4 << 1) - 2];
+904     \textcolor{keywordflow}{if} (\hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) != 0) \{
+905     \textcolor{keywordflow}{goto} L1000;
+906     \}
+907     \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[*\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} - 1] += *\hyperlink{RECOGN_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_};
+908     iii = 1;
+909 L7110:
+910     \textcolor{keywordflow}{if} (iii >= *\hyperlink{RECOGN_8c_a2ee879c34978a91e67394afea5cfeb53}{rngpt}) \{
+911     \textcolor{keywordflow}{goto} L1000;
+912     \}
+913     \textcolor{keywordflow}{if} (\hyperlink{RECOGN_8c_a62d748d5186f81531f7f1fb70a262c51}{range}[iii - 1] == *\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+914     \textcolor{keywordflow}{goto} L7120;
+915     \}
+916     iii += 2;
+917     \textcolor{keywordflow}{goto} L7110;
+918 L7120:
+919     \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, real\_\_, &\hyperlink{RECOGN_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(*real\_\_ << 1) - 2], &\hyperlink{RECOGN_8c_a62d748d5186f81531f7f1fb70a262c51}{range}[iii]);
+920     \textcolor{keywordflow}{goto} L1000;
+921 
+922 \textcolor{comment}{/* ... RETURN TO RECOG */}
+923 
+924 L220:
+925     *iasnrt = 2;
+926     \textcolor{keywordflow}{goto} L9000;
+927 L600:
+928     *iasnrt = 3;
+929     \textcolor{keywordflow}{goto} L8900;
+930 L1000:
+931     *iasnrt = 4;
+932     \textcolor{keywordflow}{goto} L9000;
+933 L2900:
+934     *iasnrt = 5;
+935     canflg = FALSE\_;
+936 L8900:
+937     *\hyperlink{RECOGN_8c_a7c5efa9f87e8b2e9fcf404f45046a5a3}{canptr} = 0;
+938     stmtyp = 0;
+939     candat = 0;
+940 L9000:
+941     \textcolor{keywordflow}{return} 0;
+942 
+943 \textcolor{comment}{/* ...  SPECIAL POINT DEFINITION */}
+944 
+945 L4900:
+946     k = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 1 << 1) - 2];
+947     ++(*argtop);
+948     \hyperlink{RECOGN_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[*argtop - 1] = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+949     \textcolor{keywordflow}{if} (\hyperlink{IFTMP_8c_ad929e6847fbe32e6b2db0ebba72dae30}{iftmp\_}(&k)) \{
+950     i\_\_2 = \hyperlink{MODE_8c_a9e1ab56c4a07bfc759533f8a4124f4ee}{mode\_}(&k);
+951     \hyperlink{PUTTMP_8c_aa4beb8a9d32cccf14ddd5fbb1f67f7b8}{puttmp\_}(&i\_\_2);
+952     \}
+953     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 1 << 1) - 2] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 3 << 1) - 2];
+954     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 1 << 1) - 1] = \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 3 << 1) - 1];
+955     k = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(ppoint, (ftnlen)6);
+956     \hyperlink{MACLBL_8c_a03ec9a6955dcadbedce6f850023a6a08}{maclbl\_}(&k, &\hyperlink{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &k);
+957     \hyperlink{RECOGN_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[k - 1] = \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}[0] + *\hyperlink{RECOGN_8c_a7bff2da864fb642dcbfa06bc2ac74fa7}{point};
+958     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 3 << 1) - 2] = k;
+959     k = \hyperlink{RECOGN_8c_a0927230bc86f455399e63a6ea7130110}{geom}[0] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+960     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 3 << 1) - 1] = \hyperlink{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[k - 1];
+961     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 2 << 1) - 2] = \hyperlink{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}{slash}[1];
+962     k = \hyperlink{RECOGN_8c_a41f762e476e07a7d721ee4351047b85d}{slash}[0] / *\hyperlink{RECOGN_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+963     \hyperlink{RECOGN_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top - 2 << 1) - 1] = \hyperlink{RECOGN_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[k - 1];
+964     \textcolor{keywordflow}{goto} L220;
+965 
+966 \} \textcolor{comment}{/* recogn\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RECOGN_8c_af61d9b0242096845ca1b3a76e8dba72c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RECOGN_8c_af61d9b0242096845ca1b3a76e8dba72c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{RECOGN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 120 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{RECOGN_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 124 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+1001@{c\+\_\+\+\_\+1001}}
+\index{c\+\_\+\+\_\+1001@{c\+\_\+\+\_\+1001}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1001}{c__1001}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1001 = 1001\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a6db99092dfdecc03ad34892157cee886}{}\label{RECOGN_8c_a6db99092dfdecc03ad34892157cee886}
+
+
+Definition at line 123 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+1024@{c\+\_\+\+\_\+1024}}
+\index{c\+\_\+\+\_\+1024@{c\+\_\+\+\_\+1024}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1024}{c__1024}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1024 = 1024\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a23dace354fecb282846c43adea071fa7}{}\label{RECOGN_8c_a23dace354fecb282846c43adea071fa7}
+
+
+Definition at line 118 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+1050@{c\+\_\+\+\_\+1050}}
+\index{c\+\_\+\+\_\+1050@{c\+\_\+\+\_\+1050}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1050}{c__1050}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1050 = 1050\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a7023746715aa8808c6226c81131400ba}{}\label{RECOGN_8c_a7023746715aa8808c6226c81131400ba}
+
+
+Definition at line 127 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+18@{c\+\_\+\+\_\+18}}
+\index{c\+\_\+\+\_\+18@{c\+\_\+\+\_\+18}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+18}{c__18}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+18 = 18\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a447a2d27be811a2df1252caaa8f5cb58}{}\label{RECOGN_8c_a447a2d27be811a2df1252caaa8f5cb58}
+
+
+Definition at line 126 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+19@{c\+\_\+\+\_\+19}}
+\index{c\+\_\+\+\_\+19@{c\+\_\+\+\_\+19}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+19}{c__19}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+19 = 19\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a971d71910d48259ece8acc1aac27c6d3}{}\label{RECOGN_8c_a971d71910d48259ece8acc1aac27c6d3}
+
+
+Definition at line 117 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+2013@{c\+\_\+\+\_\+2013}}
+\index{c\+\_\+\+\_\+2013@{c\+\_\+\+\_\+2013}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2013}{c__2013}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2013 = 2013\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_ad5c5ef09ecbcc6eaf2d4d10ec5ba4237}{}\label{RECOGN_8c_ad5c5ef09ecbcc6eaf2d4d10ec5ba4237}
+
+
+Definition at line 121 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+2032@{c\+\_\+\+\_\+2032}}
+\index{c\+\_\+\+\_\+2032@{c\+\_\+\+\_\+2032}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2032}{c__2032}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2032 = 2032\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a85dfc71d4394ee59fd1d42a26ee0ba32}{}\label{RECOGN_8c_a85dfc71d4394ee59fd1d42a26ee0ba32}
+
+
+Definition at line 119 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}}
+\index{c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+4}{c__4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+4 = 4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_ab195470f8c6d55e333ee709af09ba2d6}{}\label{RECOGN_8c_ab195470f8c6d55e333ee709af09ba2d6}
+
+
+Definition at line 122 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+50@{c\+\_\+\+\_\+50}}
+\index{c\+\_\+\+\_\+50@{c\+\_\+\+\_\+50}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+50}{c__50}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+50 = 50\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a922310c606ec69d2bb2be81db7a756ee}{}\label{RECOGN_8c_a922310c606ec69d2bb2be81db7a756ee}
+
+
+Definition at line 125 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{RECOGN_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 116 of file R\+E\+C\+O\+G\+N.\+c.
+
+
+
+Referenced by recogn\+\_\+().
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canstr@{canstr}}
+\index{canstr@{canstr}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canstr}{canstr}}]{\setlength{\rightskip}{0pt plus 5cm}integer canstr\mbox{[}18\mbox{]}}\hypertarget{RECOGN_8c_a3aa33d9a1bac4535c011a6eaf3996ef1}{}\label{RECOGN_8c_a3aa33d9a1bac4535c011a6eaf3996ef1}
+
+
+Definition at line 109 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!canstr\+\_\+@{canstr\+\_\+}}
+\index{canstr\+\_\+@{canstr\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{canstr\+\_\+}{canstr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   canstr\+\_\+}\hypertarget{RECOGN_8c_a5300d0ae980ae29284fcc652a97faf48}{}\label{RECOGN_8c_a5300d0ae980ae29284fcc652a97faf48}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{RECOGN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{RECOGN_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!charst@{charst}}
+\index{charst@{charst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{RECOGN_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{RECOGN_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{RECOGN_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{RECOGN_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{RECOGN_8c_ab8c33635dfa59fa29fba868d54ed9d6a}{}\label{RECOGN_8c_ab8c33635dfa59fa29fba868d54ed9d6a}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{RECOGN_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{RECOGN_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!code@{code}}
+\index{code@{code}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{RECOGN_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{RECOGN_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 37 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{RECOGN_8c_a3eba4c250f830ba3541ea47199c0413e}{}\label{RECOGN_8c_a3eba4c250f830ba3541ea47199c0413e}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!flags@{flags}}
+\index{flags@{flags}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}integer flags\mbox{[}4\mbox{]}}\hypertarget{RECOGN_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}{}\label{RECOGN_8c_afeb28d6c3dd69d6f0989eeecae6a6d1b}
+
+
+Definition at line 49 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!flags\+\_\+@{flags\+\_\+}}
+\index{flags\+\_\+@{flags\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{flags\+\_\+}{flags_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   flags\+\_\+}\hypertarget{RECOGN_8c_adba137ba250817f50b02660aca1d2271}{}\label{RECOGN_8c_adba137ba250817f50b02660aca1d2271}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{RECOGN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{RECOGN_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{RECOGN_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{RECOGN_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!il@{il}}
+\index{il@{il}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il\mbox{[}21\mbox{]}}\hypertarget{RECOGN_8c_a5524c41368cc6530a9c6a9ccab6163db}{}\label{RECOGN_8c_a5524c41368cc6530a9c6a9ccab6163db}
+
+
+Definition at line 73 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!il\+\_\+@{il\+\_\+}}
+\index{il\+\_\+@{il\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+}{il_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   il\+\_\+}\hypertarget{RECOGN_8c_aa899a2a492558361addb373a428cb3bd}{}\label{RECOGN_8c_aa899a2a492558361addb373a428cb3bd}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{RECOGN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{RECOGN_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{RECOGN_8c_a373010e90fb1cd08bf263255a111920d}{}\label{RECOGN_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!macxx1@{macxx1}}
+\index{macxx1@{macxx1}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1}{macxx1}}]{\setlength{\rightskip}{0pt plus 5cm}integer macxx1\mbox{[}71\mbox{]}}\hypertarget{RECOGN_8c_a62736b21eda0cd16ae1b6bef6723680a}{}\label{RECOGN_8c_a62736b21eda0cd16ae1b6bef6723680a}
+
+
+Definition at line 85 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!macxx1\+\_\+@{macxx1\+\_\+}}
+\index{macxx1\+\_\+@{macxx1\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{macxx1\+\_\+}{macxx1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   macxx1\+\_\+}\hypertarget{RECOGN_8c_a4dd58368ae4ac581c193830b9b48be6d}{}\label{RECOGN_8c_a4dd58368ae4ac581c193830b9b48be6d}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{RECOGN_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{RECOGN_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 103 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{RECOGN_8c_a1e4ebd42bd0dc2384c580865c2d1a9b3}{}\label{RECOGN_8c_a1e4ebd42bd0dc2384c580865c2d1a9b3}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!modx@{modx}}
+\index{modx@{modx}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{modx}{modx}}]{\setlength{\rightskip}{0pt plus 5cm}integer modx\mbox{[}32\mbox{]}}\hypertarget{RECOGN_8c_abd1eef3c1b001e65bada11247921ce11}{}\label{RECOGN_8c_abd1eef3c1b001e65bada11247921ce11}
+
+
+Definition at line 79 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!modx\+\_\+@{modx\+\_\+}}
+\index{modx\+\_\+@{modx\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+}{modx_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   modx\+\_\+}\hypertarget{RECOGN_8c_a5160e451245a355e830b4bde1f4ea2e3}{}\label{RECOGN_8c_a5160e451245a355e830b4bde1f4ea2e3}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!namest@{namest}}
+\index{namest@{namest}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{RECOGN_8c_ab97202700d22183890e79bc8791f4bff}{}\label{RECOGN_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{RECOGN_8c_ab9e0e7b9a93dbeac8c175a6313707146}{}\label{RECOGN_8c_ab9e0e7b9a93dbeac8c175a6313707146}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{RECOGN_8c_a12351fe75bd822dfa233783a24bab726}{}\label{RECOGN_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{RECOGN_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{RECOGN_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{RECOGN_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{RECOGN_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{RECOGN_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{RECOGN_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!numptr@{numptr}}
+\index{numptr@{numptr}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{numptr}{numptr}}]{\setlength{\rightskip}{0pt plus 5cm}integer numptr\mbox{[}12\mbox{]}}\hypertarget{RECOGN_8c_af6c7c8757673aa092837c252bf431adf}{}\label{RECOGN_8c_af6c7c8757673aa092837c252bf431adf}
+
+
+Definition at line 61 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!numptr\+\_\+@{numptr\+\_\+}}
+\index{numptr\+\_\+@{numptr\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{numptr\+\_\+}{numptr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   numptr\+\_\+}\hypertarget{RECOGN_8c_aaccc2dd89748b9b9b1d51fc3e8b07a77}{}\label{RECOGN_8c_aaccc2dd89748b9b9b1d51fc3e8b07a77}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!opmod@{opmod}}
+\index{opmod@{opmod}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{opmod}{opmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer opmod\mbox{[}6\mbox{]}}\hypertarget{RECOGN_8c_aa04120ffc54a13b636597a71b87fedd2}{}\label{RECOGN_8c_aa04120ffc54a13b636597a71b87fedd2}
+
+
+Definition at line 91 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!opmod\+\_\+@{opmod\+\_\+}}
+\index{opmod\+\_\+@{opmod\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{opmod\+\_\+}{opmod_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   opmod\+\_\+}\hypertarget{RECOGN_8c_a2e67ada8489633b3b2f0a930a40472c1}{}\label{RECOGN_8c_a2e67ada8489633b3b2f0a930a40472c1}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sbscpt@{sbscpt}}
+\index{sbscpt@{sbscpt}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sbscpt}{sbscpt}}]{\setlength{\rightskip}{0pt plus 5cm}integer sbscpt\mbox{[}101\mbox{]}}\hypertarget{RECOGN_8c_ad43a066c4f6a869dadf86e565a80bbee}{}\label{RECOGN_8c_ad43a066c4f6a869dadf86e565a80bbee}
+
+
+Definition at line 67 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sbscpt\+\_\+@{sbscpt\+\_\+}}
+\index{sbscpt\+\_\+@{sbscpt\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sbscpt\+\_\+}{sbscpt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sbscpt\+\_\+}\hypertarget{RECOGN_8c_a6c172c9994087dd61b89eb8f3bde52eb}{}\label{RECOGN_8c_a6c172c9994087dd61b89eb8f3bde52eb}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!srctbl@{srctbl}}
+\index{srctbl@{srctbl}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{srctbl}{srctbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer srctbl\mbox{[}502\mbox{]}}\hypertarget{RECOGN_8c_a38885177dc5a2cd93e037c3eba1ca855}{}\label{RECOGN_8c_a38885177dc5a2cd93e037c3eba1ca855}
+
+
+Definition at line 43 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!srctbl\+\_\+@{srctbl\+\_\+}}
+\index{srctbl\+\_\+@{srctbl\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+}{srctbl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   srctbl\+\_\+}\hypertarget{RECOGN_8c_aa3c5c6a8780e1cf45b75c96a3c87ee8a}{}\label{RECOGN_8c_aa3c5c6a8780e1cf45b75c96a3c87ee8a}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!stklst@{stklst}}
+\index{stklst@{stklst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{stklst}{stklst}}]{\setlength{\rightskip}{0pt plus 5cm}integer stklst\mbox{[}300\mbox{]}}\hypertarget{RECOGN_8c_ada93478ed3a7b6732d0c4af5a026499f}{}\label{RECOGN_8c_ada93478ed3a7b6732d0c4af5a026499f}
+
+
+Definition at line 31 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!stklst\+\_\+@{stklst\+\_\+}}
+\index{stklst\+\_\+@{stklst\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+}{stklst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stklst\+\_\+}\hypertarget{RECOGN_8c_a55293a2af9e8d35cc138b60828cecd42}{}\label{RECOGN_8c_a55293a2af9e8d35cc138b60828cecd42}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sublst@{sublst}}
+\index{sublst@{sublst}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sublst}{sublst}}]{\setlength{\rightskip}{0pt plus 5cm}integer sublst\mbox{[}136\mbox{]}}\hypertarget{RECOGN_8c_ab607b14b01bf08fe56a3d23c8784386a}{}\label{RECOGN_8c_ab607b14b01bf08fe56a3d23c8784386a}
+
+
+Definition at line 97 of file R\+E\+C\+O\+G\+N.\+c.
+
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!sublst\+\_\+@{sublst\+\_\+}}
+\index{sublst\+\_\+@{sublst\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{sublst\+\_\+}{sublst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sublst\+\_\+}\hypertarget{RECOGN_8c_a80b44ea22313ddfe82a1b6bc65404afb}{}\label{RECOGN_8c_a80b44ea22313ddfe82a1b6bc65404afb}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!tmp\+\_\+@{tmp\+\_\+}}
+\index{tmp\+\_\+@{tmp\+\_\+}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{tmp\+\_\+}{tmp_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tmp\+\_\+}\hypertarget{RECOGN_8c_ad30c2fc4b3cd297e1a80cee98c14fa24}{}\label{RECOGN_8c_ad30c2fc4b3cd297e1a80cee98c14fa24}
+\index{R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}!txxxx@{txxxx}}
+\index{txxxx@{txxxx}!R\+E\+C\+O\+G\+N.\+c@{R\+E\+C\+O\+G\+N.\+c}}
+\subsubsection[{\texorpdfstring{txxxx}{txxxx}}]{\setlength{\rightskip}{0pt plus 5cm}integer txxxx\mbox{[}64\mbox{]}}\hypertarget{RECOGN_8c_a657fa5a9b5a6ae364c3fa30985067c38}{}\label{RECOGN_8c_a657fa5a9b5a6ae364c3fa30985067c38}
+
+
+Definition at line 55 of file R\+E\+C\+O\+G\+N.\+c.
+

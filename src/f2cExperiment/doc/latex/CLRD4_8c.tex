@@ -1,0 +1,141 @@
+\hypertarget{CLRD4_8c}{}\section{C\+L\+R\+D4.\+c File Reference}
+\label{CLRD4_8c}\index{C\+L\+R\+D4.\+c@{C\+L\+R\+D4.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+R\+D4.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{CLRD4_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLRD4_8c_a2f0a1166c18afc7b6422bb0ddeeec420}{clrd4\+\_\+} (integer $\ast$file, integer $\ast$nr, integer $\ast$nbuff, integer $\ast$\hyperlink{CNVRT3_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+L\+R\+D4.\+c@{C\+L\+R\+D4.\+c}!clrd4\+\_\+@{clrd4\+\_\+}}
+\index{clrd4\+\_\+@{clrd4\+\_\+}!C\+L\+R\+D4.\+c@{C\+L\+R\+D4.\+c}}
+\subsubsection[{\texorpdfstring{clrd4\+\_\+(integer $\ast$file, integer $\ast$nr, integer $\ast$nbuff, integer $\ast$ir)}{clrd4_(integer *file, integer *nr, integer *nbuff, integer *ir)}}]{\setlength{\rightskip}{0pt plus 5cm}int clrd4\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{file, }
+\item[{integer $\ast$}]{nr, }
+\item[{integer $\ast$}]{nbuff, }
+\item[{integer $\ast$}]{ir}
+\end{DoxyParamCaption}
+)}\hypertarget{CLRD4_8c_a2f0a1166c18afc7b6422bb0ddeeec420}{}\label{CLRD4_8c_a2f0a1166c18afc7b6422bb0ddeeec420}
+
+
+Definition at line 28 of file C\+L\+R\+D4.\+c.
+
+
+
+References aread\+\_\+(), i\+\_\+\+\_\+, k, l, m, n, and nb.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{comment}{/* Initialized data */}
+32 
+33     \textcolor{keyword}{static} integer \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} = 0;
+34     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{nb} = 0;
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 0;
+36     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} = 3;
+37 
+38     \textcolor{comment}{/* System generated locals */}
+39     integer i\_\_1;
+40 
+41     \textcolor{comment}{/* Local variables */}
+42     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, kr;
+43     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AREAD_8c_ae15c3d1a1b7ec1486e35c266f9f86549}{aread\_}(integer *, integer *, integer *, 
+44         integer *, integer *);
+45     \textcolor{keyword}{static} integer ebuff[516];
+46 
+47     \textcolor{comment}{/* Parameter adjustments */}
+48     --nbuff;
+49 
+50     \textcolor{comment}{/* Function Body */}
+51     \textcolor{keywordflow}{if} (*file != -1) \{
+52     \textcolor{keywordflow}{goto} L100;
+53     \}
+54 \textcolor{comment}{/*     INITIALIZE FLAGS */}
+55 \textcolor{comment}{/*     N IS MAXIMUM RECORD NUMBER IN THIS BLOCK */}
+56     n = 0;
+57 \textcolor{comment}{/*     NB IS BLOCK NUMBER COUNTER */}
+58     nb = 0;
+59 \textcolor{comment}{/*     M IS MINIMUM RECORD NUMBER IN THIS BLOCK */}
+60     m = 0;
+61 \textcolor{comment}{/*     K IS POINTER OF BUFFER */}
+62     k = 3;
+63 \textcolor{comment}{/*     CHECK SPECIFIED RECORD IS IN CURRENT BLOCK */}
+64 L100:
+65     \textcolor{keywordflow}{if} (*nr > m) \{
+66     \textcolor{keywordflow}{goto} L10;
+67     \}
+68     \textcolor{keywordflow}{if} (*nr < n) \{
+69     \textcolor{keywordflow}{goto} L20;
+70     \}
+71 \textcolor{comment}{/*     YES, SPECIFIED RECORD IS IN CURRENT BLOCK */}
+72     \textcolor{keywordflow}{if} (*nr == ebuff[k - 1]) \{
+73     \textcolor{keywordflow}{goto} L30;
+74     \}
+75     k = 3;
+76 \textcolor{comment}{/*     FIND THE POSITION OF THE RECORD */}
+77 L3:
+78     \textcolor{keywordflow}{if} (*nr == ebuff[k - 1]) \{
+79     \textcolor{keywordflow}{goto} L30;
+80     \}
+81     k = k + ebuff[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + 2;
+82     \textcolor{keywordflow}{if} (k > 516) \{
+83     \textcolor{keywordflow}{goto} L200;
+84     \}
+85     \textcolor{keywordflow}{goto} L3;
+86 L30:
+87     ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+88 \textcolor{comment}{/*     GET THE SIZE OF RECORD */}
+89     l = ebuff[k - 1];
+90 \textcolor{comment}{/*     MOVE THE RECORD */}
+91     i\_\_1 = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+92     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+93 \textcolor{comment}{/* L31: */}
+94     nbuff[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = ebuff[k + i\_\_ - 1];
+95     \}
+96     k = k + l + 1;
+97     \textcolor{keywordflow}{return} 0;
+98 \textcolor{comment}{/*     TRY NEXT BLOCK */}
+99 L10:
+100     ++\hyperlink{ADV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{nb};
+101 L15:
+102     k = 516;
+103     \hyperlink{AREAD_8c_ae15c3d1a1b7ec1486e35c266f9f86549}{aread\_}(file, &nb, ebuff, &k, &kr);
+104     \textcolor{keywordflow}{if} (kr == 3) \{
+105     \textcolor{keywordflow}{goto} L200;
+106     \}
+107     k = 3;
+108     n = ebuff[0];
+109     m = ebuff[1];
+110     \textcolor{keywordflow}{goto} L100;
+111 \textcolor{comment}{/*     TRY PREVIOUS RECORD */}
+112 L20:
+113     --\hyperlink{ADV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{nb};
+114     \textcolor{keywordflow}{goto} L15;
+115 L200:
+116     *\hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir} = 1;
+117     \textcolor{keywordflow}{return} 0;
+118 \} \textcolor{comment}{/* clrd4\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLRD4_8c_a2f0a1166c18afc7b6422bb0ddeeec420_cgraph}
+\end{center}
+\end{figure}
+
+

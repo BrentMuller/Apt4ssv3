@@ -1,0 +1,683 @@
+\hypertarget{TULPOS_8c}{}\section{T\+U\+L\+P\+O\+S.\+c File Reference}
+\label{TULPOS_8c}\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+U\+L\+P\+O\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{TULPOS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{TULPOS_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\item 
+\#define \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\+\_\+1}~\hyperlink{TULPOS_8c_ac4fe97490a859f8f4091c9ff65ddd605}{tac\+\_\+}
+\item 
+\#define \hyperlink{TULPOS_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{TULPOS_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TULPOS_8c_af690d9d598ffe532b693462ab3a29c10}{tulpos\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$side, doublereal $\ast$dr, doublereal $\ast$tul, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tolcom, integer $\ast$\hyperlink{SSV3_8c_ac9d1c331c8072680a9f3a7ed0f96e599}{iptool}, integer $\ast$\hyperlink{SSV3_8c_a12ced65570f6911d0ada471beebae584}{idtool}, doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$tbef, doublereal $\ast$pdir)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{TULPOS_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{TULPOS_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{TULPOS_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{TULPOS_8c_ab06be320107751afb602892c35238d9a}{ibugg\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{TULPOS_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{TULPOS_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{TULPOS_8c_a350d13f183ae040d8ba4e1b1c3d6a70b}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{TULPOS_8c_a9d0f27da38432b15fc30f2714b642ee7}{alpha}\\
+\>doublereal \hyperlink{TULPOS_8c_a0f4d8a67bb39acc583704de120c23b36}{beta}\\
+\>doublereal \hyperlink{TULPOS_8c_ab83d4b14d7d327736193757586bdc118}{cosa}\\
+\>doublereal \hyperlink{TULPOS_8c_a947300fdd2c2192cde7316dc807ab7b8}{cosb}\\
+\>doublereal \hyperlink{TULPOS_8c_ab06b664029fa83d89fed571446d42716}{sina}\\
+\>doublereal \hyperlink{TULPOS_8c_a904ed96682e934f95cd4e6a1d8696a41}{sinb}\\
+\>integer \hyperlink{TULPOS_8c_a6037817789a3fcc18edb1c82b00fd7e1}{itac}\\
+\} \hyperlink{TULPOS_8c_ac4fe97490a859f8f4091c9ff65ddd605}{tac\_}\\
+
+\end{tabbing}\item 
+static doublereal \hyperlink{TULPOS_8c_abda8393dbbff83238306cabf353a9d23}{c\+\_\+b3} = 1.
+\item 
+static integer \hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{TULPOS_8c_a280863ace4c11cd9695eac1046336a9c}{c\+\_\+\+\_\+38} = 38
+\item 
+static integer \hyperlink{TULPOS_8c_ae9c087dbe3f8ddad13760d209cb18649}{c\+\_\+\+\_\+71} = 71
+\item 
+static integer \hyperlink{TULPOS_8c_a0846905f461846c9c0a3036851f2c483}{c\+\_\+\+\_\+101} = 101
+\item 
+static integer \hyperlink{TULPOS_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\item 
+static integer \hyperlink{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{TULPOS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{TULPOS_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{TULPOS_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{TULPOS_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{TULPOS_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{TULPOS_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{TULPOS_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tac\+\_\+1@{tac\+\_\+1}}
+\index{tac\+\_\+1@{tac\+\_\+1}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tac\+\_\+1}{tac_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tac\+\_\+1~{\bf tac\+\_\+}}\hypertarget{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{}\label{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}
+
+
+Definition at line 35 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{}\label{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 28 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tulpos\+\_\+@{tulpos\+\_\+}}
+\index{tulpos\+\_\+@{tulpos\+\_\+}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tulpos\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$side, doublereal $\ast$dr, doublereal $\ast$tul, doublereal $\ast$pthick, doublereal $\ast$tolcom, integer $\ast$iptool, integer $\ast$idtool, doublereal $\ast$te, doublereal $\ast$ta, doublereal $\ast$tbef, doublereal $\ast$pdir)}{tulpos_(doublereal *r__, doublereal *side, doublereal *dr, doublereal *tul, doublereal *pthick, doublereal *tolcom, integer *iptool, integer *idtool, doublereal *te, doublereal *ta, doublereal *tbef, doublereal *pdir)}}]{\setlength{\rightskip}{0pt plus 5cm}int tulpos\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{dr, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tolcom, }
+\item[{integer $\ast$}]{iptool, }
+\item[{integer $\ast$}]{idtool, }
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tbef, }
+\item[{doublereal $\ast$}]{pdir}
+\end{DoxyParamCaption}
+)}\hypertarget{TULPOS_8c_af690d9d598ffe532b693462ab3a29c10}{}\label{TULPOS_8c_af690d9d598ffe532b693462ab3a29c10}
+
+
+Definition at line 51 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+101, c\+\_\+\+\_\+3, c\+\_\+\+\_\+38, c\+\_\+\+\_\+71, c\+\_\+b3, c\+\_\+n1, c\+\_\+n3, cang, cform\+\_\+(), cprint\+\_\+(), cross\+\_\+(), crossv\+\_\+(), darray, dotv\+\_\+(), fwd, i\+\_\+\+\_\+, ibugg\+\_\+1, k, nps, offset, r\+\_\+\+\_\+, ta, tac\+\_\+1, te, tlldat\+\_\+1, v, vn, vnorm\+\_\+(), and vscale\+\_\+().
+
+
+
+Referenced by sspath\+\_\+().
+
+
+\begin{DoxyCode}
+55 \{
+56     \textcolor{comment}{/* Initialized data */}
+57 
+58     \textcolor{keyword}{static} doublereal vecl[3] = \{ 0.,0.,0. \};
+59     \textcolor{keyword}{static} logical lfirst = TRUE\_;
+60 
+61     \textcolor{comment}{/* Builtin functions */}
+62     \textcolor{keywordtype}{double} d\_sign(doublereal *, doublereal *);
+63     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+64 
+65     \textcolor{comment}{/* Local variables */}
+66     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+67     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[3], \hyperlink{DDTABC_8c_a68cef9ab1f225fc582f4d350155b7ccb}{vn}[3];
+68     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+69     \textcolor{keyword}{static} doublereal vec[3], \hyperlink{APT331_8c_a31d784af0445df9d0581e3267a35c206}{fwd}[3], sgn, \hyperlink{SSDEF_8c_af409c922e0196755fb2e4c46f8d53f23}{nps}[3], \hyperlink{APT301_8c_a0cd64d6cb1ca4a09fe69edce55b5aa7d}{cang}, sang, tang;
+70 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+71 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+72     \textcolor{keyword}{static} doublereal roll[3];
+73     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(doublereal *, doublereal *, doublereal *
+74         );
+75     \textcolor{keyword}{static} doublereal vlen2;
+76     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+77         ftnlen, ftnlen);
+78     \textcolor{keyword}{static} doublereal pitch[3];
+79     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+80         *), \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+81     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+82     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}{vscale\_}(doublereal *, doublereal *, 
+83         doublereal *);
+84     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{SPRVIS_8c_adec9b12288715baf6855672ba7580e3c}{darray}[120];
+85     \textcolor{keyword}{static} doublereal \hyperlink{ARLM2_8c_a7270a6904e3eefbc7185e8ab5e119a92}{offset};
+86     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(doublereal *,
+87          doublereal *, doublereal *);
+88 
+89 
+90 \textcolor{comment}{/* -- R     INPUT SURFACE CONTACT POINT/DERIVATIVES(SEE CNSURF) */}
+91 \textcolor{comment}{/* -- SIDE  INPUT 1 OR -1, DEFINES CUTTER SIDE OF SURFACE */}
+92 \textcolor{comment}{/* -- DR    DRIVE ELEMENT POINT/DERIVATIVES(SEE DGEOM) */}
+93 \textcolor{comment}{/* -- TUL   CUTTER PARAMETERS */}
+94 \textcolor{comment}{/* -- PTHICK PART GEOMETRY THICK SPECIFICATION */}
+95 \textcolor{comment}{/* -- TOLCOM TOLERANCE BAND COMPENSATION */}
+96 \textcolor{comment}{/* -- IPTOOL PART SURFACE CONTROL FLAG( 0 FOR ON, 1 FOR TO) */}
+97 \textcolor{comment}{/* -- IDTOOL DRIVE ELEMENT CONTROL FLAG */}
+98 \textcolor{comment}{/* -- TE   OUTPUT TOOL END */}
+99 \textcolor{comment}{/* -- TA   OUTPUT TOOL AXIS */}
+100 \textcolor{comment}{/* -- TBEF OUTPUT EFFECTIVE TOOL END BASED ON SPHERICAL CUTTER */}
+101 \textcolor{comment}{/* -- PDIR DIRECTION OF MOTION WRT INCREASING PARAMETER (+1 OR -1) */}
+102 \textcolor{comment}{/* --PURPOSE IS TO COMPUTE TOOL END AND TOOL AXIS WHEN AN A */}
+103 \textcolor{comment}{/* --ACCEPTABLE SURFACE CONTACT POINT HAS BEEN FOUND */}
+104 \textcolor{comment}{/* --TOOL CANONICAL DATA */}
+105 \textcolor{comment}{/* --TOOL AXIS CONTROL DATA */}
+106 
+107 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+108 
+109 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+110 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+111 
+112 
+113 
+114 
+115 \textcolor{comment}{/* --INITIALZE VECL AND FIRST CALL FLAG */}
+116 
+117 
+118 \textcolor{comment}{/*     ALPHA  TOOL AXIS SLEW ANGLE WRT SN */}
+119 \textcolor{comment}{/*            IN GUIDE SURFACE CRSSPL DIRN. IF PATH IN TANSPL DIRN. */}
+120 \textcolor{comment}{/*            AND VICE VERSA */}
+121 \textcolor{comment}{/*     BETA   TOOL AXIS TILT ANGLE (CUTANG) WRT SN */}
+122 \textcolor{comment}{/*            IN PATH DIRECTION */}
+123 \textcolor{comment}{/*     COSA   COS(ALPHA) */}
+124 \textcolor{comment}{/*     COSB   COS(BETA) */}
+125 \textcolor{comment}{/*     SINA   SIN(ALPHA) */}
+126 \textcolor{comment}{/*     SINB   SIN(BETA) */}
+127 \textcolor{comment}{/*     ITAC   FLAG INDICATING THAT ATANGL TYPE TOOL AXIS CONTROL */}
+128 \textcolor{comment}{/*            IS REQUIRED =1, =0 FOR FIXED OR NORMDS */}
+129 
+130 \textcolor{comment}{/* --SAVE LAST DIRECTION FROM SP TOWARDS TOOL AXIS,AND FLAG LFIRST */}
+131 
+132     \textcolor{comment}{/* Parameter adjustments */}
+133     --tbef;
+134     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+135     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+136     --tul;
+137     --dr;
+138     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+139 
+140     \textcolor{comment}{/* Function Body */}
+141 
+142 \textcolor{comment}{/* --FOR FIRST CALL (LFIRST=.TRUE.) SET VECL TO REV. MOTION DIRECTION */}
+143     \textcolor{keywordflow}{if} (lfirst) \{
+144     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+145         vecl[i\_\_ - 1] = *pdir * -1.f * dr[i\_\_ + 12];
+146 \textcolor{comment}{/* L5: */}
+147     \}
+148     lfirst = FALSE\_;
+149     \}
+150 \textcolor{comment}{/* .... IF TOOL AXIS CONTROL WRT PS - COMPUTE LOCAL PITCH AND ROLL AXES */}
+151     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.itac == 2) \{
+152 \textcolor{comment}{/* .... GUIDE SURFACE FORWARD DIRECTION - PDIR*(DRIVE TANGENT VECTOR) */}
+153     \hyperlink{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}{vscale\_}(pdir, &dr[13], fwd);
+154 \textcolor{comment}{/* .... CUTTER SIDE OF PART SURFACE */}
+155     \hyperlink{VSCALE_8c_abab15410a0a1a8f51e2f0f5b3c16b6c8}{vscale\_}(side, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], nps);
+156 \textcolor{comment}{/* .... COMPUTE UNIT VECTOR PERPENDICULAR TO GUIDE SURFACE FORWARD AND */}
+157 \textcolor{comment}{/*     PROJECTION VECTORS */}
+158     \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(fwd, &dr[21], v);
+159 \textcolor{comment}{/* .... COMPUTE LOCAL FORWARD MOTION DIRECTION IN PS TANGENT PLANE */}
+160 \textcolor{comment}{/*           (ROLL AXIS) */}
+161     \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(nps, v, roll);
+162 \textcolor{comment}{/* .... COMPUTE LOCAL AXIS ORTHOGONAL WITH ROLL AXIS AND PS NORMAL */}
+163 \textcolor{comment}{/*           (PITCH AXIS) */}
+164     \hyperlink{UTILTY_8c_a21913ba59e0ab93b7ae99d0580fa7409}{crossv\_}(nps, roll, pitch);
+165 \textcolor{comment}{/* .... DETERMINE DIRECTION IN WHICH ROLL ANGLE IS TO BE APPLIED */}
+166 \textcolor{comment}{/*     POSITIVE IN STEPOVER DIRECTION */}
+167     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&sgn, pitch, &dr[29]);
+168     sgn = d\_sign(&\hyperlink{TULPOS_8c_abda8393dbbff83238306cabf353a9d23}{c\_b3}, &sgn);
+169     \}
+170 \textcolor{comment}{/* -- TWO MAIN CASES, TOOL ON PS OR NOT ON. */}
+171     \textcolor{keywordflow}{if} (*\hyperlink{CUTREG_8c_ac9d1c331c8072680a9f3a7ed0f96e599}{iptool} != 0) \{
+172     \textcolor{keywordflow}{goto} L50;
+173     \}
+174 \textcolor{comment}{/* --GENERAL CASE, TOOL OFFSET FROM SURFACE */}
+175     offset = *side * (*\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + *tolcom + tul[1]);
+176     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+177     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.itac == 1) \{
+178 \textcolor{comment}{/* .... APPLY CUTANG BETA TO TA IN DIRECTION OF MOTION */}
+179         \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.cosb * dr[i\_\_ + 16] + *pdir * \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.sinb * dr[i\_\_ 
+180             + 12];
+181     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.itac == 2) \{
+182 \textcolor{comment}{/* .... APPLY BETA WRT TO PS NORMAL IN MOTION DIRECTION */}
+183 \textcolor{comment}{/*     AND ALPHA IN PLANE PERPENDICULAR TO MOTION DIRECTION */}
+184         \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.cosa * \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.cosb * nps[i\_\_ - 1] + \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.sinb * 
+185             roll[i\_\_ - 1] + sgn * \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.sina * \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.cosb * pitch[i\_\_ 
+186             - 1];
+187     \} \textcolor{keywordflow}{else} \{
+188         \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = dr[i\_\_ + 16];
+189     \}
+190     tbef[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + offset * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_ + 28] - tul[1] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[
+      \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+191 \textcolor{comment}{/* L10: */}
+192     \}
+193 \textcolor{comment}{/* --GENERAL CUTTER CALCULATION. */}
+194     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], vec);
+195 \textcolor{comment}{/* ...IF TA IS PARALLEL TO SN USE PREVIOUS VALUE OF VEC INSTEAD OF SN */}
+196     vlen2 = vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2];
+197     \textcolor{keywordflow}{if} (vlen2 < 1e-12) \{
+198     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], vecl, vec);
+199     \}
+200     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+201 \textcolor{comment}{/* L20: */}
+202     vec[i\_\_ - 1] = *side * vec[i\_\_ - 1];
+203     \}
+204     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(vec, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], vec);
+205     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(vec, vec);
+206 \textcolor{comment}{/* ...MODIFY OFFSET FOR 7 SEGMENT CUTTER CALCULATION */}
+207     offset -= *side * tul[1];
+208     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+209     vecl[i\_\_ - 1] = vec[i\_\_ - 1];
+210 \textcolor{comment}{/* L32: */}
+211     \}
+212 \textcolor{comment}{/* ...COMPUTE TANGENT OF ANGLE BETWEEN TOOL NORMAL AND TOOL RADIAL AXIS */}
+213     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&cang, vec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+214     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(vec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], v);
+215     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(v, vn);
+216     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&sang, v, vn);
+217     \textcolor{keywordflow}{if} (abs(cang) > 1e-15) \{
+218     tang = sang / \hyperlink{APT301_8c_a0cd64d6cb1ca4a09fe69edce55b5aa7d}{cang};
+219     \} \textcolor{keywordflow}{else} \{
+220     tang = d\_sign(&\hyperlink{TULPOS_8c_abda8393dbbff83238306cabf353a9d23}{c\_b3}, &sang) * 1e15;
+221     \}
+222 \textcolor{comment}{/* ...IS ANGLE VALID FOR SEGMENTS 3,4,5 OF CUTTER */}
+223 \textcolor{comment}{/*   I.E. CORNER RADIUS AND ADJACENT POINT CIRCLE SEGMENTS */}
+224     \textcolor{keywordflow}{for} (i\_\_ = 3; i\_\_ <= 5; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+225     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[i\_\_] > 0. && (tang - \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[i\_\_ - 1]) * (
+226         tang - \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[i\_\_ - 1]) <= 0.) \{
+227 \textcolor{comment}{/* ...COMPUTE TOOL END COORDS */}
+228         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+229         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + (offset + *side * \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.corrad[i\_\_ - 1]) *
+230              \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28] + \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.ri[i\_\_ - 1] * vec[k - 1] - 
+231             \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tlhite[i\_\_ - 1] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[k];
+232 \textcolor{comment}{/* L34: */}
+233         \}
+234         \textcolor{keywordflow}{goto} L999;
+235     \}
+236 \textcolor{comment}{/* L35: */}
+237     \}
+238 \textcolor{comment}{/* ...NO - IS ANGLE VALID FOR TOOL TIP */}
+239     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[1] > 0. && (tang - \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[0]) * (tang - 
+240         \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[0]) <= 0.) \{
+241 \textcolor{comment}{/* ...YES - OUTPUT WARNING */}
+242     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - CUTTING ON TOOL TIP ***"}, darray, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &
+243         \hyperlink{TULPOS_8c_a280863ace4c11cd9695eac1046336a9c}{c\_\_38}, (ftnlen)38, (ftnlen)120);
+244     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+245     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+246         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + offset * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28];
+247 \textcolor{comment}{/* L40: */}
+248     \}
+249 \textcolor{comment}{/* ...NO - IS ANGLE VALID FOR TOP OF UPPER LINE SEGMENT */}
+250     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tcont[7] > 0. && (tang - \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanlo[6]) * (tang - 
+251         \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tanhi[6]) <= 0.) \{
+252 \textcolor{comment}{/* ...YES - OUTPUT WARNING */}
+253     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - CUTTING ON POINT CIRCLE AT TOP OF UPPER LINE "}
+254         \textcolor{stringliteral}{"SEGMENT ***"}, darray, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{TULPOS_8c_ae9c087dbe3f8ddad13760d209cb18649}{c\_\_71}, (ftnlen)71, (ftnlen)120);
+255     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+256     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+257         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] + offset * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[k + 28] + \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.ri[6] * vec[k - 
+258             1] - \hyperlink{TULPOS_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\_1}.tlhite[6] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+259 \textcolor{comment}{/* L42: */}
+260     \}
+261 \textcolor{comment}{/* ...NO - INVALID ANGLE FOR THIS CUTTER */}
+262     \} \textcolor{keywordflow}{else} \{
+263     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" *** WARNING - UNABLE TO POSITION 7 SEGMENT CUTTER AT CURREN"}
+264         \textcolor{stringliteral}{"T SURFACE POINT - SPHERICAL CUTTER ASSUMED"}, darray, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &
+265         \hyperlink{TULPOS_8c_a0846905f461846c9c0a3036851f2c483}{c\_\_101}, (ftnlen)102, (ftnlen)120);
+266     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(darray, (ftnlen)120);
+267 
+268     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+269         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = tbef[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+270 \textcolor{comment}{/* L45: */}
+271     \}
+272     \}
+273 \textcolor{comment}{/* ...PRINT USEFUL DIAGNOSTIC INFORMATION WHEN WARNINGS OCCUR */}
+274     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SP  "}, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1], (ftnlen)4);
+275     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SN  "}, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], (ftnlen)4);
+276     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TE  "}, &\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], (ftnlen)4);
+277     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TA  "}, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], (ftnlen)4);
+278     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VEC "}, vec, (ftnlen)4);
+279     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"VECL"}, vecl, (ftnlen)4);
+280     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TANG"}, &tang, (ftnlen)4);
+281     \textcolor{keywordflow}{goto} L999;
+282 L50:
+283 \textcolor{comment}{/* --TOOL TIP ON PART SURFACE */}
+284     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+285     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.itac == 1) \{
+286 \textcolor{comment}{/* .... APPLY CUTANG BETA TO TA IN DIRECTION OF MOTION */}
+287         \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.cosb * dr[i\_\_ + 16] + *pdir * \hyperlink{TULPOS_8c_a318900938aef3666bdfca4806da79b2a}{tac\_1}.sinb * dr[i\_\_ 
+288             + 12];
+289     \} \textcolor{keywordflow}{else} \{
+290         \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = dr[i\_\_ + 16];
+291     \}
+292     \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *side * *tolcom * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_ + 28];
+293     tbef[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+294 \textcolor{comment}{/* L60: */}
+295     \}
+296 
+297 L999:
+298     \textcolor{keywordflow}{if} (\hyperlink{TULPOS_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+299     \textcolor{keywordflow}{goto} L1999;
+300     \}
+301     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{TULPOS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{TULPOS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+302     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER TULPOS"}, (ftnlen)20, (ftnlen)13);
+303     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+304     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TCOM"}, tolcom, (ftnlen)4);
+305     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TE  "}, &\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], (ftnlen)4);
+306     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TA  "}, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], (ftnlen)4);
+307     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TBEF"}, &tbef[1], (ftnlen)4);
+308 L1999:
+309 
+310     \textcolor{keywordflow}{return} 0;
+311 \} \textcolor{comment}{/* tulpos\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TULPOS_8c_af690d9d598ffe532b693462ab3a29c10_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TULPOS_8c_af690d9d598ffe532b693462ab3a29c10_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!alpha@{alpha}}
+\index{alpha@{alpha}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{alpha}{alpha}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alpha}\hypertarget{TULPOS_8c_a9d0f27da38432b15fc30f2714b642ee7}{}\label{TULPOS_8c_a9d0f27da38432b15fc30f2714b642ee7}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!beta@{beta}}
+\index{beta@{beta}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{beta}{beta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal beta}\hypertarget{TULPOS_8c_a0f4d8a67bb39acc583704de120c23b36}{}\label{TULPOS_8c_a0f4d8a67bb39acc583704de120c23b36}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{TULPOS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 47 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{TULPOS_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 40 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+101@{c\+\_\+\+\_\+101}}
+\index{c\+\_\+\+\_\+101@{c\+\_\+\+\_\+101}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+101}{c__101}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+101 = 101\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a0846905f461846c9c0a3036851f2c483}{}\label{TULPOS_8c_a0846905f461846c9c0a3036851f2c483}
+
+
+Definition at line 43 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a5e7359f78743350865398325d9155f20}{}\label{TULPOS_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 44 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}}
+\index{c\+\_\+\+\_\+38@{c\+\_\+\+\_\+38}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+38}{c__38}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+38 = 38\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a280863ace4c11cd9695eac1046336a9c}{}\label{TULPOS_8c_a280863ace4c11cd9695eac1046336a9c}
+
+
+Definition at line 41 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+\+\_\+71@{c\+\_\+\+\_\+71}}
+\index{c\+\_\+\+\_\+71@{c\+\_\+\+\_\+71}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+71}{c__71}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+71 = 71\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_ae9c087dbe3f8ddad13760d209cb18649}{}\label{TULPOS_8c_ae9c087dbe3f8ddad13760d209cb18649}
+
+
+Definition at line 42 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+b3@{c\+\_\+b3}}
+\index{c\+\_\+b3@{c\+\_\+b3}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+b3}{c_b3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+b3 = 1.\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_abda8393dbbff83238306cabf353a9d23}{}\label{TULPOS_8c_abda8393dbbff83238306cabf353a9d23}
+
+
+Definition at line 39 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}{}\label{TULPOS_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 46 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TULPOS_8c_a6d165623735ee520885e84b5052c252b}{}\label{TULPOS_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 45 of file T\+U\+L\+P\+O\+S.\+c.
+
+
+
+Referenced by tulpos\+\_\+().
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{TULPOS_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!cosa@{cosa}}
+\index{cosa@{cosa}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{cosa}{cosa}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cosa}\hypertarget{TULPOS_8c_ab83d4b14d7d327736193757586bdc118}{}\label{TULPOS_8c_ab83d4b14d7d327736193757586bdc118}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!cosb@{cosb}}
+\index{cosb@{cosb}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{cosb}{cosb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cosb}\hypertarget{TULPOS_8c_a947300fdd2c2192cde7316dc807ab7b8}{}\label{TULPOS_8c_a947300fdd2c2192cde7316dc807ab7b8}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{TULPOS_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{TULPOS_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{TULPOS_8c_ab06be320107751afb602892c35238d9a}{}\label{TULPOS_8c_ab06be320107751afb602892c35238d9a}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{TULPOS_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{TULPOS_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{TULPOS_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{TULPOS_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!itac@{itac}}
+\index{itac@{itac}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{itac}{itac}}]{\setlength{\rightskip}{0pt plus 5cm}integer itac}\hypertarget{TULPOS_8c_a6037817789a3fcc18edb1c82b00fd7e1}{}\label{TULPOS_8c_a6037817789a3fcc18edb1c82b00fd7e1}
+
+
+Definition at line 32 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!ri@{ri}}
+\index{ri@{ri}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{TULPOS_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!sina@{sina}}
+\index{sina@{sina}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{sina}{sina}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sina}\hypertarget{TULPOS_8c_ab06b664029fa83d89fed571446d42716}{}\label{TULPOS_8c_ab06b664029fa83d89fed571446d42716}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!sinb@{sinb}}
+\index{sinb@{sinb}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{sinb}{sinb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sinb}\hypertarget{TULPOS_8c_a904ed96682e934f95cd4e6a1d8696a41}{}\label{TULPOS_8c_a904ed96682e934f95cd4e6a1d8696a41}
+
+
+Definition at line 31 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tac\+\_\+@{tac\+\_\+}}
+\index{tac\+\_\+@{tac\+\_\+}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tac\+\_\+}{tac_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tac\+\_\+}\hypertarget{TULPOS_8c_ac4fe97490a859f8f4091c9ff65ddd605}{}\label{TULPOS_8c_ac4fe97490a859f8f4091c9ff65ddd605}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{TULPOS_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{TULPOS_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{TULPOS_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{TULPOS_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{TULPOS_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{TULPOS_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{TULPOS_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{TULPOS_8c_a350d13f183ae040d8ba4e1b1c3d6a70b}{}\label{TULPOS_8c_a350d13f183ae040d8ba4e1b1c3d6a70b}
+\index{T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}!umax@{umax}}
+\index{umax@{umax}!T\+U\+L\+P\+O\+S.\+c@{T\+U\+L\+P\+O\+S.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{TULPOS_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{TULPOS_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 24 of file T\+U\+L\+P\+O\+S.\+c.
+

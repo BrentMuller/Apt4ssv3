@@ -1,0 +1,2693 @@
+\hypertarget{DDPARA_8c}{}\section{D\+D\+P\+A\+R\+A.\+c File Reference}
+\label{DDPARA_8c}\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for D\+D\+P\+A\+R\+A.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{DDPARA_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\+\_\+1}~\hyperlink{UNITS_8c_adb6a68aa9fbad846f4d8d0f30dc08ccd}{sv\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a7d7892a40c1228c7ca311a419a2f34a6}{sv1\+\_\+1}~\hyperlink{UNITS_8c_a538c754ca86c03b265c2c267b61e7b26}{sv1\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\+\_\+1}~\hyperlink{ZVECT_8c_a3f367900c9f9d0188db1e3d2bd2e94c1}{znumbr\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\+\_\+1}~\hyperlink{UNITS_8c_ad4fc6b0377370872427a6fbb7b79df28}{isv\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_abe3545b3957e92e0b5ff211b7d6f7616}{isv1\+\_\+1}~\hyperlink{UNITS_8c_a5f27fd0f62d6f96b62ae9fe3ceb00067}{isv1\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a21f1c91333ff469374792c606442868b}{knumbr\+\_\+1}~\hyperlink{ZSURF_8c_a29aa7c3b45e91bbcd3d95a78d2bf1766}{knumbr\+\_\+}
+\item 
+\#define \hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu}~(equiv\+\_\+5 + 18)
+\item 
+\#define \hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv}~(equiv\+\_\+5 + 19)
+\item 
+\#define \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}~(equiv\+\_\+5 + 10)
+\item 
+\#define \hyperlink{DDPARA_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{DDPARA_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}~(equiv\+\_\+5 + 12)
+\item 
+\#define \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}~(equiv\+\_\+5)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DDPARA_8c_ab4f02f087174e02bebf74e32a1b8b918}{ddpara\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{DDPARA_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{DDPARA_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{DDPARA_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{DDPARA_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{DDPARA_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{DDPARA_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{DDPARA_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{DDPARA_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{DDPARA_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{DDPARA_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{DDPARA_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{DDPARA_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{DDPARA_8c_a60b6e769494fcc7c85ae340ea6837013}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{DDPARA_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{DDPARA_8c_a2f84e7c299d87dc2bde5f0be33da01b0}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{DDPARA_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{DDPARA_8c_abeeea7ae481a848a73631368e89376dc}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{DDPARA_8c_a4a672b1cc1657e411e2094d8631246c2}{cc} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a306d2abf316a42b2d06c636c581fbc05}{eps1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a2fd05e25992e6a9456646532a7ed3148}{eps2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a13ab03ebf3099fa722e8584f54a14f94}{eps3} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ad4286f6c2b33f25799d6156480bd622d}{eps4} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a68951ca3ed42d540274e5dd702aa30b2}{eps6} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{eps8} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aae4751b2b0e0fe3b5f62f710ef406288}{past} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{plnd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_abcbe27eb4ab55c21433ba237b064da23}{plnv} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a8fafde5aff46b55bddfc42a93803fffc}{rc} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aade1308b2b48aaa8db461e4665eb7e19}{save} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a6a6f46271f4c2c8e68568b8bee68f673}{sfvct} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_affaf74dabdb513fe55fa48a1091a82f0}{sn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aa584da8857a16c65bd611d5b5686d8ec}{snk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a4c96f9ead3daa534244888dd312b3595}{snl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ae1ea305557352179a5595123e4f7bef9}{sp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5eb35651944d7d53ca1371c8f4403522}{spk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a032b8e76f8a4cec214831255a4b77e7a}{spl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a3ef97769b90b935351a0da2c5c17f1ba}{tau} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a3293541b256a7b52a653b554ec1eef71}{tau1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a7cc16120d8b89a97df6d011487794d7a}{tau2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5e192eb5193c9ab9e167e2554641adad}{th} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a66b316fa3299925e5c7630d5af6601fd}{tn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{toolht} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_acfdd4327e78cee83f784e0081fd71ead}{toolwd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_acd57028107f202bf733ae94db320fd40}{tpk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a86f48fbc667fd3e391a5a60472a760d9}{u1} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a76207f20e8ae300641df122e994c2374}{vndir} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a20c7b8bac268c28674d17aa05f813d9f}{vt} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a6587d13eed8675f3bf2284fc673780f2}{varble} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_aef9f4548d89972753d95640b4cf4c502}{u1k} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk} \mbox{[}15\mbox{]}\\
+\} \hyperlink{DDPARA_8c_a89f9afca6fd9d39c2e1f61ff5c0e546d}{sv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{DDPARA_8c_aa061b11706c46e4e7299be7f1dd355ef}{cos1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a17ab077f9704191cec3623b32182b8ba}{cplfl} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a826f9bb61ad3ef7b009c7631b75374f6}{cptst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{csd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a819ff3967ced7fbb549308a6e4b91bcb}{dplan} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a4360acf0e48136e91364bd7cce121547}{dpmx1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{plncs} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{plnd1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_acc41d3833fec2bd10e8f654e00d49fa6}{pltst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a0c07ccb74eb243d4d456e818d258bce8}{stck} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a94fa54ae2c242297cc118d31155ab356}{stckn} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{stck1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a4b0340102da75d0c19859ea11879a4f4}{stck2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a5ca1f63566c2594f3e3868b91d997b73}{tee} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{DDPARA_8c_a51ea6eff10429675b532a43be770e881}{tnl} \mbox{[}15\mbox{]}\\
+\} \hyperlink{DDPARA_8c_acbd8b1f9a7eaf62efc531b952d6e544b}{sv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{DDPARA_8c_a481b969667dca33a978c50980dd5480c}{z0}\\
+\>doublereal \hyperlink{DDPARA_8c_a41055aeef4eac887032302f59c372d57}{z1}\\
+\>doublereal \hyperlink{DDPARA_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{z2}\\
+\>doublereal \hyperlink{DDPARA_8c_a8f55453e5803c6b7e40916652c5d1a1d}{z3}\\
+\>doublereal \hyperlink{DDPARA_8c_aa4fd0f4665690f94ffacd9717fe96527}{z5}\\
+\>doublereal \hyperlink{DDPARA_8c_aa269f590808672b62394f95529f5eed9}{z10}\\
+\>doublereal \hyperlink{DDPARA_8c_ae13651cd40a033422260cdc23ffec6ee}{z90}\\
+\>doublereal \hyperlink{DDPARA_8c_aadeb12cf35e33207bf3909df1ca2df8a}{z1e6}\\
+\>doublereal \hyperlink{DDPARA_8c_a54466da286c37008238f319ca2c1fcc8}{z1e38}\\
+\>doublereal \hyperlink{DDPARA_8c_a73fab3947fdf80ebb30f5648a8d00fc2}{z5em1}\\
+\>doublereal \hyperlink{DDPARA_8c_ad989bf7970831e6fdd01873f41330efe}{z6em1}\\
+\>doublereal \hyperlink{DDPARA_8c_a7baed3711543adae0b30175a6f65bb05}{z9em1}\\
+\>doublereal \hyperlink{DDPARA_8c_a3f1f266b30d3b7eba90480d3f539a117}{z11em1}\\
+\>doublereal \hyperlink{DDPARA_8c_ad973ea9385b44d34c6e2e80f960cb440}{z12em1}\\
+\>doublereal \hyperlink{DDPARA_8c_accbaaca0db62b7e3c5cbb58ac70362d8}{z1em2}\\
+\>doublereal \hyperlink{DDPARA_8c_a01b2258ff2d4f29acf4d08abeaa3a452}{z1em3}\\
+\>doublereal \hyperlink{DDPARA_8c_aac8d9f7631d21b7d6c4d8df398b64160}{z1em5}\\
+\>doublereal \hyperlink{DDPARA_8c_a762dda37f2f2be01802d7bf687a99b04}{z5em6}\\
+\>doublereal \hyperlink{DDPARA_8c_ab9643fe633c5a36a67e387b1c88d5179}{z1em6}\\
+\>doublereal \hyperlink{DDPARA_8c_a34884c645f1e0e39c41d505703dc3f13}{z1em7}\\
+\>doublereal \hyperlink{DDPARA_8c_a80fb270da2439b4d5e3b4e50c88548e8}{z1em9}\\
+\>doublereal \hyperlink{DDPARA_8c_aa5631b46f057869bf9f5e283710470bf}{z1em1}\\
+\>doublereal \hyperlink{DDPARA_8c_a9b8d263c925eaec48eeefcbb2319e2b9}{zm1}\\
+\>doublereal \hyperlink{DDPARA_8c_a4873cbd96c87e32cd7745b96c5a00484}{degrad}\\
+\>doublereal \hyperlink{DDPARA_8c_a7f0cd6132604ba32b060b73483eabcf9}{pi}\\
+\} \hyperlink{DDPARA_8c_a4f7f91795994487a526e5d84368dc9bf}{znumbr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{DDPARA_8c_a013f46224a863d563c172ad966d9fe4c}{iafl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{icanon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{index} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a367d578680d6741b0eeea4c18126ac85}{indir\_\_} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_aca4c6ef2418548013d1f0ab199eb5e87}{iop} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a46fc792e9db2a4119bde6d3c50066efe}{iopset} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a98035b4872e906175c3748d8671bcb41}{isfidn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_af06b6af8617105f43da7a0aef4a181d3}{isftyp} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a96c4543ff4eb51c15078a4a13a13d649}{isigcr} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a69d12d072150ac44e875ee991d8977f9}{isvfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_ab9c16758977bf15e0118791ac83246a1}{itlon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a69f16ad43b2d69c2a5523493a25092a6}{itseg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_ad01cb824e786c997cae01775374c6ace}{iunfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{jent} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_af70b7cc90fdc72684506b074764f24d3}{jiops} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a9e8f1743a1265c0508b32682a31dbe13}{jtlflg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a27bfdec33da656b3e0afaa8b256d465c}{jtn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a9d5a9d53b0b600853a83109858c7aa7a}{ju1} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a7a26ee648d4eb235d68b74eb27698f51}{limfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a0365571ddfd59f3b0b636c72a4e09742}{itsegk} \mbox{[}5\mbox{]}\\
+\} \hyperlink{DDPARA_8c_a58dd0cf7084e0e0a292127443b1fdd76}{isv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{DDPARA_8c_ae6268067a45faf1f09717de826908b42}{ifar} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{ifl4} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_ab5e196a210774e8188a9adc08fab5675}{j20} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a71bea2c042deec0e209e8c6b819bb7f8}{j21} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{j22} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a8965b32ed9d3092eb5279607f8dc835b}{j23} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{j50} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_aaf9771df39ea6eb440d196395622d970}{j51} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_a3bf651bea75c52977866902524484444}{notan} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{DDPARA_8c_af639d946bee2fc95e223cbba2f6f6f59}{jph} \mbox{[}5\mbox{]}\\
+\} \hyperlink{DDPARA_8c_a817f02f7dc376e06b61846e7f7ae835a}{isv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{DDPARA_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{DDPARA_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{DDPARA_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{DDPARA_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{DDPARA_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{DDPARA_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{DDPARA_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{DDPARA_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{DDPARA_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{DDPARA_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{DDPARA_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{DDPARA_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{DDPARA_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{DDPARA_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{DDPARA_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{DDPARA_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{DDPARA_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{DDPARA_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{DDPARA_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{DDPARA_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{DDPARA_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{DDPARA_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{DDPARA_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{DDPARA_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{DDPARA_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{DDPARA_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{DDPARA_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{DDPARA_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{DDPARA_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{DDPARA_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{DDPARA_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{DDPARA_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{DDPARA_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{DDPARA_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{DDPARA_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{DDPARA_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{DDPARA_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{DDPARA_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{DDPARA_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{DDPARA_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{DDPARA_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{DDPARA_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{DDPARA_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{DDPARA_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{DDPARA_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{DDPARA_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{DDPARA_8c_a9a4ee98208bdfbd1968a938d5ccd4c1b}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{DDPARA_8c_a13677e8ba227917ca91f45226e0d3901}{k0}\\
+\>integer \hyperlink{DDPARA_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1}\\
+\>integer \hyperlink{DDPARA_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}{k2}\\
+\>integer \hyperlink{DDPARA_8c_a3866972f3ea150072127b2201402d9d4}{k3}\\
+\>integer \hyperlink{DDPARA_8c_acb95ee3962e080a7bd4b1803f0e5b523}{k4}\\
+\>integer \hyperlink{DDPARA_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}{k5}\\
+\>integer \hyperlink{DDPARA_8c_a9d2169cf4480bef94ed0a8314b8db1dd}{k6}\\
+\>integer \hyperlink{DDPARA_8c_a24f68e08b66e38de783a4e6b4eceddab}{k7}\\
+\>integer \hyperlink{DDPARA_8c_ab053f60993666d2c1a5b0e9e2bba9046}{k8}\\
+\>integer \hyperlink{DDPARA_8c_a5826c29dac15034ea8d3c4e6e2465665}{k9}\\
+\>integer \hyperlink{DDPARA_8c_a07f3fe8797e442c47bdf306bd8b35048}{k10}\\
+\>integer \hyperlink{DDPARA_8c_a42e4e1be80d05c7bf76276703d1ffcbf}{k12}\\
+\>integer \hyperlink{DDPARA_8c_ac6a9481817364f5859074056e6b72045}{k13}\\
+\>integer \hyperlink{DDPARA_8c_a38659ef45de4861b45cfd4278df03219}{k15}\\
+\>integer \hyperlink{DDPARA_8c_ad364fb849a04482c15fcc03b9f881017}{k16}\\
+\>integer \hyperlink{DDPARA_8c_ab01565338ee1b2e250f1cf4e702c7ec4}{k18}\\
+\>integer \hyperlink{DDPARA_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}{k19}\\
+\>integer \hyperlink{DDPARA_8c_a67c7f5e745cc5c87641ed7ab6ed03903}{k23}\\
+\>integer \hyperlink{DDPARA_8c_a6c8801a0c24128524808626f23c83534}{k24}\\
+\>integer \hyperlink{DDPARA_8c_a3972e8edc94bf990b8385833d7773994}{k25}\\
+\>integer \hyperlink{DDPARA_8c_a603cc5680e6e6b99afcc067ab006838e}{k26}\\
+\>integer \hyperlink{DDPARA_8c_a3224d57413c1ca0f52246767baaca01e}{k27}\\
+\>integer \hyperlink{DDPARA_8c_ab54bc0ad9982243ba0e73e713878b659}{k29}\\
+\>integer \hyperlink{DDPARA_8c_a0df4216958f1b812fafd7c5aca19f0e2}{k30}\\
+\>integer \hyperlink{DDPARA_8c_ad095380d9a72dcd452b64020fc4957e0}{k31}\\
+\>integer \hyperlink{DDPARA_8c_a86b7e9432a6c1b7f61a88051851b24be}{k32}\\
+\>integer \hyperlink{DDPARA_8c_adf6b3def53640bafe1e81e9c52c28a34}{k33}\\
+\>integer \hyperlink{DDPARA_8c_aec13dcc4a3284eeb2691c803d6054add}{k34}\\
+\>integer \hyperlink{DDPARA_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}{k44}\\
+\>integer \hyperlink{DDPARA_8c_a782a3eba88202041c8c249663f4548f3}{k45}\\
+\>integer \hyperlink{DDPARA_8c_ae0697d44870d385f3a5a921e241a6571}{k46}\\
+\>integer \hyperlink{DDPARA_8c_a9a6acf2b9128519edae03effd959fdce}{k47}\\
+\>integer \hyperlink{DDPARA_8c_a66c948e011f45b91f275757881efab87}{k48}\\
+\>integer \hyperlink{DDPARA_8c_a245c8290483ddfb55991fdb8dd2db544}{k50}\\
+\>integer \hyperlink{DDPARA_8c_af50475a68a63f0f722752c6ee53e2fa9}{k51}\\
+\>integer \hyperlink{DDPARA_8c_acfe975e1d64237134dbad03554d161fe}{k52}\\
+\>integer \hyperlink{DDPARA_8c_aec5c3e1b9188ab217a8f279b765ae33e}{k1013}\\
+\>integer \hyperlink{DDPARA_8c_a33fee8be0fef4573e4671cddfd9dda7c}{k1e4}\\
+\>integer \hyperlink{DDPARA_8c_a78581c927af2b13d7b9bbc9dcd710e0a}{k1e6}\\
+\>integer \hyperlink{DDPARA_8c_a8df3536c5500bc8b920c38503103b6bd}{km1}\\
+\} \hyperlink{DDPARA_8c_a02933812e0568bd08d30212c5483497a}{knumbr\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{DDPARA_8c_a9f99db84906985250fa7bef9423f7d97}{c\+\_\+\+\_\+27004} = 27004
+\item 
+static integer \hyperlink{DDPARA_8c_afa1db21260a660437a147be5a878d1bd}{c\+\_\+\+\_\+27005} = 27005
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{DDPARA_8c_a5d8742d837dd932468df10068bbc1875}{}\label{DDPARA_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 30 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{DDPARA_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{DDPARA_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!dif@{dif}}
+\index{dif@{dif}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{dif}{dif}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dif~(equiv\+\_\+5 + 10)}\hypertarget{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{}\label{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}
+
+
+Referenced by ader\+\_\+(), angseg\+\_\+(), aprix\+\_\+(), blendf\+\_\+(), chdseg\+\_\+(), crvlen\+\_\+(), ddpara\+\_\+(), ddssrf\+\_\+(), forcub\+\_\+(), pchprc\+\_\+(), puvloc\+\_\+(), revolv\+\_\+(), scurv\+\_\+(), and sspath\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!disp@{disp}}
+\index{disp@{disp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{disp}{disp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define disp~(equiv\+\_\+5 + 12)}\hypertarget{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{}\label{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}
+
+
+Referenced by apt034\+\_\+(), ddpara\+\_\+(), and srfcom\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 24 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 97 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isv1\+\_\+1@{isv1\+\_\+1}}
+\index{isv1\+\_\+1@{isv1\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+1}{isv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv1\+\_\+1~{\bf isv1\+\_\+}}\hypertarget{DDPARA_8c_abe3545b3957e92e0b5ff211b7d6f7616}{}\label{DDPARA_8c_abe3545b3957e92e0b5ff211b7d6f7616}
+
+
+Definition at line 87 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isv\+\_\+1@{isv\+\_\+1}}
+\index{isv\+\_\+1@{isv\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+1}{isv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv\+\_\+1~{\bf isv\+\_\+}}\hypertarget{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{}\label{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}
+
+
+Definition at line 80 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!knumbr\+\_\+1@{knumbr\+\_\+1}}
+\index{knumbr\+\_\+1@{knumbr\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+1}{knumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define knumbr\+\_\+1~{\bf knumbr\+\_\+}}\hypertarget{DDPARA_8c_a21f1c91333ff469374792c606442868b}{}\label{DDPARA_8c_a21f1c91333ff469374792c606442868b}
+
+
+Definition at line 105 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{DDPARA_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{DDPARA_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sv1\+\_\+1@{sv1\+\_\+1}}
+\index{sv1\+\_\+1@{sv1\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+1}{sv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv1\+\_\+1~{\bf sv1\+\_\+}}\hypertarget{DDPARA_8c_a7d7892a40c1228c7ca311a419a2f34a6}{}\label{DDPARA_8c_a7d7892a40c1228c7ca311a419a2f34a6}
+
+
+Definition at line 63 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sv\+\_\+1@{sv\+\_\+1}}
+\index{sv\+\_\+1@{sv\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+1}{sv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv\+\_\+1~{\bf sv\+\_\+}}\hypertarget{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{}\label{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}
+
+
+Definition at line 54 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!temp1@{temp1}}
+\index{temp1@{temp1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{temp1}{temp1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define temp1~(equiv\+\_\+5)}\hypertarget{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{}\label{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}
+
+
+Referenced by cplan\+\_\+(), crblen\+\_\+(), and ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{DDPARA_8c_ac473806d761bac6bbdc70810932acff0}{}\label{DDPARA_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 37 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!uu@{uu}}
+\index{uu@{uu}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{uu}{uu}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uu~(equiv\+\_\+5 + 18)}\hypertarget{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{}\label{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}
+
+
+Referenced by apt109\+\_\+(), ddpara\+\_\+(), and ddssrf\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!vv@{vv}}
+\index{vv@{vv}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{vv}{vv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vv~(equiv\+\_\+5 + 19)}\hypertarget{DDPARA_8c_a148551604daa786f627d4e99497af58b}{}\label{DDPARA_8c_a148551604daa786f627d4e99497af58b}
+
+
+Referenced by angder\+\_\+(), apt109\+\_\+(), ddpara\+\_\+(), and ddssrf\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!znumbr\+\_\+1@{znumbr\+\_\+1}}
+\index{znumbr\+\_\+1@{znumbr\+\_\+1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+1}{znumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define znumbr\+\_\+1~{\bf znumbr\+\_\+}}\hypertarget{DDPARA_8c_a747f55b761c50dbd8b70af26e8146204}{}\label{DDPARA_8c_a747f55b761c50dbd8b70af26e8146204}
+
+
+Definition at line 71 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ddpara\+\_\+@{ddpara\+\_\+}}
+\index{ddpara\+\_\+@{ddpara\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ddpara\+\_\+(doublereal $\ast$u, doublereal $\ast$v)}{ddpara_(doublereal *u, doublereal *v)}}]{\setlength{\rightskip}{0pt plus 5cm}int ddpara\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{DDPARA_8c_ab4f02f087174e02bebf74e32a1b8b918}{}\label{DDPARA_8c_ab4f02f087174e02bebf74e32a1b8b918}
+
+
+Definition at line 116 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+References aerr\+\_\+(), c\+\_\+\+\_\+27004, c\+\_\+\+\_\+27005, ckdef\+\_\+(), cross\+\_\+(), dif, disp, dot, dtemp, f, fxcor\+\_\+1, ifxcor\+\_\+1, isv\+\_\+1, l, lcls\+\_\+(), ll, mmode, mode, p, parlnd\+\_\+(), px, sv\+\_\+1, t1, t2, temp1, u, us, uu, v, vnorm\+\_\+(), and vv.
+
+
+
+Referenced by ddpars\+\_\+().
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{comment}{/* Initialized data */}
+119 
+120     \textcolor{keyword}{static} integer ifstt[4] = \{ 0,0,0,0 \};
+121 
+122     \textcolor{comment}{/* System generated locals */}
+123     integer i\_\_1;
+124     doublereal d\_\_1, d\_\_2, d\_\_3;
+125     \textcolor{keyword}{static} doublereal equiv\_5[25];
+126 
+127     \textcolor{comment}{/* Builtin functions */}
+128     \textcolor{keywordtype}{double} sqrt(doublereal);
+129 
+130     \textcolor{comment}{/* Local variables */}
+131     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+132     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[3], \hyperlink{APT088_8c_a65f7891fccbfcf7d08964555630773b3}{t1}[3], \hyperlink{TRANSM_8c_aa4652e2d6053d420dcbea07a113db5fe}{t2}[3];
+133 \textcolor{preprocessor}{#define uu (equiv\_5 + 18)}
+134 \textcolor{preprocessor}{#define vv (equiv\_5 + 19)}
+135     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a7ed0547db575cfd1c4f78dcafde0d130}{us}[25], vs[25];
+136     \textcolor{keyword}{static} integer ip, \hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll};
+137     \textcolor{keyword}{static} doublereal tu, tv, \hyperlink{ACNTRL_8c_a8fbd5864c68da561728726a51fa7d197}{px};
+138     \textcolor{keyword}{static} integer is2;
+139     \textcolor{keyword}{static} doublereal py, sa;
+140 \textcolor{preprocessor}{#define dif (equiv\_5 + 10)}
+141     \textcolor{keyword}{static} doublereal ang, den;
+142     \textcolor{keyword}{static} integer lct;
+143     \textcolor{keyword}{static} doublereal \hyperlink{RECOG_8c_adecf5d6273480fb438d640425e20b40d}{dot};
+144     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+145     \textcolor{keyword}{static} doublereal sdif[3];
+146     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+147     \textcolor{keyword}{static} doublereal ddum;
+148 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+149 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+150 \textcolor{preprocessor}{#define disp (equiv\_5 + 12)}
+151     \textcolor{keyword}{static} doublereal deru[12]  \textcolor{comment}{/* was [3][4] */}, derv[12]  \textcolor{comment}{/* was [3][4] }
+152 \textcolor{comment}{        */}, spll[3], pdum[3], z1em4;
+153     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LCLS_8c_a9bd153e97d7e134e6f9b151d03ef3f54}{lcls\_}(doublereal *, doublereal *, doublereal *
+154         , doublereal *, doublereal *, integer *);
+155     \textcolor{keyword}{static} doublereal zang, xang;
+156 \textcolor{preprocessor}{#define temp1 (equiv\_5)}
+157     \textcolor{keyword}{static} doublereal pdum1[3];
+158     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+159     \textcolor{keyword}{static} integer ifail, \hyperlink{SSDEF_8c_af4f5a097223e7eee43089d20536eb1ef}{mmode};
+160     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_adbacd788881042bd36f42705df3f174d}{dtemp};
+161     \textcolor{keyword}{static} integer inorm;
+162     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *), \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(
+163         doublereal *, doublereal *, doublereal *);
+164     \textcolor{keyword}{static} doublereal pcurv;
+165     \textcolor{keyword}{static} integer jentl, idebug;
+166     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{PARLND_8c_ab43390baa4101688bc529d81111b3175}{parlnd\_}(doublereal *, doublereal *, 
+167         doublereal *, doublereal *, doublereal *, doublereal *, 
+168         doublereal *, doublereal *, doublereal *, doublereal *, integer *,
+169          integer *, integer *);
+170 
+171 
+172 
+173 
+174 \textcolor{comment}{/* ...  ALL REFERENCES TO TEMP HAVE BEEN CHANGED TO TEMP1, AS */}
+175 \textcolor{comment}{/* ...  TEMP OCCURS IN FXCOR.INC */}
+176 
+177 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+178 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+179 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+180 
+181 
+182 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+183 
+184 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+185 
+186 
+187 
+188 
+189 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+190 
+191 
+192 
+193 
+194 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+195 
+196 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+197 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+198 
+199 
+200 
+201 
+202 
+203 \textcolor{comment}{/*   *** 9.  SV BLOCK *** */}
+204 
+205 \textcolor{comment}{/*   REAL SURFACE VARIABLES */}
+206 
+207 
+208 
+209 
+210 
+211 
+212 \textcolor{comment}{/*   ***  10.  ZNUMBR BLOCK  *** */}
+213 
+214 \textcolor{comment}{/*   REAL LITERALS */}
+215 
+216 
+217 
+218 
+219 \textcolor{comment}{/*   *** 12.  ISV BLOCK  *** */}
+220 
+221 \textcolor{comment}{/*   INTEGER SURFACE VARIABLES */}
+222 
+223 
+224 
+225 
+226 
+227 
+228 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+229 
+230 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+231 
+232 
+233 
+234 
+235 
+236 \textcolor{comment}{/*   ***  19.  KNUMBR BLOCK  *** */}
+237 
+238 \textcolor{comment}{/*      INTEGER LITERALS */}
+239 
+240 
+241 
+242 
+243 \textcolor{comment}{/*  --------------------------------------------------------------~ */}
+244 
+245     z1em4 = 3e-5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+246     idebug = 0;
+247     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+248     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+249     is2 = \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is + 2;
+250     ip = \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is / 80;
+251     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.jent[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] == 0) \{
+252     ifstt[ip - 1] = 0;
+253     \}
+254     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.jent[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] == 1 && ifstt[ip - 1] == 0) \{
+255     \textcolor{keywordflow}{goto} L4040;
+256     \}
+257     mmode = 2;
+258 L4039:
+259     mode = 2;
+260     \textcolor{keywordflow}{goto} L4090;
+261 L4040:
+262     mmode = 1;
+263     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u})) \{
+264     \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(&\hyperlink{DDPARA_8c_a9f99db84906985250fa7bef9423f7d97}{c\_\_27004}, \textcolor{stringliteral}{"DDPARA  "}, (ftnlen)8);
+265     \}
+266     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v})) \{
+267     \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(&\hyperlink{DDPARA_8c_afa1db21260a660437a147be5a878d1bd}{c\_\_27005}, \textcolor{stringliteral}{"DDPARA  "}, (ftnlen)8);
+268     \}
+269     ifstt[ip - 1] = 1;
+270     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.istrup == 1 && \hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.indir\_\_[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] == 1) \{
+271     \textcolor{keywordflow}{goto} L4039;
+272     \}
+273 \textcolor{comment}{/* ------MODE=1 MEANS AN SNXP COMPUTATION IS BEING REQUESTED */}
+274 \textcolor{comment}{/* ------ COMPUTE THE CLOSEST POINT ON THE TANGENT PLANE TO THE TOOL POINT */}
+275     mode = 1;
+276 L4090:
+277     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[0] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+278     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+279     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[2] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+280     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[3] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+281     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[4] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+282     \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[5] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+283 \textcolor{comment}{/* ------THE FOLLOWING LOOP ATTEMPTS BY AN ITERATIVE TECHNIQUE, TO */}
+284 \textcolor{comment}{/* ------FIND THE SURFACE POINT SP AND SURFACE NORMAL SN WHERE THE */}
+285 \textcolor{comment}{/* ------TOOL RAY TP,TN INTERSECTS THE SURFACE */}
+286     lct = 0;
+287 L10:
+288     \hyperlink{LCLS_8c_a9bd153e97d7e134e6f9b151d03ef3f54}{lcls\_}(\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu}, \hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv}, &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], &deru[ip * 3 - 3], &derv[ip *
+289          3 - 3], &mmode);
+290 \textcolor{comment}{/* ------THE ABOVE CALL INITIATES A LINKAGE OF A PROGRAMMER SUPPLIED */}
+291 \textcolor{comment}{/* ------FORTRAN SUBROUTINE WHICH DEFINES THE CURRENT PARAMETRIC */}
+292 \textcolor{comment}{/* ------SURFACE.  THE PARAMETER VALUES U,V,W ARE INITIALLY SUPPLIED */}
+293 \textcolor{comment}{/* ------FROM THE PART PROGRAM TO GIVE THIS ALGORITHM A GOOD STARTUP */}
+294 \textcolor{comment}{/* ------POINT  THE SURFACE PT AND NORMAL CORRESPONDING TO THESE */}
+295 \textcolor{comment}{/* ------PARAMETER VALUES ARE RETURNED.  THEREAFTER, THE ROUTINE */}
+296 \textcolor{comment}{/* ------MODIFIES THE U V PARAMETER VALUES UNTIL THEY GENERATE A GOOD */}
+297 \textcolor{comment}{/* ------SURFACE POINT */}
+298     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+299     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+300     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+301 \textcolor{comment}{/* L22: */}
+302     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[
+303         1] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+304         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+305 \textcolor{comment}{/* ------IF TOOL POINT AND SURF PT ARE CLOSE THEN MAKE NORMAL EXIT */}
+306 \textcolor{comment}{/* Computing 2nd power */}
+307     d\_\_1 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0];
+308 \textcolor{comment}{/* Computing 2nd power */}
+309     d\_\_2 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1];
+310 \textcolor{comment}{/* Computing 2nd power */}
+311     d\_\_3 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2];
+312     dtemp = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+313     inorm = 1;
+314     \textcolor{keywordflow}{if} (dtemp < z1em4) \{
+315     \textcolor{keywordflow}{goto} L40;
+316     \}
+317 \textcolor{comment}{/* ------ IF IMODE=1 CHECK FOR SUFACE NORMAL ALLIGNMENT WITH TOOL POINT */}
+318     zang = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] + \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 
+319         - 2] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] + \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2];
+320     xang = abs(zang) / \hyperlink{AERR2_8c_adbacd788881042bd36f42705df3f174d}{dtemp};
+321     \textcolor{keywordflow}{if} (mode == 1 && (d\_\_1 = xang - 1.f, abs(d\_\_1)) < z1em4) \{
+322     \textcolor{keywordflow}{goto} L40;
+323     \}
+324     ang = 1.f - (d\_\_1 = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] / \hyperlink{AERR2_8c_adbacd788881042bd36f42705df3f174d}{dtemp}, abs(d\_\_1));
+325     den = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + 
+326         \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + 
+327         \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+328 \textcolor{comment}{/* ------IF THE TOOL NORMAL AND SURFACE NORMAL ARE NEARLY PERPENDICULAR */}
+329 \textcolor{comment}{/* ------THEN TAKE AN ABNORMAL EXIT */}
+330     inorm = 2;
+331     \textcolor{keywordflow}{if} (mode == 2 && abs(den) < z1em4) \{
+332     \textcolor{keywordflow}{goto} L70;
+333     \}
+334 \textcolor{comment}{/* ------THE FIRST TIME THROUGH, COMPUTE THE INTERSECTION OF THE */}
+335 \textcolor{comment}{/* ------TOOL RAY TP,TN AND THE STARTUP SURFACE PLANE */}
+336     \textcolor{keywordflow}{if} (abs(den) > 1e-6) \{
+337     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] /= den;
+338     \}
+339 \textcolor{comment}{/* ------IF THE SURFACE POINT IS CLOSE TO THE TOOL RAY, THEN EXIT NORMALLY */}
+340     dot = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] * 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+341         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+342     \textcolor{keywordflow}{for} (ll = 1; ll <= 3; ++\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}) \{
+343 \textcolor{comment}{/* L6031: */}
+344     pdum[ll - 1] = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[ll - 1] - dot * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[ll + \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 4]
+345         ;
+346     \}
+347 \textcolor{comment}{/* Computing 2nd power */}
+348     d\_\_1 = pdum[0];
+349 \textcolor{comment}{/* Computing 2nd power */}
+350     d\_\_2 = pdum[1];
+351 \textcolor{comment}{/* Computing 2nd power */}
+352     d\_\_3 = pdum[2];
+353     ddum = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+354     inorm = 4;
+355     \textcolor{keywordflow}{if} (mode == 2 && ddum < z1em4) \{
+356     \textcolor{keywordflow}{goto} L40;
+357     \}
+358     \textcolor{keywordflow}{if} (mode == 1) \{
+359     \textcolor{keywordflow}{goto} L501;
+360     \}
+361 \textcolor{comment}{/* ------P IS THE POINT OF INTERSECTION OF TANGENT PLANE AND TOOL RAY */}
+362     p[0] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] * 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+363         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+364     p[1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] * 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+365         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+366     p[2] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] + \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] * 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+367         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+368     \textcolor{keywordflow}{goto} L601;
+369 L501:
+370     p[0] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + zang * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+371     p[1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + zang * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+372     p[2] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] + zang * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+373 L601:
+374     \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[0] = p[0] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+375     \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[1] = p[1] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+376     \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[2] = p[2] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+377 \textcolor{comment}{/* ------FIND A CHANGE DU,DV IN U,V SUCH THAT DU*DERU+DV*DERV=DISP */}
+378     \textcolor{keywordflow}{for} (l = 1; l <= 6; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+379 \textcolor{comment}{/* L5014: */}
+380     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1] = 0.;
+381     \}
+382     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+383     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] += deru[l + ip * 3 - 4] * deru[l + ip * 3 - 4];
+384     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] += deru[l + ip * 3 - 4] * derv[l + ip * 3 - 4];
+385     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] += derv[l + ip * 3 - 4] * derv[l + ip * 3 - 4];
+386     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4] += \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] * deru[l + ip * 3 - 4];
+387 \textcolor{comment}{/* L5015: */}
+388     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5] += \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] * derv[l + ip * 3 - 4];
+389     \}
+390     \textcolor{keywordflow}{for} (l = 1; l <= 6; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+391     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1], abs(d\_\_1)) < 1e-30) \{
+392         \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1] = 0.f;
+393     \}
+394 \textcolor{comment}{/* L5016: */}
+395     \}
+396 \textcolor{comment}{/* Computing 2nd power */}
+397     d\_\_1 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1];
+398     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3] = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] - d\_\_1 * d\_\_1;
+399     \textcolor{keywordflow}{if} (abs(\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3]) < 1e-30) \{
+400     \textcolor{keywordflow}{goto} L40;
+401     \}
+402     \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[0] = (\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4] - \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5]) / 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3];
+403     \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[1] = (\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5] - \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4]) / 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3];
+404     tu = *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} + \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[0];
+405     tv = *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} + dif[1];
+406     \textcolor{keywordflow}{if} (mode == 3) \{
+407     \textcolor{keywordflow}{goto} L3041;
+408     \}
+409 \textcolor{comment}{/* ------SAVE THE CURRENT SURFACE NORMAL SINCE LCLS RESETS SN */}
+410     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+411 \textcolor{comment}{/* L6713: */}
+412     t1[l - 1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[l + \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 4];
+413     \}
+414     \hyperlink{LCLS_8c_a9bd153e97d7e134e6f9b151d03ef3f54}{lcls\_}(&tu, &tv, spll, pdum, pdum1, &mmode);
+415 \textcolor{comment}{/* ------RESTORE THE OLD SURFACE NORMAL */}
+416     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+417 \textcolor{comment}{/* L6714: */}
+418     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[l + \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 4] = t1[l - 1];
+419     \}
+420 \textcolor{comment}{/* ------AFTER THE FIRST PASS, USE THE LAST SURFACE POINT AND PARA- */}
+421 \textcolor{comment}{/* ------BOLIC INTERPOLATION TO ESTIMATE BETTER U,V VALUES */}
+422 \textcolor{comment}{/* L3100: */}
+423 \textcolor{comment}{/* ------FIRST SETUP THE APPROXIMATING PARABOLA TO THE SURFACE */}
+424     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+425 \textcolor{comment}{/* L3040: */}
+426     sdif[l - 1] = spll[l - 1] - \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[l + \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 4];
+427     \}
+428     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(sdif, sdif);
+429     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.vtem > 1e-12) \{
+430     \textcolor{keywordflow}{goto} L3042;
+431     \}
+432     ifstt[ip - 1] = 3;
+433     mode = 3;
+434 L3041:
+435     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} = tu;
+436     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} = tv;
+437     \textcolor{keywordflow}{goto} L10;
+438 L3042:
+439     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(sdif, &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], t1);
+440     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(t1, &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], t2);
+441     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(t2, t2);
+442 \textcolor{comment}{/* ------ T2 IS NOW THE PARABOLIC TANGENT VECTOR */}
+443     px = sdif[0] * t2[0] + sdif[1] * t2[1] + sdif[2] * t2[2];
+444     py = sdif[0] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] + sdif[1] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[
+445         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] + sdif[2] * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+446     pcurv = py / (px * \hyperlink{ACNTRL_8c_a8fbd5864c68da561728726a51fa7d197}{px});
+447 \textcolor{comment}{/* ------ THE PARABOLA IS NOW R(S) = SP + S*T2 + S**2*PCURV*SN */}
+448     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+449 \textcolor{comment}{/* L3050: */}
+450     t1[l - 1] = pcurv * \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[l + \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 4];
+451     \}
+452 \textcolor{comment}{/* ------ NOW CALL FOR THE CLOSEST APPROACH BETWEEN THE PARABOLA AND */}
+453 \textcolor{comment}{/* ------AND THE TOOL RAY */}
+454     \hyperlink{PARLND_8c_ab43390baa4101688bc529d81111b3175}{parlnd\_}(&\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], &
+455         \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], t2, t1, &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1], 
+456         pdum, &sa, pdum1, &ddum, &mode, &\hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.iop[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1], &
+457         ifail);
+458     \textcolor{keywordflow}{if} (ifail == 1) \{
+459     \textcolor{keywordflow}{goto} L70;
+460     \}
+461 \textcolor{comment}{/* ------ IF THE TOOL RAY LIES CLOSE TO THE PARABOLA, THEN EXIT NORMALLY */}
+462 \textcolor{comment}{/* ------ON RETURN, S(IS) IS THE DISTANCE ALONG THE TOOL NORMAL FROM */}
+463 \textcolor{comment}{/* ------TP TO CLOSEST APPROACH TO THE PARABOLA.  SA IS THE PARAMETER */}
+464 \textcolor{comment}{/* ------VALUE WHICH DEFINES THE POINT ON THE PARABOLA.  OTHER */}
+465 \textcolor{comment}{/* ------VARIABLES RETURNED (PDUM,PDUM1,DDUM) ARE NOT NEEDED HERE */}
+466 \textcolor{comment}{/* ------ FROM THIS CONSTRUCT AN ESTIMATED DISPLACEMENT VECTOR */}
+467     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+468     \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] = sa * t2[l - 1];
+469     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1], abs(d\_\_1)) < 1e-30) \{
+470         \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] = 0.f;
+471     \}
+472 \textcolor{comment}{/* L3060: */}
+473     \}
+474 \textcolor{comment}{/* L4010: */}
+475 \textcolor{comment}{/* ------IF DISP IS VERY SMALL, MAKE A NORMAL EXIT */}
+476 \textcolor{comment}{/* Computing 2nd power */}
+477     d\_\_1 = \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[0];
+478 \textcolor{comment}{/* Computing 2nd power */}
+479     d\_\_2 = \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[1];
+480 \textcolor{comment}{/* Computing 2nd power */}
+481     d\_\_3 = \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[2];
+482     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+483     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] = sqrt(\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0]);
+484     inorm = 5;
+485     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] < 1e-6) \{
+486     \textcolor{keywordflow}{goto} L40;
+487     \}
+488 \textcolor{comment}{/* ------TEST FOR LOOP COUNTER EXCEEDED */}
+489     \textcolor{keywordflow}{if} (lct > 24) \{
+490     \textcolor{keywordflow}{goto} L70;
+491     \}
+492 \textcolor{comment}{/* ------FIND A CHANGE DU,DV IN U,V SUCH THAT DU*DERU+DV*DERV=DISP */}
+493 \textcolor{comment}{/* L85: */}
+494     \textcolor{keywordflow}{for} (l = 1; l <= 6; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+495 \textcolor{comment}{/* L3070: */}
+496     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1] = 0.f;
+497     \}
+498     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+499     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] += deru[l + ip * 3 - 4] * deru[l + ip * 3 - 4];
+500     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] += deru[l + ip * 3 - 4] * derv[l + ip * 3 - 4];
+501     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] += derv[l + ip * 3 - 4] * derv[l + ip * 3 - 4];
+502     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4] += \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] * deru[l + ip * 3 - 4];
+503 \textcolor{comment}{/* L3080: */}
+504     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5] += \hyperlink{DDPARA_8c_ac6dcdd5afc4cc0975f15881e58bd191b}{disp}[l - 1] * derv[l + ip * 3 - 4];
+505     \}
+506     \textcolor{keywordflow}{for} (l = 1; l <= 6; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+507     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1], abs(d\_\_1)) < 1e-30) \{
+508         \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[l - 1] = 0.f;
+509     \}
+510 \textcolor{comment}{/* L3085: */}
+511     \}
+512 \textcolor{comment}{/* Computing 2nd power */}
+513     d\_\_1 = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1];
+514     \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3] = \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] - d\_\_1 * d\_\_1;
+515     \textcolor{keywordflow}{if} (abs(\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3]) < 1e-30) \{
+516     \textcolor{keywordflow}{goto} L40;
+517     \}
+518     dif[0] = (\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[2] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4] - \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5]) / 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3];
+519     dif[1] = (\hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[0] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[5] - \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[1] * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[4]) / 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}[3];
+520     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} += dif[0];
+521     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} += dif[1];
+522     ++lct;
+523     us[lct - 1] = *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu};
+524     vs[lct - 1] = *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv};
+525 \textcolor{comment}{/* ------INTRODUCE ARITHMETIC MEANS TO AVOID OSCILLATIONS */}
+526     \textcolor{keywordflow}{if} (lct < 9) \{
+527     \textcolor{keywordflow}{goto} L250;
+528     \}
+529     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} = 0.f;
+530     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} = 0.f;
+531     i\_\_1 = lct;
+532     \textcolor{keywordflow}{for} (ll = 9; ll <= i\_\_1; ++\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}) \{
+533     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} += us[ll - 1];
+534 \textcolor{comment}{/* L260: */}
+535     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} += vs[ll - 1];
+536     \}
+537     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} /= lct - 8;
+538     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} /= lct - 8;
+539 L250:
+540     \textcolor{keywordflow}{goto} L10;
+541 \textcolor{comment}{/* ------        END OF U,V ITERATIVE LOOP LOGIC */}
+542 L40:
+543     \textcolor{keywordflow}{if} (mode != 1) \{
+544     \textcolor{keywordflow}{goto} L4050;
+545     \}
+546     \textcolor{keywordflow}{if} (dtemp < z1em4) \{
+547     \textcolor{keywordflow}{goto} L4050;
+548     \}
+549     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] - 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+550         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+551     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] - 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+552         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+553     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] - 
+      \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tp[
+554         \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+555 \textcolor{comment}{/* Computing 2nd power */}
+556     d\_\_1 = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3];
+557 \textcolor{comment}{/* Computing 2nd power */}
+558     d\_\_2 = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2];
+559 \textcolor{comment}{/* Computing 2nd power */}
+560     d\_\_3 = \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1];
+561     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+562     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3], &\hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.tn[
+      \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3]);
+563 L4050:
+564 \textcolor{comment}{/* L55: */}
+565     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.snl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[0];
+566     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.snl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[1];
+567     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.snl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[2];
+568     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.spl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 3] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[3];
+569     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.spl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 2] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[4];
+570     \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.spl[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is * 3 - 1] = \hyperlink{DDPARA_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.tem[5];
+571 \textcolor{comment}{/* ------IF STARTUP IS FINISHED , LET U,V ASSUME THE LAST DEFINED */}
+572 \textcolor{comment}{/* ------UU,VV VALUES */}
+573     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu};
+574     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv};
+575     \textcolor{keywordflow}{if} (\hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.iop[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] != 1 || \hyperlink{DDPARA_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.s[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1] >= 0.f) \{
+576     \textcolor{keywordflow}{goto} L999;
+577     \}
+578 \textcolor{comment}{/* ------  ERROR EXIT FOLLOWS */}
+579 L70:
+580 \textcolor{comment}{/* ------ IF TOOL NORMAL DIDNOT INTERSECT SURFACE, TRY TO FIND AN SRP */}
+581     \textcolor{keywordflow}{if} (mode == 2) \{
+582     \textcolor{keywordflow}{goto} L1740;
+583     \}
+584     \hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ier = 1;
+585 L999:
+586     jentl = \hyperlink{DDPARA_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.jent[\hyperlink{DDPARA_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is - 1];
+587     \textcolor{keywordflow}{return} 0;
+588 L1740:
+589     mode = 1;
+590     *\hyperlink{DDPARA_8c_a2700c89c895f9f8bd963db6f655eb3e7}{uu} = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+591     *\hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv} = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+592     \textcolor{keywordflow}{goto} L4090;
+593 \} \textcolor{comment}{/* ddpara\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DDPARA_8c_ab4f02f087174e02bebf74e32a1b8b918_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DDPARA_8c_ab4f02f087174e02bebf74e32a1b8b918_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!alp@{alp}}
+\index{alp@{alp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{DDPARA_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{DDPARA_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{DDPARA_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!c\+\_\+\+\_\+27004@{c\+\_\+\+\_\+27004}}
+\index{c\+\_\+\+\_\+27004@{c\+\_\+\+\_\+27004}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+27004}{c__27004}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+27004 = 27004\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DDPARA_8c_a9f99db84906985250fa7bef9423f7d97}{}\label{DDPARA_8c_a9f99db84906985250fa7bef9423f7d97}
+
+
+Definition at line 109 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!c\+\_\+\+\_\+27005@{c\+\_\+\+\_\+27005}}
+\index{c\+\_\+\+\_\+27005@{c\+\_\+\+\_\+27005}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+27005}{c__27005}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+27005 = 27005\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DDPARA_8c_afa1db21260a660437a147be5a878d1bd}{}\label{DDPARA_8c_afa1db21260a660437a147be5a878d1bd}
+
+
+Definition at line 110 of file D\+D\+P\+A\+R\+A.\+c.
+
+
+
+Referenced by ddpara\+\_\+().
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{DDPARA_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{DDPARA_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cc@{cc}}
+\index{cc@{cc}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cc}{cc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cc\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a4a672b1cc1657e411e2094d8631246c2}{}\label{DDPARA_8c_a4a672b1cc1657e411e2094d8631246c2}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{DDPARA_8c_a2f84e7c299d87dc2bde5f0be33da01b0}{}\label{DDPARA_8c_a2f84e7c299d87dc2bde5f0be33da01b0}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{DDPARA_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cos1@{cos1}}
+\index{cos1@{cos1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cos1}{cos1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cos1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aa061b11706c46e4e7299be7f1dd355ef}{}\label{DDPARA_8c_aa061b11706c46e4e7299be7f1dd355ef}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cplfl@{cplfl}}
+\index{cplfl@{cplfl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cplfl}{cplfl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cplfl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a17ab077f9704191cec3623b32182b8ba}{}\label{DDPARA_8c_a17ab077f9704191cec3623b32182b8ba}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cptst@{cptst}}
+\index{cptst@{cptst}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cptst}{cptst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cptst\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a826f9bb61ad3ef7b009c7631b75374f6}{}\label{DDPARA_8c_a826f9bb61ad3ef7b009c7631b75374f6}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!csd@{csd}}
+\index{csd@{csd}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{csd}{csd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal csd\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{}\label{DDPARA_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{DDPARA_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{DDPARA_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!degrad@{degrad}}
+\index{degrad@{degrad}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{degrad}{degrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal degrad}\hypertarget{DDPARA_8c_a4873cbd96c87e32cd7745b96c5a00484}{}\label{DDPARA_8c_a4873cbd96c87e32cd7745b96c5a00484}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!dplan@{dplan}}
+\index{dplan@{dplan}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{dplan}{dplan}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dplan\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a819ff3967ced7fbb549308a6e4b91bcb}{}\label{DDPARA_8c_a819ff3967ced7fbb549308a6e4b91bcb}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{DDPARA_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{DDPARA_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!dpmx1@{dpmx1}}
+\index{dpmx1@{dpmx1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{dpmx1}{dpmx1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmx1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a4360acf0e48136e91364bd7cce121547}{}\label{DDPARA_8c_a4360acf0e48136e91364bd7cce121547}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps1@{eps1}}
+\index{eps1@{eps1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps1}{eps1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a306d2abf316a42b2d06c636c581fbc05}{}\label{DDPARA_8c_a306d2abf316a42b2d06c636c581fbc05}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps2@{eps2}}
+\index{eps2@{eps2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps2}{eps2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps2\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a2fd05e25992e6a9456646532a7ed3148}{}\label{DDPARA_8c_a2fd05e25992e6a9456646532a7ed3148}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps3@{eps3}}
+\index{eps3@{eps3}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps3}{eps3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps3\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a13ab03ebf3099fa722e8584f54a14f94}{}\label{DDPARA_8c_a13ab03ebf3099fa722e8584f54a14f94}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps4@{eps4}}
+\index{eps4@{eps4}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps4}{eps4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps4\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ad4286f6c2b33f25799d6156480bd622d}{}\label{DDPARA_8c_ad4286f6c2b33f25799d6156480bd622d}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps6@{eps6}}
+\index{eps6@{eps6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps6}{eps6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps6\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a68951ca3ed42d540274e5dd702aa30b2}{}\label{DDPARA_8c_a68951ca3ed42d540274e5dd702aa30b2}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!eps8@{eps8}}
+\index{eps8@{eps8}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{eps8}{eps8}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps8\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{}\label{DDPARA_8c_ab85a8b6ebe95fd76a0fccc74ece19726}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{DDPARA_8c_a60b6e769494fcc7c85ae340ea6837013}{}\label{DDPARA_8c_a60b6e769494fcc7c85ae340ea6837013}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{DDPARA_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{DDPARA_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!hi@{hi}}
+\index{hi@{hi}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{DDPARA_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{DDPARA_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{DDPARA_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{DDPARA_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{DDPARA_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{DDPARA_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iafl@{iafl}}
+\index{iafl@{iafl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iafl}{iafl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iafl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a013f46224a863d563c172ad966d9fe4c}{}\label{DDPARA_8c_a013f46224a863d563c172ad966d9fe4c}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{DDPARA_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{DDPARA_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{DDPARA_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{DDPARA_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ic@{ic}}
+\index{ic@{ic}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{DDPARA_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{DDPARA_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!icanon@{icanon}}
+\index{icanon@{icanon}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{icanon}{icanon}}]{\setlength{\rightskip}{0pt plus 5cm}integer icanon\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{}\label{DDPARA_8c_af11acb70bb024b32658dd2ce1e2fe8d4}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{DDPARA_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{DDPARA_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!icl@{icl}}
+\index{icl@{icl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{DDPARA_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{DDPARA_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ics@{ics}}
+\index{ics@{ics}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{DDPARA_8c_a7217a40b82199af56087b578a9bef158}{}\label{DDPARA_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{DDPARA_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{DDPARA_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{DDPARA_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{DDPARA_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!icut@{icut}}
+\index{icut@{icut}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{DDPARA_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{DDPARA_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ids@{ids}}
+\index{ids@{ids}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{DDPARA_8c_a312fee9680413e72b1ed128af2de8822}{}\label{DDPARA_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ier@{ier}}
+\index{ier@{ier}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{DDPARA_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{DDPARA_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ifar@{ifar}}
+\index{ifar@{ifar}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ifar}{ifar}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifar\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ae6268067a45faf1f09717de826908b42}{}\label{DDPARA_8c_ae6268067a45faf1f09717de826908b42}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ifl4@{ifl4}}
+\index{ifl4@{ifl4}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ifl4}{ifl4}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifl4\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{}\label{DDPARA_8c_a13b8031b501c6fcb7f2ad94831e58f5f}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{DDPARA_8c_a9a4ee98208bdfbd1968a938d5ccd4c1b}{}\label{DDPARA_8c_a9a4ee98208bdfbd1968a938d5ccd4c1b}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!igo@{igo}}
+\index{igo@{igo}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{DDPARA_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{DDPARA_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{DDPARA_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{DDPARA_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{DDPARA_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{DDPARA_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!igs@{igs}}
+\index{igs@{igs}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{DDPARA_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{DDPARA_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!index@{index}}
+\index{index@{index}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}integer index\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{}\label{DDPARA_8c_a117e03aa7ccba9831ef61bf41f8e11a4}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}}
+\index{indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{indir\+\_\+\+\_\+}{indir__}}]{\setlength{\rightskip}{0pt plus 5cm}integer indir\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a367d578680d6741b0eeea4c18126ac85}{}\label{DDPARA_8c_a367d578680d6741b0eeea4c18126ac85}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!inops@{inops}}
+\index{inops@{inops}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{DDPARA_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{DDPARA_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iop@{iop}}
+\index{iop@{iop}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iop}{iop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iop\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aca4c6ef2418548013d1f0ab199eb5e87}{}\label{DDPARA_8c_aca4c6ef2418548013d1f0ab199eb5e87}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iopset@{iopset}}
+\index{iopset@{iopset}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iopset}{iopset}}]{\setlength{\rightskip}{0pt plus 5cm}integer iopset\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a46fc792e9db2a4119bde6d3c50066efe}{}\label{DDPARA_8c_a46fc792e9db2a4119bde6d3c50066efe}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ipl@{ipl}}
+\index{ipl@{ipl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ipl}{ipl}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{}\label{DDPARA_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ips@{ips}}
+\index{ips@{ips}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{DDPARA_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{DDPARA_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{DDPARA_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{DDPARA_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{DDPARA_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{DDPARA_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!is@{is}}
+\index{is@{is}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{DDPARA_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{DDPARA_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{DDPARA_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{DDPARA_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{DDPARA_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{DDPARA_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isfidn@{isfidn}}
+\index{isfidn@{isfidn}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isfidn}{isfidn}}]{\setlength{\rightskip}{0pt plus 5cm}integer isfidn\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a98035b4872e906175c3748d8671bcb41}{}\label{DDPARA_8c_a98035b4872e906175c3748d8671bcb41}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isftyp@{isftyp}}
+\index{isftyp@{isftyp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isftyp}{isftyp}}]{\setlength{\rightskip}{0pt plus 5cm}integer isftyp\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_af06b6af8617105f43da7a0aef4a181d3}{}\label{DDPARA_8c_af06b6af8617105f43da7a0aef4a181d3}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isigcr@{isigcr}}
+\index{isigcr@{isigcr}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isigcr}{isigcr}}]{\setlength{\rightskip}{0pt plus 5cm}integer isigcr\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a96c4543ff4eb51c15078a4a13a13d649}{}\label{DDPARA_8c_a96c4543ff4eb51c15078a4a13a13d649}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{DDPARA_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{DDPARA_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{DDPARA_8c_a71eb31c84997c0822663e9391c14d998}{}\label{DDPARA_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isv1\+\_\+@{isv1\+\_\+}}
+\index{isv1\+\_\+@{isv1\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+}{isv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv1\+\_\+}\hypertarget{DDPARA_8c_a817f02f7dc376e06b61846e7f7ae835a}{}\label{DDPARA_8c_a817f02f7dc376e06b61846e7f7ae835a}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isv\+\_\+@{isv\+\_\+}}
+\index{isv\+\_\+@{isv\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+}{isv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv\+\_\+}\hypertarget{DDPARA_8c_a58dd0cf7084e0e0a292127443b1fdd76}{}\label{DDPARA_8c_a58dd0cf7084e0e0a292127443b1fdd76}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!isvfl@{isvfl}}
+\index{isvfl@{isvfl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{isvfl}{isvfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer isvfl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a69d12d072150ac44e875ee991d8977f9}{}\label{DDPARA_8c_a69d12d072150ac44e875ee991d8977f9}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!it@{it}}
+\index{it@{it}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{DDPARA_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{DDPARA_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!itlon@{itlon}}
+\index{itlon@{itlon}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{itlon}{itlon}}]{\setlength{\rightskip}{0pt plus 5cm}integer itlon\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ab9c16758977bf15e0118791ac83246a1}{}\label{DDPARA_8c_ab9c16758977bf15e0118791ac83246a1}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!itseg@{itseg}}
+\index{itseg@{itseg}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{itseg}{itseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer itseg\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a69f16ad43b2d69c2a5523493a25092a6}{}\label{DDPARA_8c_a69f16ad43b2d69c2a5523493a25092a6}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!itsegk@{itsegk}}
+\index{itsegk@{itsegk}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{itsegk}{itsegk}}]{\setlength{\rightskip}{0pt plus 5cm}integer itsegk\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a0365571ddfd59f3b0b636c72a4e09742}{}\label{DDPARA_8c_a0365571ddfd59f3b0b636c72a4e09742}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!iunfl@{iunfl}}
+\index{iunfl@{iunfl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{iunfl}{iunfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iunfl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ad01cb824e786c997cae01775374c6ace}{}\label{DDPARA_8c_ad01cb824e786c997cae01775374c6ace}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j20@{j20}}
+\index{j20@{j20}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j20}{j20}}]{\setlength{\rightskip}{0pt plus 5cm}integer j20\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ab5e196a210774e8188a9adc08fab5675}{}\label{DDPARA_8c_ab5e196a210774e8188a9adc08fab5675}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j21@{j21}}
+\index{j21@{j21}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j21}{j21}}]{\setlength{\rightskip}{0pt plus 5cm}integer j21\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a71bea2c042deec0e209e8c6b819bb7f8}{}\label{DDPARA_8c_a71bea2c042deec0e209e8c6b819bb7f8}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j22@{j22}}
+\index{j22@{j22}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j22}{j22}}]{\setlength{\rightskip}{0pt plus 5cm}integer j22\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{}\label{DDPARA_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j23@{j23}}
+\index{j23@{j23}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j23}{j23}}]{\setlength{\rightskip}{0pt plus 5cm}integer j23\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a8965b32ed9d3092eb5279607f8dc835b}{}\label{DDPARA_8c_a8965b32ed9d3092eb5279607f8dc835b}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j50@{j50}}
+\index{j50@{j50}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j50}{j50}}]{\setlength{\rightskip}{0pt plus 5cm}integer j50\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{}\label{DDPARA_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!j51@{j51}}
+\index{j51@{j51}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{j51}{j51}}]{\setlength{\rightskip}{0pt plus 5cm}integer j51\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aaf9771df39ea6eb440d196395622d970}{}\label{DDPARA_8c_aaf9771df39ea6eb440d196395622d970}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{DDPARA_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{DDPARA_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jent@{jent}}
+\index{jent@{jent}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jent}{jent}}]{\setlength{\rightskip}{0pt plus 5cm}integer jent\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{}\label{DDPARA_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jiops@{jiops}}
+\index{jiops@{jiops}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jiops}{jiops}}]{\setlength{\rightskip}{0pt plus 5cm}integer jiops\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_af70b7cc90fdc72684506b074764f24d3}{}\label{DDPARA_8c_af70b7cc90fdc72684506b074764f24d3}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jph@{jph}}
+\index{jph@{jph}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jph}{jph}}]{\setlength{\rightskip}{0pt plus 5cm}integer jph\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_af639d946bee2fc95e223cbba2f6f6f59}{}\label{DDPARA_8c_af639d946bee2fc95e223cbba2f6f6f59}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{DDPARA_8c_a10effd66f46b95c77726e50c3d371477}{}\label{DDPARA_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jtlflg@{jtlflg}}
+\index{jtlflg@{jtlflg}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jtlflg}{jtlflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtlflg\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a9e8f1743a1265c0508b32682a31dbe13}{}\label{DDPARA_8c_a9e8f1743a1265c0508b32682a31dbe13}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!jtn@{jtn}}
+\index{jtn@{jtn}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{jtn}{jtn}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtn\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a27bfdec33da656b3e0afaa8b256d465c}{}\label{DDPARA_8c_a27bfdec33da656b3e0afaa8b256d465c}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ju1@{ju1}}
+\index{ju1@{ju1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ju1}{ju1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ju1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a9d5a9d53b0b600853a83109858c7aa7a}{}\label{DDPARA_8c_a9d5a9d53b0b600853a83109858c7aa7a}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k0@{k0}}
+\index{k0@{k0}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k0}{k0}}]{\setlength{\rightskip}{0pt plus 5cm}integer k0}\hypertarget{DDPARA_8c_a13677e8ba227917ca91f45226e0d3901}{}\label{DDPARA_8c_a13677e8ba227917ca91f45226e0d3901}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k1@{k1}}
+\index{k1@{k1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k1}{k1}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1}\hypertarget{DDPARA_8c_a655a1c80f1168ad6f053d6b007c2c213}{}\label{DDPARA_8c_a655a1c80f1168ad6f053d6b007c2c213}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k10@{k10}}
+\index{k10@{k10}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k10}{k10}}]{\setlength{\rightskip}{0pt plus 5cm}integer k10}\hypertarget{DDPARA_8c_a07f3fe8797e442c47bdf306bd8b35048}{}\label{DDPARA_8c_a07f3fe8797e442c47bdf306bd8b35048}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k1013@{k1013}}
+\index{k1013@{k1013}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k1013}{k1013}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1013}\hypertarget{DDPARA_8c_aec5c3e1b9188ab217a8f279b765ae33e}{}\label{DDPARA_8c_aec5c3e1b9188ab217a8f279b765ae33e}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k12@{k12}}
+\index{k12@{k12}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k12}{k12}}]{\setlength{\rightskip}{0pt plus 5cm}integer k12}\hypertarget{DDPARA_8c_a42e4e1be80d05c7bf76276703d1ffcbf}{}\label{DDPARA_8c_a42e4e1be80d05c7bf76276703d1ffcbf}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k13@{k13}}
+\index{k13@{k13}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k13}{k13}}]{\setlength{\rightskip}{0pt plus 5cm}integer k13}\hypertarget{DDPARA_8c_ac6a9481817364f5859074056e6b72045}{}\label{DDPARA_8c_ac6a9481817364f5859074056e6b72045}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k15@{k15}}
+\index{k15@{k15}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k15}{k15}}]{\setlength{\rightskip}{0pt plus 5cm}integer k15}\hypertarget{DDPARA_8c_a38659ef45de4861b45cfd4278df03219}{}\label{DDPARA_8c_a38659ef45de4861b45cfd4278df03219}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k16@{k16}}
+\index{k16@{k16}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k16}{k16}}]{\setlength{\rightskip}{0pt plus 5cm}integer k16}\hypertarget{DDPARA_8c_ad364fb849a04482c15fcc03b9f881017}{}\label{DDPARA_8c_ad364fb849a04482c15fcc03b9f881017}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k18@{k18}}
+\index{k18@{k18}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k18}{k18}}]{\setlength{\rightskip}{0pt plus 5cm}integer k18}\hypertarget{DDPARA_8c_ab01565338ee1b2e250f1cf4e702c7ec4}{}\label{DDPARA_8c_ab01565338ee1b2e250f1cf4e702c7ec4}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k19@{k19}}
+\index{k19@{k19}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k19}{k19}}]{\setlength{\rightskip}{0pt plus 5cm}integer k19}\hypertarget{DDPARA_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}{}\label{DDPARA_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k1e4@{k1e4}}
+\index{k1e4@{k1e4}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k1e4}{k1e4}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1e4}\hypertarget{DDPARA_8c_a33fee8be0fef4573e4671cddfd9dda7c}{}\label{DDPARA_8c_a33fee8be0fef4573e4671cddfd9dda7c}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k1e6@{k1e6}}
+\index{k1e6@{k1e6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k1e6}{k1e6}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1e6}\hypertarget{DDPARA_8c_a78581c927af2b13d7b9bbc9dcd710e0a}{}\label{DDPARA_8c_a78581c927af2b13d7b9bbc9dcd710e0a}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k2@{k2}}
+\index{k2@{k2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k2}{k2}}]{\setlength{\rightskip}{0pt plus 5cm}integer k2}\hypertarget{DDPARA_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}{}\label{DDPARA_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k23@{k23}}
+\index{k23@{k23}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k23}{k23}}]{\setlength{\rightskip}{0pt plus 5cm}integer k23}\hypertarget{DDPARA_8c_a67c7f5e745cc5c87641ed7ab6ed03903}{}\label{DDPARA_8c_a67c7f5e745cc5c87641ed7ab6ed03903}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k24@{k24}}
+\index{k24@{k24}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k24}{k24}}]{\setlength{\rightskip}{0pt plus 5cm}integer k24}\hypertarget{DDPARA_8c_a6c8801a0c24128524808626f23c83534}{}\label{DDPARA_8c_a6c8801a0c24128524808626f23c83534}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k25@{k25}}
+\index{k25@{k25}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k25}{k25}}]{\setlength{\rightskip}{0pt plus 5cm}integer k25}\hypertarget{DDPARA_8c_a3972e8edc94bf990b8385833d7773994}{}\label{DDPARA_8c_a3972e8edc94bf990b8385833d7773994}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k26@{k26}}
+\index{k26@{k26}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k26}{k26}}]{\setlength{\rightskip}{0pt plus 5cm}integer k26}\hypertarget{DDPARA_8c_a603cc5680e6e6b99afcc067ab006838e}{}\label{DDPARA_8c_a603cc5680e6e6b99afcc067ab006838e}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k27@{k27}}
+\index{k27@{k27}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k27}{k27}}]{\setlength{\rightskip}{0pt plus 5cm}integer k27}\hypertarget{DDPARA_8c_a3224d57413c1ca0f52246767baaca01e}{}\label{DDPARA_8c_a3224d57413c1ca0f52246767baaca01e}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k29@{k29}}
+\index{k29@{k29}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k29}{k29}}]{\setlength{\rightskip}{0pt plus 5cm}integer k29}\hypertarget{DDPARA_8c_ab54bc0ad9982243ba0e73e713878b659}{}\label{DDPARA_8c_ab54bc0ad9982243ba0e73e713878b659}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k3@{k3}}
+\index{k3@{k3}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k3}{k3}}]{\setlength{\rightskip}{0pt plus 5cm}integer k3}\hypertarget{DDPARA_8c_a3866972f3ea150072127b2201402d9d4}{}\label{DDPARA_8c_a3866972f3ea150072127b2201402d9d4}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k30@{k30}}
+\index{k30@{k30}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k30}{k30}}]{\setlength{\rightskip}{0pt plus 5cm}integer k30}\hypertarget{DDPARA_8c_a0df4216958f1b812fafd7c5aca19f0e2}{}\label{DDPARA_8c_a0df4216958f1b812fafd7c5aca19f0e2}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k31@{k31}}
+\index{k31@{k31}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k31}{k31}}]{\setlength{\rightskip}{0pt plus 5cm}integer k31}\hypertarget{DDPARA_8c_ad095380d9a72dcd452b64020fc4957e0}{}\label{DDPARA_8c_ad095380d9a72dcd452b64020fc4957e0}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k32@{k32}}
+\index{k32@{k32}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k32}{k32}}]{\setlength{\rightskip}{0pt plus 5cm}integer k32}\hypertarget{DDPARA_8c_a86b7e9432a6c1b7f61a88051851b24be}{}\label{DDPARA_8c_a86b7e9432a6c1b7f61a88051851b24be}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k33@{k33}}
+\index{k33@{k33}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k33}{k33}}]{\setlength{\rightskip}{0pt plus 5cm}integer k33}\hypertarget{DDPARA_8c_adf6b3def53640bafe1e81e9c52c28a34}{}\label{DDPARA_8c_adf6b3def53640bafe1e81e9c52c28a34}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k34@{k34}}
+\index{k34@{k34}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k34}{k34}}]{\setlength{\rightskip}{0pt plus 5cm}integer k34}\hypertarget{DDPARA_8c_aec13dcc4a3284eeb2691c803d6054add}{}\label{DDPARA_8c_aec13dcc4a3284eeb2691c803d6054add}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k4@{k4}}
+\index{k4@{k4}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k4}{k4}}]{\setlength{\rightskip}{0pt plus 5cm}integer k4}\hypertarget{DDPARA_8c_acb95ee3962e080a7bd4b1803f0e5b523}{}\label{DDPARA_8c_acb95ee3962e080a7bd4b1803f0e5b523}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k44@{k44}}
+\index{k44@{k44}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k44}{k44}}]{\setlength{\rightskip}{0pt plus 5cm}integer k44}\hypertarget{DDPARA_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}{}\label{DDPARA_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k45@{k45}}
+\index{k45@{k45}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k45}{k45}}]{\setlength{\rightskip}{0pt plus 5cm}integer k45}\hypertarget{DDPARA_8c_a782a3eba88202041c8c249663f4548f3}{}\label{DDPARA_8c_a782a3eba88202041c8c249663f4548f3}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k46@{k46}}
+\index{k46@{k46}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k46}{k46}}]{\setlength{\rightskip}{0pt plus 5cm}integer k46}\hypertarget{DDPARA_8c_ae0697d44870d385f3a5a921e241a6571}{}\label{DDPARA_8c_ae0697d44870d385f3a5a921e241a6571}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k47@{k47}}
+\index{k47@{k47}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k47}{k47}}]{\setlength{\rightskip}{0pt plus 5cm}integer k47}\hypertarget{DDPARA_8c_a9a6acf2b9128519edae03effd959fdce}{}\label{DDPARA_8c_a9a6acf2b9128519edae03effd959fdce}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k48@{k48}}
+\index{k48@{k48}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k48}{k48}}]{\setlength{\rightskip}{0pt plus 5cm}integer k48}\hypertarget{DDPARA_8c_a66c948e011f45b91f275757881efab87}{}\label{DDPARA_8c_a66c948e011f45b91f275757881efab87}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k5@{k5}}
+\index{k5@{k5}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k5}{k5}}]{\setlength{\rightskip}{0pt plus 5cm}integer k5}\hypertarget{DDPARA_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}{}\label{DDPARA_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k50@{k50}}
+\index{k50@{k50}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k50}{k50}}]{\setlength{\rightskip}{0pt plus 5cm}integer k50}\hypertarget{DDPARA_8c_a245c8290483ddfb55991fdb8dd2db544}{}\label{DDPARA_8c_a245c8290483ddfb55991fdb8dd2db544}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k51@{k51}}
+\index{k51@{k51}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k51}{k51}}]{\setlength{\rightskip}{0pt plus 5cm}integer k51}\hypertarget{DDPARA_8c_af50475a68a63f0f722752c6ee53e2fa9}{}\label{DDPARA_8c_af50475a68a63f0f722752c6ee53e2fa9}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k52@{k52}}
+\index{k52@{k52}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k52}{k52}}]{\setlength{\rightskip}{0pt plus 5cm}integer k52}\hypertarget{DDPARA_8c_acfe975e1d64237134dbad03554d161fe}{}\label{DDPARA_8c_acfe975e1d64237134dbad03554d161fe}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k6@{k6}}
+\index{k6@{k6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k6}{k6}}]{\setlength{\rightskip}{0pt plus 5cm}integer k6}\hypertarget{DDPARA_8c_a9d2169cf4480bef94ed0a8314b8db1dd}{}\label{DDPARA_8c_a9d2169cf4480bef94ed0a8314b8db1dd}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k7@{k7}}
+\index{k7@{k7}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k7}{k7}}]{\setlength{\rightskip}{0pt plus 5cm}integer k7}\hypertarget{DDPARA_8c_a24f68e08b66e38de783a4e6b4eceddab}{}\label{DDPARA_8c_a24f68e08b66e38de783a4e6b4eceddab}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k8@{k8}}
+\index{k8@{k8}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k8}{k8}}]{\setlength{\rightskip}{0pt plus 5cm}integer k8}\hypertarget{DDPARA_8c_ab053f60993666d2c1a5b0e9e2bba9046}{}\label{DDPARA_8c_ab053f60993666d2c1a5b0e9e2bba9046}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!k9@{k9}}
+\index{k9@{k9}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{k9}{k9}}]{\setlength{\rightskip}{0pt plus 5cm}integer k9}\hypertarget{DDPARA_8c_a5826c29dac15034ea8d3c4e6e2465665}{}\label{DDPARA_8c_a5826c29dac15034ea8d3c4e6e2465665}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!km1@{km1}}
+\index{km1@{km1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{km1}{km1}}]{\setlength{\rightskip}{0pt plus 5cm}integer km1}\hypertarget{DDPARA_8c_a8df3536c5500bc8b920c38503103b6bd}{}\label{DDPARA_8c_a8df3536c5500bc8b920c38503103b6bd}
+
+
+Definition at line 100 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!knumbr\+\_\+@{knumbr\+\_\+}}
+\index{knumbr\+\_\+@{knumbr\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+}{knumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   knumbr\+\_\+}\hypertarget{DDPARA_8c_a02933812e0568bd08d30212c5483497a}{}\label{DDPARA_8c_a02933812e0568bd08d30212c5483497a}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!limfl@{limfl}}
+\index{limfl@{limfl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{limfl}{limfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer limfl\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a7a26ee648d4eb235d68b74eb27698f51}{}\label{DDPARA_8c_a7a26ee648d4eb235d68b74eb27698f51}
+
+
+Definition at line 74 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{DDPARA_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{DDPARA_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{DDPARA_8c_a15ffd813a44621365b809bd790efc487}{}\label{DDPARA_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{DDPARA_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{DDPARA_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{DDPARA_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{DDPARA_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 27 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{DDPARA_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{DDPARA_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!msav@{msav}}
+\index{msav@{msav}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{DDPARA_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{DDPARA_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{DDPARA_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{DDPARA_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{DDPARA_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{DDPARA_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{DDPARA_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{DDPARA_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!notan@{notan}}
+\index{notan@{notan}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{notan}{notan}}]{\setlength{\rightskip}{0pt plus 5cm}integer notan\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a3bf651bea75c52977866902524484444}{}\label{DDPARA_8c_a3bf651bea75c52977866902524484444}
+
+
+Definition at line 83 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{DDPARA_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{DDPARA_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!numax@{numax}}
+\index{numax@{numax}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{DDPARA_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{DDPARA_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{DDPARA_8c_a5123b60c8419619c6c2debf212d28208}{}\label{DDPARA_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nump@{nump}}
+\index{nump@{nump}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{DDPARA_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{DDPARA_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{DDPARA_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{DDPARA_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{DDPARA_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{DDPARA_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{DDPARA_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{DDPARA_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nw@{nw}}
+\index{nw@{nw}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{DDPARA_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{DDPARA_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{DDPARA_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{DDPARA_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 90 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!past@{past}}
+\index{past@{past}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{past}{past}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal past\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aae4751b2b0e0fe3b5f62f710ef406288}{}\label{DDPARA_8c_aae4751b2b0e0fe3b5f62f710ef406288}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!pi@{pi}}
+\index{pi@{pi}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{pi}{pi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pi}\hypertarget{DDPARA_8c_a7f0cd6132604ba32b060b73483eabcf9}{}\label{DDPARA_8c_a7f0cd6132604ba32b060b73483eabcf9}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!plncs@{plncs}}
+\index{plncs@{plncs}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{plncs}{plncs}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plncs\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{}\label{DDPARA_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!plnd@{plnd}}
+\index{plnd@{plnd}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{plnd}{plnd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{}\label{DDPARA_8c_ae9d5f1bcba61472b35fba9e981c5b18c}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!plnd1@{plnd1}}
+\index{plnd1@{plnd1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{plnd1}{plnd1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{}\label{DDPARA_8c_a92d5298997ed1dcb1f9a65bc9126dd52}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!plnv@{plnv}}
+\index{plnv@{plnv}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{plnv}{plnv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnv\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_abcbe27eb4ab55c21433ba237b064da23}{}\label{DDPARA_8c_abcbe27eb4ab55c21433ba237b064da23}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!pltst@{pltst}}
+\index{pltst@{pltst}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{pltst}{pltst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pltst\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_acc41d3833fec2bd10e8f654e00d49fa6}{}\label{DDPARA_8c_acc41d3833fec2bd10e8f654e00d49fa6}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{DDPARA_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ra@{ra}}
+\index{ra@{ra}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{DDPARA_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{DDPARA_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!rc@{rc}}
+\index{rc@{rc}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{rc}{rc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a8fafde5aff46b55bddfc42a93803fffc}{}\label{DDPARA_8c_a8fafde5aff46b55bddfc42a93803fffc}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{DDPARA_8c_abed92b12a9406febedd1333e63fac677}{}\label{DDPARA_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ri@{ri}}
+\index{ri@{ri}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{DDPARA_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!s@{s}}
+\index{s@{s}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal s\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{}\label{DDPARA_8c_a5422687d8f9c4b1da3d7a65d7535fa60}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{DDPARA_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{DDPARA_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!save@{save}}
+\index{save@{save}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{save}{save}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal save\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aade1308b2b48aaa8db461e4665eb7e19}{}\label{DDPARA_8c_aade1308b2b48aaa8db461e4665eb7e19}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sfvct@{sfvct}}
+\index{sfvct@{sfvct}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sfvct}{sfvct}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sfvct\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a6a6f46271f4c2c8e68568b8bee68f673}{}\label{DDPARA_8c_a6a6f46271f4c2c8e68568b8bee68f673}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sk@{sk}}
+\index{sk@{sk}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sk}{sk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sk\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a2fa00cfd358735b40f5b16a114238bdc}{}\label{DDPARA_8c_a2fa00cfd358735b40f5b16a114238bdc}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!slx@{slx}}
+\index{slx@{slx}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{slx}{slx}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal slx\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_ad5ff78be6acc9653b09598f6df0c1522}{}\label{DDPARA_8c_ad5ff78be6acc9653b09598f6df0c1522}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sn@{sn}}
+\index{sn@{sn}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sn}{sn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sn\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_affaf74dabdb513fe55fa48a1091a82f0}{}\label{DDPARA_8c_affaf74dabdb513fe55fa48a1091a82f0}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!snk@{snk}}
+\index{snk@{snk}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{snk}{snk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snk\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_aa584da8857a16c65bd611d5b5686d8ec}{}\label{DDPARA_8c_aa584da8857a16c65bd611d5b5686d8ec}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!snl@{snl}}
+\index{snl@{snl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{snl}{snl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snl\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a4c96f9ead3daa534244888dd312b3595}{}\label{DDPARA_8c_a4c96f9ead3daa534244888dd312b3595}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sp@{sp}}
+\index{sp@{sp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sp}{sp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sp\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_ae1ea305557352179a5595123e4f7bef9}{}\label{DDPARA_8c_ae1ea305557352179a5595123e4f7bef9}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!spk@{spk}}
+\index{spk@{spk}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{spk}{spk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spk\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a5eb35651944d7d53ca1371c8f4403522}{}\label{DDPARA_8c_a5eb35651944d7d53ca1371c8f4403522}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!spl@{spl}}
+\index{spl@{spl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{spl}{spl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spl\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a032b8e76f8a4cec214831255a4b77e7a}{}\label{DDPARA_8c_a032b8e76f8a4cec214831255a4b77e7a}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!stck@{stck}}
+\index{stck@{stck}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{stck}{stck}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a0c07ccb74eb243d4d456e818d258bce8}{}\label{DDPARA_8c_a0c07ccb74eb243d4d456e818d258bce8}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!stck1@{stck1}}
+\index{stck1@{stck1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{stck1}{stck1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{}\label{DDPARA_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!stck2@{stck2}}
+\index{stck2@{stck2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{stck2}{stck2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck2\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a4b0340102da75d0c19859ea11879a4f4}{}\label{DDPARA_8c_a4b0340102da75d0c19859ea11879a4f4}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!stckn@{stckn}}
+\index{stckn@{stckn}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{stckn}{stckn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stckn\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a94fa54ae2c242297cc118d31155ab356}{}\label{DDPARA_8c_a94fa54ae2c242297cc118d31155ab356}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{DDPARA_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{DDPARA_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!surd@{surd}}
+\index{surd@{surd}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{DDPARA_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{DDPARA_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sv1\+\_\+@{sv1\+\_\+}}
+\index{sv1\+\_\+@{sv1\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+}{sv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv1\+\_\+}\hypertarget{DDPARA_8c_acbd8b1f9a7eaf62efc531b952d6e544b}{}\label{DDPARA_8c_acbd8b1f9a7eaf62efc531b952d6e544b}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!sv\+\_\+@{sv\+\_\+}}
+\index{sv\+\_\+@{sv\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+}{sv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv\+\_\+}\hypertarget{DDPARA_8c_a89f9afca6fd9d39c2e1f61ff5c0e546d}{}\label{DDPARA_8c_a89f9afca6fd9d39c2e1f61ff5c0e546d}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ta@{ta}}
+\index{ta@{ta}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_aa38365a06b4e51426459eba3db71f888}{}\label{DDPARA_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tak@{tak}}
+\index{tak@{tak}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{DDPARA_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tal@{tal}}
+\index{tal@{tal}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{DDPARA_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{DDPARA_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{DDPARA_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tau@{tau}}
+\index{tau@{tau}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tau}{tau}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a3ef97769b90b935351a0da2c5c17f1ba}{}\label{DDPARA_8c_a3ef97769b90b935351a0da2c5c17f1ba}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tau1@{tau1}}
+\index{tau1@{tau1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tau1}{tau1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau1\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a3293541b256a7b52a653b554ec1eef71}{}\label{DDPARA_8c_a3293541b256a7b52a653b554ec1eef71}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tau2@{tau2}}
+\index{tau2@{tau2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tau2}{tau2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau2\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a7cc16120d8b89a97df6d011487794d7a}{}\label{DDPARA_8c_a7cc16120d8b89a97df6d011487794d7a}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{DDPARA_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{DDPARA_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!te@{te}}
+\index{te@{te}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{DDPARA_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tee@{tee}}
+\index{tee@{tee}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tee}{tee}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tee\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a5ca1f63566c2594f3e3868b91d997b73}{}\label{DDPARA_8c_a5ca1f63566c2594f3e3868b91d997b73}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tek@{tek}}
+\index{tek@{tek}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{DDPARA_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tel@{tel}}
+\index{tel@{tel}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{DDPARA_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tem@{tem}}
+\index{tem@{tem}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{DDPARA_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{DDPARA_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!temp@{temp}}
+\index{temp@{temp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{DDPARA_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{DDPARA_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!th@{th}}
+\index{th@{th}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{th}{th}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal th\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a5e192eb5193c9ab9e167e2554641adad}{}\label{DDPARA_8c_a5e192eb5193c9ab9e167e2554641adad}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!ti@{ti}}
+\index{ti@{ti}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{DDPARA_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tik@{tik}}
+\index{tik@{tik}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{DDPARA_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!til@{til}}
+\index{til@{til}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{DDPARA_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{DDPARA_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{DDPARA_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{DDPARA_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{DDPARA_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{DDPARA_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{DDPARA_8c_abeeea7ae481a848a73631368e89376dc}{}\label{DDPARA_8c_abeeea7ae481a848a73631368e89376dc}
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tm@{tm}}
+\index{tm@{tm}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{DDPARA_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{DDPARA_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tn@{tn}}
+\index{tn@{tn}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tn}{tn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tn\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a66b316fa3299925e5c7630d5af6601fd}{}\label{DDPARA_8c_a66b316fa3299925e5c7630d5af6601fd}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tnl@{tnl}}
+\index{tnl@{tnl}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tnl}{tnl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tnl\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a51ea6eff10429675b532a43be770e881}{}\label{DDPARA_8c_a51ea6eff10429675b532a43be770e881}
+
+
+Definition at line 57 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!toolht@{toolht}}
+\index{toolht@{toolht}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{toolht}{toolht}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolht\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{}\label{DDPARA_8c_ae71e1021e0fe5c37d631777a82ac9dfe}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!toolwd@{toolwd}}
+\index{toolwd@{toolwd}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{toolwd}{toolwd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolwd\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_acfdd4327e78cee83f784e0081fd71ead}{}\label{DDPARA_8c_acfdd4327e78cee83f784e0081fd71ead}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tp@{tp}}
+\index{tp@{tp}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tp}{tp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tp\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{}\label{DDPARA_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!tpk@{tpk}}
+\index{tpk@{tpk}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{tpk}{tpk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tpk\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_acd57028107f202bf733ae94db320fd40}{}\label{DDPARA_8c_acd57028107f202bf733ae94db320fd40}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!u1@{u1}}
+\index{u1@{u1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{u1}{u1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a86f48fbc667fd3e391a5a60472a760d9}{}\label{DDPARA_8c_a86f48fbc667fd3e391a5a60472a760d9}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!u1k@{u1k}}
+\index{u1k@{u1k}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{u1k}{u1k}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1k\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_aef9f4548d89972753d95640b4cf4c502}{}\label{DDPARA_8c_aef9f4548d89972753d95640b4cf4c502}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!umax@{umax}}
+\index{umax@{umax}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{DDPARA_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{DDPARA_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 33 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!varble@{varble}}
+\index{varble@{varble}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{varble}{varble}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal varble\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_a6587d13eed8675f3bf2284fc673780f2}{}\label{DDPARA_8c_a6587d13eed8675f3bf2284fc673780f2}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!vndir@{vndir}}
+\index{vndir@{vndir}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{vndir}{vndir}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vndir\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a76207f20e8ae300641df122e994c2374}{}\label{DDPARA_8c_a76207f20e8ae300641df122e994c2374}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!vt@{vt}}
+\index{vt@{vt}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{vt}{vt}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vt\mbox{[}15\mbox{]}}\hypertarget{DDPARA_8c_a20c7b8bac268c28674d17aa05f813d9f}{}\label{DDPARA_8c_a20c7b8bac268c28674d17aa05f813d9f}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{DDPARA_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{DDPARA_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 18 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z0@{z0}}
+\index{z0@{z0}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z0}{z0}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z0}\hypertarget{DDPARA_8c_a481b969667dca33a978c50980dd5480c}{}\label{DDPARA_8c_a481b969667dca33a978c50980dd5480c}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1@{z1}}
+\index{z1@{z1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1}{z1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1}\hypertarget{DDPARA_8c_a41055aeef4eac887032302f59c372d57}{}\label{DDPARA_8c_a41055aeef4eac887032302f59c372d57}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z10@{z10}}
+\index{z10@{z10}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z10}{z10}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z10}\hypertarget{DDPARA_8c_aa269f590808672b62394f95529f5eed9}{}\label{DDPARA_8c_aa269f590808672b62394f95529f5eed9}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z11em1@{z11em1}}
+\index{z11em1@{z11em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z11em1}{z11em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z11em1}\hypertarget{DDPARA_8c_a3f1f266b30d3b7eba90480d3f539a117}{}\label{DDPARA_8c_a3f1f266b30d3b7eba90480d3f539a117}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z12em1@{z12em1}}
+\index{z12em1@{z12em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z12em1}{z12em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z12em1}\hypertarget{DDPARA_8c_ad973ea9385b44d34c6e2e80f960cb440}{}\label{DDPARA_8c_ad973ea9385b44d34c6e2e80f960cb440}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1e38@{z1e38}}
+\index{z1e38@{z1e38}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1e38}{z1e38}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1e38}\hypertarget{DDPARA_8c_a54466da286c37008238f319ca2c1fcc8}{}\label{DDPARA_8c_a54466da286c37008238f319ca2c1fcc8}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1e6@{z1e6}}
+\index{z1e6@{z1e6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1e6}{z1e6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1e6}\hypertarget{DDPARA_8c_aadeb12cf35e33207bf3909df1ca2df8a}{}\label{DDPARA_8c_aadeb12cf35e33207bf3909df1ca2df8a}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em1@{z1em1}}
+\index{z1em1@{z1em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em1}{z1em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em1}\hypertarget{DDPARA_8c_aa5631b46f057869bf9f5e283710470bf}{}\label{DDPARA_8c_aa5631b46f057869bf9f5e283710470bf}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em2@{z1em2}}
+\index{z1em2@{z1em2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em2}{z1em2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em2}\hypertarget{DDPARA_8c_accbaaca0db62b7e3c5cbb58ac70362d8}{}\label{DDPARA_8c_accbaaca0db62b7e3c5cbb58ac70362d8}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em3@{z1em3}}
+\index{z1em3@{z1em3}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em3}{z1em3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em3}\hypertarget{DDPARA_8c_a01b2258ff2d4f29acf4d08abeaa3a452}{}\label{DDPARA_8c_a01b2258ff2d4f29acf4d08abeaa3a452}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em5@{z1em5}}
+\index{z1em5@{z1em5}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em5}{z1em5}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em5}\hypertarget{DDPARA_8c_aac8d9f7631d21b7d6c4d8df398b64160}{}\label{DDPARA_8c_aac8d9f7631d21b7d6c4d8df398b64160}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em6@{z1em6}}
+\index{z1em6@{z1em6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em6}{z1em6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em6}\hypertarget{DDPARA_8c_ab9643fe633c5a36a67e387b1c88d5179}{}\label{DDPARA_8c_ab9643fe633c5a36a67e387b1c88d5179}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em7@{z1em7}}
+\index{z1em7@{z1em7}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em7}{z1em7}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em7}\hypertarget{DDPARA_8c_a34884c645f1e0e39c41d505703dc3f13}{}\label{DDPARA_8c_a34884c645f1e0e39c41d505703dc3f13}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z1em9@{z1em9}}
+\index{z1em9@{z1em9}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z1em9}{z1em9}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z1em9}\hypertarget{DDPARA_8c_a80fb270da2439b4d5e3b4e50c88548e8}{}\label{DDPARA_8c_a80fb270da2439b4d5e3b4e50c88548e8}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z2@{z2}}
+\index{z2@{z2}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z2}{z2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z2}\hypertarget{DDPARA_8c_abfdc129c6ee76e75eed3135f0ce25a7c}{}\label{DDPARA_8c_abfdc129c6ee76e75eed3135f0ce25a7c}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z3@{z3}}
+\index{z3@{z3}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z3}{z3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z3}\hypertarget{DDPARA_8c_a8f55453e5803c6b7e40916652c5d1a1d}{}\label{DDPARA_8c_a8f55453e5803c6b7e40916652c5d1a1d}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z5@{z5}}
+\index{z5@{z5}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z5}{z5}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5}\hypertarget{DDPARA_8c_aa4fd0f4665690f94ffacd9717fe96527}{}\label{DDPARA_8c_aa4fd0f4665690f94ffacd9717fe96527}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z5em1@{z5em1}}
+\index{z5em1@{z5em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z5em1}{z5em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5em1}\hypertarget{DDPARA_8c_a73fab3947fdf80ebb30f5648a8d00fc2}{}\label{DDPARA_8c_a73fab3947fdf80ebb30f5648a8d00fc2}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z5em6@{z5em6}}
+\index{z5em6@{z5em6}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z5em6}{z5em6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z5em6}\hypertarget{DDPARA_8c_a762dda37f2f2be01802d7bf687a99b04}{}\label{DDPARA_8c_a762dda37f2f2be01802d7bf687a99b04}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z6em1@{z6em1}}
+\index{z6em1@{z6em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z6em1}{z6em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z6em1}\hypertarget{DDPARA_8c_ad989bf7970831e6fdd01873f41330efe}{}\label{DDPARA_8c_ad989bf7970831e6fdd01873f41330efe}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z90@{z90}}
+\index{z90@{z90}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z90}{z90}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z90}\hypertarget{DDPARA_8c_ae13651cd40a033422260cdc23ffec6ee}{}\label{DDPARA_8c_ae13651cd40a033422260cdc23ffec6ee}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z9em1@{z9em1}}
+\index{z9em1@{z9em1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z9em1}{z9em1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z9em1}\hypertarget{DDPARA_8c_a7baed3711543adae0b30175a6f65bb05}{}\label{DDPARA_8c_a7baed3711543adae0b30175a6f65bb05}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!z\+\_\+\+\_\+@{z\+\_\+\+\_\+}}
+\index{z\+\_\+\+\_\+@{z\+\_\+\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{z\+\_\+\+\_\+}{z__}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{DDPARA_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{}\label{DDPARA_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}
+
+
+Definition at line 40 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!zm1@{zm1}}
+\index{zm1@{zm1}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{zm1}{zm1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal zm1}\hypertarget{DDPARA_8c_a9b8d263c925eaec48eeefcbb2319e2b9}{}\label{DDPARA_8c_a9b8d263c925eaec48eeefcbb2319e2b9}
+
+
+Definition at line 66 of file D\+D\+P\+A\+R\+A.\+c.
+
+\index{D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}!znumbr\+\_\+@{znumbr\+\_\+}}
+\index{znumbr\+\_\+@{znumbr\+\_\+}!D\+D\+P\+A\+R\+A.\+c@{D\+D\+P\+A\+R\+A.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+}{znumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   znumbr\+\_\+}\hypertarget{DDPARA_8c_a4f7f91795994487a526e5d84368dc9bf}{}\label{DDPARA_8c_a4f7f91795994487a526e5d84368dc9bf}

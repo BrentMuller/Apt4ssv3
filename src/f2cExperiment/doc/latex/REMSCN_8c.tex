@@ -1,0 +1,386 @@
+\hypertarget{REMSCN_8c}{}\section{R\+E\+M\+S\+C\+N.\+c File Reference}
+\label{REMSCN_8c}\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+E\+M\+S\+C\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{REMSCN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\+\_\+1}~\hyperlink{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{inidat\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{REMSCN_8c_a73cff70cc8fc658af0d7fafeca2731fb}{remscn\+\_\+} (doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$tul, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tolin, integer $\ast$npat, integer $\ast$lsusp, integer $\ast$nsusp)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{REMSCN_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{cxhull} \mbox{[}24000\mbox{]}\\
+\>doublereal \hyperlink{REMSCN_8c_a4788dc961e15ca382588a6f41cd0d1c4}{dulim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMSCN_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{dvlim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMSCN_8c_aa23f53bbfcad76998f955271d679887c}{curmax} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMSCN_8c_a4fbfc91a456d854b82c05cb9394040a3}{curmin} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMSCN_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{ncxhul} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMSCN_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{ngp}\\
+\>integer \hyperlink{REMSCN_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{icursf}\\
+\} \hyperlink{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{inidat\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!inidat\+\_\+1@{inidat\+\_\+1}}
+\index{inidat\+\_\+1@{inidat\+\_\+1}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+1}{inidat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inidat\+\_\+1~{\bf inidat\+\_\+}}\hypertarget{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{}\label{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}
+
+
+Definition at line 23 of file R\+E\+M\+S\+C\+N.\+c.
+
+
+
+Referenced by remscn\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!remscn\+\_\+@{remscn\+\_\+}}
+\index{remscn\+\_\+@{remscn\+\_\+}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{remscn\+\_\+(doublereal $\ast$te, doublereal $\ast$ta, doublereal $\ast$tul, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tolin, integer $\ast$npat, integer $\ast$lsusp, integer $\ast$nsusp)}{remscn_(doublereal *te, doublereal *ta, doublereal *tul, doublereal *r__, doublereal *pside, doublereal *pthick, doublereal *tolin, integer *npat, integer *lsusp, integer *nsusp)}}]{\setlength{\rightskip}{0pt plus 5cm}int remscn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tolin, }
+\item[{integer $\ast$}]{npat, }
+\item[{integer $\ast$}]{lsusp, }
+\item[{integer $\ast$}]{nsusp}
+\end{DoxyParamCaption}
+)}\hypertarget{REMSCN_8c_a73cff70cc8fc658af0d7fafeca2731fb}{}\label{REMSCN_8c_a73cff70cc8fc658af0d7fafeca2731fb}
+
+
+Definition at line 27 of file R\+E\+M\+S\+C\+N.\+c.
+
+
+
+References a, cross\+\_\+(), d2, d\+\_\+\+\_\+, dist2\+\_\+(), hulcut\+\_\+(), i\+\_\+\+\_\+, inidat\+\_\+1, j, k, r\+\_\+\+\_\+, ta, tcsphr\+\_\+(), te, v1, v2, and vecmod\+\_\+().
+
+
+
+Referenced by intchk\+\_\+().
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{comment}{/* System generated locals */}
+32     integer i\_\_1, i\_\_2;
+33     doublereal d\_\_1;
+34 
+35     \textcolor{comment}{/* Local variables */}
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+37     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+38     \textcolor{keyword}{static} doublereal \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3], \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3];
+39     \textcolor{keyword}{static} logical ball;
+40     \textcolor{keyword}{static} integer iret;
+41     \textcolor{keyword}{extern} doublereal \hyperlink{DIST2_8c_aa033992fcfc8514be692b39357dc5a6a}{dist2\_}(doublereal *, doublereal *);
+42     \textcolor{keyword}{static} doublereal tcrad, tcent[3];
+43     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+44         *), \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *);
+45     \textcolor{keyword}{static} doublereal tccent[3], tlcent[3];
+46     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2}{tcsphr\_}(doublereal *, doublereal *, 
+47         doublereal *, doublereal *, doublereal *, doublereal *, 
+48         doublereal *, doublereal *), \hyperlink{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e}{hulcut\_}(doublereal *, doublereal *, 
+49         doublereal *, doublereal *, integer *);
+50 
+51 
+52 \textcolor{comment}{/*     PURPOSE: TO TEST ALL REMOTE (NON-CURRENT) PATCHES FOR POSSIBLE */}
+53 \textcolor{comment}{/*              INTEFERENCE */}
+54 
+55 \textcolor{comment}{/*     ARGUMENTS: */}
+56 
+57 \textcolor{comment}{/*     TE      -  TOOL END COORDINATES */}
+58 \textcolor{comment}{/*     TA      -  TOOL AXIS VECTOR */}
+59 \textcolor{comment}{/*     TUL     -  TOOL GEOMETRY */}
+60 \textcolor{comment}{/*     R       -  SURFACE CONTACT POINT AND DERIVATIVES */}
+61 \textcolor{comment}{/*     PSIDE   -  1 OR -1 TO AJUST SURFACE NORMAL (RU X RV) */}
+62 \textcolor{comment}{/*     PTHICK  -  THICKNESS OFFSET FROM SURFACE */}
+63 \textcolor{comment}{/*     TOLIN   -  TOLERANCE (PS INTOL) */}
+64 \textcolor{comment}{/*     NPAT    -  PATCH NUMBER FOR CONTACT POINT */}
+65 \textcolor{comment}{/*     LSUSP   -  SUSPECT PATCHES */}
+66 \textcolor{comment}{/*     NSUSP   -  NUMBER OF SUSPECT PATCHES */}
+67 
+68 
+69 
+70 
+71 
+72 
+73 
+74 \textcolor{comment}{/* .... LOCAL VARIABLES */}
+75 
+76 \textcolor{comment}{/*     TCCENT  -  CENTRE OF TOOL CONTACT SPHERE */}
+77 \textcolor{comment}{/*     TCRAD   -  RADIUS OF TOOL CONTACT SPHERE */}
+78 \textcolor{comment}{/*     TLCENT  -  CENTRE OF LARGE SHALLOW SPHERE THROUGH TE, RADIUS BIG5 */}
+79 \textcolor{comment}{/*     TCENT   -  CENTRE OF TIGHT SPHERE ENVELOPING TOOL, RADIUS=TUL(2) */}
+80 \textcolor{comment}{/*     BALL    -  CUTTER TYPE FLAG = .TRUE. IF CUTTER IS BALLENDED */}
+81 \textcolor{comment}{/*                                 = .FALSE. OTHERWISE */}
+82 \textcolor{comment}{/*     ISEG    -  INDICATES SEGMENT OF TOOL THAT PENETRATES */}
+83 \textcolor{comment}{/*                         = -1 IF NO PENETRATION */}
+84 \textcolor{comment}{/*                         =  0   BOTTOM FLAT */}
+85 \textcolor{comment}{/*                         =  1   CORNER RADIUS */}
+86 \textcolor{comment}{/*                         =  2   CYLINDER */}
+87 \textcolor{comment}{/*     V1      -  VECTOR FROM TOOL TIP TO CENTRE OF PATCH SPHERE */}
+88 \textcolor{comment}{/*     V2      -  V1 X TA */}
+89 \textcolor{comment}{/*     D       -  MINIMUM DISTANCE BETWEEN CENTRE OF PATCH SPHERE */}
+90 \textcolor{comment}{/*                AND TOOL AXIS */}
+91 \textcolor{comment}{/*     D2      -  SQUARE OF DISTANCE BETWEEN TWO SPHERE CENTRES */}
+92 \textcolor{comment}{/*     A       -  MINIMUM DISTANCE BETWEEN SPHERE CENTRES TO AVOID */}
+93 \textcolor{comment}{/*                INTERFERENCE */}
+94 
+95 
+96 
+97 
+98 
+99 \textcolor{comment}{/* .... CALCULATE TOOL CONTACT SPHERE FOR CURRENT TOOL POSITION */}
+100 
+101 
+102 \textcolor{comment}{/* .... INTERFERENCE CHECKING INITIAL DATA */}
+103 
+104 
+105 
+106 \textcolor{comment}{/* .... SPHERICAL SURFACE ENCLOSURES (HULLS) */}
+107 \textcolor{comment}{/* .... NUMBER OF HULLS */}
+108 \textcolor{comment}{/* .... DU ITERATION LIMIT FOR PATCHES */}
+109 \textcolor{comment}{/* .... DV ITERATION LIMIT FOR PATCHES */}
+110 \textcolor{comment}{/* .... MAXIMUM AND MINIMUM CURVATURE OF PATCHES */}
+111 
+112 \textcolor{comment}{/*     MXNP   -  MAXIMUM NUMBER OF PATCHES PER SURFACE */}
+113 \textcolor{comment}{/*     NGP    -  NUMBER OF PATCHES IN CURRENT SURFACE */}
+114 \textcolor{comment}{/*     ICURSF -  EXTERNAL LDA FILE RECORD NUMBER FOR CURRENT SURFACE */}
+115 
+116 
+117     \textcolor{comment}{/* Parameter adjustments */}
+118     --lsusp;
+119     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+120     --tul;
+121     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+122     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+123 
+124     \textcolor{comment}{/* Function Body */}
+125     \hyperlink{TCSPHR_8c_aa339894065bb4bdd58839222d4f24cd2}{tcsphr\_}(&\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &tul[1], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1], \hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside}, \hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick}, tccent, &tcrad);
+126 
+127 \textcolor{comment}{/* .... CALCULATE CENTRE OF LARGE SHALLOW SPHERE THROUGH TE */}
+128 \textcolor{comment}{/*     AND CENTRE OF TIGHT SPHERE ENVELOPING TOOL */}
+129 
+130     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+131     tlcent[i\_\_ - 1] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * 1e5;
+132     tcent[i\_\_ - 1] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + tul[2] * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+133 \textcolor{comment}{/* L10: */}
+134     \}
+135 
+136 \textcolor{comment}{/* .... SET FLAG INDICATING CUTTER TYPE */}
+137 
+138     \textcolor{keywordflow}{if} ((d\_\_1 = tul[1] - tul[2], abs(d\_\_1)) <= 1e-6) \{
+139 \textcolor{comment}{/* .... BALL-ENDED */}
+140     ball = TRUE\_;
+141     \} \textcolor{keywordflow}{else} \{
+142     ball = FALSE\_;
+143     \}
+144 
+145 \textcolor{comment}{/* .... TEST NON-CURRENT PATCHES FOR POSSIBLE INTERFERENCE */}
+146 
+147     *nsusp = 0;
+148     i\_\_1 = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ngp;
+149     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+150     \textcolor{keywordflow}{if} (k != *npat) \{
+151 
+152 \textcolor{comment}{/* .... TEST FOR INTERFERENCE OF INFINITE TOOL CYLINDER WITH */}
+153 \textcolor{comment}{/*     MINIMUM PATCH SPHERE */}
+154 
+155         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+156         v1[i\_\_ - 1] = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[i\_\_ + (k * 6 + 1 << 2) - 29] - 
+157             \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[i\_\_];
+158 \textcolor{comment}{/* L100: */}
+159         \}
+160         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(v1, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], v2);
+161         \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(v2, &d\_\_);
+162         \textcolor{keywordflow}{if} (d\_\_ >= \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(k * 6 + 1 << 2) - 25] + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + tul[
+163             2] - *tolin) \{
+164         \textcolor{keywordflow}{goto} L1000;
+165         \}
+166 
+167 \textcolor{comment}{/* .... STILL POSSIBLE INTERFERENCE WITH THIS PATCH */}
+168 
+169 \textcolor{comment}{/* .... TEST FOR INTERFERENCE OF TIGHT TOOL SPHERE */}
+170 \textcolor{comment}{/*     WITH ALL PATCH CONVEX HULL SPHERES */}
+171 
+172         i\_\_2 = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ncxhul[k - 1];
+173         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+174         d2 = \hyperlink{DIST2_8c_aa033992fcfc8514be692b39357dc5a6a}{dist2\_}(&\hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 28], tcent);
+175         a = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 25] + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + tul[2] 
+176             - *tolin;
+177         \textcolor{keywordflow}{if} (d\_\_ >= a * a) \{
+178             \textcolor{keywordflow}{goto} L1000;
+179         \}
+180 \textcolor{comment}{/* L200: */}
+181         \}
+182 
+183 \textcolor{comment}{/* .... STILL POSSIBLE INTERFERENCE WITH THIS PATCH */}
+184 
+185 \textcolor{comment}{/* .... TEST FOR INTERFERENCE OF SHALLOW TOOL SPHERE */}
+186 \textcolor{comment}{/*     WITH ALL PATCH CONVEX HULL SPHERES */}
+187 
+188         i\_\_2 = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ncxhul[k - 1];
+189         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+190         d2 = \hyperlink{DIST2_8c_aa033992fcfc8514be692b39357dc5a6a}{dist2\_}(&\hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 28], tlcent);
+191         a = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 25] + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + 1e5 - *
+192             tolin;
+193         \textcolor{keywordflow}{if} (d\_\_ >= a * a) \{
+194             \textcolor{keywordflow}{goto} L1000;
+195         \}
+196 \textcolor{comment}{/* L300: */}
+197         \}
+198 
+199 \textcolor{comment}{/* .... STILL POSSIBLE INTERFERENCE WITH THIS PATCH */}
+200 
+201 \textcolor{comment}{/* .... TEST FOR INTERFERENCE OF TOOL CONTACT SPHERE */}
+202 \textcolor{comment}{/*     WITH ALL PATCH CONVEX HULL SPHERES */}
+203 
+204         i\_\_2 = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ncxhul[k - 1];
+205         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+206         d2 = \hyperlink{DIST2_8c_aa033992fcfc8514be692b39357dc5a6a}{dist2\_}(&\hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 28], tccent);
+207         a = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k * 6 << 2) - 25] + *\hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick} + tcrad 
+208             - *tolin;
+209         \textcolor{keywordflow}{if} (d\_\_ >= a * a) \{
+210             \textcolor{keywordflow}{goto} L1000;
+211         \}
+212 \textcolor{comment}{/* L400: */}
+213         \}
+214 
+215 \textcolor{comment}{/* .... STILL POSSIBLE INTERFERENCE WITH THIS PATCH */}
+216 
+217 \textcolor{comment}{/* .... TEST FOR INTERFERENCE OF ACTUAL TOOL */}
+218 \textcolor{comment}{/*     WITH ALL PATCH CONVEX HULL SPHERES */}
+219 \textcolor{comment}{/*     UNLESS CUTTER IS BALL-ENDED */}
+220 
+221         \textcolor{keywordflow}{if} (! ball) \{
+222         i\_\_2 = \hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.ncxhul[k - 1];
+223         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+224             \hyperlink{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e}{hulcut\_}(&\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1], &tul[1], &\hyperlink{REMSCN_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.cxhull[(j + k *
+225                  6 << 2) - 28], &iret);
+226             \textcolor{keywordflow}{if} (iret < 0) \{
+227             \textcolor{keywordflow}{goto} L1000;
+228             \}
+229 \textcolor{comment}{/* L500: */}
+230         \}
+231         \}
+232 
+233 \textcolor{comment}{/* .... PATCH NOT CLEARED - ADD TO SUSPECT LIST */}
+234 
+235         ++(*nsusp);
+236         lsusp[*nsusp] = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+237     \}
+238 L1000:
+239     ;
+240     \}
+241 
+242     \textcolor{keywordflow}{return} 0;
+243 \} \textcolor{comment}{/* remscn\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{REMSCN_8c_a73cff70cc8fc658af0d7fafeca2731fb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{REMSCN_8c_a73cff70cc8fc658af0d7fafeca2731fb_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!curmax@{curmax}}
+\index{curmax@{curmax}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{curmax}{curmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmax\mbox{[}1000\mbox{]}}\hypertarget{REMSCN_8c_aa23f53bbfcad76998f955271d679887c}{}\label{REMSCN_8c_aa23f53bbfcad76998f955271d679887c}
+
+
+Definition at line 18 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!curmin@{curmin}}
+\index{curmin@{curmin}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{curmin}{curmin}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmin\mbox{[}1000\mbox{]}}\hypertarget{REMSCN_8c_a4fbfc91a456d854b82c05cb9394040a3}{}\label{REMSCN_8c_a4fbfc91a456d854b82c05cb9394040a3}
+
+
+Definition at line 18 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!cxhull@{cxhull}}
+\index{cxhull@{cxhull}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{cxhull}{cxhull}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cxhull\mbox{[}24000\mbox{]}}\hypertarget{REMSCN_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{}\label{REMSCN_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}
+
+
+Definition at line 18 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!dulim@{dulim}}
+\index{dulim@{dulim}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{dulim}{dulim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dulim\mbox{[}1000\mbox{]}}\hypertarget{REMSCN_8c_a4788dc961e15ca382588a6f41cd0d1c4}{}\label{REMSCN_8c_a4788dc961e15ca382588a6f41cd0d1c4}
+
+
+Definition at line 18 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!dvlim@{dvlim}}
+\index{dvlim@{dvlim}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{dvlim}{dvlim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dvlim\mbox{[}1000\mbox{]}}\hypertarget{REMSCN_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{}\label{REMSCN_8c_a2ad7fd4434a6687cbee351c9f0a91b85}
+
+
+Definition at line 18 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!icursf@{icursf}}
+\index{icursf@{icursf}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{icursf}{icursf}}]{\setlength{\rightskip}{0pt plus 5cm}integer icursf}\hypertarget{REMSCN_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{}\label{REMSCN_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}
+
+
+Definition at line 20 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!inidat\+\_\+@{inidat\+\_\+}}
+\index{inidat\+\_\+@{inidat\+\_\+}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+}{inidat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inidat\+\_\+}\hypertarget{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{}\label{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!ncxhul@{ncxhul}}
+\index{ncxhul@{ncxhul}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{ncxhul}{ncxhul}}]{\setlength{\rightskip}{0pt plus 5cm}integer ncxhul\mbox{[}1000\mbox{]}}\hypertarget{REMSCN_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{}\label{REMSCN_8c_a6af1d3fdc983ce604b95999d82d8ddaf}
+
+
+Definition at line 20 of file R\+E\+M\+S\+C\+N.\+c.
+
+\index{R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}!ngp@{ngp}}
+\index{ngp@{ngp}!R\+E\+M\+S\+C\+N.\+c@{R\+E\+M\+S\+C\+N.\+c}}
+\subsubsection[{\texorpdfstring{ngp}{ngp}}]{\setlength{\rightskip}{0pt plus 5cm}integer ngp}\hypertarget{REMSCN_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{}\label{REMSCN_8c_aff4428bb5e4d31d51a2be097fd6cba1b}
+
+
+Definition at line 20 of file R\+E\+M\+S\+C\+N.\+c.
+

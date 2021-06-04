@@ -1,0 +1,193 @@
+\hypertarget{TMDCS_8c}{}\section{T\+M\+D\+C\+S.\+c File Reference}
+\label{TMDCS_8c}\index{T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+M\+D\+C\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{TMDCS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TMDCS_8c_a4c8bd2153d3e3792333780c41e76b7d4}{tmdcs\+\_\+} (doublereal $\ast$trm, doublereal $\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{TMDCS_8c_a9afd138f156ca5a80aed6077db884c3e}{c\+\_\+\+\_\+97} = 97
+\item 
+static integer \hyperlink{TMDCS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}!tmdcs\+\_\+@{tmdcs\+\_\+}}
+\index{tmdcs\+\_\+@{tmdcs\+\_\+}!T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{tmdcs\+\_\+(doublereal $\ast$trm, doublereal $\ast$data)}{tmdcs_(doublereal *trm, doublereal *data)}}]{\setlength{\rightskip}{0pt plus 5cm}int tmdcs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{trm, }
+\item[{doublereal $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{TMDCS_8c_a4c8bd2153d3e3792333780c41e76b7d4}{}\label{TMDCS_8c_a4c8bd2153d3e3792333780c41e76b7d4}
+
+
+Definition at line 22 of file T\+M\+D\+C\+S.\+c.
+
+
+
+References apt066\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+97, error\+\_\+(), and i\+\_\+\+\_\+.
+
+
+
+Referenced by teval\+\_\+().
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* Initialized data */}
+25 
+26     \textcolor{keyword}{static} doublereal ntrm[12] = \{ 1.,0.,0.,0.,0.,1.,0.,0.,0.,0.,1.,0. \};
+27 
+28     \textcolor{comment}{/* System generated locals */}
+29     doublereal d\_\_1, d\_\_2, d\_\_3, d\_\_4, d\_\_5, d\_\_6, d\_\_7, d\_\_8;
+30 
+31     \textcolor{comment}{/* Builtin functions */}
+32     \textcolor{keywordtype}{double} sqrt(doublereal);
+33 
+34     \textcolor{comment}{/* Local variables */}
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+36     \textcolor{keyword}{static} doublereal trm1[12];
+37     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT066_8c_aff5f0fc9d55f5bb50920f101444f3070}{apt066\_}(doublereal *, doublereal *, 
+38         doublereal *, integer *);
+39     \textcolor{keyword}{static} doublereal scale;
+40     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+41     \textcolor{keyword}{static} doublereal scales;
+42 
+43 \textcolor{comment}{/* PROGRAM TO TRANSFORM THE PATCH GEOMETRY */}
+44 \textcolor{comment}{/*  OF "MASTER DIMENSION CONTOUR SURFACE" */}
+45 
+46 \textcolor{comment}{/*   TRANSFORMATION MATRIX */}
+47 \textcolor{comment}{/*   PATCH DATA */}
+48 \textcolor{comment}{/*   AUXILIARY MATRIX */}
+49 \textcolor{comment}{/*   'NO TRANSFORMATION' MATRIX */}
+50 \textcolor{comment}{/*   SCALE FACTOR */}
+51 
+52     \textcolor{comment}{/* Parameter adjustments */}
+53     --data;
+54     --trm;
+55 
+56     \textcolor{comment}{/* Function Body */}
+57 
+58 \textcolor{comment}{/*   TEST PRINT */}
+59 \textcolor{comment}{/*     WRITE(6,100) */}
+60 \textcolor{comment}{/* 100 FORMAT('0TMDCSSSS WAS CALLED') */}
+61 \textcolor{comment}{/*    PRESET OF SCALE FACTOR */}
+62     scale = 1.;
+63 \textcolor{comment}{/*    SQUARED SCALE FACTOR */}
+64 \textcolor{comment}{/* Computing 2nd power */}
+65     d\_\_1 = trm[1];
+66 \textcolor{comment}{/* Computing 2nd power */}
+67     d\_\_2 = trm[2];
+68 \textcolor{comment}{/* Computing 2nd power */}
+69     d\_\_3 = trm[3];
+70     scales = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+71 \textcolor{comment}{/*    COMPUTATION OF SCALE FACTOR */}
+72     \textcolor{keywordflow}{if} ((d\_\_1 = scales - 1., abs(d\_\_1)) >= 1e-10) \{
+73     scale = sqrt(scales);
+74     \}
+75 \textcolor{comment}{/*    TEST IF ALL SCALE FACTORS EQUAL */}
+76 \textcolor{comment}{/* Computing 2nd power */}
+77     d\_\_3 = trm[5];
+78 \textcolor{comment}{/* Computing 2nd power */}
+79     d\_\_4 = trm[6];
+80 \textcolor{comment}{/* Computing 2nd power */}
+81     d\_\_5 = trm[7];
+82 \textcolor{comment}{/* Computing 2nd power */}
+83     d\_\_6 = trm[9];
+84 \textcolor{comment}{/* Computing 2nd power */}
+85     d\_\_7 = trm[10];
+86 \textcolor{comment}{/* Computing 2nd power */}
+87     d\_\_8 = trm[11];
+88     \textcolor{keywordflow}{if} ((d\_\_1 = d\_\_3 * d\_\_3 + d\_\_4 * d\_\_4 + d\_\_5 * d\_\_5 - scales, abs(d\_\_1)) <
+89          1e-10 && (d\_\_2 = d\_\_6 * d\_\_6 + d\_\_7 * d\_\_7 + d\_\_8 * d\_\_8 - 
+90         scales, abs(d\_\_2)) < 1e-10) \{
+91     \textcolor{keywordflow}{goto} L1;
+92     \}
+93 \textcolor{comment}{/*    NO TRANSFORMATION AND ERROR MESSAGE */}
+94     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{TMDCS_8c_a9afd138f156ca5a80aed6077db884c3e}{c\_\_97}, \textcolor{stringliteral}{"TMDCSSSS"}, (ftnlen)8);
+95     \textcolor{keywordflow}{goto} L99;
+96 \textcolor{comment}{/*    MOVE OLD MATRIX TO SCATCH AREA */}
+97 L1:
+98     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 12; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+99 \textcolor{comment}{/* L2: */}
+100     trm1[i\_\_ - 1] = data[i\_\_ + 18];
+101     \}
+102 \textcolor{comment}{/*    COMPUTE NEW TRANSFORMATION MATRIX */}
+103     \hyperlink{APT066_8c_aff5f0fc9d55f5bb50920f101444f3070}{apt066\_}(&data[19], &trm[1], trm1, &\hyperlink{TMDCS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+104 \textcolor{comment}{/*    PRESET SCALE FACTOR OF MATRIX */}
+105     data[18] = scale;
+106 \textcolor{comment}{/*    CHECK THE RESULT MATRIX FOR 'NO TRANSFORMATION' */}
+107     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 12; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+108     \textcolor{keywordflow}{if} ((d\_\_1 = data[i\_\_ + 18] - ntrm[i\_\_ - 1], abs(d\_\_1)) >= 1e-10) \{
+109         \textcolor{keywordflow}{goto} L99;
+110     \}
+111 \textcolor{comment}{/* L3: */}
+112     \}
+113 \textcolor{comment}{/*    SWITCH OFF TRANSFORMATION */}
+114     data[18] = 0.;
+115 L99:
+116     \textcolor{keywordflow}{return} 0;
+117 \} \textcolor{comment}{/* tmdcs\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TMDCS_8c_a4c8bd2153d3e3792333780c41e76b7d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TMDCS_8c_a4c8bd2153d3e3792333780c41e76b7d4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TMDCS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{TMDCS_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 18 of file T\+M\+D\+C\+S.\+c.
+
+
+
+Referenced by tmdcs\+\_\+().
+
+\index{T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}!c\+\_\+\+\_\+97@{c\+\_\+\+\_\+97}}
+\index{c\+\_\+\+\_\+97@{c\+\_\+\+\_\+97}!T\+M\+D\+C\+S.\+c@{T\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+97}{c__97}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+97 = 97\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{TMDCS_8c_a9afd138f156ca5a80aed6077db884c3e}{}\label{TMDCS_8c_a9afd138f156ca5a80aed6077db884c3e}
+
+
+Definition at line 17 of file T\+M\+D\+C\+S.\+c.
+
+
+
+Referenced by tmdcs\+\_\+().
+

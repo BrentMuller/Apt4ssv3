@@ -1,0 +1,876 @@
+\hypertarget{RESRV_8c}{}\section{R\+E\+S\+R\+V.\+c File Reference}
+\label{RESRV_8c}\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+E\+S\+R\+V.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{RESRV_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{RESRV_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\+\_\+1}~\hyperlink{XNUMBR_8c_a91c8f40de43ddfbc45000e680a60e39a}{stor\+\_\+}
+\item 
+\#define \hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\+\_\+1}~\hyperlink{XCANON_8c_a507a3987d9972ca3cc943161898a703b}{work\+\_\+}
+\item 
+\#define \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\+\_\+1}~\hyperlink{XCANON_8c_a3143fbeb4effb8d33133d1dda807fd2a}{const\+\_\+}
+\item 
+\#define \hyperlink{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{ldef\+\_\+1}~\hyperlink{ZSURF_8c_ac6373b0903500763495af4c9b70ae9ba}{ldef\+\_\+}
+\item 
+\#define \hyperlink{RESRV_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}~((integer $\ast$)\&\hyperlink{XCANON_8c_a001efb875e36968dbf26250c27226bb6}{work\+\_\+1} + 4)
+\item 
+\#define \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{nb}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a583257b7c70608a95289b0a109197ca3}{cm}~((integer $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_ae771351dd440a8640270282362e338d0}{fp}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}~((integer $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a52a02871375f95f70bd3ef3bc31a5179}{mt}~((integer $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt}~((integer $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}~((integer $\ast$)\&equiv\+\_\+7)
+\item 
+\#define \hyperlink{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{rr1}~((doublereal $\ast$)\&equiv\+\_\+7)
+\item 
+\#define \hyperlink{RESRV_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{RESRV_8c_a901c6b78048a6bc02650e253fda38a7c}{fpp}~((integer $\ast$)\&\hyperlink{XCANON_8c_a001efb875e36968dbf26250c27226bb6}{work\+\_\+1} + 10)
+\item 
+\#define \hyperlink{RESRV_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{RESRV_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{RESRV_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RESRV_8c_af1bd04a9254b72acbafb027e3e74ca34}{resrv\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{RESRV_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{RESRV_8c_add4e8184be605c94e98fc3e6f15179b4}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RESRV_8c_aed55f5d99deda3a3c3020e834527d154}{ntb}\\
+\>integer \hyperlink{RESRV_8c_a83d7048b3015080d873afc2240c569f4}{fpb}\\
+\>integer \hyperlink{RESRV_8c_a8fca44db4284e4a304c96e46132044a7}{ppb}\\
+\>integer \hyperlink{RESRV_8c_a4f28b814dcb8d54c181ca5058cec5127}{comn}\\
+\>integer \hyperlink{RESRV_8c_ad9e085c666ce12c62a34d524d2a69cd1}{cfb}\\
+\} \hyperlink{RESRV_8c_a663195625d44ef2fb1b0cc940ed5f424}{stor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RESRV_8c_a8734904e5896016e37834ba7fde176dc}{pgc}\\
+\>integer \hyperlink{RESRV_8c_adaf57e0c5ee657086f1ba31405285d89}{pgcn}\\
+\>integer \hyperlink{RESRV_8c_afb06cbe1c41d6b6c80b3b673bb704f28}{ilc}\\
+\>integer \hyperlink{RESRV_8c_a13ed665e561e4df58bedcbece5ac485a}{ixc}\\
+\>integer \hyperlink{RESRV_8c_a933a2d2daab1416f6966febd8a00db86}{scp}\\
+\>integer \hyperlink{RESRV_8c_a3cbaabaf9623abb5c44829dd1bdf2d2a}{sap}\\
+\>integer \hyperlink{RESRV_8c_af4f3b0f08887fc29a202e593ffe59ad3}{nsp}\\
+\>integer \hyperlink{RESRV_8c_a2b95f64df4ca84754d79da29272f91be}{iap}\\
+\>integer \hyperlink{RESRV_8c_ac219f155db62f49c7a4dc71469299c22}{cfp}\\
+\>integer \hyperlink{RESRV_8c_a96826afd8b9709f82058cc04db0cd259}{comp}\\
+\>integer \hyperlink{RESRV_8c_ace37068888fd8a3fb68e9f7f1aa82cd1}{ntp}\\
+\>integer \hyperlink{RESRV_8c_a1bee72346179f42e7f254f59079bfd88}{lna} \mbox{[}40\mbox{]}\\
+\>integer \hyperlink{RESRV_8c_a47cbc95484bdfe714069739b5ef613e1}{rtp}\\
+\} \hyperlink{RESRV_8c_a2baaca2727a6eddbdbf26710d37f1c8e}{work\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{RESRV_8c_a3701705d871901a696e07071bb7db626}{kcomt}\\
+\>integer \hyperlink{RESRV_8c_a08cb83237269df1422bb821cd2b32d5f}{kcomf}\\
+\>real \hyperlink{RESRV_8c_a5d7b0d0e993a0a41c4f61801956db1e1}{cilprt}\\
+\>integer \hyperlink{RESRV_8c_af87b92667258876addd12e79a9effaa5}{kcbn}\\
+\} \hyperlink{RESRV_8c_a432b2fa445fe5a733f89aa0984fa3398}{const\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{RESRV_8c_a95733c3bf9d7e2335718d620f95b6659}{jcs}\\
+\>logical \hyperlink{RESRV_8c_a013a479e00cbd4dbe72081f4503165e2}{prnton}\\
+\>logical \hyperlink{RESRV_8c_aed613b7e2fa11482d2cac24efa81152f}{refflg}\\
+\>logical \hyperlink{RESRV_8c_a7df0aba3244c1e049e7b90b58f251bf6}{subflg}\\
+\>logical \hyperlink{RESRV_8c_ac13e0ba593b17aeca4a6df395dc4000b}{unflag}\\
+\>logical \hyperlink{RESRV_8c_a7b5f0df7f9203cc10b4bb58a5e4425ca}{zflag}\\
+\>logical \hyperlink{RESRV_8c_ae012a7f7a40a8f6fd19390a8eb600fb4}{jds}\\
+\>logical \hyperlink{RESRV_8c_a4b188cf7f787bb67ac2f35f6764103d3}{boundf}\\
+\>logical \hyperlink{RESRV_8c_acef64c2e2f81db0cbeaf2aa9ed9d4806}{pchlst}\\
+\>logical \hyperlink{RESRV_8c_a6e444b9edc732d6c210c21ce34bd2b25}{canflg}\\
+\>logical \hyperlink{RESRV_8c_a6d00a1ecc836b537535e3f4ebbabab32}{bnderr}\\
+\>logical \hyperlink{RESRV_8c_a5f7ad148d896c51b2fb7a805ac5aaa55}{tabprt}\\
+\>logical \hyperlink{RESRV_8c_a60d2572ed8fc93787a06be05d2c5f6e0}{refmot}\\
+\>logical \hyperlink{RESRV_8c_a126f5f2a27c6286532f6da787c209120}{altmlt}\\
+\} \hyperlink{RESRV_8c_a55858a7bd148178c3d0898628a9781c2}{ldef\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{RESRV_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{RESRV_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 21 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{RESRV_8c_a2f226f15c00130b05db70054f6514916}{}\label{RESRV_8c_a2f226f15c00130b05db70054f6514916}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!can@{can}}
+\index{can@{can}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{RESRV_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{RESRV_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!canon@{canon}}
+\index{canon@{canon}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a68d3ba380c16e286247bb69367760615}{}\label{RESRV_8c_a68d3ba380c16e286247bb69367760615}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!cf@{cf}}
+\index{cf@{cf}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cf}{cf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cf~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a00f1b81df737c29b5780926040839edb}{}\label{RESRV_8c_a00f1b81df737c29b5780926040839edb}
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!cm@{cm}}
+\index{cm@{cm}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cm}{cm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cm~((integer $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a583257b7c70608a95289b0a109197ca3}{}\label{RESRV_8c_a583257b7c70608a95289b0a109197ca3}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!const\+\_\+1@{const\+\_\+1}}
+\index{const\+\_\+1@{const\+\_\+1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{const\+\_\+1}{const_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define const\+\_\+1~{\bf const\+\_\+}}\hypertarget{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{}\label{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}
+
+
+Definition at line 42 of file R\+E\+S\+R\+V.\+c.
+
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!fp@{fp}}
+\index{fp@{fp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{fp}{fp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fp~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_ae771351dd440a8640270282362e338d0}{}\label{RESRV_8c_ae771351dd440a8640270282362e338d0}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!fpp@{fpp}}
+\index{fpp@{fpp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{fpp}{fpp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fpp~((integer $\ast$)\&{\bf work\+\_\+1} + 10)}\hypertarget{RESRV_8c_a901c6b78048a6bc02650e253fda38a7c}{}\label{RESRV_8c_a901c6b78048a6bc02650e253fda38a7c}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ia@{ia}}
+\index{ia@{ia}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ia}{ia}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ia~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a4e70c76163aa7d3619a36cdf054bf041}{}\label{RESRV_8c_a4e70c76163aa7d3619a36cdf054bf041}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ldef\+\_\+1@{ldef\+\_\+1}}
+\index{ldef\+\_\+1@{ldef\+\_\+1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ldef\+\_\+1}{ldef_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldef\+\_\+1~{\bf ldef\+\_\+}}\hypertarget{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{}\label{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}
+
+
+Definition at line 49 of file R\+E\+S\+R\+V.\+c.
+
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!mt@{mt}}
+\index{mt@{mt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{mt}{mt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mt~((integer $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a52a02871375f95f70bd3ef3bc31a5179}{}\label{RESRV_8c_a52a02871375f95f70bd3ef3bc31a5179}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!nb@{nb}}
+\index{nb@{nb}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{nb}{nb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nb~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{}\label{RESRV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!nt@{nt}}
+\index{nt@{nt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{nt}{nt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nt~((integer $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{}\label{RESRV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!p@{p}}
+\index{p@{p}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}\#define p~((integer $\ast$)\&{\bf work\+\_\+1} + 4)}\hypertarget{RESRV_8c_ade66e4ccafbc33b117610bbc0d85feb0}{}\label{RESRV_8c_ade66e4ccafbc33b117610bbc0d85feb0}
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!pp@{pp}}
+\index{pp@{pp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{pp}{pp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pp~((integer $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{}\label{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!rr@{rr}}
+\index{rr@{rr}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{rr}{rr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rr~((integer $\ast$)\&equiv\+\_\+7)}\hypertarget{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{}\label{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}
+
+
+Referenced by resrv\+\_\+(), and scpict\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!rr1@{rr1}}
+\index{rr1@{rr1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{rr1}{rr1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rr1~((doublereal $\ast$)\&equiv\+\_\+7)}\hypertarget{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{}\label{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}
+
+
+Referenced by resrv\+\_\+(), and txhull\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{RESRV_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{RESRV_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!stor\+\_\+1@{stor\+\_\+1}}
+\index{stor\+\_\+1@{stor\+\_\+1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{stor\+\_\+1}{stor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stor\+\_\+1~{\bf stor\+\_\+}}\hypertarget{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{}\label{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}
+
+
+Definition at line 27 of file R\+E\+S\+R\+V.\+c.
+
+
+
+Referenced by resrv\+\_\+().
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!work\+\_\+1@{work\+\_\+1}}
+\index{work\+\_\+1@{work\+\_\+1}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{work\+\_\+1}{work_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define work\+\_\+1~{\bf work\+\_\+}}\hypertarget{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{}\label{RESRV_8c_a001efb875e36968dbf26250c27226bb6}
+
+
+Definition at line 34 of file R\+E\+S\+R\+V.\+c.
+
+
+
+Referenced by resrv\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!resrv\+\_\+@{resrv\+\_\+}}
+\index{resrv\+\_\+@{resrv\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{resrv\+\_\+(void)}{resrv_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int resrv\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{RESRV_8c_af1bd04a9254b72acbafb027e3e74ca34}{}\label{RESRV_8c_af1bd04a9254b72acbafb027e3e74ca34}
+
+
+Definition at line 55 of file R\+E\+S\+R\+V.\+c.
+
+
+
+References bcdf\+\_\+(), cf, const\+\_\+1, e\+\_\+1, e\+\_\+2, k, ldef\+\_\+1, m, mode, n, nb, nt, p, p1, pp, r0, r\+\_\+\+\_\+, rr, rr1, stor\+\_\+1, trash\+\_\+(), work\+\_\+1, and xcanon\+\_\+().
+
+
+
+Referenced by intrp\+\_\+().
+
+
+\begin{DoxyCode}
+56 \{
+57     \textcolor{comment}{/* Initialized data */}
+58 
+59     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[4] = \{ 128,128,128,128 \};
+60     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+61     integer \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[2];
+62     doublereal \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+63     \} equiv\_7 = \{ 0, 0, 0. \};
+64 
+65 
+66     \textcolor{comment}{/* Local variables */}
+67     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+68 \textcolor{preprocessor}{#define p ((integer *)&work\_1 + 4)}
+69     \textcolor{keyword}{static} integer p0, \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}, \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0}, r1;
+70 \textcolor{preprocessor}{#define cf ((doublereal *)&\_BLNK\_\_1)}
+71 \textcolor{preprocessor}{#define ia ((doublereal *)&\_BLNK\_\_1)}
+72 \textcolor{preprocessor}{#define nb ((doublereal *)&\_BLNK\_\_1)}
+73 \textcolor{preprocessor}{#define cm ((integer *)&\_BLNK\_\_1)}
+74     \textcolor{keyword}{static} integer md;
+75 \textcolor{preprocessor}{#define fp ((doublereal *)&\_BLNK\_\_1)}
+76 \textcolor{preprocessor}{#define pp ((integer *)&\_BLNK\_\_1)}
+77 \textcolor{preprocessor}{#define mt ((integer *)&\_BLNK\_\_1)}
+78 \textcolor{preprocessor}{#define nt ((integer *)&\_BLNK\_\_1)}
+79 \textcolor{preprocessor}{#define rr ((integer *)&equiv\_7)}
+80 \textcolor{preprocessor}{#define rr1 ((doublereal *)&equiv\_7)}
+81 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+82 \textcolor{preprocessor}{#define fpp ((integer *)&work\_1 + 10)}
+83     \textcolor{keyword}{static} integer siz;
+84     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+85     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+86     \textcolor{keyword}{static} doublereal ndex;
+87 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+88 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+89     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TRASH_8c_ad06ebc4dcf8daa08bebb896caa917cf7}{trash\_}(doublereal *);
+90 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+91     \textcolor{keyword}{extern} integer \hyperlink{XCANON_8c_a63f2ad2205dd880b397b0c5e5d8a29ac}{xcanon\_}(integer *);
+92 
+93 
+94 \textcolor{comment}{/* FORTRAN SUBROUTINE 'RESRV'--PROCESS INTERMEDIATE LANGUAGE RESRV */}
+95 \textcolor{comment}{/*              INSTRUCTION */}
+96 
+97 \textcolor{comment}{/* PURPOSE      TO ESTABLISH STORAGE FOR CANONICAL FORMS AND BLANK COMMON */}
+98 \textcolor{comment}{/*              TO PLACE POINTERS IN NAME TABLE */}
+99 
+100 \textcolor{comment}{/* LINKAGE      CALL RESRV */}
+101 
+102 \textcolor{comment}{/* ARGUMENTS    THROUGH COMMON */}
+103 
+104 \textcolor{comment}{/* METHOD       ALL ELEMENTS ARE STORED IN THE CANONICAL FORMS ARRAY   OR */}
+105 \textcolor{comment}{/*              BLANK COMMON.  SEPERATE POINTERS ARE MAINTAINED FOR--- */}
+106 
+107 \textcolor{comment}{/*                   SCALARS */}
+108 \textcolor{comment}{/*                   SCALAR ARRAYS */}
+109 \textcolor{comment}{/*                   NONSCALARS */}
+110 \textcolor{comment}{/*                   INTERNAL ARRAYS */}
+111 \textcolor{comment}{/*                   BLANK COMMON */}
+112 
+113 \textcolor{comment}{/*              MODE AND NUMBER ARE EXAMINED TO DETERMINE WHICH */}
+114 \textcolor{comment}{/*              TYPE OF PROCESSING IS REQUIRED. */}
+115 
+116 \textcolor{comment}{/* --------------------------------------------------------------CDE PAK */}
+117 
+118 
+119 
+120 \textcolor{comment}{/* UNLABELED COMMON */}
+121 
+122 
+123 
+124 \textcolor{comment}{/*     UNLABELLED COMMON */}
+125 
+126 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+127 
+128 
+129 
+130 
+131 
+132 
+133 
+134 \textcolor{comment}{/* STOR--COMMON CONTAINING STORAGE PARAMETERS */}
+135 
+136 
+137 \textcolor{comment}{/*     ------------------- */}
+138 
+139 
+140 
+141 \textcolor{comment}{/* WORK--COMMON CONTAINING WORKING VARIABLES */}
+142 
+143 
+144 
+145 
+146 
+147 
+148 \textcolor{comment}{/* CONST--COMMON CONTAINING CONSTANTS */}
+149 
+150 
+151 
+152 
+153 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+154 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+155 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+156 
+157 
+158 
+159 \textcolor{comment}{/* --------------------------------------------------------------------- */}
+160 
+161 
+162 \textcolor{comment}{/*   ***  11.  LDEF BLOCK  *** */}
+163 
+164 \textcolor{comment}{/*   LOGICAL VARIABLES WHICH MUST REMAIN INVIOLATE */}
+165 
+166 
+167 
+168 
+169 
+170     n = \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[(0 + (0 + (\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 5 - 1 << 2))) / 4];
+171 
+172     siz = \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 3] + 1;
+173     \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} = \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 2];
+174     md = \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode};
+175     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 23) \{
+176     \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} = 21;
+177     \}
+178     \hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ntp = \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\_1}.ntb + \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 1];
+179 \textcolor{comment}{/*        IF MODE IS ZERO, PROCESS AS AN INTERNAL ARRAY */}
+180     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+181     \textcolor{keywordflow}{goto} L5;
+182     \}
+183     \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 4;
+184     --siz;
+185 \textcolor{comment}{/*        IF MODE .GT. 0 AND .NE. 21, PROCESS AS NON-SCALAR */}
+186 L5:
+187     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} > 0 && \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 21) \{
+188     \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 3;
+189     \}
+190 \textcolor{comment}{/*        IF MODE .LT. 0, PROCESS AS BLANK COMMON */}
+191     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} < 0) \{
+192     \textcolor{keywordflow}{goto} L50;
+193     \}
+194 \textcolor{comment}{/*        IF MODE IS 21, PROCESS AS A NON- OR SUB- SCRIPTED SCALAR */}
+195     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 21 && \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} > 1) \{
+196     \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 2;
+197     \}
+198     \textcolor{keywordflow}{if} (\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 21 || \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} != 1) \{
+199     \textcolor{keywordflow}{goto} L7;
+200     \}
+201     \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} = 1;
+202     --siz;
+203 \textcolor{comment}{/*        CALCULATE INDEX AND REMAINING SPACE IN BLOCK(R0). */}
+204 L7:
+205     ndex = (doublereal) ((md * 100 + siz - 1) * 10000);
+206     \textcolor{keywordflow}{if} (\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} == 1) \{
+207     ndex += -1.f;
+208     \}
+209     \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} - 1];
+210     r1 = 0;
+211 \textcolor{comment}{/*  OBTAIN CURRENT VERTUAL(P0) AND ACTUAL(P1) POINTERS TO BLOCK M. */}
+212     p0 = \hyperlink{RESRV_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} - 1];
+213     \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} = p0;
+214     \textcolor{keywordflow}{if} (! \hyperlink{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{ldef\_1}.canflg) \{
+215     \textcolor{keywordflow}{goto} L30;
+216     \}
+217 L10:
+218     p0 += r1;
+219 \textcolor{comment}{/*        WILL CANNONICAL FORM FIT IN BLOCK */}
+220     \textcolor{keywordflow}{if} (\hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} - siz * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} >= 2 - \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} / 4) \{
+221     \textcolor{keywordflow}{goto} L25;
+222     \}
+223 \textcolor{comment}{/*        NO,SPLIT IF INDEXED */}
+224 \textcolor{comment}{/*        HOW MANY ELEMENTS OF ARRAY FIT */}
+225     \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} = (\hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} - 1) / siz;
+226 \textcolor{comment}{/*        ENTIRE CANNONICAL FORM CAN NOT FIT */}
+227     \textcolor{keywordflow}{if} (\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} == \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}) \{
+228     --\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+229     \}
+230 \textcolor{comment}{/*        IF NO ELEMENTS FIT, BEGIN NEW BLOCK */}
+231     \textcolor{keywordflow}{if} (\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} != 0) \{
+232     \textcolor{keywordflow}{goto} L15;
+233     \}
+234     p0 += \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0};
+235     \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} = \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\_1}.kcbn;
+236     \textcolor{keywordflow}{goto} L10;
+237 \textcolor{comment}{/*        DETERMINE SPACE NOT OCCUPIED */}
+238 L15:
+239     r1 = \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} - \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} * siz - 1;
+240 \textcolor{comment}{/*        DETERMINE REMAINING SPACE WHICH CAN BE OCCUPPIED */}
+241     \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} -= r1;
+242     \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} = \hyperlink{XCANON_8c_a63f2ad2205dd880b397b0c5e5d8a29ac}{xcanon\_}(&p0);
+243 \textcolor{comment}{/*        FLAG SPACE THAT IS NOT OCCUPIED */}
+244 \textcolor{comment}{/* L20: */}
+245     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[0] = r1;
+246     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[1] = (p0 - \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\_1}.cfb) / \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\_1}.kcbn + 1 + \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"BK"}, (ftnlen)2);
+247     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1] = *\hyperlink{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{rr1};
+248 \textcolor{comment}{/*        ADVANCE POINTER */}
+249     p0 += r1;
+250 L25:
+251     \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} = \hyperlink{XCANON_8c_a63f2ad2205dd880b397b0c5e5d8a29ac}{xcanon\_}(&p0);
+252 \textcolor{comment}{/*        INITIALIZE CANNONICAL FORM */}
+253 L30:
+254     \textcolor{keywordflow}{switch} (\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+255     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L31;
+256     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L32;
+257     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L33;
+258     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L34;
+259     \}
+260 \textcolor{comment}{/*        NON-SUBSCRIPTED SCALAR */}
+261 L31:
+262     \hyperlink{TRASH_8c_ad06ebc4dcf8daa08bebb896caa917cf7}{trash\_}(&\hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1]);
+263     \textcolor{keywordflow}{goto} L34;
+264 \textcolor{comment}{/*        SUBSCRIPTED SCALAR */}
+265 L32:
+266     \hyperlink{TRASH_8c_ad06ebc4dcf8daa08bebb896caa917cf7}{trash\_}(&\hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1]);
+267     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}] = (doublereal) \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+268     \textcolor{keywordflow}{goto} L34;
+269 \textcolor{comment}{/*        NON-SCALAR */}
+270 L33:
+271     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1] = ndex + \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+272     \hyperlink{TRASH_8c_ad06ebc4dcf8daa08bebb896caa917cf7}{trash\_}(&\hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}]);
+273 \textcolor{comment}{/*        INTERNAL ARRAY REQUIRES NO INITIALIZATION */}
+274 L34:
+275     \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} += siz;
+276     p0 += siz;
+277     \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} -= siz;
+278     --\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+279 \textcolor{comment}{/*        IF NOT ENOUGH SPACE OR NO MORE FORMS OR NOT */}
+280 \textcolor{comment}{/*        ENOUGH SPACE FOR LAST FORM, START NEW BLOCK */}
+281     \textcolor{keywordflow}{if} (\hyperlink{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{ldef\_1}.canflg) \{
+282     \textcolor{keywordflow}{goto} L38;
+283     \}
+284     \textcolor{keywordflow}{if} (n >= 1) \{
+285     \textcolor{keywordflow}{goto} L30;
+286     \}
+287     \textcolor{keywordflow}{goto} L40;
+288 L38:
+289     \textcolor{keywordflow}{if} (\hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} - siz >= 1 && n > 1) \{
+290     \textcolor{keywordflow}{goto} L30;
+291     \}
+292     \textcolor{keywordflow}{if} (\hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} - siz >= 2 - \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} / 4 && n == 1) \{
+293     \textcolor{keywordflow}{goto} L30;
+294     \}
+295 \textcolor{comment}{/*        SAVE SPACE COUNT, INDICATE NEW BLOCK */}
+296     r1 = \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0};
+297     \hyperlink{DDRLSR_8c_af8ef4632fb5325a43f9c31778135d450}{r0} = \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\_1}.kcbn;
+298     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[0] = r1;
+299     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[1] = (p0 - \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\_1}.cfb) / \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\_1}.kcbn + 1 + \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"BK"}, (ftnlen)2);
+300     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1] = *\hyperlink{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{rr1};
+301 \textcolor{comment}{/*        STILL MORE FORMS */}
+302     \textcolor{keywordflow}{if} (n >= 1) \{
+303     \textcolor{keywordflow}{goto} L10;
+304     \}
+305 \textcolor{comment}{/*        NO, STORE NAME IF REQUIRED */}
+306 L40:
+307     \textcolor{keywordflow}{switch} (\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+308     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L41;
+309     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L41;
+310     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L41;
+311     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L42;
+312     \}
+313 L41:
+314     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1] = \hyperlink{RESRV_8c_a34e4ac9b2f68d0a7917e973a76a53cd1}{nb}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ntp - 1];
+315     ++\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1};
+316     ++p0;
+317     --r1;
+318 
+319 L42:
+320     \textcolor{keywordflow}{if} (! \hyperlink{RESRV_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{ldef\_1}.canflg) \{
+321     \textcolor{keywordflow}{goto} L43;
+322     \}
+323     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[0] = r1;
+324     \hyperlink{RESRV_8c_af0b629d98f0b3df05f708edbf99c0728}{rr}[1] = (p0 - \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\_1}.cfb) / \hyperlink{RESRV_8c_a9629419b1b6858277f0bb6e7fe746e05}{const\_1}.kcbn + 1 + \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"BK"}, (ftnlen)2);
+325     \hyperlink{RESRV_8c_a00f1b81df737c29b5780926040839edb}{cf}[\hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1} - 1] = *\hyperlink{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{rr1};
+326 L43:
+327     \hyperlink{RESRV_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} - 1] = p0;
+328     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} - 1] = r1;
+329 \textcolor{comment}{/*         STORE POINTER TO FORM(S) */}
+330     \textcolor{keywordflow}{if} (\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} <= 2) \{
+331     ++siz;
+332     \}
+333 \textcolor{comment}{/* L45: */}
+334     \hyperlink{RESRV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt}[(\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ntp << 1) - 2] = p0 - siz;
+335     \textcolor{keywordflow}{return} 0;
+336 
+337 \textcolor{comment}{/*        BLANK COMMON */}
+338 
+339 L50:
+340     \hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ntp = \hyperlink{RESRV_8c_a5718e3276937a916d63cece95dfe18e1}{stor\_1}.ntb + \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 1];
+341     \hyperlink{RESRV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt}[(\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ntp << 1) - 2] = \hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.comp;
+342     \hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.comp += \hyperlink{RESRV_8c_a6bdeb75d0d30207cefb604a676d0340b}{pp}[\hyperlink{RESRV_8c_a001efb875e36968dbf26250c27226bb6}{work\_1}.ilc + 4];
+343     \textcolor{keywordflow}{return} 0;
+344 \} \textcolor{comment}{/* resrv\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RESRV_8c_af1bd04a9254b72acbafb027e3e74ca34_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RESRV_8c_af1bd04a9254b72acbafb027e3e74ca34_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{RESRV_8c_add4e8184be605c94e98fc3e6f15179b4}{}\label{RESRV_8c_add4e8184be605c94e98fc3e6f15179b4}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!altmlt@{altmlt}}
+\index{altmlt@{altmlt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{altmlt}{altmlt}}]{\setlength{\rightskip}{0pt plus 5cm}logical altmlt}\hypertarget{RESRV_8c_a126f5f2a27c6286532f6da787c209120}{}\label{RESRV_8c_a126f5f2a27c6286532f6da787c209120}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!bnderr@{bnderr}}
+\index{bnderr@{bnderr}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{bnderr}{bnderr}}]{\setlength{\rightskip}{0pt plus 5cm}logical bnderr}\hypertarget{RESRV_8c_a6d00a1ecc836b537535e3f4ebbabab32}{}\label{RESRV_8c_a6d00a1ecc836b537535e3f4ebbabab32}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!boundf@{boundf}}
+\index{boundf@{boundf}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{boundf}{boundf}}]{\setlength{\rightskip}{0pt plus 5cm}logical boundf}\hypertarget{RESRV_8c_a4b188cf7f787bb67ac2f35f6764103d3}{}\label{RESRV_8c_a4b188cf7f787bb67ac2f35f6764103d3}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!canflg@{canflg}}
+\index{canflg@{canflg}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{canflg}{canflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical canflg}\hypertarget{RESRV_8c_a6e444b9edc732d6c210c21ce34bd2b25}{}\label{RESRV_8c_a6e444b9edc732d6c210c21ce34bd2b25}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!cfb@{cfb}}
+\index{cfb@{cfb}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cfb}{cfb}}]{\setlength{\rightskip}{0pt plus 5cm}integer cfb}\hypertarget{RESRV_8c_ad9e085c666ce12c62a34d524d2a69cd1}{}\label{RESRV_8c_ad9e085c666ce12c62a34d524d2a69cd1}
+
+
+Definition at line 24 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!cfp@{cfp}}
+\index{cfp@{cfp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cfp}{cfp}}]{\setlength{\rightskip}{0pt plus 5cm}integer cfp}\hypertarget{RESRV_8c_ac219f155db62f49c7a4dc71469299c22}{}\label{RESRV_8c_ac219f155db62f49c7a4dc71469299c22}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!cilprt@{cilprt}}
+\index{cilprt@{cilprt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{cilprt}{cilprt}}]{\setlength{\rightskip}{0pt plus 5cm}real cilprt}\hypertarget{RESRV_8c_a5d7b0d0e993a0a41c4f61801956db1e1}{}\label{RESRV_8c_a5d7b0d0e993a0a41c4f61801956db1e1}
+
+
+Definition at line 38 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!com@{com}}
+\index{com@{com}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{RESRV_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{RESRV_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 18 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!comn@{comn}}
+\index{comn@{comn}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{comn}{comn}}]{\setlength{\rightskip}{0pt plus 5cm}integer comn}\hypertarget{RESRV_8c_a4f28b814dcb8d54c181ca5058cec5127}{}\label{RESRV_8c_a4f28b814dcb8d54c181ca5058cec5127}
+
+
+Definition at line 24 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!comp@{comp}}
+\index{comp@{comp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{comp}{comp}}]{\setlength{\rightskip}{0pt plus 5cm}integer comp}\hypertarget{RESRV_8c_a96826afd8b9709f82058cc04db0cd259}{}\label{RESRV_8c_a96826afd8b9709f82058cc04db0cd259}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!const\+\_\+@{const\+\_\+}}
+\index{const\+\_\+@{const\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{const\+\_\+}{const_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+\_\+}\hypertarget{RESRV_8c_a432b2fa445fe5a733f89aa0984fa3398}{}\label{RESRV_8c_a432b2fa445fe5a733f89aa0984fa3398}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!fpb@{fpb}}
+\index{fpb@{fpb}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{fpb}{fpb}}]{\setlength{\rightskip}{0pt plus 5cm}integer fpb}\hypertarget{RESRV_8c_a83d7048b3015080d873afc2240c569f4}{}\label{RESRV_8c_a83d7048b3015080d873afc2240c569f4}
+
+
+Definition at line 24 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!iap@{iap}}
+\index{iap@{iap}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{iap}{iap}}]{\setlength{\rightskip}{0pt plus 5cm}integer iap}\hypertarget{RESRV_8c_a2b95f64df4ca84754d79da29272f91be}{}\label{RESRV_8c_a2b95f64df4ca84754d79da29272f91be}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ilc@{ilc}}
+\index{ilc@{ilc}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ilc}{ilc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ilc}\hypertarget{RESRV_8c_afb06cbe1c41d6b6c80b3b673bb704f28}{}\label{RESRV_8c_afb06cbe1c41d6b6c80b3b673bb704f28}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ixc@{ixc}}
+\index{ixc@{ixc}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ixc}{ixc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ixc}\hypertarget{RESRV_8c_a13ed665e561e4df58bedcbece5ac485a}{}\label{RESRV_8c_a13ed665e561e4df58bedcbece5ac485a}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!jcs@{jcs}}
+\index{jcs@{jcs}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{jcs}{jcs}}]{\setlength{\rightskip}{0pt plus 5cm}logical jcs}\hypertarget{RESRV_8c_a95733c3bf9d7e2335718d620f95b6659}{}\label{RESRV_8c_a95733c3bf9d7e2335718d620f95b6659}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!jds@{jds}}
+\index{jds@{jds}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{jds}{jds}}]{\setlength{\rightskip}{0pt plus 5cm}logical jds}\hypertarget{RESRV_8c_ae012a7f7a40a8f6fd19390a8eb600fb4}{}\label{RESRV_8c_ae012a7f7a40a8f6fd19390a8eb600fb4}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!kcbn@{kcbn}}
+\index{kcbn@{kcbn}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{kcbn}{kcbn}}]{\setlength{\rightskip}{0pt plus 5cm}integer kcbn}\hypertarget{RESRV_8c_af87b92667258876addd12e79a9effaa5}{}\label{RESRV_8c_af87b92667258876addd12e79a9effaa5}
+
+
+Definition at line 39 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!kcomf@{kcomf}}
+\index{kcomf@{kcomf}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{kcomf}{kcomf}}]{\setlength{\rightskip}{0pt plus 5cm}integer kcomf}\hypertarget{RESRV_8c_a08cb83237269df1422bb821cd2b32d5f}{}\label{RESRV_8c_a08cb83237269df1422bb821cd2b32d5f}
+
+
+Definition at line 37 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!kcomt@{kcomt}}
+\index{kcomt@{kcomt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{kcomt}{kcomt}}]{\setlength{\rightskip}{0pt plus 5cm}integer kcomt}\hypertarget{RESRV_8c_a3701705d871901a696e07071bb7db626}{}\label{RESRV_8c_a3701705d871901a696e07071bb7db626}
+
+
+Definition at line 37 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ldef\+\_\+@{ldef\+\_\+}}
+\index{ldef\+\_\+@{ldef\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ldef\+\_\+}{ldef_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ldef\+\_\+}\hypertarget{RESRV_8c_a55858a7bd148178c3d0898628a9781c2}{}\label{RESRV_8c_a55858a7bd148178c3d0898628a9781c2}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!lna@{lna}}
+\index{lna@{lna}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{lna}{lna}}]{\setlength{\rightskip}{0pt plus 5cm}integer lna\mbox{[}40\mbox{]}}\hypertarget{RESRV_8c_a1bee72346179f42e7f254f59079bfd88}{}\label{RESRV_8c_a1bee72346179f42e7f254f59079bfd88}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!nsp@{nsp}}
+\index{nsp@{nsp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{nsp}{nsp}}]{\setlength{\rightskip}{0pt plus 5cm}integer nsp}\hypertarget{RESRV_8c_af4f3b0f08887fc29a202e593ffe59ad3}{}\label{RESRV_8c_af4f3b0f08887fc29a202e593ffe59ad3}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ntb@{ntb}}
+\index{ntb@{ntb}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ntb}{ntb}}]{\setlength{\rightskip}{0pt plus 5cm}integer ntb}\hypertarget{RESRV_8c_aed55f5d99deda3a3c3020e834527d154}{}\label{RESRV_8c_aed55f5d99deda3a3c3020e834527d154}
+
+
+Definition at line 24 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ntp@{ntp}}
+\index{ntp@{ntp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ntp}{ntp}}]{\setlength{\rightskip}{0pt plus 5cm}integer ntp}\hypertarget{RESRV_8c_ace37068888fd8a3fb68e9f7f1aa82cd1}{}\label{RESRV_8c_ace37068888fd8a3fb68e9f7f1aa82cd1}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!pchlst@{pchlst}}
+\index{pchlst@{pchlst}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{pchlst}{pchlst}}]{\setlength{\rightskip}{0pt plus 5cm}logical pchlst}\hypertarget{RESRV_8c_acef64c2e2f81db0cbeaf2aa9ed9d4806}{}\label{RESRV_8c_acef64c2e2f81db0cbeaf2aa9ed9d4806}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!pgc@{pgc}}
+\index{pgc@{pgc}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{pgc}{pgc}}]{\setlength{\rightskip}{0pt plus 5cm}integer pgc}\hypertarget{RESRV_8c_a8734904e5896016e37834ba7fde176dc}{}\label{RESRV_8c_a8734904e5896016e37834ba7fde176dc}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!pgcn@{pgcn}}
+\index{pgcn@{pgcn}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{pgcn}{pgcn}}]{\setlength{\rightskip}{0pt plus 5cm}integer pgcn}\hypertarget{RESRV_8c_adaf57e0c5ee657086f1ba31405285d89}{}\label{RESRV_8c_adaf57e0c5ee657086f1ba31405285d89}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!ppb@{ppb}}
+\index{ppb@{ppb}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{ppb}{ppb}}]{\setlength{\rightskip}{0pt plus 5cm}integer ppb}\hypertarget{RESRV_8c_a8fca44db4284e4a304c96e46132044a7}{}\label{RESRV_8c_a8fca44db4284e4a304c96e46132044a7}
+
+
+Definition at line 24 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!prnton@{prnton}}
+\index{prnton@{prnton}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{prnton}{prnton}}]{\setlength{\rightskip}{0pt plus 5cm}logical prnton}\hypertarget{RESRV_8c_a013a479e00cbd4dbe72081f4503165e2}{}\label{RESRV_8c_a013a479e00cbd4dbe72081f4503165e2}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!refflg@{refflg}}
+\index{refflg@{refflg}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{refflg}{refflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical refflg}\hypertarget{RESRV_8c_aed613b7e2fa11482d2cac24efa81152f}{}\label{RESRV_8c_aed613b7e2fa11482d2cac24efa81152f}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!refmot@{refmot}}
+\index{refmot@{refmot}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{refmot}{refmot}}]{\setlength{\rightskip}{0pt plus 5cm}logical refmot}\hypertarget{RESRV_8c_a60d2572ed8fc93787a06be05d2c5f6e0}{}\label{RESRV_8c_a60d2572ed8fc93787a06be05d2c5f6e0}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!rtp@{rtp}}
+\index{rtp@{rtp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{rtp}{rtp}}]{\setlength{\rightskip}{0pt plus 5cm}integer rtp}\hypertarget{RESRV_8c_a47cbc95484bdfe714069739b5ef613e1}{}\label{RESRV_8c_a47cbc95484bdfe714069739b5ef613e1}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!sap@{sap}}
+\index{sap@{sap}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{sap}{sap}}]{\setlength{\rightskip}{0pt plus 5cm}integer sap}\hypertarget{RESRV_8c_a3cbaabaf9623abb5c44829dd1bdf2d2a}{}\label{RESRV_8c_a3cbaabaf9623abb5c44829dd1bdf2d2a}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!scp@{scp}}
+\index{scp@{scp}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{scp}{scp}}]{\setlength{\rightskip}{0pt plus 5cm}integer scp}\hypertarget{RESRV_8c_a933a2d2daab1416f6966febd8a00db86}{}\label{RESRV_8c_a933a2d2daab1416f6966febd8a00db86}
+
+
+Definition at line 30 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!stor\+\_\+@{stor\+\_\+}}
+\index{stor\+\_\+@{stor\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{stor\+\_\+}{stor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stor\+\_\+}\hypertarget{RESRV_8c_a663195625d44ef2fb1b0cc940ed5f424}{}\label{RESRV_8c_a663195625d44ef2fb1b0cc940ed5f424}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!subflg@{subflg}}
+\index{subflg@{subflg}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{subflg}{subflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical subflg}\hypertarget{RESRV_8c_a7df0aba3244c1e049e7b90b58f251bf6}{}\label{RESRV_8c_a7df0aba3244c1e049e7b90b58f251bf6}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!tabprt@{tabprt}}
+\index{tabprt@{tabprt}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{tabprt}{tabprt}}]{\setlength{\rightskip}{0pt plus 5cm}logical tabprt}\hypertarget{RESRV_8c_a5f7ad148d896c51b2fb7a805ac5aaa55}{}\label{RESRV_8c_a5f7ad148d896c51b2fb7a805ac5aaa55}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!unflag@{unflag}}
+\index{unflag@{unflag}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{unflag}{unflag}}]{\setlength{\rightskip}{0pt plus 5cm}logical unflag}\hypertarget{RESRV_8c_ac13e0ba593b17aeca4a6df395dc4000b}{}\label{RESRV_8c_ac13e0ba593b17aeca4a6df395dc4000b}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!work\+\_\+@{work\+\_\+}}
+\index{work\+\_\+@{work\+\_\+}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{work\+\_\+}{work_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   work\+\_\+}\hypertarget{RESRV_8c_a2baaca2727a6eddbdbf26710d37f1c8e}{}\label{RESRV_8c_a2baaca2727a6eddbdbf26710d37f1c8e}
+\index{R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}!zflag@{zflag}}
+\index{zflag@{zflag}!R\+E\+S\+R\+V.\+c@{R\+E\+S\+R\+V.\+c}}
+\subsubsection[{\texorpdfstring{zflag}{zflag}}]{\setlength{\rightskip}{0pt plus 5cm}logical zflag}\hypertarget{RESRV_8c_a7b5f0df7f9203cc10b4bb58a5e4425ca}{}\label{RESRV_8c_a7b5f0df7f9203cc10b4bb58a5e4425ca}
+
+
+Definition at line 45 of file R\+E\+S\+R\+V.\+c.
+

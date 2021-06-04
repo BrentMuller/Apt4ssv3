@@ -1,0 +1,931 @@
+\hypertarget{APT227_8c}{}\section{A\+P\+T227.\+c File Reference}
+\label{APT227_8c}\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T227.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT227_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdef__1__}{def\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structfxcor__1__}{fxcor\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structcharct__1__}{charct\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structtlldat__1__}{tlldat\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structhblock__1__}{hblock\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structsv__1__}{sv\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structsv1__1__}{sv1\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structznumbr__1__}{znumbr\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structldef__1__}{ldef\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structisv__1__}{isv\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structisv1__1__}{isv1\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structibrkpt__1__}{ibrkpt\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structidef__1__}{idef\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structifxcor__1__}{ifxcor\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structknumbr__1__}{knumbr\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structaddcom__1__}{addcom\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structtracfl__1__}{tracfl\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structaercom__1__}{aercom\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structhold__1__}{hold\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structdarray__1__}{darray\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structxunits__1__}{xunits\+\_\+1\+\_\+}
+\item 
+struct \hyperlink{structxunitc__1__}{xunitc\+\_\+1\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{APT227_8c_ae055c5e470439f3b9bbdb7d9ac077ed5}{apt227\+\_\+1}~\hyperlink{SSV3_8c_a784c42b5e1c6b4d4f8262346076306aa}{apt227\+\_\+}
+\item 
+\#define \hyperlink{APT227_8c_aa419764595bd5ee089a362f22493a163}{def\+\_\+1}~($\ast$(struct \hyperlink{structdef__1__}{def\+\_\+1\+\_\+} $\ast$) \&\hyperlink{ZSURF_8c_ae85cc3fa2da9fcee147509c277aaf39c}{def\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a9655fddc857ca6ffc153c5a4d624f1e9}{dshar3\+\_\+1}~\hyperlink{ZSURF_8c_a67b882a0c5203be7b449690a8674adc4}{dshar3\+\_\+}
+\item 
+\#define \hyperlink{APT227_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~($\ast$(struct \hyperlink{structfxcor__1__}{fxcor\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~($\ast$(struct \hyperlink{structcharct__1__}{charct\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~($\ast$(struct \hyperlink{structtlldat__1__}{tlldat\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a9147c2fab27760493063ab471f6cd5ee}{hblock\+\_\+1}~($\ast$(struct \hyperlink{structhblock__1__}{hblock\+\_\+1\+\_\+} $\ast$) \&\hyperlink{SSV3_8c_a9ffc0470fea1400a196d71992081f786}{hblock\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a2f6418172e9c14772469fd5c924645ac}{sv\+\_\+1}~($\ast$(struct \hyperlink{structsv__1__}{sv\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_adb6a68aa9fbad846f4d8d0f30dc08ccd}{sv\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a7d7892a40c1228c7ca311a419a2f34a6}{sv1\+\_\+1}~($\ast$(struct \hyperlink{structsv1__1__}{sv1\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_a538c754ca86c03b265c2c267b61e7b26}{sv1\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a747f55b761c50dbd8b70af26e8146204}{znumbr\+\_\+1}~($\ast$(struct \hyperlink{structznumbr__1__}{znumbr\+\_\+1\+\_\+} $\ast$) \&\hyperlink{ZVECT_8c_a3f367900c9f9d0188db1e3d2bd2e94c1}{znumbr\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{ldef\+\_\+1}~($\ast$(struct \hyperlink{structldef__1__}{ldef\+\_\+1\+\_\+} $\ast$) \&\hyperlink{ZSURF_8c_ac6373b0903500763495af4c9b70ae9ba}{ldef\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_acc79429328b703ca60ff76b9028f00fc}{isv\+\_\+1}~($\ast$(struct \hyperlink{structisv__1__}{isv\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_ad4fc6b0377370872427a6fbb7b79df28}{isv\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_abe3545b3957e92e0b5ff211b7d6f7616}{isv1\+\_\+1}~($\ast$(struct \hyperlink{structisv1__1__}{isv1\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_a5f27fd0f62d6f96b62ae9fe3ceb00067}{isv1\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_afdbab201dc9c5a1f1c07f46da735654b}{ibrkpt\+\_\+1}~($\ast$(struct \hyperlink{structibrkpt__1__}{ibrkpt\+\_\+1\+\_\+} $\ast$) \&\hyperlink{SSV3_8c_ac74179560a4401d5c0a096426acefbca}{ibrkpt\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a6207cda821862458c24466470a5a29cf}{idef\+\_\+1}~($\ast$(struct \hyperlink{structidef__1__}{idef\+\_\+1\+\_\+} $\ast$) \&\hyperlink{SSV3_8c_a9cae5275a44a01f95d2fcecf8ea5c914}{idef\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~($\ast$(struct \hyperlink{structifxcor__1__}{ifxcor\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a21f1c91333ff469374792c606442868b}{knumbr\+\_\+1}~($\ast$(struct \hyperlink{structknumbr__1__}{knumbr\+\_\+1\+\_\+} $\ast$) \&\hyperlink{ZSURF_8c_a29aa7c3b45e91bbcd3d95a78d2bf1766}{knumbr\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a5f276675dccab4f64076d59a9cff054d}{addcom\+\_\+1}~($\ast$(struct \hyperlink{structaddcom__1__}{addcom\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_a04f922ec6d84a0f05071d2b4fead7769}{addcom\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_af0335a31adbe6551af5c241a92693946}{tracfl\+\_\+1}~($\ast$(struct \hyperlink{structtracfl__1__}{tracfl\+\_\+1\+\_\+} $\ast$) \&\hyperlink{SSV3_8c_a0a7fe973b400ef3b55e1cca9ac066cd4}{tracfl\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a6f53ad75918faba8e3caab8c3db036dd}{dsname\+\_\+1}~\hyperlink{SSV3_8c_a4155437098c3d10d4a4458ad2d95ac94}{dsname\+\_\+}
+\item 
+\#define \hyperlink{APT227_8c_a0da767c81974d7dcb978fe2c56de1e15}{srfnam\+\_\+1}~\hyperlink{SSV3_8c_a8bbdc28f4992dc45d96222c15c8f6070}{srfnam\+\_\+}
+\item 
+\#define \hyperlink{APT227_8c_acbadff6aba66cddb688521e5bcc1c61a}{aercom\+\_\+1}~($\ast$(struct \hyperlink{structaercom__1__}{aercom\+\_\+1\+\_\+} $\ast$) \&\hyperlink{TLAXIS_8c_adf6b6b34cd088b6d4b1884ebfb035b13}{aercom\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a9033c9018e81f440c9967624058f3228}{hold\+\_\+1}~($\ast$(struct \hyperlink{structhold__1__}{hold\+\_\+1\+\_\+} $\ast$) \&\hyperlink{TOLER_8c_a73c7f9e8f57baa63e71a8cdb47fc95a5}{hold\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~($\ast$(struct \hyperlink{structdarray__1__}{darray\+\_\+1\+\_\+} $\ast$) \&\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_a110330bc4a804501af6437b4c8f4b4e8}{xunits\+\_\+1}~($\ast$(struct \hyperlink{structxunits__1__}{xunits\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_a1d211c185131127503314a54cc1e1bdc}{xunits\+\_\+})
+\item 
+\#define \hyperlink{APT227_8c_af04a0a2cb09e0d5edcb69e9cfd4515e9}{xunitc\+\_\+1}~($\ast$(struct \hyperlink{structxunitc__1__}{xunitc\+\_\+1\+\_\+} $\ast$) \&\hyperlink{UNITS_8c_aeb0d5d4222193fe40c5e0c70ba1c1d97}{xunitc\+\_\+})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT227_8c_ae1bb548646f768ff1660bf34f7c3826f}{bda227\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_a78d319654c3d0e99490c2a63e9b9484f}{apt227}\\
+\} \hyperlink{APT227_8c_aa4b8a357558c186cc30a0d0a48930142}{apt227\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\_\_} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_a4b844110bdc6a857d17ab8289ff9a043}{g} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_ad7684a4576040833776882c791cfabf0}{l} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_aec37dbecf1f14b0e999eeb6ead189904}{p} \mbox{[}16\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_a9cae3e36ae5e63785447451b6081dc98}{sc} \mbox{[}16\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_a1f148515a08a71c3280eeb1528f86455}{t} \mbox{[}12\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_ad43e2527e2f754444227a9804f266148}{t1} \mbox{[}12\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v} \mbox{[}10\mbox{]}\\
+\} \hyperlink{APT227_8c_a4758025420caa4692cba2e0cfefbaf3a}{dshar3\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_a9cee059059d299c2fda9f43e649f9a3c}{dsname}\\
+\>integer \hyperlink{APT227_8c_a83d6254198bb88e02ba9d74666b2cc09}{namsub}\\
+\} \hyperlink{APT227_8c_a88f5718f708d73e5a0ff41f128762bec}{dsname\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aaaa4960352f4711e986c9003333ddc91}{psname}\\
+\>doublereal \hyperlink{APT227_8c_af3719d5721da2042ef0582ba032ab004}{cs1nam}\\
+\>doublereal \hyperlink{APT227_8c_a643a5a266f9b13c7e064b08a46a8b634}{cs2nam}\\
+\>integer \hyperlink{APT227_8c_a7b0221c5c234ebf2befeed7883b1978b}{ipssub}\\
+\>integer \hyperlink{APT227_8c_acb2c4cdde72fe7bc69e7939978e1f94b}{ics1sb}\\
+\>integer \hyperlink{APT227_8c_a331994b4ac96e50bf0ca2353f40bb412}{ics2sb}\\
+\} \hyperlink{APT227_8c_a6816c43d930fc3fc6cfe969df639f512}{srfnam\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}25\mbox{]}\\
+\} \hyperlink{APT227_8c_aa76f4816581b86d73d66731893fd6388}{znumbr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}14\mbox{]}\\
+\} \hyperlink{APT227_8c_aa1afaf5290cfca0c1d1b1134c76bb3f1}{ldef\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}105\mbox{]}\\
+\} \hyperlink{APT227_8c_ac205763d631627bd654b35543543c669}{isv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}50\mbox{]}\\
+\} \hyperlink{APT227_8c_a982515ec83c3465aea215c31caf04dd5}{isv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}51\mbox{]}\\
+\} \hyperlink{APT227_8c_a3d02480378c1883014c79418a6a2fb9c}{ibrkpt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}8\mbox{]}\\
+\} \hyperlink{APT227_8c_a1e13df400ade53cfdca8b8936d41bd80}{idef\_} = \{ 0, 0, 0, 0, 0, 0, 8, 0 \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}46\mbox{]}\\
+\} \hyperlink{APT227_8c_adc5774ecfe10147708f326c007c92cd0}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}40\mbox{]}\\
+\} \hyperlink{APT227_8c_a3752d73974bc3ccbf620874441124eef}{knumbr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}22\mbox{]}\\
+\>integer \hyperlink{APT227_8c_ac60534af2d70fe5f905c60b2fa7da980}{e\_2}\\
+\>integer \hyperlink{APT227_8c_adf6531718c347aa33636ec7e1525822a}{fill\_3} \mbox{[}1\mbox{]}\\
+\>integer \hyperlink{APT227_8c_a4e287f465781fb8aad21984c13c417f9}{e\_4}\\
+\>integer \hyperlink{APT227_8c_a87233433cb12ccc18ec1561de266e6a1}{fill\_5} \mbox{[}1\mbox{]}\\
+\>integer \hyperlink{APT227_8c_ad821d8def7b1e352dc9ab83bc70a4b78}{e\_6}\\
+\>integer \hyperlink{APT227_8c_a14a267f31471d89c22f6ac7bcdbde587}{fill\_7} \mbox{[}1\mbox{]}\\
+\} \hyperlink{APT227_8c_a91807623a22a991c8b141f47e4d5f3c6}{addcom\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1}\\
+\} \hyperlink{APT227_8c_aad462faaad571edc4c0e9d0f66ca8247}{tracfl\_} = \{ FALSE\_ \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}63\mbox{]}\\
+\} \hyperlink{APT227_8c_a712c253dc9a5da27386bcdd9d65ee8ef}{def\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}2\mbox{]}\\
+\>doublereal \hyperlink{APT227_8c_ac60534af2d70fe5f905c60b2fa7da980}{e\_2} \mbox{[}73\mbox{]}\\
+\} \hyperlink{APT227_8c_a698b24a2d8d3a9d62ed8a99f7c2a9808}{aercom\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}2\mbox{]}\\
+\>integer \hyperlink{APT227_8c_a0075e50b8ac51015e45e5bbcc55a2432}{fill\_2} \mbox{[}100\mbox{]}\\
+\} \hyperlink{APT227_8c_a4866e17cb91ac0d8dedfeff1b10d46a2}{hold\_} = \{ 0, 1 \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}120\mbox{]}\\
+\} \hyperlink{APT227_8c_a26700949cfc2b4e28642150b18758ed5}{darray\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}2\mbox{]}\\
+\>integer \hyperlink{APT227_8c_ac60534af2d70fe5f905c60b2fa7da980}{e\_2}\\
+\} \hyperlink{APT227_8c_ae8ea85f8b9d52de4881a7fc4780511d0}{xunits\_} = \{ 10., 10., 3 \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}6\mbox{]}\\
+\} \hyperlink{APT227_8c_a39b7ee4b8fef1330d843bd7605ac2971}{xunitc\_} = \{ \char`\"{}INCHES\char`\"{} \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}89\mbox{]}\\
+\} \hyperlink{APT227_8c_ae2e9321426c1bc4cd729b0a9d0e15556}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}6\mbox{]}\\
+\} \hyperlink{APT227_8c_a4b887d0cf23e68cb72307b5fd638d696}{charct\_} = \{ \char`\"{}BLANK \char`\"{} \}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}66\mbox{]}\\
+\} \hyperlink{APT227_8c_af9f68ef3b4e4624800402b78571c761a}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}144\mbox{]}\\
+\} \hyperlink{APT227_8c_ab792f1af5810d75e7896970e124a5b7d}{hblock\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}375\mbox{]}\\
+\} \hyperlink{APT227_8c_aaecd620dca9988eda58cfa36859d9e2c}{sv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{e\_1} \mbox{[}105\mbox{]}\\
+\} \hyperlink{APT227_8c_abb16445bbca6bd663a4368dbacf234b4}{sv1\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!addcom\+\_\+1@{addcom\+\_\+1}}
+\index{addcom\+\_\+1@{addcom\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{addcom\+\_\+1}{addcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define addcom\+\_\+1~($\ast$(struct {\bf addcom\+\_\+1\+\_\+} $\ast$) \&{\bf addcom\+\_\+})}\hypertarget{APT227_8c_a5f276675dccab4f64076d59a9cff054d}{}\label{APT227_8c_a5f276675dccab4f64076d59a9cff054d}
+
+
+Definition at line 157 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!aercom\+\_\+1@{aercom\+\_\+1}}
+\index{aercom\+\_\+1@{aercom\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{aercom\+\_\+1}{aercom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aercom\+\_\+1~($\ast$(struct {\bf aercom\+\_\+1\+\_\+} $\ast$) \&{\bf aercom\+\_\+})}\hypertarget{APT227_8c_acbadff6aba66cddb688521e5bcc1c61a}{}\label{APT227_8c_acbadff6aba66cddb688521e5bcc1c61a}
+
+
+Definition at line 185 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!apt227\+\_\+1@{apt227\+\_\+1}}
+\index{apt227\+\_\+1@{apt227\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{apt227\+\_\+1}{apt227_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apt227\+\_\+1~{\bf apt227\+\_\+}}\hypertarget{APT227_8c_ae055c5e470439f3b9bbdb7d9ac077ed5}{}\label{APT227_8c_ae055c5e470439f3b9bbdb7d9ac077ed5}
+
+
+Definition at line 21 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~($\ast$(struct {\bf charct\+\_\+1\+\_\+} $\ast$) \&{\bf charct\+\_\+})}\hypertarget{APT227_8c_a5d8742d837dd932468df10068bbc1875}{}\label{APT227_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 49 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~($\ast$(struct {\bf darray\+\_\+1\+\_\+} $\ast$) \&{\bf darray\+\_\+})}\hypertarget{APT227_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{APT227_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 197 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!def\+\_\+1@{def\+\_\+1}}
+\index{def\+\_\+1@{def\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{def\+\_\+1}{def_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define def\+\_\+1~($\ast$(struct {\bf def\+\_\+1\+\_\+} $\ast$) \&{\bf def\+\_\+})}\hypertarget{APT227_8c_aa419764595bd5ee089a362f22493a163}{}\label{APT227_8c_aa419764595bd5ee089a362f22493a163}
+
+
+Definition at line 28 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!dshar3\+\_\+1@{dshar3\+\_\+1}}
+\index{dshar3\+\_\+1@{dshar3\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{dshar3\+\_\+1}{dshar3_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dshar3\+\_\+1~{\bf dshar3\+\_\+}}\hypertarget{APT227_8c_a9655fddc857ca6ffc153c5a4d624f1e9}{}\label{APT227_8c_a9655fddc857ca6ffc153c5a4d624f1e9}
+
+
+Definition at line 34 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!dsname\+\_\+1@{dsname\+\_\+1}}
+\index{dsname\+\_\+1@{dsname\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{dsname\+\_\+1}{dsname_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dsname\+\_\+1~{\bf dsname\+\_\+}}\hypertarget{APT227_8c_a6f53ad75918faba8e3caab8c3db036dd}{}\label{APT227_8c_a6f53ad75918faba8e3caab8c3db036dd}
+
+
+Definition at line 170 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~($\ast$(struct {\bf fxcor\+\_\+1\+\_\+} $\ast$) \&{\bf fxcor\+\_\+})}\hypertarget{APT227_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{APT227_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 43 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!hblock\+\_\+1@{hblock\+\_\+1}}
+\index{hblock\+\_\+1@{hblock\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{hblock\+\_\+1}{hblock_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define hblock\+\_\+1~($\ast$(struct {\bf hblock\+\_\+1\+\_\+} $\ast$) \&{\bf hblock\+\_\+})}\hypertarget{APT227_8c_a9147c2fab27760493063ab471f6cd5ee}{}\label{APT227_8c_a9147c2fab27760493063ab471f6cd5ee}
+
+
+Definition at line 64 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!hold\+\_\+1@{hold\+\_\+1}}
+\index{hold\+\_\+1@{hold\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{hold\+\_\+1}{hold_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define hold\+\_\+1~($\ast$(struct {\bf hold\+\_\+1\+\_\+} $\ast$) \&{\bf hold\+\_\+})}\hypertarget{APT227_8c_a9033c9018e81f440c9967624058f3228}{}\label{APT227_8c_a9033c9018e81f440c9967624058f3228}
+
+
+Definition at line 191 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ibrkpt\+\_\+1@{ibrkpt\+\_\+1}}
+\index{ibrkpt\+\_\+1@{ibrkpt\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ibrkpt\+\_\+1}{ibrkpt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibrkpt\+\_\+1~($\ast$(struct {\bf ibrkpt\+\_\+1\+\_\+} $\ast$) \&{\bf ibrkpt\+\_\+})}\hypertarget{APT227_8c_afdbab201dc9c5a1f1c07f46da735654b}{}\label{APT227_8c_afdbab201dc9c5a1f1c07f46da735654b}
+
+
+Definition at line 127 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!idef\+\_\+1@{idef\+\_\+1}}
+\index{idef\+\_\+1@{idef\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{idef\+\_\+1}{idef_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define idef\+\_\+1~($\ast$(struct {\bf idef\+\_\+1\+\_\+} $\ast$) \&{\bf idef\+\_\+})}\hypertarget{APT227_8c_a6207cda821862458c24466470a5a29cf}{}\label{APT227_8c_a6207cda821862458c24466470a5a29cf}
+
+
+Definition at line 133 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~($\ast$(struct {\bf ifxcor\+\_\+1\+\_\+} $\ast$) \&{\bf ifxcor\+\_\+})}\hypertarget{APT227_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{APT227_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 143 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!isv1\+\_\+1@{isv1\+\_\+1}}
+\index{isv1\+\_\+1@{isv1\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+1}{isv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv1\+\_\+1~($\ast$(struct {\bf isv1\+\_\+1\+\_\+} $\ast$) \&{\bf isv1\+\_\+})}\hypertarget{APT227_8c_abe3545b3957e92e0b5ff211b7d6f7616}{}\label{APT227_8c_abe3545b3957e92e0b5ff211b7d6f7616}
+
+
+Definition at line 121 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!isv\+\_\+1@{isv\+\_\+1}}
+\index{isv\+\_\+1@{isv\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+1}{isv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv\+\_\+1~($\ast$(struct {\bf isv\+\_\+1\+\_\+} $\ast$) \&{\bf isv\+\_\+})}\hypertarget{APT227_8c_acc79429328b703ca60ff76b9028f00fc}{}\label{APT227_8c_acc79429328b703ca60ff76b9028f00fc}
+
+
+Definition at line 114 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!knumbr\+\_\+1@{knumbr\+\_\+1}}
+\index{knumbr\+\_\+1@{knumbr\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+1}{knumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define knumbr\+\_\+1~($\ast$(struct {\bf knumbr\+\_\+1\+\_\+} $\ast$) \&{\bf knumbr\+\_\+})}\hypertarget{APT227_8c_a21f1c91333ff469374792c606442868b}{}\label{APT227_8c_a21f1c91333ff469374792c606442868b}
+
+
+Definition at line 151 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ldef\+\_\+1@{ldef\+\_\+1}}
+\index{ldef\+\_\+1@{ldef\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ldef\+\_\+1}{ldef_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldef\+\_\+1~($\ast$(struct {\bf ldef\+\_\+1\+\_\+} $\ast$) \&{\bf ldef\+\_\+})}\hypertarget{APT227_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}{}\label{APT227_8c_a26c9caaa2eb7fb67b36ad9ea97c3ee40}
+
+
+Definition at line 105 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!srfnam\+\_\+1@{srfnam\+\_\+1}}
+\index{srfnam\+\_\+1@{srfnam\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{srfnam\+\_\+1}{srfnam_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define srfnam\+\_\+1~{\bf srfnam\+\_\+}}\hypertarget{APT227_8c_a0da767c81974d7dcb978fe2c56de1e15}{}\label{APT227_8c_a0da767c81974d7dcb978fe2c56de1e15}
+
+
+Definition at line 177 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!sv1\+\_\+1@{sv1\+\_\+1}}
+\index{sv1\+\_\+1@{sv1\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+1}{sv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv1\+\_\+1~($\ast$(struct {\bf sv1\+\_\+1\+\_\+} $\ast$) \&{\bf sv1\+\_\+})}\hypertarget{APT227_8c_a7d7892a40c1228c7ca311a419a2f34a6}{}\label{APT227_8c_a7d7892a40c1228c7ca311a419a2f34a6}
+
+
+Definition at line 90 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!sv\+\_\+1@{sv\+\_\+1}}
+\index{sv\+\_\+1@{sv\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+1}{sv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv\+\_\+1~($\ast$(struct {\bf sv\+\_\+1\+\_\+} $\ast$) \&{\bf sv\+\_\+})}\hypertarget{APT227_8c_a2f6418172e9c14772469fd5c924645ac}{}\label{APT227_8c_a2f6418172e9c14772469fd5c924645ac}
+
+
+Definition at line 81 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~($\ast$(struct {\bf tlldat\+\_\+1\+\_\+} $\ast$) \&{\bf tlldat\+\_\+})}\hypertarget{APT227_8c_ac473806d761bac6bbdc70810932acff0}{}\label{APT227_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 56 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!tracfl\+\_\+1@{tracfl\+\_\+1}}
+\index{tracfl\+\_\+1@{tracfl\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{tracfl\+\_\+1}{tracfl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tracfl\+\_\+1~($\ast$(struct {\bf tracfl\+\_\+1\+\_\+} $\ast$) \&{\bf tracfl\+\_\+})}\hypertarget{APT227_8c_af0335a31adbe6551af5c241a92693946}{}\label{APT227_8c_af0335a31adbe6551af5c241a92693946}
+
+
+Definition at line 163 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!xunitc\+\_\+1@{xunitc\+\_\+1}}
+\index{xunitc\+\_\+1@{xunitc\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{xunitc\+\_\+1}{xunitc_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xunitc\+\_\+1~($\ast$(struct {\bf xunitc\+\_\+1\+\_\+} $\ast$) \&{\bf xunitc\+\_\+})}\hypertarget{APT227_8c_af04a0a2cb09e0d5edcb69e9cfd4515e9}{}\label{APT227_8c_af04a0a2cb09e0d5edcb69e9cfd4515e9}
+
+
+Definition at line 210 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!xunits\+\_\+1@{xunits\+\_\+1}}
+\index{xunits\+\_\+1@{xunits\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{xunits\+\_\+1}{xunits_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xunits\+\_\+1~($\ast$(struct {\bf xunits\+\_\+1\+\_\+} $\ast$) \&{\bf xunits\+\_\+})}\hypertarget{APT227_8c_a110330bc4a804501af6437b4c8f4b4e8}{}\label{APT227_8c_a110330bc4a804501af6437b4c8f4b4e8}
+
+
+Definition at line 204 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!znumbr\+\_\+1@{znumbr\+\_\+1}}
+\index{znumbr\+\_\+1@{znumbr\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+1}{znumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define znumbr\+\_\+1~($\ast$(struct {\bf znumbr\+\_\+1\+\_\+} $\ast$) \&{\bf znumbr\+\_\+})}\hypertarget{APT227_8c_a747f55b761c50dbd8b70af26e8146204}{}\label{APT227_8c_a747f55b761c50dbd8b70af26e8146204}
+
+
+Definition at line 98 of file A\+P\+T227.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!bda227\+\_\+@{bda227\+\_\+}}
+\index{bda227\+\_\+@{bda227\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{bda227\+\_\+(void)}{bda227_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int bda227\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{APT227_8c_ae1bb548646f768ff1660bf34f7c3826f}{}\label{APT227_8c_ae1bb548646f768ff1660bf34f7c3826f}
+
+
+Definition at line 392 of file A\+P\+T227.\+c.
+
+
+\begin{DoxyCode}
+393 \{
+394     \textcolor{keywordflow}{return} 0;
+395 \} \textcolor{comment}{/* bda227\_ */}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!addcom\+\_\+@{addcom\+\_\+}}
+\index{addcom\+\_\+@{addcom\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{addcom\+\_\+}{addcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   addcom\+\_\+}\hypertarget{APT227_8c_a91807623a22a991c8b141f47e4d5f3c6}{}\label{APT227_8c_a91807623a22a991c8b141f47e4d5f3c6}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 200., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., -1, \{0\}, 0, \{0\}, 0 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!aercom\+\_\+@{aercom\+\_\+}}
+\index{aercom\+\_\+@{aercom\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{aercom\+\_\+}{aercom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   aercom\+\_\+}\hypertarget{APT227_8c_a698b24a2d8d3a9d62ed8a99f7c2a9808}{}\label{APT227_8c_a698b24a2d8d3a9d62ed8a99f7c2a9808}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, 0, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!apt227@{apt227}}
+\index{apt227@{apt227}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{apt227}{apt227}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal apt227}\hypertarget{APT227_8c_a78d319654c3d0e99490c2a63e9b9484f}{}\label{APT227_8c_a78d319654c3d0e99490c2a63e9b9484f}
+
+
+Definition at line 18 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!apt227\+\_\+@{apt227\+\_\+}}
+\index{apt227\+\_\+@{apt227\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{apt227\+\_\+}{apt227_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   apt227\+\_\+}\hypertarget{APT227_8c_aa4b8a357558c186cc30a0d0a48930142}{}\label{APT227_8c_aa4b8a357558c186cc30a0d0a48930142}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!c\+\_\+\+\_\+@{c\+\_\+\+\_\+}}
+\index{c\+\_\+\+\_\+@{c\+\_\+\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+}{c__}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal c\+\_\+\+\_\+\mbox{[}7\mbox{]}}\hypertarget{APT227_8c_aff312e30f3c244d4d5f79f84e4916be5}{}\label{APT227_8c_aff312e30f3c244d4d5f79f84e4916be5}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{APT227_8c_a4b887d0cf23e68cb72307b5fd638d696}{}\label{APT227_8c_a4b887d0cf23e68cb72307b5fd638d696}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!cs1nam@{cs1nam}}
+\index{cs1nam@{cs1nam}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{cs1nam}{cs1nam}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cs1nam}\hypertarget{APT227_8c_af3719d5721da2042ef0582ba032ab004}{}\label{APT227_8c_af3719d5721da2042ef0582ba032ab004}
+
+
+Definition at line 173 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!cs2nam@{cs2nam}}
+\index{cs2nam@{cs2nam}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{cs2nam}{cs2nam}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cs2nam}\hypertarget{APT227_8c_a643a5a266f9b13c7e064b08a46a8b634}{}\label{APT227_8c_a643a5a266f9b13c7e064b08a46a8b634}
+
+
+Definition at line 173 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{APT227_8c_a26700949cfc2b4e28642150b18758ed5}{}\label{APT227_8c_a26700949cfc2b4e28642150b18758ed5}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ \textcolor{stringliteral}{"                                                         "}
+        \textcolor{stringliteral}{"                                                               "} \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!def\+\_\+@{def\+\_\+}}
+\index{def\+\_\+@{def\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{def\+\_\+}{def_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   def\+\_\+}\hypertarget{APT227_8c_a712c253dc9a5da27386bcdd9d65ee8ef}{}\label{APT227_8c_a712c253dc9a5da27386bcdd9d65ee8ef}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+         0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        7e4, 0., 0., 0., 0., 0., 0., 0., 4e4, 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!dshar3\+\_\+@{dshar3\+\_\+}}
+\index{dshar3\+\_\+@{dshar3\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{dshar3\+\_\+}{dshar3_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   dshar3\+\_\+}\hypertarget{APT227_8c_a4758025420caa4692cba2e0cfefbaf3a}{}\label{APT227_8c_a4758025420caa4692cba2e0cfefbaf3a}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!dsname@{dsname}}
+\index{dsname@{dsname}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{dsname}{dsname}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dsname}\hypertarget{APT227_8c_a9cee059059d299c2fda9f43e649f9a3c}{}\label{APT227_8c_a9cee059059d299c2fda9f43e649f9a3c}
+
+
+Definition at line 166 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!dsname\+\_\+@{dsname\+\_\+}}
+\index{dsname\+\_\+@{dsname\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{dsname\+\_\+}{dsname_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   dsname\+\_\+}\hypertarget{APT227_8c_a88f5718f708d73e5a0ff41f128762bec}{}\label{APT227_8c_a88f5718f708d73e5a0ff41f128762bec}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!e\+\_\+1@{e\+\_\+1}}
+\index{e\+\_\+1@{e\+\_\+1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{e\+\_\+1}{e_1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal e\+\_\+1\mbox{[}105\mbox{]}}\hypertarget{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}{}\label{APT227_8c_aa2439b40fa3fca8679d3a0f9ae83aae6}
+
+
+Definition at line 215 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!e\+\_\+2@{e\+\_\+2}}
+\index{e\+\_\+2@{e\+\_\+2}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{e\+\_\+2}{e_2}}]{\setlength{\rightskip}{0pt plus 5cm}integer e\+\_\+2}\hypertarget{APT227_8c_ac60534af2d70fe5f905c60b2fa7da980}{}\label{APT227_8c_ac60534af2d70fe5f905c60b2fa7da980}
+
+
+Definition at line 263 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!e\+\_\+4@{e\+\_\+4}}
+\index{e\+\_\+4@{e\+\_\+4}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{e\+\_\+4}{e_4}}]{\setlength{\rightskip}{0pt plus 5cm}integer e\+\_\+4}\hypertarget{APT227_8c_a4e287f465781fb8aad21984c13c417f9}{}\label{APT227_8c_a4e287f465781fb8aad21984c13c417f9}
+
+
+Definition at line 265 of file A\+P\+T227.\+c.
+
+
+
+Referenced by apt298\+\_\+(), apt330\+\_\+(), atape\+\_\+(), and cnvrt3\+\_\+().
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!e\+\_\+6@{e\+\_\+6}}
+\index{e\+\_\+6@{e\+\_\+6}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{e\+\_\+6}{e_6}}]{\setlength{\rightskip}{0pt plus 5cm}integer e\+\_\+6}\hypertarget{APT227_8c_ad821d8def7b1e352dc9ab83bc70a4b78}{}\label{APT227_8c_ad821d8def7b1e352dc9ab83bc70a4b78}
+
+
+Definition at line 267 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fill\+\_\+2@{fill\+\_\+2}}
+\index{fill\+\_\+2@{fill\+\_\+2}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+2}{fill_2}}]{\setlength{\rightskip}{0pt plus 5cm}integer fill\+\_\+2\mbox{[}100\mbox{]}}\hypertarget{APT227_8c_a0075e50b8ac51015e45e5bbcc55a2432}{}\label{APT227_8c_a0075e50b8ac51015e45e5bbcc55a2432}
+
+
+Definition at line 294 of file A\+P\+T227.\+c.
+
+
+
+Referenced by apt330\+\_\+(), and sprvis\+\_\+0\+\_\+().
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fill\+\_\+3@{fill\+\_\+3}}
+\index{fill\+\_\+3@{fill\+\_\+3}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+3}{fill_3}}]{\setlength{\rightskip}{0pt plus 5cm}integer fill\+\_\+3\mbox{[}1\mbox{]}}\hypertarget{APT227_8c_adf6531718c347aa33636ec7e1525822a}{}\label{APT227_8c_adf6531718c347aa33636ec7e1525822a}
+
+
+Definition at line 264 of file A\+P\+T227.\+c.
+
+
+
+Referenced by apt298\+\_\+(), apt330\+\_\+(), atape\+\_\+(), and cnvrt3\+\_\+().
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fill\+\_\+5@{fill\+\_\+5}}
+\index{fill\+\_\+5@{fill\+\_\+5}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+5}{fill_5}}]{\setlength{\rightskip}{0pt plus 5cm}integer fill\+\_\+5\mbox{[}1\mbox{]}}\hypertarget{APT227_8c_a87233433cb12ccc18ec1561de266e6a1}{}\label{APT227_8c_a87233433cb12ccc18ec1561de266e6a1}
+
+
+Definition at line 266 of file A\+P\+T227.\+c.
+
+
+
+Referenced by apt298\+\_\+(), and atape\+\_\+().
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fill\+\_\+7@{fill\+\_\+7}}
+\index{fill\+\_\+7@{fill\+\_\+7}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+7}{fill_7}}]{\setlength{\rightskip}{0pt plus 5cm}integer fill\+\_\+7\mbox{[}1\mbox{]}}\hypertarget{APT227_8c_a14a267f31471d89c22f6ac7bcdbde587}{}\label{APT227_8c_a14a267f31471d89c22f6ac7bcdbde587}
+
+
+Definition at line 268 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{APT227_8c_ae2e9321426c1bc4cd729b0a9d0e15556}{}\label{APT227_8c_ae2e9321426c1bc4cd729b0a9d0e15556}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 4500., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
+         0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 10., 0., 5. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!g@{g}}
+\index{g@{g}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{g}{g}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal g\mbox{[}10\mbox{]}}\hypertarget{APT227_8c_a4b844110bdc6a857d17ab8289ff9a043}{}\label{APT227_8c_a4b844110bdc6a857d17ab8289ff9a043}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!hblock\+\_\+@{hblock\+\_\+}}
+\index{hblock\+\_\+@{hblock\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{hblock\+\_\+}{hblock_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hblock\+\_\+}\hypertarget{APT227_8c_ab792f1af5810d75e7896970e124a5b7d}{}\label{APT227_8c_ab792f1af5810d75e7896970e124a5b7d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ \textcolor{stringliteral}{"PS      DS      CS      GOLFT   GORGT   GOFWD   GOBACK  G"}
+        \textcolor{stringliteral}{"OUP    GODOWN  TO      PAST    ON      TANTO   PSTAN   DYNDMP  A"}
+        \textcolor{stringliteral}{"ERR    CLDATA  GERR    "} \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!hold\+\_\+@{hold\+\_\+}}
+\index{hold\+\_\+@{hold\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{hold\+\_\+}{hold_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hold\+\_\+}\hypertarget{APT227_8c_a4866e17cb91ac0d8dedfeff1b10d46a2}{}\label{APT227_8c_a4866e17cb91ac0d8dedfeff1b10d46a2}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ibrkpt\+\_\+@{ibrkpt\+\_\+}}
+\index{ibrkpt\+\_\+@{ibrkpt\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ibrkpt\+\_\+}{ibrkpt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibrkpt\+\_\+}\hypertarget{APT227_8c_a3d02480378c1883014c79418a6a2fb9c}{}\label{APT227_8c_a3d02480378c1883014c79418a6a2fb9c}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ics1sb@{ics1sb}}
+\index{ics1sb@{ics1sb}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ics1sb}{ics1sb}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics1sb}\hypertarget{APT227_8c_acb2c4cdde72fe7bc69e7939978e1f94b}{}\label{APT227_8c_acb2c4cdde72fe7bc69e7939978e1f94b}
+
+
+Definition at line 174 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ics2sb@{ics2sb}}
+\index{ics2sb@{ics2sb}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ics2sb}{ics2sb}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics2sb}\hypertarget{APT227_8c_a331994b4ac96e50bf0ca2353f40bb412}{}\label{APT227_8c_a331994b4ac96e50bf0ca2353f40bb412}
+
+
+Definition at line 174 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!idef\+\_\+@{idef\+\_\+}}
+\index{idef\+\_\+@{idef\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{idef\+\_\+}{idef_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   idef\+\_\+}\hypertarget{APT227_8c_a1e13df400ade53cfdca8b8936d41bd80}{}\label{APT227_8c_a1e13df400ade53cfdca8b8936d41bd80}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{APT227_8c_adc5774ecfe10147708f326c007c92cd0}{}\label{APT227_8c_adc5774ecfe10147708f326c007c92cd0}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, 0, 0, 0, 0, 4, 0, 1, 0, 3, 0, 0, 1, 0, 1, 0, 1, 2, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 400, 0, 0, 0, 5, 0, 4, 0, 0, 
+        0, 0, 0, 0, 0 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ipssub@{ipssub}}
+\index{ipssub@{ipssub}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ipssub}{ipssub}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipssub}\hypertarget{APT227_8c_a7b0221c5c234ebf2befeed7883b1978b}{}\label{APT227_8c_a7b0221c5c234ebf2befeed7883b1978b}
+
+
+Definition at line 174 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!isv1\+\_\+@{isv1\+\_\+}}
+\index{isv1\+\_\+@{isv1\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+}{isv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv1\+\_\+}\hypertarget{APT227_8c_a982515ec83c3465aea215c31caf04dd5}{}\label{APT227_8c_a982515ec83c3465aea215c31caf04dd5}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!isv\+\_\+@{isv\+\_\+}}
+\index{isv\+\_\+@{isv\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+}{isv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv\+\_\+}\hypertarget{APT227_8c_ac205763d631627bd654b35543543c669}{}\label{APT227_8c_ac205763d631627bd654b35543543c669}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!knumbr\+\_\+@{knumbr\+\_\+}}
+\index{knumbr\+\_\+@{knumbr\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+}{knumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   knumbr\+\_\+}\hypertarget{APT227_8c_a3752d73974bc3ccbf620874441124eef}{}\label{APT227_8c_a3752d73974bc3ccbf620874441124eef}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 18, 19, 
+        23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 44, 45, 46, 47, 48, 
+        50, 51, 52, 1013, 10000, 1000000, -1 \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!l@{l}}
+\index{l@{l}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{l}{l}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal l\mbox{[}4\mbox{]}}\hypertarget{APT227_8c_ad7684a4576040833776882c791cfabf0}{}\label{APT227_8c_ad7684a4576040833776882c791cfabf0}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!ldef\+\_\+@{ldef\+\_\+}}
+\index{ldef\+\_\+@{ldef\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{ldef\+\_\+}{ldef_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ldef\+\_\+}\hypertarget{APT227_8c_aa1afaf5290cfca0c1d1b1134c76bb3f1}{}\label{APT227_8c_aa1afaf5290cfca0c1d1b1134c76bb3f1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ FALSE\_, FALSE\_, FALSE\_, FALSE\_, FALSE\_, TRUE\_, FALSE\_, FALSE\_,
+         FALSE\_, FALSE\_, FALSE\_, FALSE\_, FALSE\_, FALSE\_ \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!namsub@{namsub}}
+\index{namsub@{namsub}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{namsub}{namsub}}]{\setlength{\rightskip}{0pt plus 5cm}integer namsub}\hypertarget{APT227_8c_a83d6254198bb88e02ba9d74666b2cc09}{}\label{APT227_8c_a83d6254198bb88e02ba9d74666b2cc09}
+
+
+Definition at line 167 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!p@{p}}
+\index{p@{p}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal p\mbox{[}16\mbox{]}}\hypertarget{APT227_8c_aec37dbecf1f14b0e999eeb6ead189904}{}\label{APT227_8c_aec37dbecf1f14b0e999eeb6ead189904}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!psname@{psname}}
+\index{psname@{psname}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{psname}{psname}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal psname}\hypertarget{APT227_8c_aaaa4960352f4711e986c9003333ddc91}{}\label{APT227_8c_aaaa4960352f4711e986c9003333ddc91}
+
+
+Definition at line 173 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!sc@{sc}}
+\index{sc@{sc}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{sc}{sc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sc\mbox{[}16\mbox{]}}\hypertarget{APT227_8c_a9cae3e36ae5e63785447451b6081dc98}{}\label{APT227_8c_a9cae3e36ae5e63785447451b6081dc98}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!srfnam\+\_\+@{srfnam\+\_\+}}
+\index{srfnam\+\_\+@{srfnam\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{srfnam\+\_\+}{srfnam_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   srfnam\+\_\+}\hypertarget{APT227_8c_a6816c43d930fc3fc6cfe969df639f512}{}\label{APT227_8c_a6816c43d930fc3fc6cfe969df639f512}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!sv1\+\_\+@{sv1\+\_\+}}
+\index{sv1\+\_\+@{sv1\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+}{sv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv1\+\_\+}\hypertarget{APT227_8c_abb16445bbca6bd663a4368dbacf234b4}{}\label{APT227_8c_abb16445bbca6bd663a4368dbacf234b4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+         0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!sv\+\_\+@{sv\+\_\+}}
+\index{sv\+\_\+@{sv\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+}{sv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv\+\_\+}\hypertarget{APT227_8c_aaecd620dca9988eda58cfa36859d9e2c}{}\label{APT227_8c_aaecd620dca9988eda58cfa36859d9e2c}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        5e-5, 5e-5, 5e-5, 5e-5, 0., .99995, .99995, .99995, .99995, 0., 
+        1e-4, 1e-4, 1e-4, 1e-4, 0., .001, .001, .001, .001, 0., 1e-6, 
+        1e-6, 1e-6, 1e-6, 0., 5e-5, 5e-5, 5e-5, 5e-5, 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 4500., 4500., 4500., 4500., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 5e-4, 
+        5e-4, 5e-4, 5e-4, 0., 5e-4, 5e-4, 5e-4, 5e-4, 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -1., 1., 0., 0., 1., 0., 
+        0., 0., 0., -1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!t@{t}}
+\index{t@{t}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal t\mbox{[}12\mbox{]}}\hypertarget{APT227_8c_a1f148515a08a71c3280eeb1528f86455}{}\label{APT227_8c_a1f148515a08a71c3280eeb1528f86455}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!t1@{t1}}
+\index{t1@{t1}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{t1}{t1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal t1\mbox{[}12\mbox{]}}\hypertarget{APT227_8c_ad43e2527e2f754444227a9804f266148}{}\label{APT227_8c_ad43e2527e2f754444227a9804f266148}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{APT227_8c_af9f68ef3b4e4624800402b78571c761a}{}\label{APT227_8c_af9f68ef3b4e4624800402b78571c761a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        -1e38, -1e38, 0., 0., 0., 0., 0., 0., 1e38, 1e38, 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -1., 1., -1., 0., 0., 0., 
+        0., 0., 0., 0., 0., 0. \}
+\end{DoxyCode}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!tracfl\+\_\+@{tracfl\+\_\+}}
+\index{tracfl\+\_\+@{tracfl\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{tracfl\+\_\+}{tracfl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tracfl\+\_\+}\hypertarget{APT227_8c_aad462faaad571edc4c0e9d0f66ca8247}{}\label{APT227_8c_aad462faaad571edc4c0e9d0f66ca8247}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!v@{v}}
+\index{v@{v}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{v}{v}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal v\mbox{[}10\mbox{]}}\hypertarget{APT227_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{}\label{APT227_8c_a628b7f3f5aeb2a45107c95273a05a7bf}
+
+
+Definition at line 31 of file A\+P\+T227.\+c.
+
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!xunitc\+\_\+@{xunitc\+\_\+}}
+\index{xunitc\+\_\+@{xunitc\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{xunitc\+\_\+}{xunitc_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   xunitc\+\_\+}\hypertarget{APT227_8c_a39b7ee4b8fef1330d843bd7605ac2971}{}\label{APT227_8c_a39b7ee4b8fef1330d843bd7605ac2971}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!xunits\+\_\+@{xunits\+\_\+}}
+\index{xunits\+\_\+@{xunits\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{xunits\+\_\+}{xunits_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   xunits\+\_\+}\hypertarget{APT227_8c_ae8ea85f8b9d52de4881a7fc4780511d0}{}\label{APT227_8c_ae8ea85f8b9d52de4881a7fc4780511d0}
+\index{A\+P\+T227.\+c@{A\+P\+T227.\+c}!znumbr\+\_\+@{znumbr\+\_\+}}
+\index{znumbr\+\_\+@{znumbr\+\_\+}!A\+P\+T227.\+c@{A\+P\+T227.\+c}}
+\subsubsection[{\texorpdfstring{znumbr\+\_\+}{znumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   znumbr\+\_\+}\hypertarget{APT227_8c_aa76f4816581b86d73d66731893fd6388}{}\label{APT227_8c_aa76f4816581b86d73d66731893fd6388}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 0., 1., 2., 3., 5., 10., 90., 1e6, 1e19, .5, .6, .9, 1.1, 
+        1.2, .01, .001, 1e-5, 5e-6, 1e-6, 1e-7, 1e-9, .1, -1., 
+        .0174532925, 3.14159265 \}
+\end{DoxyCode}

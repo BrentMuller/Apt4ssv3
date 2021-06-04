@@ -1,0 +1,335 @@
+\hypertarget{ANGDER_8c}{}\section{A\+N\+G\+D\+E\+R.\+c File Reference}
+\label{ANGDER_8c}\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+N\+G\+D\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{ANGDER_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ANGDER_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ANGDER_8c_a5977725625ae92fe57ba168ebee809d5}{angder\+\_\+} (doublereal $\ast$cv, doublereal $\ast$\hyperlink{ZSURF_8c_aec37dbecf1f14b0e999eeb6ead189904}{p}, doublereal $\ast$an, doublereal $\ast$der, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ANGDER_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{ANGDER_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{ANGDER_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\} \hyperlink{ANGDER_8c_a04c5532ad31326c5a7644903d9dd0845}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{ANGDER_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\item 
+static integer \hyperlink{ANGDER_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{ANGDER_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{ANGDER_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file A\+N\+G\+D\+E\+R.\+c.
+
+
+
+Referenced by angder\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!angder\+\_\+@{angder\+\_\+}}
+\index{angder\+\_\+@{angder\+\_\+}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{angder\+\_\+(doublereal $\ast$cv, doublereal $\ast$p, doublereal $\ast$an, doublereal $\ast$der, integer $\ast$mode, integer $\ast$irr)}{angder_(doublereal *cv, doublereal *p, doublereal *an, doublereal *der, integer *mode, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int angder\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{cv, }
+\item[{doublereal $\ast$}]{p, }
+\item[{doublereal $\ast$}]{an, }
+\item[{doublereal $\ast$}]{der, }
+\item[{integer $\ast$}]{mode, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{ANGDER_8c_a5977725625ae92fe57ba168ebee809d5}{}\label{ANGDER_8c_a5977725625ae92fe57ba168ebee809d5}
+
+
+Definition at line 30 of file A\+N\+G\+D\+E\+R.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+, c\+\_\+\+\_\+1, c\+\_\+n3, darcos\+\_\+(), f, i\+\_\+\+\_\+, ibugg\+\_\+1, one, p, t, v, vp, vpp, vt, vv, w, wp, and zero.
+
+
+
+Referenced by angseg\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{comment}{/* Initialized data */}
+34 
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+37     \textcolor{keyword}{static} doublereal smal = 1e-6;
+38     \textcolor{keyword}{static} doublereal vsmal = 1e-20;
+39 
+40     \textcolor{comment}{/* System generated locals */}
+41     doublereal d\_\_1, d\_\_2;
+42 
+43     \textcolor{comment}{/* Builtin functions */}
+44     \textcolor{keywordtype}{double} sqrt(doublereal), sin(doublereal);
+45 
+46     \textcolor{comment}{/* Local variables */}
+47     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+48     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+49     \textcolor{keyword}{static} doublereal \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[3], \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[3], \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}, w3, cp, wn, \hyperlink{DDRLSR_8c_a2a38a8952a41e00cab30267196540522}{vp}[3], \hyperlink{DDRLSR_8c_abb2b794b91cebb1f4e80188eca70d112}{wp}, ss, \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt}, \hyperlink{DDPARA_8c_a148551604daa786f627d4e99497af58b}{vv};
+50     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, doublereal 
+51         *, ftnlen);
+52     \textcolor{keyword}{static} doublereal cpp, \hyperlink{AERR2_8c_a354ed005697aa863f25274b78932eb9f}{vpp}[3], wpp, vpt, vvp, vppt, vvpp, vpvp;
+53     \textcolor{keyword}{extern} doublereal \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(doublereal *);
+54 
+55 \textcolor{comment}{/* ---     PURPOSE IS TO CALCULATE RATES OF CHANGE OF ANGLE FROM */}
+56 \textcolor{comment}{/* ---     POINT P TO CURVE AT POINT CV. */}
+57 \textcolor{comment}{/*     INPUT CV POINT, FIRST DERIVATIVE, SECOND DERIVATIVE OF CURVE */}
+58 \textcolor{comment}{/*     INPUT P=CENTRAL POINT FROM WHICH ANGLE IS CALCULATED */}
+59 \textcolor{comment}{/*     INPUT AN(OPTIONAL) IS A PLANAR NORMAL IN CASE ANGLE IS */}
+60 \textcolor{comment}{/*            TO BE MEASURED IN A PLANE. */}
+61 \textcolor{comment}{/*     INPUT MODE IS 0 ON FIRST CALL, NON-ZERO ON OTHER CALLS. */}
+62 \textcolor{comment}{/*     OUTPUT DER ARRAY CONTAINING CURRENT ANGLE AND RATES OF CHANGE */}
+63 \textcolor{comment}{/*     OUTPUT IRR NON ZERO ON OUTPUT INDICATES AN ERROR. */}
+64 
+65     \textcolor{comment}{/* Parameter adjustments */}
+66     --der;
+67     --an;
+68     --\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p};
+69     --cv;
+70 
+71     \textcolor{comment}{/* Function Body */}
+72 
+73     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+74     \textcolor{keywordflow}{goto} L100;
+75     \}
+76 \textcolor{comment}{/* ---     FIRST CHECK AN - NORMALIZE IF NOT ZERO. */}
+77     w = sqrt(an[1] * an[1] + an[2] * an[2] + an[3] * an[3]);
+78     \textcolor{keywordflow}{if} (w > smal) \{
+79     \textcolor{keywordflow}{goto} L20;
+80     \}
+81 \textcolor{comment}{/* ---     ZERO OUT AN COMPLETELY */}
+82     an[1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+83     an[2] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+84     an[3] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+85     wn = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+86     \textcolor{keywordflow}{goto} L30;
+87 L20:
+88 \textcolor{comment}{/* ---     NORMALIZE AN */}
+89     an[1] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+90     an[2] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+91     an[3] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+92     wn = (cv[1] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[1]) * an[1] + (cv[2] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[2]) * an[2] + (cv[3] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[3]) * 
+93         an[3];
+94 L30:
+95     w = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+96     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+97 \textcolor{comment}{/* Computing 2nd power */}
+98     d\_\_1 = cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+99     w += d\_\_1 * d\_\_1;
+100 \textcolor{comment}{/* L25: */}
+101     \}
+102     w = sqrt(w);
+103     *irr = 19;
+104     \textcolor{keywordflow}{if} (w < smal) \{
+105     \textcolor{keywordflow}{goto} L999;
+106     \}
+107     w = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+108     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+109     t[i\_\_ - 1] = cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - wn * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+110     w += t[i\_\_ - 1] * t[i\_\_ - 1];
+111 \textcolor{comment}{/* L40: */}
+112     \}
+113     w = sqrt(w);
+114     *irr = 11;
+115     \textcolor{keywordflow}{if} (w < smal) \{
+116     \textcolor{keywordflow}{goto} L999;
+117     \}
+118 \textcolor{comment}{/* ---      T IS THE BASE VECTOR FOR MEASURING ANGLE */}
+119     t[0] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+120     t[1] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+121     t[2] /= \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+122 L100:
+123 
+124 \textcolor{comment}{/* ---     NOW COMPUTE ANGLE W AND DERIVATIVES FROM GENERAL FORMULA */}
+125 \textcolor{comment}{/* ---     COS(ANGLE)=(V,T)/DSQRT(V,V) WHERE V=CV-(CV-P,AN)AN. */}
+126 
+127     c\_\_ = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+128     cp = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+129     cpp = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+130     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+131     c\_\_ += (cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * an[i\_\_];
+132     cp += cv[i\_\_ + 4] * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+133     cpp += cv[i\_\_ + 8] * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+134 \textcolor{comment}{/* L110: */}
+135     \}
+136     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137     v[i\_\_ - 1] = cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - c\_\_ * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+138     vp[i\_\_ - 1] = cv[i\_\_ + 4] - cp * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+139     vpp[i\_\_ - 1] = cv[i\_\_ + 8] - cpp * an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+140 \textcolor{comment}{/* L120: */}
+141     \}
+142 \textcolor{comment}{/* ---     CALCULATE NECESSARY INNER PRODUCTS */}
+143     vv = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+144     vt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+145     vvp = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+146     vvpp = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+147     vpt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+148     vppt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+149     vpvp = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+150 
+151     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+152     vv += v[i\_\_ - 1] * v[i\_\_ - 1];
+153     vvp += v[i\_\_ - 1] * vp[i\_\_ - 1];
+154     vvpp += v[i\_\_ - 1] * vpp[i\_\_ - 1];
+155     vt += v[i\_\_ - 1] * t[i\_\_ - 1];
+156     vpt += vp[i\_\_ - 1] * t[i\_\_ - 1];
+157     vppt += vpp[i\_\_ - 1] * t[i\_\_ - 1];
+158     vpvp += vp[i\_\_ - 1] * vp[i\_\_ - 1];
+159 \textcolor{comment}{/* L130: */}
+160     \}
+161 \textcolor{comment}{/* ---     NOW CALCULATE RATES OF CHANGE OF W=1/DSQRT(V,V) */}
+162     w = sqrt(vv);
+163     *irr = 12;
+164     \textcolor{keywordflow}{if} (w < smal) \{
+165     \textcolor{keywordflow}{goto} L999;
+166     \}
+167     w = one / \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+168     w3 = w * w * \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+169     wp = -vvp * w3;
+170     wpp = w3 * 3.f * w * w * vvp * vvp;
+171     wpp -= w3 * (vpvp + vvpp);
+172     c\_\_ = vt * \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+173     c\_\_ = min(c\_\_,one);
+174 \textcolor{comment}{/* Computing MAX */}
+175     d\_\_1 = \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}, d\_\_2 = -\hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+176     c\_\_ = max(d\_\_1,d\_\_2);
+177     der[1] = \hyperlink{DARSIN_8c_a928942bf815b30f0bdbaae78b7bdb68b}{darcos\_}(&c\_\_);
+178     ss = sin(der[1]) + vsmal;
+179     \textcolor{keywordflow}{if} (abs(ss) > smal) \{
+180     \textcolor{keywordflow}{goto} L140;
+181     \}
+182 \textcolor{comment}{/* ---      DEGENERATE CASE, USE LHOSPITALS RULE. */}
+183     der[2] = -(vppt * w + vpt * 2.f * wp + vt * wpp) / c\_\_;
+184     der[2] = abs(der[2]);
+185     der[2] = sqrt(der[2]);
+186 \textcolor{comment}{/* ---      THE FOLLOWING IS A ROUGH CUT AT SECOND DERIVATIVE. */}
+187     der[3] = (vppt * wp + vpt * wpp) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+188 \textcolor{comment}{/* Computing 3rd power */}
+189     d\_\_1 = der[2];
+190     der[3] = (ss * (d\_\_1 * (d\_\_1 * d\_\_1)) - der[3]) / (c\_\_ * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} * (der[2] + 
+191         vsmal));
+192     \textcolor{keywordflow}{goto} L150;
+193 L140:
+194     der[2] = -(vpt * w + vt * \hyperlink{DDRLSR_8c_abb2b794b91cebb1f4e80188eca70d112}{wp}) / ss + vsmal;
+195 \textcolor{comment}{/* Computing 2nd power */}
+196     d\_\_1 = der[2];
+197     der[3] = vppt * w + vpt * 2.f * wp + vt * wpp + vt * w * (d\_\_1 * d\_\_1);
+198     der[3] = -der[3] / ss;
+199 L150:
+200     *irr = 0;
+201 L999:
+202     \textcolor{keywordflow}{if} (\hyperlink{ANGDER_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+203     \textcolor{keywordflow}{goto} L997;
+204     \}
+205     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{ANGDER_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{ANGDER_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DER "}, &der[1], (ftnlen)4);
+206 L997:
+207     \textcolor{keywordflow}{return} 0;
+208 \} \textcolor{comment}{/* angder\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGDER_8c_a5977725625ae92fe57ba168ebee809d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ANGDER_8c_a5977725625ae92fe57ba168ebee809d5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ANGDER_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ANGDER_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 26 of file A\+N\+G\+D\+E\+R.\+c.
+
+
+
+Referenced by angder\+\_\+().
+
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ANGDER_8c_a6d165623735ee520885e84b5052c252b}{}\label{ANGDER_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 25 of file A\+N\+G\+D\+E\+R.\+c.
+
+
+
+Referenced by angder\+\_\+().
+
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{ANGDER_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{ANGDER_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file A\+N\+G\+D\+E\+R.\+c.
+
+
+
+Referenced by tecalc\+\_\+().
+
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{ANGDER_8c_a04c5532ad31326c5a7644903d9dd0845}{}\label{ANGDER_8c_a04c5532ad31326c5a7644903d9dd0845}
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{ANGDER_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{ANGDER_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file A\+N\+G\+D\+E\+R.\+c.
+
+\index{A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!A\+N\+G\+D\+E\+R.\+c@{A\+N\+G\+D\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{ANGDER_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{ANGDER_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 18 of file A\+N\+G\+D\+E\+R.\+c.
+

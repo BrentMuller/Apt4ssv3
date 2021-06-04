@@ -1,0 +1,788 @@
+\hypertarget{SSPLIN_8c}{}\section{S\+S\+P\+L\+I\+N.\+c File Reference}
+\label{SSPLIN_8c}\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+S\+P\+L\+I\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{SSPLIN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SSPLIN_8c_a0cfa12894b2a1b04be0c1cb0088d066d}{ssplin\+\_\+} (doublereal $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{SSPLIN_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{SSPLIN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{SSPLIN_8c_a82f6cbf167fdaad2a36ca32c18ef0961}{c\+\_\+\+\_\+21} = 21
+\item 
+static integer \hyperlink{SSPLIN_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{SSPLIN_8c_a3214c9dd853694f2bcb708239319b343}{c\+\_\+\+\_\+13} = 13
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!ssplin\+\_\+@{ssplin\+\_\+}}
+\index{ssplin\+\_\+@{ssplin\+\_\+}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssplin\+\_\+(doublereal $\ast$s, integer $\ast$irr)}{ssplin_(doublereal *s, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int ssplin\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{s, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{SSPLIN_8c_a0cfa12894b2a1b04be0c1cb0088d066d}{}\label{SSPLIN_8c_a0cfa12894b2a1b04be0c1cb0088d066d}
+
+
+Definition at line 25 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+References c\+\_\+\+\_\+1, c\+\_\+\+\_\+13, c\+\_\+\+\_\+2, c\+\_\+\+\_\+21, c\+\_\+\+\_\+3, cross\+\_\+(), d\+\_\+\+\_\+, f, i\+\_\+\+\_\+, j, k, l, p, parint\+\_\+(), smal1, smooth\+\_\+(), snorm\+\_\+(), t, ta, tb, v, and w.
+
+
+
+Referenced by mesh\+\_\+(), and scurv\+\_\+().
+
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{comment}{/* Initialized data */}
+28 
+29     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1} = 1e-8;
+30     \textcolor{keyword}{static} doublereal smal2 = 1e-12;
+31 
+32     \textcolor{comment}{/* System generated locals */}
+33     integer i\_\_1, i\_\_2;
+34     doublereal d\_\_1, d\_\_2, d\_\_3;
+35 
+36     \textcolor{comment}{/* Builtin functions */}
+37     \textcolor{keywordtype}{double} sqrt(doublereal);
+38 
+39     \textcolor{comment}{/* Local variables */}
+40     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}[30];
+41     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+42     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[90]    \textcolor{comment}{/* was [3][30] */}, \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[3], \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[90]    \textcolor{comment}{/* was [3][30]}
+43 \textcolor{comment}{         */}, \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}[30];
+44     \textcolor{keyword}{static} logical \textcolor{keywordtype}{id}[93]   \textcolor{comment}{/* was [3][31] */};
+45     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[3], \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[3];
+46     \textcolor{keyword}{static} integer kk, np;
+47     \textcolor{keyword}{static} doublereal tv[6] \textcolor{comment}{/* was [3][2] */};
+48     \textcolor{keyword}{static} integer idc, nhd, nhi;
+49     \textcolor{keyword}{static} doublereal val;
+50     \textcolor{keyword}{static} integer nph;
+51     \textcolor{keyword}{static} doublereal dum;
+52     \textcolor{keyword}{static} integer nlo, npl, inx;
+53     \textcolor{keyword}{static} doublereal sum;
+54     \textcolor{keyword}{static} integer ibeg, ndif;
+55     \textcolor{keyword}{static} doublereal vala;
+56     \textcolor{keyword}{static} logical ilim, itan;
+57     \textcolor{keyword}{static} integer idum;
+58     \textcolor{keyword}{static} logical icrs;
+59     \textcolor{keyword}{static} integer iorg, nphm, icur, nrel;
+60     \textcolor{keyword}{static} logical inor;
+61     \textcolor{keyword}{static} integer ncur, nplp;
+62     \textcolor{keyword}{static} logical iwgt;
+63     \textcolor{keyword}{static} integer irrr, ntot;
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+65         *), \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\_}(doublereal *, doublereal *, integer *), \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(
+66         doublereal *, doublereal *, doublereal *, doublereal *, 
+67         doublereal *, integer *, integer *), \hyperlink{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}{smooth\_}(doublereal *, 
+68         doublereal *, doublereal *, doublereal *, doublereal *, integer *,
+69          integer *);
+70 
+71 \textcolor{comment}{/* ------ S IS AN INPUT ARRAY CONTAINING ALL POINTS AND CONSTRAINTS */}
+72 \textcolor{comment}{/* ------ FOR A SPLINE FIT */}
+73 \textcolor{comment}{/* ------ UPON RETURN S CONTAINS ALL OF THE PROCESSED OUTPUT DATA */}
+74 \textcolor{comment}{/* ------ IRR IS AN ERROR INDICATOR.  ON  RETURN IRR IS ZERO IF */}
+75 \textcolor{comment}{/* ------ NO ERRORS OCCURRED DURING PROCESSING WHILE IF AN */}
+76 \textcolor{comment}{/* ------ ERROR DID OCCUR IRR GIVES THE APPROPRIATE ERROR NUMBER */}
+77 \textcolor{comment}{/* ------ THE STRUCTURE OF S( IC, IL, IB ) IS AS FOLLOWS */}
+78 \textcolor{comment}{/* ------ IB IS THE BLOCK OR POINT NUMBER( THE FIRST BLOCK IS A */}
+79 \textcolor{comment}{/* ------ HEADER) */}
+80 \textcolor{comment}{/* ------ IL  IS THE LINE NUMBER OF THE BLOCK */}
+81 \textcolor{comment}{/* ------ IC IS THE COORDINATE NUMBER OF THE LINE */}
+82 \textcolor{comment}{/* ------ ON INPUT S IS STRUCTURED AS FOLLOWS */}
+83 \textcolor{comment}{/*      S(1-3,1,2) = X,Y,Z OF THE INPUT POINT */}
+84 \textcolor{comment}{/*      S(1-4,2,2) = I,J,K OF TANSPL CONSTRAINT AND INDICATOR(0 OR 1) */}
+85 \textcolor{comment}{/*      S(1-4,3,2) = I,J,K OF CRSSPL CONSTRAINT AND INDICATOR(0 OR 1) */}
+86 \textcolor{comment}{/*      S(1-4,4,2) = I,J,K OF NORMAL CONSTRAINT AND INDICATOR(0 OR 1) */}
+87 \textcolor{comment}{/*      S(1,5,2) = WEIGHT FACTOR FOR SMOOTHING */}
+88 \textcolor{comment}{/*      S(2,5,2) = LIMIT FACTOR TO LIMIT MOVEMENT IN SMOOTHING */}
+89 \textcolor{comment}{/*      S(1-4,6,2) ,S(4,1,2) AND S(3-4,5,2) ARE NOT INITIATED INPUT */}
+90 \textcolor{comment}{/* ------ OUTPUT CONTAINS THE FOLLOWING ADDITIONAL INFORMATION */}
+91 \textcolor{comment}{/*      S(1-3,1,2) = X,Y,Z OF THE SMOOTHED INPUT POINT */}
+92 \textcolor{comment}{/*      S(4,1,2)   = DISTANCE FROM THIS POINT TO THE NEXT */}
+93 \textcolor{comment}{/*      S(1-3,2,2) = I,J,K OF UNIT TANGENT VECTOR GENERATED AT THE PT */}
+94 \textcolor{comment}{/*      S(1,5,2) = WEIGHT WHICH GIVES CERTITUDE(1.0) */}
+95 \textcolor{comment}{/*      S(2,5,2) = INPUT LIMIT */}
+96 \textcolor{comment}{/*      S(3,5,2) = ORIGINAL INPUT WEIGHT */}
+97 \textcolor{comment}{/*      S(4,5,2) =  MEASUREMENT OF WILDNESS RELATIVE TO ADJACENT POINTS */}
+98 \textcolor{comment}{/*      S(1-3,6,2) = X,Y,Z OF THE ORIGINAL INPUT POINT */}
+99 \textcolor{comment}{/*      S(4,6,2)   = DISTANCE OF OUTPUT POINT FROM INPUT */}
+100 \textcolor{comment}{/* ------ THE HEADER CONTAINS THE FOLLOWING INFORMATION */}
+101 \textcolor{comment}{/*      S(2,1,1) = LENGTH OF THE HEADER TABLE IN BLOCKS(=1) */}
+102 \textcolor{comment}{/*      S(3,1,1) = ORIGIN OF CALL  SSURF/MESH = 1, SCURV/SPLINE=2 */}
+103 \textcolor{comment}{/*                 SCURV/CURSEG =3 */}
+104 \textcolor{comment}{/*      S(4,1,1) = NUMBER OF POINT BLOCKS USED(GE.2) */}
+105 \textcolor{comment}{/* ------ LOGICAL FLAGS ARE TRUE WHEN NO CONSTRAINT IS PRESENT */}
+106 \textcolor{comment}{/* ------ ID(1,I) TRUE MEANS THERE IS NO TANSPL CONSTRAINT AT ITH PT */}
+107 \textcolor{comment}{/* ------ ID(2,I) TRUE MEANS THERE IS NO CRSSPL CONSTRAINT AT ITH PT */}
+108 \textcolor{comment}{/* ------ ID(3,I) TRUE MEANS THERE IS NO NORMAL CONSTRAINT AT ITH PT */}
+109     \textcolor{comment}{/* Parameter adjustments */}
+110     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} -= 29;
+111 
+112     \textcolor{comment}{/* Function Body */}
+113     np = (integer) \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[32];
+114     iorg = (integer) \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[31];
+115     nhd = (integer) \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[30];
+116     ntot = np + nhd;
+117     npl = nhd + 1;
+118     nplp = npl + 1;
+119     nph = ntot;
+120     nphm = nph - 1;
+121 \textcolor{comment}{/* ------ MOVE INPUT POINTS INTO SIXTH LINE FOR SAVING */}
+122     i\_\_1 = nph;
+123     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+124     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 6 << 2) + 4] = 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+125     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+126 \textcolor{comment}{/* L20: */}
+127         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 6 << 2)] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)];
+128     \}
+129 \textcolor{comment}{/* L30: */}
+130     \}
+131 \textcolor{comment}{/* ------ THERE SHOULD BE AT LEAST TWO POINTS IN A SPLINE */}
+132     *irr = 5901;
+133     \textcolor{keywordflow}{if} (np < 2) \{
+134     \textcolor{keywordflow}{goto} L998;
+135     \}
+136 \textcolor{comment}{/* ------ CHECK FOR IDENTICAL POINTS */}
+137     \textcolor{keywordflow}{if} (iorg == 3) \{
+138     \textcolor{keywordflow}{goto} L200;
+139     \}
+140 L10:
+141     *irr = 5902;
+142     i\_\_1 = nphm;
+143     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+144     inx = i\_\_ + 1;
+145     sum = 0.f;
+146     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+147 \textcolor{comment}{/* Computing 2nd power */}
+148         d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (inx * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)];
+149         sum += d\_\_1 * d\_\_1;
+150 \textcolor{comment}{/* L110: */}
+151     \}
+152     \textcolor{keywordflow}{if} (sum < smal1) \{
+153         \textcolor{keywordflow}{goto} L998;
+154     \}
+155 \textcolor{comment}{/* L100: */}
+156     \}
+157     \textcolor{keywordflow}{goto} L300;
+158 L200:
+159 \textcolor{comment}{/* ------ CHECK FOR ANY TWO POINTS IDENTICAL IN CURSEG CASE */}
+160     *irr = 5903;
+161     i\_\_1 = nphm;
+162     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+163     inx = i\_\_ + 1;
+164     i\_\_2 = nph;
+165     \textcolor{keywordflow}{for} (j = inx; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+166         sum = 0.f;
+167         \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+168 \textcolor{comment}{/* Computing 2nd power */}
+169         d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (j * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)];
+170         sum += d\_\_1 * d\_\_1;
+171 \textcolor{comment}{/* L220: */}
+172         \}
+173         \textcolor{keywordflow}{if} (sum < smal1) \{
+174         \textcolor{keywordflow}{goto} L998;
+175         \}
+176 \textcolor{comment}{/* L210: */}
+177     \}
+178     \}
+179 L300:
+180 \textcolor{comment}{/* ------ DETERMINE THE PRESENCE OF CONSTRAINTS OF DIFFERENT TYPES */}
+181 \textcolor{comment}{/* 1----- IF A FLAG IS TRUE THEN THERE IS NO CONSTRAINT OF THIS TYPE */}
+182     inor = TRUE\_;
+183     itan = TRUE\_;
+184     icrs = TRUE\_;
+185     iwgt = TRUE\_;
+186     ilim = TRUE\_;
+187     i\_\_2 = nph;
+188     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+189     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+190         kk = k + 1;
+191         dum = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(kk + i\_\_ * 6 << 2) + 4] - 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+192         dum = abs(dum);
+193         \textcolor{keywordtype}{id}[k + i\_\_ * 3 - 4] = TRUE\_;
+194         \textcolor{keywordflow}{if} (dum > smal1) \{
+195         \textcolor{keywordflow}{goto} L340;
+196         \}
+197         \textcolor{keywordtype}{id}[k + i\_\_ * 3 - 4] = FALSE\_;
+198 L340:
+199         ;
+200     \}
+201     \}
+202     i\_\_2 = nph;
+203     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+204     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[i\_\_ * 3 - 3]) \{
+205         itan = FALSE\_;
+206     \}
+207     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[i\_\_ * 3 - 2]) \{
+208         icrs = FALSE\_;
+209     \}
+210     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[i\_\_ * 3 - 1]) \{
+211         inor = FALSE\_;
+212     \}
+213 \textcolor{comment}{/* ---  CII UPDATE TO INITIALIZE WT AND LIM. NIU-APR/75E */}
+214     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 1] - 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}, abs(d\_\_1)) > smal1) \{
+215         iwgt = FALSE\_;
+216     \}
+217     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 2], abs(d\_\_1)) > smal1) \{
+218         ilim = FALSE\_;
+219     \}
+220 \textcolor{comment}{/* L310: */}
+221     \}
+222 \textcolor{comment}{/* ------ SKIP THE NEXT SECTION IF WEIGHTS ARE NOT EFFECTED */}
+223     \textcolor{keywordflow}{if} (iwgt) \{
+224     \textcolor{keywordflow}{goto} L500;
+225     \}
+226 \textcolor{comment}{/* ------ WEIGHTS ARE PRESENT, MAKE A SMOOTHING PASS TO OBTAIN NEW */}
+227 \textcolor{comment}{/* ------ POINT POSITIONS */}
+228 \textcolor{comment}{/* L400: */}
+229     i\_\_2 = nph;
+230     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+231     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+232         \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+233 \textcolor{comment}{/* L410: */}
+234         tv[l + j * 3 - 4] = 0.f;
+235         \}
+236     \}
+237     j = i\_\_ - nhd;
+238     w[j - 1] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 1];
+239     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 3] = w[j - 1];
+240     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+241 \textcolor{comment}{/* L420: */}
+242         p[l + j * 3 - 4] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)];
+243     \}
+244     \}
+245     idc = 5;
+246     \hyperlink{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}{smooth\_}(p, w, d\_\_, tv, v, &np, &idc);
+247     *irr = 5904;
+248     \textcolor{keywordflow}{if} (idc < 0) \{
+249     \textcolor{keywordflow}{goto} L998;
+250     \}
+251 \textcolor{comment}{/* ------ RELOAD NEW POINTS INTO THE S ARRAY */}
+252     i\_\_2 = nph;
+253     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+254     j = i\_\_ - nhd;
+255     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 1] = 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+256     \textcolor{keywordflow}{if} (ilim) \{
+257         \textcolor{keywordflow}{goto} L450;
+258     \}
+259 \textcolor{comment}{/* ------ VAL IS THE DISTANCE BETWEEN THE OLD POINT AND NEW POINT */}
+260 \textcolor{comment}{/* Computing 2nd power */}
+261     d\_\_1 = p[j * 3 - 3] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1];
+262 \textcolor{comment}{/* Computing 2nd power */}
+263     d\_\_2 = p[j * 3 - 2] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 2];
+264 \textcolor{comment}{/* Computing 2nd power */}
+265     d\_\_3 = p[j * 3 - 1] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 3];
+266     val = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+267     \textcolor{keywordflow}{if} (val <= (d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 2], abs(d\_\_1))) \{
+268         \textcolor{keywordflow}{goto} L450;
+269     \}
+270 \textcolor{comment}{/* ------ BRING THE POINT BACK INTO THE LIMITED SPHERE AROUND THE OLD */}
+271     val = (d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 2], abs(d\_\_1)) / val;
+272     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+273 \textcolor{comment}{/* L440: */}
+274         p[l + j * 3 - 4] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)] + val * (p[l + j * 3 
+275             - 4] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)]);
+276     \}
+277     val = (d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 5 << 2) + 2], abs(d\_\_1));
+278 L450:
+279     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+280         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 6 << 2)] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)];
+281         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)] = p[l + j * 3 - 4];
+282 \textcolor{comment}{/* L460: */}
+283     \}
+284     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 6 << 2) + 4] = val;
+285 \textcolor{comment}{/* L430: */}
+286     \}
+287 \textcolor{comment}{/* ------ NOW RECYCLE THRU PRIOR LOGIC WITH NEW POINTS AND NO WEIGHTS */}
+288     \textcolor{keywordflow}{goto} L10;
+289 L500:
+290     \textcolor{keywordflow}{if} (inor && icrs && itan) \{
+291     \textcolor{keywordflow}{goto} L700;
+292     \}
+293 \textcolor{comment}{/* ------ CHECK FOR NULL CONSTRAINT VECTORS AND UNITIZE ALL */}
+294     *irr = 5905;
+295     i\_\_2 = nph;
+296     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+297     \textcolor{keywordflow}{for} (k = 2; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+298         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}[k - 1 + i\_\_ * 3 - 4]) \{
+299         \textcolor{keywordflow}{goto} L630;
+300         \}
+301 \textcolor{comment}{/* Computing 2nd power */}
+302         d\_\_1 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(k + i\_\_ * 6 << 2) + 1];
+303 \textcolor{comment}{/* Computing 2nd power */}
+304         d\_\_2 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(k + i\_\_ * 6 << 2) + 2];
+305 \textcolor{comment}{/* Computing 2nd power */}
+306         d\_\_3 = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(k + i\_\_ * 6 << 2) + 3];
+307         sum = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+308         \textcolor{keywordflow}{if} (sum < smal1) \{
+309         \textcolor{keywordflow}{goto} L998;
+310         \}
+311         sum = sqrt(sum);
+312         \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+313 \textcolor{comment}{/* L620: */}
+314         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (k + i\_\_ * 6 << 2)] /= sum;
+315         \}
+316 L630:
+317         ;
+318     \}
+319 \textcolor{comment}{/* L600: */}
+320     \}
+321 L700:
+322 \textcolor{comment}{/* ------ REORIENT TANSPL VECTORS BASED ON THE DIRECTION INDICATED BY PTS */}
+323     \textcolor{keywordflow}{if} (itan) \{
+324     \textcolor{keywordflow}{goto} L790;
+325     \}
+326     i\_\_2 = nph;
+327     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+328     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}[i\_\_ * 3 - 3]) \{
+329         \textcolor{keywordflow}{goto} L710;
+330     \}
+331 \textcolor{comment}{/* Computing MAX */}
+332     i\_\_1 = i\_\_ - 1;
+333     nlo = max(i\_\_1,npl);
+334 \textcolor{comment}{/* Computing MIN */}
+335     i\_\_1 = i\_\_ + 1;
+336     nhi = min(i\_\_1,nph);
+337     sum = 0.f;
+338     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+339         t[l - 1] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (nhi * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (nlo * 6 + 1 << 2)];
+340         sum += t[l - 1] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 2 << 2)];
+341 \textcolor{comment}{/* L720: */}
+342     \}
+343     \textcolor{keywordflow}{if} (sum >= 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+344         \textcolor{keywordflow}{goto} L710;
+345     \}
+346 \textcolor{comment}{/* ------ REORIENT THIS TANGENT CONSTRAINT */}
+347     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+348 \textcolor{comment}{/* L730: */}
+349         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 2 << 2)] = -\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 2 << 2)];
+350     \}
+351 L710:
+352     ;
+353     \}
+354 L790:
+355     *irr = 5909;
+356 \textcolor{comment}{/* ------ GENERATE A TANSPL CONSTRAINT WHEREEVER A NORMAL IS PRESENT */}
+357     \textcolor{keywordflow}{if} (inor) \{
+358     \textcolor{keywordflow}{goto} L980;
+359     \}
+360     i\_\_2 = nph;
+361     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+362 \textcolor{comment}{/* ------ IF THERE ALREADY IS A TANSPL CONTRAINT OR NO NORMAL, SKIP */}
+363     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[i\_\_ * 3 - 3] || \textcolor{keywordtype}{id}[i\_\_ * 3 - 1]) \{
+364         \textcolor{keywordflow}{goto} L910;
+365     \}
+366 \textcolor{comment}{/* Computing MAX */}
+367     i\_\_1 = i\_\_ - 1;
+368     nlo = max(i\_\_1,npl);
+369 \textcolor{comment}{/* Computing MIN */}
+370     i\_\_1 = i\_\_ + 1;
+371     nhi = min(i\_\_1,nph);
+372     \textcolor{keywordflow}{if} (nhi - nlo > 1) \{
+373         \textcolor{keywordflow}{goto} L920;
+374     \}
+375     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+376 \textcolor{comment}{/* L930: */}
+377         t[l - 1] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (nhi * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (nlo * 6 + 1 << 2)];
+378     \}
+379     \textcolor{keywordflow}{goto} L950;
+380 L920:
+381     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(nlo * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(
+382         nhi * 6 + 1 << 2) + 1], t, &dum, &\hyperlink{SSPLIN_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &irrr);
+383     \textcolor{keywordflow}{if} (irrr != 0) \{
+384         \textcolor{keywordflow}{goto} L998;
+385     \}
+386 L950:
+387     val = t[0] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) + 1] + t[1] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) 
+388         + 2] + t[2] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) + 3];
+389     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+390 \textcolor{comment}{/* L960: */}
+391         t[l - 1] -= val * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 4 << 2)];
+392     \}
+393     \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\_}(t, &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 2 << 2) + 1], &irrr);
+394     \textcolor{keywordflow}{if} (irrr != 0) \{
+395         \textcolor{keywordflow}{goto} L998;
+396     \}
+397     \textcolor{keywordtype}{id}[i\_\_ * 3 - 3] = FALSE\_;
+398     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 2 << 2) + 4] = -1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+399 L910:
+400     ;
+401     \}
+402 L980:
+403     \textcolor{keywordflow}{if} (iorg == 3) \{
+404     \textcolor{keywordflow}{goto} L900;
+405     \}
+406 \textcolor{comment}{/* END TANGENTS ARE NOT GENERATED IN CURSEG CASE */}
+407 \textcolor{comment}{/* ------ GENERATE TANGENTS AT THE ENDS */}
+408     *irr = 5909;
+409     ndif = nph - npl;
+410     i\_\_2 = nph;
+411     i\_\_1 = ndif;
+412     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_1 < 0 ? i\_\_ >= i\_\_2 : i\_\_ <= i\_\_2; i\_\_ += i\_\_1) \{
+413     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[i\_\_ * 3 - 3]) \{
+414         \textcolor{keywordflow}{goto} L800;
+415     \}
+416     \textcolor{keywordflow}{if} (i\_\_ == npl) \{
+417         \textcolor{keywordflow}{goto} L830;
+418     \}
+419     \textcolor{keywordflow}{if} (i\_\_ == nph) \{
+420         \textcolor{keywordflow}{goto} L860;
+421     \}
+422 L830:
+423     \textcolor{keywordflow}{if} (np == 2 && ! \textcolor{keywordtype}{id}[(i\_\_ + 1) * 3 - 3]) \{
+424         \textcolor{keywordflow}{goto} L840;
+425     \}
+426     \textcolor{keywordflow}{if} (np > 2 && \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ + 1) * 6 + 2 << 2) + 4] == 1.f) \{
+427         \textcolor{keywordflow}{goto} L840;
+428     \}
+429     \textcolor{keywordflow}{if} (np > 2) \{
+430         \textcolor{keywordflow}{goto} L836;
+431     \}
+432     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+433 \textcolor{comment}{/* L835: */}
+434         t[l - 1] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + ((i\_\_ + 1) * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 <<
+435              2)];
+436     \}
+437     \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\_}(t, t, &idum);
+438     \textcolor{keywordflow}{goto} L880;
+439 L836:
+440     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ + 1) * 6 + 1 << 2) + 1], 
+441         &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ + 2) * 6 + 1 << 2) + 1], t, &dum, &\hyperlink{SSPLIN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &irrr);
+442     \textcolor{keywordflow}{goto} L880;
+443 L840:
+444     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ + 1) * 6 + 2 << 2) + 1], 
+445         &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ + 1) * 6 + 1 << 2) + 1], t, &dum, &\hyperlink{SSPLIN_8c_a82f6cbf167fdaad2a36ca32c18ef0961}{c\_\_21}, &irrr);
+446     \textcolor{keywordflow}{if} (irrr != 0) \{
+447         \textcolor{keywordflow}{goto} L998;
+448     \}
+449     \textcolor{keywordflow}{goto} L880;
+450 L860:
+451     \textcolor{keywordflow}{if} (np == 2 && ! \textcolor{keywordtype}{id}[(i\_\_ - 1) * 3 - 3]) \{
+452         \textcolor{keywordflow}{goto} L870;
+453     \}
+454     \textcolor{keywordflow}{if} (np > 2 && \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ - 1) * 6 + 2 << 2) + 4] == 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+455         \textcolor{keywordflow}{goto} L870;
+456     \}
+457     \textcolor{keywordflow}{if} (np > 2) \{
+458         \textcolor{keywordflow}{goto} L866;
+459     \}
+460     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+461 \textcolor{comment}{/* L865: */}
+462         t[l - 1] = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 1 << 2)] - \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + ((i\_\_ - 1) * 6 + 1 <<
+463              2)];
+464     \}
+465     \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\_}(t, t, &idum);
+466     \textcolor{keywordflow}{goto} L880;
+467 L866:
+468     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ - 2) * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ - 1) * 6 + 1 << 2) 
+469         + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1], t, &dum, &\hyperlink{SSPLIN_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &irrr);
+470     \textcolor{keywordflow}{goto} L880;
+471 L870:
+472     \hyperlink{PARINT_8c_ad02f1b1323bd1330bada2512898c2e59}{parint\_}(&\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ - 1) * 6 + 1 << 2) + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[((i\_\_ - 1) * 6 + 2 << 2) 
+473         + 1], &\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 1 << 2) + 1], t, &dum, &\hyperlink{SSPLIN_8c_a3214c9dd853694f2bcb708239319b343}{c\_\_13}, &irrr);
+474     \textcolor{keywordflow}{if} (irrr != 0) \{
+475         \textcolor{keywordflow}{goto} L998;
+476     \}
+477 L880:
+478     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+479 \textcolor{comment}{/* L890: */}
+480         \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[l + (i\_\_ * 6 + 2 << 2)] = t[l - 1];
+481     \}
+482     \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 2 << 2) + 4] = -1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+483     \textcolor{keywordtype}{id}[i\_\_ * 3 - 3] = FALSE\_;
+484 L800:
+485     ;
+486     \}
+487 \textcolor{comment}{/* ------ PROJECT ALL TANSPL AND CRRSPL CONSTRAINTS INTO THE PLANE OF THE */}
+488 \textcolor{comment}{/* ------ NORMAL CONSTRAINT AND UNITIZE THEM */}
+489 L900:
+490     \textcolor{keywordflow}{if} (inor) \{
+491     \textcolor{keywordflow}{goto} L1100;
+492     \}
+493     i\_\_1 = nph;
+494     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+495     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}[i\_\_ * 3 - 1]) \{
+496         \textcolor{keywordflow}{goto} L1000;
+497     \}
+498     \textcolor{keywordflow}{for} (k = 2; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+499         *irr = k + 5904;
+500         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}[k - 1 + i\_\_ * 3 - 4]) \{
+501         \textcolor{keywordflow}{goto} L1010;
+502         \}
+503         val = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(k + i\_\_ * 6 << 2) + 1] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) + 1] + \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(
+504             k + i\_\_ * 6 << 2) + 2] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) + 2] + \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(k 
+505             + i\_\_ * 6 << 2) + 3] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[(i\_\_ * 6 + 4 << 2) + 3];
+506         \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+507 \textcolor{comment}{/* L1015: */}
+508         s[l + (k + i\_\_ * 6 << 2)] -= val * s[l + (i\_\_ * 6 + 4 << 2)];
+509         \}
+510         \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\_}(&s[(k + i\_\_ * 6 << 2) + 1], &s[(k + i\_\_ * 6 << 2) + 1], &
+511             irrr);
+512         \textcolor{keywordflow}{if} (irrr != 0) \{
+513         \textcolor{keywordflow}{goto} L998;
+514         \}
+515 L1010:
+516         ;
+517     \}
+518 L1000:
+519     ;
+520     \}
+521 L1100:
+522 \textcolor{comment}{/* ------ CHECK FOR THE COLLINEARITY OF CONSTRAINTS */}
+523     \textcolor{keywordflow}{if} (inor || icrs) \{
+524     \textcolor{keywordflow}{goto} L1300;
+525     \}
+526     *irr = 5908;
+527     i\_\_1 = nph;
+528     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+529     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}[i\_\_ * 3 - 3] || \textcolor{keywordtype}{id}[i\_\_ * 3 - 2] || \textcolor{keywordtype}{id}[i\_\_ * 3 - 1]) \{
+530         \textcolor{keywordflow}{goto} L1200;
+531     \}
+532     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&s[(i\_\_ * 6 + 2 << 2) + 1], &s[(i\_\_ * 6 + 3 << 2) + 1], t);
+533     val = t[0] * s[(i\_\_ * 6 + 4 << 2) + 1] + t[1] * s[(i\_\_ * 6 + 4 << 2) 
+534         + 2] + t[2] * s[(i\_\_ * 6 + 4 << 2) + 3];
+535     \textcolor{keywordflow}{if} (abs(val) < smal2) \{
+536         \textcolor{keywordflow}{goto} L998;
+537     \}
+538 L1200:
+539     ;
+540     \}
+541 L1300:
+542 \textcolor{comment}{/* ------ CHECK FOR WILD POINTS */}
+543     \textcolor{keywordflow}{if} (np == 2) \{
+544     \textcolor{keywordflow}{goto} L1500;
+545     \}
+546     *irr = 5910;
+547     i\_\_1 = nphm;
+548     \textcolor{keywordflow}{for} (i\_\_ = nplp; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+549     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+550 \textcolor{comment}{/* L1410: */}
+551         t[l - 1] = s[l + ((i\_\_ + 1) * 6 + 1 << 2)] - s[l + ((i\_\_ - 1) * 6 
+552             + 1 << 2)];
+553     \}
+554     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+555 \textcolor{comment}{/* L1420: */}
+556         ta[l - 1] = s[l + (i\_\_ * 6 + 1 << 2)] - s[l + ((i\_\_ - 1) * 6 + 1 
+557             << 2)];
+558     \}
+559     val = t[0] * ta[0] + t[1] * ta[1] + t[2] * ta[2];
+560     \textcolor{keywordflow}{if} (val <= 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+561         \textcolor{keywordflow}{goto} L998;
+562     \}
+563     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+564 \textcolor{comment}{/* L1430: */}
+565         tb[l - 1] = s[l + ((i\_\_ + 1) * 6 + 1 << 2)] - s[l + (i\_\_ * 6 + 1 
+566             << 2)];
+567     \}
+568     val = t[0] * tb[0] + t[1] * tb[1] + t[2] * tb[2];
+569     \textcolor{keywordflow}{if} (val <= 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+570         \textcolor{keywordflow}{goto} L998;
+571     \}
+572     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(t, ta, tb);
+573     val = tb[0] * tb[0] + tb[1] * tb[1] + tb[2] * tb[2];
+574     vala = t[0] * t[0] + t[1] * t[1] + t[2] * t[2];
+575 \textcolor{comment}{/* ------ WILD POINT MEASURE -- RATIO OF THE HEIGHT TO BASE */}
+576     s[(i\_\_ * 6 + 5 << 2) + 4] = sqrt(val) / vala;
+577 \textcolor{comment}{/* L1400: */}
+578     \}
+579 L1500:
+580     s[(npl * 6 + 5 << 2) + 4] = 0.;
+581     s[(nph * 6 + 5 << 2) + 4] = 0.;
+582 \textcolor{comment}{/* ------ BRANCH TO SPLINE OR CURSEG PROCESSING */}
+583     \textcolor{keywordflow}{switch} (iorg) \{
+584     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L2000;
+585     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L2000;
+586     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L3000;
+587     \}
+588 \textcolor{comment}{/* ------ COLLECT SUBSPLINES ONE BY ONE AND CONDUCT SMOOTHING */}
+589 L2000:
+590     ibeg = npl;
+591     icur = npl;
+592 L2010:
+593     ncur = 1;
+594     ibeg = icur;
+595     \textcolor{keywordflow}{if} (ibeg == ntot) \{
+596     \textcolor{keywordflow}{goto} L2160;
+597     \}
+598     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+599 \textcolor{comment}{/* L2040: */}
+600     p[l + ncur * 3 - 4] = s[l + (icur * 6 + 1 << 2)];
+601     \}
+602     w[ncur - 1] = 1.f;
+603 L2020:
+604     ++ncur;
+605     ++icur;
+606     \textcolor{keywordflow}{if} (! \textcolor{keywordtype}{id}[icur * 3 - 3]) \{
+607     \textcolor{keywordflow}{goto} L2100;
+608     \}
+609     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+610 \textcolor{comment}{/* L2030: */}
+611     p[l + ncur * 3 - 4] = s[l + (icur * 6 + 1 << 2)];
+612     \}
+613     w[ncur - 1] = 1.f;
+614     \textcolor{keywordflow}{goto} L2020;
+615 L2100:
+616     \textcolor{keywordflow}{if} (ncur == 2) \{
+617     \textcolor{keywordflow}{goto} L2010;
+618     \}
+619     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+620     p[l + ncur * 3 - 4] = s[l + (icur * 6 + 1 << 2)];
+621     tv[l - 1] = s[l + (ibeg * 6 + 2 << 2)];
+622 \textcolor{comment}{/* L2110: */}
+623     tv[l + 2] = s[l + (icur * 6 + 2 << 2)];
+624     \}
+625     idc = 2;
+626     w[ncur - 1] = 1.f;
+627     nrel = icur - ibeg + 1;
+628     \hyperlink{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}{smooth\_}(p, w, d\_\_, tv, v, &nrel, &idc);
+629     *irr = abs(idc) + 5920;
+630     \textcolor{keywordflow}{if} (idc < 0) \{
+631     \textcolor{keywordflow}{goto} L998;
+632     \}
+633     i\_\_1 = icur;
+634     \textcolor{keywordflow}{for} (j = ibeg; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+635     k = j - ibeg + 1;
+636     s[(j * 6 + 2 << 2) + 4] = 1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+637     \textcolor{keywordflow}{if} ((j - ibeg) * (j - icur) != 0) \{
+638         s[(j * 6 + 2 << 2) + 4] = -1.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+639     \}
+640     \textcolor{keywordtype}{id}[icur * 3 - 3] = FALSE\_;
+641     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+642         s[l + (j * 6 + 1 << 2)] = p[l + k * 3 - 4];
+643 \textcolor{comment}{/* L2130: */}
+644         s[l + (j * 6 + 2 << 2)] = v[l + k * 3 - 4];
+645     \}
+646     s[(j * 6 + 1 << 2) + 4] = d\_\_[k - 1];
+647 \textcolor{comment}{/* L2120: */}
+648     \}
+649     \textcolor{keywordflow}{if} (icur < ntot) \{
+650     \textcolor{keywordflow}{goto} L2010;
+651     \}
+652 L2160:
+653     i\_\_1 = nphm;
+654     \textcolor{keywordflow}{for} (i\_\_ = npl; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+655     j = i\_\_ + 1;
+656 \textcolor{comment}{/* Computing 2nd power */}
+657     d\_\_1 = s[(j * 6 + 1 << 2) + 1] - s[(i\_\_ * 6 + 1 << 2) + 1];
+658 \textcolor{comment}{/* Computing 2nd power */}
+659     d\_\_2 = s[(j * 6 + 1 << 2) + 2] - s[(i\_\_ * 6 + 1 << 2) + 2];
+660 \textcolor{comment}{/* Computing 2nd power */}
+661     d\_\_3 = s[(j * 6 + 1 << 2) + 3] - s[(i\_\_ * 6 + 1 << 2) + 3];
+662     s[(i\_\_ * 6 + 1 << 2) + 4] = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * 
+663         d\_\_3);
+664 \textcolor{comment}{/* L2150: */}
+665     \}
+666     \textcolor{keywordflow}{goto} L999;
+667 \textcolor{comment}{/* ------ CURSEG PROCESSING */}
+668 L3000:
+669 L999:
+670     *irr = 0;
+671     \textcolor{keywordflow}{return} 0;
+672 \textcolor{comment}{/* ------ ERROR RETURN.  IRR IS NOT ZERO. */}
+673 L998:
+674     s[33] = (doublereal) (*irr);
+675     \textcolor{keywordflow}{return} 0;
+676 \} \textcolor{comment}{/* ssplin\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{SSPLIN_8c_a0cfa12894b2a1b04be0c1cb0088d066d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SSPLIN_8c_a0cfa12894b2a1b04be0c1cb0088d066d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SSPLIN_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{SSPLIN_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 18 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+Referenced by ssplin\+\_\+().
+
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!c\+\_\+\+\_\+13@{c\+\_\+\+\_\+13}}
+\index{c\+\_\+\+\_\+13@{c\+\_\+\+\_\+13}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+13}{c__13}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+13 = 13\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SSPLIN_8c_a3214c9dd853694f2bcb708239319b343}{}\label{SSPLIN_8c_a3214c9dd853694f2bcb708239319b343}
+
+
+Definition at line 21 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+Referenced by ssplin\+\_\+().
+
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SSPLIN_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{SSPLIN_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+Referenced by ssplin\+\_\+().
+
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!c\+\_\+\+\_\+21@{c\+\_\+\+\_\+21}}
+\index{c\+\_\+\+\_\+21@{c\+\_\+\+\_\+21}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+21}{c__21}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+21 = 21\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SSPLIN_8c_a82f6cbf167fdaad2a36ca32c18ef0961}{}\label{SSPLIN_8c_a82f6cbf167fdaad2a36ca32c18ef0961}
+
+
+Definition at line 19 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+Referenced by ssplin\+\_\+().
+
+\index{S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!S\+S\+P\+L\+I\+N.\+c@{S\+S\+P\+L\+I\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SSPLIN_8c_a5e7359f78743350865398325d9155f20}{}\label{SSPLIN_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 20 of file S\+S\+P\+L\+I\+N.\+c.
+
+
+
+Referenced by ssplin\+\_\+().
+

@@ -1,0 +1,195 @@
+\hypertarget{COMPTW_8c}{}\section{C\+O\+M\+P\+T\+W.\+c File Reference}
+\label{COMPTW_8c}\index{C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+O\+M\+P\+T\+W.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{COMPTW_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{COMPTW_8c_ad4e49430030aa35df1d9c0c3467d5f5a}{comptw\+\_\+} (doublereal $\ast$bcn, doublereal $\ast$\hyperlink{ZSURF_8c_aec37dbecf1f14b0e999eeb6ead189904}{p}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{COMPTW_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\+\_\+\+\_\+4} = 4
+\item 
+static integer \hyperlink{COMPTW_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}!comptw\+\_\+@{comptw\+\_\+}}
+\index{comptw\+\_\+@{comptw\+\_\+}!C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}}
+\subsubsection[{\texorpdfstring{comptw\+\_\+(doublereal $\ast$bcn, doublereal $\ast$p, doublereal $\ast$u, doublereal $\ast$v, integer $\ast$irr)}{comptw_(doublereal *bcn, doublereal *p, doublereal *u, doublereal *v, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int comptw\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{bcn, }
+\item[{doublereal $\ast$}]{p, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{COMPTW_8c_ad4e49430030aa35df1d9c0c3467d5f5a}{}\label{COMPTW_8c_ad4e49430030aa35df1d9c0c3467d5f5a}
+
+
+Definition at line 23 of file C\+O\+M\+P\+T\+W.\+c.
+
+
+
+References a, a2, b, c\+\_\+\+\_\+, c\+\_\+\+\_\+3, c\+\_\+\+\_\+4, d\+\_\+\+\_\+, f, g, gelg\+\_\+(), h\+\_\+\+\_\+, i\+\_\+\+\_\+, ic, ier, ir, l, u, and v.
+
+
+
+Referenced by pntson\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* System generated locals */}
+27     doublereal d\_\_1;
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e, \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}, \hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g}, \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_};
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, a3;
+33     \textcolor{keyword}{static} integer \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic};
+34     \textcolor{keyword}{static} doublereal am[16]    \textcolor{comment}{/* was [4][4] */}, wa, wb, rh[12]    \textcolor{comment}{/* }
+35 \textcolor{comment}{        was [4][3] */}, wc, wd;
+36     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, \hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier};
+37     \textcolor{keyword}{static} doublereal eps;
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{gelg\_}(doublereal *, doublereal *, doublereal *
+39         , integer *, integer *, integer *);
+40     \textcolor{keyword}{static} integer idiag;
+41 
+42 \textcolor{comment}{/* ------THIS SUBROUTINE ACCEPTS AS INPUT A PARTIALLY DEFINED COONS */}
+43 \textcolor{comment}{/* ------MATRIX ( TWIST VECTORS ARE STILL UNKNOWN ) AND FOUR SPACE */}
+44 \textcolor{comment}{/* ------POINTS P(4,) EACH WITH ASSOCIATED U,V VALUES. */}
+45 \textcolor{comment}{/* ------AFTER EXECUTION THE ROUTINE RETURNS WITH FOUR TWIST VECTORS */}
+46 \textcolor{comment}{/* ------WHICH ARE LOADED INTO APPROPRIATE POSITIONS OF THE BCN MATRIX */}
+47 \textcolor{comment}{/* ------ THE COONS MATRIX PASSES THRU THE FOUR INPUT POINTS */}
+48 \textcolor{comment}{/* ------AT THE INPUT U,V PARAMETER VALUES */}
+49     \textcolor{comment}{/* Parameter adjustments */}
+50     --\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+51     --\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+52     \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p} -= 5;
+53     bcn -= 16;
+54 
+55     \textcolor{comment}{/* Function Body */}
+56     idiag = 5395;
+57 \textcolor{comment}{/* ------SET UP A 4 X 4 SYSTEM OF EQUATIONS AND SOLVE BY CALL TO GELG */}
+58     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+59 \textcolor{comment}{/* ------EVALUATE COONS BLENDING FUNCTIONS FOR U(I) AND V(I) */}
+60 \textcolor{comment}{/* Computing 2nd power */}
+61     d\_\_1 = \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+62     a2 = d\_\_1 * d\_\_1;
+63     a3 = a2 * \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+64     d\_\_ = a3 - \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+65     a = d\_\_ + d\_\_ - a2 + 1;
+66     b = -a + 1;
+67     c\_\_ = d\_\_ - a2 + u[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+68 \textcolor{comment}{/* Computing 2nd power */}
+69     d\_\_1 = \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+70     a2 = d\_\_1 * d\_\_1;
+71     a3 = a2 * \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+72     h\_\_ = a3 - \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+73     e = h\_\_ + h\_\_ - a2 + 1;
+74     f = -e + 1;
+75     g = h\_\_ - a2 + v[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+76 \textcolor{comment}{/* ------NOW GENERATE THE I TH COEFFICIENT ROW */}
+77     am[i\_\_ - 1] = c\_\_ * \hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g};
+78     am[i\_\_ + 3] = c\_\_ * \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_};
+79     am[i\_\_ + 7] = d\_\_ * \hyperlink{APT102_8c_a167d2c0ec9b943d55f2124f7442b2f6d}{g};
+80     am[i\_\_ + 11] = d\_\_ * \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_};
+81 \textcolor{comment}{/* ------NOW GENERATE THE VECTOR COMPONENTS OF THE RIGHT HAND SIDE */}
+82     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+83         wa = (bcn[l + 15] * e + bcn[l + 27] * f + bcn[l + 39] * g + bcn[l 
+84             + 51] * \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_}) * a;
+85         wb = (bcn[l + 18] * e + bcn[l + 30] * f + bcn[l + 42] * g + bcn[l 
+86             + 54] * \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_}) * b;
+87         wc = (bcn[l + 21] * e + bcn[l + 33] * \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) * c\_\_;
+88         wd = (bcn[l + 24] * e + bcn[l + 36] * \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) * d\_\_;
+89 \textcolor{comment}{/* ------RH IS THE DESIRED COEEFICIENT */}
+90         rh[i\_\_ + (l << 2) - 5] = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[i\_\_ + (l << 2)] - wa - wb - wc - wd;
+91 \textcolor{comment}{/* L100: */}
+92     \}
+93     \}
+94     eps = 1e-13;
+95     \hyperlink{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{gelg\_}(rh, am, &eps, &\hyperlink{COMPTW_8c_ab195470f8c6d55e333ee709af09ba2d6}{c\_\_4}, &\hyperlink{COMPTW_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &ier);
+96     *irr = idiag + 1;
+97     \textcolor{keywordflow}{if} (ier != 0) \{
+98     \textcolor{keywordflow}{return} 0;
+99     \}
+100 \textcolor{comment}{/* ------RH NOW CONTAINS THE VECTOR SOLUTION SET (TWIST VECTORS) */}
+101 \textcolor{comment}{/* ------FINALLY LOAD THESE INTO BCN MATRIX */}
+102     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+103     ir = 3;
+104     ic = 3;
+105     \textcolor{keywordflow}{if} (i\_\_ % 2 == 0) \{
+106         ic = 4;
+107     \}
+108     \textcolor{keywordflow}{if} (i\_\_ > 2) \{
+109         ir = 4;
+110     \}
+111     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+112         bcn[l + (ir + (ic << 2)) * 3] = rh[i\_\_ + (l << 2) - 5];
+113 \textcolor{comment}{/* L200: */}
+114     \}
+115     \}
+116     *irr = 0;
+117     \textcolor{keywordflow}{return} 0;
+118 \} \textcolor{comment}{/* comptw\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{COMPTW_8c_ad4e49430030aa35df1d9c0c3467d5f5a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{COMPTW_8c_ad4e49430030aa35df1d9c0c3467d5f5a_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{COMPTW_8c_a5e7359f78743350865398325d9155f20}{}\label{COMPTW_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 18 of file C\+O\+M\+P\+T\+W.\+c.
+
+
+
+Referenced by comptw\+\_\+().
+
+\index{C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}!c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}}
+\index{c\+\_\+\+\_\+4@{c\+\_\+\+\_\+4}!C\+O\+M\+P\+T\+W.\+c@{C\+O\+M\+P\+T\+W.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+4}{c__4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+4 = 4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{COMPTW_8c_ab195470f8c6d55e333ee709af09ba2d6}{}\label{COMPTW_8c_ab195470f8c6d55e333ee709af09ba2d6}
+
+
+Definition at line 17 of file C\+O\+M\+P\+T\+W.\+c.
+
+
+
+Referenced by comptw\+\_\+().
+

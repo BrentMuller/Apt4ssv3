@@ -1,0 +1,249 @@
+\hypertarget{GELG_8c}{}\section{G\+E\+L\+G.\+c File Reference}
+\label{GELG_8c}\index{G\+E\+L\+G.\+c@{G\+E\+L\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+E\+L\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{GELG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{gelg\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$eps, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, integer $\ast$\hyperlink{UTILTY_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+E\+L\+G.\+c@{G\+E\+L\+G.\+c}!gelg\+\_\+@{gelg\+\_\+}}
+\index{gelg\+\_\+@{gelg\+\_\+}!G\+E\+L\+G.\+c@{G\+E\+L\+G.\+c}}
+\subsubsection[{\texorpdfstring{gelg\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$a, doublereal $\ast$eps, integer $\ast$m, integer $\ast$n, integer $\ast$ier)}{gelg_(doublereal *r__, doublereal *a, doublereal *eps, integer *m, integer *n, integer *ier)}}]{\setlength{\rightskip}{0pt plus 5cm}int gelg\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{eps, }
+\item[{integer $\ast$}]{m, }
+\item[{integer $\ast$}]{n, }
+\item[{integer $\ast$}]{ier}
+\end{DoxyParamCaption}
+)}\hypertarget{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{}\label{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}
+
+
+Definition at line 17 of file G\+E\+L\+G.\+c.
+
+
+
+References a, f, i\+\_\+\+\_\+, ii, j, k, l, ll, m, r\+\_\+\+\_\+, tb, and tol.
+
+
+
+Referenced by comptw\+\_\+(), scurv\+\_\+(), and smooth\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* System generated locals */}
+21     integer i\_\_1, i\_\_2, i\_\_3, i\_\_4, i\_\_5;
+22     doublereal d\_\_1;
+23 
+24     \textcolor{comment}{/* Local variables */}
+25     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii};
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+27     \textcolor{keyword}{static} integer \hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}, mm, nm, lx;
+28     \textcolor{keyword}{static} doublereal piv, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol};
+29     \textcolor{keyword}{static} integer ist, lst, lend;
+30     \textcolor{keyword}{static} doublereal pivi;
+31 
+32     \textcolor{comment}{/* Parameter adjustments */}
+33     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+34     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+35 
+36     \textcolor{comment}{/* Function Body */}
+37     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} <= 0) \{
+38     \textcolor{keywordflow}{goto} L230;
+39     \} \textcolor{keywordflow}{else} \{
+40     \textcolor{keywordflow}{goto} L10;
+41     \}
+42 L10:
+43     *\hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier} = 0;
+44     piv = 0.f;
+45     mm = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} * *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+46     nm = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} * *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+47     i\_\_1 = mm;
+48     \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+49     tb = (d\_\_1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}], abs(d\_\_1));
+50     \textcolor{keywordflow}{if} (tb - piv <= 0.) \{
+51         \textcolor{keywordflow}{goto} L30;
+52     \} \textcolor{keywordflow}{else} \{
+53         \textcolor{keywordflow}{goto} L20;
+54     \}
+55 L20:
+56     piv = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+57     i\_\_ = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+58 L30:
+59     ;
+60     \}
+61     tol = *eps * piv;
+62     lst = 1;
+63     i\_\_1 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+64     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+65     \textcolor{keywordflow}{if} (piv <= 0.) \{
+66         \textcolor{keywordflow}{goto} L230;
+67     \} \textcolor{keywordflow}{else} \{
+68         \textcolor{keywordflow}{goto} L40;
+69     \}
+70 L40:
+71     \textcolor{keywordflow}{if} (*\hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier} != 0) \{
+72         \textcolor{keywordflow}{goto} L70;
+73     \} \textcolor{keywordflow}{else} \{
+74         \textcolor{keywordflow}{goto} L50;
+75     \}
+76 L50:
+77     \textcolor{keywordflow}{if} (piv - tol <= 0.) \{
+78         \textcolor{keywordflow}{goto} L60;
+79     \} \textcolor{keywordflow}{else} \{
+80         \textcolor{keywordflow}{goto} L70;
+81     \}
+82 L60:
+83     *\hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier} = k - 1;
+84 L70:
+85     pivi = 1.f / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+86     j = (i\_\_ - 1) / *m;
+87     i\_\_ = i\_\_ - j * *m - \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+88     j = j + 1 - \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+89     i\_\_2 = nm;
+90     i\_\_3 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+91     \textcolor{keywordflow}{for} (l = k; i\_\_3 < 0 ? l >= i\_\_2 : l <= i\_\_2; l += i\_\_3) \{
+92         ll = l + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+93         tb = pivi * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}];
+94         r\_\_[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}] = r\_\_[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+95 \textcolor{comment}{/* L80: */}
+96         r\_\_[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+97     \}
+98     \textcolor{keywordflow}{if} (k - *m >= 0) \{
+99         \textcolor{keywordflow}{goto} L180;
+100     \} \textcolor{keywordflow}{else} \{
+101         \textcolor{keywordflow}{goto} L90;
+102     \}
+103 L90:
+104     lend = lst + *m - \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+105     \textcolor{keywordflow}{if} (j <= 0) \{
+106         \textcolor{keywordflow}{goto} L120;
+107     \} \textcolor{keywordflow}{else} \{
+108         \textcolor{keywordflow}{goto} L100;
+109     \}
+110 L100:
+111     ii = j * *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+112     i\_\_3 = lend;
+113     \textcolor{keywordflow}{for} (l = lst; l <= i\_\_3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+114         tb = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+115         ll = l + \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii};
+116         \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}];
+117 \textcolor{comment}{/* L110: */}
+118         \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}] = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+119     \}
+120 L120:
+121     i\_\_3 = mm;
+122     i\_\_2 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+123     \textcolor{keywordflow}{for} (l = lst; i\_\_2 < 0 ? l >= i\_\_3 : l <= i\_\_3; l += i\_\_2) \{
+124         ll = l + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+125         tb = pivi * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}];
+126         a[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}] = a[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+127 \textcolor{comment}{/* L130: */}
+128         a[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+129     \}
+130     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[lst] = (doublereal) j;
+131     piv = 0.f;
+132     ++lst;
+133     j = 0;
+134     i\_\_2 = lend;
+135     \textcolor{keywordflow}{for} (ii = lst; ii <= i\_\_2; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+136         pivi = -\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}];
+137         ist = ii + *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+138         ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+139         i\_\_3 = mm;
+140         i\_\_4 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+141         \textcolor{keywordflow}{for} (lx = ist; i\_\_4 < 0 ? lx >= i\_\_3 : lx <= i\_\_3; lx += i\_\_4) \{
+142         ll = lx - \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+143         \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[lx] += pivi * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}];
+144         tb = (d\_\_1 = a[lx], abs(d\_\_1));
+145         \textcolor{keywordflow}{if} (tb - piv <= 0.) \{
+146             \textcolor{keywordflow}{goto} L150;
+147         \} \textcolor{keywordflow}{else} \{
+148             \textcolor{keywordflow}{goto} L140;
+149         \}
+150 L140:
+151         piv = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+152         i\_\_ = lx;
+153 L150:
+154         ;
+155         \}
+156         i\_\_4 = nm;
+157         i\_\_3 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+158         \textcolor{keywordflow}{for} (l = k; i\_\_3 < 0 ? l >= i\_\_4 : l <= i\_\_4; l += i\_\_3) \{
+159         ll = l + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+160 \textcolor{comment}{/* L165: */}
+161         \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}] += pivi * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+162         \}
+163 \textcolor{comment}{/* L160: */}
+164     \}
+165 \textcolor{comment}{/* L170: */}
+166     lst += *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+167     \}
+168 L180:
+169     \textcolor{keywordflow}{if} ((i\_\_1 = *m - 1) < 0) \{
+170     \textcolor{keywordflow}{goto} L230;
+171     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i\_\_1 == 0) \{
+172     \textcolor{keywordflow}{goto} L220;
+173     \} \textcolor{keywordflow}{else} \{
+174     \textcolor{keywordflow}{goto} L190;
+175     \}
+176 L190:
+177     ist = mm + *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+178     lst = *m + 1;
+179     i\_\_1 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+180     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+181     ii = lst - \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+182     ist -= lst;
+183     l = ist - *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+184     l = (integer) (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[l] + .5\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+185     i\_\_2 = nm;
+186     i\_\_3 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+187     \textcolor{keywordflow}{for} (j = ii; i\_\_3 < 0 ? j >= i\_\_2 : j <= i\_\_2; j += i\_\_3) \{
+188         tb = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+189         ll = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+190         i\_\_4 = mm;
+191         i\_\_5 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+192         \textcolor{keywordflow}{for} (k = ist; i\_\_5 < 0 ? k >= i\_\_4 : k <= i\_\_4; k += i\_\_5) \{
+193         ++\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll};
+194 \textcolor{comment}{/* L200: */}
+195         tb -= \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}];
+196         \}
+197         k = j + \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+198         \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+199 \textcolor{comment}{/* L210: */}
+200         \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb};
+201     \}
+202     \}
+203 L220:
+204     \textcolor{keywordflow}{goto} L240;
+205 L230:
+206     *\hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier} = -1;
+207 L240:
+208     \textcolor{keywordflow}{return} 0;
+209 \} \textcolor{comment}{/* gelg\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d_icgraph}
+\end{center}
+\end{figure}
+
+

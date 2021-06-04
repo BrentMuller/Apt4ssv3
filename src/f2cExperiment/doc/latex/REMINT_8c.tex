@@ -1,0 +1,551 @@
+\hypertarget{REMINT_8c}{}\section{R\+E\+M\+I\+N\+T.\+c File Reference}
+\label{REMINT_8c}\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for R\+E\+M\+I\+N\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{REMINT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{REMINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\+\_\+1}~\hyperlink{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{inidat\+\_\+}
+\item 
+\#define \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\+\_\+1}~\hyperlink{RESTOR_8c_acc470a2f2ffda339db88c58a4d4c4b61}{interf\+\_\+}
+\item 
+\#define \hyperlink{REMINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{REMINT_8c_a422bb5215e61099f479be96440bf0e3c}{remint\+\_\+} (doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$tul, doublereal $\ast$psurf, integer $\ast$ipsize, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tolin, integer $\ast$lsusp, integer $\ast$nsusp)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{REMINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{cxhull} \mbox{[}24000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}{dulim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{dvlim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_aa23f53bbfcad76998f955271d679887c}{curmax} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a4fbfc91a456d854b82c05cb9394040a3}{curmin} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{ncxhul} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{ngp}\\
+\>integer \hyperlink{REMINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{icursf}\\
+\} \hyperlink{REMINT_8c_a9ba4b528b7f479091df1b2bf3848d60f}{inidat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{REMINT_8c_a5cd6309403a78e065ede916bd522e60b}{dintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a8f83eb4bae3907e86203e233c88c0bec}{uintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}{vintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_ac602c646bdb5e78c0527b4917983c09f}{ldintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a3897bb733794d0587276c494d1dfcd4b}{luintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a4cb55a68cce095e41a7e716d53396c66}{lvintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_ae03686076f89124c12a8cba137150b5f}{tpintr} \mbox{[}3000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}{spintr} \mbox{[}3000\mbox{]}\\
+\>doublereal \hyperlink{REMINT_8c_a1cc237173c7457a042ed4b5e1236151e}{snintr} \mbox{[}3000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_a2162b798db7e8645548d1d9edd7951a8}{pintr} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_ac21f87963ba605abb635fec49f22b695}{lpintr} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_a3644bb3caf8c82bebee05596b47ffd50}{iseg} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{REMINT_8c_acfb5ad9b5449f50c28bd639363616292}{npintr}\\
+\>integer \hyperlink{REMINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}{lnpint}\\
+\} \hyperlink{REMINT_8c_a44508710a4fcf3c7461cab5144411a93}{interf\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{REMINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{REMINT_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{REMINT_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{REMINT_8c_aacd61550c9a2180086b5b7161d98412f}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{REMINT_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{REMINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{REMINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{REMINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 39 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!inidat\+\_\+1@{inidat\+\_\+1}}
+\index{inidat\+\_\+1@{inidat\+\_\+1}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+1}{inidat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inidat\+\_\+1~{\bf inidat\+\_\+}}\hypertarget{REMINT_8c_a9ff25d2ea8047e287870096f5289243d}{}\label{REMINT_8c_a9ff25d2ea8047e287870096f5289243d}
+
+
+Definition at line 23 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!interf\+\_\+1@{interf\+\_\+1}}
+\index{interf\+\_\+1@{interf\+\_\+1}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{interf\+\_\+1}{interf_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define interf\+\_\+1~{\bf interf\+\_\+}}\hypertarget{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{}\label{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}
+
+
+Definition at line 33 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!remint\+\_\+@{remint\+\_\+}}
+\index{remint\+\_\+@{remint\+\_\+}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{remint\+\_\+(doublereal $\ast$te, doublereal $\ast$ta, doublereal $\ast$tul, doublereal $\ast$psurf, integer $\ast$ipsize, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tolin, integer $\ast$lsusp, integer $\ast$nsusp)}{remint_(doublereal *te, doublereal *ta, doublereal *tul, doublereal *psurf, integer *ipsize, doublereal *pside, doublereal *pthick, doublereal *tolin, integer *lsusp, integer *nsusp)}}]{\setlength{\rightskip}{0pt plus 5cm}int remint\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{psurf, }
+\item[{integer $\ast$}]{ipsize, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tolin, }
+\item[{integer $\ast$}]{lsusp, }
+\item[{integer $\ast$}]{nsusp}
+\end{DoxyParamCaption}
+)}\hypertarget{REMINT_8c_a422bb5215e61099f479be96440bf0e3c}{}\label{REMINT_8c_a422bb5215e61099f479be96440bf0e3c}
+
+
+Definition at line 49 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, i\+\_\+\+\_\+, ibugg\+\_\+1, iflag, inidat\+\_\+1, interf\+\_\+1, j, mixal\+\_\+(), ta, and te.
+
+
+
+Referenced by intchk\+\_\+().
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{comment}{/* System generated locals */}
+54     integer i\_\_1, i\_\_2;
+55 
+56     \textcolor{comment}{/* Local variables */}
+57     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+58     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, integer *, 
+59         ftnlen);
+60     \textcolor{keyword}{static} integer ipen, npat;
+61     \textcolor{keyword}{static} doublereal upen, vpen;
+62     \textcolor{keyword}{static} integer iedge, \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+63     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{mixal\_}(integer *, integer *, doublereal *, 
+64         doublereal *, doublereal *, doublereal *, doublereal *, 
+65         doublereal *, doublereal *, doublereal *, doublereal *, 
+66         doublereal *, doublereal *, doublereal *, doublereal *, 
+67         doublereal *, doublereal *, doublereal *, integer *, integer *, 
+68         integer *, integer *);
+69     \textcolor{keyword}{static} doublereal pnorm[3];
+70     \textcolor{keyword}{static} integer nitera;
+71     \textcolor{keyword}{static} doublereal toolce[3], penmax, ppoint[3], tpoint[3], ustart, vstart;
+72 
+73 
+74 \textcolor{comment}{/*     PURPOSE : TO CHECK OUT SUSPECT REMOTE PATCHES AND IF ANY */}
+75 \textcolor{comment}{/*               PENETRATION DETECTED STORE THE WORST PENETRATION */}
+76 \textcolor{comment}{/*               FOR EACH PATCH IN THE INTERFERENCE TABLE */}
+77 
+78 \textcolor{comment}{/*     ARGUMENTS: */}
+79 
+80 \textcolor{comment}{/*     TE      -  TOOL END COORDINATES */}
+81 \textcolor{comment}{/*     TA      -  TOOL AXIS VECTOR */}
+82 \textcolor{comment}{/*     TUL     -  TOOL GEOMETRY */}
+83 \textcolor{comment}{/*     PSURF   -  CANONICAL FORM OF PART SURFACE (SSURF) */}
+84 \textcolor{comment}{/*     IPSIZE  -  SIZE OF CANONICAL FORM */}
+85 \textcolor{comment}{/*     PSIDE   -  1 OR -1 TO AJUST SURFACE NORMAL (RU X RV) */}
+86 \textcolor{comment}{/*     PTHICK  -  THICKNESS OFFSET FROM SURFACE */}
+87 \textcolor{comment}{/*     TOLIN   -  TOLERANCE (PS INTOL) */}
+88 \textcolor{comment}{/*     LSUSP   -  LIST OF SUSPECT PATCHES */}
+89 \textcolor{comment}{/*     NSUSP   -  NUMBER OF SUSPECT PATCHES */}
+90 
+91 
+92 
+93 
+94 
+95 
+96 \textcolor{comment}{/* .... INTERFERENCE CHECKING INITIAL DATA */}
+97 
+98 
+99 
+100 \textcolor{comment}{/* .... SPHERICAL SURFACE ENCLOSURES (HULLS) */}
+101 \textcolor{comment}{/* .... NUMBER OF HULLS */}
+102 \textcolor{comment}{/* .... DU ITERATION LIMIT FOR PATCHES */}
+103 \textcolor{comment}{/* .... DV ITERATION LIMIT FOR PATCHES */}
+104 \textcolor{comment}{/* .... MAXIMUM AND MINIMUM CURVATURE OF PATCHES */}
+105 
+106 \textcolor{comment}{/*     MXNP   -  MAXIMUM NUMBER OF PATCHES PER SURFACE */}
+107 \textcolor{comment}{/*     NGP    -  NUMBER OF PATCHES IN CURRENT SURFACE */}
+108 \textcolor{comment}{/*     ICURSF -  EXTERNAL LDA FILE RECORD NUMBER FOR CURRENT SURFACE */}
+109 
+110 
+111 
+112 \textcolor{comment}{/*    INTERFERENCE TABLE */}
+113 
+114 
+115 
+116 
+117 
+118 
+119 \textcolor{comment}{/*     LOCAL VARIABLES */}
+120 
+121 
+122 \textcolor{comment}{/* .... DEBUG FLAGS */}
+123 
+124 
+125 
+126 \textcolor{comment}{/* .... CALCULATE 'TOOL CENTER' FOR SIMPLE BE AND CRC CUTTERS */}
+127 
+128     \textcolor{comment}{/* Parameter adjustments */}
+129     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+130     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+131     --tul;
+132     --psurf;
+133     --lsusp;
+134 
+135     \textcolor{comment}{/* Function Body */}
+136     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137     toolce[i\_\_ - 1] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + (tul[4] + tul[1]) * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[i\_\_];
+138 \textcolor{comment}{/* L50: */}
+139     \}
+140 
+141     \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr = 0;
+142 
+143 \textcolor{comment}{/* .... FOR EACH SUSPECT PATCH */}
+144 
+145     i\_\_1 = *nsusp;
+146     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+147     npat = lsusp[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+148     \textcolor{keywordflow}{if} (\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.lnpint != 0) \{
+149 
+150 \textcolor{comment}{/* .... THERE WAS AT LEAST ONE INTERFERENCE DETECTED AT PREVIOUS TOOL */}
+151 \textcolor{comment}{/*     POSITION - CHECK IF ANY PENETRATION WITH THIS PATCH */}
+152 
+153         i\_\_2 = \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.lnpint;
+154         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+155         \textcolor{keywordflow}{if} (npat == \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.lpintr[j - 1]) \{
+156 \textcolor{comment}{/* .... TAKE U,V OF PREVIOUS INTERSECTION AS START VALUES */}
+157             ustart = \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.luintr[j - 1];
+158             vstart = \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.lvintr[j - 1];
+159             \textcolor{keywordflow}{goto} L200;
+160         \}
+161 \textcolor{comment}{/* L100: */}
+162         \}
+163     \}
+164 \textcolor{comment}{/* .... OTHERWISE TAKE PARAMETRIC MID POINT AS START */}
+165     ustart = .5f;
+166     vstart = .5f;
+167 L200:
+168 
+169 \textcolor{comment}{/* .... SEARCH THIS PATCH FOR INTERFERENCE */}
+170 
+171     \hyperlink{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{mixal\_}(&npat, ipsize, &psurf[1], \hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside}, \hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick}, &tul[1], toolce, &
+      \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[
+172         1], &ustart, &vstart, &\hyperlink{REMINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dulim[npat - 1], &
+173         \hyperlink{REMINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dvlim[npat - 1], &upen, &vpen, ppoint, tpoint, pnorm,
+174          &penmax, &ipen, &iflag, &iedge, &nitera);
+175 
+176 \textcolor{comment}{/* .... DEBUG PRINT */}
+177 
+178     \textcolor{keywordflow}{if} (\hyperlink{REMINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+179         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{REMINT_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+180         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{REMINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"NPAT"}, &npat, (ftnlen)4);
+181         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{REMINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ITER"}, &nitera, (ftnlen)4);
+182     \}
+183 
+184     \textcolor{keywordflow}{if} (iflag == 0) \{
+185         \textcolor{keywordflow}{if} (penmax > *tolin) \{
+186 \textcolor{comment}{/* .... STORE IN INTERFERENCE TABLE */}
+187         ++\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr;
+188         \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.dintr[\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = penmax;
+189         \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.uintr[\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = upen;
+190         \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.vintr[\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = vpen;
+191         \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.pintr[\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = npat;
+192         \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+193             \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.spintr[j + \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = ppoint[j - 
+194                 1];
+195             \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.tpintr[j + \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = tpoint[j - 
+196                 1];
+197             \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.snintr[j + \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = pnorm[j - 
+198                 1];
+199 \textcolor{comment}{/* L300: */}
+200         \}
+201         \hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.iseg[\hyperlink{REMINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = ipen;
+202 
+203         \}
+204 
+205     \}
+206 \textcolor{comment}{/* L400: */}
+207     \}
+208 
+209     \textcolor{keywordflow}{return} 0;
+210 \} \textcolor{comment}{/* remint\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{REMINT_8c_a422bb5215e61099f479be96440bf0e3c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{REMINT_8c_a422bb5215e61099f479be96440bf0e3c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{REMINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 44 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{REMINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{REMINT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 45 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{REMINT_8c_a9e9287f317ef3436252a395791a899f6}{}\label{REMINT_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 43 of file R\+E\+M\+I\+N\+T.\+c.
+
+
+
+Referenced by remint\+\_\+().
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!curmax@{curmax}}
+\index{curmax@{curmax}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{curmax}{curmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmax\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_aa23f53bbfcad76998f955271d679887c}{}\label{REMINT_8c_aa23f53bbfcad76998f955271d679887c}
+
+
+Definition at line 18 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!curmin@{curmin}}
+\index{curmin@{curmin}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{curmin}{curmin}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmin\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a4fbfc91a456d854b82c05cb9394040a3}{}\label{REMINT_8c_a4fbfc91a456d854b82c05cb9394040a3}
+
+
+Definition at line 18 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!cxhull@{cxhull}}
+\index{cxhull@{cxhull}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{cxhull}{cxhull}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cxhull\mbox{[}24000\mbox{]}}\hypertarget{REMINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{}\label{REMINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}
+
+
+Definition at line 18 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!dintr@{dintr}}
+\index{dintr@{dintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dintr}{dintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a5cd6309403a78e065ede916bd522e60b}{}\label{REMINT_8c_a5cd6309403a78e065ede916bd522e60b}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!dulim@{dulim}}
+\index{dulim@{dulim}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dulim}{dulim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dulim\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}{}\label{REMINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}
+
+
+Definition at line 18 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!dvlim@{dvlim}}
+\index{dvlim@{dvlim}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dvlim}{dvlim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dvlim\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{}\label{REMINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}
+
+
+Definition at line 18 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{REMINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{REMINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 36 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{REMINT_8c_aacd61550c9a2180086b5b7161d98412f}{}\label{REMINT_8c_aacd61550c9a2180086b5b7161d98412f}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!icursf@{icursf}}
+\index{icursf@{icursf}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{icursf}{icursf}}]{\setlength{\rightskip}{0pt plus 5cm}integer icursf}\hypertarget{REMINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{}\label{REMINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}
+
+
+Definition at line 20 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!inidat\+\_\+@{inidat\+\_\+}}
+\index{inidat\+\_\+@{inidat\+\_\+}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+}{inidat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inidat\+\_\+}\hypertarget{REMINT_8c_a9ba4b528b7f479091df1b2bf3848d60f}{}\label{REMINT_8c_a9ba4b528b7f479091df1b2bf3848d60f}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!interf\+\_\+@{interf\+\_\+}}
+\index{interf\+\_\+@{interf\+\_\+}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{interf\+\_\+}{interf_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   interf\+\_\+}\hypertarget{REMINT_8c_a44508710a4fcf3c7461cab5144411a93}{}\label{REMINT_8c_a44508710a4fcf3c7461cab5144411a93}
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{REMINT_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{REMINT_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 36 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{REMINT_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{REMINT_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 36 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a3644bb3caf8c82bebee05596b47ffd50}{}\label{REMINT_8c_a3644bb3caf8c82bebee05596b47ffd50}
+
+
+Definition at line 30 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ldintr@{ldintr}}
+\index{ldintr@{ldintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ldintr}{ldintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ldintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_ac602c646bdb5e78c0527b4917983c09f}{}\label{REMINT_8c_ac602c646bdb5e78c0527b4917983c09f}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!lnpint@{lnpint}}
+\index{lnpint@{lnpint}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lnpint}{lnpint}}]{\setlength{\rightskip}{0pt plus 5cm}integer lnpint}\hypertarget{REMINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}{}\label{REMINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}
+
+
+Definition at line 30 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!lpintr@{lpintr}}
+\index{lpintr@{lpintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lpintr}{lpintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer lpintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_ac21f87963ba605abb635fec49f22b695}{}\label{REMINT_8c_ac21f87963ba605abb635fec49f22b695}
+
+
+Definition at line 30 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!luintr@{luintr}}
+\index{luintr@{luintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{luintr}{luintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal luintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a3897bb733794d0587276c494d1dfcd4b}{}\label{REMINT_8c_a3897bb733794d0587276c494d1dfcd4b}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!lvintr@{lvintr}}
+\index{lvintr@{lvintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lvintr}{lvintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal lvintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a4cb55a68cce095e41a7e716d53396c66}{}\label{REMINT_8c_a4cb55a68cce095e41a7e716d53396c66}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ncxhul@{ncxhul}}
+\index{ncxhul@{ncxhul}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ncxhul}{ncxhul}}]{\setlength{\rightskip}{0pt plus 5cm}integer ncxhul\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{}\label{REMINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}
+
+
+Definition at line 20 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!ngp@{ngp}}
+\index{ngp@{ngp}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ngp}{ngp}}]{\setlength{\rightskip}{0pt plus 5cm}integer ngp}\hypertarget{REMINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{}\label{REMINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}
+
+
+Definition at line 20 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!npintr@{npintr}}
+\index{npintr@{npintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{npintr}{npintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer npintr}\hypertarget{REMINT_8c_acfb5ad9b5449f50c28bd639363616292}{}\label{REMINT_8c_acfb5ad9b5449f50c28bd639363616292}
+
+
+Definition at line 30 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!pintr@{pintr}}
+\index{pintr@{pintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{pintr}{pintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer pintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a2162b798db7e8645548d1d9edd7951a8}{}\label{REMINT_8c_a2162b798db7e8645548d1d9edd7951a8}
+
+
+Definition at line 30 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!snintr@{snintr}}
+\index{snintr@{snintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{snintr}{snintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snintr\mbox{[}3000\mbox{]}}\hypertarget{REMINT_8c_a1cc237173c7457a042ed4b5e1236151e}{}\label{REMINT_8c_a1cc237173c7457a042ed4b5e1236151e}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!spintr@{spintr}}
+\index{spintr@{spintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{spintr}{spintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spintr\mbox{[}3000\mbox{]}}\hypertarget{REMINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}{}\label{REMINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!tpintr@{tpintr}}
+\index{tpintr@{tpintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{tpintr}{tpintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tpintr\mbox{[}3000\mbox{]}}\hypertarget{REMINT_8c_ae03686076f89124c12a8cba137150b5f}{}\label{REMINT_8c_ae03686076f89124c12a8cba137150b5f}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!uintr@{uintr}}
+\index{uintr@{uintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{uintr}{uintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_a8f83eb4bae3907e86203e233c88c0bec}{}\label{REMINT_8c_a8f83eb4bae3907e86203e233c88c0bec}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+
+\index{R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}!vintr@{vintr}}
+\index{vintr@{vintr}!R\+E\+M\+I\+N\+T.\+c@{R\+E\+M\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{vintr}{vintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vintr\mbox{[}1000\mbox{]}}\hypertarget{REMINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}{}\label{REMINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}
+
+
+Definition at line 26 of file R\+E\+M\+I\+N\+T.\+c.
+

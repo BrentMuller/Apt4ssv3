@@ -1,0 +1,152 @@
+\hypertarget{BALONE_8c}{}\section{B\+A\+L\+O\+N\+E.\+c File Reference}
+\label{BALONE_8c}\index{B\+A\+L\+O\+N\+E.\+c@{B\+A\+L\+O\+N\+E.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+A\+L\+O\+N\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{BALONE_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c}{balone\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$du, doublereal $\ast$dv, doublereal $\ast$\hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+A\+L\+O\+N\+E.\+c@{B\+A\+L\+O\+N\+E.\+c}!balone\+\_\+@{balone\+\_\+}}
+\index{balone\+\_\+@{balone\+\_\+}!B\+A\+L\+O\+N\+E.\+c@{B\+A\+L\+O\+N\+E.\+c}}
+\subsubsection[{\texorpdfstring{balone\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$du, doublereal $\ast$dv, doublereal $\ast$dist, integer $\ast$irr)}{balone_(doublereal *r__, doublereal *side, doublereal *tc, doublereal *rad, doublereal *td, doublereal *du, doublereal *dv, doublereal *dist, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int balone\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{tc, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{doublereal $\ast$}]{td, }
+\item[{doublereal $\ast$}]{du, }
+\item[{doublereal $\ast$}]{dv, }
+\item[{doublereal $\ast$}]{dist, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c}{}\label{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c}
+
+
+Definition at line 17 of file B\+A\+L\+O\+N\+E.\+c.
+
+
+
+References dotf\+\_\+(), i\+\_\+\+\_\+, r\+\_\+\+\_\+, and zero.
+
+
+
+Referenced by balloc\+\_\+(), and balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Initialized data */}
+22 
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+24     \textcolor{keyword}{static} doublereal smal = 1e-18;
+25 
+26     \textcolor{comment}{/* System generated locals */}
+27     doublereal d\_\_1;
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+31     \textcolor{keyword}{static} doublereal del[3], suu, suv, svv, delu, delv;
+32     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+33         );
+34     \textcolor{keyword}{static} doublereal rmod[3], tdsn, discr, factor;
+35 
+36 \textcolor{comment}{/*           /-PURPOSE TO USE LINEAR ESTIMATE OF SURFACE(STORED IN R ) TO */}
+37 \textcolor{comment}{/*           /-CALCULATE DISTANCE TO MOVE BALL CUTTER CENTERED AT TC */}
+38 \textcolor{comment}{/*           /-IN DIRECTION TD TOWARD SURFACE */}
+39 \textcolor{comment}{/*           /-INPUT FOLLOWS */}
+40 \textcolor{comment}{/*           /-R(1-32) CONTAINS SURFACE COORDS,FIRST AND SECOND DERIVATIV */}
+41 \textcolor{comment}{/*           /-TC,TD DENOTE TOOL CENTER AND TOOL DIRECTION TO SURFACE */}
+42 \textcolor{comment}{/*           /-RAD DENOTES THE RADIUS OF THE BALL TOOL */}
+43 \textcolor{comment}{/*           /-SIDE DENOTES NON MATERIAL SIDE OF SURFACE(+1 FOR U X V ) */}
+44 \textcolor{comment}{/*           /-OUTPUT */}
+45 \textcolor{comment}{/*           /-DIST DISTANCE TOOL CENTER SHOULD BE MOVED TO CONTACT PLANE */}
+46 \textcolor{comment}{/*           /-DU,DV SURFACE COORDINATE CHANGES FOR TOOL CONTACT PT. */}
+47 \textcolor{comment}{/*           /-IRR IS NON ZERO ON OUTPUT IF AN ERROR OCCURRED HERE. */}
+48 
+49     \textcolor{comment}{/* Parameter adjustments */}
+50     --td;
+51     --tc;
+52     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+53 
+54     \textcolor{comment}{/* Function Body */}
+55 
+56 \textcolor{comment}{/*           /-COMPUTE MODIFIED SURFACE POINT FOR INTERSECTION PLANE */}
+57     factor = *side * *rad;
+58     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+59 \textcolor{comment}{/* L10: */}
+60     rmod[i\_\_ - 1] = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + factor * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_ + 28];
+61     \}
+62 \textcolor{comment}{/*           /-COMPUTE DISTANCE OF TC ALONG TD TO THIS PLANE */}
+63 \textcolor{comment}{/*           /- DIST SATISFIES EQN, (TC+DIST*TD-RMOD,SN)=0 */}
+64     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&tdsn, &td[1], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+65     *irr = 1;
+66     \textcolor{keywordflow}{if} (abs(tdsn) < smal) \{
+67     \textcolor{keywordflow}{goto} L999;
+68     \}
+69     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+70     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+71 \textcolor{comment}{/* L20: */}
+72     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} += (rmod[i\_\_ - 1] - tc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_ + 28];
+73     \}
+74     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} /= tdsn;
+75 \textcolor{comment}{/*           /-COMPUTE INCREMENTAL VECTOR FROM RMOD TO TC , TD PIERCE POI */}
+76     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+77 \textcolor{comment}{/* L30: */}
+78     del[i\_\_ - 1] = tc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} * td[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - rmod[i\_\_ - 1];
+79     \}
+80 \textcolor{comment}{/*           /-COMPUTE CHANGE IN U,V TO REACH DEL */}
+81     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&suu, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5]);
+82     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&suv, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9]);
+83     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&svv, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9]);
+84     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&delu, del, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5]);
+85     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&delv, del, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9]);
+86 \textcolor{comment}{/* Computing 2nd power */}
+87     d\_\_1 = suv;
+88     discr = suu * svv - d\_\_1 * d\_\_1;
+89     *irr = 2;
+90     \textcolor{keywordflow}{if} (abs(discr) < smal) \{
+91     \textcolor{keywordflow}{goto} L999;
+92     \}
+93     *du = (delu * svv - delv * suv) / discr;
+94     *dv = (suu * delv - suv * delu) / discr;
+95     *irr = 0;
+96 L999:
+97     \textcolor{keywordflow}{return} 0;
+98 \} \textcolor{comment}{/* balone\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c_icgraph}
+\end{center}
+\end{figure}
+
+

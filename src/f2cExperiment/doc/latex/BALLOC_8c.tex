@@ -1,0 +1,185 @@
+\hypertarget{BALLOC_8c}{}\section{B\+A\+L\+L\+O\+C.\+c File Reference}
+\label{BALLOC_8c}\index{B\+A\+L\+L\+O\+C.\+c@{B\+A\+L\+L\+O\+C.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+A\+L\+L\+O\+C.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{BALLOC_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}{balloc\+\_\+} (doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$\hyperlink{PCHPRC_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist}, integer $\ast$maxrep, integer $\ast$ifree, integer $\ast$irr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{BALLOC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+A\+L\+L\+O\+C.\+c@{B\+A\+L\+L\+O\+C.\+c}!balloc\+\_\+@{balloc\+\_\+}}
+\index{balloc\+\_\+@{balloc\+\_\+}!B\+A\+L\+L\+O\+C.\+c@{B\+A\+L\+L\+O\+C.\+c}}
+\subsubsection[{\texorpdfstring{balloc\+\_\+(doublereal $\ast$b, integer $\ast$iflag, integer $\ast$itop, doublereal $\ast$side, doublereal $\ast$tc, doublereal $\ast$rad, doublereal $\ast$td, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$dist, integer $\ast$maxrep, integer $\ast$ifree, integer $\ast$irr)}{balloc_(doublereal *b, integer *iflag, integer *itop, doublereal *side, doublereal *tc, doublereal *rad, doublereal *td, doublereal *u, doublereal *v, doublereal *dist, integer *maxrep, integer *ifree, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int balloc\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{b, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{itop, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{tc, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{doublereal $\ast$}]{td, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{dist, }
+\item[{integer $\ast$}]{maxrep, }
+\item[{integer $\ast$}]{ifree, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}{}\label{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f}
+
+
+Definition at line 21 of file B\+A\+L\+L\+O\+C.\+c.
+
+
+
+References b, balone\+\_\+(), c\+\_\+\+\_\+1, chktop\+\_\+(), cnsurf\+\_\+(), i\+\_\+\+\_\+, iflag, r\+\_\+\+\_\+, sqrbn\+\_\+(), u, u1, v, and v1.
+
+
+
+Referenced by balscn\+\_\+(), and balsrf\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* Initialized data */}
+27 
+28     \textcolor{keyword}{static} doublereal fac = .999;
+29     \textcolor{keyword}{static} doublereal big = 1e22;
+30 
+31     \textcolor{comment}{/* System generated locals */}
+32     integer i\_\_1;
+33 
+34     \textcolor{comment}{/* Local variables */}
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[32], \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, da, du, dv, du1, dv1;
+37     \textcolor{keyword}{static} integer iok, isqr;
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf}{sqrbn\_}(doublereal *, doublereal *, doublereal 
+39         *, doublereal *, doublereal *, doublereal *, doublereal *, 
+40         integer *), \hyperlink{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c}{balone\_}(doublereal *, doublereal *, doublereal *, 
+41         doublereal *, doublereal *, doublereal *, doublereal *, 
+42         doublereal *, integer *), \hyperlink{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{chktop\_}(doublereal *, doublereal *, 
+43         integer *, integer *), \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *, doublereal *, 
+44         doublereal *, doublereal *, integer *, integer *);
+45 
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     --td;
+48     --tc;
+49     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+50     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+51     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+52 
+53     \textcolor{comment}{/* Function Body */}
+54 
+55 \textcolor{comment}{/*           /-PURPOSE IS TO FIND QUICK ESTIMATE OF LINEUP FROM */}
+56 \textcolor{comment}{/*           /-BALL TOOL TO SURFACE. */}
+57 
+58     u1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+59     v1 = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+60     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} = big;
+61     \textcolor{keywordflow}{if} (*ifree == 0) \{
+62     \textcolor{keywordflow}{goto} L10;
+63     \}
+64 \textcolor{comment}{/*            /-IF IFREE=1, INITIAL U,V SHOULD BE IN A VALID SECTOR */}
+65 \textcolor{comment}{/*            /-U,V SHOULD ALSO REMAIN IN A VALID SECTOR */}
+66     *irr = 1;
+67     \hyperlink{CHKTOP_8c_afd7f134126f685f238e92e2d62b0a580}{chktop\_}(&u1, &v1, &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], &iok);
+68     \textcolor{keywordflow}{if} (iok != 0) \{
+69     \textcolor{keywordflow}{goto} L999;
+70     \}
+71 
+72 L10:
+73 \textcolor{comment}{/*           /-LOOP WITH LINEAR ESTIMATES FOR GOOD APPROXIMATION */}
+74     i\_\_1 = *maxrep;
+75     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+76     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&u1, &v1, &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], r\_\_, &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{BALLOC_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+77     \hyperlink{BALONE_8c_a8aba48bfa5d2a1638ff33f28ac86604c}{balone\_}(r\_\_, side, &tc[1], rad, &td[1], &du, &dv, &da, irr);
+78     \textcolor{keywordflow}{if} (*irr == 0) \{
+79         \textcolor{keywordflow}{goto} L30;
+80     \}
+81 \textcolor{comment}{/*           /-ON FAILURE ACCEPT THE LAST GOOD U,V */}
+82     \textcolor{keywordflow}{if} (i\_\_ > 1) \{
+83         \textcolor{keywordflow}{goto} L100;
+84     \}
+85     *irr = 2;
+86     \textcolor{keywordflow}{goto} L999;
+87 
+88 L30:
+89     \textcolor{keywordflow}{if} (*ifree == 0) \{
+90         \textcolor{keywordflow}{goto} L40;
+91     \}
+92 \textcolor{comment}{/*           /-TRUNCATE U,V IF THEY LEAD TO A NEW SECTOR */}
+93     \hyperlink{SQRBN_8c_ad01d1666a19c0956290f3410eaacd1cf}{sqrbn\_}(&u1, &v1, &du, &dv, &du1, &dv1, &fac, &isqr);
+94     \textcolor{keywordflow}{if} (isqr > 0) \{
+95         du = du1;
+96     \}
+97     \textcolor{keywordflow}{if} (isqr > 0) \{
+98         dv = dv1;
+99     \}
+100 L40:
+101     u1 += du;
+102     v1 += dv;
+103     *\hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist} = da;
+104 \textcolor{comment}{/* L20: */}
+105     \}
+106 
+107 L100:
+108     *irr = 0;
+109     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+110     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+111 L999:
+112     \textcolor{keywordflow}{return} 0;
+113 \} \textcolor{comment}{/* balloc\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BALLOC_8c_aaec6426773fa8d42f97c3d3432bf904f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{B\+A\+L\+L\+O\+C.\+c@{B\+A\+L\+L\+O\+C.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!B\+A\+L\+L\+O\+C.\+c@{B\+A\+L\+L\+O\+C.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{BALLOC_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{BALLOC_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file B\+A\+L\+L\+O\+C.\+c.
+
+
+
+Referenced by balloc\+\_\+().
+

@@ -1,0 +1,78 @@
+**** SOURCE FILE : M0000781.V03   ***
+*
+C
+C.....FORTRAN SUBROUTINE             APT031...              3/1/68   GK
+C
+C              FORTRAN SUBROUTINE APT031
+C
+C PURPOSE      TO GENERATE THE CANONICAL FORM OF A CIRCLE DEFINED
+C              AS TANGENT TO EACH OF TWO GIVEN CIRCLES AND HAVING
+C              A GIVEN RADIUS BY THE APT STATEMENT
+C              RESULT = CIRCLE/*****, ***, CIR1, ***, CIR2, RADIUS,
+C                       RAD
+C               ***** = XLARGE, YLARGE, XSMALL, OR YSMALL
+C                 *** = IN OR OUT
+C
+C LINKAGE      CALL APT031 (RESULT, M1, M2, CIR1, M3, CIR2, RAD)
+C
+C ARGUMENTS    RESULT  ARRAY TO CONTAIN THE CANONICAL FORM OF
+C                      THE RESULTING CIRCLE
+C              M1      INTEGER EQUIVALENT OF THE FIRST MODIFIER
+C                             1 = XLARGE       2 = YLARGE
+C                             4 = XSMALL       5 = YSMALL
+C              M2      INTEGER EQUIVALENT OF THE SECOND MODIFIER
+C                             1 = IN           2 = OUT
+C              CIR1    ARRAY CONTAINING THE CANONICAL FORM OF
+C                      THE FIRST INPUT CIRCLE
+C              M3      INTEGER EQUIVALENT OF THE THIRD MODIFIER
+C                             1 = IN           2 = OUT
+C              CIR2    ARRAY CONTAINING THE CANONICAL FORM OF
+C                      THE SECOND INPUT CIRCLE
+C              RAD     REAL VARIABLE CONTAINING THE VALUE OF THE
+C                      DESIRED RADIUS
+C
+C SUBSIDIARIES TYPE                ENTRY
+C              SUBROUTINE          APT005
+C              SUBROUTINE          APT078
+C              REAL FUNCTION       ABS
+C
+      SUBROUTINE APT031 (RESULT,M1,M2,CIR1,M3,CIR2,RAD)
+      IMPLICIT DOUBLE PRECISION (A-H),DOUBLE PRECISION (O-Z)
+      DIMENSION RESULT(7),CIR1(7),CIR2(7)
+C
+C
+C
+      INCLUDE 'TOTAL.INC'
+      INCLUDE 'DEF.INC'
+      INCLUDE 'DSHAR3.INC'
+      INCLUDE 'ZNUMBR.INC'
+      INCLUDE 'ISHR16.INC'
+      INCLUDE 'KNUMBR.INC'
+C
+      DIMENSION CARG(7)
+C
+C...     ESTABLISH CIRCLE C31 WITH RADIUS RAD
+C
+      CALL APT078(R(4),KM1)
+      DO 10 I=1,3
+   10 SC(I +10) =R(I)
+      SC(14)=RAD
+      DO 20 I=1,7
+      SC(I) = CIR1(I)
+   20 P(I) = CIR2(I)
+      DUMMY1 = M2
+      DUMMY2 = M3
+      SC(7) = DABS(SC(7)+(Z2*DUMMY1-Z3)*SC(14))
+      P(7)= DABS(P(7)+(Z2*DUMMY2-Z3)*SC(14))
+C
+C...     CENTER OF DESIRED CIRCLE - INTERSECTION OF CI31 AND CR31
+C
+      DO 50 I=4,7
+   50 R(I)=SC(I+7)
+      DO 40 I=1,7
+   40 CARG(I)=SC(I)
+      CALL APT005(RESULT,M1,CARG,P)
+      DO 30 I=4,7
+   30 RESULT(I)= SC(I+7)
+      RETURN
+       END

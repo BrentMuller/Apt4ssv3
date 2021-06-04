@@ -1,0 +1,96 @@
+\hypertarget{APT201_8c}{}\section{A\+P\+T201.\+c File Reference}
+\label{APT201_8c}\index{A\+P\+T201.\+c@{A\+P\+T201.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T201.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT201_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+integer \hyperlink{APT201_8c_a21d07745165a7dc8daf2ce73ad005419}{apt201\+\_\+} (doublereal $\ast$adress, doublereal $\ast$hdrect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T201.\+c@{A\+P\+T201.\+c}!apt201\+\_\+@{apt201\+\_\+}}
+\index{apt201\+\_\+@{apt201\+\_\+}!A\+P\+T201.\+c@{A\+P\+T201.\+c}}
+\subsubsection[{\texorpdfstring{apt201\+\_\+(doublereal $\ast$adress, doublereal $\ast$hdrect)}{apt201_(doublereal *adress, doublereal *hdrect)}}]{\setlength{\rightskip}{0pt plus 5cm}integer apt201\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{adress, }
+\item[{doublereal $\ast$}]{hdrect}
+\end{DoxyParamCaption}
+)}\hypertarget{APT201_8c_a21d07745165a7dc8daf2ce73ad005419}{}\label{APT201_8c_a21d07745165a7dc8daf2ce73ad005419}
+
+
+Definition at line 393 of file A\+P\+T201.\+c.
+
+
+
+References apt211\+\_\+(), apt241\+\_\+(), and libsrevert\+\_\+().
+
+
+
+Referenced by autops\+\_\+(), godlta\+\_\+(), goto\+\_\+(), and xcall\+\_\+().
+
+
+\begin{DoxyCode}
+394 \{
+395     \textcolor{comment}{/* System generated locals */}
+396     integer ret\_val;
+397 
+398     \textcolor{comment}{/* Local variables */}
+399     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{dummy_8c_af7def2724a16f1094b965232c266688d}{libsrevert\_}(\textcolor{keywordtype}{void});
+400     \textcolor{keyword}{extern} integer \hyperlink{apt211_8c_ac1eae7e54bf9ae4ad4dfb07483266fc8}{apt211\_}(doublereal *, doublereal *, integer *);
+401     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT241_8c_af3fe62a6473af3d53b2701896333cd84}{apt241\_}(\textcolor{keywordtype}{void});
+402     \textcolor{keyword}{static} integer iaeee;
+403 
+404 
+405 
+406 
+407     \textcolor{comment}{/* Parameter adjustments */}
+408     --adress;
+409 
+410     \textcolor{comment}{/* Function Body */}
+411     iaeee = 0;
+412 \textcolor{comment}{/* ...ESTABLISH CONDITION HANDLER FOR AERR ERROR */}
+413 L1:
+414     \hyperlink{APT241_8c_af3fe62a6473af3d53b2701896333cd84}{apt241\_}();
+415     ret\_val = \hyperlink{apt211_8c_ac1eae7e54bf9ae4ad4dfb07483266fc8}{apt211\_}(&adress[1], hdrect, &iaeee);
+416     \textcolor{keywordflow}{if} (iaeee == 1) \{
+417     \textcolor{keywordflow}{goto} L1;
+418     \}
+419 \textcolor{comment}{/* ...REVERT TO DEFAULT CONDITION HANDLER */}
+420 \textcolor{comment}{/*      CALL LIB$REVERT */}
+421     \hyperlink{dummy_8c_af7def2724a16f1094b965232c266688d}{libsrevert\_}();
+422     \textcolor{keywordflow}{return} ret\_val;
+423 \} \textcolor{comment}{/* apt201\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{APT201_8c_a21d07745165a7dc8daf2ce73ad005419_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT201_8c_a21d07745165a7dc8daf2ce73ad005419_icgraph}
+\end{center}
+\end{figure}
+
+

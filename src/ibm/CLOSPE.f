@@ -3,14 +3,19 @@
 *                MODIFIED                23-FEB-1988  E.MCLELLAN
       SUBROUTINE CLOSPE(ID,IRET)
 C
-      INTEGER ID,IRET,JCODE,JRET
+c      INTEGER ID,IRET,JCODE,JRET
+      integer id,iret
 C
-      JCODE=2
-      CALL UCLOSE(ID,JCODE,JRET)
-      IF (JRET.EQ.0) THEN
-       IRET=0
-      ELSE
-       IRET=1
-      ENDIF
+c      JCODE=2
+c      CALL UCLOSE(ID,JCODE,JRET)
+c      IF (JRET.EQ.0) THEN
+c       IRET=0
+c      ELSE
+c       IRET=1
+c      ENDIF
+      close(unit=id,err=10 ,status='keep')
+      iret = 0
+      return
+   10 iret = 1
       RETURN
       END

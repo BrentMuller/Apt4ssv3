@@ -1,0 +1,867 @@
+\hypertarget{ISSCOD_8c}{}\section{I\+S\+S\+C\+O\+D.\+c File Reference}
+\label{ISSCOD_8c}\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+S\+S\+C\+O\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{ISSCOD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1}~\hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1}~\hyperlink{VCTPRD_8c_a23d3b3bb0a2faa093914b9e75758b9f9}{srctbl\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\+\_\+1}~\hyperlink{TSSMIL_8c_aaf4c7aeade4c408729a5b161b7cf665f}{tmp\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_adc26d046da3b096176d64df0f9b82911}{inptr\+\_\+1}~\hyperlink{VCTPRD_8c_a8ceb01063c1243e7dd8cb1335e233bbc}{inptr\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1}~\hyperlink{TSSMIL_8c_afbe97352b0a7b81f71ad1f9d9b682017}{il\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1}~\hyperlink{TSSMIL_8c_a90cb1ad7bdad1d33f36d4ff1d0975969}{modx\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1}~\hyperlink{SUBCOD_8c_aa9bf37c3068dae0d15d0380d2f9e320a}{isscom\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a7a2321436f546e3da7cdcc23afbe0377}{errpos\+\_\+1}~\hyperlink{SSV3_8c_a59d335627a4f345fe44597881357e2d1}{errpos\+\_\+}
+\item 
+\#define \hyperlink{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1})
+\item 
+\#define \hyperlink{ISSCOD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_af63f2d13d75dda2af60a5620a33b05c2}{srctbl\+\_\+1} + 2)
+\item 
+\#define \hyperlink{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}{issa}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1})
+\item 
+\#define \hyperlink{ISSCOD_8c_aa2354bd9c8b7ef9c3b110d3f67bb8f89}{issb}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 1)
+\item 
+\#define \hyperlink{ISSCOD_8c_ac7fea4c13aa58f73b7062f31d3ad6a37}{issc}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 2)
+\item 
+\#define \hyperlink{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}{temp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 32)
+\item 
+\#define \hyperlink{ISSCOD_8c_a0d1e6460951f8c965551f121ebd9730c}{comma}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1})
+\item 
+\#define \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 3)
+\item 
+\#define \hyperlink{ISSCOD_8c_a7090f92ca5c632855d1b1488a433d315}{issfl}~((logical $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 5)
+\item 
+\#define \hyperlink{ISSCOD_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1} + 1)
+\item 
+\#define \hyperlink{ISSCOD_8c_ae25392013a8f9e629557e4a3f0802cbf}{estack}~((integer $\ast$)\&\hyperlink{SSV3_8c_a7a2321436f546e3da7cdcc23afbe0377}{errpos\+\_\+1} + 102)
+\item 
+\#define \hyperlink{ISSCOD_8c_a540181d1ffc30cf27b1d241b6b278b38}{issend}~((logical $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 6)
+\item 
+\#define \hyperlink{ISSCOD_8c_a8ad648d2a0bdf5dbf49e494f02e6c58d}{issmod}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 4)
+\item 
+\#define \hyperlink{ISSCOD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\item 
+\#define \hyperlink{ISSCOD_8c_a2c181ac6e15cce255dd1e99023a6d9e8}{subscr}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 23)
+\item 
+\#define \hyperlink{ISSCOD_8c_ab58361f0e24c80448f418bc6900f6979}{issvbl}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 3)
+\item 
+\#define \hyperlink{ISSCOD_8c_a0f624bb48fe806b70f5311d006eeb9ae}{cvtsub}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 12)
+\item 
+\#define \hyperlink{ISSCOD_8c_aa46a0ff1e669f7d025fd6b335aa16969}{errpnt}~((integer $\ast$)\&\hyperlink{SSV3_8c_a7a2321436f546e3da7cdcc23afbe0377}{errpos\+\_\+1} + 2)
+\item 
+\#define \hyperlink{ISSCOD_8c_a41b387fe2d15d06510ea23ade4427806}{isstrm}~((integer $\ast$)\&\hyperlink{SUBCOD_8c_a274f1103040156883cef0e9b5c8add07}{isscom\+\_\+1} + 7)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ISSCOD_8c_ab3faedde389c60fd7668434df5dd7f0c}{isscod\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{ISSCOD_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{ISSCOD_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{ISSCOD_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{ISSCOD_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{ISSCOD_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{ISSCOD_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{ISSCOD_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{ISSCOD_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{ISSCOD_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{ISSCOD_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_ab4bada765755a0458106b41f1d7ea727}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{ISSCOD_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{ISSCOD_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a4994a155bfc96a2da074c465987ed00a}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_ada93478ed3a7b6732d0c4af5a026499f}{stklst} \mbox{[}300\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a55d8e05912242a413c683f5767b77c8e}{stklst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a88626e109f666a5f8c891bb21f8db85d}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a38885177dc5a2cd93e037c3eba1ca855}{srctbl} \mbox{[}502\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_aeadaae615a77db46eabea62e70937bfc}{srctbl\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a657fa5a9b5a6ae364c3fa30985067c38}{txxxx} \mbox{[}64\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a386b15144fb290adbff43a2dbfe02472}{tmp\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a7eabbcbc6985430e776e56f03f632542}{cnt}\\
+\} \hyperlink{ISSCOD_8c_af32d88be26443f4f5106253ba45a0c18}{inptr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a5524c41368cc6530a9c6a9ccab6163db}{il} \mbox{[}21\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a44911046d5323f16a2daf7d1e087755d}{il\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_abd1eef3c1b001e65bada11247921ce11}{modx} \mbox{[}32\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a99052aaf53919e8fa3940301aebbe9bf}{modx\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a4256798a2806c7973eb1eeff3a64ed14}{moduli\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_ada29d462be35c16b331514e84ce4af33}{isscom} \mbox{[}9\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_a369b45ee9843d1cb8be3e0bc40c32f5c}{isscom\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ISSCOD_8c_a5a2d3d03fb596a9a02911696cd9cd35a}{errpos} \mbox{[}302\mbox{]}\\
+\} \hyperlink{ISSCOD_8c_ade0b5374023cc445535ba357994c606a}{errpos\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{ISSCOD_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{ISSCOD_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{ISSCOD_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{ISSCOD_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{ISSCOD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{ISSCOD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 40 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!comma@{comma}}
+\index{comma@{comma}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{comma}{comma}}]{\setlength{\rightskip}{0pt plus 5cm}\#define comma~((integer $\ast$)\&{\bf code\+\_\+1})}\hypertarget{ISSCOD_8c_a0d1e6460951f8c965551f121ebd9730c}{}\label{ISSCOD_8c_a0d1e6460951f8c965551f121ebd9730c}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cvtsub@{cvtsub}}
+\index{cvtsub@{cvtsub}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cvtsub}{cvtsub}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cvtsub~((integer $\ast$)\&{\bf il\+\_\+1} + 12)}\hypertarget{ISSCOD_8c_a0f624bb48fe806b70f5311d006eeb9ae}{}\label{ISSCOD_8c_a0f624bb48fe806b70f5311d006eeb9ae}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!errpnt@{errpnt}}
+\index{errpnt@{errpnt}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{errpnt}{errpnt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define errpnt~((integer $\ast$)\&{\bf errpos\+\_\+1} + 2)}\hypertarget{ISSCOD_8c_aa46a0ff1e669f7d025fd6b335aa16969}{}\label{ISSCOD_8c_aa46a0ff1e669f7d025fd6b335aa16969}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!errpos\+\_\+1@{errpos\+\_\+1}}
+\index{errpos\+\_\+1@{errpos\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{errpos\+\_\+1}{errpos_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define errpos\+\_\+1~{\bf errpos\+\_\+}}\hypertarget{ISSCOD_8c_a7a2321436f546e3da7cdcc23afbe0377}{}\label{ISSCOD_8c_a7a2321436f546e3da7cdcc23afbe0377}
+
+
+Definition at line 88 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!estack@{estack}}
+\index{estack@{estack}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{estack}{estack}}]{\setlength{\rightskip}{0pt plus 5cm}\#define estack~((integer $\ast$)\&{\bf errpos\+\_\+1} + 102)}\hypertarget{ISSCOD_8c_ae25392013a8f9e629557e4a3f0802cbf}{}\label{ISSCOD_8c_ae25392013a8f9e629557e4a3f0802cbf}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!il\+\_\+1@{il\+\_\+1}}
+\index{il\+\_\+1@{il\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+1}{il_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define il\+\_\+1~{\bf il\+\_\+}}\hypertarget{ISSCOD_8c_abcc19ac3deb5a72995081498826879ac}{}\label{ISSCOD_8c_abcc19ac3deb5a72995081498826879ac}
+
+
+Definition at line 64 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!inptr\+\_\+1@{inptr\+\_\+1}}
+\index{inptr\+\_\+1@{inptr\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{inptr\+\_\+1}{inptr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inptr\+\_\+1~{\bf inptr\+\_\+}}\hypertarget{ISSCOD_8c_adc26d046da3b096176d64df0f9b82911}{}\label{ISSCOD_8c_adc26d046da3b096176d64df0f9b82911}
+
+
+Definition at line 58 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issa@{issa}}
+\index{issa@{issa}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issa}{issa}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issa~((integer $\ast$)\&{\bf isscom\+\_\+1})}\hypertarget{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}{}\label{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issb@{issb}}
+\index{issb@{issb}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issb}{issb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issb~((integer $\ast$)\&{\bf isscom\+\_\+1} + 1)}\hypertarget{ISSCOD_8c_aa2354bd9c8b7ef9c3b110d3f67bb8f89}{}\label{ISSCOD_8c_aa2354bd9c8b7ef9c3b110d3f67bb8f89}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issc@{issc}}
+\index{issc@{issc}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issc}{issc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issc~((integer $\ast$)\&{\bf isscom\+\_\+1} + 2)}\hypertarget{ISSCOD_8c_ac7fea4c13aa58f73b7062f31d3ad6a37}{}\label{ISSCOD_8c_ac7fea4c13aa58f73b7062f31d3ad6a37}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!isscom\+\_\+1@{isscom\+\_\+1}}
+\index{isscom\+\_\+1@{isscom\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{isscom\+\_\+1}{isscom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isscom\+\_\+1~{\bf isscom\+\_\+}}\hypertarget{ISSCOD_8c_a274f1103040156883cef0e9b5c8add07}{}\label{ISSCOD_8c_a274f1103040156883cef0e9b5c8add07}
+
+
+Definition at line 82 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issend@{issend}}
+\index{issend@{issend}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issend}{issend}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issend~((logical $\ast$)\&{\bf isscom\+\_\+1} + 6)}\hypertarget{ISSCOD_8c_a540181d1ffc30cf27b1d241b6b278b38}{}\label{ISSCOD_8c_a540181d1ffc30cf27b1d241b6b278b38}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issfl@{issfl}}
+\index{issfl@{issfl}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issfl}{issfl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issfl~((logical $\ast$)\&{\bf isscom\+\_\+1} + 5)}\hypertarget{ISSCOD_8c_a7090f92ca5c632855d1b1488a433d315}{}\label{ISSCOD_8c_a7090f92ca5c632855d1b1488a433d315}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issmod@{issmod}}
+\index{issmod@{issmod}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issmod}{issmod}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issmod~((integer $\ast$)\&{\bf isscom\+\_\+1} + 4)}\hypertarget{ISSCOD_8c_a8ad648d2a0bdf5dbf49e494f02e6c58d}{}\label{ISSCOD_8c_a8ad648d2a0bdf5dbf49e494f02e6c58d}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!isstrm@{isstrm}}
+\index{isstrm@{isstrm}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{isstrm}{isstrm}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isstrm~((integer $\ast$)\&{\bf isscom\+\_\+1} + 7)}\hypertarget{ISSCOD_8c_a41b387fe2d15d06510ea23ade4427806}{}\label{ISSCOD_8c_a41b387fe2d15d06510ea23ade4427806}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!issvbl@{issvbl}}
+\index{issvbl@{issvbl}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{issvbl}{issvbl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define issvbl~((integer $\ast$)\&{\bf isscom\+\_\+1} + 3)}\hypertarget{ISSCOD_8c_ab58361f0e24c80448f418bc6900f6979}{}\label{ISSCOD_8c_ab58361f0e24c80448f418bc6900f6979}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!meta@{meta}}
+\index{meta@{meta}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{meta}{meta}}]{\setlength{\rightskip}{0pt plus 5cm}\#define meta~((integer $\ast$)\&{\bf srctbl\+\_\+1} + 2)}\hypertarget{ISSCOD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{}\label{ISSCOD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!modhlf@{modhlf}}
+\index{modhlf@{modhlf}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{modhlf}{modhlf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modhlf~((integer $\ast$)\&{\bf moduli\+\_\+1} + 1)}\hypertarget{ISSCOD_8c_a5b213f3380728905c034848dcc4f4ffb}{}\label{ISSCOD_8c_a5b213f3380728905c034848dcc4f4ffb}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{ISSCOD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{ISSCOD_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 76 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{ISSCOD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{ISSCOD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!modx\+\_\+1@{modx\+\_\+1}}
+\index{modx\+\_\+1@{modx\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+1}{modx_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modx\+\_\+1~{\bf modx\+\_\+}}\hypertarget{ISSCOD_8c_a0827be493b63e8b953d7efdff31266fe}{}\label{ISSCOD_8c_a0827be493b63e8b953d7efdff31266fe}
+
+
+Definition at line 70 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!srctbl\+\_\+1@{srctbl\+\_\+1}}
+\index{srctbl\+\_\+1@{srctbl\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+1}{srctbl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define srctbl\+\_\+1~{\bf srctbl\+\_\+}}\hypertarget{ISSCOD_8c_af63f2d13d75dda2af60a5620a33b05c2}{}\label{ISSCOD_8c_af63f2d13d75dda2af60a5620a33b05c2}
+
+
+Definition at line 46 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!stack@{stack}}
+\index{stack@{stack}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{stack}{stack}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stack~((integer $\ast$)\&{\bf stklst\+\_\+1} + 3)}\hypertarget{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{}\label{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!stklst\+\_\+1@{stklst\+\_\+1}}
+\index{stklst\+\_\+1@{stklst\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+1}{stklst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stklst\+\_\+1~{\bf stklst\+\_\+}}\hypertarget{ISSCOD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{}\label{ISSCOD_8c_a3341ad96672b1b8b33fe8a6a195faad0}
+
+
+Definition at line 34 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!subscr@{subscr}}
+\index{subscr@{subscr}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{subscr}{subscr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define subscr~((integer $\ast$)\&{\bf modx\+\_\+1} + 23)}\hypertarget{ISSCOD_8c_a2c181ac6e15cce255dd1e99023a6d9e8}{}\label{ISSCOD_8c_a2c181ac6e15cce255dd1e99023a6d9e8}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!temp@{temp}}
+\index{temp@{temp}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define temp~((integer $\ast$)\&{\bf code\+\_\+1} + 32)}\hypertarget{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}{}\label{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!tmp\+\_\+1@{tmp\+\_\+1}}
+\index{tmp\+\_\+1@{tmp\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{tmp\+\_\+1}{tmp_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tmp\+\_\+1~{\bf tmp\+\_\+}}\hypertarget{ISSCOD_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{}\label{ISSCOD_8c_a9f818f779eaa6ee49e3082f83fd05e3f}
+
+
+Definition at line 52 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!top@{top}}
+\index{top@{top}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{top}{top}}]{\setlength{\rightskip}{0pt plus 5cm}\#define top~((integer $\ast$)\&{\bf stklst\+\_\+1})}\hypertarget{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{}\label{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}
+
+
+Referenced by isscod\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!isscod\+\_\+@{isscod\+\_\+}}
+\index{isscod\+\_\+@{isscod\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{isscod\+\_\+(void)}{isscod_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int isscod\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ISSCOD_8c_ab3faedde389c60fd7668434df5dd7f0c}{}\label{ISSCOD_8c_ab3faedde389c60fd7668434df5dd7f0c}
+
+
+Definition at line 114 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+References alarm\+\_\+(), argcvt\+\_\+(), binbcd\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+\+\_\+8, comma, concat\+\_\+(), cvtsub, errpnt, estack, gettmp\+\_\+(), i\+\_\+\+\_\+, ierror, inptr\+\_\+1, inumb, issa, issb, issc, issend, issfl, issmod, isstrm, issvbl, meta, modhlf, modulo, nametb\+\_\+1, numb\+\_\+(), onearg\+\_\+(), opcode\+\_\+(), rlslin\+\_\+(), stack, subscr, temp, tmp\+\_\+1, and top.
+
+
+
+Referenced by recog\+\_\+().
+
+
+\begin{DoxyCode}
+115 \{
+116     \textcolor{comment}{/* Initialized data */}
+117 
+118     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ihblk[4] = \textcolor{stringliteral}{"    "};
+119 
+120     \textcolor{comment}{/* Builtin functions */}
+121     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+122     integer s\_wsfi(icilist *), do\_fio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_wsfi(\textcolor{keywordtype}{void})
+123         ;
+124 
+125     \textcolor{comment}{/* Local variables */}
+126     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+127 \textcolor{preprocessor}{#define top ((integer *)&stklst\_1)}
+128 \textcolor{preprocessor}{#define meta ((integer *)&srctbl\_1 + 2)}
+129 \textcolor{preprocessor}{#define issa ((integer *)&isscom\_1)}
+130 \textcolor{preprocessor}{#define issb ((integer *)&isscom\_1 + 1)}
+131 \textcolor{preprocessor}{#define issc ((integer *)&isscom\_1 + 2)}
+132     \textcolor{keyword}{extern} integer \hyperlink{NUMB_8c_ac7d7e277a0036a23c50c58aa2fd35fc5}{numb\_}(\textcolor{keywordtype}{char} *, ftnlen);
+133 \textcolor{preprocessor}{#define temp ((integer *)&code\_1 + 32)}
+134     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ibuff[15];
+135 \textcolor{preprocessor}{#define comma ((integer *)&code\_1)}
+136     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+137         , ftnlen);
+138 \textcolor{preprocessor}{#define stack ((integer *)&stklst\_1 + 3)}
+139     \textcolor{keyword}{static} integer \hyperlink{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}{inumb};
+140 \textcolor{preprocessor}{#define issfl ((logical *)&isscom\_1 + 5)}
+141     \textcolor{keyword}{static} integer irslt;
+142     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(integer *, \textcolor{keywordtype}{char} *, integer *, ftnlen),
+143          \hyperlink{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3}{concat\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+144 \textcolor{preprocessor}{#define modhlf ((integer *)&moduli\_1 + 1)}
+145 \textcolor{preprocessor}{#define estack ((integer *)&errpos\_1 + 102)}
+146     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(integer *), \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(integer *);
+147 \textcolor{preprocessor}{#define issend ((logical *)&isscom\_1 + 6)}
+148     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(integer *);
+149 \textcolor{preprocessor}{#define issmod ((integer *)&isscom\_1 + 4)}
+150 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+151     \textcolor{keyword}{extern} integer \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(integer *);
+152 \textcolor{preprocessor}{#define subscr ((integer *)&modx\_1 + 23)}
+153 \textcolor{preprocessor}{#define issvbl ((integer *)&isscom\_1 + 3)}
+154     \textcolor{keyword}{static} integer \hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror};
+155     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}(\textcolor{keywordtype}{void});
+156 \textcolor{preprocessor}{#define cvtsub ((integer *)&il\_1 + 12)}
+157 \textcolor{preprocessor}{#define errpnt ((integer *)&errpos\_1 + 2)}
+158 \textcolor{preprocessor}{#define isstrm ((integer *)&isscom\_1 + 7)}
+159 
+160     \textcolor{comment}{/* Fortran I/O blocks */}
+161     \textcolor{keyword}{static} icilist io\_\_\_24 = \{ 0, ibuff, 0, \textcolor{stringliteral}{"(I3)"}, 3, 1 \};
+162 
+163 
+164 
+165 
+166 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+167 
+168 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+169 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+170 
+171 \textcolor{comment}{/*        2.    STACK AND POINTER STORAGE */}
+172 
+173 
+174 
+175 
+176 
+177 
+178 
+179 \textcolor{comment}{/* TOP:         POINTER TO LAST STACK ENTRY */}
+180 \textcolor{comment}{/* STACK:       WORKING STACK */}
+181 
+182 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+183 
+184 \textcolor{comment}{/* COMMA:       (1)=CODE CLASS  1000,(2)=NAMTBL INDEX OF ',     ' */}
+185 \textcolor{comment}{/* TEMP:        (1)=CODE CLASS 17000,(2)=NAMTBL INDEX OF 'TEMP  ' */}
+186 
+187 \textcolor{comment}{/*        4.    PRODUCTION TABLE */}
+188 
+189 \textcolor{comment}{/* META:        CONTAINS INTERNAL BIT CODES FOR METALINGUISTIC CLASSES */}
+190 
+191 \textcolor{comment}{/*        6.    GHOST STACK FOR OBJECT TIME TEMPORARY ALLOCATION */}
+192 \textcolor{comment}{/*              LENGTH AND CURRENT NUMBER OF ACTIVE TEMPORARY STORAGE */}
+193 
+194 \textcolor{comment}{/*        7.    STRING STORAGE AREA */}
+195 \textcolor{comment}{/*              POINTER TO THE LAST PROCESSED CHARACTER OF A STATEMENT */}
+196 
+197 \textcolor{comment}{/*       16.    LITERALS FOR I. L. OPERATION CODES */}
+198 
+199 \textcolor{comment}{/* CVTSUB:      CONTAINS COMMAND CODE (13) FOR CVTSUB COMMAND */}
+200 
+201 \textcolor{comment}{/*       17.    MODE CODES */}
+202 
+203 \textcolor{comment}{/* SUBSCR:      MODE CODE (24) FOR SUBSCRIPT */}
+204 
+205 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+206 
+207 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+208 \textcolor{comment}{/* MODHLF:      NORMAL MODE CODE LIMIT 500 */}
+209 
+210 \textcolor{comment}{/*       37.    INCLUSIVE SUBSCRIPT VARIABLES */}
+211 
+212 \textcolor{comment}{/* ISSA:        LOWEST SUBSCRIPT OF AN INCLUSIVE SUBSCRIPT STRING */}
+213 \textcolor{comment}{/* ISSB:        HIGHEST SUBSCRIPT OF AN INCLUSIVE SUBSCRIPT STRING */}
+214 \textcolor{comment}{/* ISSC:        INCREMENT OR DECREMENT FOR INCLUSIVE SUBSCRIPT STRING */}
+215 \textcolor{comment}{/* ISSVBL:      NAMTBL POINTER TO THE INCLUSIVE SUBSCRIPTED VARIABLE */}
+216 \textcolor{comment}{/* ISSMOD:      MODE OF THE INCLUSIVE SUBSCRIPTED VARIABLE */}
+217 \textcolor{comment}{/* ISSFL:       TRUE DURING INCLUSIVE SUBSCRIPT PROCESSING */}
+218 \textcolor{comment}{/* ISSEND:      END OF INCLUSIVE SUBSCRIPT PROCESSING */}
+219 \textcolor{comment}{/* ISSTRM:      SAVES THE STACK TOP ITEMS DURING SUBSCRIPT PROCESSING */}
+220 
+221 \textcolor{comment}{/*       44.    ERROR POSITION TABLE */}
+222 
+223 \textcolor{comment}{/* ERRPNT:      CONTAINS POINTERS TO INPUT STATEMENT TEXT POSITIONS */}
+224 \textcolor{comment}{/* ESTACK:      INPUT STATEMENT ERROR POSITION WHEN DETECTED IN STACK */}
+225 \textcolor{comment}{/* ** */}
+226 
+227 \textcolor{comment}{/* ...     CHECK FOR SPACE IN STACK */}
+228 
+229     ierror = 0;
+230     \textcolor{keywordflow}{if} (*\hyperlink{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} + 2 <= 97) \{
+231     \textcolor{keywordflow}{goto} L10;
+232     \}
+233     ierror = 1028;
+234 
+235 \textcolor{comment}{/* ...     ENTER NEW SUBSCRIPT IN NAMTBL */}
+236 
+237 L10:
+238     s\_copy(ibuff + 11, ihblk, (ftnlen)4, (ftnlen)4);
+239     \hyperlink{BINBCD_8c_aa837ee9aa3e6e28f70c68a8cb9513bad}{binbcd\_}(\hyperlink{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}{issa}, ibuff + 3, &i\_\_, (ftnlen)12);
+240     s\_wsfi(&io\_\_\_24);
+241     do\_fio(&\hyperlink{ISSCOD_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&i\_\_, (ftnlen)\textcolor{keyword}{sizeof}(integer));
+242     e\_wsfi();
+243     \hyperlink{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3}{concat\_}(ibuff, \textcolor{stringliteral}{"."}, (ftnlen)15, (ftnlen)1);
+244     inumb = \hyperlink{NUMB_8c_ac7d7e277a0036a23c50c58aa2fd35fc5}{numb\_}(ibuff + 3, (ftnlen)12) + \hyperlink{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax;
+245 
+246 \textcolor{comment}{/* ...     GENERATE SUBSCRIPT I.L. AND PLACE TEMPORARY IN STACK */}
+247 
+248     irslt = \hyperlink{GETTMP_8c_aaecfc12a1b87fb84afdf1a6500a9b53c}{gettmp\_}(\hyperlink{ISSCOD_8c_a2c181ac6e15cce255dd1e99023a6d9e8}{subscr});
+249     \hyperlink{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[irslt - 1] = \hyperlink{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0] + *\hyperlink{ISSCOD_8c_a2c181ac6e15cce255dd1e99023a6d9e8}{subscr};
+250     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{ISSCOD_8c_a0f624bb48fe806b70f5311d006eeb9ae}{cvtsub});
+251     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&irslt);
+252     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(\hyperlink{ISSCOD_8c_ab58361f0e24c80448f418bc6900f6979}{issvbl});
+253     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&inumb);
+254     \hyperlink{ONEARG_8c_a975144aa6f0141bc04a77d6dc7b21a1f}{onearg\_}(&\hyperlink{ISSCOD_8c_a9f818f779eaa6ee49e3082f83fd05e3f}{tmp\_1}.txxxx[(*\hyperlink{ISSCOD_8c_a8ad648d2a0bdf5dbf49e494f02e6c58d}{issmod} << 1) - 2]);
+255     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+256     \hyperlink{ISSCOD_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[irslt - 1] = \hyperlink{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0] + *\hyperlink{ISSCOD_8c_a8ad648d2a0bdf5dbf49e494f02e6c58d}{issmod} + *\hyperlink{ISSCOD_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+257     \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} + 1 << 1) - 2] = irslt;
+258     i\_\_ = \hyperlink{ISSCOD_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0] / *\hyperlink{ISSCOD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+259     \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*\hyperlink{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} + 1 << 1) - 1] = \hyperlink{ISSCOD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[i\_\_ - 1];
+260     *\hyperlink{ISSCOD_8c_a8bc1c1613a2c9744c3cbccce70f53b86}{top} += 2;
+261     \hyperlink{ISSCOD_8c_ae25392013a8f9e629557e4a3f0802cbf}{estack}[*top - 1] = \hyperlink{ISSCOD_8c_aa46a0ff1e669f7d025fd6b335aa16969}{errpnt}[\hyperlink{ISSCOD_8c_adc26d046da3b096176d64df0f9b82911}{inptr\_1}.cnt - 3];
+262 
+263 \textcolor{comment}{/* ...     UPDATE ISSA AND CHECK FOR END OF SUBSCRIPT STRING */}
+264 
+265     *\hyperlink{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}{issa} += *\hyperlink{ISSCOD_8c_ac7fea4c13aa58f73b7062f31d3ad6a37}{issc};
+266     \textcolor{keywordflow}{if} (*\hyperlink{ISSCOD_8c_ac7fea4c13aa58f73b7062f31d3ad6a37}{issc} < 0 && *issa < *issb || *issc > 0 && *\hyperlink{ISSCOD_8c_a1886cf911eb1f75b9b37e7b6d229e4b5}{issa} > *\hyperlink{ISSCOD_8c_aa2354bd9c8b7ef9c3b110d3f67bb8f89}{issb}) \{
+267     \textcolor{keywordflow}{goto} L500;
+268     \}
+269     \textcolor{keywordflow}{if} (ierror != 0) \{
+270     \textcolor{keywordflow}{goto} L400;
+271     \}
+272 
+273 \textcolor{comment}{/* ...     PLACE COMMA IN TOP OF STACK AND CONTINUE */}
+274 
+275     \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top << 1) - 2] = \hyperlink{ISSCOD_8c_a0d1e6460951f8c965551f121ebd9730c}{comma}[1];
+276     i\_\_ = \hyperlink{ISSCOD_8c_a0d1e6460951f8c965551f121ebd9730c}{comma}[0] / *\hyperlink{ISSCOD_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+277     \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}[(*top << 1) - 1] = \hyperlink{ISSCOD_8c_a999cf3a68f0d04dd25a6f4bf0608a779}{meta}[i\_\_ - 1];
+278     \textcolor{keywordflow}{goto} L600;
+279 
+280 \textcolor{comment}{/* ...     END OF INCLUSIVE SUBSCRIPT STRING - RESTORE TOP ITEM */}
+281 \textcolor{comment}{/*          OF STACK AND SET FLAGS */}
+282 
+283 L400:
+284     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&ierror, top, &\hyperlink{ISSCOD_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"ISSCOD  "}, (ftnlen)8);
+285 L500:
+286     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+287     \hyperlink{ISSCOD_8c_ab151537536988a2190d2cac79f964c52}{stack}[i\_\_ + (*top << 1) - 3] = \hyperlink{ISSCOD_8c_a41b387fe2d15d06510ea23ade4427806}{isstrm}[i\_\_ - 1];
+288 \textcolor{comment}{/* L550: */}
+289     \}
+290     *\hyperlink{ISSCOD_8c_a540181d1ffc30cf27b1d241b6b278b38}{issend} = TRUE\_;
+291     *\hyperlink{ISSCOD_8c_a7090f92ca5c632855d1b1488a433d315}{issfl} = FALSE\_;
+292 
+293 L600:
+294     \textcolor{keywordflow}{return} 0;
+295 \} \textcolor{comment}{/* isscod\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ISSCOD_8c_ab3faedde389c60fd7668434df5dd7f0c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ISSCOD_8c_ab3faedde389c60fd7668434df5dd7f0c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ISSCOD_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ISSCOD_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 92 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ISSCOD_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{ISSCOD_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 93 of file I\+S\+S\+C\+O\+D.\+c.
+
+
+
+Referenced by isscod\+\_\+().
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{ISSCOD_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{ISSCOD_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!charst@{charst}}
+\index{charst@{charst}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{ISSCOD_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{ISSCOD_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{ISSCOD_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{ISSCOD_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{ISSCOD_8c_a4994a155bfc96a2da074c465987ed00a}{}\label{ISSCOD_8c_a4994a155bfc96a2da074c465987ed00a}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cnt@{cnt}}
+\index{cnt@{cnt}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnt}{cnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer cnt}\hypertarget{ISSCOD_8c_a7eabbcbc6985430e776e56f03f632542}{}\label{ISSCOD_8c_a7eabbcbc6985430e776e56f03f632542}
+
+
+Definition at line 55 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{ISSCOD_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{ISSCOD_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!code@{code}}
+\index{code@{code}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{ISSCOD_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{ISSCOD_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 37 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{ISSCOD_8c_a88626e109f666a5f8c891bb21f8db85d}{}\label{ISSCOD_8c_a88626e109f666a5f8c891bb21f8db85d}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!errpos@{errpos}}
+\index{errpos@{errpos}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{errpos}{errpos}}]{\setlength{\rightskip}{0pt plus 5cm}integer errpos\mbox{[}302\mbox{]}}\hypertarget{ISSCOD_8c_a5a2d3d03fb596a9a02911696cd9cd35a}{}\label{ISSCOD_8c_a5a2d3d03fb596a9a02911696cd9cd35a}
+
+
+Definition at line 85 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!errpos\+\_\+@{errpos\+\_\+}}
+\index{errpos\+\_\+@{errpos\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{errpos\+\_\+}{errpos_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   errpos\+\_\+}\hypertarget{ISSCOD_8c_ade0b5374023cc445535ba357994c606a}{}\label{ISSCOD_8c_ade0b5374023cc445535ba357994c606a}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{ISSCOD_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{ISSCOD_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{ISSCOD_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{ISSCOD_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!il@{il}}
+\index{il@{il}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il\mbox{[}21\mbox{]}}\hypertarget{ISSCOD_8c_a5524c41368cc6530a9c6a9ccab6163db}{}\label{ISSCOD_8c_a5524c41368cc6530a9c6a9ccab6163db}
+
+
+Definition at line 61 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!il\+\_\+@{il\+\_\+}}
+\index{il\+\_\+@{il\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+}{il_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   il\+\_\+}\hypertarget{ISSCOD_8c_a44911046d5323f16a2daf7d1e087755d}{}\label{ISSCOD_8c_a44911046d5323f16a2daf7d1e087755d}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{ISSCOD_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{ISSCOD_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{ISSCOD_8c_a373010e90fb1cd08bf263255a111920d}{}\label{ISSCOD_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!inptr\+\_\+@{inptr\+\_\+}}
+\index{inptr\+\_\+@{inptr\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{inptr\+\_\+}{inptr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inptr\+\_\+}\hypertarget{ISSCOD_8c_af32d88be26443f4f5106253ba45a0c18}{}\label{ISSCOD_8c_af32d88be26443f4f5106253ba45a0c18}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!isscom@{isscom}}
+\index{isscom@{isscom}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{isscom}{isscom}}]{\setlength{\rightskip}{0pt plus 5cm}integer isscom\mbox{[}9\mbox{]}}\hypertarget{ISSCOD_8c_ada29d462be35c16b331514e84ce4af33}{}\label{ISSCOD_8c_ada29d462be35c16b331514e84ce4af33}
+
+
+Definition at line 79 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!isscom\+\_\+@{isscom\+\_\+}}
+\index{isscom\+\_\+@{isscom\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{isscom\+\_\+}{isscom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isscom\+\_\+}\hypertarget{ISSCOD_8c_a369b45ee9843d1cb8be3e0bc40c32f5c}{}\label{ISSCOD_8c_a369b45ee9843d1cb8be3e0bc40c32f5c}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{ISSCOD_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{ISSCOD_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 73 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{ISSCOD_8c_a4256798a2806c7973eb1eeff3a64ed14}{}\label{ISSCOD_8c_a4256798a2806c7973eb1eeff3a64ed14}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!modx@{modx}}
+\index{modx@{modx}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{modx}{modx}}]{\setlength{\rightskip}{0pt plus 5cm}integer modx\mbox{[}32\mbox{]}}\hypertarget{ISSCOD_8c_abd1eef3c1b001e65bada11247921ce11}{}\label{ISSCOD_8c_abd1eef3c1b001e65bada11247921ce11}
+
+
+Definition at line 67 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!modx\+\_\+@{modx\+\_\+}}
+\index{modx\+\_\+@{modx\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+}{modx_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   modx\+\_\+}\hypertarget{ISSCOD_8c_a99052aaf53919e8fa3940301aebbe9bf}{}\label{ISSCOD_8c_a99052aaf53919e8fa3940301aebbe9bf}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!namest@{namest}}
+\index{namest@{namest}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{ISSCOD_8c_ab97202700d22183890e79bc8791f4bff}{}\label{ISSCOD_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{ISSCOD_8c_ab4bada765755a0458106b41f1d7ea727}{}\label{ISSCOD_8c_ab4bada765755a0458106b41f1d7ea727}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{ISSCOD_8c_a12351fe75bd822dfa233783a24bab726}{}\label{ISSCOD_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{ISSCOD_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{ISSCOD_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{ISSCOD_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{ISSCOD_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{ISSCOD_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{ISSCOD_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!srctbl@{srctbl}}
+\index{srctbl@{srctbl}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl}{srctbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer srctbl\mbox{[}502\mbox{]}}\hypertarget{ISSCOD_8c_a38885177dc5a2cd93e037c3eba1ca855}{}\label{ISSCOD_8c_a38885177dc5a2cd93e037c3eba1ca855}
+
+
+Definition at line 43 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!srctbl\+\_\+@{srctbl\+\_\+}}
+\index{srctbl\+\_\+@{srctbl\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{srctbl\+\_\+}{srctbl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   srctbl\+\_\+}\hypertarget{ISSCOD_8c_aeadaae615a77db46eabea62e70937bfc}{}\label{ISSCOD_8c_aeadaae615a77db46eabea62e70937bfc}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!stklst@{stklst}}
+\index{stklst@{stklst}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst}{stklst}}]{\setlength{\rightskip}{0pt plus 5cm}integer stklst\mbox{[}300\mbox{]}}\hypertarget{ISSCOD_8c_ada93478ed3a7b6732d0c4af5a026499f}{}\label{ISSCOD_8c_ada93478ed3a7b6732d0c4af5a026499f}
+
+
+Definition at line 31 of file I\+S\+S\+C\+O\+D.\+c.
+
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!stklst\+\_\+@{stklst\+\_\+}}
+\index{stklst\+\_\+@{stklst\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+}{stklst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stklst\+\_\+}\hypertarget{ISSCOD_8c_a55d8e05912242a413c683f5767b77c8e}{}\label{ISSCOD_8c_a55d8e05912242a413c683f5767b77c8e}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!tmp\+\_\+@{tmp\+\_\+}}
+\index{tmp\+\_\+@{tmp\+\_\+}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{tmp\+\_\+}{tmp_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tmp\+\_\+}\hypertarget{ISSCOD_8c_a386b15144fb290adbff43a2dbfe02472}{}\label{ISSCOD_8c_a386b15144fb290adbff43a2dbfe02472}
+\index{I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}!txxxx@{txxxx}}
+\index{txxxx@{txxxx}!I\+S\+S\+C\+O\+D.\+c@{I\+S\+S\+C\+O\+D.\+c}}
+\subsubsection[{\texorpdfstring{txxxx}{txxxx}}]{\setlength{\rightskip}{0pt plus 5cm}integer txxxx\mbox{[}64\mbox{]}}\hypertarget{ISSCOD_8c_a657fa5a9b5a6ae364c3fa30985067c38}{}\label{ISSCOD_8c_a657fa5a9b5a6ae364c3fa30985067c38}
+
+
+Definition at line 49 of file I\+S\+S\+C\+O\+D.\+c.
+

@@ -1,0 +1,490 @@
+\hypertarget{EMDCS_8c}{}\section{E\+M\+D\+C\+S.\+c File Reference}
+\label{EMDCS_8c}\index{E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for E\+M\+D\+C\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{EMDCS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv}~((doublereal $\ast$)\&equiv\+\_\+24)
+\item 
+\#define \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}~(equiv\+\_\+0)
+\item 
+\#define \hyperlink{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}{yz1}~(equiv\+\_\+0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1}{emdcs\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$data, doublereal $\ast$\hyperlink{INTTPL_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}!fv@{fv}}
+\index{fv@{fv}!E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{fv}{fv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fv~((doublereal $\ast$)\&equiv\+\_\+24)}\hypertarget{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{}\label{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}
+
+
+Referenced by aprix\+\_\+(), cnsurh\+\_\+(), and emdcs\+\_\+().
+
+\index{E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}!yz@{yz}}
+\index{yz@{yz}!E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{yz}{yz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define yz~(equiv\+\_\+0)}\hypertarget{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{}\label{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}
+
+
+Referenced by emdcs\+\_\+().
+
+\index{E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}!yz1@{yz1}}
+\index{yz1@{yz1}!E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{yz1}{yz1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define yz1~(equiv\+\_\+0)}\hypertarget{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}{}\label{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}
+
+
+Referenced by emdcs\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}!emdcs\+\_\+@{emdcs\+\_\+}}
+\index{emdcs\+\_\+@{emdcs\+\_\+}!E\+M\+D\+C\+S.\+c@{E\+M\+D\+C\+S.\+c}}
+\subsubsection[{\texorpdfstring{emdcs\+\_\+(doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$data, doublereal $\ast$spv, integer $\ast$mode)}{emdcs_(doublereal *u, doublereal *v, doublereal *data, doublereal *spv, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int emdcs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{data, }
+\item[{doublereal $\ast$}]{spv, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1}{}\label{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1}
+
+
+Definition at line 17 of file E\+M\+D\+C\+S.\+c.
+
+
+
+References e\+\_\+2, fill\+\_\+1, fv, hi, i1, i2, i\+\_\+\+\_\+, id, j, qq, u, v, yz, and yz1.
+
+
+
+Referenced by eval\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+23     doublereal \hyperlink{BD2ITL_8c_af7747b98e4f16b6d8422db5d15d525c0}{fill\_1}[6];
+24     doublereal \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2}[6];
+25     \} equiv\_24 = \{ \{0\}, 2., -2., 2., 0., 0., 0. \};
+26 
+27 \textcolor{preprocessor}{#define fv ((doublereal *)&equiv\_24)}
+28 
+29     \textcolor{keyword}{static} integer iw[4] = \{ 2,3,1,2 \};
+30 
+31     \textcolor{comment}{/* System generated locals */}
+32     integer i\_\_1;
+33     \textcolor{keyword}{static} doublereal equiv\_0[32];
+34 
+35     \textcolor{comment}{/* Builtin functions */}
+36     \textcolor{keywordtype}{double} sqrt(doublereal);
+37 
+38     \textcolor{comment}{/* Local variables */}
+39     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{CUTREG_8c_a5f589bc83e55eecc5b1c372de3376ea9}{i2}, \hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id};
+40     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}[3], \hyperlink{POCKET_8c_a7c4292806550cf18eea284a758eb454b}{qq}, ws[12] \textcolor{comment}{/* was [3][4] */};
+41 \textcolor{preprocessor}{#define yz (equiv\_0)}
+42     \textcolor{keyword}{static} doublereal qq1, qq2, qq3, qq4;
+43 \textcolor{preprocessor}{#define yz1 (equiv\_0)}
+44     \textcolor{keyword}{static} integer irn;
+45     \textcolor{keyword}{static} doublereal xhx, yzs[24]  \textcolor{comment}{/* was [3][2][4] */};
+46     \textcolor{keyword}{static} integer irn1, irn2, nres, imode;
+47 
+48 \textcolor{comment}{/*  EVALUATION ROUTINE FOR */}
+49 \textcolor{comment}{/*   "MASTER DIMENSION CONTOUR SURFACE" - MCDS */}
+50 
+51 \textcolor{comment}{/*   PATCH DATA */}
+52 \textcolor{comment}{/*   OUTPUT: EVALUATION VECTOR */}
+53 \textcolor{comment}{/*  FUNCTIOS IN V, FV(I,2): 1.DERIVATIVE; FV(I,3): 2.DERIVATIVE; */}
+54 \textcolor{comment}{/*                                        FV(I,4): 3.DERIVATIVE */}
+55 \textcolor{comment}{/*  8 CONICS WITH DERIVATIVES (1.,2.,AND 3.) */}
+56 \textcolor{comment}{/*  6 CONIC DELTAS AND DERIVATIVE ((Y1,Y4,Y3),(Z1,Z4,Z3)) */}
+57 \textcolor{comment}{/*  3 WEIGHT FUNCTIONS UND DERIVATIVES (W1,W4,W3) */}
+58 \textcolor{comment}{/*  AUXILIARY ARRAY */}
+59     \textcolor{comment}{/* Parameter adjustments */}
+60     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv} -= 5;
+61     --data;
+62 
+63     \textcolor{comment}{/* Function Body */}
+64 
+65 \textcolor{comment}{/*    SET OF INTERNAL MODE, IF NECESSARY */}
+66     \textcolor{keywordflow}{switch} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}) \{
+67     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L1;
+68     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L2;
+69     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L3;
+70     \}
+71 \textcolor{comment}{/*    POINT ONLY */}
+72     imode = 1;
+73     nres = 1;
+74     \textcolor{keywordflow}{goto} L4;
+75 \textcolor{comment}{/*    POINT AND TANGENTS */}
+76 L1:
+77     imode = 2;
+78     nres = 3;
+79     \textcolor{keywordflow}{goto} L4;
+80 \textcolor{comment}{/*    POINT, TANGENTS AND 2. DERIVATIVE */}
+81 L2:
+82     imode = 3;
+83     nres = 8;
+84     \textcolor{keywordflow}{goto} L4;
+85 \textcolor{comment}{/*    POINT, TANGENTS, 2. AND 3. DERIVATIVE */}
+86 L3:
+87     imode = 4;
+88     nres = 12;
+89     \textcolor{keywordflow}{goto} L4;
+90 \textcolor{comment}{/*  ZERO SPV */}
+91 L4:
+92     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+93     i\_\_1 = nres;
+94     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+95 \textcolor{comment}{/* L5: */}
+96         \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + (j << 2)] = 0.;
+97     \}
+98     \}
+99 \textcolor{comment}{/*  X(U) = XMIN+EXT*U */}
+100     \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5] = data[31] + data[32] * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+101 \textcolor{comment}{/*  DX/DU = EXT */}
+102     spv[9] = data[32];
+103 \textcolor{comment}{/*  FUNCTIONS IN V:  FV(1-3,1) = (1-V)**2, V*(1-V), V**2 */}
+104 \textcolor{comment}{/* L10: */}
+105     \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv}[2] = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} * *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+106     \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv}[1] = *v - \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv}[2];
+107     fv[0] = 1. - *v - fv[1];
+108     \textcolor{keywordflow}{if} (imode == 1) \{
+109     \textcolor{keywordflow}{goto} L20;
+110     \}
+111 \textcolor{comment}{/*  DERIVATIVES IN V:  FV(1-3,2) = 2V-2, 1-2V, 2V */}
+112     fv[5] = *v + *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+113     fv[4] = 1. - fv[5];
+114     fv[3] = -1. - fv[4];
+115 \textcolor{comment}{/*  2. DERIVATIVES OF V-FUNCTIONS  FV(1-3,3) = 2,-2, 2 (CONSTANT) */}
+116 \textcolor{comment}{/*  3. DERIVATIVES OF V-FUNCTIONS  FV(1-3,4) = 0, 0, 0  (CONSTANT) */}
+117 
+118 \textcolor{comment}{/*  8 CONIC FUNCTIONS */}
+119 L20:
+120     xhx = spv[5] * spv[5];
+121     irn = 0;
+122     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 8; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+123     irn1 = (integer) data[i\_\_];
+124     \textcolor{keywordflow}{if} (irn1 <= irn) \{
+125         \textcolor{keywordflow}{goto} L25;
+126     \}
+127 \textcolor{comment}{/*  COMPUTE CONIC (1. TIME) */}
+128     irn = irn1;
+129     \textcolor{keywordtype}{id} = (integer) data[irn + 9];
+130     \textcolor{keywordflow}{if} (data[\textcolor{keywordtype}{id}] != 1.) \{
+131         \textcolor{keywordflow}{goto} L23;
+132     \}
+133 \textcolor{comment}{/*  LINE CONIC: Y = YMIN+YEXT*U */}
+134     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ - 1] = data[\textcolor{keywordtype}{id} + 1] + data[\textcolor{keywordtype}{id} + 2] * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+135     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7] = data[\textcolor{keywordtype}{id} + 2];
+136     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 15] = 0.;
+137     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 23] = 0.;
+138     \textcolor{keywordflow}{goto} L30;
+139 \textcolor{comment}{/*  CONICS: Y1,Z1,Y2,Z2,Y3,Z3,Y4,Z4 */}
+140 L23:
+141     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ - 1] = (sqrt(data[\textcolor{keywordtype}{id} + 7] * xhx + data[\textcolor{keywordtype}{id} + 8] * spv[5] + data[
+142         \textcolor{keywordtype}{id} + 9]) * data[\textcolor{keywordtype}{id} + 10] - data[\textcolor{keywordtype}{id} + 2] * spv[5] - data[\textcolor{keywordtype}{id} + 
+143         5]) / data[\textcolor{keywordtype}{id} + 3];
+144     \textcolor{keywordflow}{if} (imode == 1) \{
+145         \textcolor{keywordflow}{goto} L30;
+146     \}
+147 \textcolor{comment}{/*  CONIC DERIVATIVES TO U:YS= -(A*X+B*Y+D)/(B*X+C*Y+E)*L */}
+148     qq = data[\textcolor{keywordtype}{id} + 2] * spv[5] + data[\textcolor{keywordtype}{id} + 3] * \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ - 1] + data[\textcolor{keywordtype}{id} + 5]
+149         ;
+150     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7] = -(data[\textcolor{keywordtype}{id} + 1] * spv[5] + data[\textcolor{keywordtype}{id} + 2] * \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ - 1] + 
+151         data[\textcolor{keywordtype}{id} + 4]) / qq * spv[9];
+152     \textcolor{keywordflow}{if} (imode == 2) \{
+153         \textcolor{keywordflow}{goto} L30;
+154     \}
+155 \textcolor{comment}{/*  2. DERIVATIVES:YSS= -(A*L**2+2*B*L*YS+C*YS**2)/(B*X+C*Y+E) */}
+156     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 15] = -(spv[9] * (data[\textcolor{keywordtype}{id} + 1] * spv[9] + data[\textcolor{keywordtype}{id} + 2] * 2. *
+157          \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7]) + data[\textcolor{keywordtype}{id} + 3] * \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7] * \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7]) / 
+158         \hyperlink{POCKET_8c_a7c4292806550cf18eea284a758eb454b}{qq};
+159     \textcolor{keywordflow}{if} (imode == 3) \{
+160         \textcolor{keywordflow}{goto} L30;
+161     \}
+162 \textcolor{comment}{/*  3. DERIVATIVES:YSSS= -3*YSS*(B*L+C*YS)/(B*X+C*Y+E) */}
+163     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 23] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 15] * -3. * (data[\textcolor{keywordtype}{id} + 2] * spv[9] + data[\textcolor{keywordtype}{id} 
+164         + 3] * \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7]) / qq;
+165     \textcolor{keywordflow}{goto} L30;
+166 \textcolor{comment}{/*  CONIC ALREADY COMPUTED */}
+167 L25:
+168     i\_\_1 = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+169     \textcolor{keywordflow}{for} (i1 = 1; i1 <= i\_\_1; ++\hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}) \{
+170         irn2 = (integer) data[i1];
+171         \textcolor{keywordflow}{if} (irn2 != irn1) \{
+172         \textcolor{keywordflow}{goto} L27;
+173         \}
+174         \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ - 1] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i1 - 1];
+175         \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 7] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i1 + 7];
+176         \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 15] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i1 + 15];
+177         \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i\_\_ + 23] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[i1 + 23];
+178         \textcolor{keywordflow}{goto} L30;
+179 L27:
+180         ;
+181     \}
+182 L30:
+183     ;
+184     \}
+185 \textcolor{comment}{/*  CONIC DIFFERENCES */}
+186     i\_\_1 = imode;
+187     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+188 \textcolor{comment}{/*  Y1S = Y1 - Y2 */}
+189     yzs[((i\_\_ << 1) + 1) * 3 - 9] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 8] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+190         6];
+191 \textcolor{comment}{/*  Y4S = Y4 - Y2 */}
+192     yzs[((i\_\_ << 1) + 1) * 3 - 8] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 2] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+193         6];
+194 \textcolor{comment}{/*  Y3S = Y3 - Y2 */}
+195     yzs[((i\_\_ << 1) + 1) * 3 - 7] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 4] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+196         6];
+197 \textcolor{comment}{/*  Z1S = Z1 - Z2 */}
+198     yzs[((i\_\_ << 1) + 2) * 3 - 9] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 7] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+199         5];
+200 \textcolor{comment}{/*  Z4S = Z4 - Z2 */}
+201     yzs[((i\_\_ << 1) + 2) * 3 - 8] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 1] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+202         5];
+203 \textcolor{comment}{/*  Z3S = Z3 - Z2 */}
+204     yzs[((i\_\_ << 1) + 2) * 3 - 7] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 3] - \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 
+205         5];
+206 \textcolor{comment}{/*  MOVE Y4, Z4 TO Y2, Z2 */}
+207     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 6] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 2];
+208     \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 5] = \hyperlink{EMDCS_8c_a25c27649402d92855c9fe5e79649348c}{yz}[(i\_\_ << 3) - 1];
+209 \textcolor{comment}{/* L40: */}
+210     \}
+211 \textcolor{comment}{/*  COEFFICIENTS OF WEIGHT FUNCTIONS */}
+212     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+213     i1 = iw[i\_\_ - 1];
+214     i2 = iw[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+215     ws[i\_\_ - 1] = yzs[i1 - 1] * yzs[i2 + 2] - yzs[i1 + 2] * yzs[i2 - 1];
+216     \textcolor{keywordflow}{if} (imode == 1) \{
+217         \textcolor{keywordflow}{goto} L50;
+218     \}
+219 \textcolor{comment}{/*  1. DERIVATIVE */}
+220     ws[i\_\_ + 2] = yzs[i1 + 5] * yzs[i2 + 2] - yzs[i1 + 8] * yzs[i2 - 1] + 
+221         yzs[i1 - 1] * yzs[i2 + 8] - yzs[i1 + 2] * yzs[i2 + 5];
+222     \textcolor{keywordflow}{if} (imode == 2) \{
+223         \textcolor{keywordflow}{goto} L50;
+224     \}
+225 \textcolor{comment}{/*  2. DERIVATIVE */}
+226     ws[i\_\_ + 5] = yzs[i1 + 11] * yzs[i2 + 2] - yzs[i1 + 14] * yzs[i2 - 1] 
+227         + (yzs[i1 + 5] * yzs[i2 + 8] - yzs[i1 + 8] * yzs[i2 + 5]) * 
+228         2. + yzs[i1 - 1] * yzs[i2 + 14] - yzs[i1 + 2] * yzs[i2 + 11];
+229     \textcolor{keywordflow}{if} (imode == 3) \{
+230         \textcolor{keywordflow}{goto} L50;
+231     \}
+232 \textcolor{comment}{/*  2. DERIVATIVE */}
+233     ws[i\_\_ + 8] = yzs[i1 + 17] * yzs[i2 + 2] - yzs[i1 + 20] * yzs[i2 - 1] 
+234         + (yzs[i1 + 11] * yzs[i2 + 8] - yzs[i1 + 14] * yzs[i2 + 5]) * 
+235         3. + (yzs[i1 + 5] * yzs[i2 + 14] - yzs[i1 + 8] * yzs[i2 + 11])
+236          * 3. + yzs[i1 - 1] * yzs[i2 + 20] - yzs[i1 + 2] * yzs[i2 + 
+237         17];
+238 L50:
+239     ;
+240     \}
+241 \textcolor{comment}{/*  WEIGHTED COORDINATES */}
+242     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+243     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+244         qq1 = ws[j - 1] * \hyperlink{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}{yz1}[i\_\_ + (j + 4 << 1) - 11];
+245         spv[i\_\_ + 5] += qq1 * fv[j - 1];
+246         \textcolor{keywordflow}{if} (imode == 1) \{
+247         \textcolor{keywordflow}{goto} L60;
+248         \}
+249 
+250         qq2 = ws[j + 2] * \hyperlink{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}{yz1}[i\_\_ + (j + 4 << 1) - 11] + ws[j - 1] * \hyperlink{EMDCS_8c_a2d5a2c1ee4bded0e1a24de9810397431}{yz1}[
+251             i\_\_ + (j + 8 << 1) - 11];
+252         spv[i\_\_ + 9] += qq2 * fv[j - 1];
+253         spv[i\_\_ + 13] += qq1 * fv[j + 2];
+254         \textcolor{keywordflow}{if} (imode == 2) \{
+255         \textcolor{keywordflow}{goto} L60;
+256         \}
+257 
+258         qq3 = ws[j + 5] * yz1[i\_\_ + (j + 4 << 1) - 11] + ws[j + 2] * yz1[
+259             i\_\_ + (j + 8 << 1) - 11] * 2. + ws[j - 1] * yz1[i\_\_ + (j 
+260             + 12 << 1) - 11];
+261         spv[i\_\_ + 17] += qq3 * fv[j - 1];
+262         spv[i\_\_ + 21] += qq2 * fv[j + 2];
+263         spv[i\_\_ + 25] += qq1 * fv[j + 5];
+264         \textcolor{keywordflow}{if} (imode == 3) \{
+265         \textcolor{keywordflow}{goto} L60;
+266         \}
+267         qq4 = ws[j + 8] * yz1[i\_\_ + (j + 4 << 1) - 11] + ws[j + 5] * yz1[
+268             i\_\_ + (j + 8 << 1) - 11] * 3. + ws[j + 2] * yz1[i\_\_ + (j 
+269             + 12 << 1) - 11] * 3. + ws[j - 1] * yz1[i\_\_ + (j + 16 << 
+270             1) - 11];
+271         spv[i\_\_ + 37] += qq4 * fv[j - 1];
+272         spv[i\_\_ + 41] += qq3 * fv[j + 2];
+273         spv[i\_\_ + 45] += qq2 * fv[j + 5];
+274         spv[i\_\_ + 49] += qq1 * fv[j + 8];
+275 L60:
+276         ;
+277     \}
+278     \}
+279 \textcolor{comment}{/*  WEIGHT FUNCTION */}
+280     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+281     spv[8] += ws[j - 1] * fv[j - 1];
+282     \textcolor{keywordflow}{if} (imode == 1) \{
+283         \textcolor{keywordflow}{goto} L65;
+284     \}
+285 
+286     spv[12] += ws[j + 2] * fv[j - 1];
+287     spv[16] += ws[j - 1] * fv[j + 2];
+288     \textcolor{keywordflow}{if} (imode == 2) \{
+289         \textcolor{keywordflow}{goto} L65;
+290     \}
+291 
+292     spv[20] += ws[j + 5] * fv[j - 1];
+293     spv[24] += ws[j + 2] * fv[j + 2];
+294     spv[28] += ws[j - 1] * fv[j + 5];
+295     \textcolor{keywordflow}{if} (imode == 3) \{
+296         \textcolor{keywordflow}{goto} L65;
+297     \}
+298 
+299     spv[40] += ws[j + 8] * fv[j - 1];
+300     spv[44] += ws[j + 5] * fv[j + 2];
+301     spv[48] += ws[j + 2] * fv[j + 5];
+302     spv[52] += ws[j - 1] * fv[j + 8];
+303 L65:
+304     ;
+305     \}
+306 \textcolor{comment}{/*  COMPUTATION OF (X,Y,Z)-COORDINATES */}
+307     \textcolor{keywordflow}{if} (imode == 1) \{
+308     \textcolor{keywordflow}{goto} L71;
+309     \}
+310     i\_\_1 = nres;
+311     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+312 \textcolor{comment}{/* L70: */}
+313     spv[(i\_\_ << 2) + 4] /= spv[8];
+314     \}
+315 L71:
+316     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+317     spv[i\_\_ + 4] /= spv[8];
+318     \textcolor{keywordflow}{if} (imode == 1) \{
+319         \textcolor{keywordflow}{goto} L72;
+320     \}
+321     spv[i\_\_ + 8] = spv[i\_\_ + 8] / spv[8] - spv[i\_\_ + 4] * spv[12];
+322     spv[i\_\_ + 12] = spv[i\_\_ + 12] / spv[8] - spv[i\_\_ + 4] * spv[16];
+323     \textcolor{keywordflow}{if} (imode == 2) \{
+324         \textcolor{keywordflow}{goto} L72;
+325     \}
+326     spv[i\_\_ + 16] = spv[i\_\_ + 16] / spv[8] - spv[i\_\_ + 8] * 2. * spv[12] 
+327         - spv[i\_\_ + 4] * spv[20];
+328     spv[i\_\_ + 20] = spv[i\_\_ + 20] / spv[8] - spv[i\_\_ + 8] * spv[16] - spv[
+329         i\_\_ + 12] * spv[12] - spv[i\_\_ + 4] * spv[24];
+330     spv[i\_\_ + 24] = spv[i\_\_ + 24] / spv[8] - spv[i\_\_ + 12] * 2. * spv[16] 
+331         - spv[i\_\_ + 4] * spv[28];
+332     \textcolor{keywordflow}{if} (imode == 3) \{
+333         \textcolor{keywordflow}{goto} L72;
+334     \}
+335     spv[i\_\_ + 36] = spv[i\_\_ + 36] / spv[8] - spv[i\_\_ + 16] * 3. * spv[12] 
+336         - spv[i\_\_ + 8] * 3. * spv[20] - spv[i\_\_ + 4] * spv[40];
+337     spv[i\_\_ + 40] = spv[i\_\_ + 40] / spv[8] - spv[i\_\_ + 20] * 2. * spv[12] 
+338         - spv[i\_\_ + 16] * spv[16] - spv[i\_\_ + 12] * spv[20] - spv[i\_\_ 
+339         + 8] * 2. * spv[24] - spv[i\_\_ + 4] * spv[44];
+340     spv[i\_\_ + 44] = spv[i\_\_ + 44] / spv[8] - spv[i\_\_ + 24] * spv[12] - 
+341         spv[i\_\_ + 20] * 2. * spv[16] - spv[i\_\_ + 12] * 2. * spv[24] - 
+342         spv[i\_\_ + 8] * spv[28] - spv[i\_\_ + 4] * spv[48];
+343     spv[i\_\_ + 48] = spv[i\_\_ + 48] / spv[8] - spv[i\_\_ + 24] * 3. * spv[16] 
+344         - spv[i\_\_ + 12] * 3. * spv[28] - spv[i\_\_ + 4] * spv[52];
+345 L72:
+346     ;
+347     \}
+348 
+349 \textcolor{comment}{/*  TRANSFORMATION NECESSARY ? */}
+350     \textcolor{keywordflow}{if} (data[18] == 0.) \{
+351     \textcolor{keywordflow}{goto} L80;
+352     \}
+353     i\_\_1 = nres;
+354     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+355     \textcolor{keywordflow}{if} (i\_\_ == 7) \{
+356         \textcolor{keywordflow}{goto} L76;
+357     \}
+358     \textcolor{keywordflow}{if} (i\_\_ == 8) \{
+359         \textcolor{keywordflow}{goto} L76;
+360     \}
+361     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+362 \textcolor{comment}{/* L74: */}
+363         hi[j - 1] = spv[j + (i\_\_ << 2)];
+364     \}
+365     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+366 \textcolor{comment}{/* L75: */}
+367         spv[j + (i\_\_ << 2)] = data[(j << 2) + 15] * hi[0] + data[(j << 2) 
+368             + 16] * hi[1] + data[(j << 2) + 17] * hi[2];
+369     \}
+370 L76:
+371     ;
+372     \}
+373 
+374 \textcolor{comment}{/*  TRANSLATION OF SURFACE POINT COORDINATES */}
+375 \textcolor{comment}{/* L77: */}
+376     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+377 \textcolor{comment}{/* L78: */}
+378     spv[i\_\_ + 4] += data[(i\_\_ << 2) + 18];
+379     \}
+380 
+381 \textcolor{comment}{/*  SURFACE NORMAL NECESSARY ? */}
+382 L80:
+383     \textcolor{keywordflow}{if} (imode < 2) \{
+384     \textcolor{keywordflow}{goto} L89;
+385     \}
+386 
+387 \textcolor{comment}{/*  SURFACE NORMAL */}
+388     spv[29] = spv[10] * spv[15] - spv[11] * spv[14];
+389     spv[30] = spv[11] * spv[13] - spv[9] * spv[15];
+390     spv[31] = spv[9] * spv[14] - spv[10] * spv[13];
+391 
+392 \textcolor{comment}{/*  NORMALIZING OF SURFACE NORMAL */}
+393     qq = sqrt(spv[29] * spv[29] + spv[30] * spv[30] + spv[31] * spv[31]);
+394     \textcolor{keywordflow}{if} (qq < 1e-12) \{
+395     \textcolor{keywordflow}{goto} L89;
+396     \}
+397     spv[33] = spv[29] / \hyperlink{POCKET_8c_a7c4292806550cf18eea284a758eb454b}{qq};
+398     spv[34] = spv[30] / \hyperlink{POCKET_8c_a7c4292806550cf18eea284a758eb454b}{qq};
+399     spv[35] = spv[31] / \hyperlink{POCKET_8c_a7c4292806550cf18eea284a758eb454b}{qq};
+400     spv[32] = 1.;
+401     spv[36] = 1.;
+402 
+403 \textcolor{comment}{/*  SET THE COMPUTATION SIGNAL */}
+404 L89:
+405     i\_\_1 = nres;
+406     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+407     \textcolor{keywordflow}{if} (i\_\_ == 7) \{
+408         \textcolor{keywordflow}{goto} L90;
+409     \}
+410     \textcolor{keywordflow}{if} (i\_\_ == 8) \{
+411         \textcolor{keywordflow}{goto} L90;
+412     \}
+413     spv[(i\_\_ << 2) + 4] = 1.;
+414 L90:
+415     ;
+416     \}
+417     \textcolor{keywordflow}{return} 0;
+418 \} \textcolor{comment}{/* emdcs\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EMDCS_8c_a9e4b131a4bc06221d7b264a6c816a2d1_icgraph}
+\end{center}
+\end{figure}
+
+

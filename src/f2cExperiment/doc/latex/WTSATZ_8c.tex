@@ -1,0 +1,118 @@
+\hypertarget{WTSATZ_8c}{}\section{W\+T\+S\+A\+T\+Z.\+c File Reference}
+\label{WTSATZ_8c}\index{W\+T\+S\+A\+T\+Z.\+c@{W\+T\+S\+A\+T\+Z.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for W\+T\+S\+A\+T\+Z.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{WTSATZ_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{WTSATZ_8c_a596fafbf3f1c023793bf751d820d90c0}{wtsatz\+\_\+} (integer $\ast$\hyperlink{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}{id}, doublereal $\ast$\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}, integer $\ast$ianz, integer $\ast$iret)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{WTSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{W\+T\+S\+A\+T\+Z.\+c@{W\+T\+S\+A\+T\+Z.\+c}!wtsatz\+\_\+@{wtsatz\+\_\+}}
+\index{wtsatz\+\_\+@{wtsatz\+\_\+}!W\+T\+S\+A\+T\+Z.\+c@{W\+T\+S\+A\+T\+Z.\+c}}
+\subsubsection[{\texorpdfstring{wtsatz\+\_\+(integer $\ast$id, doublereal $\ast$array, integer $\ast$ianz, integer $\ast$iret)}{wtsatz_(integer *id, doublereal *array, integer *ianz, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int wtsatz\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{id, }
+\item[{doublereal $\ast$}]{array, }
+\item[{integer $\ast$}]{ianz, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{WTSATZ_8c_a596fafbf3f1c023793bf751d820d90c0}{}\label{WTSATZ_8c_a596fafbf3f1c023793bf751d820d90c0}
+
+
+Definition at line 21 of file W\+T\+S\+A\+T\+Z.\+c.
+
+
+
+References array, c\+\_\+\+\_\+1, i\+\_\+\+\_\+, and id.
+
+
+
+Referenced by punch\+\_\+().
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* System generated locals */}
+25     integer i\_\_1, i\_\_2;
+26 
+27     \textcolor{comment}{/* Builtin functions */}
+28     integer s\_wsue(cilist *), do\_uio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_wsue(\textcolor{keywordtype}{void});
+29 
+30     \textcolor{comment}{/* Local variables */}
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+32 
+33     \textcolor{comment}{/* Fortran I/O blocks */}
+34     \textcolor{keyword}{static} cilist io\_\_\_1 = \{ 1, 0, 0, 0, 0 \};
+35 
+36 
+37 
+38 
+39     \textcolor{comment}{/* Parameter adjustments */}
+40     --\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array};
+41 
+42     \textcolor{comment}{/* Function Body */}
+43     io\_\_\_1.ciunit = *\hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id};
+44     i\_\_1 = s\_wsue(&io\_\_\_1);
+45     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+46     \textcolor{keywordflow}{goto} L90;
+47     \}
+48     i\_\_2 = *ianz;
+49     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+50     i\_\_1 = do\_uio(&\hyperlink{WTSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&\hyperlink{PUNCH_8c_a95fe3ffca1c850e6cb156dddfaf3354c}{array}[i\_\_], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+51     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+52         \textcolor{keywordflow}{goto} L90;
+53     \}
+54     \}
+55     i\_\_1 = e\_wsue();
+56     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+57     \textcolor{keywordflow}{goto} L90;
+58     \}
+59     *iret = 0;
+60     \textcolor{keywordflow}{return} 0;
+61 
+62 L90:
+63     *iret = 3;
+64     \textcolor{keywordflow}{return} 0;
+65 \} \textcolor{comment}{/* wtsatz\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{WTSATZ_8c_a596fafbf3f1c023793bf751d820d90c0_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{W\+T\+S\+A\+T\+Z.\+c@{W\+T\+S\+A\+T\+Z.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!W\+T\+S\+A\+T\+Z.\+c@{W\+T\+S\+A\+T\+Z.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{WTSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{WTSATZ_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file W\+T\+S\+A\+T\+Z.\+c.
+
+
+
+Referenced by wtsatz\+\_\+().
+

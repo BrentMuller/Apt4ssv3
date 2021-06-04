@@ -1,0 +1,252 @@
+\hypertarget{APT105_8c}{}\section{A\+P\+T105.\+c File Reference}
+\label{APT105_8c}\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T105.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT105_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{APT105_8c_a6207cda821862458c24466470a5a29cf}{idef\+\_\+1}~\hyperlink{SSV3_8c_a9cae5275a44a01f95d2fcecf8ea5c914}{idef\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT105_8c_ab982b917749ce90409b72e7abf435c78}{apt105\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, doublereal $\ast$\hyperlink{UNITS_8c_affaf74dabdb513fe55fa48a1091a82f0}{sn}, integer $\ast$\hyperlink{XNUMBR_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt}, doublereal $\ast$rm)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{APT105_8c_aa90e16c183bee438d9ae537f7e591fb6}{ldasiz}\\
+\>integer \hyperlink{APT105_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror}\\
+\>integer \hyperlink{APT105_8c_ab4638437d88a6689bb561e23a02a6a76}{surfad} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{APT105_8c_aacf6c9b7a2050816028e0700c887b817}{kwrdsz}\\
+\>integer \hyperlink{APT105_8c_aa621925ef81c2bf04d3114282dca1961}{iblk1}\\
+\} \hyperlink{APT105_8c_a6fd3dc65e1cb4de2277351c18acfddc9}{idef\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{APT105_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{APT105_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!idef\+\_\+1@{idef\+\_\+1}}
+\index{idef\+\_\+1@{idef\+\_\+1}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{idef\+\_\+1}{idef_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define idef\+\_\+1~{\bf idef\+\_\+}}\hypertarget{APT105_8c_a6207cda821862458c24466470a5a29cf}{}\label{APT105_8c_a6207cda821862458c24466470a5a29cf}
+
+
+Definition at line 21 of file A\+P\+T105.\+c.
+
+
+
+Referenced by apt105\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!apt105\+\_\+@{apt105\+\_\+}}
+\index{apt105\+\_\+@{apt105\+\_\+}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{apt105\+\_\+(doublereal $\ast$result, integer $\ast$m, doublereal $\ast$sn, integer $\ast$nt, doublereal $\ast$rm)}{apt105_(doublereal *result, integer *m, doublereal *sn, integer *nt, doublereal *rm)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt105\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{m, }
+\item[{doublereal $\ast$}]{sn, }
+\item[{integer $\ast$}]{nt, }
+\item[{doublereal $\ast$}]{rm}
+\end{DoxyParamCaption}
+)}\hypertarget{APT105_8c_ab982b917749ce90409b72e7abf435c78}{}\label{APT105_8c_ab982b917749ce90409b72e7abf435c78}
+
+
+Definition at line 32 of file A\+P\+T105.\+c.
+
+
+
+References ataper\+\_\+(), c\+\_\+\+\_\+3, c\+\_\+n1, defext\+\_\+(), i\+\_\+\+\_\+, idef\+\_\+1, isc, j, l, n, nt, ntp, p, result, and transf\+\_\+().
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+34 \{
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[6];
+37     \textcolor{keyword}{static} integer iee, \hyperlink{PRO027_8c_a7009920836d2ab260b4a607d50dcea6f}{isc}, \hyperlink{GET_8c_ace37068888fd8a3fb68e9f7f1aa82cd1}{ntp};
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{ataper\_}(doublereal *, integer *, integer *, 
+39         integer *, integer *), \hyperlink{DEFEXT_8c_abad8d6b3163cd8d9465474132ffb00ff}{defext\_}(doublereal *), \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(doublereal *
+40         , doublereal *, integer *, integer *, integer *);
+41 
+42 
+43 \textcolor{comment}{/*  PURPOSE  TO RETRIEVE CL POINT OR VECTOR FROM CLTAPE AND STORE IT */}
+44 \textcolor{comment}{/*           IN RESULT ARRAY. */}
+45 
+46 \textcolor{comment}{/*  LINKAGE   CALL  APT105 (RESULT ,M,SN,NT,RM) */}
+47 
+48 \textcolor{comment}{/*  ARGUMENTS   RESULT  ARRAY TO CONTAIN THE CANONICAL FORM OF THE */}
+49 \textcolor{comment}{/*                      RESULTING POINT OR VECTOR DEFINED AS N TH POINT */}
+50 \textcolor{comment}{/*                      OR VECTOR OF A PREVIOUS MOTION STATEMENT. */}
+51 \textcolor{comment}{/*              M       INTEGER */}
+52 \textcolor{comment}{/*                        0   IF RESULT IS POINT */}
+53 \textcolor{comment}{/*                        1   IF RESULT IS VECTOR */}
+54 \textcolor{comment}{/*              SN      REAL NUMBER OF THE CLDAT SECTION */}
+55 \textcolor{comment}{/*              NT      INTEGER DATA TYPE */}
+56 \textcolor{comment}{/*                        1      2      3     4     5     6     7 */}
+57 \textcolor{comment}{/*                        TP     TA     TV    PDS   NDS   PPS   NPS */}
+58 \textcolor{comment}{/*              RM      REAL VALUE N CORRESPONDING TO DESIRED POINT */}
+59 \textcolor{comment}{/*                      OR VECTOR. */}
+60 
+61 \textcolor{comment}{/*  IMPORTANT VARIABLES */}
+62 \textcolor{comment}{/*              IEE     ERROR INDICATOR TO BE SET BY ATAPER WHEN THE */}
+63 \textcolor{comment}{/*                      SPECIFIED CL POINT DOES NOT EXIST. */}
+64 \textcolor{comment}{/*              J       INDICATOR OF POINT OR VECTOR FOR TRANSF. */}
+65 \textcolor{comment}{/*              I       POINTER OF ARRAY P ACCORDING TO POINT OR VECTOR. */}
+66 \textcolor{comment}{/*              P       ARRAY TO CONTAIN X,Y,Z,I,J,K. */}
+67 \textcolor{comment}{/*              I       COUNTER TO PICK UP POINT OR VECTOR. */}
+68 \textcolor{comment}{/*              IERROR  COMMON VARIABLE TO CARRY ERROR CODE. */}
+69 
+70 
+71 
+72 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+73 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+74 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+75 
+76 
+77 
+78 
+79 \textcolor{comment}{/*   ***  14.  IDEF BLOCK  *** */}
+80 
+81 \textcolor{comment}{/*   INVIOLATE INTEGER VARIABLES */}
+82 
+83 
+84 
+85     \textcolor{comment}{/* Parameter adjustments */}
+86     --\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result};
+87 
+88     \textcolor{comment}{/* Function Body */}
+89     n = (integer) (*rm);
+90     isc = (integer) (*\hyperlink{APT331_8c_ac44dba448ffaa92867e6b60d2fd5abff}{sn});
+91     ntp = *\hyperlink{ADV_8c_a0a16c4ba7a97b8fbe2b7cafe00dc7896}{nt};
+92     \hyperlink{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{ataper\_}(p, &n, &isc, &ntp, &iee);
+93     \textcolor{keywordflow}{if} (iee == 0) \{
+94     \textcolor{keywordflow}{goto} L2;
+95     \}
+96     \hyperlink{APT105_8c_a6207cda821862458c24466470a5a29cf}{idef\_1}.ierror = 93;
+97     \textcolor{keywordflow}{goto} L3;
+98 L2:
+99     j = 2;
+100     i\_\_ = 1;
+101     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} == 1) \{
+102     i\_\_ = 4;
+103     \}
+104     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m} == 1) \{
+105     j = 3;
+106     \}
+107     \textcolor{keywordflow}{for} (l = 1; l <= 3; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+108     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = p[i\_\_ - 1];
+109 \textcolor{comment}{/* L1: */}
+110     ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+111     \}
+112     \hyperlink{TRANSM_8c_aeb87af6162ea2b8e39d6713dbce64d41}{transf\_}(p, &\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[1], &j, &\hyperlink{APT105_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &\hyperlink{APT105_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1});
+113 L3:
+114     \hyperlink{DEFEXT_8c_abad8d6b3163cd8d9465474132ffb00ff}{defext\_}(&\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[1]);
+115     \textcolor{keywordflow}{return} 0;
+116 \} \textcolor{comment}{/* apt105\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT105_8c_ab982b917749ce90409b72e7abf435c78_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT105_8c_ab982b917749ce90409b72e7abf435c78_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT105_8c_a5e7359f78743350865398325d9155f20}{}\label{APT105_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 25 of file A\+P\+T105.\+c.
+
+
+
+Referenced by apt105\+\_\+().
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APT105_8c_a9e9287f317ef3436252a395791a899f6}{}\label{APT105_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 26 of file A\+P\+T105.\+c.
+
+
+
+Referenced by apt105\+\_\+().
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!iblk1@{iblk1}}
+\index{iblk1@{iblk1}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{iblk1}{iblk1}}]{\setlength{\rightskip}{0pt plus 5cm}integer iblk1}\hypertarget{APT105_8c_aa621925ef81c2bf04d3114282dca1961}{}\label{APT105_8c_aa621925ef81c2bf04d3114282dca1961}
+
+
+Definition at line 18 of file A\+P\+T105.\+c.
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!idef\+\_\+@{idef\+\_\+}}
+\index{idef\+\_\+@{idef\+\_\+}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{idef\+\_\+}{idef_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   idef\+\_\+}\hypertarget{APT105_8c_a6fd3dc65e1cb4de2277351c18acfddc9}{}\label{APT105_8c_a6fd3dc65e1cb4de2277351c18acfddc9}
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!ierror@{ierror}}
+\index{ierror@{ierror}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{ierror}{ierror}}]{\setlength{\rightskip}{0pt plus 5cm}integer ierror}\hypertarget{APT105_8c_ae6291c7ad4bbbf5230272398ac66056b}{}\label{APT105_8c_ae6291c7ad4bbbf5230272398ac66056b}
+
+
+Definition at line 18 of file A\+P\+T105.\+c.
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!kwrdsz@{kwrdsz}}
+\index{kwrdsz@{kwrdsz}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{kwrdsz}{kwrdsz}}]{\setlength{\rightskip}{0pt plus 5cm}integer kwrdsz}\hypertarget{APT105_8c_aacf6c9b7a2050816028e0700c887b817}{}\label{APT105_8c_aacf6c9b7a2050816028e0700c887b817}
+
+
+Definition at line 18 of file A\+P\+T105.\+c.
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!ldasiz@{ldasiz}}
+\index{ldasiz@{ldasiz}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{ldasiz}{ldasiz}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldasiz}\hypertarget{APT105_8c_aa90e16c183bee438d9ae537f7e591fb6}{}\label{APT105_8c_aa90e16c183bee438d9ae537f7e591fb6}
+
+
+Definition at line 18 of file A\+P\+T105.\+c.
+
+\index{A\+P\+T105.\+c@{A\+P\+T105.\+c}!surfad@{surfad}}
+\index{surfad@{surfad}!A\+P\+T105.\+c@{A\+P\+T105.\+c}}
+\subsubsection[{\texorpdfstring{surfad}{surfad}}]{\setlength{\rightskip}{0pt plus 5cm}integer surfad\mbox{[}4\mbox{]}}\hypertarget{APT105_8c_ab4638437d88a6689bb561e23a02a6a76}{}\label{APT105_8c_ab4638437d88a6689bb561e23a02a6a76}
+
+
+Definition at line 18 of file A\+P\+T105.\+c.
+

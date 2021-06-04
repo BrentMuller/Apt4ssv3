@@ -1,0 +1,263 @@
+\hypertarget{TOPGEN_8c}{}\section{T\+O\+P\+G\+E\+N.\+c File Reference}
+\label{TOPGEN_8c}\index{T\+O\+P\+G\+E\+N.\+c@{T\+O\+P\+G\+E\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+O\+P\+G\+E\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{TOPGEN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TOPGEN_8c_aa9a228c6d9b1dfe79d228b4b18fb25ba}{topgen\+\_\+} (doublereal $\ast$ss)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+O\+P\+G\+E\+N.\+c@{T\+O\+P\+G\+E\+N.\+c}!topgen\+\_\+@{topgen\+\_\+}}
+\index{topgen\+\_\+@{topgen\+\_\+}!T\+O\+P\+G\+E\+N.\+c@{T\+O\+P\+G\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{topgen\+\_\+(doublereal $\ast$ss)}{topgen_(doublereal *ss)}}]{\setlength{\rightskip}{0pt plus 5cm}int topgen\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ss}
+\end{DoxyParamCaption}
+)}\hypertarget{TOPGEN_8c_aa9a228c6d9b1dfe79d228b4b18fb25ba}{}\label{TOPGEN_8c_aa9a228c6d9b1dfe79d228b4b18fb25ba}
+
+
+Definition at line 17 of file T\+O\+P\+G\+E\+N.\+c.
+
+
+
+References d\+\_\+\+\_\+, f, i\+\_\+\+\_\+, itop, izero, j, k, l, m, p, pt, and zero.
+
+
+
+Referenced by apt107\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* Initialized data */}
+20 
+21     \textcolor{keyword}{static} integer nsz[4] = \{ 1,4,12,16 \};
+22     \textcolor{keyword}{static} integer nboun[8] = \{ 1,2,1,3,2,4,3,4 \};
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+24     \textcolor{keyword}{static} doublereal smal = 1e-10;
+25     \textcolor{keyword}{static} integer \hyperlink{APT301_8c_a23d03abc4d8588df621d19aa841ce82a}{izero} = 0;
+26 
+27     \textcolor{comment}{/* System generated locals */}
+28     integer i\_\_1, i\_\_2, i\_\_3, i\_\_4;
+29     doublereal d\_\_1, d\_\_2;
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+33     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+34     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[12]    \textcolor{comment}{/* was [3][4] */};
+35     \textcolor{keyword}{static} integer ja, jb, ma, mb, kk, nn, np, kt, ns;
+36     \textcolor{keyword}{static} doublereal \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[12]  \textcolor{comment}{/* was [3][4] */};
+37     \textcolor{keyword}{static} integer ncur, \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}, ntot, itop1, iprel, ktemp, ntype, itopij, 
+38         iprelt, nlower, nupper;
+39 
+40 \textcolor{comment}{/* ---     ROUTINE TO GENERATE A TOPOLOGY TABLE FOR AN OTHERWISE COMPLETE */}
+41 \textcolor{comment}{/* ---      SS DATA STRUCTURE */}
+42     \textcolor{comment}{/* Parameter adjustments */}
+43     --ss;
+44 
+45     \textcolor{comment}{/* Function Body */}
+46 
+47 \textcolor{comment}{/* ---     NTOT IS THE TOTAL NUMBER OF PATCHES IN THE SS ARRAY */}
+48     ntot = (integer) ss[4];
+49 \textcolor{comment}{/* ---    SPECIAL HANDLING FOR A GENCUR SURFACE */}
+50     \textcolor{keywordflow}{if} (ss[6] < 5.999\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} || ss[6] > 6.001\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+51     \textcolor{keywordflow}{goto} L10;
+52     \}
+53     itop1 = (integer) (ntot * 6 + 11 + ss[2]);
+54     \textcolor{keywordflow}{goto} L25;
+55 
+56 L10:
+57 \textcolor{comment}{/* ---   TOPOLOGY TABLE IS ASSUMED REGULAR(CONTACT AT CORNER POINTS ONLY) */}
+58 \textcolor{comment}{/* ---     FILL IN POINTERS FROM EACH PATCH HEADER TO TOPOLOGY TABLE */}
+59 \textcolor{comment}{/* ---     ALSO ZERO OUT THE TOPOLOGY TABLE ENTRIES */}
+60     itop1 = (ntot - 1) * 6 + 15;
+61     itop1 = (integer) ss[itop1];
+62 \textcolor{comment}{/* ---     ITOP1 IS THE LOCATION OF THE LAST PATCH COEFFICIENT ARRAY */}
+63     \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+64     i\_\_ = (integer) ss[ntot * 6 + 4 + k];
+65     itop1 += nsz[i\_\_ - 1];
+66 \textcolor{comment}{/* L20: */}
+67     \}
+68 L25:
+69 \textcolor{comment}{/* ---     ITOP1 IS THE SS LOCATION OF THE FIRST TOPOLOGY TABLE ENTRY */}
+70 \textcolor{comment}{/* ---      FILL POINTERS TO THE TOPOLOGY TABLE FOR EACH PATCH */}
+71     i\_\_1 = ntot;
+72     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+73     ss[k * 6 + 10] = (doublereal) (itop1 + (k - 1 << 2));
+74     kt = (integer) (ss[k * 6 + 10] - 1);
+75 \textcolor{comment}{/* ---     ZERO OUT THE TOPOLOGY TABLE ENTRIES */}
+76     \textcolor{keywordflow}{for} (kk = 1; kk <= 4; ++kk) \{
+77         ss[kt + kk] = 0.f;
+78 \textcolor{comment}{/* L30: */}
+79     \}
+80     \}
+81 \textcolor{comment}{/* ---  NOW SEPARATE THE CASE OF A MESH SURFACE FROM PNTSON,PNTVEC,POLYGN */}
+82     ntype = (integer) ss[5];
+83     \textcolor{keywordflow}{if} (ntype != 2) \{
+84     \textcolor{keywordflow}{goto} L200;
+85     \}
+86 \textcolor{comment}{/* ---     SURFACE IS A MESH TYPE */}
+87 \textcolor{comment}{/* ------NUMBER OF PATCHES IN A STRIP ALONG THE MAJOR SPLINE DIRECTION */}
+88     np = (integer) (ss[10] - 1);
+89 \textcolor{comment}{/* ---     NUMBER OF PATCHES IN A STRIP ALONG THE CROSS SPLINE DIRECTION */}
+90     ns = (integer) (ss[9] - 1);
+91 \textcolor{comment}{/* ---     PATCHES ARE STORED LINEARLY AS I,J WHERE I=1 TO NP AND THEN */}
+92 \textcolor{comment}{/* ---     J = 1 TO NS */}
+93 \textcolor{comment}{/* ---     GENERATE TOPOLOGY TABLE FOR EACH PATCH IN SUCCESSION */}
+94     i\_\_1 = ns;
+95     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+96     i\_\_2 = np;
+97     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+98         itop = ((j - 1) * np + i\_\_) * 6 + 10;
+99         itop = (integer) ss[itop];
+100         ncur = i\_\_ + (j - 1) * np;
+101         nlower = (j - 1) * np + 1;
+102         nupper = j * np;
+103 \textcolor{comment}{/* ---     FIRST BOUNDARY ( U= 0 TO 1= 1 WHILE V=0) */}
+104 \textcolor{comment}{/* Computing MAX */}
+105         i\_\_3 = \hyperlink{APT301_8c_a23d03abc4d8588df621d19aa841ce82a}{izero}, i\_\_4 = ncur - np;
+106         ss[\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}] = (doublereal) max(i\_\_3,i\_\_4);
+107         ++\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop};
+108 \textcolor{comment}{/* ---     SECOND BOUNDARY ( U=0 WHILE V= 0 TO 1 ) */}
+109         ktemp = ncur - 1;
+110         \textcolor{keywordflow}{if} (ktemp < nlower) \{
+111         ktemp = 0;
+112         \}
+113         ss[\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}] = (doublereal) ktemp;
+114         ++\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop};
+115 \textcolor{comment}{/* ---     THIRD BOUNDARY ( U=1 WHILE V= 0 TO 1) */}
+116         ktemp = ncur + 1;
+117         \textcolor{keywordflow}{if} (ktemp > nupper) \{
+118         ktemp = 0;
+119         \}
+120         ss[\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}] = (doublereal) ktemp;
+121         ++\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop};
+122 \textcolor{comment}{/* ---     FOURTH BOUNDARY (U=0 TO 1 WHILE V=1) */}
+123         ktemp = ncur + np;
+124         \textcolor{keywordflow}{if} (ktemp > ntot) \{
+125         ktemp = 0;
+126         \}
+127         ss[\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}] = (doublereal) ktemp;
+128 \textcolor{comment}{/* ---     THIS COMPLETES THE TOPOLOGY TABLE FOR THE MESH DEFINITION */}
+129 \textcolor{comment}{/* L40: */}
+130     \}
+131     \}
+132     \textcolor{keywordflow}{goto} L9999;
+133 
+134 
+135 \textcolor{comment}{/* ---     THE NEXT SURFACE IS PNTSON,POLYGN OR PNTVEC */}
+136 \textcolor{comment}{/* ---     ASSUMPTIONS:  THE PATCHES HAVE FLAGS 4,4,4,1 */}
+137 \textcolor{comment}{/* ---     ASSUMPTIONS:  TWO ADJACENT PATCHES HAVE CONTACT IN TWO CORNER */}
+138 \textcolor{comment}{/* ---     POINTS */}
+139 L200:
+140 \textcolor{comment}{/* ---     RESOLVE TOPOLOGY RELATIONS ONE PATCH AT A TIME */}
+141     i\_\_2 = ntot;
+142     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+143     itop = (integer) ss[i\_\_ * 6 + 10];
+144     iprel = (integer) (ss[i\_\_ * 6 + 9] - 1);
+145 \textcolor{comment}{/* ---     LOAD THE CORNER POINTS(USING THE MATRIX ASSUMPTION) */}
+146     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+147         kk = k - 1 << 4;
+148         p[k - 1] = ss[iprel + kk + 1];
+149         p[k + 2] = ss[iprel + kk + 2];
+150         p[k + 5] = ss[iprel + kk + 5];
+151 \textcolor{comment}{/* L220: */}
+152         p[k + 8] = ss[iprel + kk + 6];
+153     \}
+154 \textcolor{comment}{/* ---     COMPARE EACH BOUNDARY OF THE I TH PATCH TO OTHER PATCHES */}
+155     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+156 \textcolor{comment}{/* ---     BOUNDARY 1  POINTS P(,1) TO P(,2) */}
+157 \textcolor{comment}{/* ---     BOUNDARY 2  POINTS P(,1) TO P(,3) */}
+158 \textcolor{comment}{/* ---     BOUNDARY 3  POINTS P(,2) TO P(,4) */}
+159 \textcolor{comment}{/* ---     BOUNDARY 4  POINTS P(,3) TO P(,4) */}
+160         ja = nboun[(j << 1) - 2];
+161         jb = nboun[(j << 1) - 1];
+162 \textcolor{comment}{/* ---     CHECK EACH PATCH AGAINST BOUNDARY J OF PATCH I */}
+163         i\_\_1 = ntot;
+164         \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+165         \textcolor{keywordflow}{if} (l == i\_\_) \{
+166             \textcolor{keywordflow}{goto} L240;
+167         \}
+168         iprelt = (integer) (ss[l * 6 + 9] - 1);
+169 \textcolor{comment}{/* ---     LOAD CORNER POINTS OF PATCH L */}
+170         \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+171             kk = k - 1 << 4;
+172             pt[k - 1] = ss[iprelt + kk + 1];
+173             pt[k + 2] = ss[iprelt + kk + 2];
+174             pt[k + 5] = ss[iprelt + kk + 5];
+175 \textcolor{comment}{/* L250: */}
+176             pt[k + 8] = ss[iprelt + kk + 6];
+177         \}
+178         \textcolor{keywordflow}{for} (m = 1; m <= 4; ++\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}) \{
+179             ma = nboun[(m << 1) - 2];
+180             mb = nboun[(m << 1) - 1];
+181             d\_\_ = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+182             \textcolor{keywordflow}{for} (nn = 1; nn <= 3; ++nn) \{
+183 \textcolor{comment}{/* L280: */}
+184 \textcolor{comment}{/* Computing 2nd power */}
+185             d\_\_1 = p[nn + ja * 3 - 4] - pt[nn + ma * 3 - 4];
+186 \textcolor{comment}{/* Computing 2nd power */}
+187             d\_\_2 = p[nn + jb * 3 - 4] - pt[nn + mb * 3 - 4];
+188             d\_\_ = d\_\_ + d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+189             \}
+190             \textcolor{keywordflow}{if} (d\_\_ > smal) \{
+191             \textcolor{keywordflow}{goto} L290;
+192             \}
+193             \textcolor{keywordflow}{goto} L300;
+194 L290:
+195             d\_\_ = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+196             \textcolor{keywordflow}{for} (nn = 1; nn <= 3; ++nn) \{
+197 \textcolor{comment}{/* L310: */}
+198 \textcolor{comment}{/* Computing 2nd power */}
+199             d\_\_1 = p[nn + ja * 3 - 4] - pt[nn + mb * 3 - 4];
+200 \textcolor{comment}{/* Computing 2nd power */}
+201             d\_\_2 = p[nn + jb * 3 - 4] - pt[nn + ma * 3 - 4];
+202             d\_\_ = d\_\_ + d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+203             \}
+204             \textcolor{keywordflow}{if} (d\_\_ > smal) \{
+205             \textcolor{keywordflow}{goto} L260;
+206             \}
+207 \textcolor{comment}{/* ---     BOUNDARY CHECK IS POSITIVE LTH PATCH LIES ACROSS J TH BOUNDARY */}
+208 \textcolor{comment}{/* ---     OF THE I TH PATCH */}
+209 L300:
+210             itopij = i\_\_ * 6 + 10;
+211             itopij = (integer) ss[itopij];
+212             ss[itopij - 1 + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = (doublereal) l;
+213 L260:
+214             ;
+215         \}
+216 L240:
+217         ;
+218         \}
+219 \textcolor{comment}{/* L230: */}
+220     \}
+221 \textcolor{comment}{/* L210: */}
+222     \}
+223 
+224 
+225 L9999:
+226     \textcolor{keywordflow}{return} 0;
+227 \} \textcolor{comment}{/* topgen\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TOPGEN_8c_aa9a228c6d9b1dfe79d228b4b18fb25ba_icgraph}
+\end{center}
+\end{figure}
+
+

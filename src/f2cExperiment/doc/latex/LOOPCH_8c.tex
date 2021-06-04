@@ -1,0 +1,354 @@
+\hypertarget{LOOPCH_8c}{}\section{L\+O\+O\+P\+C\+H.\+c File Reference}
+\label{LOOPCH_8c}\index{L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for L\+O\+O\+P\+C\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{LOOPCH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{LOOPCH_8c_a910ea79f2bfd6d23dd3d5d3da9e4b699}{aaa}~(equiv\+\_\+0)
+\item 
+\#define \hyperlink{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}{jjj}~((integer $\ast$)equiv\+\_\+0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\+\_\+} (doublereal $\ast$ss, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}!aaa@{aaa}}
+\index{aaa@{aaa}!L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{aaa}{aaa}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aaa~(equiv\+\_\+0)}\hypertarget{LOOPCH_8c_a910ea79f2bfd6d23dd3d5d3da9e4b699}{}\label{LOOPCH_8c_a910ea79f2bfd6d23dd3d5d3da9e4b699}
+\index{L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}!jjj@{jjj}}
+\index{jjj@{jjj}!L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{jjj}{jjj}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jjj~((integer $\ast$)equiv\+\_\+0)}\hypertarget{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}{}\label{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}
+
+
+Referenced by lodpch\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}!lodpch\+\_\+@{lodpch\+\_\+}}
+\index{lodpch\+\_\+@{lodpch\+\_\+}!L\+O\+O\+P\+C\+H.\+c@{L\+O\+O\+P\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{lodpch\+\_\+(doublereal $\ast$ss, doublereal $\ast$b, integer $\ast$iflag, integer $\ast$itop, integer $\ast$n, integer $\ast$mode)}{lodpch_(doublereal *ss, doublereal *b, integer *iflag, integer *itop, integer *n, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int lodpch\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ss, }
+\item[{doublereal $\ast$}]{b, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{itop, }
+\item[{integer $\ast$}]{n, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{}\label{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}
+
+
+Definition at line 17 of file L\+O\+O\+P\+C\+H.\+c.
+
+
+
+References apt094\+\_\+(), b, d1, d2, i\+\_\+\+\_\+, ia, ib, ic, id, iflag, itemp, jjj, k, l, m, and temp.
+
+
+
+Referenced by apt109\+\_\+(), balscn\+\_\+(), balsrf\+\_\+(), bonchk\+\_\+(), cmesh\+\_\+(), dgeom\+\_\+(), evalss\+\_\+(), gop\+\_\+(), intout\+\_\+(), intsec\+\_\+(), inttrc\+\_\+(), lodint\+\_\+(), midpnt\+\_\+(), pchprc\+\_\+(), srfcom\+\_\+(), and sspict\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} integer ixyz[9]  \textcolor{comment}{/* was [3][3] */} = \{ 0,16,32,16,32,0,32,0,16 \}
+23         ;
+24 
+25     \textcolor{comment}{/* System generated locals */}
+26     integer i\_\_1;
+27     doublereal d\_\_1, d\_\_2;
+28     \textcolor{keyword}{static} doublereal equiv\_0[1];
+29 
+30     \textcolor{comment}{/* Builtin functions */}
+31     \textcolor{keywordtype}{double} sqrt(doublereal);
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, d3, d4;
+36     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}, \hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}, \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}, \hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id}, jl, im, ju;
+37 \textcolor{preprocessor}{#define aaa (equiv\_0)}
+38 \textcolor{preprocessor}{#define jjj ((integer *)equiv\_0)}
+39     \textcolor{keyword}{static} integer ict, ift;
+40     \textcolor{keyword}{static} doublereal \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[2];
+41     \textcolor{keyword}{static} integer isum;
+42     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT094_8c_a0f023dd33aa032fb48b04d52fe365a14}{apt094\_}(integer *, doublereal *, integer *);
+43     \textcolor{keyword}{static} integer ibrel, jmode, npchs, \hyperlink{AERR2_8c_a8ed7ba9912d790aae54b911f7f0387aa}{itemp}, itrel;
+44 
+45 \textcolor{comment}{/* ------INPUT A SCULPTURED SURFACE DATA PACK SS AND A PATCH */}
+46 \textcolor{comment}{/* ------ NUMBER N.  OUTPUT THE PATCH COEFFICIENTS INTO THE */}
+47 \textcolor{comment}{/* ------ ARRAY B, THE FOUR MATRIX FLAGS INTO IFLAG AND */}
+48 \textcolor{comment}{/* ------ THE TOPOLOGY ENTRIES INTO ITOP */}
+49 \textcolor{comment}{/* ---     TEMPORARY ARRAY TO HOLD INTERIM CANON FORM OF SURFACE */}
+50 \textcolor{comment}{/* ---     INTEGER JJJ IS EQUIVALENCED TO AAA BECAUSE THIRD ARGUMENT */}
+51 \textcolor{comment}{/* ---     OF APT094 IS SUPPOSED TO BE ON A DOUBLE WORD BOUNDARY */}
+52 
+53 
+54     \textcolor{comment}{/* Parameter adjustments */}
+55     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+56     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+57     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+58     --ss;
+59 
+60     \textcolor{comment}{/* Function Body */}
+61 
+62     npchs = (integer) ss[4];
+63     \textcolor{keywordflow}{if} (*\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} > npchs) \{
+64     \textcolor{keywordflow}{goto} L998;
+65     \}
+66     itemp = (*\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} - 1) * 6 + 11;
+67     \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1] = (integer) ss[itemp];
+68     \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[2] = (integer) ss[itemp + 1];
+69     \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[3] = (integer) ss[itemp + 2];
+70     \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[4] = (integer) ss[itemp + 3];
+71     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1] < 9) \{
+72     ibrel = (integer) ss[itemp + 4];
+73     itrel = (integer) ss[itemp + 5];
+74     \} \textcolor{keywordflow}{else} \{
+75     itrel = (integer) ss[itemp + 5];
+76     \}
+77 \textcolor{comment}{/* ---     SPECIAL LOGIC IS FOLLOWED FOR A GENERAL CURVE TYPE PATCH */}
+78 
+79     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1] < 9) \{
+80     \textcolor{keywordflow}{goto} L90;
+81     \}
+82 
+83 \textcolor{comment}{/* ---     GENERAL CURVE TYPE PATCH, OBTAIN INDEX TO SURFACE IN COMMON */}
+84     jmode = 3;
+85     *\hyperlink{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}{jjj} = 0;
+86 \textcolor{comment}{/* ---     RETRIEVE THE LOCATION OF SS IN COMMON */}
+87     temp[0] = ss[1];
+88     temp[1] = ss[8];
+89     \hyperlink{APT094_8c_a0f023dd33aa032fb48b04d52fe365a14}{apt094\_}(&jmode, temp, \hyperlink{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}{jjj});
+90 \textcolor{comment}{/* ---     NOW JJJ SHOULD CONTAIN THE START OF SS IN COMMON */}
+91 \textcolor{comment}{/* ---     THE FOUR FLAGS WHICH CONTAIN RELATIVE ADDRESSES SHOULD */}
+92 \textcolor{comment}{/* ---     NOW BE CONVERTED TO ABSOLUTE ADDRESSES IN COMMON */}
+93     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+94     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[i\_\_] > 0) \{
+95         \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *\hyperlink{LOOPCH_8c_a3d2433c7e4b319c38e993d90f10a2370}{jjj} - 1;
+96     \}
+97 \textcolor{comment}{/* L15: */}
+98     \}
+99     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 2) \{
+100     \textcolor{keywordflow}{goto} L501;
+101     \}
+102 \textcolor{comment}{/* ---     THE PARTICULAR TYPE OF GENCUR SURFACE IS STORED IN */}
+103 \textcolor{comment}{/* ---     THE B-ARRAY.  OTHERWISE, THIS ARRAY IS RESERVED FOR */}
+104 \textcolor{comment}{/* ---     THE COEFFICIENTS OF A COONS BICUBIC PATCH. */}
+105     \textcolor{keywordflow}{for} (l = 2; l <= 64; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+106 \textcolor{comment}{/* L13: */}
+107     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = 0.f;
+108     \}
+109     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[49] = 1.f;
+110     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[50] = 1.f;
+111     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[53] = 1.f;
+112     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[54] = 1.f;
+113 
+114     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] = ss[itemp + 4];
+115     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} <= 1) \{
+116     \textcolor{keywordflow}{return} 0;
+117     \}
+118     \textcolor{keywordflow}{goto} L501;
+119 
+120 L90:
+121 \textcolor{comment}{/* ---     CASE OF A CONVENTIONAL COONS BICUBIC FOLLOWS */}
+122 
+123     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 2) \{
+124     \textcolor{keywordflow}{goto} L501;
+125     \}
+126     m = -15;
+127     \textcolor{keywordflow}{for} (l = 1; l <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+128     m += 16;
+129     ift = \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}];
+130     \textcolor{keywordflow}{if} (ift > 4) \{
+131         ift = 3;
+132     \}
+133     \textcolor{keywordflow}{switch} (ift) \{
+134         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L100;
+135         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L200;
+136         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L400;
+137         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L400;
+138     \}
+139 L100:
+140     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}] = 1.f;
+141     ++ibrel;
+142     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 1] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}];
+143     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 2] = 0.f;
+144     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 3] = 0.f;
+145     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 4] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}];
+146     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 5] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}];
+147     jl = m + 6;
+148     ju = m + 15;
+149     i\_\_1 = ju;
+150     \textcolor{keywordflow}{for} (k = jl; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+151 \textcolor{comment}{/* L120: */}
+152         \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = 0.f;
+153     \}
+154     \textcolor{keywordflow}{goto} L10;
+155 L200:
+156     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}] = ss[ibrel];
+157     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 1] = ss[ibrel + 1];
+158     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 4] = ss[ibrel + 2];
+159     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 5] = ss[ibrel + 3];
+160     ibrel += 4;
+161     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 2] = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[m + 1] - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}];
+162     b[m + 3] = b[m + 2];
+163     b[m + 6] = b[m + 5] - b[m + 4];
+164     b[m + 7] = b[m + 6];
+165     b[m + 8] = b[m + 4] - b[\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}];
+166     b[m + 12] = b[m + 8];
+167     b[m + 9] = b[m + 5] - b[m + 1];
+168     b[m + 13] = b[m + 9];
+169     b[m + 10] = b[m + 6] - b[m + 2];
+170     b[m + 14] = b[m + 10];
+171     b[m + 11] = b[m + 7] - b[m + 3];
+172     b[m + 15] = b[m + 11];
+173     \textcolor{keywordflow}{goto} L10;
+174 L400:
+175     im = m - 1;
+176     ib = ibrel - 1;
+177     b[im + 1] = ss[ib + 1];
+178     b[im + 2] = ss[ib + 2];
+179     b[im + 3] = ss[ib + 3];
+180     b[im + 4] = ss[ib + 4];
+181     b[im + 5] = ss[ib + 5];
+182     b[im + 6] = ss[ib + 6];
+183     b[im + 7] = ss[ib + 7];
+184     b[im + 8] = ss[ib + 8];
+185     b[im + 9] = ss[ib + 9];
+186     b[im + 10] = ss[ib + 10];
+187     \textcolor{keywordflow}{if} (ift == 3) \{
+188         \textcolor{keywordflow}{goto} L300;
+189     \}
+190     b[im + 11] = ss[ib + 11];
+191     b[im + 12] = ss[ib + 12];
+192     b[im + 13] = ss[ib + 13];
+193     b[im + 14] = ss[ib + 14];
+194     b[im + 15] = ss[ib + 15];
+195     b[im + 16] = ss[ib + 16];
+196     ibrel += 16;
+197     \textcolor{keywordflow}{goto} L10;
+198 L300:
+199     b[im + 11] = 0.f;
+200     b[im + 12] = 0.f;
+201     b[im + 13] = ss[ib + 11];
+202     b[im + 14] = ss[ib + 12];
+203     b[im + 15] = 0.f;
+204     b[im + 16] = 0.f;
+205     ibrel += 12;
+206 L10:
+207     ;
+208     \}
+209 \textcolor{comment}{/* ------ FURTHER MODIFICATION IS REQUIRED FOR XY,YZ OR ZX CASE */}
+210     isum = \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1] + \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[2] + \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[3];
+211     \textcolor{keywordflow}{if} (isum >= 9) \{
+212     \textcolor{keywordflow}{goto} L20;
+213     \}
+214     \textcolor{keywordtype}{id} = 1;
+215     \textcolor{keywordflow}{if} (iflag[1] >= 3) \{
+216     \textcolor{keywordtype}{id} = 2;
+217     \}
+218     \textcolor{keywordflow}{if} (iflag[2] >= 3) \{
+219     \textcolor{keywordtype}{id} = 3;
+220     \}
+221     ia = ixyz[\textcolor{keywordtype}{id} * 3 - 3];
+222     ib = ixyz[\textcolor{keywordtype}{id} * 3 - 2];
+223     ic = ixyz[\textcolor{keywordtype}{id} * 3 - 1];
+224 \textcolor{comment}{/* Computing 2nd power */}
+225     d\_\_1 = b[ia + 2] - b[ia + 1];
+226 \textcolor{comment}{/* Computing 2nd power */}
+227     d\_\_2 = b[ib + 2] - b[ib + 1];
+228     d1 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+229 \textcolor{comment}{/* Computing 2nd power */}
+230     d\_\_1 = b[ia + 5] - b[ia + 1];
+231 \textcolor{comment}{/* Computing 2nd power */}
+232     d\_\_2 = b[ib + 5] - b[ib + 1];
+233     d2 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+234 \textcolor{comment}{/* Computing 2nd power */}
+235     d\_\_1 = b[ia + 6] - b[ia + 2];
+236 \textcolor{comment}{/* Computing 2nd power */}
+237     d\_\_2 = b[ib + 6] - b[ib + 2];
+238     d3 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+239 \textcolor{comment}{/* Computing 2nd power */}
+240     d\_\_1 = b[ia + 6] - b[ia + 5];
+241 \textcolor{comment}{/* Computing 2nd power */}
+242     d\_\_2 = b[ib + 6] - b[ib + 5];
+243     d4 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+244     d1 = sqrt(d1);
+245     d2 = sqrt(d2);
+246     d3 = sqrt(d3);
+247     d4 = sqrt(d4);
+248     b[ic + 3] *= \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+249     b[ic + 4] *= \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+250     b[ic + 7] *= d4;
+251     b[ic + 8] *= d4;
+252     b[ic + 9] *= \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+253     b[ic + 13] *= \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+254     b[ic + 10] *= d3;
+255     b[ic + 14] *= d3;
+256 L20:
+257     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 1) \{
+258     \textcolor{keywordflow}{return} 0;
+259     \}
+260 \textcolor{comment}{/* ------NOW LOAD THE TOPOLOGY DATA INTO ITOP */}
+261 L501:
+262     \textcolor{keywordflow}{for} (l = 1; l <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+263     ict = 1;
+264 L530:
+265     ++ict;
+266     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[ict + l * 6] = (integer) ss[itrel + ict - 2];
+267     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[ict + l * 6] >= 0) \{
+268         \textcolor{keywordflow}{goto} L550;
+269     \} \textcolor{keywordflow}{else} \{
+270         \textcolor{keywordflow}{goto} L540;
+271     \}
+272 L540:
+273     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[ict + l * 6] = -\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[ict + l * 6];
+274     \textcolor{keywordflow}{goto} L530;
+275 L550:
+276     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[ict - 1 + l * 6] = ict - 1;
+277     itrel = itrel + ict - 1;
+278 \textcolor{comment}{/* L500: */}
+279     \}
+280 L998:
+281     \textcolor{keywordflow}{return} 0;
+282 \} \textcolor{comment}{/* lodpch\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c_icgraph}
+\end{center}
+\end{figure}
+
+

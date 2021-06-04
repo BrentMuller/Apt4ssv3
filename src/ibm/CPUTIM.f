@@ -6,9 +6,14 @@ C
       INTEGER FUNCTION CPUTIM()
       CHARACTER*23 DATTIM
       REAL ECPU,ETIME,ETCPU
+      character*8 date
+      character*10 time
+      character*5 zone
 C
-      CALL DATETM(DATTIM,ECPU,ETIME,ETCPU)
+c      CALL DATETM(DATTIM,ECPU,ETIME,ETCPU)
+        
+       call date_and_time(date, time, zone)
 C
-      CPUTIM=INT(ECPU*100.0)
+c      CPUTIM=INT(ECPU*100.0)
       RETURN
       END

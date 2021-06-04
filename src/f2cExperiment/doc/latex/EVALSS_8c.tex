@@ -1,0 +1,164 @@
+\hypertarget{EVALSS_8c}{}\section{E\+V\+A\+L\+S\+S.\+c File Reference}
+\label{EVALSS_8c}\index{E\+V\+A\+L\+S\+S.\+c@{E\+V\+A\+L\+S\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for E\+V\+A\+L\+S\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{EVALSS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{evalss\+\_\+} (integer $\ast$npatch, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, integer $\ast$\hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize}, doublereal $\ast$geo, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$ruu, doublereal $\ast$ruv, doublereal $\ast$rvv, doublereal $\ast$rnorm, integer $\ast$normok)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{EVALSS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{E\+V\+A\+L\+S\+S.\+c@{E\+V\+A\+L\+S\+S.\+c}!evalss\+\_\+@{evalss\+\_\+}}
+\index{evalss\+\_\+@{evalss\+\_\+}!E\+V\+A\+L\+S\+S.\+c@{E\+V\+A\+L\+S\+S.\+c}}
+\subsubsection[{\texorpdfstring{evalss\+\_\+(integer $\ast$npatch, doublereal $\ast$u, doublereal $\ast$v, integer $\ast$isize, doublereal $\ast$geo, integer $\ast$mode, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$ruu, doublereal $\ast$ruv, doublereal $\ast$rvv, doublereal $\ast$rnorm, integer $\ast$normok)}{evalss_(integer *npatch, doublereal *u, doublereal *v, integer *isize, doublereal *geo, integer *mode, doublereal *r__, doublereal *ru, doublereal *rv, doublereal *ruu, doublereal *ruv, doublereal *rvv, doublereal *rnorm, integer *normok)}}]{\setlength{\rightskip}{0pt plus 5cm}int evalss\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{npatch, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{integer $\ast$}]{isize, }
+\item[{doublereal $\ast$}]{geo, }
+\item[{integer $\ast$}]{mode, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{ru, }
+\item[{doublereal $\ast$}]{rv, }
+\item[{doublereal $\ast$}]{ruu, }
+\item[{doublereal $\ast$}]{ruv, }
+\item[{doublereal $\ast$}]{rvv, }
+\item[{doublereal $\ast$}]{rnorm, }
+\item[{integer $\ast$}]{normok}
+\end{DoxyParamCaption}
+)}\hypertarget{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}{}\label{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa}
+
+
+Definition at line 21 of file E\+V\+A\+L\+S\+S.\+c.
+
+
+
+References b, c\+\_\+\+\_\+1, cnsurf\+\_\+(), i\+\_\+\+\_\+, iflag, itop, lodpch\+\_\+(), r\+\_\+\+\_\+, and spv.
+
+
+
+Referenced by inex\+\_\+(), and mixal\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* Initialized data */}
+27 
+28     \textcolor{keyword}{static} integer icpat = 0;
+29 
+30     \textcolor{comment}{/* Builtin functions */}
+31     integer i\_dnnt(doublereal *);
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[64];
+35     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, mm;
+36     \textcolor{keyword}{static} doublereal \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[32];
+37     \textcolor{keyword}{static} integer \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[24], \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[4];
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, integer *,
+39          integer *, integer *, integer *), \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *, 
+40         doublereal *, doublereal *, doublereal *, integer *, integer *);
+41 
+42 
+43 \textcolor{comment}{/* .... EVALUATE SURFACE */}
+44 
+45 
+46 
+47 
+48     \textcolor{comment}{/* Parameter adjustments */}
+49     --geo;
+50     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+51     --ru;
+52     --rv;
+53     --ruu;
+54     --ruv;
+55     --rvv;
+56     --rnorm;
+57 
+58     \textcolor{comment}{/* Function Body */}
+59 
+60 \textcolor{comment}{/* .... HAS PATCH ALREADY BEEN LOADED */}
+61 
+62     \textcolor{keywordflow}{if} (*npatch != icpat) \{
+63 
+64 \textcolor{comment}{/* .... LOAD CURRENT PATCH DATA */}
+65 
+66     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&geo[1], b, iflag, itop, npatch, &\hyperlink{EVALSS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+67 
+68     icpat = *npatch;
+69 
+70     \}
+71 
+72 \textcolor{comment}{/* .... EVALUATE POINT AND DERIVATIVES */}
+73 
+74     mm = 1;
+75     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, b, spv, iflag, &mm);
+76 
+77     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+78     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ - 1];
+79     ru[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 3];
+80     rv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 7];
+81     ruu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 11];
+82     ruv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 15];
+83     rvv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 19];
+84     rnorm[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = spv[i\_\_ + 27];
+85 \textcolor{comment}{/* L10: */}
+86     \}
+87 
+88     *normok = i\_dnnt(&spv[31]);
+89 
+90     \textcolor{keywordflow}{return} 0;
+91 \} \textcolor{comment}{/* evalss\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVALSS_8c_a0e5fd5604e3b06cc2c040241e610d7aa_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{E\+V\+A\+L\+S\+S.\+c@{E\+V\+A\+L\+S\+S.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!E\+V\+A\+L\+S\+S.\+c@{E\+V\+A\+L\+S\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{EVALSS_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{EVALSS_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file E\+V\+A\+L\+S\+S.\+c.
+
+
+
+Referenced by evalss\+\_\+().
+

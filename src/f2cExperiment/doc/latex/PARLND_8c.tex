@@ -1,0 +1,197 @@
+\hypertarget{PARLND_8c}{}\section{P\+A\+R\+L\+N\+D.\+c File Reference}
+\label{PARLND_8c}\index{P\+A\+R\+L\+N\+D.\+c@{P\+A\+R\+L\+N\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+A\+R\+L\+N\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{PARLND_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PARLND_8c_ab43390baa4101688bc529d81111b3175}{parlnd\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aec37dbecf1f14b0e999eeb6ead189904}{p}, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{ZSURF_8c_a1f148515a08a71c3280eeb1528f86455}{t}, doublereal $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+A\+R\+L\+N\+D.\+c@{P\+A\+R\+L\+N\+D.\+c}!parlnd\+\_\+@{parlnd\+\_\+}}
+\index{parlnd\+\_\+@{parlnd\+\_\+}!P\+A\+R\+L\+N\+D.\+c@{P\+A\+R\+L\+N\+D.\+c}}
+\subsubsection[{\texorpdfstring{parlnd\+\_\+(doublereal $\ast$p, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$a, doublereal $\ast$b, doublereal $\ast$c\+\_\+\+\_\+, doublereal $\ast$t, doublereal $\ast$s, integer $\ast$mode)}{parlnd_(doublereal *p, doublereal *r__, doublereal *a, doublereal *b, doublereal *c__, doublereal *t, doublereal *s, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int parlnd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{p, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{t, }
+\item[{doublereal $\ast$}]{s, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{PARLND_8c_ab43390baa4101688bc529d81111b3175}{}\label{PARLND_8c_ab43390baa4101688bc529d81111b3175}
+
+
+Definition at line 18 of file P\+A\+R\+L\+N\+D.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, d1, d2, dc, f, gcubic\+\_\+(), i\+\_\+\+\_\+, p, r\+\_\+\+\_\+, temp, x1, x2, x3, x4, and z\+\_\+\+\_\+.
+
+
+
+Referenced by ddpara\+\_\+().
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{comment}{/* System generated locals */}
+23     integer i\_\_1;
+24 
+25     \textcolor{comment}{/* Local variables */}
+26     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+27     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}[3], \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, d3, \hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, \hyperlink{APT301_8c_ab24e1cc331c488f6a1623cde1564c644}{x2}, \hyperlink{APT301_8c_a5bdef1e4ef34037b8882dcc778f83fe9}{x3}, \hyperlink{INTRP_8c_adc588ae5854bec41ff3766b1797c30b0}{x4}, bc, db, 
+      \hyperlink{APT301_8c_a0ca40365e38356f78f8d764b52d6bbc3}{dc}, br, cr, 
+28         dr;
+29     \textcolor{keyword}{static} integer nz;
+30     \textcolor{keyword}{static} doublereal bsq, csq, dsq, dst, rsq, \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}, scur, tcur;
+31     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\_}(doublereal *, doublereal *, 
+32         doublereal *, doublereal *, doublereal *, integer *);
+33 
+34 \textcolor{comment}{/* -- MODULAR   PURPOSE IS TO COMPUTE THE CLOSEST APPROACH BETWEEN A */}
+35 \textcolor{comment}{/* --  PARABOLA IN SPACE AND A SPACE POINT, LINE OR HALF RAY. */}
+36 \textcolor{comment}{/* --  INPUT' POINT P AND TOOL RAY R( BOTH VECTORS) */}
+37 \textcolor{comment}{/* --          VECTOR COEFFICIENTS OF PARABOLA A,B AND C (EQUATION IS */}
+38 \textcolor{comment}{/* --            ( A+ B*S +C*S**2 ) */}
+39 \textcolor{comment}{/* --          CONTROL VARIABLE  IS MODE.  =-1 MEANS SHORTEST */}
+40 \textcolor{comment}{/* --          DISTANCE FROM FULL LINE,  =0 MEANS SHORTEST DISTANCE */}
+41 \textcolor{comment}{/* --          FROM POINT AND =1 MEANS SHORTEST DISTANCE FROM HALF LINE. */}
+42 \textcolor{comment}{/* -- */}
+43 \textcolor{comment}{/* --  OUTPUT'  NUMBERS T(FOR LINE) AND S(FOR PARABOLA) WHICH GENERATE THE */}
+44 \textcolor{comment}{/* --           SOLUTION POINTS ON THE TOOL RAY(P+T*R) AND CURVE(A+ */}
+45 \textcolor{comment}{/* --           B*S+C*S**2) RESPECTIVELY. */}
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     --\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+48     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+49     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+50     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+51     --\hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p};
+52 
+53     \textcolor{comment}{/* Function Body */}
+54     d1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[1];
+55     d2 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] - p[2];
+56     d3 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3] - p[3];
+57     db = d1 * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] + d2 * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] + d3 * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3];
+58     bsq = b[1] * b[1] + b[2] * b[2] + b[3] * b[3];
+59     dc = d1 * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[1] + d2 * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[2] + d3 * \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[3];
+60     bc = b[1] * c\_\_[1] + b[2] * c\_\_[2] + b[3] * c\_\_[3];
+61     csq = c\_\_[1] * c\_\_[1] + c\_\_[2] * c\_\_[2] + c\_\_[3] * c\_\_[3];
+62     dsq = d1 * d1 + d2 * d2 + d3 * d3;
+63     x1 = db;
+64     x2 = bsq + dc + \hyperlink{APT301_8c_a0ca40365e38356f78f8d764b52d6bbc3}{dc};
+65     x3 = bc * 3.f;
+66     x4 = csq + csq;
+67     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+68     \textcolor{keywordflow}{goto} L20;
+69     \} \textcolor{keywordflow}{else} \{
+70     \textcolor{keywordflow}{goto} L30;
+71     \}
+72 L20:
+73     rsq = \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1] * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1] + \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[2] * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[2] + \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[3] * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[3];
+74     br = b[1] * r\_\_[1] + b[2] * r\_\_[2] + b[3] * r\_\_[3];
+75     cr = c\_\_[1] * r\_\_[1] + c\_\_[2] * r\_\_[2] + c\_\_[3] * r\_\_[3];
+76     dr = d1 * r\_\_[1] + d2 * r\_\_[2] + d3 * r\_\_[3];
+77     x1 -= dr * br / rsq;
+78     x2 -= (br * br + dr * 2.f * cr) / rsq;
+79     x3 -= br * 3.f * cr / rsq;
+80     x4 -= cr * 2.f * cr / rsq;
+81 L30:
+82     \hyperlink{GCUBIC_8c_aa8f82c935e1e0be9c822dcb7cb68bb39}{gcubic\_}(&x4, &x3, &x2, &x1, z\_\_, &nz);
+83     \textcolor{keywordflow}{if} (nz > 1) \{
+84     \textcolor{keywordflow}{goto} L40;
+85     \}
+86     *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} = z\_\_[0];
+87     *\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = 0.;
+88     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+89     \textcolor{keywordflow}{return} 0;
+90     \}
+91     *\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = (dr + *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} * (br + *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} * cr)) / rsq;
+92     \textcolor{keywordflow}{return} 0;
+93 L40:
+94     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+95     \textcolor{keywordflow}{goto} L100;
+96     \} \textcolor{keywordflow}{else} \{
+97     \textcolor{keywordflow}{goto} L200;
+98     \}
+99 L100:
+100     dst = 99999999.f;
+101     i\_\_1 = nz;
+102     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+103     scur = z\_\_[i\_\_ - 1];
+104     tcur = (dr + scur * (br + scur * cr)) / rsq;
+105     \textcolor{keywordflow}{if} (tcur < 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} && *\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 1) \{
+106         \textcolor{keywordflow}{goto} L110;
+107     \}
+108 \textcolor{comment}{/* -----X1=DSQ+SCUR*(DB+DB+SCUR*(DC+DC+BSQ+SCUR*(BC+BC+SCUR*CSQ))) */}
+109 \textcolor{comment}{/* -----X2=DR+SCUR*(BR+SCUR*CR) */}
+110 \textcolor{comment}{/* -----TEMP=X1-TCUR*(X2+X2-TCUR*RSQ) */}
+111     temp = 1.f - scur;
+112     temp = abs(temp);
+113 \textcolor{comment}{/* ------  DISRCIMINATE AGAINST A NEGATIVE SCUR */}
+114     \textcolor{keywordflow}{if} (scur < 0.) \{
+115         temp *= 10;
+116     \}
+117     \textcolor{keywordflow}{if} (temp > dst) \{
+118         \textcolor{keywordflow}{goto} L110;
+119     \}
+120     dst = \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp};
+121     *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} = scur;
+122     *\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = tcur;
+123 L110:
+124     ;
+125     \}
+126     \textcolor{keywordflow}{return} 0;
+127 L200:
+128     dst = 9999999.f;
+129     i\_\_1 = nz;
+130     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+131     scur = z\_\_[i\_\_ - 1];
+132     temp = dsq + scur * (db + db + scur * (dc + dc + bsq + scur * (bc + 
+133         bc + scur * csq)));
+134     \textcolor{keywordflow}{if} (temp > dst) \{
+135         \textcolor{keywordflow}{goto} L210;
+136     \}
+137     dst = \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp};
+138     *\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s} = scur;
+139 L210:
+140     ;
+141     \}
+142     *\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = 0.;
+143     \textcolor{keywordflow}{return} 0;
+144 \} \textcolor{comment}{/* parlnd\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{PARLND_8c_ab43390baa4101688bc529d81111b3175_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PARLND_8c_ab43390baa4101688bc529d81111b3175_icgraph}
+\end{center}
+\end{figure}
+
+

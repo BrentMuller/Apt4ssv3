@@ -26,7 +26,7 @@
       CHARACTER MEMBER*(*),ARRAY*80,TEST*8
       INTEGER FLAG
 C
-      INCLUDE (FILTAB)
+      INCLUDE 'FILTAB.INC'
 C
       CHARACTER*8 MEMNAM
       COMMON/CLIBCM/MEMNAM
@@ -48,13 +48,15 @@ C.....YES - READ A RECORD FROM MEMBER FILE
 C
 C.....I/O ERROR
    80    FLAG=2
-         CALL UCLOSE(ID,2,JRET)
+c         CALL UCLOSE(ID,2,JRET)
+      write(*,*)'TODO: uclose command-LIBRD.f'
          RETURN
 C
 C.....EOF ENCOUNTERED
    90    FLAG=1
          IEOF=1
-         CALL UCLOSE(ID,2,JRET)
+c         CALL UCLOSE(ID,2,JRET)
+      write(*,*)'TODO: uclose command-LIBRD.f'
          RETURN
       END IF
       END

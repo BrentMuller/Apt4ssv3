@@ -1,0 +1,147 @@
+\hypertarget{TXHULL_8c}{}\section{T\+X\+H\+U\+L\+L.\+c File Reference}
+\label{TXHULL_8c}\index{T\+X\+H\+U\+L\+L.\+c@{T\+X\+H\+U\+L\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+X\+H\+U\+L\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{TXHULL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c}{txhull\+\_\+} (doublereal $\ast$\hyperlink{UNITS_8c_a8fafde5aff46b55bddfc42a93803fffc}{rc}, doublereal $\ast$rcnorm, doublereal $\ast$r1, doublereal $\ast$\hyperlink{DDRLSR_8c_a0700026d33d910874577324a49997947}{r2}, doublereal $\ast$\hyperlink{DDRLSR_8c_af0a5572b5ba560a4e4548a2722d3c593}{r3}, doublereal $\ast$tlen, doublereal $\ast$toolax, doublereal $\ast$tooltp, doublereal $\ast$toolce, doublereal $\ast$ct, doublereal $\ast$hrad, doublereal $\ast$hcent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+X\+H\+U\+L\+L.\+c@{T\+X\+H\+U\+L\+L.\+c}!txhull\+\_\+@{txhull\+\_\+}}
+\index{txhull\+\_\+@{txhull\+\_\+}!T\+X\+H\+U\+L\+L.\+c@{T\+X\+H\+U\+L\+L.\+c}}
+\subsubsection[{\texorpdfstring{txhull\+\_\+(doublereal $\ast$rc, doublereal $\ast$rcnorm, doublereal $\ast$r1, doublereal $\ast$r2, doublereal $\ast$r3, doublereal $\ast$tlen, doublereal $\ast$toolax, doublereal $\ast$tooltp, doublereal $\ast$toolce, doublereal $\ast$ct, doublereal $\ast$hrad, doublereal $\ast$hcent)}{txhull_(doublereal *rc, doublereal *rcnorm, doublereal *r1, doublereal *r2, doublereal *r3, doublereal *tlen, doublereal *toolax, doublereal *tooltp, doublereal *toolce, doublereal *ct, doublereal *hrad, doublereal *hcent)}}]{\setlength{\rightskip}{0pt plus 5cm}int txhull\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{rc, }
+\item[{doublereal $\ast$}]{rcnorm, }
+\item[{doublereal $\ast$}]{r1, }
+\item[{doublereal $\ast$}]{r2, }
+\item[{doublereal $\ast$}]{r3, }
+\item[{doublereal $\ast$}]{tlen, }
+\item[{doublereal $\ast$}]{toolax, }
+\item[{doublereal $\ast$}]{tooltp, }
+\item[{doublereal $\ast$}]{toolce, }
+\item[{doublereal $\ast$}]{ct, }
+\item[{doublereal $\ast$}]{hrad, }
+\item[{doublereal $\ast$}]{hcent}
+\end{DoxyParamCaption}
+)}\hypertarget{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c}{}\label{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c}
+
+
+Definition at line 17 of file T\+X\+H\+U\+L\+L.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, dotf\+\_\+(), i\+\_\+\+\_\+, ra, rc, rr1, vecmod\+\_\+(), and w1.
+
+
+
+Referenced by curint\+\_\+().
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{comment}{/* Builtin functions */}
+23     \textcolor{keywordtype}{double} sqrt(doublereal);
+24 
+25     \textcolor{comment}{/* Local variables */}
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+27     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+28     \textcolor{keyword}{static} doublereal \hyperlink{SETVER_8c_a79a66cb9bf8fd1717a49e13f26283cbc}{w1}[3], \hyperlink{AERR2_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}, tr, \hyperlink{RESRV_8c_aa639a26b4cd4d1d2cebd9a64d5202b64}{rr1};
+29     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+30         ), \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *);
+31 
+32 
+33 
+34 \textcolor{comment}{/* .... HULL CENTRE */}
+35 
+36 
+37 \textcolor{comment}{/*     CALCULATE RADIUS OF MINIMUM ENCLOSING SPHERE */}
+38     \textcolor{comment}{/* Parameter adjustments */}
+39     --hcent;
+40     --toolce;
+41     --tooltp;
+42     --toolax;
+43     --rcnorm;
+44     --\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc};
+45 
+46     \textcolor{comment}{/* Function Body */}
+47     rr1 = *r1 * *r1;
+48     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+49     w1[i\_\_ - 1] = toolce[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+50 \textcolor{comment}{/* L10: */}
+51     \}
+52     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&b, w1, &toolax[1]);
+53     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(w1, &c\_\_);
+54     ra = sqrt(c\_\_ * c\_\_ - b * b);
+55     \textcolor{keywordflow}{if} (ra + 1e-6 >= *r1 || ra <= *\hyperlink{DDRLSR_8c_af0a5572b5ba560a4e4548a2722d3c593}{r3}) \{
+56     *hrad = 1e5;
+57     \} \textcolor{keywordflow}{else} \{
+58 
+59 \textcolor{comment}{/*     CALC RADIUS OF SPHERE ON R AND ON POINT ON TOP OF TOOL OPPOSITE TO */}
+60     a = ra + *r1;
+61     b = *tlen - *\hyperlink{DDRLSR_8c_a0700026d33d910874577324a49997947}{r2} + \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+62 \textcolor{comment}{/* .... HRAD IS RADIUS */}
+63     *hrad = sqrt(a * a + b * b) * .5f;
+64     \textcolor{keywordflow}{if} (*hrad > 1e5) \{
+65         *hrad = 1e5;
+66     \} \textcolor{keywordflow}{else} \{
+67 
+68 \textcolor{comment}{/*     CALC. MAXIMUM RADIUS OF CURVATURE OF TOOL AT R AS TR */}
+69         \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, &rcnorm[1], &toolax[1]);
+70         \textcolor{keywordflow}{if} (a < 1e-6 || abs(a) - 1. < 1e-6) \{
+71         *hrad = 1e5;
+72         \} \textcolor{keywordflow}{else} \{
+73         tr = *\hyperlink{DDRLSR_8c_a0700026d33d910874577324a49997947}{r2} + *\hyperlink{DDRLSR_8c_af0a5572b5ba560a4e4548a2722d3c593}{r3} / sqrt(1 - a * a);
+74         \textcolor{keywordflow}{if} (tr > 1e5) \{
+75             *hrad = 1e5;
+76         \} \textcolor{keywordflow}{else} \{
+77             *hrad = max(*hrad,tr);
+78         \}
+79         \}
+80     \}
+81     \}
+82 \textcolor{comment}{/* .... CT IS CURVATURE OF ENCLOSING SPHERE ON R */}
+83     *ct = 1 / *hrad;
+84 
+85     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+86     hcent[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + *hrad * rcnorm[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+87 \textcolor{comment}{/* L40: */}
+88     \}
+89 
+90     \textcolor{keywordflow}{return} 0;
+91 \} \textcolor{comment}{/* txhull\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c_icgraph}
+\end{center}
+\end{figure}
+
+

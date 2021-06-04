@@ -1,0 +1,1001 @@
+\hypertarget{INTCON_8c}{}\section{I\+N\+T\+C\+O\+N.\+c File Reference}
+\label{INTCON_8c}\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+T\+C\+O\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{INTCON_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{INTCON_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\+\_\+1}~\hyperlink{SSV3_8c_a0ceef444afd5929ce4d4096c6dfc2f22}{ssarlm\+\_\+}
+\item 
+\#define \hyperlink{INTCON_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1}~\hyperlink{INTTRC_8c_a976032dda65999149c437cd37a92897b}{intcom\+\_\+}
+\item 
+\#define \hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 120)
+\item 
+\#define \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 82)
+\item 
+\#define \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 64)
+\item 
+\#define \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 116)
+\item 
+\#define \hyperlink{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 108)
+\item 
+\#define \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 112)
+\item 
+\#define \hyperlink{INTCON_8c_a39742fa929e9fa5d47951ad4b8149cca}{ipnr}~((integer $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 253)
+\item 
+\#define \hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 122)
+\item 
+\#define \hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts}~((integer $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 250)
+\item 
+\#define \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 105)
+\item 
+\#define \hyperlink{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 102)
+\item 
+\#define \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}~((integer $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 251)
+\item 
+\#define \hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 123)
+\item 
+\#define \hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt}~((integer $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 249)
+\item 
+\#define \hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx}~((doublereal $\ast$)\&\hyperlink{INTTRC_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1} + 121)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INTCON_8c_a3ca02ea38955b893c79272ea722f3cc8}{intcon\+\_\+} (doublereal $\ast$\hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}, integer $\ast$npt, integer $\ast$ks)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{INTCON_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{bb} \mbox{[}256\mbox{]}\\
+\>doublereal \hyperlink{INTCON_8c_a92a9ddacaa39a881012df9cfbd55134a}{uu} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{INTCON_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{vv} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{INTCON_8c_ad4159f737847a828654fd6bd050aff25}{iitop} \mbox{[}96\mbox{]}\\
+\>integer \hyperlink{INTCON_8c_af00895acd217dfa45b2e2e9716ebff70}{iiflag} \mbox{[}16\mbox{]}\\
+\>integer \hyperlink{INTCON_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} \mbox{[}4\mbox{]}\\
+\} \hyperlink{INTCON_8c_a3dbe6f25608c19974759e8e55993c936}{ssarlm\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{INTCON_8c_aaf1570c45aa1901e9b51476d09a19e02}{ikeep} \mbox{[}255\mbox{]}\\
+\} \hyperlink{INTCON_8c_a6b99bd866a46a143b4e398241dc8ce02}{intcom\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ck@{ck}}
+\index{ck@{ck}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ck}{ck}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ck~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 120)}\hypertarget{INTCON_8c_a725121cf76765367bc815f7707ec643e}{}\label{INTCON_8c_a725121cf76765367bc815f7707ec643e}
+
+
+Referenced by dgeom\+\_\+(), and intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ctp@{ctp}}
+\index{ctp@{ctp}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ctp}{ctp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ctp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 116)}\hypertarget{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{}\label{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!dtp@{dtp}}
+\index{dtp@{dtp}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{dtp}{dtp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dtp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 108)}\hypertarget{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{}\label{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!intcom\+\_\+1@{intcom\+\_\+1}}
+\index{intcom\+\_\+1@{intcom\+\_\+1}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+1}{intcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define intcom\+\_\+1~{\bf intcom\+\_\+}}\hypertarget{INTCON_8c_a739fbcd4259007d7c95f0abf445e11cf}{}\label{INTCON_8c_a739fbcd4259007d7c95f0abf445e11cf}
+
+
+Definition at line 29 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ipnr@{ipnr}}
+\index{ipnr@{ipnr}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipnr}{ipnr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ipnr~((integer $\ast$)\&{\bf intcom\+\_\+1} + 253)}\hypertarget{INTCON_8c_a39742fa929e9fa5d47951ad4b8149cca}{}\label{INTCON_8c_a39742fa929e9fa5d47951ad4b8149cca}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!iptknt@{iptknt}}
+\index{iptknt@{iptknt}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{iptknt}{iptknt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iptknt~((integer $\ast$)\&{\bf intcom\+\_\+1} + 249)}\hypertarget{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{}\label{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!isfer@{isfer}}
+\index{isfer@{isfer}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{isfer}{isfer}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isfer~((integer $\ast$)\&{\bf intcom\+\_\+1} + 251)}\hypertarget{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{}\label{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!npts@{npts}}
+\index{npts@{npts}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{npts}{npts}}]{\setlength{\rightskip}{0pt plus 5cm}\#define npts~((integer $\ast$)\&{\bf intcom\+\_\+1} + 250)}\hypertarget{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{}\label{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}
+
+
+Referenced by apt033\+\_\+(), arlm2\+\_\+(), floseg\+\_\+(), intcon\+\_\+(), and paral\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ostep@{ostep}}
+\index{ostep@{ostep}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ostep}{ostep}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ostep~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 123)}\hypertarget{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{}\label{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!oxyz@{oxyz}}
+\index{oxyz@{oxyz}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{oxyz}{oxyz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define oxyz~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 105)}\hypertarget{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{}\label{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ptp@{ptp}}
+\index{ptp@{ptp}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ptp}{ptp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ptp~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 112)}\hypertarget{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{}\label{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!pxyz@{pxyz}}
+\index{pxyz@{pxyz}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{pxyz}{pxyz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pxyz~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 102)}\hypertarget{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}{}\label{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ssarlm\+\_\+1@{ssarlm\+\_\+1}}
+\index{ssarlm\+\_\+1@{ssarlm\+\_\+1}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+1}{ssarlm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssarlm\+\_\+1~{\bf ssarlm\+\_\+}}\hypertarget{INTCON_8c_a4c8b5d1a175b60e8225f362516b59daf}{}\label{INTCON_8c_a4c8b5d1a175b60e8225f362516b59daf}
+
+
+Definition at line 23 of file I\+N\+T\+C\+O\+N.\+c.
+
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!step@{step}}
+\index{step@{step}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{step}{step}}]{\setlength{\rightskip}{0pt plus 5cm}\#define step~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 122)}\hypertarget{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{}\label{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}
+
+
+Referenced by dgeom\+\_\+(), intcon\+\_\+(), pchprc\+\_\+(), and sspath\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!stepmx@{stepmx}}
+\index{stepmx@{stepmx}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{stepmx}{stepmx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stepmx~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 121)}\hypertarget{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{}\label{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}
+
+
+Referenced by cutreg\+\_\+(), intcon\+\_\+(), pchprc\+\_\+(), smil\+\_\+(), and sspath\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!un@{un}}
+\index{un@{un}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{un}{un}}]{\setlength{\rightskip}{0pt plus 5cm}\#define un~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 82)}\hypertarget{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{}\label{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!uv@{uv}}
+\index{uv@{uv}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{uv}{uv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uv~((doublereal $\ast$)\&{\bf intcom\+\_\+1} + 64)}\hypertarget{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{}\label{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}
+
+
+Referenced by intcon\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!intcon\+\_\+@{intcon\+\_\+}}
+\index{intcon\+\_\+@{intcon\+\_\+}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{intcon\+\_\+(doublereal $\ast$pt, integer $\ast$npt, integer $\ast$ks)}{intcon_(doublereal *pt, integer *npt, integer *ks)}}]{\setlength{\rightskip}{0pt plus 5cm}int intcon\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pt, }
+\item[{integer $\ast$}]{npt, }
+\item[{integer $\ast$}]{ks}
+\end{DoxyParamCaption}
+)}\hypertarget{INTCON_8c_a3ca02ea38955b893c79272ea722f3cc8}{}\label{INTCON_8c_a3ca02ea38955b893c79272ea722f3cc8}
+
+
+Definition at line 38 of file I\+N\+T\+C\+O\+N.\+c.
+
+
+
+References c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, ck, ctp, d1, d2, dist, dtp, dx, dx1, dy, dy1, i\+\_\+\+\_\+, intbnd\+\_\+(), inttpl\+\_\+(), ipnr, ipt, iptknt, isfer, j, npts, ostep, oxyz, pl, pt0, ptp, pxyz, ssarlm\+\_\+1, step, stepmx, un, and uv.
+
+
+
+Referenced by intsrf\+\_\+().
+
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{comment}{/* System generated locals */}
+41     doublereal d\_\_1, d\_\_2, d\_\_3;
+42 
+43     \textcolor{comment}{/* Builtin functions */}
+44     \textcolor{keywordtype}{double} sqrt(doublereal);
+45 
+46     \textcolor{comment}{/* Local variables */}
+47     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+48     \textcolor{keyword}{static} doublereal \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, d3;
+49 \textcolor{preprocessor}{#define ck ((doublereal *)&intcom\_1 + 120)}
+50     \textcolor{keyword}{static} doublereal co, cs, \hyperlink{INTSEC_8c_a832f1df8bda1aef828bf4263ac586911}{pl}[4], \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx}, \hyperlink{APT301_8c_a1aa95347d299564b1d20a922f0d7eb97}{dy}, dz, hx, hy;
+51 \textcolor{preprocessor}{#define un ((doublereal *)&intcom\_1 + 82)}
+52     \textcolor{keyword}{static} doublereal hz, si;
+53 \textcolor{preprocessor}{#define uv ((doublereal *)&intcom\_1 + 64)}
+54     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a2af3f59338a42439ba48cf4977443553}{dx1}, \hyperlink{APT088_8c_a4069dfb0b6fc18b5239ac0c3d29b1ac6}{dy1}, dz1, \hyperlink{APT301_8c_a3a2bfc7c10fd973981b3e38038e2a174}{pt0}[3], fac, cal, hco, sec, sal, orc;
+55 \textcolor{preprocessor}{#define ctp ((doublereal *)&intcom\_1 + 116)}
+56 \textcolor{preprocessor}{#define dtp ((doublereal *)&intcom\_1 + 108)}
+57     \textcolor{keyword}{static} doublereal oya, oyb, oyc;
+58     \textcolor{keyword}{static} integer \hyperlink{AMIND_8c_a664d06786bfa2b6c0ae2d16dfee1b469}{ipt};
+59 \textcolor{preprocessor}{#define ptp ((doublereal *)&intcom\_1 + 112)}
+60     \textcolor{keyword}{static} doublereal radc, rfac;
+61     \textcolor{keyword}{static} integer ipar;
+62     \textcolor{keyword}{static} doublereal \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+63 \textcolor{preprocessor}{#define ipnr ((integer *)&intcom\_1 + 253)}
+64 \textcolor{preprocessor}{#define step ((doublereal *)&intcom\_1 + 122)}
+65 \textcolor{preprocessor}{#define npts ((integer *)&intcom\_1 + 250)}
+66 \textcolor{preprocessor}{#define oxyz ((doublereal *)&intcom\_1 + 105)}
+67 \textcolor{preprocessor}{#define pxyz ((doublereal *)&intcom\_1 + 102)}
+68     \textcolor{keyword}{static} doublereal step2, calsq;
+69 \textcolor{preprocessor}{#define isfer ((integer *)&intcom\_1 + 251)}
+70     \textcolor{keyword}{static} integer iptck, icont;
+71     \textcolor{keyword}{static} logical lskip;
+72     \textcolor{keyword}{static} doublereal hstep;
+73     \textcolor{keyword}{static} integer ndrop;
+74     \textcolor{keyword}{static} doublereal odist;
+75 \textcolor{preprocessor}{#define ostep ((doublereal *)&intcom\_1 + 123)}
+76     \textcolor{keyword}{static} doublereal stmin;
+77     \textcolor{keyword}{static} logical lplane;
+78     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}{intbnd\_}(integer *, integer *);
+79     \textcolor{keyword}{static} integer nbound, istate;
+80     \textcolor{keyword}{static} doublereal curvck, rcnext;
+81 \textcolor{preprocessor}{#define iptknt ((integer *)&intcom\_1 + 249)}
+82     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(integer *, doublereal *, doublereal *,
+83          integer *);
+84 \textcolor{preprocessor}{#define stepmx ((doublereal *)&intcom\_1 + 121)}
+85     \textcolor{keyword}{static} integer istout;
+86 
+87 
+88 
+89 \textcolor{comment}{/* SS - ARELEM - COMMON */}
+90 
+91 \textcolor{comment}{/*   COMMON FOR 2 SURFACE INTERSECTION */}
+92 \textcolor{comment}{/*   LAST THREE U,V PAIRS OF PS AND DS */}
+93 \textcolor{comment}{/*   HISTORY OF UNIT NORMALS AT INTERSECTION POINTS ON PS AND DS */}
+94 \textcolor{comment}{/*   POINT OF INTERSECTION */}
+95 \textcolor{comment}{/*   OLD POINT OF INTERSECTION */}
+96 \textcolor{comment}{/*   DS TANGENT PLANE */}
+97 \textcolor{comment}{/*   PS TANGENT PLANE */}
+98 \textcolor{comment}{/*   PLANE PERPENTICULAR TO INTERSECTION DIRECTION */}
+99 \textcolor{comment}{/*   8 TIMES ABSOLUTE TOLERANCE */}
+100 \textcolor{comment}{/*   MAXIMUM STEP */}
+101 \textcolor{comment}{/*   STEP LENGTH */}
+102 \textcolor{comment}{/*   OLD STEP LENGTH */}
+103 \textcolor{comment}{/*   TRACE */}
+104 \textcolor{comment}{/* CCCC EQUIVALENCE (IKEEP(249),ITRACE) */}
+105 \textcolor{comment}{/*   INTERNAL POINT COUNT */}
+106 \textcolor{comment}{/*   MAXIMUM NUMBER OF POINTS */}
+107 \textcolor{comment}{/*   OUT OF BOUND SIGNAL FOR PS AND DS */}
+108 \textcolor{comment}{/*   PATCH NUMBER FOR PS AND DS (SURFACE RECNO*1000 + PATCH NO) */}
+109 
+110 
+111 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+112 
+113 \textcolor{comment}{/* INITIAL STARTUP INFO. */}
+114 
+115 \textcolor{comment}{/* CCCC IF(ITRACE.EQ.1) */}
+116 \textcolor{comment}{/* CCCC*WRITE(6,1000)KS,PXYZ */}
+117 \textcolor{comment}{/* 1000 FORMAT(' ***TRACE***INTCON-KS,START PXYZ=',I5,3G12.5) */}
+118     \textcolor{comment}{/* Parameter adjustments */}
+119     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt} -= 10;
+120 
+121     \textcolor{comment}{/* Function Body */}
+122     istate = 1;
+123     nbound = 0;
+124     ipt = 1;
+125     *npt = 0;
+126     *\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt} = *\hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts};
+127     iptck = *\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt} - 2;
+128     hstep = *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx};
+129 \textcolor{comment}{/* MAX. STEP = .25 FOR FIRST TWO POINTS: */}
+130     *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} = 6.3499999999999996;
+131     stmin = .254;
+132     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} != 0.) \{
+133     \textcolor{keywordflow}{goto} L50;
+134     \}
+135     *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} = .25;
+136     stmin = .25;
+137 L50:
+138 
+139 \textcolor{comment}{/* SAVE INITIAL TANGENT FOR DETECTING LOOPAROUND TO START: */}
+140     pl[0] = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0];
+141     pl[1] = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1];
+142     pl[2] = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2];
+143     pl[3] = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * \hyperlink{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[0] + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * \hyperlink{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[1] + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * \hyperlink{INTCON_8c_aa0ebeb87e348c54a58f96ef86562512c}{pxyz}[2];
+144     icont = 1;
+145     ndrop = -3;
+146     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = 0.;
+147     *\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} = *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step};
+148     radc = 2e3;
+149     dx = 0.;
+150     dy = 0.;
+151     dz = 0.;
+152     istout = 0;
+153     curvck = *\hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck} * 2.;
+154     dist = 0.;
+155     lplane = FALSE\_;
+156 \textcolor{comment}{/* IS S1 A PLANE? */}
+157     \textcolor{keywordflow}{if} (\hyperlink{INTCON_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[4] <= 0) \{
+158     lplane = TRUE\_;
+159     \}
+160 
+161 \textcolor{comment}{/* PROCEED TO NEXT POINT; SAVE ALL CURRENT POSITIONS */}
+162 L100:
+163 \textcolor{comment}{/* HISTORY OF UNIT NORMAL "UN": */}
+164     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+165     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 5] = \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 2];
+166     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 14] = \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 11];
+167     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 2] = \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ - 1];
+168     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 11] = \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[i\_\_ + 8];
+169 \textcolor{comment}{/* L110: */}
+170     \}
+171 \textcolor{comment}{/* PREVIOUS TANGENT YABC & PREVIOUS INTERSECTION PT. PXYZ: */}
+172     oya = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0];
+173     oyb = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1];
+174     oyc = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2];
+175     \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[0] = pxyz[0];
+176     \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[1] = pxyz[1];
+177     \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[2] = pxyz[2];
+178 \textcolor{comment}{/* DISTANCE ALONG INTERSECTION: */}
+179     odist = \hyperlink{AMIND_8c_a8694f0bab1b9e5ea129ddb04c66fb458}{dist};
+180 \textcolor{comment}{/* SHIFT U,V PARAMETERS FOR BOTH SURFACES WITHIN THE HISTORY TABLE */}
+181 \textcolor{comment}{/*  (LATEST U,V ARE STORED BY INTTPL): */}
+182     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+183 \textcolor{comment}{/* STACK U HISTORY: */}
+184     \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 3 << 1) - 8] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 2 << 1) - 8];
+185     \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 2 << 1) - 8] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 1 << 1) - 8];
+186 \textcolor{comment}{/* STACK V HISTORY: */}
+187     \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 3 << 1) - 7] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 2 << 1) - 7];
+188 \textcolor{comment}{/* L114: */}
+189     \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 2 << 1) - 7] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ * 3 + 1 << 1) - 7];
+190     \}
+191     \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[0] = 0;
+192     \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1] = 0;
+193 \textcolor{comment}{/* AFTER FIRST TWO PTS. RESTORE MAX. STEP TO INPUT VALUE: */}
+194     \textcolor{keywordflow}{if} (iptck == *\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt}) \{
+195     *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} = hstep;
+196     \}
+197 \textcolor{comment}{/* DECREMENT POINT COUNTDOWN COUNTER: */}
+198     --(*iptknt);
+199     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt} <= 0) \{
+200     \textcolor{keywordflow}{goto} L920;
+201     \}
+202 \textcolor{comment}{/* IPAR = COUNTER OF RETRIES WHEN TANGENT PLANES ARE PARALLEL */}
+203     ipar = 0;
+204     lskip = FALSE\_;
+205 
+206 \textcolor{comment}{/* CONTINUE ITERATING TO FIND A POINT: */}
+207 L120:
+208 
+209 \textcolor{comment}{/*  EXTRAPOLATE NEXT POINT */}
+210 \textcolor{comment}{/*  ---------------------- */}
+211     hx = \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[0] + *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} * oya;
+212     hy = \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[1] + *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} * oyb;
+213     hz = \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[2] + *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} * oyc;
+214     pxyz[0] = hx + \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx};
+215     pxyz[1] = hy + \hyperlink{APT301_8c_a1aa95347d299564b1d20a922f0d7eb97}{dy};
+216     pxyz[2] = hz + dz;
+217 
+218 L125:
+219 
+220 \textcolor{comment}{/* COMPUTE TANGENT PLANES */}
+221 \textcolor{comment}{/* ---------------------- */}
+222 \textcolor{comment}{/*  COMPUTE SCALED DISTANCE ALONG INTERSECTION: */}
+223 \textcolor{comment}{/* Computing 2nd power */}
+224     d\_\_1 = pxyz[0] - \hyperlink{INTCON_8c_a845d03bb14bf598a9643a8d4be002ba0}{oxyz}[0];
+225 \textcolor{comment}{/* Computing 2nd power */}
+226     d\_\_2 = pxyz[1] - oxyz[1];
+227 \textcolor{comment}{/* Computing 2nd power */}
+228     d\_\_3 = pxyz[2] - oxyz[2];
+229     dist = odist + sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+230 \textcolor{comment}{/* COMPUTE PLANE DTP, TANGENT TO DS */}
+231     \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, pxyz, \hyperlink{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}, &\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1]);
+232 \textcolor{comment}{/* COMPUTE PLANE PTP, TANGENT TO PS */}
+233     \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, pxyz, \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}, \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer});
+234 
+235 \textcolor{comment}{/* SAL = COS OF ANGLE BETWEEN PLANES: */}
+236     sal = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * \hyperlink{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[0] + \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * \hyperlink{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[1] + \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * \hyperlink{INTCON_8c_a04c2115b51dca0bb4514fafd34882cd3}{dtp}[2];
+237     calsq = 1. - sal * sal;
+238 
+239 \textcolor{comment}{/* ARE THE SURFACES PARALLEL? */}
+240     \textcolor{keywordflow}{if} (calsq > 1e-20) \{
+241     \textcolor{keywordflow}{goto} L260;
+242     \}
+243 \textcolor{comment}{/*   ON FIRST PT., TRY ANYWAY: */}
+244     \textcolor{keywordflow}{if} (*ks < 0) \{
+245     \textcolor{keywordflow}{goto} L240;
+246     \}
+247 \textcolor{comment}{/* TANGENT PLANES ARE PARALLEL; INCREASE STEP SIZE: */}
+248     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} *= 1.7;
+249     ++ipar;
+250 \textcolor{comment}{/* DON'T REDUCE STEP SIZE: */}
+251     \textcolor{keywordflow}{if} (istate == 5) \{
+252     istate = 6;
+253     \}
+254     \textcolor{keywordflow}{if} (ipar <= 2) \{
+255     \textcolor{keywordflow}{goto} L120;
+256     \}
+257     \textcolor{keywordflow}{goto} L920;
+258 L240:
+259     calsq = 1e-20;
+260 L260:
+261     cal = sqrt(calsq) * \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[3];
+262 
+263 \textcolor{comment}{/* DS UNIT NORMALS */}
+264     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[9] = dtp[0];
+265     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[10] = dtp[1];
+266     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[11] = dtp[2];
+267 \textcolor{comment}{/* PS UNIT NORMALS */}
+268     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[0] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0];
+269     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[1] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1];
+270     \hyperlink{INTCON_8c_a6b3d028cdd4f9571b1ad9851ca6fd867}{un}[2] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2];
+271 \textcolor{comment}{/* COMPUTE UNIT TANGENT VECTOR YABC: */}
+272     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] = (dtp[1] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * dtp[2]) / cal;
+273     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] = (dtp[2] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * dtp[0]) / cal;
+274     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] = (dtp[0] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * dtp[1]) / cal;
+275 \textcolor{comment}{/* HCO = COS OF ANGLE BETWEEN THIS TANGENT & PREVIOUS ONE: */}
+276     hco = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * oya + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * oyb + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * oyc;
+277 \textcolor{comment}{/* MAKE SURE CTP HAS NOT REVERSED: */}
+278     \textcolor{keywordflow}{if} (hco >= -.9) \{
+279     \textcolor{keywordflow}{goto} L270;
+280     \}
+281     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] = -\hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0];
+282     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] = -\hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1];
+283     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] = -\hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2];
+284     \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[3] = -\hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[3];
+285     hco = -hco;
+286 
+287 \textcolor{comment}{/* PROJECT EXTRAPOLATED POINT ONTO INTERSECTION OF TANGENT PLANES: */}
+288 \textcolor{comment}{/* --------------------------------------------------------------- */}
+289 L270:
+290     d1 = (\hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[3] - sal * dtp[3]) / calsq;
+291     d2 = dtp[3] - sal * \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+292     d3 = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * pxyz[0] + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * pxyz[1] + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * pxyz[2];
+293     pxyz[0] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * d1 + dtp[0] * d2 + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] * d3;
+294     pxyz[1] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * d1 + dtp[1] * d2 + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] * d3;
+295     pxyz[2] = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * d1 + dtp[2] * d2 + \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2] * d3;
+296 
+297 \textcolor{comment}{/* IF START UP (KS=-1), SAVE PT. & EXIT: */}
+298     \textcolor{keywordflow}{if} (*ks < 0) \{
+299     \textcolor{keywordflow}{goto} L540;
+300     \}
+301 
+302 \textcolor{comment}{/* TEST FOR BOUNDARY, IF APPROPRIATE: */}
+303 \textcolor{comment}{/* ---------------------------------- */}
+304 \textcolor{comment}{/* STILL WITHIN BOUNDS? */}
+305 \textcolor{comment}{/* L280: */}
+306     \textcolor{keywordflow}{if} (\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[0] == 0 && \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1] == 0) \{
+307     \textcolor{keywordflow}{goto} L290;
+308     \}
+309     \textcolor{keywordflow}{if} (istate == 8 || istate == 10) \{
+310     \textcolor{keywordflow}{goto} L290;
+311     \}
+312 \textcolor{comment}{/* NO; CUT STEP SIZE AND TRY FOR MORE POINTS: */}
+313     ++nbound;
+314     \textcolor{keywordflow}{if} (istate < 6 || istate == 9) \{
+315     istate = 6;
+316     \}
+317     ++istate;
+318     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} /= 10.;
+319     \textcolor{keywordflow}{if} (abs(*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step}) < stmin) \{
+320     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = stmin;
+321     \}
+322     *\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} = *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step};
+323     \textcolor{keywordflow}{if} (istate < 8) \{
+324     \textcolor{keywordflow}{goto} L120;
+325     \}
+326 L290:
+327 
+328 \textcolor{comment}{/* BRANCH TO THE STEP CONTROL LOGIC: */}
+329 \textcolor{comment}{/* --------------------------------- */}
+330     \textcolor{keywordflow}{switch} (istate) \{
+331     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L300;
+332     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L300;
+333     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L310;
+334     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L400;
+335     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L320;
+336     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L350;
+337     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L350;
+338     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L500;
+339     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L540;
+340     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L540;
+341     \}
+342 L300:
+343     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = 0.;
+344     ++istate;
+345     \textcolor{keywordflow}{goto} L120;
+346 L310:
+347     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = stmin;
+348     istate = 4;
+349     \textcolor{keywordflow}{goto} L120;
+350 
+351 \textcolor{comment}{/* DECREASE STEP SIZE UNLESS BEND IN INTERSECTION IS NEGLIGIBLE */}
+352 \textcolor{comment}{/*  AND TRY AGAIN WITH SAME POINT. */}
+353 \textcolor{comment}{/* ------------------------------- */}
+354 \textcolor{comment}{/*  CHECK CHORDAL TOLERANCE */}
+355 L320:
+356     ++ndrop;
+357     \textcolor{keywordflow}{if} (ndrop >= 0) \{
+358     istate = 6;
+359     \}
+360 \textcolor{comment}{/* CHECK CURVATURE FIRST */}
+361     co = abs(hco);
+362     \textcolor{keywordflow}{if} (co > .999999997) \{
+363     \textcolor{keywordflow}{goto} L325;
+364     \}
+365     si = sqrt(1. - co * co);
+366     fac = si * *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} / curvck;
+367     \textcolor{keywordflow}{if} (co < .707) \{
+368     fac = 100.;
+369     \}
+370     \textcolor{keywordflow}{goto} L326;
+371 
+372 \textcolor{comment}{/* IF HERE, RADC IS CLOSE TO BEING STRAIGHT LINE, CHECK DROP */}
+373 L325:
+374     d1 = pxyz[0] - oxyz[0];
+375     d2 = pxyz[1] - oxyz[1];
+376     d3 = pxyz[2] - oxyz[2];
+377     sec = sqrt(d1 * d1 + d2 * d2 + d3 * d3);
+378     \textcolor{keywordflow}{if} (sec == 0.) \{
+379     sec = 1.;
+380     \}
+381     d1 /= sec;
+382     d2 /= sec;
+383     d3 /= sec;
+384     co = (d\_\_1 = d1 * oya + d2 * oyb + d3 * oyc, abs(d\_\_1));
+385     \textcolor{keywordflow}{if} (co > .9999999) \{
+386     \textcolor{keywordflow}{goto} L350;
+387     \}
+388     si = sqrt(1. - co * co);
+389     fac = sec * si / *\hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck};
+390 L326:
+391     \textcolor{keywordflow}{if} (fac < 1.1) \{
+392     \textcolor{keywordflow}{goto} L350;
+393     \}
+394 \textcolor{comment}{/* SCALE DOWN STEP SIZE: */}
+395     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} /= sqrt(fac);
+396 
+397 \textcolor{comment}{/* LOAD OLD UV FOR STEP FIX POINT ON SURFACE */}
+398     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+399     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; i\_\_ += 2) \{
+400         \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ + j * 3 << 1) - 8] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(j * 3 + 2 << 1) - 8];
+401         \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(i\_\_ + j * 3 << 1) - 7] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[(j * 3 + 2 << 1) - 7];
+402 \textcolor{comment}{/* L340: */}
+403     \}
+404     \}
+405     \textcolor{keywordflow}{goto} L120;
+406 
+407 \textcolor{comment}{/* COMPUTE CORRECTION DX & STEP SIZE FOR NEXT POINT: */}
+408 \textcolor{comment}{/* ------------------------------------------------- */}
+409 L350:
+410     ndrop = -3;
+411 \textcolor{comment}{/* IF NOT AT EDGE, ITERATE ON NEXT POINT: */}
+412     \textcolor{keywordflow}{if} (istate == 6) \{
+413     istate = 5;
+414     \}
+415     dx = pxyz[0] - hx;
+416     dy = pxyz[1] - hy;
+417     dz = pxyz[2] - hz;
+418 
+419     \textcolor{keywordflow}{if} (istout != 0) \{
+420     \textcolor{keywordflow}{goto} L400;
+421     \}
+422     istout = 1;
+423     \textcolor{keywordflow}{goto} L120;
+424 
+425 \textcolor{comment}{/* EXTRAPOLATE STEP SIZE FOR NEXT PXYZ */}
+426 \textcolor{comment}{/* ----------------------------------- */}
+427 L400:
+428 \textcolor{comment}{/* Computing 2nd power */}
+429     d\_\_1 = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0];
+430 \textcolor{comment}{/* Computing 2nd power */}
+431     d\_\_2 = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1];
+432 \textcolor{comment}{/* Computing 2nd power */}
+433     d\_\_3 = \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2];
+434     \textcolor{keywordflow}{if} (d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3 < 1e-10) \{
+435     \textcolor{keywordflow}{goto} L920;
+436     \}
+437 
+438     *\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} = abs(*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step});
+439     \textcolor{keywordflow}{if} (nbound == 2) \{
+440     \textcolor{keywordflow}{goto} L540;
+441     \}
+442     orc = radc;
+443 \textcolor{comment}{/* COMPUTE STEP SIZE: */}
+444     d1 = 1. - hco * hco;
+445     \textcolor{keywordflow}{if} (d1 - 2e-9 <= 0.) \{
+446     \textcolor{keywordflow}{goto} L410;
+447     \} \textcolor{keywordflow}{else} \{
+448     \textcolor{keywordflow}{goto} L420;
+449     \}
+450 \textcolor{comment}{/* USE MAXIMUM STEP SIZE: */}
+451 L410:
+452     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx};
+453     radc = 2e3;
+454     \textcolor{keywordflow}{goto} L430;
+455 L420:
+456     si = sqrt(d1);
+457 
+458     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} > .001) \{
+459     radc = (d\_\_1 = *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} / si, abs(d\_\_1));
+460     \}
+461     \textcolor{keywordflow}{if} (istate == 4) \{
+462     orc = radc;
+463     \}
+464 
+465 \textcolor{comment}{/* EXTRAP ONLY WHEN ORC & RADC IS REASONABLE */}
+466     rfac = orc / radc;
+467     \textcolor{keywordflow}{if} (rfac > 1.9 || rfac < .55) \{
+468     orc = radc;
+469     \}
+470     rcnext = radc * 2. - orc;
+471     \textcolor{keywordflow}{if} (rcnext < .015) \{
+472     rcnext = .015;
+473     \}
+474     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = sqrt(*\hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck} * 2. * rcnext);
+475     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} < .011) \{
+476     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = .011;
+477     \}
+478 
+479 \textcolor{comment}{/* IF RAD. CURV. SMALL, REDUCE DXYZ CORRECTIONS */}
+480     \textcolor{keywordflow}{if} (radc > .1) \{
+481     \textcolor{keywordflow}{goto} L430;
+482     \}
+483     rfac = radc * 10.;
+484     dx *= rfac;
+485     dy *= rfac;
+486     dz *= rfac;
+487 L430:
+488     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} > *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx}) \{
+489     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx};
+490     \}
+491 
+492     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} - .011 <= 0.) \{
+493     \textcolor{keywordflow}{goto} L460;
+494     \} \textcolor{keywordflow}{else} \{
+495     \textcolor{keywordflow}{goto} L450;
+496     \}
+497 L450:
+498     step2 = *\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} * 1.5;
+499     \textcolor{keywordflow}{if} (*\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} > step2) \{
+500     *\hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step} = step2;
+501     \}
+502 L460:
+503 \textcolor{comment}{/* GO TO NEXT POINT UNLESS 4TH ITERATION ON 1ST POINT: */}
+504     \textcolor{keywordflow}{if} (istate > 4) \{
+505     \textcolor{keywordflow}{goto} L530;
+506     \}
+507     istate = 5;
+508     \textcolor{keywordflow}{goto} L120;
+509 
+510 \textcolor{comment}{/* AT EDGE; SOLVE FOR BOUNDARY POINT: */}
+511 \textcolor{comment}{/* ---------------------------------- */}
+512 L500:
+513     \textcolor{keywordflow}{if} (\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[0] != 0) \{
+514     \hyperlink{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}{intbnd\_}(&\hyperlink{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer});
+515     \}
+516     \textcolor{keywordflow}{if} (\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1] != 0) \{
+517     \hyperlink{INTBND_8c_aa2ec1ab8daea5c8e2df3eeaf0ad482c2}{intbnd\_}(&\hyperlink{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1]);
+518     \}
+519     istate = 10;
+520 \textcolor{comment}{/* SET IPTKNT FOR NORMAL RETURN: */}
+521     *\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt} = -1;
+522     \textcolor{keywordflow}{goto} L125;
+523 
+524 \textcolor{comment}{/* STORE THE OUTPUT DATA */}
+525 \textcolor{comment}{/* --------------------- */}
+526 \textcolor{comment}{/*  IF BEND IN INTERSECTION > 100 DEG., EXIT: */}
+527 L530:
+528     \textcolor{keywordflow}{if} (hco + .174 <= 0.) \{
+529     \textcolor{keywordflow}{goto} L920;
+530     \} \textcolor{keywordflow}{else} \{
+531     \textcolor{keywordflow}{goto} L540;
+532     \}
+533 
+534 \textcolor{comment}{/* OUT OF BOUNDS? */}
+535 L540:
+536     \textcolor{keywordflow}{if} (\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[0] < 0 || \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1] < 0) \{
+537     \textcolor{keywordflow}{goto} L920;
+538     \}
+539 \textcolor{comment}{/* ACCUMULATE THE LENGTH ALONG INTERSECTION *** */}
+540 \textcolor{comment}{/* Computing 2nd power */}
+541     d\_\_1 = pxyz[0] - oxyz[0];
+542 \textcolor{comment}{/* Computing 2nd power */}
+543     d\_\_2 = pxyz[1] - oxyz[1];
+544 \textcolor{comment}{/* Computing 2nd power */}
+545     d\_\_3 = pxyz[2] - oxyz[2];
+546     dist = odist + sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+547     \textcolor{keywordflow}{if} (*ks != 0) \{
+548     \textcolor{keywordflow}{goto} L510;
+549     \}
+550     \textcolor{keywordflow}{if} (ipt >= *\hyperlink{INTCON_8c_a1f0203656d2880e98c95896b7ce303b4}{npts}) \{
+551     \textcolor{keywordflow}{goto} L920;
+552     \}
+553     ++\hyperlink{AMIND_8c_a664d06786bfa2b6c0ae2d16dfee1b469}{ipt};
+554 L510:
+555 \textcolor{comment}{/* STORE  THE INTERSECTION PT */}
+556     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 1] = pxyz[0];
+557     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 2] = pxyz[1];
+558     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 3] = pxyz[2];
+559     \textcolor{keywordflow}{if} (*npt != 0) \{
+560     \textcolor{keywordflow}{goto} L550;
+561     \}
+562 \textcolor{comment}{/* SAVE THE START PT */}
+563     pt0[0] = pxyz[0];
+564     pt0[1] = pxyz[1];
+565     pt0[2] = pxyz[2];
+566 L550:
+567     \textcolor{keywordflow}{if} (istate >= 10) \{
+568     \textcolor{keywordflow}{goto} L700;
+569     \}
+570 
+571 \textcolor{comment}{/* CHECK FOR LOOPAROUND TO START (CLOSED SURFACE) */}
+572 \textcolor{comment}{/* ---------------------------------------------- */}
+573 \textcolor{comment}{/*  HAS TANGENT VECTOR GONE NEGATIVE? */}
+574     \textcolor{keywordflow}{if} (icont != 1) \{
+575     \textcolor{keywordflow}{goto} L560;
+576     \}
+577     cs = pl[0] * \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[0] + pl[1] * \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[1] + pl[2] * \hyperlink{INTCON_8c_a8efd4220ab5346dbf96b1e890ae15399}{ctp}[2];
+578     \textcolor{keywordflow}{if} (cs < -.707) \{
+579     icont = -1;
+580     \}
+581     \textcolor{keywordflow}{goto} L650;
+582 L560:
+583     \textcolor{keywordflow}{if} (icont != -1) \{
+584     \textcolor{keywordflow}{goto} L570;
+585     \}
+586 \textcolor{comment}{/* HAS TANGENT VECTOR GONE NEGATIVE & BACK TO POSITIVE? */}
+587 \textcolor{comment}{/*  IF CS GOES POSITIVE, BEGIN CHECKS */}
+588     cs = pl[0] * ctp[0] + pl[1] * ctp[1] + pl[2] * ctp[2];
+589     \textcolor{keywordflow}{if} (cs > .707) \{
+590     icont = 0;
+591     \}
+592     \textcolor{keywordflow}{goto} L650;
+593 L570:
+594 \textcolor{comment}{/* BACK TO START POSITION? */}
+595 \textcolor{comment}{/*  CONTINOUS CUT FLAG IS ON, CHECK CURRENT POSITION */}
+596     d1 = pl[0] * pxyz[0] + pl[1] * pxyz[1] + pl[2] * pxyz[2] - pl[3];
+597     \textcolor{keywordflow}{if} (d1 < 0.) \{
+598     \textcolor{keywordflow}{goto} L620;
+599     \}
+600 
+601 \textcolor{comment}{/* PASSED START POSITION, CHECK DISTANCE FROM CURRENT POSITION */}
+602 \textcolor{comment}{/*  TO START POINT. */}
+603     dx1 = pxyz[0] - pt0[0];
+604     dy1 = pxyz[1] - pt0[1];
+605     dz1 = pxyz[2] - pt0[2];
+606     d1 = (d\_\_1 = ctp[0] * dx1 + ctp[1] * dy1 + ctp[2] * dz1, abs(d\_\_1));
+607     \textcolor{keywordflow}{if} (d1 > *\hyperlink{INTCON_8c_aeceb87355b3a4a384cc29a39e762979a}{ostep} * 3.) \{
+608     \textcolor{keywordflow}{goto} L620;
+609     \}
+610 \textcolor{comment}{/* Computing 2nd power */}
+611     d\_\_1 = \hyperlink{APT088_8c_a2af3f59338a42439ba48cf4977443553}{dx1};
+612 \textcolor{comment}{/* Computing 2nd power */}
+613     d\_\_2 = \hyperlink{APT088_8c_a4069dfb0b6fc18b5239ac0c3d29b1ac6}{dy1};
+614 \textcolor{comment}{/* Computing 2nd power */}
+615     d\_\_3 = dz1;
+616     d1 = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+617     \textcolor{keywordflow}{if} (d1 < .01) \{
+618     \textcolor{keywordflow}{goto} L605;
+619     \}
+620     co = ctp[0] * dx1 / d1 + ctp[1] * dy1 / d1 + ctp[2] * dz1 / \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1};
+621     \textcolor{keywordflow}{if} (abs(co) > .9999999) \{
+622     \textcolor{keywordflow}{goto} L605;
+623     \}
+624     si = sqrt(1. - co * co);
+625     \textcolor{keywordflow}{if} (d1 * si / *\hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck} > 1.2) \{
+626     \textcolor{keywordflow}{goto} L620;
+627     \}
+628 
+629 \textcolor{comment}{/* LOAD START POINT HERE & SET EXIT FLAG */}
+630 L605:
+631     *\hyperlink{INTCON_8c_af024e49b8ee9394e0da14aeb0f3989d4}{iptknt} = -1;
+632     istate = 11;
+633     \textcolor{keywordflow}{if} (*ks != 0) \{
+634     \textcolor{keywordflow}{goto} L640;
+635     \}
+636 
+637 \textcolor{comment}{/* SET LAST POSITION DATA TO FIRST POSITION DATA */}
+638     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+639     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + ipt * 9] = \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + 9];
+640     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + 3 + ipt * 9] = \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + 12];
+641     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + 6 + ipt * 9] = \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[i\_\_ + 15];
+642 \textcolor{comment}{/* L630: */}
+643     \}
+644     \textcolor{keywordflow}{goto} L920;
+645 L640:
+646 L650:
+647 L700:
+648 L620:
+649     \textcolor{keywordflow}{if} (*ks != 0 && istate <= 9 && *npt != 0) \{
+650     \textcolor{keywordflow}{goto} L720;
+651     \}
+652 \textcolor{comment}{/* STORE PT, NORMAL & TANGENT ... */}
+653 \textcolor{comment}{/*  TZCK = PXYZ(1)*DTP(1) + PXYZ(2)*DTP(2) + PXYZ(3)*DTP(3) - DTP(4) */}
+654 \textcolor{comment}{/*  TXCK = PXYZ(1)*PTP(1) + PXYZ(2)*PTP(2) + PXYZ(3)*PTP(3) - PTP(4) */}
+655 \textcolor{comment}{/*   COMPUTE PLANE DTP, TANGENT TO DS */}
+656     \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, pxyz, dtp, &\hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer}[1]);
+657 \textcolor{comment}{/* COMPUTE PLANE PTP, TANGENT TO PS */}
+658     \hyperlink{INTTPL_8c_a67c7cb37ad9b2589a1706244516c3d0f}{inttpl\_}(&\hyperlink{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, pxyz, \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}, \hyperlink{INTCON_8c_a63e9c051e63b8109e10b4485f1ac7c24}{isfer});
+659 \textcolor{comment}{/* SAL = COS OF ANGLE BETWEEN PLANES: */}
+660     sal = \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * dtp[0] + \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * dtp[1] + \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * dtp[2];
+661     calsq = 1. - sal * sal;
+662     \textcolor{keywordflow}{if} (calsq < 1e-20) \{
+663     calsq = 1e-20;
+664     \}
+665     cal = sqrt(calsq) * ctp[3];
+666 \textcolor{comment}{/* COMPUTE UNIT TANGENT VECTOR YABC: */}
+667     ctp[0] = (dtp[1] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] * dtp[2]) / cal;
+668     ctp[1] = (dtp[2] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[2] * dtp[0]) / cal;
+669     ctp[2] = (dtp[0] * \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[1] - \hyperlink{INTCON_8c_ac7db1e71b57cd3264186c07f752785ae}{ptp}[0] * dtp[1]) / cal;
+670     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 4] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[6];
+671     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 5] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[7];
+672     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 6] = (doublereal) \hyperlink{INTCON_8c_a39742fa929e9fa5d47951ad4b8149cca}{ipnr}[1];
+673     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 7] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[0];
+674     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 8] = \hyperlink{INTCON_8c_a0fff0eac7402a32fbd19b23e92cd3e3f}{uv}[1];
+675     \hyperlink{INTSEC_8c_a63d952b15383785e9b8bc5087e3da6f6}{pt}[ipt * 9 + 9] = (doublereal) \hyperlink{INTCON_8c_a39742fa929e9fa5d47951ad4b8149cca}{ipnr}[0];
+676 L720:
+677     ++(*npt);
+678 \textcolor{comment}{/* START PT. ONLY? */}
+679     \textcolor{keywordflow}{if} (*ks < 0) \{
+680     \textcolor{keywordflow}{goto} L920;
+681     \}
+682 \textcolor{comment}{/* IF OUTSIDE EDGE, QUIT; IF INTERPATCH BOUNDARY, CONTINUE: */}
+683     \textcolor{keywordflow}{if} (istate == 10) \{
+684     \textcolor{keywordflow}{goto} L920;
+685     \}
+686     \textcolor{keywordflow}{if} (istate == 9) \{
+687     istate = 5;
+688     \}
+689 \textcolor{comment}{/* GO FOR ANOTHER PT. IF NOT AT EDGE OR BACK AT START: */}
+690     \textcolor{keywordflow}{if} (istate < 10) \{
+691     \textcolor{keywordflow}{goto} L100;
+692     \}
+693 
+694 \textcolor{comment}{/* RETURN THE LENGTH ALONG INTERSECTION */}
+695 \textcolor{comment}{/* ------------------------------------ */}
+696 L920:
+697     \textcolor{keywordflow}{if} (*ks == 0) \{
+698     *npt = \hyperlink{AMIND_8c_a664d06786bfa2b6c0ae2d16dfee1b469}{ipt};
+699     \}
+700     *\hyperlink{INTCON_8c_a0061a3073a50854904d910ff02c42ceb}{stepmx} = hstep;
+701 
+702     \textcolor{keywordflow}{return} 0;
+703 \} \textcolor{comment}{/* intcon\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTCON_8c_a3ca02ea38955b893c79272ea722f3cc8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTCON_8c_a3ca02ea38955b893c79272ea722f3cc8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!bb@{bb}}
+\index{bb@{bb}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{bb}{bb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bb\mbox{[}256\mbox{]}}\hypertarget{INTCON_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{}\label{INTCON_8c_a02df207cc55dd8e5a55b6f9d78d942d6}
+
+
+Definition at line 18 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{INTCON_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 34 of file I\+N\+T\+C\+O\+N.\+c.
+
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{INTCON_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 33 of file I\+N\+T\+C\+O\+N.\+c.
+
+
+
+Referenced by intcon\+\_\+().
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!iiflag@{iiflag}}
+\index{iiflag@{iiflag}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{iiflag}{iiflag}}]{\setlength{\rightskip}{0pt plus 5cm}integer iiflag\mbox{[}16\mbox{]}}\hypertarget{INTCON_8c_af00895acd217dfa45b2e2e9716ebff70}{}\label{INTCON_8c_af00895acd217dfa45b2e2e9716ebff70}
+
+
+Definition at line 19 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!iitop@{iitop}}
+\index{iitop@{iitop}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{iitop}{iitop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iitop\mbox{[}96\mbox{]}}\hypertarget{INTCON_8c_ad4159f737847a828654fd6bd050aff25}{}\label{INTCON_8c_ad4159f737847a828654fd6bd050aff25}
+
+
+Definition at line 19 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ikeep@{ikeep}}
+\index{ikeep@{ikeep}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ikeep}{ikeep}}]{\setlength{\rightskip}{0pt plus 5cm}integer ikeep\mbox{[}255\mbox{]}}\hypertarget{INTCON_8c_aaf1570c45aa1901e9b51476d09a19e02}{}\label{INTCON_8c_aaf1570c45aa1901e9b51476d09a19e02}
+
+
+Definition at line 26 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!intcom\+\_\+@{intcom\+\_\+}}
+\index{intcom\+\_\+@{intcom\+\_\+}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+}{intcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   intcom\+\_\+}\hypertarget{INTCON_8c_a6b99bd866a46a143b4e398241dc8ce02}{}\label{INTCON_8c_a6b99bd866a46a143b4e398241dc8ce02}
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ipnum@{ipnum}}
+\index{ipnum@{ipnum}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipnum}{ipnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipnum\mbox{[}4\mbox{]}}\hypertarget{INTCON_8c_ad9ba103b57834a3db27b426fcafa58fe}{}\label{INTCON_8c_ad9ba103b57834a3db27b426fcafa58fe}
+
+
+Definition at line 19 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!ssarlm\+\_\+@{ssarlm\+\_\+}}
+\index{ssarlm\+\_\+@{ssarlm\+\_\+}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+}{ssarlm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssarlm\+\_\+}\hypertarget{INTCON_8c_a3dbe6f25608c19974759e8e55993c936}{}\label{INTCON_8c_a3dbe6f25608c19974759e8e55993c936}
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!uu@{uu}}
+\index{uu@{uu}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{uu}{uu}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uu\mbox{[}4\mbox{]}}\hypertarget{INTCON_8c_a92a9ddacaa39a881012df9cfbd55134a}{}\label{INTCON_8c_a92a9ddacaa39a881012df9cfbd55134a}
+
+
+Definition at line 18 of file I\+N\+T\+C\+O\+N.\+c.
+
+\index{I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}!vv@{vv}}
+\index{vv@{vv}!I\+N\+T\+C\+O\+N.\+c@{I\+N\+T\+C\+O\+N.\+c}}
+\subsubsection[{\texorpdfstring{vv}{vv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vv\mbox{[}4\mbox{]}}\hypertarget{INTCON_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{}\label{INTCON_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}
+
+
+Definition at line 18 of file I\+N\+T\+C\+O\+N.\+c.
+

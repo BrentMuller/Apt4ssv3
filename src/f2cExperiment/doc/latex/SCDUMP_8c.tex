@@ -1,0 +1,156 @@
+\hypertarget{SCDUMP_8c}{}\section{S\+C\+D\+U\+M\+P.\+c File Reference}
+\label{SCDUMP_8c}\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+C\+D\+U\+M\+P.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{SCDUMP_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SCDUMP_8c_a407ea0ec05de474d31cb34c209fe3571}{scdump\+\_\+} (integer $\ast$\hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in}, doublereal $\ast$\hyperlink{SSV3_8c_a054b516dd6020a563cf155a4b217ec26}{scan})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{SCDUMP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{SCDUMP_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\+\_\+n4} = -\/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}!scdump\+\_\+@{scdump\+\_\+}}
+\index{scdump\+\_\+@{scdump\+\_\+}!S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+\subsubsection[{\texorpdfstring{scdump\+\_\+(integer $\ast$in, doublereal $\ast$scan)}{scdump_(integer *in, doublereal *scan)}}]{\setlength{\rightskip}{0pt plus 5cm}int scdump\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{in, }
+\item[{doublereal $\ast$}]{scan}
+\end{DoxyParamCaption}
+)}\hypertarget{SCDUMP_8c_a407ea0ec05de474d31cb34c209fe3571}{}\label{SCDUMP_8c_a407ea0ec05de474d31cb34c209fe3571}
+
+
+Definition at line 24 of file S\+C\+D\+U\+M\+P.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, c\+\_\+n4, l, and scan.
+
+
+
+Referenced by crsfit\+\_\+(), curflo\+\_\+(), gencrv\+\_\+(), and mesh\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{/* System generated locals */}
+27     integer i\_\_1;
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, ik;
+31     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+32     \textcolor{keyword}{static} integer ntot;
+33 
+34     \textcolor{comment}{/* Parameter adjustments */}
+35     --\hyperlink{APT107_8c_a054b516dd6020a563cf155a4b217ec26}{scan};
+36 
+37     \textcolor{comment}{/* Function Body */}
+38     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+39     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"CHK="}, \hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in}, (ftnlen)4);
+40     ntot = (integer) \hyperlink{APT107_8c_a054b516dd6020a563cf155a4b217ec26}{scan}[12];
+41     \textcolor{keywordflow}{if} (ntot == 0) \{
+42     ntot = (integer) ((\hyperlink{APT107_8c_a054b516dd6020a563cf155a4b217ec26}{scan}[2] + \hyperlink{APT107_8c_a054b516dd6020a563cf155a4b217ec26}{scan}[4]) * 24.f);
+43     \}
+44     ik = -3;
+45     i\_\_1 = ntot;
+46     \textcolor{keywordflow}{for} (l = 1; l <= i\_\_1; l += 4) \{
+47     \textcolor{keywordflow}{if} (l % 24 == 1) \{
+48         \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+49     \}
+50     ik += 4;
+51     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SCDUMP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"KCT "}, &ik, (ftnlen)4);
+52     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SCDUMP_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\_n4}, &\hyperlink{SCDUMP_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SCAN"}, &\hyperlink{APT107_8c_a054b516dd6020a563cf155a4b217ec26}{scan}[l], (ftnlen)4);
+53 \textcolor{comment}{/* L10: */}
+54     \}
+55     \textcolor{keywordflow}{return} 0;
+56 \} \textcolor{comment}{/* scdump\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SCDUMP_8c_a407ea0ec05de474d31cb34c209fe3571_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SCDUMP_8c_a407ea0ec05de474d31cb34c209fe3571_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{SCDUMP_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 18 of file S\+C\+D\+U\+M\+P.\+c.
+
+
+
+Referenced by scdump\+\_\+().
+
+\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCDUMP_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{SCDUMP_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 19 of file S\+C\+D\+U\+M\+P.\+c.
+
+
+
+Referenced by scdump\+\_\+().
+
+\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}{}\label{SCDUMP_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 17 of file S\+C\+D\+U\+M\+P.\+c.
+
+
+
+Referenced by scdump\+\_\+().
+
+\index{S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}!c\+\_\+n4@{c\+\_\+n4}}
+\index{c\+\_\+n4@{c\+\_\+n4}!S\+C\+D\+U\+M\+P.\+c@{S\+C\+D\+U\+M\+P.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n4}{c_n4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n4 = -\/4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SCDUMP_8c_a900642cfb0fdb02c80380e0b73330cb5}{}\label{SCDUMP_8c_a900642cfb0fdb02c80380e0b73330cb5}
+
+
+Definition at line 20 of file S\+C\+D\+U\+M\+P.\+c.
+
+
+
+Referenced by scdump\+\_\+().
+

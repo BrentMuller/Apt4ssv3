@@ -1,0 +1,72 @@
+\hypertarget{KREUZ_8c}{}\section{K\+R\+E\+U\+Z.\+c File Reference}
+\label{KREUZ_8c}\index{K\+R\+E\+U\+Z.\+c@{K\+R\+E\+U\+Z.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for K\+R\+E\+U\+Z.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{KREUZ_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2}{kreuz\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, doublereal $\ast$\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}, doublereal $\ast$\hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{K\+R\+E\+U\+Z.\+c@{K\+R\+E\+U\+Z.\+c}!kreuz\+\_\+@{kreuz\+\_\+}}
+\index{kreuz\+\_\+@{kreuz\+\_\+}!K\+R\+E\+U\+Z.\+c@{K\+R\+E\+U\+Z.\+c}}
+\subsubsection[{\texorpdfstring{kreuz\+\_\+(doublereal $\ast$v1, doublereal $\ast$v2, doublereal $\ast$v3)}{kreuz_(doublereal *v1, doublereal *v2, doublereal *v3)}}]{\setlength{\rightskip}{0pt plus 5cm}int kreuz\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{v1, }
+\item[{doublereal $\ast$}]{v2, }
+\item[{doublereal $\ast$}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2}{}\label{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2}
+
+
+Definition at line 17 of file K\+R\+E\+U\+Z.\+c.
+
+
+
+References v1, v2, and v3.
+
+
+
+Referenced by krumm\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19 
+20 \textcolor{comment}{/*   COMPUTATION OF VECTOR CROSS PRODUCT */}
+21 
+22 
+23     \textcolor{comment}{/* Parameter adjustments */}
+24     --\hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3};
+25     --\hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2};
+26     --\hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+27 
+28     \textcolor{comment}{/* Function Body */}
+29     \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[1] = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[2] * \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3] - \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3] * \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[2];
+30     \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[2] = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3] * v2[1] - \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[1] * v2[3];
+31     \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[3] = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[1] * v2[2] - \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[2] * v2[1];
+32 
+33     \textcolor{keywordflow}{return} 0;
+34 \} \textcolor{comment}{/* kreuz\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{KREUZ_8c_a3ca141710d57c7ab08877e0f791799b2_icgraph}
+\end{center}
+\end{figure}
+
+

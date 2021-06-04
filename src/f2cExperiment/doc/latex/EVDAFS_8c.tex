@@ -1,0 +1,466 @@
+\hypertarget{EVDAFS_8c}{}\section{E\+V\+D\+A\+F\+S.\+c File Reference}
+\label{EVDAFS_8c}\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for E\+V\+D\+A\+F\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{EVDAFS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16}{evdafs\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$geo, doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\item 
+int \hyperlink{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5}{cvdafs\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$geo, doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, integer $\ast$mu, integer $\ast$mv, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n}, doublereal $\ast$\hyperlink{APT335_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}, doublereal $\ast$\hyperlink{APT335_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}, doublereal $\ast$az, doublereal $\ast$cu, doublereal $\ast$cv)
+\item 
+int \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, integer $\ast$mu, integer $\ast$mv, doublereal $\ast$cu, doublereal $\ast$cv, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$res)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{EVDAFS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\+\_\+\+\_\+9} = 9
+\item 
+static integer \hyperlink{EVDAFS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}!biprod\+\_\+@{biprod\+\_\+}}
+\index{biprod\+\_\+@{biprod\+\_\+}!E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{biprod\+\_\+(doublereal $\ast$a, integer $\ast$mu, integer $\ast$mv, doublereal $\ast$cu, doublereal $\ast$cv, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$res)}{biprod_(doublereal *a, integer *mu, integer *mv, doublereal *cu, doublereal *cv, doublereal *u, doublereal *v, doublereal *res)}}]{\setlength{\rightskip}{0pt plus 5cm}int biprod\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{integer $\ast$}]{mu, }
+\item[{integer $\ast$}]{mv, }
+\item[{doublereal $\ast$}]{cu, }
+\item[{doublereal $\ast$}]{cv, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{}\label{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}
+
+
+Definition at line 250 of file E\+V\+D\+A\+F\+S.\+c.
+
+
+
+References f, i\+\_\+\+\_\+, and j.
+
+
+
+Referenced by cvdafs\+\_\+().
+
+
+\begin{DoxyCode}
+253 \{
+254     \textcolor{comment}{/* System generated locals */}
+255     integer a\_dim1, a\_offset;
+256 
+257     \textcolor{comment}{/* Local variables */}
+258     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+259     \textcolor{keyword}{static} doublereal sum;
+260 
+261 \textcolor{comment}{/* SUBROUTINE TO EVALUATE BILINEAR PRODUCT (PU)'A(PV), WHERE PU, PV ARE */}
+262 \textcolor{comment}{/* POWER SERIES WITH COEFFICIENTS CU,CV; LEADIONG 0.0 COEFFICIENTS INDICA */}
+263 \textcolor{comment}{/* DERIVATIVE TERMS OF LOWER DEGREE. FINAL (SCALAR) PRODUCT IS RETURNED A */}
+264     \textcolor{comment}{/* Parameter adjustments */}
+265     --cu;
+266     --cv;
+267     a\_dim1 = *mu;
+268     a\_offset = 1 + a\_dim1;
+269     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} -= a\_offset;
+270 
+271     \textcolor{comment}{/* Function Body */}
+272     *res = 0.f;
+273     \textcolor{keywordflow}{for} (i\_\_ = *mu; i\_\_ >= 1; --\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+274     \textcolor{keywordflow}{if} (cu[i\_\_] <= 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+275         \textcolor{keywordflow}{goto} L30;
+276     \}
+277     sum = 0.f;
+278     \textcolor{keywordflow}{for} (j = *mv; j >= 1; --\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+279         \textcolor{keywordflow}{if} (cv[j] <= 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+280         \textcolor{keywordflow}{goto} L15;
+281         \}
+282 \textcolor{comment}{/* L10: */}
+283         sum = sum * *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} + cv[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[i\_\_ + j * a\_dim1];
+284     \}
+285 L15:
+286 \textcolor{comment}{/* L20: */}
+287     *res = *res * *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} + sum * cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+288     \}
+289 L30:
+290 \textcolor{comment}{/* RES NOW CONTAINS THE EVALUATED PRODUCT (PU)'A(PV) AT PARAMETRIC POINT */}
+291 \textcolor{comment}{/* THIS WILL CORRESPOND TO A POINT COORDINATE OR A DERIVATIVE VECTOR COMP */}
+292     \textcolor{keywordflow}{return} 0;
+293 \} \textcolor{comment}{/* biprod\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}!cvdafs\+\_\+@{cvdafs\+\_\+}}
+\index{cvdafs\+\_\+@{cvdafs\+\_\+}!E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{cvdafs\+\_\+(doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$geo, doublereal $\ast$result, integer $\ast$mode, integer $\ast$mu, integer $\ast$mv, integer $\ast$n, doublereal $\ast$ax, doublereal $\ast$ay, doublereal $\ast$az, doublereal $\ast$cu, doublereal $\ast$cv)}{cvdafs_(doublereal *u, doublereal *v, doublereal *geo, doublereal *result, integer *mode, integer *mu, integer *mv, integer *n, doublereal *ax, doublereal *ay, doublereal *az, doublereal *cu, doublereal *cv)}}]{\setlength{\rightskip}{0pt plus 5cm}int cvdafs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{geo, }
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{mode, }
+\item[{integer $\ast$}]{mu, }
+\item[{integer $\ast$}]{mv, }
+\item[{integer $\ast$}]{n, }
+\item[{doublereal $\ast$}]{ax, }
+\item[{doublereal $\ast$}]{ay, }
+\item[{doublereal $\ast$}]{az, }
+\item[{doublereal $\ast$}]{cu, }
+\item[{doublereal $\ast$}]{cv}
+\end{DoxyParamCaption}
+)}\hypertarget{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5}{}\label{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5}
+
+
+Definition at line 66 of file E\+V\+D\+A\+F\+S.\+c.
+
+
+
+References ax, ay, biprod\+\_\+(), f, i\+\_\+\+\_\+, j, n, x, y, and z\+\_\+\+\_\+.
+
+
+
+Referenced by evdafs\+\_\+().
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{comment}{/* System generated locals */}
+72     integer i\_\_1;
+73 
+74     \textcolor{comment}{/* Builtin functions */}
+75     \textcolor{keywordtype}{double} sqrt(doublereal);
+76 
+77     \textcolor{comment}{/* Local variables */}
+78     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+79     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, \hyperlink{APT088_8c_a0ed6a908288e0cd87f79c1b5ab56d07c}{y}, \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_}, res[3];
+80     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(doublereal *, integer *, integer *, 
+81         doublereal *, doublereal *, doublereal *, doublereal *, 
+82         doublereal *);
+83 
+84 \textcolor{comment}{/* THIS SUBROUTINE PERFORMS ALL BASIC EVALUATION COMPUTATIONS ON VDA SURF */}
+85 \textcolor{comment}{/* MU=DEGREE+1 IN U, MV=DEGREE+1 IN V FOR THIS PATCH, COEFF MAT IS MU*MV. */}
+86 \textcolor{comment}{/*     N=MU*MV */}
+87 \textcolor{comment}{/* SET UP COEFFICIENT MATRICES. */}
+88     \textcolor{comment}{/* Parameter adjustments */}
+89     --geo;
+90     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= 5;
+91     --cu;
+92     --cv;
+93     --az;
+94     --\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay};
+95     --\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax};
+96 
+97     \textcolor{comment}{/* Function Body */}
+98     i\_\_1 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+99     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+100     \hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = geo[i\_\_ + 2];
+101     \hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = geo[i\_\_ + 2 + *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}];
+102 \textcolor{comment}{/* L10: */}
+103     az[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = geo[i\_\_ + 2 + (*\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n} << 1)];
+104     \}
+105 \textcolor{comment}{/* INITIALISE RESULT ARRAY USED TO RETURN POINT ADD DERIVATIVE DATA. */}
+106     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+107     \textcolor{keywordflow}{for} (j = 1; j <= 8; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+108 \textcolor{comment}{/* L15: */}
+109         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + (j << 2)] = 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+110     \}
+111     \}
+112     i\_\_1 = *mu;
+113     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+114 \textcolor{comment}{/* L20: */}
+115     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 1.f;
+116     \}
+117     i\_\_1 = *mv;
+118     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+119 \textcolor{comment}{/* L30: */}
+120     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 1.f;
+121     \}
+122 \textcolor{comment}{/* EVALUATE POINT COORDINATES */}
+123     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &x);
+124     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &y);
+125     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &z\_\_);
+126     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[5] = \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+127     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[6] = \hyperlink{APT088_8c_a0ed6a908288e0cd87f79c1b5ab56d07c}{y};
+128     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[7] = \hyperlink{AERR2_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_};
+129     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[8] = 1.f;
+130     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} == 0) \{
+131     \textcolor{keywordflow}{return} 0;
+132     \}
+133 \textcolor{comment}{/* MODE=0 INDICATES THAT ONLY POINT COORDINATES ARE REQUIRED. */}
+134 \textcolor{comment}{/* EVALUATE FIRST DERIVATIVES, STORE IN COLS 2 AND 3 OF RESULT. */}
+135     i\_\_1 = *mu;
+136     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137 \textcolor{comment}{/* L40: */}
+138     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = i\_\_ - 1.f;
+139     \}
+140     cu[1] = 0.f;
+141     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, res);
+142     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[1]);
+143     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[2]);
+144     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+145 \textcolor{comment}{/* L50: */}
+146     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 8] = res[i\_\_ - 1];
+147     \}
+148     i\_\_1 = *mu;
+149     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+150 \textcolor{comment}{/* L60: */}
+151     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 1.f;
+152     \}
+153     i\_\_1 = *mv;
+154     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+155 \textcolor{comment}{/* L70: */}
+156     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = i\_\_ - 1.f;
+157     \}
+158     cv[1] = 0.f;
+159     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, res);
+160     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[1]);
+161     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[2]);
+162     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+163 \textcolor{comment}{/* L80: */}
+164     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 12] = res[i\_\_ - 1];
+165     \}
+166 \textcolor{comment}{/* EVALUATE MIXED DERIVATIVE (TWIST VECTOR), COL 5 OF RESULT. */}
+167     i\_\_1 = *mu;
+168     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+169 \textcolor{comment}{/* L90: */}
+170     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = i\_\_ - 1.f;
+171     \}
+172     cu[1] = 0.f;
+173     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, res);
+174     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[1]);
+175     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[2]);
+176     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+177 \textcolor{comment}{/* L95: */}
+178     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 20] = res[i\_\_ - 1];
+179     \}
+180     \textcolor{keywordflow}{if} (*mu <= 2) \{
+181     \textcolor{keywordflow}{goto} L135;
+182     \}
+183 \textcolor{comment}{/* 2ND DERIVATIVE ZERO IF U DEGREE=1 */}
+184 \textcolor{comment}{/* EVALUATE 2ND DERIVATIVES, STORE IN COLS 4,6 OF RESULT. */}
+185     i\_\_1 = *mu;
+186     \textcolor{keywordflow}{for} (i\_\_ = 3; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+187 \textcolor{comment}{/* L110: */}
+188     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] *= i\_\_ - 2.f;
+189     \}
+190     cu[2] = 0.f;
+191     i\_\_1 = *mv;
+192     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+193 \textcolor{comment}{/* L120: */}
+194     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 1.f;
+195     \}
+196     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, res);
+197     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[1]);
+198     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[2]);
+199     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+200 \textcolor{comment}{/* L130: */}
+201     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 16] = res[i\_\_ - 1];
+202     \}
+203 L135:
+204     \textcolor{keywordflow}{if} (*mv <= 2) \{
+205     \textcolor{keywordflow}{goto} L165;
+206     \}
+207     i\_\_1 = *mu;
+208     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+209 \textcolor{comment}{/* L140: */}
+210     cu[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = 1.f;
+211     \}
+212     i\_\_1 = *mv;
+213     \textcolor{keywordflow}{for} (i\_\_ = 3; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+214 \textcolor{comment}{/* L150: */}
+215     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = (i\_\_ - 1.f) * (i\_\_ - 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+216     \}
+217     cv[2] = 0.f;
+218     cv[1] = 0.f;
+219     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, res);
+220     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&\hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[1]);
+221     \hyperlink{EVDAFS_8c_a90cc76908f01bcd36e6a4a047740f995}{biprod\_}(&az[1], mu, mv, &cu[1], &cv[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &res[2]);
+222     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+223 \textcolor{comment}{/* L160: */}
+224     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 24] = res[i\_\_ - 1];
+225     \}
+226 L165:
+227 \textcolor{comment}{/* COMPUTE NORMAL AND UNIT NORMAL, STORE IN COLS 7,8 OF RESULT. */}
+228     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[29] = \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[10] * \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[15] - \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[11] * 
+      \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[14];
+229     result[30] = result[11] * result[13] - result[9] * result[15];
+230     result[31] = result[9] * result[14] - result[10] * result[13];
+231     x = 0.f;
+232     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+233 \textcolor{comment}{/* L170: */}
+234     x += result[i\_\_ + 28] * result[i\_\_ + 28];
+235     \}
+236     x = sqrt(x);
+237     \textcolor{keywordflow}{if} (x < 1e-8\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+238     \textcolor{keywordflow}{return} 0;
+239     \}
+240 \textcolor{comment}{/* NORMAL VECTOR IS NOT WELL DEFINED IF X(VECTOR LENGTH) SMALL. */}
+241     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+242 \textcolor{comment}{/* L180: */}
+243     result[i\_\_ + 32] = result[i\_\_ + 28] / \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+244     \}
+245     result[36] = 1.f;
+246 \textcolor{comment}{/* RESULT(4,8)=1 INDICATES A WELL DEFINED UNIT NORMAL IN COL 8. */}
+247     \textcolor{keywordflow}{return} 0;
+248 \} \textcolor{comment}{/* cvdafs\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}!evdafs\+\_\+@{evdafs\+\_\+}}
+\index{evdafs\+\_\+@{evdafs\+\_\+}!E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{evdafs\+\_\+(doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$geo, doublereal $\ast$result, integer $\ast$mode)}{evdafs_(doublereal *u, doublereal *v, doublereal *geo, doublereal *result, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int evdafs\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{geo, }
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16}{}\label{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16}
+
+
+Definition at line 22 of file E\+V\+D\+A\+F\+S.\+c.
+
+
+
+References ax, ay, c\+\_\+\+\_\+1, c\+\_\+\+\_\+9, cvdafs\+\_\+(), and n.
+
+
+
+Referenced by eval\+\_\+().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{comment}{/* Builtin functions */}
+26     integer s\_wsle(cilist *), do\_lio(integer *, integer *, \textcolor{keywordtype}{char} *, ftnlen), 
+27         e\_wsle(\textcolor{keywordtype}{void});
+28 
+29     \textcolor{comment}{/* Local variables */}
+30     \textcolor{keyword}{static} integer \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+31     \textcolor{keyword}{static} doublereal cu[25], \hyperlink{APT301_8c_a0d272cb30e82885ec1fd226175d4565a}{ax}[625], \hyperlink{APT301_8c_a3e0fb79677ac96a9a6905a3417a94a42}{ay}[625], az[625], cv[25];
+32     \textcolor{keyword}{static} integer mu, mv;
+33     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5}{cvdafs\_}(doublereal *, doublereal *, 
+34         doublereal *, doublereal *, integer *, integer *, integer *, 
+35         integer *, doublereal *, doublereal *, doublereal *, doublereal *,
+36          doublereal *);
+37 
+38     \textcolor{comment}{/* Fortran I/O blocks */}
+39     \textcolor{keyword}{static} cilist io\_\_\_4 = \{ 0, 6, 0, 0, 0 \};
+40 
+41 
+42 \textcolor{comment}{/* THIS SUBROUTINE EVALUATES POINT COORDINATES AND DERIVATIVES ON */}
+43 \textcolor{comment}{/* A PATCH OF A VDAFS DEFINED SURFACE. SUBROUTINE BIPROD IS CALLED */}
+44 \textcolor{comment}{/* FOR BASIC BILINEAR MATRIX PRODUCT EVALUATION. */}
+45 \textcolor{comment}{/* SUBROUTINE CVDAFS ORGANISES ENTIRE COMPUTATION EVDAFS CHECKS INPUT DAT */}
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= 5;
+48     --geo;
+49 
+50     \textcolor{comment}{/* Function Body */}
+51     mu = (integer) geo[1];
+52     mv = (integer) geo[2];
+53     n = mu * mv;
+54     \textcolor{keywordflow}{if} (mu > 25 || mv > 25) \{
+55     s\_wsle(&io\_\_\_4);
+56     do\_lio(&\hyperlink{EVDAFS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{c\_\_9}, &\hyperlink{EVDAFS_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{" DEGREE U OR DEGREE V TOO LARGE FOR ARRAY DIME"}
+57         \textcolor{stringliteral}{"NSIONS"}, (ftnlen)52);
+58     e\_wsle();
+59     \textcolor{keywordflow}{return} 0;
+60     \}
+61     \hyperlink{EVDAFS_8c_a5a57058af7c3492673454271aa9402f5}{cvdafs\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &geo[1], &\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[5], \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, &mu, &mv, &n, ax, ay, az, cu, cv)
+62         ;
+63     \textcolor{keywordflow}{return} 0;
+64 \} \textcolor{comment}{/* evdafs\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EVDAFS_8c_a8adea68e878a8ed311de084489a9de16_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{EVDAFS_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{EVDAFS_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 18 of file E\+V\+D\+A\+F\+S.\+c.
+
+
+
+Referenced by evdafs\+\_\+().
+
+\index{E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}!c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}}
+\index{c\+\_\+\+\_\+9@{c\+\_\+\+\_\+9}!E\+V\+D\+A\+F\+S.\+c@{E\+V\+D\+A\+F\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+9}{c__9}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+9 = 9\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{EVDAFS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}{}\label{EVDAFS_8c_aed3f4fb9d6f2b035e8f1179887bcd024}
+
+
+Definition at line 17 of file E\+V\+D\+A\+F\+S.\+c.
+
+
+
+Referenced by evdafs\+\_\+().
+

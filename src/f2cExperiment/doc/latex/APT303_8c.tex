@@ -1,0 +1,80 @@
+\hypertarget{APT303_8c}{}\section{A\+P\+T303.\+c File Reference}
+\label{APT303_8c}\index{A\+P\+T303.\+c@{A\+P\+T303.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T303.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT303_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT303_8c_af128967f59e6b1a3b064580e33d521b9}{apt303\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$matrx, doublereal $\ast$pn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T303.\+c@{A\+P\+T303.\+c}!apt303\+\_\+@{apt303\+\_\+}}
+\index{apt303\+\_\+@{apt303\+\_\+}!A\+P\+T303.\+c@{A\+P\+T303.\+c}}
+\subsubsection[{\texorpdfstring{apt303\+\_\+(doublereal $\ast$result, doublereal $\ast$matrx, doublereal $\ast$pn)}{apt303_(doublereal *result, doublereal *matrx, doublereal *pn)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt303\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{matrx, }
+\item[{doublereal $\ast$}]{pn}
+\end{DoxyParamCaption}
+)}\hypertarget{APT303_8c_af128967f59e6b1a3b064580e33d521b9}{}\label{APT303_8c_af128967f59e6b1a3b064580e33d521b9}
+
+
+Definition at line 28 of file A\+P\+T303.\+c.
+
+
+
+References i\+\_\+\+\_\+, j, p, and result.
+
+
+
+Referenced by apt301\+\_\+().
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[3];
+33 
+34 \textcolor{comment}{/*     THIS ROUTINE TRANSFORMS THE CANONICAL FORM OF A POINT */}
+35 \textcolor{comment}{/*     BY A GIVEN MATRIX */}
+36     \textcolor{comment}{/* Parameter adjustments */}
+37     --pn;
+38     matrx -= 4;
+39     --\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result};
+40 
+41     \textcolor{comment}{/* Function Body */}
+42     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+43 \textcolor{comment}{/* L20: */}
+44     p[i\_\_ - 1] = pn[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+45     \}
+46     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+47     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = matrx[i\_\_ + 12];
+48     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+49         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] += p[j - 1] * matrx[i\_\_ + j * 3];
+50 \textcolor{comment}{/* L70: */}
+51     \}
+52     \}
+53     \textcolor{keywordflow}{return} 0;
+54 \} \textcolor{comment}{/* apt303\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT303_8c_af128967f59e6b1a3b064580e33d521b9_icgraph}
+\end{center}
+\end{figure}
+
+

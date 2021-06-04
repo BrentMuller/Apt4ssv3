@@ -1,0 +1,229 @@
+\hypertarget{DISEG_8c}{}\section{D\+I\+S\+E\+G.\+c File Reference}
+\label{DISEG_8c}\index{D\+I\+S\+E\+G.\+c@{D\+I\+S\+E\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for D\+I\+S\+E\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{DISEG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DISEG_8c_a81ffc48dd8a21bee04d1fe3dfd1a1f8c}{diseg\+\_\+} (integer $\ast$\hyperlink{UTILTY_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}, doublereal $\ast$cin, doublereal $\ast$cout, integer $\ast$mxout, integer $\ast$\hyperlink{SSV3_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{D\+I\+S\+E\+G.\+c@{D\+I\+S\+E\+G.\+c}!diseg\+\_\+@{diseg\+\_\+}}
+\index{diseg\+\_\+@{diseg\+\_\+}!D\+I\+S\+E\+G.\+c@{D\+I\+S\+E\+G.\+c}}
+\subsubsection[{\texorpdfstring{diseg\+\_\+(integer $\ast$iseg, doublereal $\ast$cin, doublereal $\ast$cout, integer $\ast$mxout, integer $\ast$ierror)}{diseg_(integer *iseg, doublereal *cin, doublereal *cout, integer *mxout, integer *ierror)}}]{\setlength{\rightskip}{0pt plus 5cm}int diseg\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{iseg, }
+\item[{doublereal $\ast$}]{cin, }
+\item[{doublereal $\ast$}]{cout, }
+\item[{integer $\ast$}]{mxout, }
+\item[{integer $\ast$}]{ierror}
+\end{DoxyParamCaption}
+)}\hypertarget{DISEG_8c_a81ffc48dd8a21bee04d1fe3dfd1a1f8c}{}\label{DISEG_8c_a81ffc48dd8a21bee04d1fe3dfd1a1f8c}
+
+
+Definition at line 17 of file D\+I\+S\+E\+G.\+c.
+
+
+
+References f, i\+\_\+\+\_\+, j, one, and zero.
+
+
+
+Referenced by gencrv\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+24 
+25     \textcolor{comment}{/* System generated locals */}
+26     integer i\_\_1;
+27 
+28     \textcolor{comment}{/* Local variables */}
+29     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, n1, n2, ki, ko, nn, kix, kox, iarc, narc, nseg, 
+30         narc1, narc2;
+31     \textcolor{keyword}{static} doublereal abias;
+32     \textcolor{keyword}{static} integer nbasi, nbaso, nflow, nsize, nflow1, nflow2, nsegrw;
+33 
+34 \textcolor{comment}{/* ---     PURPOSE IS TO EXTRACT A SINGLE SEGMENT FROM AN S-CURV */}
+35 \textcolor{comment}{/* ---     AND TO CONVERT IT INTO A COMPLETE SYNTHETIC CURVE WITH */}
+36 \textcolor{comment}{/* ---     A SINGLE FLOW SEGMENT */}
+37 \textcolor{comment}{/* ---     INPUT ISEG REFERS TO A VALID CURVE SEGMENT FOR A FLOW */}
+38 \textcolor{comment}{/* ---     TYPE ARC.  IF THE ARC IS A SIMPLE NON FLOW TYPE ISEG */}
+39 \textcolor{comment}{/* ---     DEFAULTS TO AN ARC REFERENCE.  FINALLY A NEGATIVE ISEG */}
+40 \textcolor{comment}{/* ---     ALWAYS REFERS TO AN ARC. */}
+41 \textcolor{comment}{/* ---     CIN IS THE INPUT CURVE STRUCTURE */}
+42 \textcolor{comment}{/* ---     COUT IS THE OUTPUT SINGLE SEGMENT STRUCTURE */}
+43 \textcolor{comment}{/* ---     MXOUT IS THE MAXIMUM SPACE AVAILABLE FOR AN OUTPUT CURVE */}
+44 \textcolor{comment}{/* ---     IERROR NOT ZERO ON RETURN INDICATES AN ERROR */}
+45 
+46     \textcolor{comment}{/* Parameter adjustments */}
+47     --cout;
+48     --cin;
+49 
+50     \textcolor{comment}{/* Function Body */}
+51 
+52 \textcolor{comment}{/* ---     BRANCH TO ARC CALCULATION IF ISEG IS NEGATIVE */}
+53     \textcolor{keywordflow}{if} (*\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} < 0) \{
+54     \textcolor{keywordflow}{goto} L300;
+55     \}
+56     nseg = (integer) cin[8];
+57     \textcolor{keywordflow}{if} (nseg == 0) \{
+58     \textcolor{keywordflow}{goto} L300;
+59     \}
+60 \textcolor{comment}{/* ****    INPUT SEGMENT NUMBER IS INVALID */}
+61 \textcolor{comment}{/* ---    DETERMINE ARCS WHICH MAKE UP THIS SEGMENT REFERENCE */}
+62     *\hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror} = 1;
+63     \textcolor{keywordflow}{if} (*iseg < 1 || *iseg > nseg) \{
+64     \textcolor{keywordflow}{goto} L9998;
+65     \}
+66     nsegrw = (integer) (cin[9] + (*\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} - 1 << 2));
+67     narc1 = (integer) (cin[nsegrw] * 4.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + cin[7]);
+68     narc2 = (integer) (narc1 + (cin[nsegrw + 1] - one) * 4.f);
+69     nflow1 = (integer) cin[narc1];
+70     nflow2 = (integer) (cin[narc2] + cin[narc2 + 1] * 4.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} - one);
+71 \textcolor{comment}{/* ---     ARC NUMBERS */}
+72     n1 = (integer) (cin[nsegrw] + one);
+73     n2 = (integer) (n1 + cin[nsegrw + 1] - one);
+74 \textcolor{comment}{/* ---     SET UP HEADER TABLE FIRST */}
+75     cout[1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+76     cout[2] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+77     cout[3] = 10.f;
+78     cout[4] = (doublereal) ((narc2 - narc1) / 4 + 1);
+79     cout[5] = cout[2] * 24.f + \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+80     cout[6] = cout[4];
+81     cout[7] = cout[5] + cout[4] * 24.f;
+82     cout[8] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+83     cout[9] = cout[7] + cout[6] * 4.f;
+84     cout[10] = (doublereal) ((nflow2 - nflow1 + 1) / 4);
+85     cout[11] = cout[9] + cout[8] * 4.f;
+86     cout[12] = cout[11] + cout[10] * 4.f - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+87     cout[13] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+88     narc = (integer) cout[4];
+89     nsize = (integer) cout[12];
+90 \textcolor{comment}{/* ****    CURVE TOO LARGE FOR BUFFER AREA */}
+91     *\hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror} = 2;
+92     \textcolor{keywordflow}{if} (nsize > *mxout) \{
+93     \textcolor{keywordflow}{goto} L9998;
+94     \}
+95 \textcolor{comment}{/* ---     ZERO OUT REMAINDER OF CANON AREA */}
+96     i\_\_1 = nsize;
+97     \textcolor{keywordflow}{for} (i\_\_ = 14; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+98 \textcolor{comment}{/* L100: */}
+99     cout[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+100     \}
+101     narc = (integer) cout[4];
+102 \textcolor{comment}{/* ---     NOW MOVE CUBIC ARC DATA */}
+103     ko = (integer) (cout[5] - 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+104     ki = (integer) (cin[5] - 8.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + (n1 - 1) * 24);
+105     nn = (integer) (ki + cout[4] * 24.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + 7);
+106     i\_\_1 = nn;
+107     \textcolor{keywordflow}{for} (i\_\_ = ki; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+108     ++ko;
+109     cout[ko] = cin[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+110 \textcolor{comment}{/* L110: */}
+111     \}
+112 
+113 \textcolor{comment}{/* ---     NOW MOVE ARC FLOW SUMMARY BLOCKS */}
+114     ko = (integer) (cout[7] - one);
+115     ki = narc1 - 1;
+116     abias = cin[ki + 1] - cout[11];
+117     i\_\_1 = narc;
+118     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+119     kox = ko + (i\_\_ - 1 << 2);
+120     kix = ki + (i\_\_ - 1 << 2);
+121     \textcolor{keywordflow}{for} (j = 2; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+122 \textcolor{comment}{/* L150: */}
+123         cout[kox + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = cin[kix + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+124     \}
+125     cout[kox + 1] = cin[kix + 1] - abias;
+126 \textcolor{comment}{/* L140: */}
+127     \}
+128 \textcolor{comment}{/* ---     MOVE SEGMENT DATA */}
+129     ki = (integer) (cin[9] - one + (*\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} - 1 << 2));
+130     ko = (integer) (cout[9] - one);
+131     cout[ko + 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+132     cout[ko + 2] = cin[ki + 2];
+133     cout[ko + 3] = cin[ki + 3];
+134     cout[ko + 4] = cin[ki + 4];
+135 \textcolor{comment}{/* ---    FINALLY TRANSFER ALL PERTINENT FLOW BLOCKS */}
+136     ki = (integer) (cin[nsegrw] * 4.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + cin[7]);
+137     ki = (integer) (cin[ki] - one);
+138     ko = (integer) (cout[11] - one);
+139     nflow = (integer) (cout[10] * 4.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+140     i\_\_1 = nflow;
+141     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+142 \textcolor{comment}{/* L160: */}
+143     cout[ko + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = cin[ki + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+144     \}
+145 \textcolor{comment}{/* --- */}
+146     \textcolor{keywordflow}{goto} L9997;
+147 
+148 
+149 \textcolor{comment}{/* ---     SURFACE IS OF SIMPLE NON-FLOW TYPE. ISEG IS THEN AN */}
+150 \textcolor{comment}{/* ---     ARC-TYPE REFERENCE */}
+151 L300:
+152     iarc = abs(*\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg});
+153     nsize = 48;
+154 \textcolor{comment}{/* ****    THERE IS NOT ENOUGH ROOM TO DECOMPOSE ARC */}
+155     *\hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror} = 3;
+156     \textcolor{keywordflow}{if} (nsize > *mxout) \{
+157     \textcolor{keywordflow}{goto} L9998;
+158     \}
+159     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 48; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+160 \textcolor{comment}{/* L310: */}
+161     cout[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+162     \}
+163     cout[2] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+164     cout[3] = 2.f;
+165     cout[4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+166     cout[12] = 48.f;
+167     nseg = (integer) cin[4];
+168 \textcolor{comment}{/* ****    ARC REFERENCE IS OUT OF RANGE */}
+169     *\hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror} = 4;
+170     \textcolor{keywordflow}{if} (iarc < 1 || iarc > nseg) \{
+171     \textcolor{keywordflow}{goto} L9998;
+172     \}
+173     nbasi = (integer) (cin[2] * 24.f + (iarc - 1) * 24 - 8.f);
+174     nbaso = (integer) (cout[2] * 24.f - 8.f);
+175     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 32; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+176 \textcolor{comment}{/* L320: */}
+177     cout[i\_\_ + nbaso] = cin[i\_\_ + nbasi];
+178     \}
+179     \textcolor{keywordflow}{goto} L9997;
+180 
+181 L9997:
+182     *\hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror} = 0;
+183     \textcolor{keywordflow}{goto} L9999;
+184 L9998:
+185 \textcolor{comment}{/* ---    ERROR EXIT PATH */}
+186     \textcolor{keywordflow}{goto} L9999;
+187 
+188 L9999:
+189     \textcolor{keywordflow}{return} 0;
+190 \} \textcolor{comment}{/* diseg\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DISEG_8c_a81ffc48dd8a21bee04d1fe3dfd1a1f8c_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,421 @@
+\hypertarget{DGEOM_8c}{}\section{D\+G\+E\+O\+M.\+c File Reference}
+\label{DGEOM_8c}\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for D\+G\+E\+O\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{DGEOM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{DGEOM_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DGEOM_8c_acaa3e88042ff60c10efef5fea46b2b1b}{dgeom\+\_\+} (doublereal $\ast$dsurf, integer $\ast$idtype, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, integer $\ast$idaxis, doublereal $\ast$daxis, integer $\ast$\hyperlink{SSV3_8c_ae02e4edb09012769d3c8b265df93e5e0}{itldir}, doublereal $\ast$\hyperlink{SSV3_8c_a9dbb1acce2c5647c4c4196bdba41816a}{tldir}, doublereal $\ast$dtol, doublereal $\ast$dr, doublereal $\ast$\hyperlink{UNITS_8c_a86f48fbc667fd3e391a5a60472a760d9}{u1}, doublereal $\ast$\hyperlink{REGION_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, integer $\ast$npat, doublereal $\ast$\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{DGEOM_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{DGEOM_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{DGEOM_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{DGEOM_8c_af9e6c1e6f52462727f7271f39fbfbe2f}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{DGEOM_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\item 
+static integer \hyperlink{DGEOM_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{DGEOM_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\+\_\+n4} = -\/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{DGEOM_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{DGEOM_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!dgeom\+\_\+@{dgeom\+\_\+}}
+\index{dgeom\+\_\+@{dgeom\+\_\+}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{dgeom\+\_\+(doublereal $\ast$dsurf, integer $\ast$idtype, doublereal $\ast$u, doublereal $\ast$v, integer $\ast$idaxis, doublereal $\ast$daxis, integer $\ast$itldir, doublereal $\ast$tldir, doublereal $\ast$dtol, doublereal $\ast$dr, doublereal $\ast$u1, doublereal $\ast$v1, integer $\ast$npat, doublereal $\ast$cx)}{dgeom_(doublereal *dsurf, integer *idtype, doublereal *u, doublereal *v, integer *idaxis, doublereal *daxis, integer *itldir, doublereal *tldir, doublereal *dtol, doublereal *dr, doublereal *u1, doublereal *v1, integer *npat, doublereal *cx)}}]{\setlength{\rightskip}{0pt plus 5cm}int dgeom\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{dsurf, }
+\item[{integer $\ast$}]{idtype, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{integer $\ast$}]{idaxis, }
+\item[{doublereal $\ast$}]{daxis, }
+\item[{integer $\ast$}]{itldir, }
+\item[{doublereal $\ast$}]{tldir, }
+\item[{doublereal $\ast$}]{dtol, }
+\item[{doublereal $\ast$}]{dr, }
+\item[{doublereal $\ast$}]{u1, }
+\item[{doublereal $\ast$}]{v1, }
+\item[{integer $\ast$}]{npat, }
+\item[{doublereal $\ast$}]{cx}
+\end{DoxyParamCaption}
+)}\hypertarget{DGEOM_8c_acaa3e88042ff60c10efef5fea46b2b1b}{}\label{DGEOM_8c_acaa3e88042ff60c10efef5fea46b2b1b}
+
+
+Definition at line 33 of file D\+G\+E\+O\+M.\+c.
+
+
+
+References axset\+\_\+(), b, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, c\+\_\+n1, c\+\_\+n4, ck, cnsurf\+\_\+(), cprint\+\_\+(), cross\+\_\+(), curflo\+\_\+(), cx, dotf\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, iflag, itop, lodpch\+\_\+(), mescon\+\_\+(), nlast, one, step, tldir, and zero.
+
+
+
+Referenced by sspath\+\_\+().
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{comment}{/* Initialized data */}
+39 
+40     \textcolor{keyword}{static} integer \hyperlink{ALARM_8c_a6ba48f069acda86145a51df290260fae}{nlast} = 0;
+41     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+42     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+43     \textcolor{keyword}{static} doublereal smal = 1e-38;
+44     \textcolor{keyword}{static} doublereal hsmal = 1e-19;
+45     \textcolor{keyword}{static} doublereal big = 1e10;
+46     \textcolor{keyword}{static} doublereal arecsv = 0.;
+47     \textcolor{keyword}{static} doublereal qsmal = 1e-6;
+48 
+49     \textcolor{comment}{/* System generated locals */}
+50     integer i\_\_1;
+51     doublereal d\_\_1;
+52 
+53     \textcolor{comment}{/* Builtin functions */}
+54     \textcolor{keywordtype}{double} sqrt(doublereal);
+55     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+56 
+57     \textcolor{comment}{/* Local variables */}
+58     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[64];
+59     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+60     \textcolor{keyword}{static} doublereal \hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck};
+61     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+62     \textcolor{keyword}{static} doublereal rad, vec[3], siz;
+63     \textcolor{keyword}{static} integer jacc, jlim, jtan;
+64     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+65         );
+66     \textcolor{keyword}{static} integer jcrs, \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[24]   \textcolor{comment}{/* was [6][4] */};
+67     \textcolor{keyword}{static} doublereal \hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step}, tnsq;
+68     \textcolor{keyword}{static} integer \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[6], icros;
+69     \textcolor{keyword}{static} doublereal vecsq;
+70     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(integer *, doublereal *, doublereal *, 
+71         doublereal *);
+72     \textcolor{keyword}{static} integer jnorm;
+73     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+74         *);
+75     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+76     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, integer *,
+77          integer *, integer *, integer *), \hyperlink{MESCON_8c_a45c952b2280212f8e736f49c63f97786}{mescon\_}(doublereal *, 
+78         doublereal *, doublereal *, integer *, doublereal *, doublereal *,
+79          integer *), \hyperlink{CURFLO_8c_a0b62b83550ba1c0345040e1d700fdeba}{curflo\_}(doublereal *, doublereal *, doublereal *, 
+80         integer *, integer *), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen), \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(
+81         doublereal *, doublereal *, doublereal *, doublereal *, integer *,
+82          integer *);
+83 
+84 \textcolor{comment}{/* --PURPOSE IS TO GENERATE ALL NECESSARY INFORMATION AT CURRENT */}
+85 \textcolor{comment}{/* --POINT U,V OF DRIVE GEOMETRY.  INPUT PARAMETERS ALL EXPLAINED */}
+86 \textcolor{comment}{/* --IN PATH */}
+87 \textcolor{comment}{/* --OUTPUT */}
+88 \textcolor{comment}{/* --DR  ARRAY CONTAINING ALL RELEVANT CURVE INFORMATION AT POINT U,V */}
+89 \textcolor{comment}{/* -- DR(1-3) = DRIVE GEOMETRY POINT */}
+90 \textcolor{comment}{/* -- DR(5-7) = DRIVE GEOMETRY TANSPL VECTOR */}
+91 \textcolor{comment}{/* -- DR(9-11) = DRIVE GEOMETRY SECOND DERIVATIVE */}
+92 \textcolor{comment}{/* -- DR(13-15) = DRIVE GEOMETRY UNIT TANGENT VECTOR */}
+93 \textcolor{comment}{/* -- DR(17-19) = TOOL AXIS ORIENTATION */}
+94 \textcolor{comment}{/* -- DR(21-23) = TOOL DIRECTION TOWARD PART SURFACE */}
+95 \textcolor{comment}{/* -- DR(25,26)  CURVATURE AND STEP SIZE BASED ON DTOL */}
+96 \textcolor{comment}{/* --- DR(27) = MAXIMUM STEP IN THE DRIVE SURFACE DIRECTION. */}
+97 \textcolor{comment}{/* -- DR(29-31) = CRSSPL TANGENT(IF AVAILABLE) */}
+98 \textcolor{comment}{/* -- DR(33-35) = DRIVE GEOMETRY SURFACE NORMAL(IF AVAILABLE) */}
+99 
+100     \textcolor{comment}{/* Parameter adjustments */}
+101     --\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx};
+102     --dr;
+103     --\hyperlink{CUTREG_8c_a95b199787b38c175aa3400fc856443ee}{tldir};
+104     --daxis;
+105     --dsurf;
+106 
+107     \textcolor{comment}{/* Function Body */}
+108 
+109     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 36; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+110 \textcolor{comment}{/* L5: */}
+111     dr[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+112     \}
+113 \textcolor{comment}{/* --SEPARATE CURVE AND SURFACE CASES IMMEDIATLY */}
+114     \textcolor{keywordflow}{if} (*idtype != 0) \{
+115     \textcolor{keywordflow}{goto} L100;
+116     \}
+117 \textcolor{comment}{/* --SCURV DRIVE GEOMETRY.  EVALUATE CROSS DERIVS ONLY IF VARIABLE */}
+118 \textcolor{comment}{/* --TOOL AXIS OR DIRECTION IS REQUESTED */}
+119     icros = 1;
+120     \textcolor{keywordflow}{if} (*\hyperlink{CUTREG_8c_ae02e4edb09012769d3c8b265df93e5e0}{itldir} != 0 || *idaxis != 0) \{
+121     icros = 2;
+122     \}
+123     \hyperlink{CURFLO_8c_a0b62b83550ba1c0345040e1d700fdeba}{curflo\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, &dsurf[1], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[1], &icros, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+124     \textcolor{keywordflow}{if} (\hyperlink{DGEOM_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+125     \textcolor{keywordflow}{goto} L8809;
+126     \}
+127     jlim = icros << 4;
+128     i\_\_1 = -jlim;
+129     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&i\_\_1, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"CFLO"}, &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[1], (ftnlen)4);
+130 L8809:
+131     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 16; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+132 \textcolor{comment}{/* L10: */}
+133     dr[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+134     \}
+135 \textcolor{comment}{/* --SET AXIS ACCORDING TO IDAXIS SETTING */}
+136     \textcolor{keywordflow}{if} (abs(*idaxis) <= 1) \{
+137     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(idaxis, &daxis[1], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17], &dr[17]);
+138     \} \textcolor{keywordflow}{else} \{
+139     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(idaxis, &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[13], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17], &dr[17]);
+140     \}
+141 \textcolor{comment}{/* --SET THE TOOL DIRECTION NEXT */}
+142     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(\hyperlink{CUTREG_8c_ae02e4edb09012769d3c8b265df93e5e0}{itldir}, &\hyperlink{CUTREG_8c_a95b199787b38c175aa3400fc856443ee}{tldir}[1], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17], &dr[21]);
+143     \textcolor{keywordflow}{goto} L200;
+144 
+145 L100:
+146 \textcolor{comment}{/* --CASE OF MESH STRUCTURED DRIVE SURFACE. */}
+147     \hyperlink{MESCON_8c_a45c952b2280212f8e736f49c63f97786}{mescon\_}(&dsurf[1], \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, npat, \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+148     \textcolor{keywordflow}{if} (nlast != *npat || dsurf[1] != arecsv) \{
+149     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&dsurf[1], b, iflag, itop, npat, &\hyperlink{DGEOM_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+150     \}
+151     nlast = *npat;
+152     arecsv = dsurf[1];
+153     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, b, &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[1], iflag, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+154 \textcolor{comment}{/* --PICK UP TANSPL FIRST AND SECOND DERIVATIVES IF IDTYPE=1 */}
+155 \textcolor{comment}{/* --PICK UP CRSSPL FIRST AND SECOND DERIVATIVES IF IDTYPE=2 */}
+156     jtan = 4;
+157     \textcolor{keywordflow}{if} (*idtype == 2) \{
+158     jtan = 8;
+159     \}
+160     jacc = 12;
+161     \textcolor{keywordflow}{if} (*idtype == 2) \{
+162     jacc = 20;
+163     \}
+164     jcrs = 8;
+165     \textcolor{keywordflow}{if} (*idtype == 2) \{
+166     jcrs = 4;
+167     \}
+168     jnorm = 28;
+169     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+170     dr[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+171     dr[i\_\_ + 4] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[jtan + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+172     dr[i\_\_ + 8] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[jacc + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+173     dr[i\_\_ + 28] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[i\_\_ + jcrs];
+174     dr[i\_\_ + 32] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[i\_\_ + jnorm];
+175 \textcolor{comment}{/* L110: */}
+176     \}
+177     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&siz, &dr[5], &dr[5]);
+178     \textcolor{keywordflow}{if} (siz < smal) \{
+179     \textcolor{keywordflow}{goto} L120;
+180     \}
+181     siz = sqrt(siz);
+182     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+183 \textcolor{comment}{/* L130: */}
+184     dr[i\_\_ + 12] = dr[i\_\_ + 4] / siz;
+185     \}
+186     dr[16] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+187 L120:
+188 \textcolor{comment}{/* --SET THE TOOL AXIS FIRST */}
+189     \textcolor{keywordflow}{if} (abs(*idaxis) <= 1) \{
+190     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(idaxis, &daxis[1], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[29], &dr[17]);
+191     \} \textcolor{keywordflow}{else} \{
+192     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(idaxis, &dr[29], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[29], &dr[17]);
+193     \}
+194 \textcolor{comment}{/* --SET THE TOOL DIRECTION NEXT */}
+195     \hyperlink{AXSET_8c_a025dd045514b9dc7ff142fbacfd1d034}{axset\_}(\hyperlink{CUTREG_8c_ae02e4edb09012769d3c8b265df93e5e0}{itldir}, &\hyperlink{CUTREG_8c_a95b199787b38c175aa3400fc856443ee}{tldir}[1], &\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[29], &dr[21]);
+196 
+197 L200:
+198 \textcolor{comment}{/* --COMPUTE CURVATURE AND STEP SIZE OF CURVE AT THIS POINT */}
+199 
+200     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&tnsq, &dr[5], &dr[5]);
+201     \textcolor{keywordflow}{if} (tnsq < hsmal) \{
+202     \textcolor{keywordflow}{goto} L230;
+203     \}
+204 
+205     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&dr[5], &dr[9], vec);
+206     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&vecsq, vec, vec);
+207     \textcolor{keywordflow}{if} (vecsq < smal) \{
+208     \textcolor{keywordflow}{goto} L230;
+209     \}
+210 \textcolor{comment}{/* Computing 3rd power */}
+211     d\_\_1 = sqrt(tnsq);
+212     ck = sqrt(vecsq) / (d\_\_1 * (d\_\_1 * d\_\_1));
+213     \textcolor{keywordflow}{if} (ck > hsmal) \{
+214     \textcolor{keywordflow}{goto} L240;
+215     \}
+216 L230:
+217 \textcolor{comment}{/* --CURVATURE IS VERY SLIGHT */}
+218     ck = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+219     step = big;
+220     \textcolor{keywordflow}{goto} L300;
+221 
+222 L240:
+223     rad = one / \hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck};
+224     step = (rad + rad - *dtol) * *dtol;
+225     \textcolor{keywordflow}{if} (step < qsmal) \{
+226     \textcolor{keywordflow}{goto} L230;
+227     \}
+228     step = sqrt(step) * 2.f;
+229 
+230 L300:
+231     dr[25] = \hyperlink{INTCON_8c_a725121cf76765367bc815f7707ec643e}{ck};
+232     dr[26] = \hyperlink{INTCON_8c_afc973eaddbc4136b2d75ebe2858303ec}{step};
+233     dr[27] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+234     \textcolor{keywordflow}{if} (tnsq > smal) \{
+235     dr[27] = step / sqrt(tnsq);
+236     \}
+237 
+238 \textcolor{comment}{/* L999: */}
+239     \textcolor{keywordflow}{if} (\hyperlink{DGEOM_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+240     \textcolor{keywordflow}{goto} L1999;
+241     \}
+242     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+243     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER DGEOM"}, (ftnlen)20, (ftnlen)12);
+244     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+245     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"U   "}, \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, (ftnlen)4);
+246     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"V   "}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, (ftnlen)4);
+247     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IDTP"}, idtype, (ftnlen)4);
+248     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IDAX"}, idaxis, (ftnlen)4);
+249     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ITLD"}, \hyperlink{CUTREG_8c_ae02e4edb09012769d3c8b265df93e5e0}{itldir}, (ftnlen)4);
+250     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 33; i\_\_ += 4) \{
+251     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{DGEOM_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\_n4}, &\hyperlink{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DR  "}, &dr[i\_\_], (ftnlen)4);
+252 \textcolor{comment}{/* L1998: */}
+253     \}
+254 L1999:
+255     \textcolor{keywordflow}{return} 0;
+256 \} \textcolor{comment}{/* dgeom\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DGEOM_8c_acaa3e88042ff60c10efef5fea46b2b1b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DGEOM_8c_acaa3e88042ff60c10efef5fea46b2b1b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{DGEOM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 25 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{DGEOM_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 26 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DGEOM_8c_a5e7359f78743350865398325d9155f20}{}\label{DGEOM_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 27 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DGEOM_8c_a9e9287f317ef3436252a395791a899f6}{}\label{DGEOM_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 28 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!c\+\_\+n4@{c\+\_\+n4}}
+\index{c\+\_\+n4@{c\+\_\+n4}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n4}{c_n4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n4 = -\/4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{DGEOM_8c_a900642cfb0fdb02c80380e0b73330cb5}{}\label{DGEOM_8c_a900642cfb0fdb02c80380e0b73330cb5}
+
+
+Definition at line 29 of file D\+G\+E\+O\+M.\+c.
+
+
+
+Referenced by dgeom\+\_\+().
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{DGEOM_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{DGEOM_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file D\+G\+E\+O\+M.\+c.
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{DGEOM_8c_af9e6c1e6f52462727f7271f39fbfbe2f}{}\label{DGEOM_8c_af9e6c1e6f52462727f7271f39fbfbe2f}
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{DGEOM_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{DGEOM_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file D\+G\+E\+O\+M.\+c.
+
+\index{D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!D\+G\+E\+O\+M.\+c@{D\+G\+E\+O\+M.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{DGEOM_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{DGEOM_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file D\+G\+E\+O\+M.\+c.
+

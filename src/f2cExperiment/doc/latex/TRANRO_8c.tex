@@ -1,0 +1,75 @@
+\hypertarget{TRANRO_8c}{}\section{T\+R\+A\+N\+R\+O.\+c File Reference}
+\label{TRANRO_8c}\index{T\+R\+A\+N\+R\+O.\+c@{T\+R\+A\+N\+R\+O.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for T\+R\+A\+N\+R\+O.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{TRANRO_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TRANRO_8c_a76673d0fd9710065237fda15a58816e9}{tranro\+\_\+} (doublereal $\ast$\hyperlink{APT341_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1}, doublereal $\ast$\hyperlink{APT341_8c_a5d76009b66cdd32d86e324869a02c1fb}{y1}, doublereal $\ast$x11, doublereal $\ast$y11, doublereal $\ast$\hyperlink{UTILTY_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}, integer $\ast$iz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{T\+R\+A\+N\+R\+O.\+c@{T\+R\+A\+N\+R\+O.\+c}!tranro\+\_\+@{tranro\+\_\+}}
+\index{tranro\+\_\+@{tranro\+\_\+}!T\+R\+A\+N\+R\+O.\+c@{T\+R\+A\+N\+R\+O.\+c}}
+\subsubsection[{\texorpdfstring{tranro\+\_\+(doublereal $\ast$x1, doublereal $\ast$y1, doublereal $\ast$x11, doublereal $\ast$y11, doublereal $\ast$ra, integer $\ast$iz)}{tranro_(doublereal *x1, doublereal *y1, doublereal *x11, doublereal *y11, doublereal *ra, integer *iz)}}]{\setlength{\rightskip}{0pt plus 5cm}int tranro\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{x1, }
+\item[{doublereal $\ast$}]{y1, }
+\item[{doublereal $\ast$}]{x11, }
+\item[{doublereal $\ast$}]{y11, }
+\item[{doublereal $\ast$}]{ra, }
+\item[{integer $\ast$}]{iz}
+\end{DoxyParamCaption}
+)}\hypertarget{TRANRO_8c_a76673d0fd9710065237fda15a58816e9}{}\label{TRANRO_8c_a76673d0fd9710065237fda15a58816e9}
+
+
+Definition at line 25 of file T\+R\+A\+N\+R\+O.\+c.
+
+
+
+Referenced by apt034\+\_\+(), and apt070\+\_\+().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{comment}{/* Builtin functions */}
+29     \textcolor{keywordtype}{double} sin(doublereal), cos(doublereal);
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} doublereal tc, ts;
+33 
+34     ts = sin(*\hyperlink{AERR2_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra});
+35     tc = cos(*\hyperlink{AERR2_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra});
+36     \textcolor{keywordflow}{if} (*iz < 0) \{
+37     \textcolor{keywordflow}{goto} L1;
+38     \}
+39     *x11 = *\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1} * tc - *\hyperlink{APT301_8c_a5d76009b66cdd32d86e324869a02c1fb}{y1} * ts;
+40     *y11 = *\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1} * ts + *\hyperlink{APT301_8c_a5d76009b66cdd32d86e324869a02c1fb}{y1} * tc;
+41     \textcolor{keywordflow}{goto} L2;
+42 L1:
+43     *x11 = *\hyperlink{APT301_8c_a3818b7c50ae3cf2e9ae39316586a1aa4}{x1} * tc + *\hyperlink{APT301_8c_a5d76009b66cdd32d86e324869a02c1fb}{y1} * ts;
+44     *y11 = -(*x1) * ts + *\hyperlink{APT301_8c_a5d76009b66cdd32d86e324869a02c1fb}{y1} * tc;
+45 L2:
+46     \textcolor{keywordflow}{return} 0;
+47 \} \textcolor{comment}{/* tranro\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TRANRO_8c_a76673d0fd9710065237fda15a58816e9_icgraph}
+\end{center}
+\end{figure}
+
+

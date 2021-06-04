@@ -1,0 +1,111 @@
+\hypertarget{GSPHER_8c}{}\section{G\+S\+P\+H\+E\+R.\+c File Reference}
+\label{GSPHER_8c}\index{G\+S\+P\+H\+E\+R.\+c@{G\+S\+P\+H\+E\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+S\+P\+H\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{GSPHER_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GSPHER_8c_a4b1725c62a065328773db55994fac065}{gspher\+\_\+} (doublereal $\ast$\hyperlink{XNUMBR_8c_a68d3ba380c16e286247bb69367760615}{canon}, doublereal $\ast$quadbf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+S\+P\+H\+E\+R.\+c@{G\+S\+P\+H\+E\+R.\+c}!gspher\+\_\+@{gspher\+\_\+}}
+\index{gspher\+\_\+@{gspher\+\_\+}!G\+S\+P\+H\+E\+R.\+c@{G\+S\+P\+H\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{gspher\+\_\+(doublereal $\ast$canon, doublereal $\ast$quadbf)}{gspher_(doublereal *canon, doublereal *quadbf)}}]{\setlength{\rightskip}{0pt plus 5cm}int gspher\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{canon, }
+\item[{doublereal $\ast$}]{quadbf}
+\end{DoxyParamCaption}
+)}\hypertarget{GSPHER_8c_a4b1725c62a065328773db55994fac065}{}\label{GSPHER_8c_a4b1725c62a065328773db55994fac065}
+
+
+Definition at line 39 of file G\+S\+P\+H\+E\+R.\+c.
+
+
+
+References canon, and j.
+
+
+
+Referenced by gsurf\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* System generated locals */}
+42     doublereal d\_\_1, d\_\_2, d\_\_3;
+43 
+44     \textcolor{comment}{/* Local variables */}
+45     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, kr, kx, ky, kz;
+46 
+47 
+48 
+49     \textcolor{comment}{/* Parameter adjustments */}
+50     --quadbf;
+51     --\hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon};
+52 
+53     \textcolor{comment}{/* Function Body */}
+54     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+55 \textcolor{comment}{/* L2: */}
+56     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 1.f;
+57     \}
+58 
+59     \textcolor{keywordflow}{for} (j = 4; j <= 6; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+60 \textcolor{comment}{/* L3: */}
+61     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 0.f;
+62     \}
+63 
+64 \textcolor{comment}{/*        COMPUTE C*X TERM */}
+65 
+66     kx = 1;
+67     ky = 2;
+68     kz = 3;
+69     kr = 4;
+70     quadbf[7] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kx] * -2.f;
+71 
+72 \textcolor{comment}{/*        COMPUTE C*Y TERM */}
+73 
+74     quadbf[8] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[ky] * -2.f;
+75 
+76 \textcolor{comment}{/*        COMPUTE C*Z TERM */}
+77 
+78     quadbf[9] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kz] * -2.f;
+79 
+80 \textcolor{comment}{/*        COMPUTE CONSTANT TERM */}
+81 
+82 \textcolor{comment}{/* Computing 2nd power */}
+83     d\_\_1 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kx];
+84 \textcolor{comment}{/* Computing 2nd power */}
+85     d\_\_2 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[ky];
+86 \textcolor{comment}{/* Computing 2nd power */}
+87     d\_\_3 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kz];
+88     quadbf[10] = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+89 \textcolor{comment}{/* Computing 2nd power */}
+90     d\_\_1 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kr];
+91     quadbf[10] -= d\_\_1 * d\_\_1;
+92 
+93 \textcolor{comment}{/*        RETURN TO CALLING PROGRAM */}
+94 
+95     \textcolor{keywordflow}{return} 0;
+96 \} \textcolor{comment}{/* gspher\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GSPHER_8c_a4b1725c62a065328773db55994fac065_icgraph}
+\end{center}
+\end{figure}
+
+

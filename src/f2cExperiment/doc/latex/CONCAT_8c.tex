@@ -1,0 +1,117 @@
+\hypertarget{CONCAT_8c}{}\section{C\+O\+N\+C\+A\+T.\+c File Reference}
+\label{CONCAT_8c}\index{C\+O\+N\+C\+A\+T.\+c@{C\+O\+N\+C\+A\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+O\+N\+C\+A\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{CONCAT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3}{concat\+\_\+} (char $\ast$\hyperlink{SSV3_8c_a261860b093636a4ad3776d300f2467c0}{chr}, char $\ast$bcd, ftnlen chr\+\_\+len, ftnlen bcd\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{CONCAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+O\+N\+C\+A\+T.\+c@{C\+O\+N\+C\+A\+T.\+c}!concat\+\_\+@{concat\+\_\+}}
+\index{concat\+\_\+@{concat\+\_\+}!C\+O\+N\+C\+A\+T.\+c@{C\+O\+N\+C\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{concat\+\_\+(char $\ast$chr, char $\ast$bcd, ftnlen chr\+\_\+len, ftnlen bcd\+\_\+len)}{concat_(char *chr, char *bcd, ftnlen chr_len, ftnlen bcd_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int concat\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{chr, }
+\item[{char $\ast$}]{bcd, }
+\item[{ftnlen}]{chr\+\_\+len, }
+\item[{ftnlen}]{bcd\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3}{}\label{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3}
+
+
+Definition at line 21 of file C\+O\+N\+C\+A\+T.\+c.
+
+
+
+References c\+\_\+\+\_\+1, chr, and k.
+
+
+
+Referenced by goloft\+\_\+(), isscod\+\_\+(), lcanon\+\_\+(), recog\+\_\+(), ssdef\+\_\+(), and tssmil\+\_\+().
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{comment}{/* System generated locals */}
+25     icilist ici\_\_1;
+26 
+27     \textcolor{comment}{/* Builtin functions */}
+28     integer s\_rsfi(icilist *), do\_fio(integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_rsfi(\textcolor{keywordtype}{void})
+29         , s\_wsfi(icilist *), e\_wsfi(\textcolor{keywordtype}{void});
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, nchr;
+33 
+34 
+35 \textcolor{comment}{/* .....INSERT A SINGLE CHARACTER, BCD, INTO NEXT AVAILABLE POSITION */}
+36 \textcolor{comment}{/* .....IN STRING OF CHARACTERS, CHR */}
+37 
+38 \textcolor{comment}{/* .....THE NUMBER OF CHARACTERS IN THE STRING IS HELD IN THE FIRST 3 CHAR */}
+39 \textcolor{comment}{/* .....LOCATIONS OF CHR */}
+40 
+41 
+42     ici\_\_1.icierr = 0;
+43     ici\_\_1.iciend = 0;
+44     ici\_\_1.icirnum = 1;
+45     ici\_\_1.icirlen = chr\_len;
+46     ici\_\_1.iciunit = \hyperlink{RECOG_8c_a261860b093636a4ad3776d300f2467c0}{chr};
+47     ici\_\_1.icifmt = \textcolor{stringliteral}{"(I3)"};
+48     s\_rsfi(&ici\_\_1);
+49     do\_fio(&\hyperlink{CONCAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&nchr, (ftnlen)\textcolor{keyword}{sizeof}(integer));
+50     e\_rsfi();
+51     ++nchr;
+52     ici\_\_1.icierr = 0;
+53     ici\_\_1.icirnum = 1;
+54     ici\_\_1.icirlen = 3;
+55     ici\_\_1.iciunit = \hyperlink{RECOG_8c_a261860b093636a4ad3776d300f2467c0}{chr};
+56     ici\_\_1.icifmt = \textcolor{stringliteral}{"(I3)"};
+57     s\_wsfi(&ici\_\_1);
+58     do\_fio(&\hyperlink{CONCAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&nchr, (ftnlen)\textcolor{keyword}{sizeof}(integer));
+59     e\_wsfi();
+60     k = nchr + 3;
+61     *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&\hyperlink{RECOG_8c_a261860b093636a4ad3776d300f2467c0}{chr}[k - 1] = *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)bcd;
+62 
+63     \textcolor{keywordflow}{return} 0;
+64 \} \textcolor{comment}{/* concat\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CONCAT_8c_af813785ebf6f2f06ac16a1daf2066ef3_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+O\+N\+C\+A\+T.\+c@{C\+O\+N\+C\+A\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+O\+N\+C\+A\+T.\+c@{C\+O\+N\+C\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CONCAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CONCAT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file C\+O\+N\+C\+A\+T.\+c.
+
+
+
+Referenced by concat\+\_\+().
+

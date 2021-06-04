@@ -1,0 +1,84 @@
+\hypertarget{CLIFT_8c}{}\section{C\+L\+I\+F\+T.\+c File Reference}
+\label{CLIFT_8c}\index{C\+L\+I\+F\+T.\+c@{C\+L\+I\+F\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+I\+F\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{CLIFT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLIFT_8c_a6d416e0b8e95d330a4272fd91fe590f6}{clift\+\_\+} (doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{SSV3_8c_a1b01af1095de897c2edc2bd54583fa5c}{clrpln}, doublereal $\ast$tx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+L\+I\+F\+T.\+c@{C\+L\+I\+F\+T.\+c}!clift\+\_\+@{clift\+\_\+}}
+\index{clift\+\_\+@{clift\+\_\+}!C\+L\+I\+F\+T.\+c@{C\+L\+I\+F\+T.\+c}}
+\subsubsection[{\texorpdfstring{clift\+\_\+(doublereal $\ast$te, doublereal $\ast$clrpln, doublereal $\ast$tx)}{clift_(doublereal *te, doublereal *clrpln, doublereal *tx)}}]{\setlength{\rightskip}{0pt plus 5cm}int clift\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{clrpln, }
+\item[{doublereal $\ast$}]{tx}
+\end{DoxyParamCaption}
+)}\hypertarget{CLIFT_8c_a6d416e0b8e95d330a4272fd91fe590f6}{}\label{CLIFT_8c_a6d416e0b8e95d330a4272fd91fe590f6}
+
+
+Definition at line 17 of file C\+L\+I\+F\+T.\+c.
+
+
+
+References clrpln, i\+\_\+\+\_\+, te, and zero.
+
+
+
+Referenced by cutreg\+\_\+(), and smil\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+23 
+24     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+25     \textcolor{keyword}{static} doublereal sum;
+26 
+27 \textcolor{comment}{/* ---PURPOSE IS TO LIFT TOOL END TE TO POSITION TX ON CLEARANCE */}
+28 \textcolor{comment}{/* ---PLANE CLRPLN.  MOVE IS IN DIRECTION OF PLANE NORMAL. */}
+29 
+30     \textcolor{comment}{/* Parameter adjustments */}
+31     --tx;
+32     --\hyperlink{CUTREG_8c_a4984a036558848d87c0e2339606204e2}{clrpln};
+33     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+34 
+35     \textcolor{comment}{/* Function Body */}
+36 
+37     sum = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+38     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+39     sum = (\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{CUTREG_8c_a4984a036558848d87c0e2339606204e2}{clrpln}[4] * \hyperlink{CUTREG_8c_a4984a036558848d87c0e2339606204e2}{clrpln}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}]) * \hyperlink{CUTREG_8c_a4984a036558848d87c0e2339606204e2}{clrpln}[i\_\_] + sum;
+40 \textcolor{comment}{/* L10: */}
+41     \}
+42     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+43 \textcolor{comment}{/* L20: */}
+44     tx[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - sum * \hyperlink{CUTREG_8c_a4984a036558848d87c0e2339606204e2}{clrpln}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+45     \}
+46     \textcolor{keywordflow}{return} 0;
+47 \} \textcolor{comment}{/* clift\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLIFT_8c_a6d416e0b8e95d330a4272fd91fe590f6_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,1298 @@
+\hypertarget{CNVRT3_8c}{}\section{C\+N\+V\+R\+T3.\+c File Reference}
+\label{CNVRT3_8c}\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+N\+V\+R\+T3.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{CNVRT3_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CNVRT3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1}~\hyperlink{SSV3_8c_a86cb51d93af19d32784fe210525a8ed9}{editor\+\_\+}
+\item 
+\#define \hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\+\_\+1}~\hyperlink{CNVRT3_8c_a61841ba38f740e95bdd28f7a80b34604}{i5axis\+\_\+}
+\item 
+\#define \hyperlink{CNVRT3_8c_a6ef0e5cd26c9f78a24d19dd0b2cfacc3}{pm0}~((char $\ast$)\&equiv\+\_\+9)
+\item 
+\#define \hyperlink{CNVRT3_8c_a791a4bf71d2b033397b96c724278610e}{pm1}~((char $\ast$)\&equiv\+\_\+9 + 300)
+\item 
+\#define \hyperlink{CNVRT3_8c_a348902539f45be9f1e706a1b7924480e}{r1000}~((doublereal $\ast$)((integer $\ast$)\&equiv\+\_\+7 + 3))
+\item 
+\#define \hyperlink{CNVRT3_8c_adfc9d568fc0536427fcc65d0a150cf14}{blk}~((char $\ast$)\&equiv\+\_\+16)
+\item 
+\#define \hyperlink{CNVRT3_8c_aefa7d567e48b68ac01c7336907b3c613}{ijk}~((integer $\ast$)equiv\+\_\+6)
+\item 
+\#define \hyperlink{CNVRT3_8c_aecdf271654c103965603d45e4e6bc473}{blk2}~((char $\ast$)\&equiv\+\_\+16)
+\item 
+\#define \hyperlink{CNVRT3_8c_a9a818cf60edf13f4ea87795b974a94ac}{blk4}~((char $\ast$)\&equiv\+\_\+16)
+\item 
+\#define \hyperlink{CNVRT3_8c_a0a5b565ae8b25ced23d8c34cc89ca3c1}{par0}~((char $\ast$)\&equiv\+\_\+13)
+\item 
+\#define \hyperlink{CNVRT3_8c_a335b280c814b6d6ad29e230a484936dd}{par1}~((char $\ast$)\&equiv\+\_\+13 + 300)
+\item 
+\#define \hyperlink{CNVRT3_8c_a7acba3a9f362dfe6ad9ac76786bb4a2d}{par2}~((char $\ast$)\&equiv\+\_\+13 + 600)
+\item 
+\#define \hyperlink{CNVRT3_8c_a3e0937abf88417f20ec59bf53a0bdc22}{par3}~((char $\ast$)\&equiv\+\_\+13 + 900)
+\item 
+\#define \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}~((integer $\ast$)\&equiv\+\_\+7)
+\item 
+\#define \hyperlink{CNVRT3_8c_adfbb32e6ed0a1b4dd34036f38e247c9e}{area1}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1})
+\item 
+\#define \hyperlink{CNVRT3_8c_aa1dd0b5869725d6fd45649bdd3eb772d}{area2}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1} + 500)
+\item 
+\#define \hyperlink{CNVRT3_8c_a23eeabebb94f807b73bcfdb6fb06c316}{area3}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1} + 1250)
+\item 
+\#define \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}~((char $\ast$)\&equiv\+\_\+16)
+\item 
+\#define \hyperlink{CNVRT3_8c_acff701cfc8fab0de8704435ba1462970}{param}~((char $\ast$)\&equiv\+\_\+13)
+\item 
+\#define \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}~(equiv\+\_\+6 + 2)
+\item 
+\#define \hyperlink{CNVRT3_8c_ac8ae5dca60bd5872693eafdf5394ea92}{irecrd}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1})
+\item 
+\#define \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}~((integer $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1})
+\item 
+\#define \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}~((doublereal $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1})
+\item 
+\#define \hyperlink{CNVRT3_8c_a2f8b6f082eb4a51d54b4e8e5d99c26d3}{numcld}~((integer $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1} + 1186)
+\item 
+\#define \hyperlink{CNVRT3_8c_a23f15e06301977b1efc9955607eb44b7}{pmname}~((char $\ast$)\&equiv\+\_\+9)
+\item 
+\#define \hyperlink{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}{numwds}~((integer $\ast$)\&\hyperlink{SSV3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{editor\+\_\+1} + 5)
+\item 
+\#define \hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp}~((integer $\ast$)equiv\+\_\+6 + 3)
+\item 
+\#define \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}~((integer $\ast$)equiv\+\_\+6 + 1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CNVRT3_8c_a788f7b5bd4b6ba971875e2df34ae4c5f}{cnvrt3\+\_\+} (integer $\ast$\hyperlink{APT335_8c_a2c7168fea824fd88892a45794a14e833}{mltflg})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{CNVRT3_8c_a6b18a930123fb01868b126be83cf8d75}{editor} \mbox{[}1500\mbox{]}\\
+\} \hyperlink{CNVRT3_8c_ae23d92095ff9e5845f099b188cd53a40}{editor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CNVRT3_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{CNVRT3_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{CNVRT3_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{CNVRT3_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{CNVRT3_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{CNVRT3_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{CNVRT3_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{CNVRT3_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{CNVRT3_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{CNVRT3_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{CNVRT3_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{CNVRT3_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{CNVRT3_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{CNVRT3_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{CNVRT3_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{CNVRT3_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{CNVRT3_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{CNVRT3_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{CNVRT3_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{CNVRT3_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{CNVRT3_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{CNVRT3_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{CNVRT3_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{CNVRT3_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{CNVRT3_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{CNVRT3_8c_a46ec9015bc80c29abc9ccacdfa2901e7}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CNVRT3_8c_a9ccf01f0619693acef04475017b5cab1}{ivtflg}\\
+\>integer \hyperlink{CNVRT3_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{CNVRT3_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}\\
+\>integer \hyperlink{CNVRT3_8c_a1102a8dadcd21d7952427507857411d8}{il}\\
+\>integer \hyperlink{CNVRT3_8c_ad0eaecf0bba0f19f301e8a5c5a772646}{ie}\\
+\>integer \hyperlink{CNVRT3_8c_a42446e8b9101a7e89a6d804471f73fd3}{jsuber}\\
+\>integer \hyperlink{CNVRT3_8c_a045978b88963318d213a5aa962bfe3f3}{iabove}\\
+\>integer \hyperlink{CNVRT3_8c_aff6964b2f1593ddb3e8cbe4385950857}{nrecex}\\
+\>integer \hyperlink{CNVRT3_8c_a1ae8a9c5bb3b551cdebd20581ec09e46}{nreccl}\\
+\>integer \hyperlink{CNVRT3_8c_a738b425fdcd81ccd5105e377b962100c}{ncflsv}\\
+\} \hyperlink{CNVRT3_8c_a61841ba38f740e95bdd28f7a80b34604}{i5axis\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\+\_\+\+\_\+6} = 6
+\item 
+static integer \hyperlink{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\item 
+static integer \hyperlink{CNVRT3_8c_ab1ac1d0ea47764e9290fab6543550a62}{c\+\_\+\+\_\+30030} = 30030
+\item 
+static integer \hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\item 
+static integer \hyperlink{CNVRT3_8c_a640e043a8ea553ef3ed0a9e5a628988d}{c\+\_\+\+\_\+30038} = 30038
+\item 
+static integer \hyperlink{CNVRT3_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!area1@{area1}}
+\index{area1@{area1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{area1}{area1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define area1~((doublereal $\ast$)\&{\bf editor\+\_\+1})}\hypertarget{CNVRT3_8c_adfbb32e6ed0a1b4dd34036f38e247c9e}{}\label{CNVRT3_8c_adfbb32e6ed0a1b4dd34036f38e247c9e}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!area2@{area2}}
+\index{area2@{area2}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{area2}{area2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define area2~((doublereal $\ast$)\&{\bf editor\+\_\+1} + 500)}\hypertarget{CNVRT3_8c_aa1dd0b5869725d6fd45649bdd3eb772d}{}\label{CNVRT3_8c_aa1dd0b5869725d6fd45649bdd3eb772d}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!area3@{area3}}
+\index{area3@{area3}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{area3}{area3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define area3~((doublereal $\ast$)\&{\bf editor\+\_\+1} + 1250)}\hypertarget{CNVRT3_8c_a23eeabebb94f807b73bcfdb6fb06c316}{}\label{CNVRT3_8c_a23eeabebb94f807b73bcfdb6fb06c316}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!blank@{blank}}
+\index{blank@{blank}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{blank}{blank}}]{\setlength{\rightskip}{0pt plus 5cm}\#define blank~((char $\ast$)\&equiv\+\_\+16)}\hypertarget{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{}\label{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}
+
+
+Referenced by apt299\+\_\+(), apt302\+\_\+(), apt331\+\_\+(), bad\+\_\+(), bcdbin\+\_\+(), binbcd\+\_\+(), cnvrt3\+\_\+(), goloft\+\_\+(), init\+\_\+(), sctra\+\_\+(), sprvis\+\_\+0\+\_\+(), sspict\+\_\+(), sstra\+\_\+(), and tssmil\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!blk@{blk}}
+\index{blk@{blk}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{blk}{blk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define blk~((char $\ast$)\&equiv\+\_\+16)}\hypertarget{CNVRT3_8c_adfc9d568fc0536427fcc65d0a150cf14}{}\label{CNVRT3_8c_adfc9d568fc0536427fcc65d0a150cf14}
+
+
+Referenced by alarm\+\_\+(), cnvrt3\+\_\+(), gettmp\+\_\+(), maclbl\+\_\+(), numb\+\_\+(), oppair\+\_\+(), print\+\_\+(), prtil\+\_\+(), and recog\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!blk2@{blk2}}
+\index{blk2@{blk2}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{blk2}{blk2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define blk2~((char $\ast$)\&equiv\+\_\+16)}\hypertarget{CNVRT3_8c_aecdf271654c103965603d45e4e6bc473}{}\label{CNVRT3_8c_aecdf271654c103965603d45e4e6bc473}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!blk4@{blk4}}
+\index{blk4@{blk4}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{blk4}{blk4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define blk4~((char $\ast$)\&equiv\+\_\+16)}\hypertarget{CNVRT3_8c_a9a818cf60edf13f4ea87795b974a94ac}{}\label{CNVRT3_8c_a9a818cf60edf13f4ea87795b974a94ac}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!editor\+\_\+1@{editor\+\_\+1}}
+\index{editor\+\_\+1@{editor\+\_\+1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{editor\+\_\+1}{editor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define editor\+\_\+1~{\bf editor\+\_\+}}\hypertarget{CNVRT3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}{}\label{CNVRT3_8c_ac81ee6996d4c52bb5df95eff8e8de40d}
+
+
+Definition at line 21 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!i5axis\+\_\+1@{i5axis\+\_\+1}}
+\index{i5axis\+\_\+1@{i5axis\+\_\+1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{i5axis\+\_\+1}{i5axis_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define i5axis\+\_\+1~{\bf i5axis\+\_\+}}\hypertarget{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{}\label{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}
+
+
+Definition at line 36 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ijk@{ijk}}
+\index{ijk@{ijk}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ijk}{ijk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ijk~((integer $\ast$)equiv\+\_\+6)}\hypertarget{CNVRT3_8c_aefa7d567e48b68ac01c7336907b3c613}{}\label{CNVRT3_8c_aefa7d567e48b68ac01c7336907b3c613}
+
+
+Referenced by mesh\+\_\+(), and sstra\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ir1000@{ir1000}}
+\index{ir1000@{ir1000}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ir1000}{ir1000}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ir1000~((integer $\ast$)\&equiv\+\_\+7)}\hypertarget{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{}\label{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!irecrd@{irecrd}}
+\index{irecrd@{irecrd}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{irecrd}{irecrd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define irecrd~((doublereal $\ast$)\&{\bf editor\+\_\+1})}\hypertarget{CNVRT3_8c_ac8ae5dca60bd5872693eafdf5394ea92}{}\label{CNVRT3_8c_ac8ae5dca60bd5872693eafdf5394ea92}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!irxxxx@{irxxxx}}
+\index{irxxxx@{irxxxx}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{irxxxx}{irxxxx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define irxxxx~((integer $\ast$)equiv\+\_\+6 + 1)}\hypertarget{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{}\label{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!jrecrd@{jrecrd}}
+\index{jrecrd@{jrecrd}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{jrecrd}{jrecrd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jrecrd~((integer $\ast$)\&{\bf editor\+\_\+1})}\hypertarget{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{}\label{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!numcld@{numcld}}
+\index{numcld@{numcld}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{numcld}{numcld}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numcld~((integer $\ast$)\&{\bf editor\+\_\+1} + 1186)}\hypertarget{CNVRT3_8c_a2f8b6f082eb4a51d54b4e8e5d99c26d3}{}\label{CNVRT3_8c_a2f8b6f082eb4a51d54b4e8e5d99c26d3}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!numwds@{numwds}}
+\index{numwds@{numwds}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{numwds}{numwds}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numwds~((integer $\ast$)\&{\bf editor\+\_\+1} + 5)}\hypertarget{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}{}\label{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!par0@{par0}}
+\index{par0@{par0}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{par0}{par0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define par0~((char $\ast$)\&equiv\+\_\+13)}\hypertarget{CNVRT3_8c_a0a5b565ae8b25ced23d8c34cc89ca3c1}{}\label{CNVRT3_8c_a0a5b565ae8b25ced23d8c34cc89ca3c1}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!par1@{par1}}
+\index{par1@{par1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{par1}{par1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define par1~((char $\ast$)\&equiv\+\_\+13 + 300)}\hypertarget{CNVRT3_8c_a335b280c814b6d6ad29e230a484936dd}{}\label{CNVRT3_8c_a335b280c814b6d6ad29e230a484936dd}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!par2@{par2}}
+\index{par2@{par2}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{par2}{par2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define par2~((char $\ast$)\&equiv\+\_\+13 + 600)}\hypertarget{CNVRT3_8c_a7acba3a9f362dfe6ad9ac76786bb4a2d}{}\label{CNVRT3_8c_a7acba3a9f362dfe6ad9ac76786bb4a2d}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!par3@{par3}}
+\index{par3@{par3}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{par3}{par3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define par3~((char $\ast$)\&equiv\+\_\+13 + 900)}\hypertarget{CNVRT3_8c_a3e0937abf88417f20ec59bf53a0bdc22}{}\label{CNVRT3_8c_a3e0937abf88417f20ec59bf53a0bdc22}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!param@{param}}
+\index{param@{param}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{param}{param}}]{\setlength{\rightskip}{0pt plus 5cm}\#define param~((char $\ast$)\&equiv\+\_\+13)}\hypertarget{CNVRT3_8c_acff701cfc8fab0de8704435ba1462970}{}\label{CNVRT3_8c_acff701cfc8fab0de8704435ba1462970}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pm0@{pm0}}
+\index{pm0@{pm0}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pm0}{pm0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pm0~((char $\ast$)\&equiv\+\_\+9)}\hypertarget{CNVRT3_8c_a6ef0e5cd26c9f78a24d19dd0b2cfacc3}{}\label{CNVRT3_8c_a6ef0e5cd26c9f78a24d19dd0b2cfacc3}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pm1@{pm1}}
+\index{pm1@{pm1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pm1}{pm1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pm1~((char $\ast$)\&equiv\+\_\+9 + 300)}\hypertarget{CNVRT3_8c_a791a4bf71d2b033397b96c724278610e}{}\label{CNVRT3_8c_a791a4bf71d2b033397b96c724278610e}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pmname@{pmname}}
+\index{pmname@{pmname}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pmname}{pmname}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pmname~((char $\ast$)\&equiv\+\_\+9)}\hypertarget{CNVRT3_8c_a23f15e06301977b1efc9955607eb44b7}{}\label{CNVRT3_8c_a23f15e06301977b1efc9955607eb44b7}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!r1000@{r1000}}
+\index{r1000@{r1000}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{r1000}{r1000}}]{\setlength{\rightskip}{0pt plus 5cm}\#define r1000~((doublereal $\ast$)((integer $\ast$)\&equiv\+\_\+7 + 3))}\hypertarget{CNVRT3_8c_a348902539f45be9f1e706a1b7924480e}{}\label{CNVRT3_8c_a348902539f45be9f1e706a1b7924480e}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!record@{record}}
+\index{record@{record}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{record}{record}}]{\setlength{\rightskip}{0pt plus 5cm}\#define record~((doublereal $\ast$)\&{\bf editor\+\_\+1})}\hypertarget{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{}\label{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!rxxxx@{rxxxx}}
+\index{rxxxx@{rxxxx}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{rxxxx}{rxxxx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rxxxx~(equiv\+\_\+6 + 2)}\hypertarget{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{}\label{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!subtyp@{subtyp}}
+\index{subtyp@{subtyp}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{subtyp}{subtyp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define subtyp~((integer $\ast$)equiv\+\_\+6 + 3)}\hypertarget{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{}\label{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 30 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!cnvrt3\+\_\+@{cnvrt3\+\_\+}}
+\index{cnvrt3\+\_\+@{cnvrt3\+\_\+}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{cnvrt3\+\_\+(integer $\ast$mltflg)}{cnvrt3_(integer *mltflg)}}]{\setlength{\rightskip}{0pt plus 5cm}int cnvrt3\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{mltflg}
+\end{DoxyParamCaption}
+)}\hypertarget{CNVRT3_8c_a788f7b5bd4b6ba971875e2df34ae4c5f}{}\label{CNVRT3_8c_a788f7b5bd4b6ba971875e2df34ae4c5f}
+
+
+Definition at line 79 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+References apt336\+\_\+(), atapop\+\_\+(), atapwt\+\_\+(), bcdf\+\_\+(), blank, blk, blk2, blk4, c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, c\+\_\+\+\_\+3, c\+\_\+\+\_\+30030, c\+\_\+\+\_\+30038, c\+\_\+\+\_\+6, c\+\_\+\+\_\+8, e\+\_\+1, e\+\_\+2, e\+\_\+4, fill\+\_\+1, fill\+\_\+3, from, holfrm\+\_\+(), i5axis\+\_\+1, i\+\_\+\+\_\+, ir1000, irxxxx, it, j, jrecrd, m, multax, n, nnn, numwds, off, param, pmname, r1000, record, rxxxx, subtyp, symfil\+\_\+1, and test.
+
+
+
+Referenced by apt301\+\_\+().
+
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{comment}{/* Initialized data */}
+82 
+83     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rectyp[6*10] = \textcolor{stringliteral}{"FINI  "} \textcolor{stringliteral}{"AERR  "} \textcolor{stringliteral}{"GERR  "} \textcolor{stringliteral}{"MULTAX"} \textcolor{stringliteral}{"CLDATA"} 
+84         \textcolor{stringliteral}{"CLPRNT"} \textcolor{stringliteral}{"CLDAT "} \textcolor{stringliteral}{"      "} \textcolor{stringliteral}{"      "} \textcolor{stringliteral}{"      "};
+85     \textcolor{keyword}{static} \textcolor{keywordtype}{char} splwds[6*20] = \textcolor{stringliteral}{"CUT   "} \textcolor{stringliteral}{"2DCALC"} \textcolor{stringliteral}{"******"} \textcolor{stringliteral}{"INTOL "} \textcolor{stringliteral}{"OUTTOL"} 
+86         \textcolor{stringliteral}{"CUTTER"} \textcolor{stringliteral}{"******"} \textcolor{stringliteral}{"******"} \textcolor{stringliteral}{"DYNDMP"} \textcolor{stringliteral}{"******"} \textcolor{stringliteral}{"DNTCUT"} \textcolor{stringliteral}{"3DCALC"} 
+87         \textcolor{stringliteral}{"TOLER "} \textcolor{stringliteral}{"THICK "} \textcolor{stringliteral}{"MAXDP "} \textcolor{stringliteral}{"NUMPTS"} \textcolor{stringliteral}{"GOUGCK"} \textcolor{stringliteral}{"POCKET"} \textcolor{stringliteral}{"******"} 
+88         \textcolor{stringliteral}{"******"};
+89     \textcolor{keyword}{static} \textcolor{keywordtype}{char} ppname[6*22] = \textcolor{stringliteral}{"END   "} \textcolor{stringliteral}{"STOP  "} \textcolor{stringliteral}{"OPSTOP"} \textcolor{stringliteral}{"ISTOP "} \textcolor{stringliteral}{"RAPID "} 
+90         \textcolor{stringliteral}{"SWITCH"} \textcolor{stringliteral}{"RETRCT"} \textcolor{stringliteral}{"DRESS "} \textcolor{stringliteral}{"PICKUP"} \textcolor{stringliteral}{"UNLOAD"} \textcolor{stringliteral}{"PENUP "} \textcolor{stringliteral}{"PENDWN"} 
+91         \textcolor{stringliteral}{"ZERO  "} \textcolor{stringliteral}{"CODEL "} \textcolor{stringliteral}{"RESET "} \textcolor{stringliteral}{"GOCLER"} \textcolor{stringliteral}{"DRAWLI"} \textcolor{stringliteral}{"PROBY "} \textcolor{stringliteral}{"PROBX "} 
+92         \textcolor{stringliteral}{"ULOCKX"} \textcolor{stringliteral}{"LOCKX "} \textcolor{stringliteral}{"FACEML"};
+93     \textcolor{keyword}{static} \textcolor{keywordtype}{char} pp2[6*2] = \textcolor{stringliteral}{"GOHOME"} \textcolor{stringliteral}{"BREAK "};
+94     \textcolor{keyword}{static} integer ipp2[2] = \{ 14,17 \};
+95     \textcolor{keyword}{static} \textcolor{keywordtype}{char} pm2[6*8] = \textcolor{stringliteral}{"DELETE"} \textcolor{stringliteral}{"PPLOT "} \textcolor{stringliteral}{"WRTMDI"} \textcolor{stringliteral}{"ENDMDI"} \textcolor{stringliteral}{"POSMAP"} \textcolor{stringliteral}{"DEB"}
+96         \textcolor{stringliteral}{"UGG"} \textcolor{stringliteral}{"LINTOL"} \textcolor{stringliteral}{"******"};
+97     \textcolor{keyword}{static} integer ipm2[8] = \{ 1012,1014,1051,1052,1068,1032,1067,0 \};
+98     \textcolor{keyword}{static} \textcolor{keywordtype}{char} par4[6*7] = \textcolor{stringliteral}{"PITCH "} \textcolor{stringliteral}{"RAIL  "} \textcolor{stringliteral}{"FULL  "} \textcolor{stringliteral}{"SAVMDI"} \textcolor{stringliteral}{"SAVTDI"} 
+99         \textcolor{stringliteral}{"MMPM  "} \textcolor{stringliteral}{"MMPR  "};
+100     \textcolor{keyword}{static} integer ipar4[7] = \{ 67,93,147,398,396,171,172 \};
+101     \textcolor{keyword}{static} integer ircold = -1;
+102     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT301_8c_afdb6a4c2ae9d340f2a766743099b96c6}{off}[6] = \textcolor{stringliteral}{"OFF   "};
+103     \textcolor{keyword}{static} logical \hyperlink{APT301_8c_ac004d750259cd6314f310d412afdd3bd}{multax} = FALSE\_;
+104     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT301_8c_ab439d0690fd2047f2a1fdadf72ef5550}{from}[6] = \textcolor{stringliteral}{"FROM  "};
+105     \textcolor{keyword}{static} integer \hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn} = 0;
+106     \textcolor{keyword}{static} \textcolor{keywordtype}{char} scalin[8*4] = \textcolor{stringliteral}{"MM      "} \textcolor{stringliteral}{"CM      "} \textcolor{stringliteral}{"INCHES  "} \textcolor{stringliteral}{"FEET    "};
+107     \textcolor{keyword}{static} \textcolor{keywordtype}{char} scalwd[6] = \textcolor{stringliteral}{"UNITS "};
+108     \textcolor{keyword}{static} integer i3000 = 0;
+109     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+110     \textcolor{keywordtype}{char} \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[1200];
+111     \} equiv\_13 = \{ \textcolor{stringliteral}{"ATANGLCENTERCROSS FUNOFYINTOF INVERSLARGE LEFT  LENG"}
+112         \textcolor{stringliteral}{"THMINUS NEGX  NEGY  NEGZ  NOX   NOY   NOZ   PARLELPERPTOPLUS"}
+113         \textcolor{stringliteral}{"  POSX  POSY  POSZ  RADIUSRIGHT SCALE SMALL TANTO TIMES TRAN"}
+114         \textcolor{stringliteral}{"SLUNIT  XLARGEXSMALLXYPLANXYROT YLARGEYSMALLYZPLANYZROT ZLAR"}
+115         \textcolor{stringliteral}{"GEZSMALLZXPLANZXROT 3PT2SL4PT1SL5PT   INTERCSLOPE IN    OUT "}
+116         \textcolor{stringliteral}{"  OPEN  ALL   LAST  NOMORESAME  MODIFYMIRRORSTART ENDARCCCLW"}
+117         \textcolor{stringliteral}{"  CLW   MEDIUMHIGH  LOW   CONST DECR  INCR  GRID  ROTREFTO  "}
+118         \textcolor{stringliteral}{"  PAST  ON    OFF   IPM   IPR   CIRCULLINEARPARAB RPM   MAXR"}
+119         \textcolor{stringliteral}{"PMTURN  FACE  BORE  BOTH  XAXIS YAXIS ZAXIS NORMDSAUTO  FLOO"}
+120         \textcolor{stringliteral}{"D MIST  TAPKULSTEP  MAIN  SIDE  LINCIRMAXIPMREV   TYPE  NIXI"}
+121         \textcolor{stringliteral}{"E LIGHT FOURPTTWOPT PTSLOPPTNORMSPLINERTHETATHETARXYZ   TANO"}
+122         \textcolor{stringliteral}{"N TRFORMNORMALUP    DOWN  LOCK  SFM   XCOORDYCOORDZCOORDMULT"}
+123         \textcolor{stringliteral}{"RDXYVIEWYZVIEWZXVIEWSOLID DASH  DOTTEDCTRLINDITTO PEN   SCRI"}
+124         \textcolor{stringliteral}{"BEBLACK RED   GREEN BLUE  INTENSLITE  MED   DARK  CHUCK COLL"}
+125         \textcolor{stringliteral}{"ETAAXIS BAXIS CAXIS TPI   OPTIONRANGE PSTAN RANDOMFRONT REAR"}
+126         \textcolor{stringliteral}{"  SADDLEMILL  THRU  DEEP  TRAV  SETOOLSETANGHOLDERMANUALADJU"}
+127         \textcolor{stringliteral}{"STCUTANGNOW   NEXT  DRILL BINARYBCD   PART  REAM  TAP   CAM "}
+128         \textcolor{stringliteral}{"  NOCLRPREGTOLTRAVEDMAXWD MAXLNGSPIRALANTSPIZIGZAGNOBND MAXP"}
+129         \textcolor{stringliteral}{"TSGAPLES**181*ARC    *183*RETAINZIGZAGOMIT  AVOID  *188*AT  "}
+130         \textcolor{stringliteral}{"   *190* *191* *192* *193* *194* *195$ *196* *197* *198* *19"}
+131         \textcolor{stringliteral}{"9* *200*"} \};
+132 
+133     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+134     \textcolor{keywordtype}{char} \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[8];
+135     \} equiv\_16 = \{ \textcolor{stringliteral}{"        "} \};
+136 
+137     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+138     integer \hyperlink{BD2ITL_8c_af7747b98e4f16b6d8422db5d15d525c0}{fill\_1}[1];
+139     integer \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+140     doublereal \hyperlink{APT227_8c_adf6531718c347aa33636ec7e1525822a}{fill\_3}[3];
+141     doublereal \hyperlink{APT227_8c_a4e287f465781fb8aad21984c13c417f9}{e\_4};
+142     \} equiv\_7 = \{ \{0\}, 1000, \{0\}, 0. \};
+143 
+144     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+145     \textcolor{keywordtype}{char} \hyperlink{ABLKDATA_8c_a48a606a3443c21eccd9da81400aafe79}{e\_1}[600];
+146     \} equiv\_9 = \{ \textcolor{stringliteral}{"PLUNGEHEAD  MODE  CLEARPTMARK REWINDCUTCOMREVERSFEDRA"}
+147         \textcolor{stringliteral}{"TDELAY AIR   OPSKIPLEADERPPLOT MACHINMCHTOLPIVOTZMCHFINSEQNO"}
+148         \textcolor{stringliteral}{" INTCODDISPLYAUXFUNCHECK POSTN TOOLNOROTABLORIGINSAFETYARCSL"}
+149         \textcolor{stringliteral}{"PCOOLNTSPINDLIFRO  TURRET*1034*ROTHEDTHREADTRANS TRACUTINDEX"}
+150         \textcolor{stringliteral}{" COPY  PLOT  OVPLOTLETTERPPRINTPARTNOINSERTCAMERAPREFUNCOUPL"}
+151         \textcolor{stringliteral}{"EPITCH MDWRITMDEND ASLOPECYCLE LOADTLSELCTLCLRSRFDWELL DRAFT"}
+152         \textcolor{stringliteral}{" CLAMP PLABELMAXDPMSLOWDNMAXVELLPRINTMOVETOCORNFDPBS   REGBR"}
+153         \textcolor{stringliteral}{"KVTLAXSWCORN MAGTAP*1073**1074**1075**1076**1077**1078**1079"}
+154         \textcolor{stringliteral}{"**1080**1081**1082**1083**1084**1085*                       "}
+155         \textcolor{stringliteral}{"                                                            "}
+156         \textcolor{stringliteral}{"       "} \};
+157 
+158 
+159     \textcolor{comment}{/* System generated locals */}
+160     address a\_\_1[2];
+161     integer i\_\_1, i\_\_2[2];
+162     \textcolor{keyword}{static} doublereal equiv\_6[258];
+163 
+164     \textcolor{comment}{/* Builtin functions */}
+165     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+166     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen), s\_cat(\textcolor{keywordtype}{char} *,
+167          \textcolor{keywordtype}{char} **, integer *, integer *, ftnlen);
+168 
+169     \textcolor{comment}{/* Local variables */}
+170     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}, kk, mm, \hyperlink{AERR_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}, lr, ix;
+171 \textcolor{preprocessor}{#define pm0 ((char *)&equiv\_9)}
+172 \textcolor{preprocessor}{#define pm1 ((char *)&equiv\_9 + 300)}
+173 \textcolor{preprocessor}{#define r1000 ((doublereal *)((integer *)&equiv\_7 + 3))}
+174 \textcolor{preprocessor}{#define blk ((char *)&equiv\_16)}
+175 \textcolor{preprocessor}{#define ijk ((integer *)equiv\_6)}
+176     \textcolor{keyword}{static} doublereal dum;
+177     \textcolor{keyword}{static} integer nwd, kix;
+178 \textcolor{preprocessor}{#define blk2 ((char *)&equiv\_16)}
+179 \textcolor{preprocessor}{#define blk4 ((char *)&equiv\_16)}
+180 \textcolor{preprocessor}{#define par0 ((char *)&equiv\_13)}
+181 \textcolor{preprocessor}{#define par1 ((char *)&equiv\_13 + 300)}
+182 \textcolor{preprocessor}{#define par2 ((char *)&equiv\_13 + 600)}
+183 \textcolor{preprocessor}{#define par3 ((char *)&equiv\_13 + 900)}
+184     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+185 \textcolor{preprocessor}{#define ir1000 ((integer *)&equiv\_7)}
+186     \textcolor{keyword}{static} \textcolor{keywordtype}{char} char\_\_[8];
+187     \textcolor{keyword}{static} integer iseq, iret, kkix;
+188     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af04af1bc6d042a68a2b24d6e1312d253}{test}[6];
+189 \textcolor{preprocessor}{#define area1 ((doublereal *)&editor\_1)}
+190 \textcolor{preprocessor}{#define area2 ((doublereal *)&editor\_1 + 500)}
+191 \textcolor{preprocessor}{#define area3 ((doublereal *)&editor\_1 + 1250)}
+192     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT336_8c_a8e6e035974d2f3fe66446c66b68fb8cc}{apt336\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+193     \textcolor{keyword}{static} \textcolor{keywordtype}{char} test8[8];
+194 \textcolor{preprocessor}{#define blank ((char *)&equiv\_16)}
+195 \textcolor{preprocessor}{#define param ((char *)&equiv\_13)}
+196     \textcolor{keyword}{static} integer nsave;
+197     \textcolor{keyword}{static} \textcolor{keywordtype}{char} atest[6];
+198 \textcolor{preprocessor}{#define rxxxx (equiv\_6 + 2)}
+199 \textcolor{preprocessor}{#define irecrd ((doublereal *)&editor\_1)}
+200 \textcolor{preprocessor}{#define jrecrd ((integer *)&editor\_1)}
+201 \textcolor{preprocessor}{#define record ((doublereal *)&editor\_1)}
+202 \textcolor{preprocessor}{#define numcld ((integer *)&editor\_1 + 1186)}
+203 \textcolor{preprocessor}{#define pmname ((char *)&equiv\_9)}
+204     \textcolor{keyword}{static} integer subcls;
+205     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rcdchr[1000];
+206     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+207         integer *, integer *, ftnlen);
+208     \textcolor{keyword}{static} doublereal savnam, savsub, sbclsv;
+209     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPWT_8c_a1ebf8052f21d6c40c164901f8d3377a7}{atapwt\_}(integer *, integer *, integer *, 
+210         integer *, integer *, doublereal *, integer *);
+211     \textcolor{keyword}{static} integer isvseq;
+212 \textcolor{preprocessor}{#define numwds ((integer *)&editor\_1 + 5)}
+213     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(integer *, integer *, integer *);
+214 \textcolor{preprocessor}{#define subtyp ((integer *)equiv\_6 + 3)}
+215 \textcolor{preprocessor}{#define irxxxx ((integer *)equiv\_6 + 1)}
+216 
+217 
+218 
+219 
+220 \textcolor{comment}{/* ...            SYSTEM I/O FILE NAMES */}
+221 
+222 
+223 
+224 
+225 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+226 
+227 
+228 
+229 
+230 \textcolor{comment}{/* ... LOCAL VARIABLES */}
+231 
+232 
+233 \textcolor{comment}{/* ...     RECORD TYPES AND POST PROCESSOR SUBCLASS WORDS */}
+234 
+235 
+236 
+237 
+238 \textcolor{comment}{/*     -------------------------------------------------------- */}
+239 
+240     kkix = 0;
+241     \textcolor{keywordflow}{if} (nnn != 0) \{
+242     \textcolor{keywordflow}{goto} L3;
+243     \}
+244     \textcolor{keywordflow}{for} (i\_\_ = 4; i\_\_ <= 7; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+245     \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[i\_\_ - 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\hyperlink{CNVRT3_8c_a9a818cf60edf13f4ea87795b974a94ac}{blk4}, (ftnlen)4);
+246 \textcolor{comment}{/* L1: */}
+247     \}
+248 \textcolor{comment}{/* ...     STORE SEQUENCE NUMBER AND INITIALIZE */}
+249 L3:
+250     iseq = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[3];
+251     \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] = iseq - iseq / 10000 * 10000;
+252     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[0] = iseq / 10000;
+253     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 0;
+254     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 5; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+255 \textcolor{comment}{/* L10: */}
+256     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[i\_\_ - 1] = 0.;
+257     \}
+258     ix = 0;
+259 
+260 \textcolor{comment}{/* ...     BRANCH ON RECORD TYPE */}
+261     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}, test, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+262     \textcolor{keywordflow}{for} (it = 1; it <= 10; ++\hyperlink{AERR_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}) \{
+263     \textcolor{keywordflow}{if} (s\_cmp(test, rectyp + (it - 1) * 6, (ftnlen)6, (ftnlen)6) != 0) \{
+264         \textcolor{keywordflow}{goto} L100;
+265     \}
+266     \textcolor{keywordflow}{switch} (it) \{
+267         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L300;
+268         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L350;
+269         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L400;
+270         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L500;
+271         \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L1000;
+272         \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L450;
+273         \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L9999;
+274         \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L9999;
+275         \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L9999;
+276         \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L9999;
+277     \}
+278 L100:
+279     ;
+280     \}
+281 
+282 \textcolor{comment}{/* ...     CHECK FOR SPECIAL WORDS--SPECIAL PROCESSING NEEDED */}
+283     \textcolor{keywordflow}{for} (kk = 1; kk <= 20; ++kk) \{
+284     \textcolor{keywordflow}{if} (s\_cmp(test, splwds + (kk - 1) * 6, (ftnlen)6, (ftnlen)6) == 0) \{
+285         \textcolor{keywordflow}{goto} L600;
+286     \}
+287 \textcolor{comment}{/* L105: */}
+288     \}
+289 
+290 \textcolor{comment}{/* ...     *** POSTPROCESSOR TYPE COMMANDS*** */}
+291     \textcolor{keywordflow}{if} (s\_cmp(test, scalwd, (ftnlen)6, (ftnlen)6) == 0) \{
+292     \textcolor{keywordflow}{goto} L605;
+293     \}
+294     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 2000;
+295     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[4], test8, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)8);
+296     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[5] != 2 || s\_cmp(test8, \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}, (ftnlen)8, (ftnlen)8) != 0) \{
+297     \textcolor{keywordflow}{goto} L140;
+298     \}
+299     \textcolor{keywordflow}{for} (*\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} = 1; *\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} <= 22; ++(*subtyp)) \{
+300     \textcolor{keywordflow}{if} (s\_cmp(test, ppname + (*\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} - 1) * 6, (ftnlen)6, (ftnlen)6) == 
+301         0) \{
+302         \textcolor{keywordflow}{goto} L9000;
+303     \}
+304 \textcolor{comment}{/* L110: */}
+305     \}
+306     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+307     *\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} = ipp2[i\_\_ - 1];
+308     \textcolor{keywordflow}{if} (s\_cmp(test, pp2 + (i\_\_ - 1) * 6, (ftnlen)6, (ftnlen)6) == 0) \{
+309         \textcolor{keywordflow}{goto} L9000;
+310     \}
+311 \textcolor{comment}{/* L111: */}
+312     \}
+313 
+314 L140:
+315     \textcolor{keywordflow}{for} (*\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} = 1001; *\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} <= 1100; ++(*subtyp)) \{
+316     \textcolor{keywordflow}{if} (s\_cmp(test, \hyperlink{CNVRT3_8c_a23f15e06301977b1efc9955607eb44b7}{pmname} + (*\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} - 1001) * 6, (ftnlen)6, (ftnlen)6) 
+317         == 0) \{
+318         \textcolor{keywordflow}{goto} L160;
+319     \}
+320 \textcolor{comment}{/* L150: */}
+321     \}
+322     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 8; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+323     *\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} = ipm2[i\_\_ - 1];
+324     \textcolor{keywordflow}{if} (s\_cmp(test, pm2 + (i\_\_ - 1) * 6, (ftnlen)6, (ftnlen)6) == 0) \{
+325         \textcolor{keywordflow}{goto} L160;
+326     \}
+327 \textcolor{comment}{/* L151: */}
+328     \}
+329 
+330 \textcolor{comment}{/* ...     UNIDENTIFIED POSTPROCESSOR COMMAND--ISSUE ERROR MESSAGE */}
+331     \hyperlink{APT336_8c_a8e6e035974d2f3fe66446c66b68fb8cc}{apt336\_}(&\hyperlink{CNVRT3_8c_ab1ac1d0ea47764e9290fab6543550a62}{c\_\_30030}, \textcolor{stringliteral}{"CNVRT3  "}, (ftnlen)8);
+332     \textcolor{keywordflow}{goto} L9999;
+333 
+334 L160:
+335     \hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir = 4;
+336     lr = *\hyperlink{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}{numwds} + 3;
+337     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[7] == 3 && \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[11] == 0) \{
+338     ix = 1;
+339     \}
+340 L170:
+341     ++ix;
+342     it = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[(\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir << 1) - 1];
+343     \textcolor{keywordflow}{switch} (it) \{
+344     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L180;
+345     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L190;
+346     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L230;
+347     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L225;
+348     \}
+349 \textcolor{comment}{/* ...     ***  TYPE 1 --- FLOATING POINT DATA ITEM PAIR */}
+350 L180:
+351     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[ix - 1] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir];
+352     \textcolor{keywordflow}{goto} L250;
+353 \textcolor{comment}{/* ...     ***  TYPE 2 --- ALPHANUMERIC DATA ITEM PAIR */}
+354 L190:
+355     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir], atest, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+356     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 200; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+357     \textcolor{keywordflow}{if} (s\_cmp(atest, \hyperlink{CNVRT3_8c_acff701cfc8fab0de8704435ba1462970}{param} + (i\_\_ - 1) * 6, (ftnlen)6, (ftnlen)6) == 0) \{
+358         \textcolor{keywordflow}{goto} L220;
+359     \}
+360 \textcolor{comment}{/* L200: */}
+361     \}
+362     \textcolor{keywordflow}{for} (j = 1; j <= 7; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+363     i\_\_ = ipar4[j - 1];
+364     \textcolor{keywordflow}{if} (s\_cmp(atest, par4 + (j - 1) * 6, (ftnlen)6, (ftnlen)6) == 0) \{
+365         \textcolor{keywordflow}{goto} L220;
+366     \}
+367 \textcolor{comment}{/* L201: */}
+368     \}
+369     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir], rcdchr, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)1000);
+370     s\_copy(char\_\_, \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}, (ftnlen)8, (ftnlen)8);
+371     n = 6;
+372     \textcolor{keywordflow}{for} (i\_\_ = 6; i\_\_ >= 1; --\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+373     \textcolor{keywordflow}{if} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&rcdchr[i\_\_ - 1] == *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{CNVRT3_8c_adfc9d568fc0536427fcc65d0a150cf14}{blk}) \{
+374         \textcolor{keywordflow}{goto} L210;
+375     \}
+376     *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&char\_\_[n - 1] = *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&rcdchr[i\_\_ - 1];
+377     --\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+378 L210:
+379     ;
+380     \}
+381     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(char\_\_, (ftnlen)4);
+382     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(char\_\_ + 4, (ftnlen)4);
+383     \textcolor{keywordflow}{goto} L250;
+384 L220:
+385     mm = (ix << 1) + 2;
+386     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[mm - 1] = 0;
+387     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[mm] = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+388     \textcolor{keywordflow}{goto} L250;
+389 \textcolor{comment}{/* ...     ***  TYPE 4 --- GEOMETRIC VARIABLE */}
+390 L225:
+391     m = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[(\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir + 1 << 1) - 1];
+392     i\_\_1 = \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+393     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+394     j = ix + i\_\_ - 1;
+395     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[j - 1] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir + \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+396 \textcolor{comment}{/* L227: */}
+397     \}
+398     ix = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+399     \hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir += \hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+400     \textcolor{keywordflow}{goto} L250;
+401 \textcolor{comment}{/* ...     ***  TYPE 3 --- ALPHANUMERIC LITERAL STRING */}
+402 L230:
+403     m = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[(\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir + 2 << 1) - 1];
+404     s\_copy(rcdchr, \hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}, (ftnlen)1000, (ftnlen)8);
+405     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir + 2], rcdchr, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &m, &nwd, (ftnlen)1000);
+406     n = m / 6;
+407     \textcolor{keywordflow}{if} (m > n * 6) \{
+408     ++\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+409     \}
+410     i\_\_ = 1;
+411     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+412     \textcolor{keywordflow}{for} (kix = 1; kix <= i\_\_1; ++kix) \{
+413 \textcolor{comment}{/* Writing concatenation */}
+414     i\_\_2[0] = 6, a\_\_1[0] = rcdchr + (i\_\_ - 1);
+415     i\_\_2[1] = 2, a\_\_1[1] = \hyperlink{CNVRT3_8c_aecdf271654c103965603d45e4e6bc473}{blk2};
+416     s\_cat(char\_\_, a\_\_1, i\_\_2, &\hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, (ftnlen)8);
+417     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(char\_\_, (ftnlen)4);
+418     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(char\_\_ + 4, (ftnlen)4);
+419     ++ix;
+420     i\_\_ += 6;
+421 \textcolor{comment}{/* L232: */}
+422     \}
+423     \textcolor{keywordflow}{for} (kix = ix; kix <= 12; ++kix) \{
+424     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}, (ftnlen)8);
+425     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[(ix << 1) + 2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\hyperlink{CNVRT3_8c_ac000e8ec7d72fac0657e24f83b689265}{blank}, (ftnlen)8);
+426     \textcolor{keywordflow}{if} (*\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} >= 1044 && *\hyperlink{CNVRT3_8c_ac2f021696affdfc38175fcc292dc059e}{subtyp} <= 1046) \{
+427         kkix = 11;
+428     \}
+429 \textcolor{comment}{/* L240: */}
+430     \}
+431     \hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir += \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[(\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir + 1 << 1) - 1];
+432 L250:
+433     \hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir += 2;
+434 \textcolor{comment}{/* L260: */}
+435     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a66a3c5451cd3904b99319e66f803a62d}{i5axis\_1}.ir < lr) \{
+436     \textcolor{keywordflow}{goto} L170;
+437     \}
+438     \textcolor{keywordflow}{goto} L9000;
+439 \textcolor{comment}{/* ...     FINI RECORD... */}
+440 L300:
+441     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 14000;
+442     \textcolor{keywordflow}{if} (nnn == 0) \{
+443     \textcolor{keywordflow}{return} 0;
+444     \}
+445     \textcolor{keywordflow}{goto} L9000;
+446 
+447 \textcolor{comment}{/* ...     AERR RECORD -- STORE PREVIOUS SEQUENCE NUMBER */}
+448 L350:
+449     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[3] != 1) \{
+450     \textcolor{keywordflow}{goto} L9999;
+451     \}
+452     \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] = isvseq - isvseq / 10000 * 10000;
+453     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[0] = isvseq / 10000;
+454 \textcolor{comment}{/* ...     GERR RECORD */}
+455 L400:
+456     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 13000;
+457     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 3;
+458     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[7];
+459 L410:
+460     ix = 1;
+461     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[3] = 0;
+462     \textcolor{keywordflow}{goto} L9000;
+463 \textcolor{comment}{/* ...     CLPRNT RECORD.....SET ON OR OFF */}
+464 L450:
+465     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 13000;
+466     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 4;
+467     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 1;
+468     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[4], test, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+469     \textcolor{keywordflow}{if} (s\_cmp(test, off, (ftnlen)6, (ftnlen)6) == 0) \{
+470     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 0;
+471     \}
+472     \textcolor{keywordflow}{goto} L410;
+473 \textcolor{comment}{/* ...     MULTAX RECORD -- SET MULTAX FLAG */}
+474 L500:
+475     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 9000;
+476     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 2;
+477     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[3] = 0;
+478     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 1;
+479     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[4], test, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+480     \textcolor{keywordflow}{if} (s\_cmp(test, off, (ftnlen)6, (ftnlen)6) == 0) \{
+481     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 0;
+482     \}
+483     multax = FALSE\_;
+484     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] == 1) \{
+485     multax = TRUE\_;
+486     \}
+487     \textcolor{keywordflow}{goto} L410;
+488 L605:
+489     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 9000;
+490     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 9;
+491     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[4], test8, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, &nwd, (ftnlen)8);
+492     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+493     \textcolor{keywordflow}{if} (s\_cmp(test8, scalin + (i\_\_ - 1 << 3), (ftnlen)8, (ftnlen)8) == 0) 
+494         \{
+495         \textcolor{keywordflow}{goto} L603;
+496     \}
+497 \textcolor{comment}{/* L601: */}
+498     \}
+499 \textcolor{comment}{/* ...     ERROR 30038 -- ERRONEOUS UNITS COMMAND */}
+500     \hyperlink{APT336_8c_a8e6e035974d2f3fe66446c66b68fb8cc}{apt336\_}(&\hyperlink{CNVRT3_8c_a640e043a8ea553ef3ed0a9e5a628988d}{c\_\_30038}, \textcolor{stringliteral}{"CNVRT3  "}, (ftnlen)8);
+501     \textcolor{keywordflow}{goto} L9999;
+502 L603:
+503     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+504     \textcolor{keywordflow}{goto} L410;
+505 
+506 \textcolor{comment}{/* ...     ********* CLDATA RECORDS ********* */}
+507 L1000:
+508     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[7] - 2 >= 0) \{
+509     \textcolor{keywordflow}{goto} L1030;
+510     \} \textcolor{keywordflow}{else} \{
+511     \textcolor{keywordflow}{goto} L1010;
+512     \}
+513 L1010:
+514     subcls = 5;
+515     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[4], atest, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+516     \textcolor{keywordflow}{if} (s\_cmp(atest, from, (ftnlen)6, (ftnlen)6) == 0) \{
+517     subcls = 3;
+518     \}
+519     savnam = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[6];
+520     savsub = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[7] + 0.f;
+521     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[5] <= 6) \{
+522     \textcolor{keywordflow}{goto} L9997;
+523     \}
+524     ix = 12;
+525 \textcolor{comment}{/* ...     SAVE CIRCLE CANONICAL FORM */}
+526     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 3000;
+527     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = 2;
+528     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[6] = 4;
+529     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[8] = 9;
+530     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[3] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[6];
+531     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[4] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[7];
+532     \textcolor{keywordflow}{for} (i\_\_ = 6; i\_\_ <= 12; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+533 \textcolor{comment}{/* L1020: */}
+534     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[i\_\_ - 1] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[i\_\_ + 3];
+535     \}
+536     \textcolor{keywordflow}{goto} L9000;
+537 
+538 \textcolor{comment}{/* ...     SAVE CUTTER LOCATION POINTS */}
+539 L1030:
+540     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 5000;
+541     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = subcls;
+542     nsave = \hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn};
+543     sbclsv = (doublereal) subcls;
+544     subcls = 6;
+545     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[0] = savnam;
+546     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[1] = savsub;
+547     i\_\_ = 3;
+548     mm = 4;
+549     \textcolor{keywordflow}{if} (multax) \{
+550     mm = 7;
+551     \}
+552     i\_\_1 = *\hyperlink{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}{numwds};
+553     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+554     \textcolor{keywordflow}{if} ((j + 1 - (j - 1) / mm * mm) / 3 - 1 >= 0) \{
+555         \textcolor{keywordflow}{goto} L1050;
+556     \} \textcolor{keywordflow}{else} \{
+557         \textcolor{keywordflow}{goto} L1070;
+558     \}
+559 L1050:
+560     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[i\_\_ - 1] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[j + 2];
+561     ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+562 L1070:
+563     ;
+564     \}
+565     ix = i\_\_ - 1;
+566     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] - 5 <= 0) \{
+567     \textcolor{keywordflow}{goto} L9010;
+568     \} \textcolor{keywordflow}{else} \{
+569     \textcolor{keywordflow}{goto} L9100;
+570     \}
+571 L9000:
+572     \textcolor{keywordflow}{if} (kkix >= 11) \{
+573     ix = kkix;
+574     \}
+575 L9010:
+576     \textcolor{keywordflow}{if} (i3000 == 1) \{
+577     \textcolor{keywordflow}{goto} L9050;
+578     \}
+579     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] == ircold) \{
+580     \textcolor{keywordflow}{goto} L9100;
+581     \}
+582     ++\hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn};
+583     ircold = \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2];
+584     \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[0] = \hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn};
+585     \hyperlink{ATAPWT_8c_a1ebf8052f21d6c40c164901f8d3377a7}{atapwt\_}(&\hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.clfil3, &iret, &\hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}, &
+      \hyperlink{CNVRT3_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, \hyperlink{CNVRT3_8c_a348902539f45be9f1e706a1b7924480e}{r1000}, &\hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+586 L9050:
+587     i3000 = 0;
+588 L9100:
+589     ++\hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn};
+590     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[0] = \hyperlink{ACNTRL_8c_a2f8565f65ddaa4e598d1f1b95a8cc5d8}{nnn};
+591 \textcolor{comment}{/* ...     CALCULATE CLFIL3 RECORD NUMBER TO LIST ON VLFILE */}
+592     iseq = \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] + nnn * 10000;
+593     \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[3] = iseq;
+594     \textcolor{keywordflow}{if} (ix == 0) \{
+595     \textcolor{keywordflow}{goto} L9200;
+596     \}
+597     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] == 3000) \{
+598     i3000 = 1;
+599     \}
+600     \hyperlink{ATAPWT_8c_a1ebf8052f21d6c40c164901f8d3377a7}{atapwt\_}(&\hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.clfil3, &iret, &\hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}, &
+      \hyperlink{CNVRT3_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}, &ix);
+601     \textcolor{keywordflow}{goto} L9998;
+602 L9200:
+603     \hyperlink{ATAPWT_8c_a1ebf8052f21d6c40c164901f8d3377a7}{atapwt\_}(&\hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.clfil3, &iret, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}, &
+      \hyperlink{CNVRT3_8c_a5e7359f78743350865398325d9155f20}{c\_\_3}, &dum, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+604 L9998:
+605     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] != 14000) \{
+606     \textcolor{keywordflow}{goto} L9999;
+607     \}
+608     \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(&\hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.clfil3, &\hyperlink{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &iret);
+609     \hyperlink{ATAPOP_8c_af8752329b7d31e91ab7b1bfefcb5b6d7}{atapop\_}(&\hyperlink{CNVRT3_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.clfil3, &\hyperlink{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &iret);
+610     \textcolor{keywordflow}{goto} L9999;
+611 
+612 \textcolor{comment}{/* ...     ***** SPECIAL POSTPROCESSOR TYPE RECORDS ***** */}
+613 L600:
+614     \textcolor{keywordflow}{if} (kk > 11) \{
+615     \textcolor{keywordflow}{goto} L9999;
+616     \}
+617     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[1] = 6000;
+618     \textcolor{keywordflow}{switch} (kk) \{
+619     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L610;
+620     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L9999;
+621     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L9999;
+622     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L620;
+623     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L620;
+624     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L620;
+625     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L9999;
+626     \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L9999;
+627     \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L9999;
+628     \textcolor{keywordflow}{case} 10:  \textcolor{keywordflow}{goto} L9999;
+629     \textcolor{keywordflow}{case} 11:  \textcolor{keywordflow}{goto} L610;
+630     \}
+631 
+632 \textcolor{comment}{/* ...     ARELEM FLAGS-CUT,DNTCUT */}
+633 L610:
+634     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = kk - kk / 10 * 10;
+635     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 0;
+636     \textcolor{keywordflow}{if} (kk > 10) \{
+637     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[4] = 1;
+638     \}
+639     ix = 1;
+640     \textcolor{keywordflow}{goto} L410;
+641 
+642 \textcolor{comment}{/* ...     ARELEM DATA ITEMS-CUTTER,INTOL,OUTTOL */}
+643 L620:
+644     \hyperlink{CNVRT3_8c_ad16a00b05099b5d8e2ff832f83fc538e}{irxxxx}[2] = kk;
+645     lr = *\hyperlink{CNVRT3_8c_a1dc4c447e4d16204bf81d55e0f27031a}{numwds} + 3;
+646     i\_\_1 = lr;
+647     \textcolor{keywordflow}{for} (i\_\_ = 5; i\_\_ <= i\_\_1; i\_\_ += 2) \{
+648     ix = i\_\_ / 2 - 1;
+649     \hyperlink{CNVRT3_8c_ac10ac010132e2b51797142d171947fc4}{rxxxx}[ix - 1] = \hyperlink{CNVRT3_8c_a75fa2f9a167f94dde19917fe0f64632b}{record}[i\_\_ - 1];
+650 \textcolor{comment}{/* L625: */}
+651     \}
+652     \textcolor{keywordflow}{goto} L9000;
+653 
+654 \textcolor{comment}{/* ...     SAVE SEQUENCE NUMBER IF NOT AERR TYPE RECORD */}
+655 L9997:
+656     i\_\_ = nnn + 2;
+657     \textcolor{keywordflow}{if} (\hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] == ircold) \{
+658     --\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+659     \}
+660     \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[3] = \hyperlink{CNVRT3_8c_a53aa91ed9eb161f641b9f5baad39a952}{ir1000}[2] + i\_\_ * 10000;
+661 L9999:
+662     \textcolor{keywordflow}{if} (s\_cmp(test, rectyp + 6, (ftnlen)6, (ftnlen)6) != 0) \{
+663     isvseq = \hyperlink{CNVRT3_8c_a6d1e0ed0917250a4d06e3270c29702a5}{jrecrd}[3];
+664     \}
+665     \textcolor{keywordflow}{return} 0;
+666 \} \textcolor{comment}{/* cnvrt3\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNVRT3_8c_a788f7b5bd4b6ba971875e2df34ae4c5f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNVRT3_8c_a788f7b5bd4b6ba971875e2df34ae4c5f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{CNVRT3_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{CNVRT3_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CNVRT3_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 40 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{CNVRT3_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 44 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_a5e7359f78743350865398325d9155f20}{}\label{CNVRT3_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 46 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+30030@{c\+\_\+\+\_\+30030}}
+\index{c\+\_\+\+\_\+30030@{c\+\_\+\+\_\+30030}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+30030}{c__30030}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+30030 = 30030\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_ab1ac1d0ea47764e9290fab6543550a62}{}\label{CNVRT3_8c_ab1ac1d0ea47764e9290fab6543550a62}
+
+
+Definition at line 43 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+30038@{c\+\_\+\+\_\+30038}}
+\index{c\+\_\+\+\_\+30038@{c\+\_\+\+\_\+30038}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+30038}{c__30038}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+30038 = 30038\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_a640e043a8ea553ef3ed0a9e5a628988d}{}\label{CNVRT3_8c_a640e043a8ea553ef3ed0a9e5a628988d}
+
+
+Definition at line 45 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}}
+\index{c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+6}{c__6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+6 = 6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}{}\label{CNVRT3_8c_a3543660f1ae989ebc88144db7ea3ecfd}
+
+
+Definition at line 41 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{CNVRT3_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 42 of file C\+N\+V\+R\+T3.\+c.
+
+
+
+Referenced by cnvrt3\+\_\+().
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{CNVRT3_8c_afddbf18370447268640d26c983890fd1}{}\label{CNVRT3_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{CNVRT3_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{CNVRT3_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{CNVRT3_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{CNVRT3_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{CNVRT3_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{CNVRT3_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!editor@{editor}}
+\index{editor@{editor}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{editor}{editor}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal editor\mbox{[}1500\mbox{]}}\hypertarget{CNVRT3_8c_a6b18a930123fb01868b126be83cf8d75}{}\label{CNVRT3_8c_a6b18a930123fb01868b126be83cf8d75}
+
+
+Definition at line 18 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!editor\+\_\+@{editor\+\_\+}}
+\index{editor\+\_\+@{editor\+\_\+}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{editor\+\_\+}{editor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   editor\+\_\+}\hypertarget{CNVRT3_8c_ae23d92095ff9e5845f099b188cd53a40}{}\label{CNVRT3_8c_ae23d92095ff9e5845f099b188cd53a40}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{CNVRT3_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{CNVRT3_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{CNVRT3_8c_a995bd688c87d82736860b413de2416d4}{}\label{CNVRT3_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{CNVRT3_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{CNVRT3_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{CNVRT3_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{CNVRT3_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{CNVRT3_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{CNVRT3_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{CNVRT3_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{CNVRT3_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!i5axis\+\_\+@{i5axis\+\_\+}}
+\index{i5axis\+\_\+@{i5axis\+\_\+}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{i5axis\+\_\+}{i5axis_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   i5axis\+\_\+}\hypertarget{CNVRT3_8c_a61841ba38f740e95bdd28f7a80b34604}{}\label{CNVRT3_8c_a61841ba38f740e95bdd28f7a80b34604}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!iabove@{iabove}}
+\index{iabove@{iabove}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{iabove}{iabove}}]{\setlength{\rightskip}{0pt plus 5cm}integer iabove}\hypertarget{CNVRT3_8c_a045978b88963318d213a5aa962bfe3f3}{}\label{CNVRT3_8c_a045978b88963318d213a5aa962bfe3f3}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ie@{ie}}
+\index{ie@{ie}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ie}{ie}}]{\setlength{\rightskip}{0pt plus 5cm}integer ie}\hypertarget{CNVRT3_8c_ad0eaecf0bba0f19f301e8a5c5a772646}{}\label{CNVRT3_8c_ad0eaecf0bba0f19f301e8a5c5a772646}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!il@{il}}
+\index{il@{il}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il}\hypertarget{CNVRT3_8c_a1102a8dadcd21d7952427507857411d8}{}\label{CNVRT3_8c_a1102a8dadcd21d7952427507857411d8}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{CNVRT3_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{CNVRT3_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ir@{ir}}
+\index{ir@{ir}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ir}{ir}}]{\setlength{\rightskip}{0pt plus 5cm}integer ir}\hypertarget{CNVRT3_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{}\label{CNVRT3_8c_a79fbdfd6d18963a5b89c61facf5afdfc}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!is@{is}}
+\index{is@{is}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{CNVRT3_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{CNVRT3_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{CNVRT3_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{CNVRT3_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ivtflg@{ivtflg}}
+\index{ivtflg@{ivtflg}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ivtflg}{ivtflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer ivtflg}\hypertarget{CNVRT3_8c_a9ccf01f0619693acef04475017b5cab1}{}\label{CNVRT3_8c_a9ccf01f0619693acef04475017b5cab1}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!jsuber@{jsuber}}
+\index{jsuber@{jsuber}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{jsuber}{jsuber}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsuber}\hypertarget{CNVRT3_8c_a42446e8b9101a7e89a6d804471f73fd3}{}\label{CNVRT3_8c_a42446e8b9101a7e89a6d804471f73fd3}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{CNVRT3_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{CNVRT3_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{CNVRT3_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{CNVRT3_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{CNVRT3_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{CNVRT3_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!ncflsv@{ncflsv}}
+\index{ncflsv@{ncflsv}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{ncflsv}{ncflsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer ncflsv}\hypertarget{CNVRT3_8c_a738b425fdcd81ccd5105e377b962100c}{}\label{CNVRT3_8c_a738b425fdcd81ccd5105e377b962100c}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{CNVRT3_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{CNVRT3_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{CNVRT3_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{CNVRT3_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!nreccl@{nreccl}}
+\index{nreccl@{nreccl}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{nreccl}{nreccl}}]{\setlength{\rightskip}{0pt plus 5cm}integer nreccl}\hypertarget{CNVRT3_8c_a1ae8a9c5bb3b551cdebd20581ec09e46}{}\label{CNVRT3_8c_a1ae8a9c5bb3b551cdebd20581ec09e46}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!nrecex@{nrecex}}
+\index{nrecex@{nrecex}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{nrecex}{nrecex}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrecex}\hypertarget{CNVRT3_8c_aff6964b2f1593ddb3e8cbe4385950857}{}\label{CNVRT3_8c_aff6964b2f1593ddb3e8cbe4385950857}
+
+
+Definition at line 33 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{CNVRT3_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{CNVRT3_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{CNVRT3_8c_af29300e691e97a062da856325402d3e9}{}\label{CNVRT3_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{CNVRT3_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{CNVRT3_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{CNVRT3_8c_a46ec9015bc80c29abc9ccacdfa2901e7}{}\label{CNVRT3_8c_a46ec9015bc80c29abc9ccacdfa2901e7}
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{CNVRT3_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{CNVRT3_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{CNVRT3_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{CNVRT3_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{CNVRT3_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{CNVRT3_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+
+\index{C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!C\+N\+V\+R\+T3.\+c@{C\+N\+V\+R\+T3.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{CNVRT3_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{CNVRT3_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 24 of file C\+N\+V\+R\+T3.\+c.
+

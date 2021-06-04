@@ -1,0 +1,227 @@
+\hypertarget{SRFTOL_8c}{}\section{S\+R\+F\+T\+O\+L.\+c File Reference}
+\label{SRFTOL_8c}\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+R\+F\+T\+O\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{SRFTOL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{SRFTOL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{srftol\+\_\+} (doublereal $\ast$skrv, doublereal $\ast$trad, doublereal $\ast$\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, doublereal $\ast$\hyperlink{SSV3_8c_ac18e37344d55b0efac27c5d3aefec069}{sstep}, doublereal $\ast$tstep)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{SRFTOL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{SRFTOL_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{SRFTOL_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{SRFTOL_8c_a275560ae4273c6690bda729b579ebb4e}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{SRFTOL_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{SRFTOL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{SRFTOL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{SRFTOL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file S\+R\+F\+T\+O\+L.\+c.
+
+
+
+Referenced by srftol\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!srftol\+\_\+@{srftol\+\_\+}}
+\index{srftol\+\_\+@{srftol\+\_\+}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{srftol\+\_\+(doublereal $\ast$skrv, doublereal $\ast$trad, doublereal $\ast$tol, doublereal $\ast$sstep, doublereal $\ast$tstep)}{srftol_(doublereal *skrv, doublereal *trad, doublereal *tol, doublereal *sstep, doublereal *tstep)}}]{\setlength{\rightskip}{0pt plus 5cm}int srftol\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{skrv, }
+\item[{doublereal $\ast$}]{trad, }
+\item[{doublereal $\ast$}]{tol, }
+\item[{doublereal $\ast$}]{sstep, }
+\item[{doublereal $\ast$}]{tstep}
+\end{DoxyParamCaption}
+)}\hypertarget{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}{}\label{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1}
+
+
+Definition at line 31 of file S\+R\+F\+T\+O\+L.\+c.
+
+
+
+References bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, cprint\+\_\+(), ibugg\+\_\+1, one, sstep, and w.
+
+
+
+Referenced by sspath\+\_\+(), and stepck\+\_\+().
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{comment}{/* Initialized data */}
+35 
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+37     \textcolor{keyword}{static} doublereal smal = 1e-9;
+38     \textcolor{keyword}{static} doublereal big = 1e9;
+39 
+40     \textcolor{comment}{/* System generated locals */}
+41     doublereal d\_\_1;
+42 
+43     \textcolor{comment}{/* Builtin functions */}
+44     \textcolor{keywordtype}{double} sqrt(doublereal);
+45     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+46 
+47     \textcolor{comment}{/* Local variables */}
+48     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+50     \textcolor{keyword}{static} doublereal chaf, shaf, srad;
+51     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+52     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+53 
+54 \textcolor{comment}{/* --PURPOSE IS TO COMPUTE SURFACE STEP DISTANCE SSTEP AND */}
+55 \textcolor{comment}{/* --TOOL STEP DISTANCE TSTEP ALONG SURFACE BASED ON CURVATURE */}
+56 \textcolor{comment}{/* --SKRV AND TOOL RADIUS TRAD AND TOLERANCE BAND TOL */}
+57 
+58 
+59     *\hyperlink{CUTREG_8c_a24d9894dd62006b1a1070b5076664517}{sstep} = big;
+60     *tstep = *\hyperlink{CUTREG_8c_a24d9894dd62006b1a1070b5076664517}{sstep};
+61     \textcolor{keywordflow}{if} (abs(*skrv) < smal) \{
+62     \textcolor{keywordflow}{goto} L999;
+63     \}
+64     srad = 1 / *skrv;
+65     w = (d\_\_1 = srad - *trad, abs(d\_\_1));
+66     \textcolor{keywordflow}{if} (w < smal) \{
+67     \textcolor{keywordflow}{goto} L999;
+68     \}
+69 \textcolor{comment}{/* --COSINE OF HALF ANGLE OF MOVEMENT */}
+70     chaf = one - *\hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol} / \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+71 \textcolor{comment}{/* Computing 2nd power */}
+72     d\_\_1 = chaf;
+73     shaf = one - d\_\_1 * d\_\_1;
+74     shaf = max(smal,shaf);
+75     shaf = sqrt(shaf);
+76     *\hyperlink{CUTREG_8c_a24d9894dd62006b1a1070b5076664517}{sstep} = abs(srad) * 2.f * shaf;
+77     *tstep = w * 2.f * shaf;
+78 
+79 L999:
+80     \textcolor{keywordflow}{if} (\hyperlink{SRFTOL_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+81     \textcolor{keywordflow}{goto} L1999;
+82     \}
+83     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{SRFTOL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{SRFTOL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+84     s\_copy(badmsg, \textcolor{stringliteral}{" AFTER SRFTOL"}, (ftnlen)20, (ftnlen)13);
+85     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+86     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SKRV"}, skrv, (ftnlen)4);
+87     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TRAD"}, trad, (ftnlen)4);
+88     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TOL "}, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}, (ftnlen)4);
+89     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"SSTP"}, \hyperlink{CUTREG_8c_a24d9894dd62006b1a1070b5076664517}{sstep}, (ftnlen)4);
+90     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{SRFTOL_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TSTP"}, tstep, (ftnlen)4);
+91 L1999:
+92     \textcolor{keywordflow}{return} 0;
+93 \} \textcolor{comment}{/* srftol\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SRFTOL_8c_a3062730dbde3774b6fba810fddce13e1_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SRFTOL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{SRFTOL_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 26 of file S\+R\+F\+T\+O\+L.\+c.
+
+
+
+Referenced by srftol\+\_\+().
+
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{SRFTOL_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 27 of file S\+R\+F\+T\+O\+L.\+c.
+
+
+
+Referenced by srftol\+\_\+().
+
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{SRFTOL_8c_a9e9287f317ef3436252a395791a899f6}{}\label{SRFTOL_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 25 of file S\+R\+F\+T\+O\+L.\+c.
+
+
+
+Referenced by srftol\+\_\+().
+
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{SRFTOL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{SRFTOL_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file S\+R\+F\+T\+O\+L.\+c.
+
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{SRFTOL_8c_a275560ae4273c6690bda729b579ebb4e}{}\label{SRFTOL_8c_a275560ae4273c6690bda729b579ebb4e}
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{SRFTOL_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{SRFTOL_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file S\+R\+F\+T\+O\+L.\+c.
+
+\index{S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!S\+R\+F\+T\+O\+L.\+c@{S\+R\+F\+T\+O\+L.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{SRFTOL_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{SRFTOL_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 18 of file S\+R\+F\+T\+O\+L.\+c.
+

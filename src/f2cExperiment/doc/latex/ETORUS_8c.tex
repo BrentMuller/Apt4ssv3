@@ -1,0 +1,144 @@
+\hypertarget{ETORUS_8c}{}\section{E\+T\+O\+R\+U\+S.\+c File Reference}
+\label{ETORUS_8c}\index{E\+T\+O\+R\+U\+S.\+c@{E\+T\+O\+R\+U\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for E\+T\+O\+R\+U\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{ETORUS_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044}{etorus\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$geo, doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{E\+T\+O\+R\+U\+S.\+c@{E\+T\+O\+R\+U\+S.\+c}!etorus\+\_\+@{etorus\+\_\+}}
+\index{etorus\+\_\+@{etorus\+\_\+}!E\+T\+O\+R\+U\+S.\+c@{E\+T\+O\+R\+U\+S.\+c}}
+\subsubsection[{\texorpdfstring{etorus\+\_\+(doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$geo, doublereal $\ast$result, integer $\ast$mode)}{etorus_(doublereal *u, doublereal *v, doublereal *geo, doublereal *result, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int etorus\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{geo, }
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044}{}\label{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044}
+
+
+Definition at line 17 of file E\+T\+O\+R\+U\+S.\+c.
+
+
+
+References f, i\+\_\+\+\_\+, r2, sn, ua, and va.
+
+
+
+Referenced by eval\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Builtin functions */}
+21     \textcolor{keywordtype}{double} sin(doublereal), cos(doublereal), sqrt(doublereal);
+22 
+23     \textcolor{comment}{/* Local variables */}
+24     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+25     \textcolor{keyword}{static} real r1, \hyperlink{DDRLSR_8c_a0700026d33d910874577324a49997947}{r2};
+26     \textcolor{keyword}{static} doublereal ap[3], \hyperlink{APT109_8c_a805070ec05d12594ca986c059b87b2c0}{ua}, \hyperlink{APT109_8c_a09d95c7199acbf4481958c15f6df0fb9}{va}, cu, cv, \hyperlink{APT331_8c_ac44dba448ffaa92867e6b60d2fd5abff}{sn}[3], rp, su, sv, tot;
+27 
+28 \textcolor{comment}{/* PARAMETRIC EVALUATOR FOR TORUS. */}
+29 \textcolor{comment}{/* TORUS PATCH CANONICAL DATA IS IN GEO(15) */}
+30 \textcolor{comment}{/*  GEO(1)-GEO(3) = AXIS OF TORUS */}
+31 \textcolor{comment}{/*  GEO(4)-GEO(6) = CENTRE OF TORUS */}
+32 \textcolor{comment}{/*  GEO(7)-GEO(9) = REF. AXIS (I.E. DEFINES U=0,V=0) */}
+33 \textcolor{comment}{/*  GEO(10)       = MAJOR RADIUS R1 */}
+34 \textcolor{comment}{/*  GEO(11)       = MINOR RADIUS R2 */}
+35 \textcolor{comment}{/*  GEO(12)       = UMIN (IN RADIANS) */}
+36 \textcolor{comment}{/*  GEO(13)       = UMAX (IN RADIANS) */}
+37 \textcolor{comment}{/*  GEO(14)       = VMIN (IN RADIANS) */}
+38 \textcolor{comment}{/*  GEO(15)       = VMAX (IN RADIANS) */}
+39 \textcolor{comment}{/* RESULT RETURNS IN HOMOGENEOUS COORDINATES POINT, FIRST DERIVATIVES, */}
+40 \textcolor{comment}{/* 2ND DERIVATIVES, NORMAL AND UNIT NORMAL AT (U,V) */}
+41     \textcolor{comment}{/* Parameter adjustments */}
+42     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= 5;
+43     --geo;
+44 
+45     \textcolor{comment}{/* Function Body */}
+46     ua = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} * (geo[13] - geo[12]) + geo[12];
+47     va = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} * (geo[15] - geo[14]) + geo[14];
+48     su = sin(ua);
+49     sv = sin(va);
+50     cu = cos(ua);
+51     cv = cos(va);
+52     r1 = geo[10];
+53     r2 = geo[11];
+54 \textcolor{comment}{/* AP IS THIRD ORTHOGONAL AXIS P*A */}
+55     ap[0] = -geo[2] * geo[9] + geo[3] * geo[8];
+56     ap[1] = -geo[3] * geo[7] + geo[1] * geo[9];
+57     ap[2] = -geo[1] * geo[8] + geo[2] * geo[7];
+58     rp = r1 + r2 * cu;
+59     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+60     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 4] = geo[i\_\_ + 3] + r2 * su * geo[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + cv * rp * geo[
+61         i\_\_ + 6] + sv * rp * ap[i\_\_ - 1];
+62 \textcolor{comment}{/* L10: */}
+63     \}
+64     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[8] = 1.f;
+65 \textcolor{comment}{/* POINT EVALUATED, NOW FIND DERIVATIVES RU,RV */}
+66     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+67     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 8] = r2 * cu * geo[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - r2 * cv * su * geo[i\_\_ + 6] - 
+68         r2 * sv * su * ap[i\_\_ - 1];
+69     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 12] = -rp * sv * geo[i\_\_ + 6] + cv * rp * ap[i\_\_ - 1];
+70 \textcolor{comment}{/* L20: */}
+71     \}
+72 \textcolor{comment}{/* FIND 2ND DERIVATIVES RUU, RUV AND RVV */}
+73     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+74     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 16] = -r2 * su * geo[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - r2 * cu * (cv * geo[i\_\_ + 6] 
+75         + sv * ap[i\_\_ - 1]);
+76     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + 20] = r2 * su * (sv * geo[i\_\_ + 6] - cv * ap[i\_\_ - 1]);
+77     result[i\_\_ + 24] = -rp * (cv * geo[i\_\_ + 6] + sv * ap[i\_\_ - 1]);
+78 \textcolor{comment}{/* L30: */}
+79     \}
+80 \textcolor{comment}{/* EVALUATE SURFACE NORMAL SN */}
+81     sn[0] = \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[10] * \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[15] - \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[11] * \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[14];
+82     sn[1] = result[11] * result[13] - result[9] * result[15];
+83     sn[2] = result[9] * result[14] - result[10] * result[13];
+84     tot = 0.f;
+85     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+86     result[i\_\_ + 28] = sn[i\_\_ - 1];
+87     tot += sn[i\_\_ - 1] * sn[i\_\_ - 1];
+88 \textcolor{comment}{/* L40: */}
+89     \}
+90     tot = sqrt(tot);
+91     \textcolor{keywordflow}{if} (tot <= 1e-8\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+92     \textcolor{keywordflow}{goto} L55;
+93     \}
+94     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+95     result[i\_\_ + 32] = sn[i\_\_ - 1] / tot;
+96 \textcolor{comment}{/* L50: */}
+97     \}
+98 \textcolor{comment}{/* SET W COMPONENT OF ALL VECTOR QUANTITIES TO 0.0 (?) */}
+99 L55:
+100     \textcolor{keywordflow}{for} (i\_\_ = 2; i\_\_ <= 8; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+101     result[(i\_\_ << 2) + 4] = 0.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+102 \textcolor{comment}{/* L60: */}
+103     \}
+104     \textcolor{keywordflow}{return} 0;
+105 \} \textcolor{comment}{/* etorus\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ETORUS_8c_a7257483dfeaf62e218d886a51cce6044_icgraph}
+\end{center}
+\end{figure}
+
+

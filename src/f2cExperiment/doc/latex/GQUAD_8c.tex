@@ -1,0 +1,75 @@
+\hypertarget{GQUAD_8c}{}\section{G\+Q\+U\+A\+D.\+c File Reference}
+\label{GQUAD_8c}\index{G\+Q\+U\+A\+D.\+c@{G\+Q\+U\+A\+D.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+Q\+U\+A\+D.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{GQUAD_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GQUAD_8c_aa6b8aad5f42c71a4e72c3f87c0d3a0d2}{gquad\+\_\+} (doublereal $\ast$\hyperlink{XNUMBR_8c_a68d3ba380c16e286247bb69367760615}{canon}, doublereal $\ast$quadbf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+Q\+U\+A\+D.\+c@{G\+Q\+U\+A\+D.\+c}!gquad\+\_\+@{gquad\+\_\+}}
+\index{gquad\+\_\+@{gquad\+\_\+}!G\+Q\+U\+A\+D.\+c@{G\+Q\+U\+A\+D.\+c}}
+\subsubsection[{\texorpdfstring{gquad\+\_\+(doublereal $\ast$canon, doublereal $\ast$quadbf)}{gquad_(doublereal *canon, doublereal *quadbf)}}]{\setlength{\rightskip}{0pt plus 5cm}int gquad\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{canon, }
+\item[{doublereal $\ast$}]{quadbf}
+\end{DoxyParamCaption}
+)}\hypertarget{GQUAD_8c_aa6b8aad5f42c71a4e72c3f87c0d3a0d2}{}\label{GQUAD_8c_aa6b8aad5f42c71a4e72c3f87c0d3a0d2}
+
+
+Definition at line 38 of file G\+Q\+U\+A\+D.\+c.
+
+
+
+References canon, and i\+\_\+\+\_\+.
+
+
+
+Referenced by gsurf\+\_\+().
+
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+41 
+42 
+43     \textcolor{comment}{/* Parameter adjustments */}
+44     --quadbf;
+45     --\hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon};
+46 
+47     \textcolor{comment}{/* Function Body */}
+48     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+49 \textcolor{comment}{/* L2: */}
+50     quadbf[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+51     \}
+52     \textcolor{keywordflow}{for} (i\_\_ = 4; i\_\_ <= 9; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+53 \textcolor{comment}{/* L5: */}
+54     quadbf[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[i\_\_ + 1] * 2.f;
+55     \}
+56     quadbf[10] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[4];
+57 
+58     \textcolor{keywordflow}{return} 0;
+59 \} \textcolor{comment}{/* gquad\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GQUAD_8c_aa6b8aad5f42c71a4e72c3f87c0d3a0d2_icgraph}
+\end{center}
+\end{figure}
+
+

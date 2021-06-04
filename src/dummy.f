@@ -37,7 +37,7 @@ c      ct=ctme
       end
 
 
-      subroutine cputim
-      write(*,*)"unimplemented VAX subroutine CPUTIM"
-      return
-      end
+c     subroutine cputim
+c     write(*,*)"unimplemented VAX subroutine CPUTIM"
+c     return
+c     end

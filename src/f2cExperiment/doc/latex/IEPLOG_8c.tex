@@ -1,0 +1,1023 @@
+\hypertarget{IEPLOG_8c}{}\section{I\+E\+P\+L\+O\+G.\+c File Reference}
+\label{IEPLOG_8c}\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+E\+P\+L\+O\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{IEPLOG_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_a571c13d9a7332d80d8290db497c8411b}{cfsize\+\_\+1}~\hyperlink{TSSMIL_8c_a54ab8dec04c8d5bf3a532b32c23f5117}{cfsize\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1}~\hyperlink{SSV3_8c_af95d7ffd44b6fd3eb0d18bdf27e830c6}{prt\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1}~\hyperlink{SSV3_8c_a7e9dcb1b858320e2072e1096415bb471}{outbuf\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1}~\hyperlink{START_8c_a0d65e2d066b8a99d678ca237f4a0fec1}{ntbl\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_a0096003463a196c4eb745c9d1366a3c7}{numblk\+\_\+1}~\hyperlink{TWOARG_8c_a7a747c7b16ac6043690bd63a8c5dac53}{numblk\+\_\+}
+\item 
+\#define \hyperlink{IEPLOG_8c_aa29b866765bdc5bdf87b7eb666d66093}{buf}~((integer $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1})
+\item 
+\#define \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}~((integer $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1} + 12)
+\item 
+\#define \hyperlink{IEPLOG_8c_a889150823b0a9758e3d86f3ea616c65e}{nmod}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1})
+\item 
+\#define \hyperlink{IEPLOG_8c_a3e243959ce91fa0b5f926d2da1e11d21}{nstr}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1} + 4)
+\item 
+\#define \hyperlink{IEPLOG_8c_abe113bc2c6bf5ead63c2d7742ecfb143}{iname}~((integer $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1} + 13)
+\item 
+\#define \hyperlink{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}{inumb}~((integer $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1} + 12)
+\item 
+\#define \hyperlink{IEPLOG_8c_a6ba48f069acda86145a51df290260fae}{nlast}~((integer $\ast$)\&\hyperlink{START_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{ntbl\+\_\+1} + 3)
+\item 
+\#define \hyperlink{IEPLOG_8c_a56717b0aed39363c670364e8d0596454}{cilprt}~((logical $\ast$)\&\hyperlink{SSV3_8c_ad5af17232611476e9b7239fc1c909844}{prt\+\_\+1})
+\item 
+\#define \hyperlink{IEPLOG_8c_aacfafe59d967971754ae906589b75b74}{lcilpr}~((logical $\ast$)\&\hyperlink{SSV3_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\+\_\+1} + 17)
+\item 
+\#define \hyperlink{IEPLOG_8c_aff9204936d5ca723fd110c263f320e52}{maxsiz}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a571c13d9a7332d80d8290db497c8411b}{cfsize\+\_\+1} + 3)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{IEPLOG_8c_a5685564e38ec2d74d651c2b6f6e31c7c}{ieplog\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{IEPLOG_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{IEPLOG_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{IEPLOG_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{IEPLOG_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{IEPLOG_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{IEPLOG_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{IEPLOG_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{IEPLOG_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{IEPLOG_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{IEPLOG_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_a3227fa76f26da8e1493f2993d214a113}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{IEPLOG_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{IEPLOG_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_add051bb2614a951bb4594c7ca7ad54b8}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_a1fe196ec400d5a15f8cd50f3facc50de}{cfsize} \mbox{[}205\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_abab0d1f87dbdf6bddcc2550c99e26640}{cfsize\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}{prt} \mbox{[}7\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_ab17acdb36100eee200bfe95a9ce4b7f2}{prt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{IEPLOG_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{IEPLOG_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{IEPLOG_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{IEPLOG_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{IEPLOG_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{IEPLOG_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{IEPLOG_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{IEPLOG_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{IEPLOG_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{IEPLOG_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{IEPLOG_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{IEPLOG_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{IEPLOG_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{IEPLOG_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{IEPLOG_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{IEPLOG_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{IEPLOG_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{IEPLOG_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{IEPLOG_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{IEPLOG_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{IEPLOG_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{IEPLOG_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{IEPLOG_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{IEPLOG_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_a2b3bf9876e463a71a25f3e5b61500299}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_ad949091e205c2dbf743270f10efaacfb}{pagpak}\\
+\>integer \hyperlink{IEPLOG_8c_aaf460a324a841afc65907fb2ff37f221}{isc}\\
+\>integer \hyperlink{IEPLOG_8c_a5d0aa317407eead95c0279781416a7d3}{iscarr}\\
+\>integer \hyperlink{IEPLOG_8c_ad0232959d4df30978c73f10a44c8ed87}{icform}\\
+\>integer \hyperlink{IEPLOG_8c_a1238df502a5c16cd6b016fe34f8ccc6f}{ifloat}\\
+\>integer \hyperlink{IEPLOG_8c_aa7a8a40e29dee4cf2a1377bc9164604c}{icom}\\
+\>integer \hyperlink{IEPLOG_8c_a4b0225c88e41b966cb9adb70eb748490}{macwds}\\
+\>integer \hyperlink{IEPLOG_8c_a12f88df5c9c201e4677acc4b09ad4d83}{ppwrds}\\
+\>logical \hyperlink{IEPLOG_8c_a41dd91d18b6174f346541f62020fcf70}{macflg}\\
+\>logical \hyperlink{IEPLOG_8c_aa446796435b12f32aaf1f7c7d7fd35a1}{labflg}\\
+\>logical \hyperlink{IEPLOG_8c_a406e859663da9aacc49aca44ef7342c0}{rsvflg}\\
+\>integer \hyperlink{IEPLOG_8c_af846455c708d097eb6a07ce3135ddf32}{lpage}\\
+\>integer \hyperlink{IEPLOG_8c_ab4b9001e3fd07481a9b32b25a1e165cc}{buffer} \mbox{[}256\mbox{]}\\
+\>integer \hyperlink{IEPLOG_8c_a7735c088b87c9aa80abc8effe49a54bd}{labbuf} \mbox{[}256\mbox{]}\\
+\>integer \hyperlink{IEPLOG_8c_a06f0315da6fa972d9844c64cf881a126}{ibuf}\\
+\>integer \hyperlink{IEPLOG_8c_a0636e49faa67ec6d06404963bd2c1e26}{ilbuf}\\
+\>integer \hyperlink{IEPLOG_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}{pppage}\\
+\>integer \hyperlink{IEPLOG_8c_ad789f08e68f3bd2d0487fd79de6a873b}{mcpage}\\
+\} \hyperlink{IEPLOG_8c_a240db8aa241d4464472cce3c4180951f}{outbuf\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}{ntbl} \mbox{[}6\mbox{]}\\
+\} \hyperlink{IEPLOG_8c_a5b00dfce082477a1e4c8b39c1795fac3}{ntbl\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{IEPLOG_8c_a6a5d12bc893d0b66fd06044b52a3f957}{mnmbnd}\\
+\>integer \hyperlink{IEPLOG_8c_ad6775419b3190a0ba1cc6de4efc57c35}{numidx}\\
+\>integer \hyperlink{IEPLOG_8c_a524ab5fe9fdb56f174abec0949f54fc5}{nmbrs}\\
+\>integer \hyperlink{IEPLOG_8c_ae73731ee2912ae9508753b010b464b3b}{lstchr}\\
+\>integer \hyperlink{IEPLOG_8c_a09ae9a66b10cc07f34a3c3c178e76fef}{masgnd}\\
+\} \hyperlink{IEPLOG_8c_a71065251da68b436bb1bf4a9bf42e6d3}{numblk\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{c\+\_\+n2} = -\/2
+\item 
+static integer \hyperlink{IEPLOG_8c_ab628a751e2936033c8c46dcac2751d98}{c\+\_\+\+\_\+23} = 23
+\item 
+static integer \hyperlink{IEPLOG_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!buf@{buf}}
+\index{buf@{buf}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{buf}{buf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define buf~((integer $\ast$)\&{\bf outbuf\+\_\+1})}\hypertarget{IEPLOG_8c_aa29b866765bdc5bdf87b7eb666d66093}{}\label{IEPLOG_8c_aa29b866765bdc5bdf87b7eb666d66093}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cfsize\+\_\+1@{cfsize\+\_\+1}}
+\index{cfsize\+\_\+1@{cfsize\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cfsize\+\_\+1}{cfsize_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cfsize\+\_\+1~{\bf cfsize\+\_\+}}\hypertarget{IEPLOG_8c_a571c13d9a7332d80d8290db497c8411b}{}\label{IEPLOG_8c_a571c13d9a7332d80d8290db497c8411b}
+
+
+Definition at line 34 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cilprt@{cilprt}}
+\index{cilprt@{cilprt}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cilprt}{cilprt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cilprt~((logical $\ast$)\&{\bf prt\+\_\+1})}\hypertarget{IEPLOG_8c_a56717b0aed39363c670364e8d0596454}{}\label{IEPLOG_8c_a56717b0aed39363c670364e8d0596454}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{IEPLOG_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{IEPLOG_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!iname@{iname}}
+\index{iname@{iname}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{iname}{iname}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iname~((integer $\ast$)\&{\bf outbuf\+\_\+1} + 13)}\hypertarget{IEPLOG_8c_abe113bc2c6bf5ead63c2d7742ecfb143}{}\label{IEPLOG_8c_abe113bc2c6bf5ead63c2d7742ecfb143}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!inumb@{inumb}}
+\index{inumb@{inumb}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{inumb}{inumb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inumb~((integer $\ast$)\&{\bf outbuf\+\_\+1} + 12)}\hypertarget{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}{}\label{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}
+
+
+Referenced by ieplog\+\_\+(), inpat\+\_\+(), isscod\+\_\+(), and lcanon\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!jbuf@{jbuf}}
+\index{jbuf@{jbuf}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{jbuf}{jbuf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jbuf~((integer $\ast$)\&{\bf outbuf\+\_\+1} + 12)}\hypertarget{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{}\label{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!lcilpr@{lcilpr}}
+\index{lcilpr@{lcilpr}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{lcilpr}{lcilpr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lcilpr~((logical $\ast$)\&{\bf outbuf\+\_\+1} + 17)}\hypertarget{IEPLOG_8c_aacfafe59d967971754ae906589b75b74}{}\label{IEPLOG_8c_aacfafe59d967971754ae906589b75b74}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!maxsiz@{maxsiz}}
+\index{maxsiz@{maxsiz}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{maxsiz}{maxsiz}}]{\setlength{\rightskip}{0pt plus 5cm}\#define maxsiz~((integer $\ast$)\&{\bf cfsize\+\_\+1} + 3)}\hypertarget{IEPLOG_8c_aff9204936d5ca723fd110c263f320e52}{}\label{IEPLOG_8c_aff9204936d5ca723fd110c263f320e52}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nlast@{nlast}}
+\index{nlast@{nlast}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nlast}{nlast}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nlast~((integer $\ast$)\&{\bf ntbl\+\_\+1} + 3)}\hypertarget{IEPLOG_8c_a6ba48f069acda86145a51df290260fae}{}\label{IEPLOG_8c_a6ba48f069acda86145a51df290260fae}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nmod@{nmod}}
+\index{nmod@{nmod}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nmod}{nmod}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nmod~((integer $\ast$)\&{\bf ntbl\+\_\+1})}\hypertarget{IEPLOG_8c_a889150823b0a9758e3d86f3ea616c65e}{}\label{IEPLOG_8c_a889150823b0a9758e3d86f3ea616c65e}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nstr@{nstr}}
+\index{nstr@{nstr}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nstr}{nstr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nstr~((integer $\ast$)\&{\bf ntbl\+\_\+1} + 4)}\hypertarget{IEPLOG_8c_a3e243959ce91fa0b5f926d2da1e11d21}{}\label{IEPLOG_8c_a3e243959ce91fa0b5f926d2da1e11d21}
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ntbl\+\_\+1@{ntbl\+\_\+1}}
+\index{ntbl\+\_\+1@{ntbl\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ntbl\+\_\+1}{ntbl_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ntbl\+\_\+1~{\bf ntbl\+\_\+}}\hypertarget{IEPLOG_8c_a7646cbed8b35380bbce631ee1e3aa3f1}{}\label{IEPLOG_8c_a7646cbed8b35380bbce631ee1e3aa3f1}
+
+
+Definition at line 63 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!numblk\+\_\+1@{numblk\+\_\+1}}
+\index{numblk\+\_\+1@{numblk\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{numblk\+\_\+1}{numblk_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numblk\+\_\+1~{\bf numblk\+\_\+}}\hypertarget{IEPLOG_8c_a0096003463a196c4eb745c9d1366a3c7}{}\label{IEPLOG_8c_a0096003463a196c4eb745c9d1366a3c7}
+
+
+Definition at line 69 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!outbuf\+\_\+1@{outbuf\+\_\+1}}
+\index{outbuf\+\_\+1@{outbuf\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{outbuf\+\_\+1}{outbuf_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define outbuf\+\_\+1~{\bf outbuf\+\_\+}}\hypertarget{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{}\label{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}
+
+
+Definition at line 57 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!prt\+\_\+1@{prt\+\_\+1}}
+\index{prt\+\_\+1@{prt\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+1}{prt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define prt\+\_\+1~{\bf prt\+\_\+}}\hypertarget{IEPLOG_8c_ad5af17232611476e9b7239fc1c909844}{}\label{IEPLOG_8c_ad5af17232611476e9b7239fc1c909844}
+
+
+Definition at line 40 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 49 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ieplog\+\_\+@{ieplog\+\_\+}}
+\index{ieplog\+\_\+@{ieplog\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ieplog\+\_\+(void)}{ieplog_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int ieplog\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{IEPLOG_8c_a5685564e38ec2d74d651c2b6f6e31c7c}{}\label{IEPLOG_8c_a5685564e38ec2d74d651c2b6f6e31c7c}
+
+
+Definition at line 92 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+References awrite\+\_\+(), buf, c\+\_\+\+\_\+23, c\+\_\+n2, c\+\_\+n3, chwrit\+\_\+(), cilprt, cnamtb\+\_\+1, i\+\_\+\+\_\+, iname, inumb, irec, jbuf, lcilpr, maxsiz, nametb\+\_\+1, nlast, nstr, numblk\+\_\+1, outbuf\+\_\+1, rlsbuf\+\_\+(), symfil\+\_\+1, and tapop\+\_\+().
+
+
+
+Referenced by epilog\+\_\+().
+
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{comment}{/* Local variables */}
+95     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+96 \textcolor{preprocessor}{#define buf ((integer *)&outbuf\_1)}
+97     \textcolor{keyword}{static} integer \hyperlink{ATAPRD_8c_ac236d3f8c7a6cb0f6564e057d934bf48}{irec};
+98 \textcolor{preprocessor}{#define jbuf ((integer *)&outbuf\_1 + 12)}
+99 \textcolor{preprocessor}{#define nmod ((integer *)&ntbl\_1)}
+100     \textcolor{keyword}{static} integer iret;
+101 \textcolor{preprocessor}{#define nstr ((integer *)&ntbl\_1 + 4)}
+102 \textcolor{preprocessor}{#define iname ((integer *)&outbuf\_1 + 13)}
+103 \textcolor{preprocessor}{#define inumb ((integer *)&outbuf\_1 + 12)}
+104 \textcolor{preprocessor}{#define nlast ((integer *)&ntbl\_1 + 3)}
+105     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(integer *, integer *);
+106 \textcolor{preprocessor}{#define cilprt ((logical *)&prt\_1)}
+107 \textcolor{preprocessor}{#define lcilpr ((logical *)&outbuf\_1 + 17)}
+108 \textcolor{preprocessor}{#define maxsiz ((integer *)&cfsize\_1 + 3)}
+109     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}(\textcolor{keywordtype}{void}), \hyperlink{AWRITE_8c_a47d13d4327f6a21f5befc3e342166676}{awrite\_}(integer *, integer *, 
+110         integer *, integer *, integer *), \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(integer *, integer *, 
+111         \textcolor{keywordtype}{char} *, integer *, integer *, ftnlen);
+112 
+113 
+114 
+115 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+116 
+117 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+118 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+119 \textcolor{comment}{/* INAMST:      BEGIN GEOMETRIC DEFINITION ROUTINE NAME SECTION(NAMTBL) */}
+120 \textcolor{comment}{/* NAMMAX:      NAMTBL INDEX OF END OF THE PART PROGRAM NAME SECTION */}
+121 \textcolor{comment}{/* IFIXST:      NAMTBL INDEX OF BEGINNING OF FIXED POINT NUMBER SECTION */}
+122 \textcolor{comment}{/* IFIXND:      NAMTBL INDEX OF START OF FIXED POINT NUMBER SECTION */}
+123 \textcolor{comment}{/* NUMBST:      NAMTBL INDEX OF BEGINNING OF NUMBER SECTION */}
+124 \textcolor{comment}{/* NUMBND:      NAMTBL INDEX OF END OF NUMBER SECTION */}
+125 
+126 \textcolor{comment}{/*       12.    LARGE DATA ARRAY STORAGE REQUIREMENTS */}
+127 
+128 
+129 
+130 
+131 
+132 
+133 
+134 \textcolor{comment}{/* MAXSIZ:      SIZE OF THE LAST LARGEST LARGE DATA ARRAY */}
+135 
+136 \textcolor{comment}{/*       14.    I. L. LIST OPTION FLAGS */}
+137 
+138 \textcolor{comment}{/* CILPRT:      TRUE WHEN COMPRESSED I.L. PRINTING REQUESTED */}
+139 
+140 \textcolor{comment}{/*       33.    SYMBOLIC FILE DEFINITIONS */}
+141 
+142 \textcolor{comment}{/* MACTXT:      EXTERNAL FILE  OF MACRO TEXT */}
+143 \textcolor{comment}{/* ELFIL1:      PACKING FACTOR FOR CREATING PAGES (INTERPRETER) */}
+144 \textcolor{comment}{/* ELFIL2:      PART PROGRAMMING TEXT GENERATED BY INTERPRETER */}
+145 \textcolor{comment}{/* ELFIL3:      MACRO TEXT GENERATED FOR INTERPRETER */}
+146 \textcolor{comment}{/* ELFIL4:      MACRO TEXT GENERATED FOR INTERPRETER */}
+147 
+148 \textcolor{comment}{/*       34.    COMMON BLOCK FOR INTERPRETIVE C.I.L. OUTPUT */}
+149 
+150 
+151 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+152 
+153 
+154 
+155 \textcolor{comment}{/* PAGPAK:      PACKING FACTOR FOR CREATING PAGES (INTERPRETER) */}
+156 \textcolor{comment}{/* MACFLG:      TRUE WHEN MACRO PROCESSING IN EFFECT (INTERPRETER) */}
+157 \textcolor{comment}{/* LABFLG:      INDICATES I.L. COMMAND IS LABEL (INTERPRETER) */}
+158 \textcolor{comment}{/* PPPAGE:      PAGE NUMBER OF PART PROGRAMMING TEXT (INTERPRETER) */}
+159 \textcolor{comment}{/* MCPAGE:      NUMBER OF PAGES OF MACRO I.L. (INTERPRETER) */}
+160 
+161 
+162 
+163 \textcolor{comment}{/* INUMB:       NUMBER OF ITEMS IN THE LABBUF ARRAY (INTERPRETER) */}
+164 \textcolor{comment}{/* INAME: */}
+165 \textcolor{comment}{/* LCILPR: */}
+166 
+167 \textcolor{comment}{/*       41.    NUMBER TABLE OVERFLOW VARIABLES */}
+168 
+169 \textcolor{comment}{/* NMOD:        NUMBER OF ENTRIES PERMITTED IN INTERNAL NUMBER TABLE */}
+170 \textcolor{comment}{/* NLAST:       LAST NEW BLOCK NUMBER OF NUMBER TABLE ON THE EXTERN FILE */}
+171 \textcolor{comment}{/* NSTR:        NUMBER OF FIRST MACTXT RECORD AVAILABLE FOR NUMBER TABLE */}
+172 
+173 \textcolor{comment}{/*       45.    NUMBER TABLE INDICES */}
+174 
+175 \textcolor{comment}{/* MNMBND:      LAST NAME TABLE ENTRY TO MACRO ASSIGNED NUMBER SECTION */}
+176 \textcolor{comment}{/* * */}
+177 \textcolor{comment}{/* ** */}
+178 \textcolor{comment}{/* ...     CLEAR BUFFERS AND REWIND FILES 2 AND 3 */}
+179 
+180 
+181 \textcolor{comment}{/*       45.    NUMBER TABLE INDICES */}
+182 
+183 
+184 \textcolor{comment}{/* MNMBND:      LAST NAME TABLE ENTRY TO MACRO ASSIGNED NUMBER SECTION */}
+185 \textcolor{comment}{/* NUMIDX:      NAMTBL INDEX OF A NUMBER GIVEN IN THE CURRENT STATEMENT */}
+186 \textcolor{comment}{/*  NMBRS:      QUANTITY OF NUMBERS IN THE CURRENT STATEMENT */}
+187 \textcolor{comment}{/* LSTCHR:      LAST CHARACTER OF A NUMBER */}
+188 \textcolor{comment}{/* MASGND:      NAME TABLE INDEX OF SECTION END FOR NUMBERS ASSIGNMENT */}
+189 
+190     \textcolor{keywordflow}{if} (! \hyperlink{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.macflg) \{
+191     \textcolor{keywordflow}{goto} L1;
+192     \}
+193     \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}();
+194     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil3, &\hyperlink{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2});
+195 L1:
+196     \hyperlink{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.labflg = TRUE\_;
+197     \hyperlink{RLSBUF_8c_a07eb9fac9eed2eb969c6453eb6be9cb5}{rlsbuf\_}();
+198     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil2, &\hyperlink{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2});
+199     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil1, &\hyperlink{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2});
+200 
+201 \textcolor{comment}{/* ...       ALL USEFUL ITEMS IN THE NAMTBL ARE STORED IN BUFFER */}
+202 \textcolor{comment}{/* ...       TOGETHER WITH ALL RELEVANT PARAMETERS */}
+203 
+204     *\hyperlink{IEPLOG_8c_abe113bc2c6bf5ead63c2d7742ecfb143}{iname} = \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax - \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.inamst + 1;
+205     *\hyperlink{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}{inumb} = \hyperlink{IEPLOG_8c_a0096003463a196c4eb745c9d1366a3c7}{numblk\_1}.mnmbnd - \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.ifixst + 1;
+206     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[2] = \hyperlink{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.pppage;
+207     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[3] = \hyperlink{IEPLOG_8c_ae92560ae75b3202a73256d5c13ae54bb}{outbuf\_1}.mcpage;
+208     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[4] = \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.inamst;
+209     *\hyperlink{IEPLOG_8c_aacfafe59d967971754ae906589b75b74}{lcilpr} = *\hyperlink{IEPLOG_8c_a56717b0aed39363c670364e8d0596454}{cilprt};
+210     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[6] = \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.numbst;
+211     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[7] = *\hyperlink{IEPLOG_8c_a6ba48f069acda86145a51df290260fae}{nlast};
+212     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[8] = *\hyperlink{IEPLOG_8c_a3e243959ce91fa0b5f926d2da1e11d21}{nstr};
+213     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[9] = \hyperlink{IEPLOG_8c_aff9204936d5ca723fd110c263f320e52}{maxsiz}[0];
+214     \hyperlink{IEPLOG_8c_adcd06bfff57dfea609619cc7703cd1ee}{jbuf}[10] = \hyperlink{IEPLOG_8c_aff9204936d5ca723fd110c263f320e52}{maxsiz}[1];
+215     irec = 0;
+216     \hyperlink{AWRITE_8c_a47d13d4327f6a21f5befc3e342166676}{awrite\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil4, &irec, \hyperlink{IEPLOG_8c_aa29b866765bdc5bdf87b7eb666d66093}{buf}, &\hyperlink{IEPLOG_8c_ab628a751e2936033c8c46dcac2751d98}{c\_\_23}, &iret);
+217 
+218 \textcolor{comment}{/* ...     WRITE NAME TABLE */}
+219     irec = 0;
+220 \textcolor{comment}{/* ...  4TH ARGUMENT OF CHWRIT IS NUMBER OF BYTES */}
+221     i\_\_ = *\hyperlink{IEPLOG_8c_abe113bc2c6bf5ead63c2d7742ecfb143}{iname} * 6;
+222     \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil4, &irec, \hyperlink{IEPLOG_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnamtb + (
+      \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.inamst - 1) *
+223          6, &i\_\_, &iret, (ftnlen)6);
+224 \textcolor{comment}{/* ...  4TH ARGUMENT OF CHWRIT IS NUMBER OF BYTES */}
+225     i\_\_ = *\hyperlink{IEPLOG_8c_a21e5abef184b4a44285450a63e8bd83b}{inumb} * 12;
+226     irec = 0;
+227     \hyperlink{CHWRIT_8c_a1e5f099839a0ae84aee0fb54bfe76369}{chwrit\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil4, &irec, \hyperlink{IEPLOG_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\_1}.cnumtb + (
+      \hyperlink{IEPLOG_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.ifixst - 1) *
+228          12, &i\_\_, &iret, (ftnlen)12);
+229 
+230 \textcolor{comment}{/* ...     ALL TABLES AND PARAMETERS NOW WRITTEN.  REWIND FILES 4 AND 9. */}
+231 
+232     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.elfil4, &\hyperlink{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{c\_n2});
+233     \hyperlink{TAPOP_8c_a8906a859678c33b4480a15444583bbc5}{tapop\_}(&\hyperlink{IEPLOG_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.mactxt, &\hyperlink{IEPLOG_8c_a6d165623735ee520885e84b5052c252b}{c\_n3});
+234     \textcolor{keywordflow}{return} 0;
+235 \} \textcolor{comment}{/* ieplog\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IEPLOG_8c_a5685564e38ec2d74d651c2b6f6e31c7c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IEPLOG_8c_a5685564e38ec2d74d651c2b6f6e31c7c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{IEPLOG_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{IEPLOG_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!buffer@{buffer}}
+\index{buffer@{buffer}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{buffer}{buffer}}]{\setlength{\rightskip}{0pt plus 5cm}integer buffer\mbox{[}256\mbox{]}}\hypertarget{IEPLOG_8c_ab4b9001e3fd07481a9b32b25a1e165cc}{}\label{IEPLOG_8c_ab4b9001e3fd07481a9b32b25a1e165cc}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!c\+\_\+\+\_\+23@{c\+\_\+\+\_\+23}}
+\index{c\+\_\+\+\_\+23@{c\+\_\+\+\_\+23}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+23}{c__23}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+23 = 23\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{IEPLOG_8c_ab628a751e2936033c8c46dcac2751d98}{}\label{IEPLOG_8c_ab628a751e2936033c8c46dcac2751d98}
+
+
+Definition at line 74 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!c\+\_\+n2@{c\+\_\+n2}}
+\index{c\+\_\+n2@{c\+\_\+n2}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n2}{c_n2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n2 = -\/2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}{}\label{IEPLOG_8c_a4c6b1b990826a12828133f47fb011d77}
+
+
+Definition at line 73 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{IEPLOG_8c_a6d165623735ee520885e84b5052c252b}{}\label{IEPLOG_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 75 of file I\+E\+P\+L\+O\+G.\+c.
+
+
+
+Referenced by ieplog\+\_\+().
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cfsize@{cfsize}}
+\index{cfsize@{cfsize}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cfsize}{cfsize}}]{\setlength{\rightskip}{0pt plus 5cm}integer cfsize\mbox{[}205\mbox{]}}\hypertarget{IEPLOG_8c_a1fe196ec400d5a15f8cd50f3facc50de}{}\label{IEPLOG_8c_a1fe196ec400d5a15f8cd50f3facc50de}
+
+
+Definition at line 31 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cfsize\+\_\+@{cfsize\+\_\+}}
+\index{cfsize\+\_\+@{cfsize\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cfsize\+\_\+}{cfsize_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cfsize\+\_\+}\hypertarget{IEPLOG_8c_abab0d1f87dbdf6bddcc2550c99e26640}{}\label{IEPLOG_8c_abab0d1f87dbdf6bddcc2550c99e26640}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{IEPLOG_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{IEPLOG_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!charst@{charst}}
+\index{charst@{charst}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{IEPLOG_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{IEPLOG_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{IEPLOG_8c_afddbf18370447268640d26c983890fd1}{}\label{IEPLOG_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{IEPLOG_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{IEPLOG_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{IEPLOG_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{IEPLOG_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{IEPLOG_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{IEPLOG_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{IEPLOG_8c_add051bb2614a951bb4594c7ca7ad54b8}{}\label{IEPLOG_8c_add051bb2614a951bb4594c7ca7ad54b8}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{IEPLOG_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{IEPLOG_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{IEPLOG_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{IEPLOG_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{IEPLOG_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{IEPLOG_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{IEPLOG_8c_a995bd688c87d82736860b413de2416d4}{}\label{IEPLOG_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{IEPLOG_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{IEPLOG_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{IEPLOG_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{IEPLOG_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{IEPLOG_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{IEPLOG_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{IEPLOG_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{IEPLOG_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ibuf@{ibuf}}
+\index{ibuf@{ibuf}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ibuf}{ibuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibuf}\hypertarget{IEPLOG_8c_a06f0315da6fa972d9844c64cf881a126}{}\label{IEPLOG_8c_a06f0315da6fa972d9844c64cf881a126}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!icform@{icform}}
+\index{icform@{icform}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{icform}{icform}}]{\setlength{\rightskip}{0pt plus 5cm}integer icform}\hypertarget{IEPLOG_8c_ad0232959d4df30978c73f10a44c8ed87}{}\label{IEPLOG_8c_ad0232959d4df30978c73f10a44c8ed87}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!icom@{icom}}
+\index{icom@{icom}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{icom}{icom}}]{\setlength{\rightskip}{0pt plus 5cm}integer icom}\hypertarget{IEPLOG_8c_aa7a8a40e29dee4cf2a1377bc9164604c}{}\label{IEPLOG_8c_aa7a8a40e29dee4cf2a1377bc9164604c}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{IEPLOG_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{IEPLOG_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{IEPLOG_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{IEPLOG_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ifloat@{ifloat}}
+\index{ifloat@{ifloat}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ifloat}{ifloat}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifloat}\hypertarget{IEPLOG_8c_a1238df502a5c16cd6b016fe34f8ccc6f}{}\label{IEPLOG_8c_a1238df502a5c16cd6b016fe34f8ccc6f}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ilbuf@{ilbuf}}
+\index{ilbuf@{ilbuf}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ilbuf}{ilbuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer ilbuf}\hypertarget{IEPLOG_8c_a0636e49faa67ec6d06404963bd2c1e26}{}\label{IEPLOG_8c_a0636e49faa67ec6d06404963bd2c1e26}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{IEPLOG_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{IEPLOG_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{IEPLOG_8c_a373010e90fb1cd08bf263255a111920d}{}\label{IEPLOG_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{IEPLOG_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{IEPLOG_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!isc@{isc}}
+\index{isc@{isc}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{isc}{isc}}]{\setlength{\rightskip}{0pt plus 5cm}integer isc}\hypertarget{IEPLOG_8c_aaf460a324a841afc65907fb2ff37f221}{}\label{IEPLOG_8c_aaf460a324a841afc65907fb2ff37f221}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!iscarr@{iscarr}}
+\index{iscarr@{iscarr}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{iscarr}{iscarr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iscarr}\hypertarget{IEPLOG_8c_a5d0aa317407eead95c0279781416a7d3}{}\label{IEPLOG_8c_a5d0aa317407eead95c0279781416a7d3}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{IEPLOG_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{IEPLOG_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!labbuf@{labbuf}}
+\index{labbuf@{labbuf}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{labbuf}{labbuf}}]{\setlength{\rightskip}{0pt plus 5cm}integer labbuf\mbox{[}256\mbox{]}}\hypertarget{IEPLOG_8c_a7735c088b87c9aa80abc8effe49a54bd}{}\label{IEPLOG_8c_a7735c088b87c9aa80abc8effe49a54bd}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!labflg@{labflg}}
+\index{labflg@{labflg}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{labflg}{labflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical labflg}\hypertarget{IEPLOG_8c_aa446796435b12f32aaf1f7c7d7fd35a1}{}\label{IEPLOG_8c_aa446796435b12f32aaf1f7c7d7fd35a1}
+
+
+Definition at line 53 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{IEPLOG_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{IEPLOG_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{IEPLOG_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{IEPLOG_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!lpage@{lpage}}
+\index{lpage@{lpage}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{lpage}{lpage}}]{\setlength{\rightskip}{0pt plus 5cm}integer lpage}\hypertarget{IEPLOG_8c_af846455c708d097eb6a07ce3135ddf32}{}\label{IEPLOG_8c_af846455c708d097eb6a07ce3135ddf32}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!lstchr@{lstchr}}
+\index{lstchr@{lstchr}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{lstchr}{lstchr}}]{\setlength{\rightskip}{0pt plus 5cm}integer lstchr}\hypertarget{IEPLOG_8c_ae73731ee2912ae9508753b010b464b3b}{}\label{IEPLOG_8c_ae73731ee2912ae9508753b010b464b3b}
+
+
+Definition at line 66 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!macflg@{macflg}}
+\index{macflg@{macflg}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{macflg}{macflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical macflg}\hypertarget{IEPLOG_8c_a41dd91d18b6174f346541f62020fcf70}{}\label{IEPLOG_8c_a41dd91d18b6174f346541f62020fcf70}
+
+
+Definition at line 53 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{IEPLOG_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{IEPLOG_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!macwds@{macwds}}
+\index{macwds@{macwds}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{macwds}{macwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer macwds}\hypertarget{IEPLOG_8c_a4b0225c88e41b966cb9adb70eb748490}{}\label{IEPLOG_8c_a4b0225c88e41b966cb9adb70eb748490}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!masgnd@{masgnd}}
+\index{masgnd@{masgnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{masgnd}{masgnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer masgnd}\hypertarget{IEPLOG_8c_a09ae9a66b10cc07f34a3c3c178e76fef}{}\label{IEPLOG_8c_a09ae9a66b10cc07f34a3c3c178e76fef}
+
+
+Definition at line 66 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!mcpage@{mcpage}}
+\index{mcpage@{mcpage}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{mcpage}{mcpage}}]{\setlength{\rightskip}{0pt plus 5cm}integer mcpage}\hypertarget{IEPLOG_8c_ad789f08e68f3bd2d0487fd79de6a873b}{}\label{IEPLOG_8c_ad789f08e68f3bd2d0487fd79de6a873b}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!mnmbnd@{mnmbnd}}
+\index{mnmbnd@{mnmbnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{mnmbnd}{mnmbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer mnmbnd}\hypertarget{IEPLOG_8c_a6a5d12bc893d0b66fd06044b52a3f957}{}\label{IEPLOG_8c_a6a5d12bc893d0b66fd06044b52a3f957}
+
+
+Definition at line 66 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!namest@{namest}}
+\index{namest@{namest}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{IEPLOG_8c_ab97202700d22183890e79bc8791f4bff}{}\label{IEPLOG_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{IEPLOG_8c_a3227fa76f26da8e1493f2993d214a113}{}\label{IEPLOG_8c_a3227fa76f26da8e1493f2993d214a113}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{IEPLOG_8c_a12351fe75bd822dfa233783a24bab726}{}\label{IEPLOG_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{IEPLOG_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{IEPLOG_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{IEPLOG_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{IEPLOG_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{IEPLOG_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{IEPLOG_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!nmbrs@{nmbrs}}
+\index{nmbrs@{nmbrs}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{nmbrs}{nmbrs}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbrs}\hypertarget{IEPLOG_8c_a524ab5fe9fdb56f174abec0949f54fc5}{}\label{IEPLOG_8c_a524ab5fe9fdb56f174abec0949f54fc5}
+
+
+Definition at line 66 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ntbl@{ntbl}}
+\index{ntbl@{ntbl}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ntbl}{ntbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer ntbl\mbox{[}6\mbox{]}}\hypertarget{IEPLOG_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}{}\label{IEPLOG_8c_ac1ba3a3ab4eabd44ead0fd0dbe327758}
+
+
+Definition at line 60 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ntbl\+\_\+@{ntbl\+\_\+}}
+\index{ntbl\+\_\+@{ntbl\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ntbl\+\_\+}{ntbl_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ntbl\+\_\+}\hypertarget{IEPLOG_8c_a5b00dfce082477a1e4c8b39c1795fac3}{}\label{IEPLOG_8c_a5b00dfce082477a1e4c8b39c1795fac3}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!numblk\+\_\+@{numblk\+\_\+}}
+\index{numblk\+\_\+@{numblk\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{numblk\+\_\+}{numblk_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   numblk\+\_\+}\hypertarget{IEPLOG_8c_a71065251da68b436bb1bf4a9bf42e6d3}{}\label{IEPLOG_8c_a71065251da68b436bb1bf4a9bf42e6d3}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{IEPLOG_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{IEPLOG_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{IEPLOG_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{IEPLOG_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!numidx@{numidx}}
+\index{numidx@{numidx}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{numidx}{numidx}}]{\setlength{\rightskip}{0pt plus 5cm}integer numidx}\hypertarget{IEPLOG_8c_ad6775419b3190a0ba1cc6de4efc57c35}{}\label{IEPLOG_8c_ad6775419b3190a0ba1cc6de4efc57c35}
+
+
+Definition at line 66 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!outbuf\+\_\+@{outbuf\+\_\+}}
+\index{outbuf\+\_\+@{outbuf\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{outbuf\+\_\+}{outbuf_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   outbuf\+\_\+}\hypertarget{IEPLOG_8c_a240db8aa241d4464472cce3c4180951f}{}\label{IEPLOG_8c_a240db8aa241d4464472cce3c4180951f}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!pagpak@{pagpak}}
+\index{pagpak@{pagpak}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{pagpak}{pagpak}}]{\setlength{\rightskip}{0pt plus 5cm}integer pagpak}\hypertarget{IEPLOG_8c_ad949091e205c2dbf743270f10efaacfb}{}\label{IEPLOG_8c_ad949091e205c2dbf743270f10efaacfb}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{IEPLOG_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{IEPLOG_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{IEPLOG_8c_af29300e691e97a062da856325402d3e9}{}\label{IEPLOG_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!pppage@{pppage}}
+\index{pppage@{pppage}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{pppage}{pppage}}]{\setlength{\rightskip}{0pt plus 5cm}integer pppage}\hypertarget{IEPLOG_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}{}\label{IEPLOG_8c_a1f2ee4e7cba5e9cc803aafbf2422edbb}
+
+
+Definition at line 54 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!ppwrds@{ppwrds}}
+\index{ppwrds@{ppwrds}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{ppwrds}{ppwrds}}]{\setlength{\rightskip}{0pt plus 5cm}integer ppwrds}\hypertarget{IEPLOG_8c_a12f88df5c9c201e4677acc4b09ad4d83}{}\label{IEPLOG_8c_a12f88df5c9c201e4677acc4b09ad4d83}
+
+
+Definition at line 52 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!prt@{prt}}
+\index{prt@{prt}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt}{prt}}]{\setlength{\rightskip}{0pt plus 5cm}integer prt\mbox{[}7\mbox{]}}\hypertarget{IEPLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}{}\label{IEPLOG_8c_a0e54cc4380ebd714be40c0f5d63ba335}
+
+
+Definition at line 37 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!prt\+\_\+@{prt\+\_\+}}
+\index{prt\+\_\+@{prt\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{prt\+\_\+}{prt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   prt\+\_\+}\hypertarget{IEPLOG_8c_ab17acdb36100eee200bfe95a9ce4b7f2}{}\label{IEPLOG_8c_ab17acdb36100eee200bfe95a9ce4b7f2}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{IEPLOG_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{IEPLOG_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!rsvflg@{rsvflg}}
+\index{rsvflg@{rsvflg}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{rsvflg}{rsvflg}}]{\setlength{\rightskip}{0pt plus 5cm}logical rsvflg}\hypertarget{IEPLOG_8c_a406e859663da9aacc49aca44ef7342c0}{}\label{IEPLOG_8c_a406e859663da9aacc49aca44ef7342c0}
+
+
+Definition at line 53 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{IEPLOG_8c_a2b3bf9876e463a71a25f3e5b61500299}{}\label{IEPLOG_8c_a2b3bf9876e463a71a25f3e5b61500299}
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{IEPLOG_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{IEPLOG_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{IEPLOG_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{IEPLOG_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{IEPLOG_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{IEPLOG_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+
+\index{I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!I\+E\+P\+L\+O\+G.\+c@{I\+E\+P\+L\+O\+G.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{IEPLOG_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{IEPLOG_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 43 of file I\+E\+P\+L\+O\+G.\+c.
+

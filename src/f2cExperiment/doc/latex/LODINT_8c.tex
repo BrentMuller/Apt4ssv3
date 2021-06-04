@@ -1,0 +1,188 @@
+\hypertarget{LODINT_8c}{}\section{L\+O\+D\+I\+N\+T.\+c File Reference}
+\label{LODINT_8c}\index{L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for L\+O\+D\+I\+N\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{LODINT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{LODINT_8c_a2a39bf38dae510a884d373f1590678a5}{lodint\+\_\+} (doublereal $\ast$ss, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$ust, doublereal $\ast$vst, doublereal $\ast$\hyperlink{UNITS_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp}, doublereal $\ast$\hyperlink{UNITS_8c_a66b316fa3299925e5c7630d5af6601fd}{tn}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, integer $\ast$\hyperlink{SSV3_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{LODINT_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}!lodint\+\_\+@{lodint\+\_\+}}
+\index{lodint\+\_\+@{lodint\+\_\+}!L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lodint\+\_\+(doublereal $\ast$ss, doublereal $\ast$b, doublereal $\ast$ust, doublereal $\ast$vst, doublereal $\ast$tp, doublereal $\ast$tn, integer $\ast$iflag, integer $\ast$itop, integer $\ast$ipnum, integer $\ast$mode)}{lodint_(doublereal *ss, doublereal *b, doublereal *ust, doublereal *vst, doublereal *tp, doublereal *tn, integer *iflag, integer *itop, integer *ipnum, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int lodint\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ss, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{ust, }
+\item[{doublereal $\ast$}]{vst, }
+\item[{doublereal $\ast$}]{tp, }
+\item[{doublereal $\ast$}]{tn, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{itop, }
+\item[{integer $\ast$}]{ipnum, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{LODINT_8c_a2a39bf38dae510a884d373f1590678a5}{}\label{LODINT_8c_a2a39bf38dae510a884d373f1590678a5}
+
+
+Definition at line 24 of file L\+O\+D\+I\+N\+T.\+c.
+
+
+
+References b, c\+\_\+\+\_\+1, c\+\_\+\+\_\+3, d\+\_\+\+\_\+, i\+\_\+\+\_\+, iflag, j, lodpch\+\_\+(), puvloc\+\_\+(), tn, tp, ut, and vt.
+
+
+
+Referenced by apt109\+\_\+(), and ddssrf\+\_\+().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{comment}{/* System generated locals */}
+29     integer i\_\_1, i\_\_2;
+30 
+31     \textcolor{comment}{/* Local variables */}
+32     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+33     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+34     \textcolor{keyword}{static} doublereal dt, \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut}, \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt}, half;
+35     \textcolor{keyword}{static} integer npchs, istep, jstep;
+36     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, integer *,
+37          integer *, integer *, integer *), \hyperlink{PUVLOC_8c_a0332ee4e6dd874de60c219beefe2bebd}{puvloc\_}(doublereal *, 
+38         doublereal *, doublereal *, doublereal *, doublereal *, 
+39         doublereal *, integer *, integer *);
+40 
+41 \textcolor{comment}{/* --------PROGRAM PERFORMS GLOBAL SEARCH OF PATCH STRUCTURE */}
+42 \textcolor{comment}{/* --------AND LOADS AN INITIAL PATCH BASED ON DISTANCE */}
+43 \textcolor{comment}{/* --------AS RETURNED BY PUVLOC */}
+44     \textcolor{comment}{/* Parameter adjustments */}
+45     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+46     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+47     --\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn};
+48     --\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp};
+49     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+50     --ss;
+51 
+52     \textcolor{comment}{/* Function Body */}
+53     half = .5;
+54     d\_\_ = 1e10;
+55     *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = 1;
+56     npchs = (integer) ss[4];
+57     \textcolor{keywordflow}{if} (npchs != 1) \{
+58     i\_\_1 = npchs;
+59     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+60         \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], &i\_\_, &\hyperlink{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+61 \textcolor{comment}{/* .... TAKE 'CENTRE POINT' OF PATCH FOR START OF SEARCH */}
+62         ut = half;
+63         vt = half;
+64         \hyperlink{PUVLOC_8c_a0332ee4e6dd874de60c219beefe2bebd}{puvloc\_}(&\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[1], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &ut, &vt, &dt, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, &
+      \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1]);
+65         \textcolor{keywordflow}{if} (dt > d\_\_) \{
+66         \textcolor{keywordflow}{goto} L20;
+67         \}
+68         *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+69         *ust = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+70         *vst = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+71         d\_\_ = dt;
+72 L20:
+73         ;
+74     \}
+75     \} \textcolor{keywordflow}{else} \{
+76 \textcolor{comment}{/* .... SPECIAL TREATMENT FOR SINGLE PATCH SURFACES */}
+77 \textcolor{comment}{/* .... CONSIDER 9 START POINTS */}
+78     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], &\hyperlink{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &
+      \hyperlink{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+79     istep = 2;
+80     jstep = 2;
+81     i\_\_1 = istep + 1;
+82     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+83         i\_\_2 = jstep + 1;
+84         \textcolor{keywordflow}{for} (j = 1; j <= i\_\_2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+85         ut = (doublereal) (i\_\_ - 1);
+86         ut /= (doublereal) istep;
+87         vt = (doublereal) (j - 1);
+88         vt /= (doublereal) jstep;
+89         \hyperlink{PUVLOC_8c_a0332ee4e6dd874de60c219beefe2bebd}{puvloc\_}(&\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[1], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &ut, &vt, &dt, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, &
+      \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1])
+90             ;
+91         \textcolor{keywordflow}{if} (dt < d\_\_) \{
+92             *\hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} = 1;
+93             *ust = \hyperlink{APT109_8c_ac5372296ec4ae4ef13612da9eedf608c}{ut};
+94             *vst = \hyperlink{APT331_8c_a17f989650cc751d43d2f74f741c76813}{vt};
+95             d\_\_ = dt;
+96         \}
+97 \textcolor{comment}{/* L200: */}
+98         \}
+99 \textcolor{comment}{/* L210: */}
+100     \}
+101     \}
+102     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], &\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1], &\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[1], &\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[7], \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum}, &
+      \hyperlink{LODINT_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+103     \textcolor{keywordflow}{return} 0;
+104 \} \textcolor{comment}{/* lodint\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LODINT_8c_a2a39bf38dae510a884d373f1590678a5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LODINT_8c_a2a39bf38dae510a884d373f1590678a5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{LODINT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file L\+O\+D\+I\+N\+T.\+c.
+
+
+
+Referenced by lodint\+\_\+().
+
+\index{L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!L\+O\+D\+I\+N\+T.\+c@{L\+O\+D\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{LODINT_8c_a5e7359f78743350865398325d9155f20}{}\label{LODINT_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 18 of file L\+O\+D\+I\+N\+T.\+c.
+
+
+
+Referenced by lodint\+\_\+().
+

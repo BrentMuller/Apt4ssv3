@@ -1,0 +1,263 @@
+\hypertarget{SEARCH_8c}{}\section{S\+E\+A\+R\+C\+H.\+c File Reference}
+\label{SEARCH_8c}\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+E\+A\+R\+C\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{SEARCH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{SEARCH_8c_a6fde43723377b88e2e00b933ffc7a25e}{sdp\+\_\+1}~\hyperlink{TRASH_8c_a3f483bb7c527318c80e56d5e24dc5c2a}{sdp\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+integer \hyperlink{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f}{search\+\_\+} (integer $\ast$source, integer $\ast$iadr, integer $\ast$prodct, integer $\ast$errpt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{SEARCH_8c_acb97996fe7b03c888c0de3988ddfa4e9}{nbchar}\\
+\>integer \hyperlink{SEARCH_8c_a8e23a7d61f75b6210b50e42277844171}{nbwrd}\\
+\>integer \hyperlink{SEARCH_8c_a7186be17bd02477bcc26c602ec6adcf4}{iwrd}\\
+\>integer \hyperlink{SEARCH_8c_a50166c6d5710a40a5c7294ebde2ae16a}{ifac}\\
+\} \hyperlink{SEARCH_8c_af43a7bd3f90a06e620d3b368ede9d9a3}{sdp\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!sdp\+\_\+1@{sdp\+\_\+1}}
+\index{sdp\+\_\+1@{sdp\+\_\+1}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{sdp\+\_\+1}{sdp_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sdp\+\_\+1~{\bf sdp\+\_\+}}\hypertarget{SEARCH_8c_a6fde43723377b88e2e00b933ffc7a25e}{}\label{SEARCH_8c_a6fde43723377b88e2e00b933ffc7a25e}
+
+
+Definition at line 21 of file S\+E\+A\+R\+C\+H.\+c.
+
+
+
+Referenced by search\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!search\+\_\+@{search\+\_\+}}
+\index{search\+\_\+@{search\+\_\+}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{search\+\_\+(integer $\ast$source, integer $\ast$iadr, integer $\ast$prodct, integer $\ast$errpt)}{search_(integer *source, integer *iadr, integer *prodct, integer *errpt)}}]{\setlength{\rightskip}{0pt plus 5cm}integer search\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{source, }
+\item[{integer $\ast$}]{iadr, }
+\item[{integer $\ast$}]{prodct, }
+\item[{integer $\ast$}]{errpt}
+\end{DoxyParamCaption}
+)}\hypertarget{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f}{}\label{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f}
+
+
+Definition at line 51 of file S\+E\+A\+R\+C\+H.\+c.
+
+
+
+References andf\+\_\+(), i\+\_\+\+\_\+, j, k, origin, and sdp\+\_\+1.
+
+
+
+Referenced by goloft\+\_\+(), gopat\+\_\+(), inpat\+\_\+(), larges\+\_\+(), pro020\+\_\+(), pro021\+\_\+(), pro028\+\_\+(), recog\+\_\+(), ssdef\+\_\+(), and tssmil\+\_\+().
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{comment}{/* Initialized data */}
+55 
+56     \textcolor{keyword}{static} integer z9999 = -1718026240;
+57     \textcolor{keyword}{static} integer zaaaa = -1431699456;
+58     \textcolor{keyword}{static} integer zcccc = -859045888;
+59     \textcolor{keyword}{static} integer zffff = -65536;
+60 
+61     \textcolor{comment}{/* System generated locals */}
+62     integer ret\_val;
+63 
+64     \textcolor{comment}{/* Local variables */}
+65     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+66     \textcolor{keyword}{extern} integer \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(integer *, integer *);
+67     \textcolor{keyword}{static} integer iadsav, \hyperlink{APT301_8c_a0f8481132a3c3f69b7f3eaa3fd17fccc}{origin}, subpat;
+68 
+69 
+70 
+71 \textcolor{comment}{/*     IWRD: NO. OF BYTES PER WORD */}
+72 
+73 
+74     \textcolor{comment}{/* Parameter adjustments */}
+75     --prodct;
+76     --source;
+77 
+78     \textcolor{comment}{/* Function Body */}
+79 
+80 \textcolor{comment}{/* .... SAVE INITIAL STACK ADDRESS */}
+81     iadsav = *iadr;
+82 \textcolor{comment}{/* .... PRODCT ADDRESS */}
+83     j = 1;
+84 \textcolor{comment}{/* .... INITIAL VALUE OF ERRPT */}
+85 L5:
+86     k = *errpt;
+87 \textcolor{comment}{/* .... INITIAL STACK ADDRESS */}
+88     i\_\_ = iadsav;
+89 \textcolor{comment}{/* .... IS ADDRESS IN PRODCT A BREAK POINT ? */}
+90     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&prodct[j], &zffff);
+91     \textcolor{keywordflow}{if} (subpat == z9999) \{
+92 \textcolor{comment}{/* .... YES - STORE THE BASIC ADDRESS, INCREMENT PRODCT ADDRESS BY 1 */}
+93     origin = \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+94     ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+95     \} \textcolor{keywordflow}{else} \{
+96 \textcolor{comment}{/* .... NOT A BREAK POINT - DECREASE STACK ADDRESS BY 2 */}
+97 \textcolor{comment}{/*                         DECREASE ERRPT BY 1 */}
+98     i\_\_ += -2;
+99     --\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+100     \}
+101 
+102 \textcolor{comment}{/* .... NEW PRODUCTION */}
+103 
+104 L10:
+105     \textcolor{keywordflow}{if} (prodct[j] >= 0) \{
+106 \textcolor{comment}{/* .... COMPARE IF NEXT INFORMATION IS AN ARGUMENT, */}
+107 \textcolor{comment}{/*     IF SO CHANGE TO SEQUENTIAL MODE */}
+108     \textcolor{keywordflow}{if} (prodct[j + 1] > 0) \{
+109         \textcolor{keywordflow}{goto} L50;
+110     \}
+111 \textcolor{comment}{/* ....COMPARE STACK AND PRODCT */}
+112     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&source[i\_\_], &prodct[j]);
+113     \textcolor{keywordflow}{if} (source[i\_\_] == subpat) \{
+114 \textcolor{comment}{/* .... PRODUCTION STILL OK, INCREMENT PRODCT BY 1 */}
+115 \textcolor{comment}{/*                          DECREMENT STACK BY 2 */}
+116         ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+117         i\_\_ += -2;
+118 \textcolor{comment}{/* .... DECREMENT ERRPT */}
+119         --\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+120     \} \textcolor{keywordflow}{else} \{
+121 \textcolor{comment}{/* .... MAINTAIN STACK ADDRESS CONSTANT, INCREMENT PRODCT BY 2 */}
+122 \textcolor{comment}{/*     AND SEARCH NEW PRODUCTION */}
+123         j += 2;
+124     \}
+125     \textcolor{keywordflow}{goto} L10;
+126 
+127     \} \textcolor{keywordflow}{else} \{
+128 \textcolor{comment}{/* .... IS PRODCT A PRODUCTION NUMBER */}
+129     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&prodct[j], &zffff);
+130     \textcolor{keywordflow}{if} (subpat == zcccc) \{
+131         \textcolor{keywordflow}{goto} L80;
+132 
+133 \textcolor{comment}{/* .... IS IT A DISPLACEMENT */}
+134     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (subpat == zaaaa) \{
+135 \textcolor{comment}{/* .... YES */}
+136         j = (prodct[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] - zaaaa) / \hyperlink{SEARCH_8c_a6fde43723377b88e2e00b933ffc7a25e}{sdp\_1}.iwrd;
+137         j += origin;
+138         \textcolor{keywordflow}{goto} L10;
+139     \} \textcolor{keywordflow}{else} \{
+140         \textcolor{keywordflow}{goto} L5;
+141     \}
+142     \}
+143 
+144 \textcolor{comment}{/* .... SEQUENTIAL SEARCHING */}
+145 
+146 L50:
+147     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&source[i\_\_], &prodct[j]);
+148     \textcolor{keywordflow}{if} (source[i\_\_] == subpat) \{
+149 \textcolor{comment}{/* .... NEXT HIGHER PRODCT ADDRESS, NEXT LOWER STACK ADDRESS */}
+150     ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+151     i\_\_ += -2;
+152 \textcolor{comment}{/* .... DECREMENT ERRPT */}
+153     --\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+154 \textcolor{comment}{/* .... IS PRODCT A PRODUCTION NUMBER */}
+155     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&prodct[j], &zffff);
+156     \textcolor{keywordflow}{if} (subpat == zcccc) \{
+157         \textcolor{keywordflow}{goto} L80;
+158     \} \textcolor{keywordflow}{else} \{
+159         \textcolor{keywordflow}{goto} L50;
+160     \}
+161     \} \textcolor{keywordflow}{else} \{
+162 \textcolor{comment}{/* .... SEARCHING FAILED. FINAL PROCESS. */}
+163 \textcolor{comment}{/*     SEARCH FOR NEXT FINAL PRODUCTION NUMBER */}
+164 L60:
+165     ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+166     subpat = \hyperlink{ANDF_8c_ab007cdffb702f8060f90c222486b49fe}{andf\_}(&prodct[j], &zffff);
+167     \textcolor{keywordflow}{if} (subpat == zcccc) \{
+168         ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+169         \textcolor{keywordflow}{goto} L80;
+170     \} \textcolor{keywordflow}{else} \{
+171         \textcolor{keywordflow}{goto} L60;
+172     \}
+173     \}
+174 
+175 \textcolor{comment}{/* .... PRODUCTION NUMBER */}
+176 
+177 L80:
+178     ret\_val = prodct[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] - zcccc;
+179     *errpt = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+180     \textcolor{keywordflow}{return} ret\_val;
+181 \} \textcolor{comment}{/* search\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!ifac@{ifac}}
+\index{ifac@{ifac}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{ifac}{ifac}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifac}\hypertarget{SEARCH_8c_a50166c6d5710a40a5c7294ebde2ae16a}{}\label{SEARCH_8c_a50166c6d5710a40a5c7294ebde2ae16a}
+
+
+Definition at line 18 of file S\+E\+A\+R\+C\+H.\+c.
+
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!iwrd@{iwrd}}
+\index{iwrd@{iwrd}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{iwrd}{iwrd}}]{\setlength{\rightskip}{0pt plus 5cm}integer iwrd}\hypertarget{SEARCH_8c_a7186be17bd02477bcc26c602ec6adcf4}{}\label{SEARCH_8c_a7186be17bd02477bcc26c602ec6adcf4}
+
+
+Definition at line 18 of file S\+E\+A\+R\+C\+H.\+c.
+
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!nbchar@{nbchar}}
+\index{nbchar@{nbchar}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nbchar}{nbchar}}]{\setlength{\rightskip}{0pt plus 5cm}integer nbchar}\hypertarget{SEARCH_8c_acb97996fe7b03c888c0de3988ddfa4e9}{}\label{SEARCH_8c_acb97996fe7b03c888c0de3988ddfa4e9}
+
+
+Definition at line 18 of file S\+E\+A\+R\+C\+H.\+c.
+
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!nbwrd@{nbwrd}}
+\index{nbwrd@{nbwrd}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{nbwrd}{nbwrd}}]{\setlength{\rightskip}{0pt plus 5cm}integer nbwrd}\hypertarget{SEARCH_8c_a8e23a7d61f75b6210b50e42277844171}{}\label{SEARCH_8c_a8e23a7d61f75b6210b50e42277844171}
+
+
+Definition at line 18 of file S\+E\+A\+R\+C\+H.\+c.
+
+\index{S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}!sdp\+\_\+@{sdp\+\_\+}}
+\index{sdp\+\_\+@{sdp\+\_\+}!S\+E\+A\+R\+C\+H.\+c@{S\+E\+A\+R\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{sdp\+\_\+}{sdp_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sdp\+\_\+}\hypertarget{SEARCH_8c_af43a7bd3f90a06e620d3b368ede9d9a3}{}\label{SEARCH_8c_af43a7bd3f90a06e620d3b368ede9d9a3}

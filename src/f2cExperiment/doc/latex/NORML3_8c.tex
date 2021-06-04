@@ -1,0 +1,98 @@
+\hypertarget{NORML3_8c}{}\section{N\+O\+R\+M\+L3.\+c File Reference}
+\label{NORML3_8c}\index{N\+O\+R\+M\+L3.\+c@{N\+O\+R\+M\+L3.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for N\+O\+R\+M\+L3.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{NORML3_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{NORML3_8c_afff34da020d3ad44d20adfd63925b981}{norml3\+\_\+} (doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$pc, doublereal $\ast$an, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{N\+O\+R\+M\+L3.\+c@{N\+O\+R\+M\+L3.\+c}!norml3\+\_\+@{norml3\+\_\+}}
+\index{norml3\+\_\+@{norml3\+\_\+}!N\+O\+R\+M\+L3.\+c@{N\+O\+R\+M\+L3.\+c}}
+\subsubsection[{\texorpdfstring{norml3\+\_\+(doublereal $\ast$pa, doublereal $\ast$pb, doublereal $\ast$pc, doublereal $\ast$an, integer $\ast$irr)}{norml3_(doublereal *pa, doublereal *pb, doublereal *pc, doublereal *an, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int norml3\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{pa, }
+\item[{doublereal $\ast$}]{pb, }
+\item[{doublereal $\ast$}]{pc, }
+\item[{doublereal $\ast$}]{an, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{NORML3_8c_afff34da020d3ad44d20adfd63925b981}{}\label{NORML3_8c_afff34da020d3ad44d20adfd63925b981}
+
+
+Definition at line 17 of file N\+O\+R\+M\+L3.\+c.
+
+
+
+References d\+\_\+\+\_\+, i\+\_\+\+\_\+, p1, and p2.
+
+
+
+Referenced by forcub\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Builtin functions */}
+21     \textcolor{keywordtype}{double} sqrt(doublereal);
+22 
+23     \textcolor{comment}{/* Local variables */}
+24     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+25     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+26     \textcolor{keyword}{static} doublereal \hyperlink{POLPOL_8c_ad86bc04f7f667b1bdced8a0f06d96861}{p1}[3], \hyperlink{POLPOL_8c_a938e6a2861f684cc1f7e2de661446e35}{p2}[3], crit;
+27     \textcolor{keyword}{static} integer idiag;
+28 
+29 \textcolor{comment}{/* ------CONSTRUCT A UNIT NORMAL TO THREE POINTS PA,PB,PC AND STORE IN AN */}
+30 \textcolor{comment}{/* ------IF NO NORMAL EXISTS THEN IRR NE 0. */}
+31     \textcolor{comment}{/* Parameter adjustments */}
+32     --an;
+33     --pc;
+34     --pb;
+35     --pa;
+36 
+37     \textcolor{comment}{/* Function Body */}
+38     idiag = 4000;
+39     crit = 1e-10;
+40     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+41     p1[i\_\_ - 1] = pb[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+42 \textcolor{comment}{/* L10: */}
+43     p2[i\_\_ - 1] = pc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - pa[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+44     \}
+45     an[1] = p1[1] * p2[2] - p1[2] * p2[1];
+46     an[2] = p1[2] * p2[0] - p1[0] * p2[2];
+47     an[3] = p1[0] * p2[1] - p1[1] * p2[0];
+48     d\_\_ = sqrt(an[1] * an[1] + an[2] * an[2] + an[3] * an[3]);
+49     *irr = idiag + 1;
+50     \textcolor{keywordflow}{if} (d\_\_ < crit) \{
+51     \textcolor{keywordflow}{return} 0;
+52     \}
+53     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+54 \textcolor{comment}{/* L20: */}
+55     an[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] /= \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+56     \}
+57     *irr = 0;
+58     \textcolor{keywordflow}{return} 0;
+59 \} \textcolor{comment}{/* norml3\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NORML3_8c_afff34da020d3ad44d20adfd63925b981_icgraph}
+\end{center}
+\end{figure}
+
+

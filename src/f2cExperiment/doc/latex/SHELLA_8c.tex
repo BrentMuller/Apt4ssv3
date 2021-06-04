@@ -1,0 +1,334 @@
+\hypertarget{SHELLA_8c}{}\section{S\+H\+E\+L\+L\+A.\+c File Reference}
+\label{SHELLA_8c}\index{S\+H\+E\+L\+L\+A.\+c@{S\+H\+E\+L\+L\+A.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+H\+E\+L\+L\+A.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{SHELLA_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e}{shella\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aec37dbecf1f14b0e999eeb6ead189904}{p}, doublereal $\ast$phull, integer $\ast$np, integer $\ast$n3, doublereal $\ast$\hyperlink{ZSURF_8c_aff312e30f3c244d4d5f79f84e4916be5}{c\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+H\+E\+L\+L\+A.\+c@{S\+H\+E\+L\+L\+A.\+c}!shella\+\_\+@{shella\+\_\+}}
+\index{shella\+\_\+@{shella\+\_\+}!S\+H\+E\+L\+L\+A.\+c@{S\+H\+E\+L\+L\+A.\+c}}
+\subsubsection[{\texorpdfstring{shella\+\_\+(doublereal $\ast$p, doublereal $\ast$phull, integer $\ast$np, integer $\ast$n3, doublereal $\ast$c\+\_\+\+\_\+, doublereal $\ast$r\+\_\+\+\_\+)}{shella_(doublereal *p, doublereal *phull, integer *np, integer *n3, doublereal *c__, doublereal *r__)}}]{\setlength{\rightskip}{0pt plus 5cm}int shella\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{p, }
+\item[{doublereal $\ast$}]{phull, }
+\item[{integer $\ast$}]{np, }
+\item[{integer $\ast$}]{n3, }
+\item[{doublereal $\ast$}]{c\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e}{}\label{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e}
+
+
+Definition at line 17 of file S\+H\+E\+L\+L\+A.\+c.
+
+
+
+References a, a1, a2, b, c\+\_\+\+\_\+, cc, cross\+\_\+(), degsol\+\_\+(), h\+\_\+\+\_\+, i\+\_\+\+\_\+, j, k, l, r2, solve3\+\_\+(), tol, v1, v2, v3, and vn.
+
+
+
+Referenced by inex\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* System generated locals */}
+21     integer phull\_dim1, phull\_offset, i\_\_1;
+22     doublereal d\_\_1;
+23 
+24     \textcolor{comment}{/* Builtin functions */}
+25     \textcolor{keywordtype}{double} sqrt(doublereal);
+26 
+27     \textcolor{comment}{/* Local variables */}
+28     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_aa48bdaeda29e79219060498c8a1601c4}{h\_\_}[9] \textcolor{comment}{/* was [3][3] */};
+29     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, \hyperlink{DDRLSR_8c_a0700026d33d910874577324a49997947}{r2}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3], \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3], \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[3], v4[3], v5[3], 
+      \hyperlink{APT331_8c_ab4f83dc456530b76524da0756cc48dad}{cc}[3];
+31     \textcolor{keyword}{static} integer kk;
+32     \textcolor{keyword}{static} doublereal \hyperlink{DDTABC_8c_a68cef9ab1f225fc582f4d350155b7ccb}{vn}[3];
+33     \textcolor{keyword}{static} integer nn3;
+34     \textcolor{keyword}{static} doublereal rt2, \hyperlink{GOCHOR_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol};
+35     \textcolor{keyword}{static} integer nnn3;
+36     \textcolor{keyword}{static} doublereal half, amax;
+37     \textcolor{keyword}{static} integer ncase;
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+39         *), \hyperlink{SOLVE3_8c_aa4681a25efe13745241edcab321300f2}{solve3\_}(doublereal *, doublereal *, doublereal *, integer *), 
+40         \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(doublereal *, doublereal *, doublereal *, doublereal *, 
+41         doublereal *, integer *);
+42 
+43 
+44 \textcolor{comment}{/*     CALCULATES CENTER C AND RADIUS R OF THE SMALLEST SPHERE WHICH */}
+45 \textcolor{comment}{/*     ENCLOSES THE FOUR POINTS P (THE CORNER POINTS OF PATCH). */}
+46 \textcolor{comment}{/*     THREE CASES, TESTED IN ORDER:- */}
+47 \textcolor{comment}{/*     1. ONE PAIR OF POINTS DEFINE DIAMETER OF SPHERE ENCLOSING ALL */}
+48 \textcolor{comment}{/*        FOUR CORNER POINTS. CHOOSE PAIR OF POINTS WITH GREATEST */}
+49 \textcolor{comment}{/*        SEPARATION, CHECK THAT OTHER TWO POINTS ARE INSIDE THIS SPHERE */}
+50 \textcolor{comment}{/*     2. THREE POINTS DEFINE EQUATOR OF SPHERE ENCLOSING ALL FOUR */}
+51 \textcolor{comment}{/*        POINTS. TRY ALL FOUR COMBINATIONS OF THREE POINTS, CHOOSE */}
+52 \textcolor{comment}{/*        SMALLEST SPHERE ENCLOSING FOUR POINTS */}
+53 \textcolor{comment}{/*     3. MINIMUM SPHERE DEFINED BY ALL FOUR POINTS */}
+54 
+55 \textcolor{comment}{/*     CHECKS THAT SPHERE FOUND ENCLOSES POLYGONAL CONVEX HALL PHULL */}
+56 \textcolor{comment}{/*     ADJUSTS RADIUS OF SPHERE BY UP TO 10% TO INCLUDE PHULL */}
+57 \textcolor{comment}{/*     IF NO SPHERE FOUND, THEN RETURN WITH R=0 */}
+58 
+59 \textcolor{comment}{/*     ON ENTRY, NP, N3 ARE DIMENSIONS OF PHULL */}
+60 
+61 
+62 
+63 \textcolor{comment}{/* .... COEFF. MATRIX AND WORKSPACE FOR CASE 3 */}
+64 \textcolor{comment}{/* .... CENTRE OF TRIAL SPHERE */}
+65 
+66 \textcolor{comment}{/* .... TEMP FOR TEST ONLY */}
+67 
+68 \textcolor{comment}{/* .... TOLERANCE */}
+69     \textcolor{comment}{/* Parameter adjustments */}
+70     \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p} -= 5;
+71     phull\_dim1 = *np;
+72     phull\_offset = 1 + phull\_dim1;
+73     phull -= phull\_offset;
+74     --\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+75 
+76     \textcolor{comment}{/* Function Body */}
+77     tol = .001;
+78     half = 1.;
+79     half /= 2.;
+80 
+81 \textcolor{comment}{/*     CASE 1.      TWO POINTS AS DIAMETER */}
+82     ncase = 1;
+83 \textcolor{comment}{/* .... INITIALISE RADIUS SQUARED */}
+84     r2 = 0.;
+85     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+86     \textcolor{keywordflow}{for} (k = j + 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+87         rt2 = 0.;
+88         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+89         a1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[j + (i\_\_ << 2)];
+90         a2 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[k + (i\_\_ << 2)];
+91 \textcolor{comment}{/* .... CENTRE OF TRIAL SPHERE */}
+92         cc[i\_\_ - 1] = half * (a1 + \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2});
+93         a1 = half * (a1 - \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2});
+94         rt2 += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+95 \textcolor{comment}{/* L20: */}
+96         \}
+97 
+98 \textcolor{comment}{/*     RT2 IS SQUARE OF RADIUS OF TRIAL SPHERE */}
+99 \textcolor{comment}{/* .... TEST TRIAL SPHERE */}
+100         \textcolor{keywordflow}{if} (r2 == 0. || rt2 <= r2) \{
+101         \textcolor{keywordflow}{for} (l = 1; l <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+102             \textcolor{keywordflow}{if} (l == j || l == k) \{
+103             \textcolor{keywordflow}{goto} L40;
+104             \}
+105             a = 0.;
+106             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+107             a1 = (d\_\_1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[l + (i\_\_ << 2)] - cc[i\_\_ - 1], abs(
+108                 d\_\_1)) - tol;
+109             a += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+110 \textcolor{comment}{/* L50: */}
+111             \}
+112 \textcolor{comment}{/* .... POINT OUTSIDE - REJECT */}
+113             \textcolor{keywordflow}{if} (a > rt2) \{
+114             \textcolor{keywordflow}{goto} L10;
+115             \}
+116 L40:
+117             ;
+118         \}
+119 \textcolor{comment}{/*           SPHERE BEST SO FAR: STORE */}
+120         r2 = rt2;
+121         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+122             \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = cc[i\_\_ - 1];
+123 \textcolor{comment}{/* L60: */}
+124         \}
+125         \}
+126 \textcolor{comment}{/* L15: */}
+127     \}
+128 L10:
+129     ;
+130     \}
+131 \textcolor{comment}{/* .... ENCLOSING SPHERE FOUND - EXIT */}
+132     \textcolor{keywordflow}{if} (r2 > 0.) \{
+133     \textcolor{keywordflow}{goto} L300;
+134     \}
+135 
+136 \textcolor{comment}{/*     CASE 2.      THREE POINTS ON DIAMETRAL PLANE */}
+137 
+138     ncase = 2;
+139     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+140     \textcolor{keywordflow}{for} (k = j + 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+141 \textcolor{comment}{/* .... FOR POINTS J, K, AND L */}
+142         \textcolor{keywordflow}{for} (l = k + 1; l <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+143 \textcolor{comment}{/* .... CALC. CIRCUMCIRCLE */}
+144         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+145             v1[i\_\_ - 1] = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[k + (i\_\_ << 2)] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[j + (i\_\_ << 2)];
+146             v2[i\_\_ - 1] = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[l + (i\_\_ << 2)] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[j + (i\_\_ << 2)];
+147             v5[i\_\_ - 1] = v2[i\_\_ - 1] - v1[i\_\_ - 1];
+148 \textcolor{comment}{/* L110: */}
+149         \}
+150 \textcolor{comment}{/* .... VN IS NORMAL TO PLANE OF THREE POINTS */}
+151         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(v1, v2, vn);
+152         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(v1, vn, v3);
+153         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(vn, v2, v4);
+154 
+155         \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(v5, v3, v4, &a, &b, &i\_\_);
+156 
+157         rt2 = 0.;
+158         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+159             a1 = half * (v1[i\_\_ - 1] + a * v3[i\_\_ - 1]);
+160 \textcolor{comment}{/* .... CC IS CENTRE OF TRIAL SPHERE */}
+161             cc[i\_\_ - 1] = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[j + (i\_\_ << 2)] + a1;
+162 \textcolor{comment}{/* .... RT2 IS SQUARE OF RADIUS OF TRIAL SPHERE */}
+163             rt2 += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+164 \textcolor{comment}{/* L120: */}
+165         \}
+166 
+167 \textcolor{comment}{/* .... TEST TRIAL SPHERE */}
+168         \textcolor{keywordflow}{if} (r2 == 0. || rt2 <= r2) \{
+169             \textcolor{keywordflow}{for} (kk = 1; kk <= 4; ++kk) \{
+170             a = 0.;
+171             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+172                 a1 = (d\_\_1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[kk + (i\_\_ << 2)] - cc[i\_\_ - 1], 
+173                     abs(d\_\_1)) - tol;
+174                 a += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+175 \textcolor{comment}{/* L140: */}
+176             \}
+177 \textcolor{comment}{/* .... POINT OUTSIDE - REJECT */}
+178             \textcolor{keywordflow}{if} (a > rt2) \{
+179                 \textcolor{keywordflow}{goto} L160;
+180             \}
+181 \textcolor{comment}{/* L130: */}
+182             \}
+183 \textcolor{comment}{/*           SPHERE BEST SO FAR: STORE */}
+184             r2 = rt2;
+185             \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+186             \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = cc[i\_\_ - 1];
+187 \textcolor{comment}{/* L150: */}
+188             \}
+189         \}
+190 L160:
+191         ;
+192         \}
+193 \textcolor{comment}{/* L170: */}
+194     \}
+195 \textcolor{comment}{/* L180: */}
+196     \}
+197 \textcolor{comment}{/* .... ENCLOSING SPHERE FOUND - EXIT */}
+198     \textcolor{keywordflow}{if} (r2 > 0.) \{
+199     \textcolor{keywordflow}{goto} L300;
+200     \}
+201 
+202 \textcolor{comment}{/*     CASE 3.      FOUR POINT SPHERE */}
+203     ncase = 3;
+204 \textcolor{comment}{/* .... CALC. COEFFS H(K,I), V1(I) */}
+205     a = 0.;
+206     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+207     a1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[(k << 2) + 4];
+208     a += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+209 \textcolor{comment}{/* L200: */}
+210     \}
+211     b = 0.;
+212     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+213     b = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+214     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+215         a1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[k + (j << 2)];
+216         b -= a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+217         h\_\_[k + j * 3 - 4] = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[(j << 2) + 4] - \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[k + (j << 2)];
+218 \textcolor{comment}{/* L220: */}
+219     \}
+220     v1[k - 1] = half * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+221 \textcolor{comment}{/* L210: */}
+222     \}
+223 
+224     *n3 = 3;
+225     nn3 = 3;
+226     nnn3 = 3;
+227     k = 0;
+228 
+229 \textcolor{comment}{/*     SOLVE 3 X 3 EQNS. FOR CENTRE C */}
+230 
+231     \hyperlink{SOLVE3_8c_aa4681a25efe13745241edcab321300f2}{solve3\_}(h\_\_, v1, &\hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[1], &k);
+232 
+233 \textcolor{comment}{/* .... NO SOLUTION */}
+234     \textcolor{keywordflow}{if} (k == 1) \{
+235     \textcolor{keywordflow}{goto} L300;
+236     \}
+237     r2 = 0.;
+238 \textcolor{comment}{/* .... NOW CALC. RADIUS */}
+239     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+240     a1 = \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[(k << 2) + 1] - \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[k];
+241 \textcolor{comment}{/* .... R2 IS RADIUS SQUARED */}
+242     r2 += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+243 \textcolor{comment}{/* L230: */}
+244     \}
+245 
+246 \textcolor{comment}{/* .... R IS RADIUS */}
+247 L300:
+248     *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} = sqrt(r2);
+249 \textcolor{comment}{/*     CHECK AGAINST CONVEX POLYGON */}
+250 
+251     amax = 0.;
+252     i\_\_1 = *np;
+253     \textcolor{keywordflow}{for} (k = 1; k <= i\_\_1; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+254     a = 0.;
+255     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+256         a1 = phull[k + i\_\_ * phull\_dim1] - \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+257         a += a1 * \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+258 \textcolor{comment}{/* L320: */}
+259     \}
+260     \textcolor{keywordflow}{if} (a > r2 && a > amax) \{
+261         amax = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+262     \}
+263 \textcolor{comment}{/* L310: */}
+264     \}
+265 \textcolor{comment}{/* .... ACCEPT RADIUS */}
+266     \textcolor{keywordflow}{if} (amax == 0.) \{
+267     \textcolor{keywordflow}{goto} L330;
+268     \}
+269     a1 = sqrt(amax);
+270 \textcolor{comment}{/*     A1 IS MAXIMUM DISTANCE OF HULL POINT FROM CENTRE */}
+271 \textcolor{comment}{/*     IF A1 SUCH THAT R < A1 < 1.1*R, THEN USE A1 AS RADIUS */}
+272     \textcolor{keywordflow}{if} (a1 > *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} && a1 <= *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} * 1.1) \{
+273     *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} = \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+274 \textcolor{comment}{/* .... NO SPHERE FOUND */}
+275     \} \textcolor{keywordflow}{else} \{
+276     *\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_} = 0.;
+277     \}
+278 L330:
+279 
+280     \textcolor{keywordflow}{return} 0;
+281 \} \textcolor{comment}{/* shella\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SHELLA_8c_aaf72d6a34d9fc09da05081162c82bd1e_icgraph}
+\end{center}
+\end{figure}
+
+

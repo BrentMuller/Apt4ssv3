@@ -1,0 +1,739 @@
+\hypertarget{INTNRM_8c}{}\section{I\+N\+T\+N\+R\+M.\+c File Reference}
+\label{INTNRM_8c}\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for I\+N\+T\+N\+R\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{INTNRM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\+\_\+1}~\hyperlink{SSV3_8c_a0ceef444afd5929ce4d4096c6dfc2f22}{ssarlm\+\_\+}
+\item 
+\#define \hyperlink{INTNRM_8c_a739fbcd4259007d7c95f0abf445e11cf}{intcom\+\_\+1}~\hyperlink{INTTRC_8c_a976032dda65999149c437cd37a92897b}{intcom\+\_\+}
+\item 
+\#define \hyperlink{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}{xu}~(equiv\+\_\+4 + 4)
+\item 
+\#define \hyperlink{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}{xv}~(equiv\+\_\+4 + 8)
+\item 
+\#define \hyperlink{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}{xuu}~(equiv\+\_\+4 + 12)
+\item 
+\#define \hyperlink{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}{xuv}~(equiv\+\_\+4 + 16)
+\item 
+\#define \hyperlink{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}{xvv}~(equiv\+\_\+4 + 20)
+\item 
+\#define \hyperlink{INTNRM_8c_ae29bbad100d8874b1094bfce62c33a13}{spvi}~(equiv\+\_\+4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29}{intnrm\+\_\+} (integer $\ast$ns, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, doublereal $\ast$pta, doublereal $\ast$spva, integer $\ast$irc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{INTNRM_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{bb} \mbox{[}256\mbox{]}\\
+\>doublereal \hyperlink{INTNRM_8c_a92a9ddacaa39a881012df9cfbd55134a}{uu} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{INTNRM_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{vv} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{INTNRM_8c_ad4159f737847a828654fd6bd050aff25}{iitop} \mbox{[}96\mbox{]}\\
+\>integer \hyperlink{INTNRM_8c_af00895acd217dfa45b2e2e9716ebff70}{iiflag} \mbox{[}16\mbox{]}\\
+\>integer \hyperlink{INTNRM_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} \mbox{[}4\mbox{]}\\
+\} \hyperlink{INTNRM_8c_a0858a7e901b8eea975793eb82f808065}{ssarlm\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{INTNRM_8c_aaf1570c45aa1901e9b51476d09a19e02}{ikeep} \mbox{[}255\mbox{]}\\
+\} \hyperlink{INTNRM_8c_a976009dec7acade8d5fb80cf4653b89e}{intcom\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!intcom\+\_\+1@{intcom\+\_\+1}}
+\index{intcom\+\_\+1@{intcom\+\_\+1}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+1}{intcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define intcom\+\_\+1~{\bf intcom\+\_\+}}\hypertarget{INTNRM_8c_a739fbcd4259007d7c95f0abf445e11cf}{}\label{INTNRM_8c_a739fbcd4259007d7c95f0abf445e11cf}
+
+
+Definition at line 29 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!spvi@{spvi}}
+\index{spvi@{spvi}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{spvi}{spvi}}]{\setlength{\rightskip}{0pt plus 5cm}\#define spvi~(equiv\+\_\+4)}\hypertarget{INTNRM_8c_ae29bbad100d8874b1094bfce62c33a13}{}\label{INTNRM_8c_ae29bbad100d8874b1094bfce62c33a13}
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!ssarlm\+\_\+1@{ssarlm\+\_\+1}}
+\index{ssarlm\+\_\+1@{ssarlm\+\_\+1}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+1}{ssarlm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssarlm\+\_\+1~{\bf ssarlm\+\_\+}}\hypertarget{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{}\label{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}
+
+
+Definition at line 23 of file I\+N\+T\+N\+R\+M.\+c.
+
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!xu@{xu}}
+\index{xu@{xu}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{xu}{xu}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xu~(equiv\+\_\+4 + 4)}\hypertarget{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}{}\label{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!xuu@{xuu}}
+\index{xuu@{xuu}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{xuu}{xuu}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xuu~(equiv\+\_\+4 + 12)}\hypertarget{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}{}\label{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!xuv@{xuv}}
+\index{xuv@{xuv}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{xuv}{xuv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xuv~(equiv\+\_\+4 + 16)}\hypertarget{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}{}\label{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!xv@{xv}}
+\index{xv@{xv}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{xv}{xv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xv~(equiv\+\_\+4 + 8)}\hypertarget{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}{}\label{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!xvv@{xvv}}
+\index{xvv@{xvv}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{xvv}{xvv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define xvv~(equiv\+\_\+4 + 20)}\hypertarget{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}{}\label{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}
+
+
+Referenced by intnrm\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!intnrm\+\_\+@{intnrm\+\_\+}}
+\index{intnrm\+\_\+@{intnrm\+\_\+}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{intnrm\+\_\+(integer $\ast$ns, doublereal $\ast$u, doublereal $\ast$v, doublereal $\ast$pta, doublereal $\ast$spva, integer $\ast$irc)}{intnrm_(integer *ns, doublereal *u, doublereal *v, doublereal *pta, doublereal *spva, integer *irc)}}]{\setlength{\rightskip}{0pt plus 5cm}int intnrm\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ns, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{doublereal $\ast$}]{pta, }
+\item[{doublereal $\ast$}]{spva, }
+\item[{integer $\ast$}]{irc}
+\end{DoxyParamCaption}
+)}\hypertarget{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29}{}\label{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29}
+
+
+Definition at line 38 of file I\+N\+T\+N\+R\+M.\+c.
+
+
+
+References c\+\_\+\+\_\+0, c\+\_\+\+\_\+2, cnsurf\+\_\+(), d1, d2, dx, dy, i\+\_\+\+\_\+, iscan, j, k, spvi, ssarlm\+\_\+1, u, u1, u2, us, v, v1, v2, xu, xuu, xuv, xv, and xvv.
+
+
+
+Referenced by intbnd\+\_\+(), and inttpl\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* System generated locals */}
+42     doublereal d\_\_1, d\_\_2, d\_\_3;
+43     \textcolor{keyword}{static} doublereal equiv\_4[32];
+44 
+45     \textcolor{comment}{/* Builtin functions */}
+46     \textcolor{keywordtype}{double} sqrt(doublereal);
+47 
+48     \textcolor{comment}{/* Local variables */}
+49     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+50     \textcolor{keyword}{static} doublereal \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2}, \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}, \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2}, \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}, cs, du, dv, \hyperlink{APT301_8c_ae1d0d606e7eb860732925d6dbb82f18a}{dx}, \hyperlink{APT301_8c_a1aa95347d299564b1d20a922f0d7eb97}{dy}, ui, vi, dz, 
+51         ou, ov, \hyperlink{APT109_8c_a7ed0547db575cfd1c4f78dcafde0d130}{us}, vs;
+52 \textcolor{preprocessor}{#define xu (equiv\_4 + 4)}
+53 \textcolor{preprocessor}{#define xv (equiv\_4 + 8)}
+54     \textcolor{keyword}{static} doublereal dd1, dd2, ux0, vx0, den, det, cos\_\_, dsq, fuv, guv, rtu,
+55          rtv, usv, vsv;
+56 \textcolor{preprocessor}{#define xuu (equiv\_4 + 12)}
+57 \textcolor{preprocessor}{#define xuv (equiv\_4 + 16)}
+58 \textcolor{preprocessor}{#define xvv (equiv\_4 + 20)}
+59     \textcolor{keyword}{static} doublereal dfdu, dfdv, dgdu, dgdv, delu, delv, secu, secv, dtol;
+60     \textcolor{keyword}{static} integer ntim;
+61     \textcolor{keyword}{static} doublereal umin, vmin;
+62 \textcolor{preprocessor}{#define spvi (equiv\_4)}
+63     \textcolor{keyword}{static} doublereal rnum, utol, vtol, ulim0, ulim1, vlim0, vlim1;
+64     \textcolor{keyword}{static} integer \hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan};
+65     \textcolor{keyword}{static} doublereal odelu, odelv, dumin, dvmin, uvinc, dsqmin;
+66     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *, doublereal *, 
+67         doublereal *, doublereal *, integer *, integer *);
+68     \textcolor{keyword}{static} doublereal tuvinc;
+69 
+70 
+71 \textcolor{comment}{/*     INTNRM COMPUTES THE POINT  ON A SURFACE FROM WHICH A SURFACE */}
+72 \textcolor{comment}{/*     NORMAL PASSES THRU POINT 'PTA'. THE UV VALUES ARE USED FOR A */}
+73 \textcolor{comment}{/*     CLOSE APPROXIMATION ON INPUT AND ARE ADJUSTED TO THE ACTUAL */}
+74 \textcolor{comment}{/*     UV OF SURFACE ON OUTPUT. */}
+75 
+76 
+77 
+78 \textcolor{comment}{/* SS - ARELEM - COMMON */}
+79 
+80 \textcolor{comment}{/*   COMMON FOR 2 SURFACE INTERSECTION */}
+81 \textcolor{comment}{/* CCCC EQUIVALENCE (IKEEP(249),ITRACE) */}
+82 
+83 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+84 
+85 \textcolor{comment}{/* CCCC IF(ITRACE.EQ.1) */}
+86 \textcolor{comment}{/* CCCC*WRITE(6,1000) */}
+87 \textcolor{comment}{/* 1000 FORMAT(' ***TRACE***INTNRM') */}
+88     \textcolor{comment}{/* Parameter adjustments */}
+89     spva -= 5;
+90     --pta;
+91 
+92     \textcolor{comment}{/* Function Body */}
+93     *irc = 0;
+94     dtol = 1e-12;
+95     ui = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+96     vi = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+97 
+98     iscan = 0;
+99     ntim = 0;
+100     \textcolor{keywordflow}{goto} L25;
+101 
+102 \textcolor{comment}{/* SCAN ENTIRE SURFACE FOR GLOBAL MIN. DIST. POINT */}
+103 \textcolor{comment}{/* ----------------------------------------------- */}
+104 L15:
+105     iscan = 1;
+106     d1 = 9e31;
+107     u1 = .5;
+108     v1 = .5;
+109     tuvinc = 1.;
+110     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+111     tuvinc /= 10.;
+112     uvinc = tuvinc;
+113     \textcolor{keywordflow}{if} (k > 1) \{
+114         uvinc *= 2.;
+115     \}
+116     us = u1 - uvinc * 5.;
+117     vs = v1 - uvinc * 5.;
+118     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 11; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+119         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = vs + uvinc * (i\_\_ - 1);
+120         \textcolor{keywordflow}{for} (j = 1; j <= 11; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+121         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = us + uvinc * (j - 1);
+122         \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], &spva[5], &
+123             \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*ns << 2) - 4], &\hyperlink{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+124 \textcolor{comment}{/* Computing 2nd power */}
+125         d\_\_1 = spva[5] - pta[1];
+126 \textcolor{comment}{/* Computing 2nd power */}
+127         d\_\_2 = spva[6] - pta[2];
+128 \textcolor{comment}{/* Computing 2nd power */}
+129         d\_\_3 = spva[7] - pta[3];
+130         d2 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+131         \textcolor{keywordflow}{if} (d2 >= d1) \{
+132             \textcolor{keywordflow}{goto} L320;
+133         \}
+134         d1 = \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+135         u1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+136         v1 = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+137 L320:
+138 \textcolor{comment}{/* L330: */}
+139         ;
+140         \}
+141 \textcolor{comment}{/* L340: */}
+142     \}
+143 \textcolor{comment}{/* L350: */}
+144     \}
+145     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{REGION_8c_a64f8055b64cf2a4c299c841130c5c938}{u1};
+146     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1};
+147 
+148 \textcolor{comment}{/* ALLOW ONLY UNIT SQUARE UV */}
+149 L25:
+150     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} < 0.) \{
+151     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = 0.;
+152     \}
+153     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} < 0.) \{
+154     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = 0.;
+155     \}
+156     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} > 1.) \{
+157     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = 1.;
+158     \}
+159     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} > 1.) \{
+160     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = 1.;
+161     \}
+162 \textcolor{comment}{/* SAVE BEST SOLN FOR RESET */}
+163     dsqmin = 999.;
+164     umin = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+165     vmin = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+166     ulim0 = 0.;
+167     ulim1 = 1.;
+168     vlim0 = 0.;
+169     vlim1 = 1.;
+170     ux0 = 0.;
+171     vx0 = 0.;
+172     dumin = 1.;
+173     dvmin = 1.;
+174 
+175 \textcolor{comment}{/* ITERATE (31 TIMES MAX.) TO FIND LOCAL MIN. DIST PTA */}
+176 \textcolor{comment}{/* --------------------------------------------------- */}
+177     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 31; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+178     ++ntim;
+179     usv = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+180     vsv = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+181     \textcolor{keywordflow}{if} (i\_\_ < 11) \{
+182         \textcolor{keywordflow}{goto} L440;
+183     \}
+184 
+185 \textcolor{comment}{/* FIRST TIME HERE, DO DIAGONAL MINI-SEARCH FOR BEST SOLN */}
+186     \textcolor{keywordflow}{if} (i\_\_ != 11) \{
+187         \textcolor{keywordflow}{goto} L430;
+188     \}
+189     d1 = 9e31;
+190     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = ux0;
+191     du = dumin / 10.;
+192     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = vx0;
+193     dv = dvmin / 10.;
+194     \textcolor{keywordflow}{for} (k = 1; k <= 2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+195         \textcolor{keywordflow}{for} (j = 1; j <= 9; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+196         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} += du;
+197         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} += dv;
+198         \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], &spva[5], &
+199             \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*ns << 2) - 4], &\hyperlink{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+200 \textcolor{comment}{/* Computing 2nd power */}
+201         d\_\_1 = spva[5] - pta[1];
+202 \textcolor{comment}{/* Computing 2nd power */}
+203         d\_\_2 = spva[6] - pta[2];
+204 \textcolor{comment}{/* Computing 2nd power */}
+205         d\_\_3 = spva[7] - pta[3];
+206         d2 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+207         \textcolor{keywordflow}{if} (d2 >= d1) \{
+208             \textcolor{keywordflow}{goto} L400;
+209         \}
+210         d1 = \hyperlink{ARLM2_8c_a2e84eabcf4365b45c8a1a5d42c540819}{d2};
+211         ui = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+212         vi = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+213 L400:
+214 \textcolor{comment}{/* L410: */}
+215         ;
+216         \}
+217 \textcolor{comment}{/* SEARCH OPPOSITE DIAGONAL */}
+218         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = ux0;
+219         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} += dv;
+220         dv = -dv;
+221 \textcolor{comment}{/* L420: */}
+222     \}
+223     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = ui;
+224     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = vi;
+225 L430:
+226 
+227 \textcolor{comment}{/* IF HERE, USE NEWTON'S METHOD */}
+228 \textcolor{comment}{/* ---------------------------- */}
+229 \textcolor{comment}{/*  COMPUTE POINT, 1ST & 2ND DERIVATIVES */}
+230     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], \hyperlink{INTNRM_8c_ae29bbad100d8874b1094bfce62c33a13}{spvi}, &
+      \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*
+231         ns << 2) - 4], &\hyperlink{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+232     dx = pta[1] - \hyperlink{INTNRM_8c_ae29bbad100d8874b1094bfce62c33a13}{spvi}[0];
+233     dy = pta[2] - spvi[1];
+234     dz = pta[3] - spvi[2];
+235 \textcolor{comment}{/* SOLVE FOR F(U,V) & G(U,V) = 0 *** */}
+236     fuv = dx * \hyperlink{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}{xu}[0] + dy * \hyperlink{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}{xu}[1] + dz * \hyperlink{INTNRM_8c_a1759c31e1efd115e9ae7c8ccc56631fd}{xu}[2];
+237     guv = dx * \hyperlink{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}{xv}[0] + dy * \hyperlink{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}{xv}[1] + dz * \hyperlink{INTNRM_8c_a379e82279517e9af5c2269be671efcf1}{xv}[2];
+238 \textcolor{comment}{/* CONVERGENCE ? */}
+239     \textcolor{keywordflow}{if} (abs(fuv) < dtol && abs(guv) < dtol) \{
+240         \textcolor{keywordflow}{goto} L110;
+241     \}
+242 \textcolor{comment}{/* EVALUATE PARTIALS OF F & G */}
+243 \textcolor{comment}{/* Computing 2nd power */}
+244     d\_\_1 = xu[0];
+245 \textcolor{comment}{/* Computing 2nd power */}
+246     d\_\_2 = xu[1];
+247 \textcolor{comment}{/* Computing 2nd power */}
+248     d\_\_3 = xu[2];
+249     dfdu = dx * \hyperlink{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}{xuu}[0] + dy * \hyperlink{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}{xuu}[1] + dz * \hyperlink{INTNRM_8c_abc6b7d6793824895c0217a4597ce6e43}{xuu}[2] - (d\_\_1 * d\_\_1 + d\_\_2 *
+250          d\_\_2 + d\_\_3 * d\_\_3);
+251     dfdv = dx * \hyperlink{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}{xuv}[0] + dy * \hyperlink{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}{xuv}[1] + dz * \hyperlink{INTNRM_8c_a4f43e69435158b227d55420f26c1bdcb}{xuv}[2] - (xu[0] * xv[0] + xu[
+252         1] * xv[1] + xu[2] * xv[2]);
+253     dgdu = dfdv;
+254 \textcolor{comment}{/* Computing 2nd power */}
+255     d\_\_1 = xv[0];
+256 \textcolor{comment}{/* Computing 2nd power */}
+257     d\_\_2 = xv[1];
+258 \textcolor{comment}{/* Computing 2nd power */}
+259     d\_\_3 = xv[2];
+260     dgdv = dx * \hyperlink{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}{xvv}[0] + dy * \hyperlink{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}{xvv}[1] + dz * \hyperlink{INTNRM_8c_a297f6da2bbcaeb212a5001be1705eb52}{xvv}[2] - (d\_\_1 * d\_\_1 + d\_\_2 *
+261          d\_\_2 + d\_\_3 * d\_\_3);
+262     det = dfdu * dgdv - dfdv * dgdu;
+263 \textcolor{comment}{/* COMPUTE CORRECTIONS TO U & V */}
+264     delu = -(dgdv * fuv - dfdv * guv) / det;
+265     delv = -(dfdu * guv - dgdu * fuv) / det;
+266 \textcolor{comment}{/* SAVE UPPER & LOWER BOUNDS ON U & V */}
+267     \textcolor{keywordflow}{if} (delu > 0.) \{
+268         ulim0 = max(ulim0,*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+269     \}
+270     \textcolor{keywordflow}{if} (delu > 0.) \{
+271         ulim1 = max(ulim1,*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+272     \}
+273     \textcolor{keywordflow}{if} (delv > 0.) \{
+274         vlim0 = max(vlim0,*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v});
+275     \}
+276     \textcolor{keywordflow}{if} (delv > 0.) \{
+277         vlim1 = max(vlim1,*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v});
+278     \}
+279     \textcolor{keywordflow}{if} (delu < 0.) \{
+280         ulim1 = min(ulim1,*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+281     \}
+282     \textcolor{keywordflow}{if} (delu < 0.) \{
+283         ulim0 = min(ulim0,*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u});
+284     \}
+285     \textcolor{keywordflow}{if} (delv < 0.) \{
+286         vlim1 = min(vlim1,*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v});
+287     \}
+288     \textcolor{keywordflow}{if} (delv < 0.) \{
+289         vlim0 = min(vlim0,*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v});
+290     \}
+291     \textcolor{keywordflow}{goto} L490;
+292 L440:
+293 
+294 \textcolor{comment}{/* 1ST 11 TIMES USE  PLANE CONVERGENCE APPROACH */}
+295 \textcolor{comment}{/* -------------------------------------------- */}
+296     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], spvi, &
+      \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*
+297         ns << 2) - 4], &\hyperlink{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+298 
+299 \textcolor{comment}{/* GET LENGTH OF PARTIALS */}
+300 \textcolor{comment}{/* Computing 2nd power */}
+301     d\_\_1 = xu[0];
+302 \textcolor{comment}{/* Computing 2nd power */}
+303     d\_\_2 = xu[1];
+304 \textcolor{comment}{/* Computing 2nd power */}
+305     d\_\_3 = xu[2];
+306     secu = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+307 \textcolor{comment}{/* Computing 2nd power */}
+308     d\_\_1 = xv[0];
+309 \textcolor{comment}{/* Computing 2nd power */}
+310     d\_\_2 = xv[1];
+311 \textcolor{comment}{/* Computing 2nd power */}
+312     d\_\_3 = xv[2];
+313     secv = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+314 
+315     dx = pta[1] - spvi[0];
+316     dy = pta[2] - spvi[1];
+317     dz = pta[3] - spvi[2];
+318     d1 = (xu[0] * dx + xu[1] * dy + xu[2] * dz) / secu;
+319     d2 = (xv[0] * dx + xv[1] * dy + xv[2] * dz) / secv;
+320 
+321 \textcolor{comment}{/* CAL. COS-1 BETWEEN PARTIALS */}
+322     cos\_\_ = (xu[0] * xv[0] + xu[1] * xv[1] + xu[2] * xv[2]) / (secu * 
+323         secv);
+324     cs = 1. - cos\_\_ * cos\_\_;
+325     \textcolor{keywordflow}{if} (cs < 1e-20) \{
+326         cs = 1e-20;
+327     \}
+328 
+329     delu = (d1 - d2 * cos\_\_) / cs;
+330     \textcolor{keywordflow}{if} (abs(delu) < 1e-20) \{
+331         delu = 1e-20;
+332     \}
+333     dsq = sqrt(delu * delu * cs + d2 * d2);
+334 
+335 \textcolor{comment}{/* IF DISTANCE IS LT 1.D-12; EXIT */}
+336     \textcolor{keywordflow}{if} (dsq < dtol) \{
+337         \textcolor{keywordflow}{goto} L110;
+338     \}
+339 \textcolor{comment}{/* SAVE BEST SOLN FOR RESET */}
+340     \textcolor{keywordflow}{if} (dsq >= dsqmin) \{
+341         \textcolor{keywordflow}{goto} L450;
+342     \}
+343     dsqmin = dsq;
+344     umin = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+345     vmin = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+346 L450:
+347 
+348 \textcolor{comment}{/* RECALCULATE U & V */}
+349 \textcolor{comment}{/* ----------------- */}
+350     delv = (d2 - delu * cos\_\_) / secv;
+351     delu /= secu;
+352 \textcolor{comment}{/* SAVE MIN. OSCILLATION DIST. *** */}
+353     \textcolor{keywordflow}{if} (i\_\_ == 1) \{
+354         \textcolor{keywordflow}{goto} L480;
+355     \}
+356     \textcolor{keywordflow}{if} (odelu * delu >= 0. || (d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} - ou, abs(d\_\_1)) >= abs(dumin)) \{
+357         \textcolor{keywordflow}{goto} L460;
+358     \}
+359     ux0 = ou;
+360     dumin = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} - ou;
+361 L460:
+362     \textcolor{keywordflow}{if} (odelv * delv >= 0. || (d\_\_1 = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} - ov, abs(d\_\_1)) >= abs(dvmin)) \{
+363         \textcolor{keywordflow}{goto} L470;
+364     \}
+365     vx0 = ov;
+366     dvmin = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} - ov;
+367 L470:
+368 L480:
+369 L490:
+370     \textcolor{keywordflow}{if} (abs(delu) > .25) \{
+371         delu = delu * .25 / abs(delu);
+372     \}
+373     \textcolor{keywordflow}{if} (abs(delv) > .25) \{
+374         delv = delv * .25 / abs(delv);
+375     \}
+376     du = delu;
+377     dv = delv;
+378     \textcolor{keywordflow}{if} (i\_\_ == 1 || i\_\_ == 11) \{
+379         \textcolor{keywordflow}{goto} L540;
+380     \}
+381 \textcolor{comment}{/* AITKEN DEL SQUARE ALGORITHM --------------------------- */}
+382 \textcolor{comment}{/*  USE SECANT TO EXTRAPOLATE/INTERPOLATE NEXT U & V */}
+383     den = odelu - delu;
+384     \textcolor{keywordflow}{if} (abs(den) <= 1e-20) \{
+385         \textcolor{keywordflow}{goto} L510;
+386     \}
+387     rnum = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} - ou;
+388     \textcolor{keywordflow}{if} (abs(rnum) <= 1e-20) \{
+389         \textcolor{keywordflow}{goto} L500;
+390     \}
+391     rtu = rnum / den;
+392     \textcolor{keywordflow}{if} (rtu > 1e-12) \{
+393         du = delu * rtu;
+394     \}
+395     \textcolor{keywordflow}{if} (odelu * delu < 0.) \{
+396         du *= .67;
+397     \}
+398 L500:
+399 L510:
+400 
+401 \textcolor{comment}{/* CAL. NEW V */}
+402     den = odelv - delv;
+403     \textcolor{keywordflow}{if} (abs(den) <= 1e-20) \{
+404         \textcolor{keywordflow}{goto} L530;
+405     \}
+406     rnum = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} - ov;
+407     \textcolor{keywordflow}{if} (abs(rnum) <= 1e-20) \{
+408         \textcolor{keywordflow}{goto} L520;
+409     \}
+410     rtv = rnum / den;
+411     \textcolor{keywordflow}{if} (rtv > 1e-12) \{
+412         dv = delv * rtv;
+413     \}
+414     \textcolor{keywordflow}{if} (odelv * delv < 0.) \{
+415         dv *= .67;
+416     \}
+417 L520:
+418 L530:
+419 L540:
+420 
+421 \textcolor{comment}{/* UPDATE U & V AND LOOP BACK  --------------------------------- */}
+422     ou = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+423     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} += du;
+424     u2 = ou + delu;
+425     odelu = delu;
+426     ov = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+427     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} += dv;
+428     v2 = ov + delv;
+429     odelv = delv;
+430 
+431 \textcolor{comment}{/* KEEP U & V WITHIN LIMITS ------------------------------------ */}
+432     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} < 0.) \{
+433         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = 0.;
+434     \}
+435     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} < 0.) \{
+436         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = 0.;
+437     \}
+438     \textcolor{keywordflow}{if} (*\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} > 1.) \{
+439         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = 1.;
+440     \}
+441     \textcolor{keywordflow}{if} (*\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} > 1.) \{
+442         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = 1.;
+443     \}
+444     \textcolor{keywordflow}{if} (u2 < 0.) \{
+445         u2 = 0.;
+446     \}
+447     \textcolor{keywordflow}{if} (v2 < 0.) \{
+448         v2 = 0.;
+449     \}
+450     \textcolor{keywordflow}{if} (u2 > 1.) \{
+451         u2 = 1.;
+452     \}
+453     \textcolor{keywordflow}{if} (v2 > 1.) \{
+454         v2 = 1.;
+455     \}
+456 
+457 \textcolor{comment}{/* CONVERGENCE ? */}
+458     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} - usv, abs(d\_\_1)) < 1e-10 && (d\_\_2 = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} - vsv, abs(
+459         d\_\_2)) < 1e-10) \{
+460         \textcolor{keywordflow}{goto} L110;
+461     \}
+462 
+463 \textcolor{comment}{/*    NO CHANGE IN U OR V, USE THIS POINT NORMAL */}
+464 \textcolor{comment}{/* WHICH IS BETTER, (U,V) OR (U2,V2) ? */}
+465     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], spvi, &
+      \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*
+466         ns << 2) - 4], &\hyperlink{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+467 \textcolor{comment}{/* Computing 2nd power */}
+468     d\_\_1 = pta[1] - spvi[0];
+469 \textcolor{comment}{/* Computing 2nd power */}
+470     d\_\_2 = pta[2] - spvi[1];
+471 \textcolor{comment}{/* Computing 2nd power */}
+472     d\_\_3 = pta[3] - spvi[2];
+473     dd1 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+474     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&u2, &v2, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], spvi, &
+475         \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*ns << 2) - 4], &\hyperlink{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+476 \textcolor{comment}{/* Computing 2nd power */}
+477     d\_\_1 = pta[1] - spvi[0];
+478 \textcolor{comment}{/* Computing 2nd power */}
+479     d\_\_2 = pta[2] - spvi[1];
+480 \textcolor{comment}{/* Computing 2nd power */}
+481     d\_\_3 = pta[3] - spvi[2];
+482     dd2 = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3;
+483     \textcolor{keywordflow}{if} (dd2 >= dd1) \{
+484         \textcolor{keywordflow}{goto} L550;
+485     \}
+486     *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{AERR2_8c_aebe4b0f7c02795b2208e7e6f5d36fec9}{u2};
+487     *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2};
+488 L550:
+489 \textcolor{comment}{/* L600: */}
+490     ;
+491     \}
+492 
+493 \textcolor{comment}{/* END OF LOOP WITH NO SOL., SCAN ENTIRE SURFACE */}
+494     \textcolor{keywordflow}{if} (iscan == 0) \{
+495     \textcolor{keywordflow}{goto} L15;
+496     \}
+497 
+498 \textcolor{comment}{/* IF U OR V ON OR BEYOND SURFACE BOUNDARY AND THE ENTRY POINT */}
+499 \textcolor{comment}{/*  DROPPED TO THE SURFACE IS OUT OF BOUNDS BY MORE THAN 1.D-4, */}
+500 \textcolor{comment}{/*  GENERATE A NEGATIVE RETURN CODE TO INITIATE ENDUP. */}
+501 \textcolor{comment}{/*  EVALUATE POINT, AND DERIVATIVES ---------------------------------- */}
+502 L110:
+503     \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, &\hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], &spva[5], &
+      \hyperlink{INTNRM_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*
+504         ns << 2) - 4], &\hyperlink{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2});
+505     utol = 1e-4;
+506     vtol = utol;
+507     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} - .5, abs(d\_\_1)) >= .5 && abs(d1) > utol) \{
+508     *irc = -1;
+509     \}
+510     \textcolor{keywordflow}{if} ((d\_\_1 = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} - .5, abs(d\_\_1)) >= .5 && abs(d2) > vtol) \{
+511     *irc = -1;
+512     \}
+513 
+514 \textcolor{comment}{/* L999: */}
+515     \textcolor{keywordflow}{return} 0;
+516 \} \textcolor{comment}{/* intnrm\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{INTNRM_8c_aebe5c495eb0c7dc140859a10ea5d1e29_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!bb@{bb}}
+\index{bb@{bb}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{bb}{bb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bb\mbox{[}256\mbox{]}}\hypertarget{INTNRM_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{}\label{INTNRM_8c_a02df207cc55dd8e5a55b6f9d78d942d6}
+
+
+Definition at line 18 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{INTNRM_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 33 of file I\+N\+T\+N\+R\+M.\+c.
+
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{INTNRM_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 34 of file I\+N\+T\+N\+R\+M.\+c.
+
+
+
+Referenced by intnrm\+\_\+().
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!iiflag@{iiflag}}
+\index{iiflag@{iiflag}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{iiflag}{iiflag}}]{\setlength{\rightskip}{0pt plus 5cm}integer iiflag\mbox{[}16\mbox{]}}\hypertarget{INTNRM_8c_af00895acd217dfa45b2e2e9716ebff70}{}\label{INTNRM_8c_af00895acd217dfa45b2e2e9716ebff70}
+
+
+Definition at line 19 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!iitop@{iitop}}
+\index{iitop@{iitop}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{iitop}{iitop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iitop\mbox{[}96\mbox{]}}\hypertarget{INTNRM_8c_ad4159f737847a828654fd6bd050aff25}{}\label{INTNRM_8c_ad4159f737847a828654fd6bd050aff25}
+
+
+Definition at line 19 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!ikeep@{ikeep}}
+\index{ikeep@{ikeep}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{ikeep}{ikeep}}]{\setlength{\rightskip}{0pt plus 5cm}integer ikeep\mbox{[}255\mbox{]}}\hypertarget{INTNRM_8c_aaf1570c45aa1901e9b51476d09a19e02}{}\label{INTNRM_8c_aaf1570c45aa1901e9b51476d09a19e02}
+
+
+Definition at line 26 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!intcom\+\_\+@{intcom\+\_\+}}
+\index{intcom\+\_\+@{intcom\+\_\+}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{intcom\+\_\+}{intcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   intcom\+\_\+}\hypertarget{INTNRM_8c_a976009dec7acade8d5fb80cf4653b89e}{}\label{INTNRM_8c_a976009dec7acade8d5fb80cf4653b89e}
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!ipnum@{ipnum}}
+\index{ipnum@{ipnum}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{ipnum}{ipnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipnum\mbox{[}4\mbox{]}}\hypertarget{INTNRM_8c_ad9ba103b57834a3db27b426fcafa58fe}{}\label{INTNRM_8c_ad9ba103b57834a3db27b426fcafa58fe}
+
+
+Definition at line 19 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!ssarlm\+\_\+@{ssarlm\+\_\+}}
+\index{ssarlm\+\_\+@{ssarlm\+\_\+}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+}{ssarlm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssarlm\+\_\+}\hypertarget{INTNRM_8c_a0858a7e901b8eea975793eb82f808065}{}\label{INTNRM_8c_a0858a7e901b8eea975793eb82f808065}
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!uu@{uu}}
+\index{uu@{uu}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{uu}{uu}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uu\mbox{[}4\mbox{]}}\hypertarget{INTNRM_8c_a92a9ddacaa39a881012df9cfbd55134a}{}\label{INTNRM_8c_a92a9ddacaa39a881012df9cfbd55134a}
+
+
+Definition at line 18 of file I\+N\+T\+N\+R\+M.\+c.
+
+\index{I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}!vv@{vv}}
+\index{vv@{vv}!I\+N\+T\+N\+R\+M.\+c@{I\+N\+T\+N\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{vv}{vv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vv\mbox{[}4\mbox{]}}\hypertarget{INTNRM_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{}\label{INTNRM_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}
+
+
+Definition at line 18 of file I\+N\+T\+N\+R\+M.\+c.
+

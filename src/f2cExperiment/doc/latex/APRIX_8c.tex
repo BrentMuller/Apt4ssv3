@@ -1,0 +1,522 @@
+\hypertarget{APRIX_8c}{}\section{A\+P\+R\+I\+X.\+c File Reference}
+\label{APRIX_8c}\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+R\+I\+X.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{APRIX_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6}{aprix\+\_\+} (doublereal $\ast$du, doublereal $\ast$dv, doublereal $\ast$dt, doublereal $\ast$\hyperlink{INTTPL_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}, doublereal $\ast$\hyperlink{UNITS_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp}, doublereal $\ast$\hyperlink{UNITS_8c_a66b316fa3299925e5c7630d5af6601fd}{tn}, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, integer $\ast$ilev, integer $\ast$irr, integer $\ast$idebug)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{APRIX_8c_a6d165623735ee520885e84b5052c252b}{c\+\_\+n3} = -\/3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}!aprix\+\_\+@{aprix\+\_\+}}
+\index{aprix\+\_\+@{aprix\+\_\+}!A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+\subsubsection[{\texorpdfstring{aprix\+\_\+(doublereal $\ast$du, doublereal $\ast$dv, doublereal $\ast$dt, doublereal $\ast$spv, doublereal $\ast$tp, doublereal $\ast$tn, integer $\ast$mode, integer $\ast$ilev, integer $\ast$irr, integer $\ast$idebug)}{aprix_(doublereal *du, doublereal *dv, doublereal *dt, doublereal *spv, doublereal *tp, doublereal *tn, integer *mode, integer *ilev, integer *irr, integer *idebug)}}]{\setlength{\rightskip}{0pt plus 5cm}int aprix\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{du, }
+\item[{doublereal $\ast$}]{dv, }
+\item[{doublereal $\ast$}]{dt, }
+\item[{doublereal $\ast$}]{spv, }
+\item[{doublereal $\ast$}]{tp, }
+\item[{doublereal $\ast$}]{tn, }
+\item[{integer $\ast$}]{mode, }
+\item[{integer $\ast$}]{ilev, }
+\item[{integer $\ast$}]{irr, }
+\item[{integer $\ast$}]{idebug}
+\end{DoxyParamCaption}
+)}\hypertarget{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6}{}\label{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6}
+
+
+Definition at line 24 of file A\+P\+R\+I\+X.\+c.
+
+
+
+References ac, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, c\+\_\+n3, cprint\+\_\+(), det3\+\_\+(), dif, dotv\+\_\+(), fv, i\+\_\+\+\_\+, one, spv, temp, tn, tp, two, and zero.
+
+
+
+Referenced by pchprc\+\_\+(), and puvloc\+\_\+().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{comment}{/* Initialized data */}
+29 
+30     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+31     \textcolor{keyword}{static} doublereal big0 = 1e13;
+32     \textcolor{keyword}{static} doublereal big = 1e19;
+33     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+34     \textcolor{keyword}{static} doublereal \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two} = 2.;
+35     \textcolor{keyword}{static} doublereal vsmal = 1e-20;
+36     \textcolor{keyword}{static} doublereal ergood = .8;
+37     \textcolor{keyword}{static} integer mxct = 15;
+38     \textcolor{keyword}{static} doublereal erchk = .05;
+39     \textcolor{keyword}{static} doublereal disck = 8e-4;
+40     \textcolor{keyword}{static} doublereal erchk2 = .15;
+41 
+42     \textcolor{comment}{/* System generated locals */}
+43     doublereal d\_\_1;
+44 
+45     \textcolor{comment}{/* Builtin functions */}
+46     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+47     \textcolor{keywordtype}{double} sqrt(doublereal);
+48 
+49     \textcolor{comment}{/* Local variables */}
+50     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+51     \textcolor{keyword}{static} doublereal \hyperlink{SSV3_8c_a83a7200043f6e874f0cbb9c49dec8d23}{ac}[3], at[3], au[3], av[3], eu, ev, et, fu, \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv}, ft;
+52     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}();
+53     \textcolor{keyword}{static} doublereal \hyperlink{DDPARA_8c_add158ec609178bc62ea2667b23b5ecec}{dif}[3], vec[3];
+54     \textcolor{keyword}{static} integer ict;
+55     \textcolor{keyword}{static} doublereal euv;
+56     \textcolor{keyword}{extern} doublereal \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(doublereal *, doublereal *, doublereal *);
+57     \textcolor{keyword}{static} doublereal disc, vecu[3], vecv[3], \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp}, wval;
+58     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(doublereal *, doublereal *, doublereal *
+59         );
+60     \textcolor{keyword}{static} doublereal eusq, evsq, errat;
+61     \textcolor{keyword}{static} \textcolor{keywordtype}{char} badmsg[20];
+62     \textcolor{keyword}{static} doublereal errlas;
+63     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\textcolor{keywordtype}{char} *, ftnlen);
+64 
+65 \textcolor{comment}{/* ---      PURPOSE IS TO COMPUTE INTERSECTION BETWEEN SURFACE */}
+66 \textcolor{comment}{/* ---      DIFFERENTIAL FORM AND EXTERNAL TOOL RAY. */}
+67 \textcolor{comment}{/* --- INPUT U,V   FOR REFERENCE ONLY, CURRENT SURFACE PARAMETRIC COORDS. */}
+68 \textcolor{comment}{/* --- INPUT SPV   SURFACE POINT SPV 1-3, SPV-U 5-7, SPV-V 9-11, */}
+69 \textcolor{comment}{/* ---             SPV-UU 13-15, SPV-UV 17-19, SPV-VV 21-23, */}
+70 \textcolor{comment}{/* ---             SPV- SPU-U X SPV-V 25-27, SPV UNIT NORMAL 29-31 */}
+71 \textcolor{comment}{/* --- INPUT TP    CURRENT EXTERIOR (TOOL) POINT */}
+72 \textcolor{comment}{/* --- INPUT TN    IF MODE.NE.0, TN IS THE TOOL RAY VECTOR */}
+73 \textcolor{comment}{/* --- INPUT MODE  IF MODE.EQ.0, COMPUTE CLOSEST POINT TO TP. */}
+74 \textcolor{comment}{/* ---       MODE  IF MODE.NE.0 COMPUTE CLOSEST POINT(INTERSECTION) WITH */}
+75 \textcolor{comment}{/* --              TOOL RAY FROM POINT TP IN DIRECTION TN. */}
+76 \textcolor{comment}{/* --- INPUT ILEV  CONTROLS WHICH PHASES OF APRIX ARE USED */}
+77 \textcolor{comment}{/* ---       ILEV.LE.1 MEANS QUIT AFTER PHASE 1. */}
+78 \textcolor{comment}{/* ---       ILEV.EQ.2 MEANS DO BOTH PHASE 1 AND PHASE 2 */}
+79 \textcolor{comment}{/* ---       ILEV.GE.3 MEANS USE DU,DV AS INPUT AND GO TO PHASE 2. */}
+80 \textcolor{comment}{/* --- OUTPUT DU,DV SUGGESTED CHANGE IN U,V TO PROVIDE ANSWER */}
+81 \textcolor{comment}{/* --- OUTPUT DT    IF MODE.NE.0, DT IS THE SCALAR TP+DT*TN FOR RAY INTERS */}
+82 \textcolor{comment}{/* --- OUTPUT IRR  ERROR CODE.  IF IRR.EQ.0, THEN NO ERROR OCCURRED. */}
+83 \textcolor{comment}{/* --- OUTPUT IDEBUG IF NOT ZERO, THEN PRINT DEBUGGING OUTPUT */}
+84 
+85 
+86     \textcolor{comment}{/* Parameter adjustments */}
+87     --\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn};
+88     --\hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp};
+89     --\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv};
+90 
+91     \textcolor{comment}{/* Function Body */}
+92 \textcolor{comment}{/* ---      ERGOOD IS THE FACTOR FOR IMPROVEMENT IN ERROR WHICH IS */}
+93 \textcolor{comment}{/* ---      NECESSARY TO CONTINUE WITH THE SECOND ORDER ITERATION. */}
+94 \textcolor{comment}{/* ---      MAXIMUM NUMBER OF SECOND ORDER ITERATIONS ALLOWED */}
+95 \textcolor{comment}{/* ---      ERCHK2 IS A MORE LIBERAL ACCEPTANCE CRITERIA FOR */}
+96 \textcolor{comment}{/* ---      SECOND ORDER ITERATION ERROR THAN ERCHK. */}
+97 
+98 
+99     \textcolor{keywordflow}{if} (*idebug == 0) \{
+100     \textcolor{keywordflow}{goto} L5;
+101     \}
+102     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+103     s\_copy(badmsg, \textcolor{stringliteral}{" ENTRY TO APRIX"}, (ftnlen)20, (ftnlen)15);
+104     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+105     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ILEV"}, ilev, (ftnlen)4);
+106     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"MODE"}, \hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode}, (ftnlen)4);
+107     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DU  "}, du, (ftnlen)4);
+108     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DV  "}, dv, (ftnlen)4);
+109 L5:
+110 
+111     *irr = 0;
+112     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+113     dif[i\_\_ - 1] = \hyperlink{SSDEF_8c_ab025e87040bd241c89f5a880c12fc80c}{tp}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+114 \textcolor{comment}{/* L10: */}
+115     \}
+116 
+117     \textcolor{keywordflow}{if} (*ilev >= 3) \{
+118     \textcolor{keywordflow}{goto} L200;
+119     \}
+120 \textcolor{comment}{/* ---      DETERMINE DU,DV,DT SO THAT */}
+121 \textcolor{comment}{/* ---  (SPV+DU*SPV-U +DV*SPV-V - TP -DT*TN) **2 = MINIMUM. */}
+122 
+123     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(au, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5]);
+124     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&au[1], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[9]);
+125     av[0] = au[1];
+126     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&av[1], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[9], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[9]);
+127     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(ac, dif, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5]);
+128     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&ac[1], dif, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[9]);
+129 \textcolor{comment}{/* ---      CONTINUE WITH FURTHER COEFFICIENT CALCULATION IF MODE.NE.0 */}
+130     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+131     \textcolor{keywordflow}{goto} L50;
+132     \}
+133 \textcolor{comment}{/* ---       FIRST COMPLETE 3X3 COEFFICIENTS */}
+134     au[2] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+135     av[2] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+136     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+137 \textcolor{comment}{/* L20: */}
+138     at[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+139     \}
+140     ac[2] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+141 \textcolor{comment}{/* ---      FIND CLOSEST POINT BETWEEN TP AND SPV+DU*SPU+DV*SPV. */}
+142 \textcolor{comment}{/* Computing 2nd power */}
+143     d\_\_1 = au[1];
+144     disc = au[0] * av[1] - d\_\_1 * d\_\_1;
+145     *irr = 1;
+146     \textcolor{keywordflow}{if} (abs(disc) < vsmal) \{
+147     \textcolor{keywordflow}{goto} L1000;
+148     \}
+149     *du = (ac[0] * av[1] - ac[1] * av[0]) / disc;
+150     *dv = (au[0] * ac[1] - au[1] * ac[0]) / disc;
+151     *dt = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+152     \textcolor{keywordflow}{goto} L100;
+153 
+154 L50:
+155 \textcolor{comment}{/* ---      CALCULATE 3 X 3 COEFFICIENTS FOR SPV+DU*SPU+DV*SPV-TP-DT*TN=MI */}
+156     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&au[2], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[5], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+157     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&av[2], &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[9], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+158     at[0] = -au[2];
+159     at[1] = -av[2];
+160     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&at[2], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+161     at[2] = -at[2];
+162     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&ac[2], dif, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+163 
+164     disc = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, av, at);
+165     *irr = 2;
+166     \textcolor{keywordflow}{if} (abs(disc) < vsmal) \{
+167     \textcolor{keywordflow}{goto} L1000;
+168     \}
+169 
+170     *du = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(ac, av, at) / disc;
+171     *dv = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, ac, at) / disc;
+172     *dt = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, av, ac) / disc;
+173 
+174 L100:
+175 
+176     \textcolor{keywordflow}{if} (*idebug == 0) \{
+177     \textcolor{keywordflow}{goto} L110;
+178     \}
+179     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DU  "}, du, (ftnlen)4);
+180     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DV  "}, dv, (ftnlen)4);
+181     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DT  "}, dt, (ftnlen)4);
+182     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DISC"}, &disc, (ftnlen)4);
+183     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+184     s\_copy(badmsg, \textcolor{stringliteral}{" EXIT FROM APRIX"}, (ftnlen)20, (ftnlen)16);
+185     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(badmsg, (ftnlen)20);
+186 L110:
+187 \textcolor{comment}{/* ---      IF DU,DV, OR DT ARE TOO LARGE, TEHN AVOID 2ND ORDER CALCULATIO */}
+188 \textcolor{comment}{/* ---      AVOID A POSSIBLE OVERFLOW CONDITION */}
+189     \textcolor{keywordflow}{if} (abs(*du) + abs(*dv) + abs(*dt) > big0) \{
+190     \textcolor{keywordflow}{goto} L2000;
+191     \}
+192 
+193 
+194     \textcolor{keywordflow}{if} (*ilev <= 1) \{
+195     \textcolor{keywordflow}{goto} L2000;
+196     \}
+197 
+198 L200:
+199 \textcolor{comment}{/* ---      BEGIN SECOND PHASE OF APRIX ALGORITHM */}
+200 
+201 \textcolor{comment}{/* ---      FOLLOW 1ST ORDER SOLN WITH 2ND ORDER NEWTON RAPHSON ITERATION */}
+202 \textcolor{comment}{/* ---   (SP+DU*SPU+DV*SPV+DU**2*SPUU/2+DU*DV*SPUV+DV**2*SPVV-TP-DT*TN)**2 */}
+203 \textcolor{comment}{/* ---    SHOULD BE REPETITIVELY EVALUATED TO REACH A MINIMUM. */}
+204 \textcolor{comment}{/* ---    ABOVE EXPRESSION IS CALLED W(DU,DV,DT)=VEC(DU,DV,DT)**2 */}
+205 
+206     eu = *du;
+207     ev = *dv;
+208     et = *dt;
+209     ict = 0;
+210 
+211 L210:
+212 \textcolor{comment}{/* ---      COMPUTE COEFFICIENTS FOR EFFICIENCY */}
+213 \textcolor{comment}{/* Computing 2nd power */}
+214     d\_\_1 = eu;
+215     eusq = d\_\_1 * d\_\_1 / \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two};
+216     euv = eu * ev;
+217 \textcolor{comment}{/* Computing 2nd power */}
+218     d\_\_1 = ev;
+219     evsq = d\_\_1 * d\_\_1 / \hyperlink{INPAT_8c_a282f45bc7cdc923f2937b85bbd8d3c10}{two};
+220 
+221     ++ict;
+222     \textcolor{keywordflow}{if} (ict <= mxct) \{
+223     \textcolor{keywordflow}{goto} L300;
+224     \}
+225 \textcolor{comment}{/* ---      MXCT EXCEEDED, ERROR IF ILEV IS GE 3 */}
+226     *irr = 3;
+227     \textcolor{keywordflow}{if} (*ilev >= 3) \{
+228     \textcolor{keywordflow}{goto} L1000;
+229     \}
+230 \textcolor{comment}{/* ---      MXCT EXCEEDED, ACCEPT LINEAR ESTIMATE */}
+231     eu = *du;
+232     ev = *dv;
+233     et = *dt;
+234     \textcolor{keywordflow}{goto} L400;
+235 
+236 L300:
+237 \textcolor{comment}{/* ---      EVALUATE VEC-U,VEC-V, VEC-UU ETC. */}
+238     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+239     vec[i\_\_ - 1] = -dif[i\_\_ - 1] + eu * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 4] + ev * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 8] 
+240         + eusq * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 12] + euv * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 16] + evsq * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ 
+241         + 20] - et * \hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+242     vecu[i\_\_ - 1] = \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 4] + eu * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 12] + ev * \hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[i\_\_ + 16]
+243         ;
+244     vecv[i\_\_ - 1] = spv[i\_\_ + 8] + eu * spv[i\_\_ + 16] + ev * spv[i\_\_ + 20]
+245         ;
+246 \textcolor{comment}{/* ---      VECUU=SPV(12+I)=SPUU */}
+247 \textcolor{comment}{/* ---      VECUV=SPV(16+I)=SPUV */}
+248 \textcolor{comment}{/* ---      VECVV=SPV(20+I)=SPVV */}
+249 \textcolor{comment}{/* ---      VECTU=VECTV=VECTT=0 */}
+250 \textcolor{comment}{/* L310: */}
+251     \}
+252 
+253 \textcolor{comment}{/* ---      W(DU,DV,DT)=VEC(DU,DV,DT)**2 */}
+254 \textcolor{comment}{/* ---      COMPUTE ALL 2ND ORDER PARTIALS OF W FROM VEC AND VEC PARTIALS */}
+255 
+256     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+257     au[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+258     av[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+259     at[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+260     ac[i\_\_ - 1] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+261 \textcolor{comment}{/* L320: */}
+262     \}
+263 
+264     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&wval, vec, vec);
+265     wval = sqrt(wval);
+266     \textcolor{keywordflow}{if} (*idebug == 0) \{
+267     \textcolor{keywordflow}{goto} L322;
+268     \}
+269     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DIST"}, &wval, (ftnlen)4);
+270     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"TPSP"}, vec, (ftnlen)4);
+271 L322:
+272     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(ac, vec, vecu);
+273     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&ac[1], vec, vecv);
+274     ac[0] = -ac[0];
+275     ac[1] = -ac[1];
+276     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&temp, vecu, vecu);
+277     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(au, vec, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[13]);
+278     au[0] += \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp};
+279     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&temp, vecu, vecv);
+280     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&au[1], vec, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[17]);
+281     au[1] += \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp};
+282     av[0] = au[1];
+283     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&temp, vecv, vecv);
+284     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&av[1], vec, &\hyperlink{INTBND_8c_a3d64207bd438c7bb10bfc8a45697be2a}{spv}[21]);
+285     av[1] += \hyperlink{APT100_8c_a5905d48604152cf57aa6bfa087b49173}{temp};
+286 \textcolor{comment}{/* ---      TERMINATE 2ND ORDER ALGORITHM IF ANY COEFFICIENT IS LARGE */}
+287     \textcolor{keywordflow}{if} (abs(ac[0]) > big) \{
+288     \textcolor{keywordflow}{goto} L2000;
+289     \}
+290     \textcolor{keywordflow}{if} (abs(ac[1]) > big) \{
+291     \textcolor{keywordflow}{goto} L2000;
+292     \}
+293 \textcolor{comment}{/* ---      COEFFICIENTS ARE COMPLETE FOR 2X2 CASE, I.E. MODE.EQ.0 */}
+294     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} != 0) \{
+295     \textcolor{keywordflow}{goto} L330;
+296     \}
+297 
+298 \textcolor{comment}{/* Computing 2nd power */}
+299     d\_\_1 = au[1];
+300     disc = au[0] * av[1] - d\_\_1 * d\_\_1;
+301 \textcolor{comment}{/* ---      IF DISC IS TOO SMALL ACCEPT FIRST ORDER ANSWER */}
+302     \textcolor{keywordflow}{if} (disc < disck) \{
+303     \textcolor{keywordflow}{goto} L410;
+304     \}
+305     fu = (ac[0] * av[1] - ac[1] * av[0]) / disc;
+306     fv = (au[0] * ac[1] - au[1] * ac[0]) / disc;
+307     ft = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+308     \textcolor{keywordflow}{goto} L360;
+309 \textcolor{comment}{/* ---      COMPLETE COEFFICIENT CALCULATION FOR 3X3 CASE */}
+310 L330:
+311     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&ac[2], vec, &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+312 \textcolor{comment}{/* ---      TERMINATE SECOND ORDER PROCESS IF COEFFICIENT IS TOO LARGE */}
+313     \textcolor{keywordflow}{if} (abs(ac[2]) > big) \{
+314     \textcolor{keywordflow}{goto} L2000;
+315     \}
+316     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&au[2], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], vecu);
+317     au[2] = -au[2];
+318     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&av[2], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], vecv);
+319     av[2] = -av[2];
+320     at[0] = au[2];
+321     at[1] = av[2];
+322     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&at[2], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1], &\hyperlink{APT331_8c_a572e92a6c825ea2bd36b6b566208e033}{tn}[1]);
+323 \textcolor{comment}{/* ---      NOW USE NEWTON RAPHSON FORMULA TO ALTER EU,EV,ET TO MIN W. */}
+324 \textcolor{comment}{/* ---      EQUATIONS TAKE THE FORM */}
+325 \textcolor{comment}{/* ---      WU(NXT)=0-WU(NOW)=FU*WUU+FV*WUV+FT*WUT */}
+326 \textcolor{comment}{/* ---      WV(NXT)=0-WV(NOW)=FU*WUV+FV*WVV+FT*WVT */}
+327 \textcolor{comment}{/* ---      WT(NXT)=0-WT(NOW)=FU*WUT+FV*WVT+FT*WTT */}
+328 \textcolor{comment}{/* ---      THEN EU=EU+FU, EV=EV+FV, ET=ET+FT. */}
+329 
+330     disc = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, av, at);
+331 \textcolor{comment}{/* ---      IF DISC IS SMALL, THEN ACCEPT LAST GOOD DU,DV,DT */}
+332     \textcolor{keywordflow}{if} (disc < disck) \{
+333     \textcolor{keywordflow}{goto} L410;
+334     \}
+335     fu = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(ac, av, at) / disc;
+336     fv = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, ac, at) / disc;
+337     ft = \hyperlink{DET3_8c_a682e63c06cfadde6610cd940aaa90050}{det3\_}(au, av, ac) / disc;
+338 
+339 L360:
+340 \textcolor{comment}{/* ---      COMPARE CURRENT FU,FV,FT AND LAST EU,EV,ET */}
+341 \textcolor{comment}{/* ---      IF CHANGE IS SMALL, THEN QUIT */}
+342     temp = abs(eu) + abs(ev) + abs(et);
+343     \textcolor{keywordflow}{if} (ict == 1 && *ilev >= 3) \{
+344     temp = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+345     \}
+346     \textcolor{keywordflow}{if} (temp < vsmal) \{
+347     \textcolor{keywordflow}{goto} L400;
+348     \}
+349 
+350     errat = (abs(fu) + abs(fv) + abs(ft)) / temp;
+351     eu += fu;
+352     ev += \hyperlink{EMDCS_8c_aa2921ea258ab13952ef32b769814add7}{fv};
+353     et += ft;
+354 
+355     \textcolor{keywordflow}{if} (*idebug == 0) \{
+356     \textcolor{keywordflow}{goto} L370;
+357     \}
+358     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"EU  "}, &eu, (ftnlen)4);
+359     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"EV  "}, &ev, (ftnlen)4);
+360     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ET  "}, &et, (ftnlen)4);
+361     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"ERAT"}, &errat, (ftnlen)4);
+362     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ICT "}, &ict, (ftnlen)4);
+363     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DISC"}, &disc, (ftnlen)4);
+364     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a6d165623735ee520885e84b5052c252b}{c\_n3}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"AC  "}, ac, (ftnlen)4);
+365 L370:
+366     \textcolor{keywordflow}{if} (*ilev > 3) \{
+367     \textcolor{keywordflow}{goto} L400;
+368     \}
+369     \textcolor{keywordflow}{if} (errat < erchk) \{
+370     \textcolor{keywordflow}{goto} L400;
+371     \}
+372 \textcolor{comment}{/* ---      CHECK FOR DEFINITE REDUCTION OF ERROR, OTHERWISE QUIT */}
+373     \textcolor{keywordflow}{if} (ict == 3) \{
+374     errlas = errat;
+375     \}
+376     \textcolor{keywordflow}{if} (ict < 4) \{
+377     \textcolor{keywordflow}{goto} L210;
+378     \}
+379     \textcolor{keywordflow}{if} (errat / errlas > ergood) \{
+380     \textcolor{keywordflow}{goto} L2000;
+381     \}
+382     errlas = errat;
+383 \textcolor{comment}{/* ---      NOT CLOSE ENOUGH, SO SAVE FU,FV,FT AND REPEAT N-R ITERATION */}
+384     \textcolor{keywordflow}{goto} L210;
+385 
+386 L410:
+387 \textcolor{comment}{/* ---      DECIDE WHETHER TO ACCEPT SECOND ORDER ITERATION */}
+388     \textcolor{keywordflow}{if} (ict < 2 || errat > erchk2) \{
+389     \textcolor{keywordflow}{goto} L2000;
+390     \}
+391 L400:
+392     *du = eu;
+393     *dv = ev;
+394     *dt = et;
+395 L2000:
+396     *irr = 0;
+397 
+398     \textcolor{keywordflow}{goto} L9999;
+399 
+400 L1000:
+401 \textcolor{comment}{/* ---      ERROR EXIT */}
+402 
+403 L9999:
+404 
+405     \textcolor{keywordflow}{if} (*idebug == 0) \{
+406     \textcolor{keywordflow}{goto} L2010;
+407     \}
+408     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"IRR "}, irr, (ftnlen)4);
+409     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DU  "}, du, (ftnlen)4);
+410     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DV  "}, dv, (ftnlen)4);
+411     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DT  "}, dt, (ftnlen)4);
+412     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"DISC"}, &disc, (ftnlen)4);
+413 L2010:
+414 
+415     \textcolor{keywordflow}{return} 0;
+416 \} \textcolor{comment}{/* aprix\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APRIX_8c_a9dccf30d3648e10e736903fe79940fb6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{APRIX_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 18 of file A\+P\+R\+I\+X.\+c.
+
+
+
+Referenced by aprix\+\_\+().
+
+\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{APRIX_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 19 of file A\+P\+R\+I\+X.\+c.
+
+
+
+Referenced by aprix\+\_\+().
+
+\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APRIX_8c_a9e9287f317ef3436252a395791a899f6}{}\label{APRIX_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 17 of file A\+P\+R\+I\+X.\+c.
+
+
+
+Referenced by aprix\+\_\+().
+
+\index{A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}!c\+\_\+n3@{c\+\_\+n3}}
+\index{c\+\_\+n3@{c\+\_\+n3}!A\+P\+R\+I\+X.\+c@{A\+P\+R\+I\+X.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n3}{c_n3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n3 = -\/3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{APRIX_8c_a6d165623735ee520885e84b5052c252b}{}\label{APRIX_8c_a6d165623735ee520885e84b5052c252b}
+
+
+Definition at line 20 of file A\+P\+R\+I\+X.\+c.
+
+
+
+Referenced by aprix\+\_\+().
+

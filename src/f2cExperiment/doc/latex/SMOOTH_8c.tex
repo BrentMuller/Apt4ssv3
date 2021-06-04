@@ -1,0 +1,540 @@
+\hypertarget{SMOOTH_8c}{}\section{S\+M\+O\+O\+T\+H.\+c File Reference}
+\label{SMOOTH_8c}\index{S\+M\+O\+O\+T\+H.\+c@{S\+M\+O\+O\+T\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+M\+O\+O\+T\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{SMOOTH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}{smooth\+\_\+} (doublereal $\ast$\hyperlink{POCKET_8c_a3d866bcc3e6368bb95201907177c539b}{q}, doublereal $\ast$\hyperlink{TAPOP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}, doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$tv, doublereal $\ast$cb, integer $\ast$nin, integer $\ast$idc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+M\+O\+O\+T\+H.\+c@{S\+M\+O\+O\+T\+H.\+c}!smooth\+\_\+@{smooth\+\_\+}}
+\index{smooth\+\_\+@{smooth\+\_\+}!S\+M\+O\+O\+T\+H.\+c@{S\+M\+O\+O\+T\+H.\+c}}
+\subsubsection[{\texorpdfstring{smooth\+\_\+(doublereal $\ast$q, doublereal $\ast$rl, doublereal $\ast$a, doublereal $\ast$tv, doublereal $\ast$cb, integer $\ast$nin, integer $\ast$idc)}{smooth_(doublereal *q, doublereal *rl, doublereal *a, doublereal *tv, doublereal *cb, integer *nin, integer *idc)}}]{\setlength{\rightskip}{0pt plus 5cm}int smooth\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{q, }
+\item[{doublereal $\ast$}]{rl, }
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{tv, }
+\item[{doublereal $\ast$}]{cb, }
+\item[{integer $\ast$}]{nin, }
+\item[{integer $\ast$}]{idc}
+\end{DoxyParamCaption}
+)}\hypertarget{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}{}\label{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782}
+
+
+Definition at line 18 of file S\+M\+O\+O\+T\+H.\+c.
+
+
+
+References a, aa, cm, f, gelg\+\_\+(), i\+\_\+\+\_\+, ia, ib, ic, id, ier, ii, j, j1, jj, k1, l1, n, one, rl, smal1, tl, and w.
+
+
+
+Referenced by ssplin\+\_\+().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Initialized data */}
+22 
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1} = 1e-7;
+24     \textcolor{keyword}{static} doublereal smal2 = 1e-6;
+25     \textcolor{keyword}{static} doublereal smal3 = 1e-14;
+26     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+27 
+28     \textcolor{comment}{/* System generated locals */}
+29     integer i\_\_1;
+30     doublereal d\_\_1, d\_\_2, d\_\_3;
+31 
+32     \textcolor{comment}{/* Builtin functions */}
+33     \textcolor{keywordtype}{double} sqrt(doublereal);
+34 
+35     \textcolor{comment}{/* Local variables */}
+36     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+37     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+38     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}, \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1}, \hyperlink{APT088_8c_a0a092ef0d40d3dcc60268455819a0276}{l1}, l2, n2, n3;
+39     \textcolor{keyword}{static} doublereal \hyperlink{APT109_8c_a34961a046133dbbf9e99f7077377a262}{aa}, ca[90]  \textcolor{comment}{/* was [3][30] */};
+40     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}, \hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}, \hyperlink{ICMPRS_8c_a0f8171c45e18e194e2daba2abe5d2d46}{ic}, \hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id};
+41     \textcolor{keyword}{static} doublereal \hyperlink{ADV_8c_a583257b7c70608a95289b0a109197ca3}{cm}[900];
+42     \textcolor{keyword}{static} integer jg, \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, ij, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+43     \textcolor{keyword}{static} doublereal ct[90], cv[90]    \textcolor{comment}{/* was [3][30] */};
+44     \textcolor{keyword}{static} integer jo, nn, nr;
+45     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a58af8aa06c099b837e2287fb87df5344}{tl};
+46     \textcolor{keyword}{static} integer \hyperlink{AERR_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier};
+47     \textcolor{keyword}{static} doublereal eps;
+48     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{gelg\_}(doublereal *, doublereal *, doublereal *
+49         , integer *, integer *, integer *);
+50     \textcolor{keyword}{static} integer idxx;
+51 
+52 \textcolor{comment}{/* ----************* SMTH1 *********************************'71/4/23  N.K. */}
+53 \textcolor{comment}{/* ---- THIS ROUTINE CALCULATES SMOOTHED POINTS AND TANGENT VECTORS AT */}
+54 \textcolor{comment}{/* ---- THOSE POINTS , AND INPUT IS AN ARRAY OF POINT VECTORS. */}
+55 \textcolor{comment}{/* ---- INPUT --- N = NUMBER OF POINTS */}
+56 \textcolor{comment}{/* ----           Q = AN ARRAY OF INPUT POINT VECTORS */}
+57 \textcolor{comment}{/* ----           RL = AN ARRAY OF RELAXATION FACTORS ASSOCIATED TO EACH */}
+58 \textcolor{comment}{/* ----                INPUT POINTS   ( RL(I)=0. MEANS NO SMOOTHING */}
+59 \textcolor{comment}{/* ----                                 TO THE I-TH POINT.) */}
+60 \textcolor{comment}{/* ----           IDC = BOUNDARY CONDITION IDENTIFIER */}
+61 \textcolor{comment}{/* ----               =1   CLOSED CURVE */}
+62 \textcolor{comment}{/* ----                =2   1-ST DERIVATIVE --- 1-ST DERIVATIVE */}
+63 \textcolor{comment}{/* ----               =3   1-ST DERIVATIVE --- 2-ND DERIVATIVE */}
+64 \textcolor{comment}{/* ----               =4   2-ND DERIVATIVE --- 1-ST DERIVATIVE */}
+65 \textcolor{comment}{/* ----               =5   2-ND DERIVATIVE --- 2-ND DERIVATIVE */}
+66 \textcolor{comment}{/* ----           TV = END CONDITION VECTORS INTERPRETED AS SPECIFIED BY */}
+67 \textcolor{comment}{/* ----                IDC. */}
+68 \textcolor{comment}{/* ---- OUTPUT--- A = AN ARRAY OF DISTANCE BETWEEN CONSECUTIVE OUTPUT */}
+69 \textcolor{comment}{/* ----               POINTS  ( A(J)=DISTANCE BTW. J-TH AND (J-1)-TH PNT.) */}
+70 \textcolor{comment}{/* ----           CB = AN ARRAY OF 1-ST DERIVATIVES (NORMALIZED) */}
+71 \textcolor{comment}{/* ----           IDC = ERROR INDICATOR */}
+72 \textcolor{comment}{/* ----               =0   NO ERROR */}
+73 \textcolor{comment}{/* ----               =-1   A DISTANCE BTW. TWO CONSECUTIVE INPUT POINTS */}
+74 \textcolor{comment}{/* ----                     IS VANISHING */}
+75 \textcolor{comment}{/* ----               = -2   IDC IS NOT SIGNIFICANT. */}
+76 \textcolor{comment}{/* ----               =-3   ERROR IN SOLVING SIMULTANEOUS EQUATION */}
+77 \textcolor{comment}{/* ----               =-4   NUMBER OF INPUT POINTS IS LESS THAN 3. */}
+78 \textcolor{comment}{/* ----               =-5   A DISTANCE BTW. TWO CONSECUTIVE OUTPUT POINTS */}
+79 \textcolor{comment}{/* ----                     IS VANISHING. */}
+80 \textcolor{comment}{/* ----               =-6   AN OUTPUT 1-ST DERIVATIVE IS VANISHING. */}
+81 \textcolor{comment}{/* ----********* SUBSIDIARY --- GELG */}
+82 \textcolor{comment}{/* ----******************************************************************* */}
+83     \textcolor{comment}{/* Parameter adjustments */}
+84     cb -= 4;
+85     tv -= 4;
+86     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+87     --\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl};
+88     \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q} -= 4;
+89 
+90     \textcolor{comment}{/* Function Body */}
+91 \textcolor{comment}{/* ------ JG CONTROLS OUTPUT. JO IS OUTPUT FILE NUMBER. */}
+92     jg = 0;
+93     jo = 6;
+94 \textcolor{comment}{/* ------ INITIAL EXAMINATION TO DETERMINE IF CURVE IS CLOSED */}
+95     n = *nin;
+96 \textcolor{comment}{/* Computing 2nd power */}
+97     d\_\_1 = \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}[4] - \hyperlink{APT102_8c_a3d866bcc3e6368bb95201907177c539b}{q}[n * 3 + 1];
+98 \textcolor{comment}{/* Computing 2nd power */}
+99     d\_\_2 = q[5] - q[n * 3 + 2];
+100 \textcolor{comment}{/* Computing 2nd power */}
+101     d\_\_3 = q[6] - q[n * 3 + 3];
+102     w = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+103     \textcolor{keywordflow}{if} (w > smal2) \{
+104     \textcolor{keywordflow}{goto} L3;
+105     \}
+106 \textcolor{comment}{/* --- CLOSED CURVE CASE   END POINTS ASSUMED EQUAL */}
+107     n = *nin - 1;
+108     *idc = 1;
+109 L3:
+110 \textcolor{comment}{/* ------ CONVERT FROM A PART PROGRAMMER WEIGHT FACTOR(0.0 TO 1.0 WHERE */}
+111 \textcolor{comment}{/* ------ 1.0 MEANS CERTAINTY FOR A POINT) TO A RELAXATION FACTOR ( INF */}
+112 \textcolor{comment}{/* ------ TO 0.0 WHERE 0.0 IS CERTITUDE AND INFINITY IS COMPLETE RELAXA) */}
+113     i\_\_1 = *nin;
+114     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+115     aa = \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+116     \textcolor{keywordflow}{if} (aa < smal1) \{
+117         aa = \hyperlink{APT109_8c_a375a88e7420a7c9c206c7ece80696af2}{smal1};
+118     \}
+119     \textcolor{keywordflow}{if} (aa > one) \{
+120         aa = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+121     \}
+122     \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = one / aa - \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+123 \textcolor{comment}{/* L1517: */}
+124     \}
+125     nn = n * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+126     n3 = n * 3;
+127 
+128 \textcolor{comment}{/*    ***DISTANCE BTW,CONSECUTIVE INPUT POINTS*** */}
+129 \textcolor{comment}{/*    ***NORMALIZED INCREMENTAL VECTORS*** */}
+130 \textcolor{comment}{/*    ***SINGULARITY IS CHECKED*** */}
+131 
+132     \textcolor{keywordflow}{if} (n < 3) \{
+133     \textcolor{keywordflow}{goto} L1300;
+134     \}
+135 \textcolor{comment}{/* L1: */}
+136     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+137     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+138     jj = j - 1;
+139     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+140         cv[i\_\_ + j * 3 - 4] = q[i\_\_ + j * 3] - q[i\_\_ + jj * 3];
+141 \textcolor{comment}{/* L11: */}
+142     \}
+143 \textcolor{comment}{/* Computing 2nd power */}
+144     d\_\_1 = cv[j * 3 - 3];
+145 \textcolor{comment}{/* Computing 2nd power */}
+146     d\_\_2 = cv[j * 3 - 2];
+147 \textcolor{comment}{/* Computing 2nd power */}
+148     d\_\_3 = cv[j * 3 - 1];
+149     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+150     \textcolor{keywordflow}{if} (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[j] < smal1) \{
+151         \textcolor{keywordflow}{goto} L1000;
+152     \}
+153     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+154         cv[i\_\_ + j * 3 - 4] /= \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+155 \textcolor{comment}{/* L12: */}
+156     \}
+157 \textcolor{comment}{/* L10: */}
+158     \}
+159     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+160 \textcolor{comment}{/* L13: */}
+161     cv[i\_\_ - 1] = q[i\_\_ + 3] - q[i\_\_ + n * 3];
+162     \}
+163 \textcolor{comment}{/* Computing 2nd power */}
+164     d\_\_1 = cv[0];
+165 \textcolor{comment}{/* Computing 2nd power */}
+166     d\_\_2 = cv[1];
+167 \textcolor{comment}{/* Computing 2nd power */}
+168     d\_\_3 = cv[2];
+169     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] = sqrt(d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2 + d\_\_3 * d\_\_3);
+170     \textcolor{keywordflow}{if} (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] < smal1) \{
+171     \textcolor{keywordflow}{goto} L1000;
+172     \}
+173     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+174 \textcolor{comment}{/* L14: */}
+175     cv[i\_\_ - 1] /= \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1];
+176     \}
+177 
+178 \textcolor{comment}{/*    ***CONSTANT VECTORS FOR THE EQUATION OF CURVATURE*** */}
+179 
+180     l1 = n + 1;
+181     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+182     ii = i\_\_ * n - \hyperlink{APT088_8c_a0a092ef0d40d3dcc60268455819a0276}{l1};
+183     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+184     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+185         ct[ii + j - 1] = (cv[i\_\_ + j * 3 - 4] - cv[i\_\_ + (j - 1) * 3 - 4])
+186              * 6.f;
+187 \textcolor{comment}{/* L21: */}
+188     \}
+189     ct[ii + l1 - 1] = (cv[i\_\_ - 1] - cv[i\_\_ + n * 3 - 4]) * 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+190 \textcolor{comment}{/* L20: */}
+191     \}
+192 
+193 \textcolor{comment}{/*    ***CLEAR THE MATRIX*** */}
+194 
+195     i\_\_1 = nn;
+196     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+197     cm[i\_\_ - 1] = 0.f;
+198 \textcolor{comment}{/* L30: */}
+199     \}
+200 
+201 \textcolor{comment}{/*    ***MATRIX ELEMENTS*** */}
+202 
+203 \textcolor{comment}{/* Computing 2nd power */}
+204     d\_\_1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2];
+205     ca[0] = (\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[1] + \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[2]) * 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} / (d\_\_1 * d\_\_1);
+206     cb[4] = \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[1] / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] * 6.f / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1];
+207     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+208     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+209     ii = i\_\_ + 1 - i\_\_ / n * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+210     j1 = i\_\_ + 2 - (i\_\_ + 1) / n * n;
+211 \textcolor{comment}{/* Computing 2nd power */}
+212     d\_\_1 = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}];
+213     ca[ii * 3 - 3] = (\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}] + \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}]) * 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} / (d\_\_1 * d\_\_1);
+214     cb[ii * 3 + 1] = \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}] / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] * 6.f / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}];
+215     cb[i\_\_ * 3 + 2] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}] - (cb[ii * 3 + 1] + ca[i\_\_ * 3 - 3] + cb[i\_\_ *
+216          3 + 1]);
+217     cb[ii * 3 + 3] = (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}]) * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f} + (ca[ii * 3 - 3] + ca[i\_\_ * 3 
+218         - 3] + cb[ii * 3 + 1] * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f});
+219 \textcolor{comment}{/* L31: */}
+220     \}
+221 
+222 \textcolor{comment}{/*    ***SET PRIMARY MATRIX*** */}
+223 
+224     l2 = n + 2;
+225     n2 = n << 1;
+226     i\_\_1 = n2;
+227     \textcolor{keywordflow}{for} (ij = l1; ij <= i\_\_1; ++ij) \{
+228     j = ij - 1 - (ij - 2) / n * n;
+229     jj = j + 1 - j / n * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+230     i\_\_ = j * l1 - \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+231     ia = i\_\_ + n - (i\_\_ + n - 1) / nn * nn;
+232     ib = i\_\_ + (n << 1) - (i\_\_ + (n << 1)) / nn * nn;
+233     ic = i\_\_ + 1 - j / n * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+234     \textcolor{keywordtype}{id} = i\_\_ + 2 - (j + 1) / n * n;
+235     cm[i\_\_ - 1] = cb[j * 3 + 3] + cm[i\_\_ - 1];
+236     cm[ia - 1] = cb[j * 3 + 2] + cm[ia - 1];
+237     cm[ib - 1] = cb[jj * 3 + 1] + cm[ib - 1];
+238     cm[ic - 1] = cb[j * 3 + 2] + cm[ic - 1];
+239     cm[\textcolor{keywordtype}{id} - 1] = cb[jj * 3 + 1] + cm[\textcolor{keywordtype}{id} - 1];
+240 \textcolor{comment}{/* L41: */}
+241     \}
+242 
+243 \textcolor{comment}{/*    ***CLOSED CURVE*** */}
+244 
+245     \textcolor{keywordflow}{if} (*idc == 1) \{
+246     \textcolor{keywordflow}{goto} L200;
+247     \}
+248 
+249 \textcolor{comment}{/*    ***OPEN ENDS*** */}
+250 
+251     k1 = n - 1;
+252     cm[nn - \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] = 0.f;
+253     cm[nn - n + 1] = 0.f;
+254     cm[nn - n2] = 0.f;
+255     cm[n - 1] = 0.f;
+256     cm[n2 - 1] = 0.f;
+257     cm[k1 - 1] = 0.f;
+258     cm[1] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] - ca[0] - cb[7];
+259     \textcolor{keywordflow}{if} (n != 3) \{
+260     \textcolor{keywordflow}{goto} L60;
+261     \}
+262     cm[7] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3] - (ca[3] + cb[7]);
+263     \textcolor{keywordflow}{goto} L61;
+264 L60:
+265     cm[nn - 2] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] - (ca[k1 * 3 - 3] + cb[k1 * 3 + 1]);
+266 
+267 \textcolor{comment}{/*    *** FIRST END BY CURVATURE*** */}
+268 
+269 L61:
+270     \textcolor{keywordflow}{if} (*idc < 4) \{
+271     \textcolor{keywordflow}{goto} L110;
+272     \}
+273     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+274     ct[i\_\_ * n - k1 - 1] = tv[i\_\_ + 3];
+275 \textcolor{comment}{/* L42: */}
+276     \}
+277     cm[0] = 1.f;
+278     cm[l1 - 1] = 0.f;
+279     cm[n2] = 0.f;
+280 
+281 \textcolor{comment}{/*    ***LAST END BY TANGENT*** */}
+282 
+283     \textcolor{keywordflow}{if} (*idc != 4) \{
+284     \textcolor{keywordflow}{goto} L120;
+285     \}
+286 L130:
+287     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+288     ct[i\_\_ * n - 1] = (cv[i\_\_ + n * 3 - 4] - tv[i\_\_ + 6]) * 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+289 \textcolor{comment}{/* L43: */}
+290     \}
+291     cm[nn - n - 1] = -\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] + cb[k1 * 3 + 1] + ca[k1 * 3 - 3];
+292     cm[nn - 1] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] * -2.f - ca[k1 * 3 - 3];
+293     cm[nn - n2 - 1] = -cb[k1 * 3 + 1];
+294     \textcolor{keywordflow}{goto} L200;
+295 
+296 \textcolor{comment}{/*    ***LAST END BY CURVATURE*** */}
+297 
+298 L120:
+299     \textcolor{keywordflow}{if} (*idc != 5) \{
+300     \textcolor{keywordflow}{goto} L1100;
+301     \}
+302 L140:
+303     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+304     ct[i\_\_ * n - 1] = tv[i\_\_ + 6];
+305 \textcolor{comment}{/* L44: */}
+306     \}
+307     cm[nn - 1] = 1.f;
+308     cm[nn - n - 1] = 0.f;
+309     cm[nn - n2 - 1] = 0.f;
+310     \textcolor{keywordflow}{goto} L200;
+311 
+312 \textcolor{comment}{/*    ***FIRST END BY TANGENT*** */}
+313 
+314 L110:
+315     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+316     ct[i\_\_ * n - k1 - 1] = (cv[i\_\_ + 2] - tv[i\_\_ + 3]) * 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+317 \textcolor{comment}{/* L45: */}
+318     \}
+319     cm[0] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] * 2.f + ca[0];
+320     cm[l1 - 1] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] - (ca[0] + cb[7]);
+321     cm[n2] = cb[7];
+322     \textcolor{keywordflow}{if} (*idc == 2) \{
+323     \textcolor{keywordflow}{goto} L130;
+324     \}
+325     \textcolor{keywordflow}{goto} L140;
+326 
+327 \textcolor{comment}{/*    *** CALCULATION OF CURVATURE*** */}
+328 
+329 L200:
+330     eps = smal3;
+331     nr = 3;
+332     \hyperlink{GELG_8c_ad5189fb4984e0fcb1b256ff4b4595b5d}{gelg\_}(ct, cm, &eps, &n, &nr, &ier);
+333     \textcolor{keywordflow}{if} (ier != 0) \{
+334     \textcolor{keywordflow}{goto} L1200;
+335     \}
+336     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+337     ii = i\_\_ * n - \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+338     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+339     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+340         cv[i\_\_ + j * 3 - 4] = ct[ii + j - 1];
+341 \textcolor{comment}{/* L51: */}
+342     \}
+343 \textcolor{comment}{/* L50: */}
+344     \}
+345 \textcolor{comment}{/*    ***CALCULATION OF CURVE SEGMENT COEFFICIENTS*** */}
+346 
+347     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+348     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+349     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+350         ca[i\_\_ + j * 3 - 4] = (cv[i\_\_ + j * 3 - 4] - cv[i\_\_ + (j - 1) * 3 
+351             - 4]) / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}];
+352 \textcolor{comment}{/* L56: */}
+353     \}
+354     ca[i\_\_ - 1] = (cv[i\_\_ - 1] - cv[i\_\_ + n * 3 - 4]) / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1];
+355     k1 = n - 1;
+356     i\_\_1 = \hyperlink{AERR2_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1};
+357     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+358         q[i\_\_ + j * 3] -= \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] * (ca[i\_\_ + (j + 1) * 3 - 4] - ca[i\_\_ + j 
+359             * 3 - 4]);
+360 \textcolor{comment}{/* L57: */}
+361     \}
+362     \textcolor{keywordflow}{if} (*idc == 1) \{
+363         \textcolor{keywordflow}{goto} L250;
+364     \}
+365     q[i\_\_ + 3] -= \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[1] * (cv[i\_\_ + 2] - cv[i\_\_ - 1]) / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2];
+366     q[i\_\_ + n * 3] += \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] * (cv[i\_\_ + n * 3 - 4] - cv[i\_\_ + (n - 1) * 3 
+367         - 4]) / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}];
+368     \textcolor{keywordflow}{goto} L55;
+369 L250:
+370     q[i\_\_ + 3] -= \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[1] * (ca[i\_\_ + 2] - ca[i\_\_ - 1]);
+371     q[i\_\_ + n * 3] -= \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] * (ca[i\_\_ - 1] - ca[i\_\_ + n * 3 - 4]);
+372 L55:
+373     ;
+374     \}
+375     idxx = 0;
+376     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+377     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+378     \textcolor{keywordflow}{if} (\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[j] > smal2) \{
+379         ++idxx;
+380     \}
+381     \textcolor{keywordflow}{if} (\hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[j] > smal2) \{
+382         \hyperlink{ABUFTP_8c_a17506542f1e13dc71bf8cd4facdf7872}{rl}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 0.f;
+383     \}
+384 \textcolor{comment}{/* L400: */}
+385     \}
+386     \textcolor{keywordflow}{if} (idxx == 0) \{
+387     \textcolor{keywordflow}{goto} L590;
+388     \}
+389     \textcolor{keywordflow}{goto} L500;
+390 L590:
+391     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+392     \textcolor{keywordflow}{for} (j = 2; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+393     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+394         ca[i\_\_ + j * 3 - 4] = q[i\_\_ + j * 3] - q[i\_\_ + (j - 1) * 3];
+395 \textcolor{comment}{/* L510: */}
+396     \}
+397     \}
+398     \textcolor{keywordflow}{if} (*idc != 1) \{
+399     \textcolor{keywordflow}{goto} L260;
+400     \}
+401     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+402 \textcolor{comment}{/* L520: */}
+403     ca[i\_\_ - 1] = q[i\_\_ + 3] - q[i\_\_ + n * 3];
+404     \}
+405 L260:
+406     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+407     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+408     j1 = j + 1 - j / n * \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+409     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+410         cb[i\_\_ + j * 3] = ca[i\_\_ + j1 * 3 - 4] / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] * (cv[i\_\_ 
+411             + j * 3 - 4] * 2.f + cv[i\_\_ + j1 * 3 - 4]) / 6.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+412 \textcolor{comment}{/* L93: */}
+413     \}
+414     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] = 0.f;
+415     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+416 \textcolor{comment}{/* Computing 2nd power */}
+417         d\_\_1 = ca[i\_\_ + j1 * 3 - 4];
+418         a[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] = d\_\_1 * d\_\_1 + a[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}];
+419 \textcolor{comment}{/* L92: */}
+420     \}
+421     a[\hyperlink{APT088_8c_adb1420ceddc2be1411560d4b4d3257e3}{j1}] = sqrt(a[j1]);
+422     \textcolor{keywordflow}{if} (a[j1] >= smal3) \{
+423         \textcolor{keywordflow}{goto} L91;
+424     \}
+425     \textcolor{keywordflow}{if} (j != n) \{
+426         \textcolor{keywordflow}{goto} L1400;
+427     \}
+428     \textcolor{keywordflow}{if} (*idc == 1) \{
+429         \textcolor{keywordflow}{goto} L1400;
+430     \}
+431     a[1] = 99999.f;
+432 L91:
+433     ;
+434     \}
+435     \textcolor{keywordflow}{if} (*idc == 1) \{
+436     \textcolor{keywordflow}{goto} L511;
+437     \}
+438     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+439 \textcolor{comment}{/* L94: */}
+440     cb[i\_\_ + n * 3] = ca[i\_\_ + n * 3 - 4] / a[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] + a[\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] * (cv[i\_\_ + (n - 
+441         1) * 3 - 4] + cv[i\_\_ + n * 3 - 4] * 2.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) / 6.f;
+442     \}
+443 L511:
+444     i\_\_1 = \hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+445     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+446     tl = sqrt(cb[j * 3 + 1] * cb[j * 3 + 1] + cb[j * 3 + 2] * cb[j * 3 + 
+447         2] + cb[j * 3 + 3] * cb[j * 3 + 3]);
+448     \textcolor{keywordflow}{if} (tl <= smal2) \{
+449         \textcolor{keywordflow}{goto} L1500;
+450     \}
+451     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+452 \textcolor{comment}{/* L310: */}
+453         cb[i\_\_ + j * 3] /= \hyperlink{APT301_8c_a58af8aa06c099b837e2287fb87df5344}{tl};
+454     \}
+455 \textcolor{comment}{/* L300: */}
+456     \}
+457     \textcolor{keywordflow}{goto} L500;
+458 L1000:
+459     *idc = -1;
+460     \textcolor{keywordflow}{goto} L500;
+461 L1100:
+462     *idc = -2;
+463     \textcolor{keywordflow}{goto} L500;
+464 L1200:
+465     *idc = -3;
+466     \textcolor{keywordflow}{goto} L500;
+467 L1300:
+468     *idc = -4;
+469     \textcolor{keywordflow}{goto} L500;
+470 L1400:
+471     *idc = -5;
+472     \textcolor{keywordflow}{goto} L500;
+473 L1500:
+474     *idc = -6;
+475 L500:
+476     \textcolor{keywordflow}{if} (*idc != 1) \{
+477     \textcolor{keywordflow}{return} 0;
+478     \}
+479 \textcolor{comment}{/* ------ FINAL ADJUSTMENT FOR CLOSED CURVE */}
+480     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+481     q[i\_\_ + *nin * 3] = q[i\_\_ + 3];
+482     cb[i\_\_ + *nin * 3] = cb[i\_\_ + 3];
+483 \textcolor{comment}{/* L502: */}
+484     \}
+485     a[*nin] = a[1];
+486     *idc = 2;
+487     \textcolor{keywordflow}{return} 0;
+488 \} \textcolor{comment}{/* smooth\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SMOOTH_8c_ad809106c6d45d41f834c520e5f30f782_icgraph}
+\end{center}
+\end{figure}
+
+

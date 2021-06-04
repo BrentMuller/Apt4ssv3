@@ -1,0 +1,3155 @@
+\hypertarget{ATAPE_8c}{}\section{A\+T\+A\+P\+E.\+c File Reference}
+\label{ATAPE_8c}\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+T\+A\+P\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{ATAPE_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a9147c2fab27760493063ab471f6cd5ee}{hblock\+\_\+1}~\hyperlink{SSV3_8c_a9ffc0470fea1400a196d71992081f786}{hblock\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{sv\+\_\+1}~\hyperlink{UNITS_8c_adb6a68aa9fbad846f4d8d0f30dc08ccd}{sv\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a7d7892a40c1228c7ca311a419a2f34a6}{sv1\+\_\+1}~\hyperlink{UNITS_8c_a538c754ca86c03b265c2c267b61e7b26}{sv1\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_acc79429328b703ca60ff76b9028f00fc}{isv\+\_\+1}~\hyperlink{UNITS_8c_ad4fc6b0377370872427a6fbb7b79df28}{isv\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_abe3545b3957e92e0b5ff211b7d6f7616}{isv1\+\_\+1}~\hyperlink{UNITS_8c_a5f27fd0f62d6f96b62ae9fe3ceb00067}{isv1\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\+\_\+1}~\hyperlink{ZSURF_8c_a29aa7c3b45e91bbcd3d95a78d2bf1766}{knumbr\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\+\_\+1}~\hyperlink{XNUMBR_8c_ab1a62a4b0ff7026e77947945e3a1be1d}{symfil\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\+\_\+1}~\hyperlink{SSV3_8c_a0ceef444afd5929ce4d4096c6dfc2f22}{ssarlm\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\+\_\+1}~\hyperlink{SSV3_8c_a12c2ae3d4fca9c44897f8b659b5d9e02}{cldt\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a05bf082395441d57807662aa85c64f40}{chcldt\+\_\+1}~\hyperlink{SSV3_8c_a064de1eae8644816f1b433ad6fcbc1ee}{chcldt\+\_\+}
+\item 
+\#define \hyperlink{ATAPE_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{ATAPE_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{ATAPE_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{ATAPE_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{ATAPE_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{ATAPE_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}~((doublereal $\ast$)\&equiv\+\_\+6)
+\item 
+\#define \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}~((integer $\ast$)\&equiv\+\_\+6)
+\item 
+\#define \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}~(equiv\+\_\+0)
+\item 
+\#define \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}~((integer $\ast$)equiv\+\_\+0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{atape\+\_\+} (void)
+\item 
+int \hyperlink{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{ataper\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, integer $\ast$nn, integer $\ast$\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}, integer $\ast$kk, integer $\ast$iee)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{ATAPE_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{ATAPE_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{ATAPE_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{ATAPE_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{ATAPE_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{ATAPE_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{ATAPE_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{ATAPE_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{ATAPE_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{ATAPE_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{ATAPE_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{ATAPE_8c_a932175cf9d5295642165d385ecdc5bba}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{ATAPE_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a1d300b69fcdac1cc2e457d23fb270a58}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a156390938abff3c4799f538f075e03cc}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{ATAPE_8c_ac1d9e4a0b7f26f993445b48296d0be1a}{hps} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_aba9876c1de49a02f4cc032f1fda8c312}{hds} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_ac062932206cb1a1aeb8a6464571276da}{hcs} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_ae9a1fd681cc025cb61b7fee3700d052e}{hlft} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a37c84a4f02dd15e0edd00be755fdd3d3}{hrgt} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a9260c4b8fed529f1c143dbe065d0d760}{hfwd} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_abcec99a15792bcd47fdd612b04c9a930}{hback} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a96294de7ac17108e892d2e2c815b7e3e}{hup} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_add8a35712ff53e00e2e74a057851c256}{hdown} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_aec054589968436f4c6a7860e7c828b68}{hto} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a89202ef270b0ecad30ef7b2059cc2fc0}{hpast} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_aee2b54c464818b79ed18537e24dfa157}{hon} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a349aae00d8100573a88dc1d9cbc0ad60}{htanto} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a09f384e9443026467deed1c15c6e65bc}{hpstan} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_aa780ddcb9f3abc7ca87c882952c6c859}{hdynp} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_afa5091ed7bdd3cbec4d0c27ac3112ff8}{haerr} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_ae48ebb6e80eaccc553700d3a15142ccc}{hcldat} \mbox{[}8\mbox{]}\\
+\>char \hyperlink{ATAPE_8c_a58f557a4d6a57a39bee689b3ecddb3ce}{hgerr} \mbox{[}8\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a831c1e6f7cd147c841158b9dff17cd02}{hblock\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_a4a672b1cc1657e411e2094d8631246c2}{cc} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a306d2abf316a42b2d06c636c581fbc05}{eps1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a2fd05e25992e6a9456646532a7ed3148}{eps2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a13ab03ebf3099fa722e8584f54a14f94}{eps3} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ad4286f6c2b33f25799d6156480bd622d}{eps4} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a68951ca3ed42d540274e5dd702aa30b2}{eps6} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{eps8} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aae4751b2b0e0fe3b5f62f710ef406288}{past} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{plnd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_abcbe27eb4ab55c21433ba237b064da23}{plnv} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a8fafde5aff46b55bddfc42a93803fffc}{rc} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aade1308b2b48aaa8db461e4665eb7e19}{save} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a6a6f46271f4c2c8e68568b8bee68f673}{sfvct} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ad5ff78be6acc9653b09598f6df0c1522}{slx} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_affaf74dabdb513fe55fa48a1091a82f0}{sn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aa584da8857a16c65bd611d5b5686d8ec}{snk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a4c96f9ead3daa534244888dd312b3595}{snl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ae1ea305557352179a5595123e4f7bef9}{sp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5eb35651944d7d53ca1371c8f4403522}{spk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a032b8e76f8a4cec214831255a4b77e7a}{spl} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a3ef97769b90b935351a0da2c5c17f1ba}{tau} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a3293541b256a7b52a653b554ec1eef71}{tau1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a7cc16120d8b89a97df6d011487794d7a}{tau2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5e192eb5193c9ab9e167e2554641adad}{th} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a66b316fa3299925e5c7630d5af6601fd}{tn} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{toolht} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_acfdd4327e78cee83f784e0081fd71ead}{toolwd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{tp} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_acd57028107f202bf733ae94db320fd40}{tpk} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a86f48fbc667fd3e391a5a60472a760d9}{u1} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a76207f20e8ae300641df122e994c2374}{vndir} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a20c7b8bac268c28674d17aa05f813d9f}{vt} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{z\_\_} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a6587d13eed8675f3bf2284fc673780f2}{varble} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_aef9f4548d89972753d95640b4cf4c502}{u1k} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a2fa00cfd358735b40f5b16a114238bdc}{sk} \mbox{[}15\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a7cde9c952b2e0400388110049a63851d}{sv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_aa061b11706c46e4e7299be7f1dd355ef}{cos1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a17ab077f9704191cec3623b32182b8ba}{cplfl} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a826f9bb61ad3ef7b009c7631b75374f6}{cptst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{csd} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a819ff3967ced7fbb549308a6e4b91bcb}{dplan} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a4360acf0e48136e91364bd7cce121547}{dpmx1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{plncs} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{plnd1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_acc41d3833fec2bd10e8f654e00d49fa6}{pltst} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a0c07ccb74eb243d4d456e818d258bce8}{stck} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a94fa54ae2c242297cc118d31155ab356}{stckn} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{stck1} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a4b0340102da75d0c19859ea11879a4f4}{stck2} \mbox{[}5\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a5ca1f63566c2594f3e3868b91d997b73}{tee} \mbox{[}15\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a51ea6eff10429675b532a43be770e881}{tnl} \mbox{[}15\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a36f18f88242aab17736f94979e6f1b3a}{sv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ATAPE_8c_a013f46224a863d563c172ad966d9fe4c}{iafl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{icanon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{index} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a367d578680d6741b0eeea4c18126ac85}{indir\_\_} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_aca4c6ef2418548013d1f0ab199eb5e87}{iop} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a46fc792e9db2a4119bde6d3c50066efe}{iopset} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a98035b4872e906175c3748d8671bcb41}{isfidn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_af06b6af8617105f43da7a0aef4a181d3}{isftyp} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a96c4543ff4eb51c15078a4a13a13d649}{isigcr} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a69d12d072150ac44e875ee991d8977f9}{isvfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_ab9c16758977bf15e0118791ac83246a1}{itlon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a69f16ad43b2d69c2a5523493a25092a6}{itseg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_ad01cb824e786c997cae01775374c6ace}{iunfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{jent} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_af70b7cc90fdc72684506b074764f24d3}{jiops} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a9e8f1743a1265c0508b32682a31dbe13}{jtlflg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a27bfdec33da656b3e0afaa8b256d465c}{jtn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a9d5a9d53b0b600853a83109858c7aa7a}{ju1} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a7a26ee648d4eb235d68b74eb27698f51}{limfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a0365571ddfd59f3b0b636c72a4e09742}{itsegk} \mbox{[}5\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a4557cee11c7f2a094156e47d77d15ad3}{isv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ATAPE_8c_ae6268067a45faf1f09717de826908b42}{ifar} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{ifl4} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_ab5e196a210774e8188a9adc08fab5675}{j20} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a71bea2c042deec0e209e8c6b819bb7f8}{j21} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{j22} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a8965b32ed9d3092eb5279607f8dc835b}{j23} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{j50} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_aaf9771df39ea6eb440d196395622d970}{j51} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a3bf651bea75c52977866902524484444}{notan} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_af639d946bee2fc95e223cbba2f6f6f59}{jph} \mbox{[}5\mbox{]}\\
+\} \hyperlink{ATAPE_8c_ac43c2e81755b1366d91efa4cb457a1ce}{isv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ATAPE_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{ATAPE_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{ATAPE_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{ATAPE_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{ATAPE_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{ATAPE_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{ATAPE_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{ATAPE_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{ATAPE_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{ATAPE_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{ATAPE_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{ATAPE_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{ATAPE_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{ATAPE_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{ATAPE_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{ATAPE_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{ATAPE_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{ATAPE_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{ATAPE_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{ATAPE_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{ATAPE_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{ATAPE_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{ATAPE_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{ATAPE_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{ATAPE_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{ATAPE_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{ATAPE_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{ATAPE_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{ATAPE_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{ATAPE_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{ATAPE_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{ATAPE_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{ATAPE_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{ATAPE_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{ATAPE_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{ATAPE_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{ATAPE_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{ATAPE_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{ATAPE_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{ATAPE_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{ATAPE_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{ATAPE_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{ATAPE_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{ATAPE_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{ATAPE_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{ATAPE_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{ATAPE_8c_a5da7923ba7177d6fd820734eecc7e602}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ATAPE_8c_a13677e8ba227917ca91f45226e0d3901}{k0}\\
+\>integer \hyperlink{ATAPE_8c_a655a1c80f1168ad6f053d6b007c2c213}{k1}\\
+\>integer \hyperlink{ATAPE_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}{k2}\\
+\>integer \hyperlink{ATAPE_8c_a3866972f3ea150072127b2201402d9d4}{k3}\\
+\>integer \hyperlink{ATAPE_8c_acb95ee3962e080a7bd4b1803f0e5b523}{k4}\\
+\>integer \hyperlink{ATAPE_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}{k5}\\
+\>integer \hyperlink{ATAPE_8c_a9d2169cf4480bef94ed0a8314b8db1dd}{k6}\\
+\>integer \hyperlink{ATAPE_8c_a24f68e08b66e38de783a4e6b4eceddab}{k7}\\
+\>integer \hyperlink{ATAPE_8c_ab053f60993666d2c1a5b0e9e2bba9046}{k8}\\
+\>integer \hyperlink{ATAPE_8c_a5826c29dac15034ea8d3c4e6e2465665}{k9}\\
+\>integer \hyperlink{ATAPE_8c_a07f3fe8797e442c47bdf306bd8b35048}{k10}\\
+\>integer \hyperlink{ATAPE_8c_a42e4e1be80d05c7bf76276703d1ffcbf}{k12}\\
+\>integer \hyperlink{ATAPE_8c_ac6a9481817364f5859074056e6b72045}{k13}\\
+\>integer \hyperlink{ATAPE_8c_a38659ef45de4861b45cfd4278df03219}{k15}\\
+\>integer \hyperlink{ATAPE_8c_ad364fb849a04482c15fcc03b9f881017}{k16}\\
+\>integer \hyperlink{ATAPE_8c_ab01565338ee1b2e250f1cf4e702c7ec4}{k18}\\
+\>integer \hyperlink{ATAPE_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}{k19}\\
+\>integer \hyperlink{ATAPE_8c_a67c7f5e745cc5c87641ed7ab6ed03903}{k23}\\
+\>integer \hyperlink{ATAPE_8c_a6c8801a0c24128524808626f23c83534}{k24}\\
+\>integer \hyperlink{ATAPE_8c_a3972e8edc94bf990b8385833d7773994}{k25}\\
+\>integer \hyperlink{ATAPE_8c_a603cc5680e6e6b99afcc067ab006838e}{k26}\\
+\>integer \hyperlink{ATAPE_8c_a3224d57413c1ca0f52246767baaca01e}{k27}\\
+\>integer \hyperlink{ATAPE_8c_ab54bc0ad9982243ba0e73e713878b659}{k29}\\
+\>integer \hyperlink{ATAPE_8c_a0df4216958f1b812fafd7c5aca19f0e2}{k30}\\
+\>integer \hyperlink{ATAPE_8c_ad095380d9a72dcd452b64020fc4957e0}{k31}\\
+\>integer \hyperlink{ATAPE_8c_a86b7e9432a6c1b7f61a88051851b24be}{k32}\\
+\>integer \hyperlink{ATAPE_8c_adf6b3def53640bafe1e81e9c52c28a34}{k33}\\
+\>integer \hyperlink{ATAPE_8c_aec13dcc4a3284eeb2691c803d6054add}{k34}\\
+\>integer \hyperlink{ATAPE_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}{k44}\\
+\>integer \hyperlink{ATAPE_8c_a782a3eba88202041c8c249663f4548f3}{k45}\\
+\>integer \hyperlink{ATAPE_8c_ae0697d44870d385f3a5a921e241a6571}{k46}\\
+\>integer \hyperlink{ATAPE_8c_a9a6acf2b9128519edae03effd959fdce}{k47}\\
+\>integer \hyperlink{ATAPE_8c_a66c948e011f45b91f275757881efab87}{k48}\\
+\>integer \hyperlink{ATAPE_8c_a245c8290483ddfb55991fdb8dd2db544}{k50}\\
+\>integer \hyperlink{ATAPE_8c_af50475a68a63f0f722752c6ee53e2fa9}{k51}\\
+\>integer \hyperlink{ATAPE_8c_acfe975e1d64237134dbad03554d161fe}{k52}\\
+\>integer \hyperlink{ATAPE_8c_aec5c3e1b9188ab217a8f279b765ae33e}{k1013}\\
+\>integer \hyperlink{ATAPE_8c_a33fee8be0fef4573e4671cddfd9dda7c}{k1e4}\\
+\>integer \hyperlink{ATAPE_8c_a78581c927af2b13d7b9bbc9dcd710e0a}{k1e6}\\
+\>integer \hyperlink{ATAPE_8c_a8df3536c5500bc8b920c38503103b6bd}{km1}\\
+\} \hyperlink{ATAPE_8c_a196d91570033f2b9bf96784c36c667ee}{knumbr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{ATAPE_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{clfilp}\\
+\>integer \hyperlink{ATAPE_8c_ac5981f10fe76665716d550ce94342ea5}{clfile}\\
+\>integer \hyperlink{ATAPE_8c_afddbf18370447268640d26c983890fd1}{clfil3}\\
+\>integer \hyperlink{ATAPE_8c_a78f3ee45f9635e3a864294bde4cb46dd}{exfile}\\
+\>integer \hyperlink{ATAPE_8c_a8b614c674a9bc7309b31947e735034a9}{infile\_\_}\\
+\>integer \hyperlink{ATAPE_8c_a80878dca58769a8039af3f4bf041a2a1}{vlfile}\\
+\>integer \hyperlink{ATAPE_8c_aa40a3978f58427a7b46a99170d89a14e}{pnchfl}\\
+\>integer \hyperlink{ATAPE_8c_a25753cd64d8deeee31becd6c6b5cd12f}{xcan}\\
+\>integer \hyperlink{ATAPE_8c_aed8fdcf66fd5c92431e15898d589db20}{mactxt}\\
+\>integer \hyperlink{ATAPE_8c_ad0b3f31f2da255a8cb418eb88c42b143}{xnum}\\
+\>integer \hyperlink{ATAPE_8c_aa3182ed0b1cd068d4d5921447939176f}{elfil1}\\
+\>integer \hyperlink{ATAPE_8c_a995bd688c87d82736860b413de2416d4}{elfil2}\\
+\>integer \hyperlink{ATAPE_8c_a9955a1f6e7217021e500540bfebef5ad}{elfil3}\\
+\>integer \hyperlink{ATAPE_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{elfil4}\\
+\>integer \hyperlink{ATAPE_8c_ad12b2079fb6c75ea4106f40b49874358}{cpfile}\\
+\>integer \hyperlink{ATAPE_8c_a26df007a15cd7ca7de195d739ac532da}{axfile}\\
+\>integer \hyperlink{ATAPE_8c_af29300e691e97a062da856325402d3e9}{pofile}\\
+\>integer \hyperlink{ATAPE_8c_a2d85cb468e376e5182aa0fad0ac65320}{elfile}\\
+\>integer \hyperlink{ATAPE_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{ldafil}\\
+\>integer \hyperlink{ATAPE_8c_a612f7f636c55ad04a9dbd5a4358ce415}{tifile}\\
+\>integer \hyperlink{ATAPE_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{pxfile}\\
+\>integer \hyperlink{ATAPE_8c_acfa8e75a828f2e7d679bb2754afd830e}{nfil12}\\
+\>integer \hyperlink{ATAPE_8c_a48deaa059b771bd60708ed9dfce4c912}{nfil13}\\
+\>integer \hyperlink{ATAPE_8c_ad829ddcda53f4e5233c7381f9354668e}{libfil}\\
+\>integer \hyperlink{ATAPE_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{ispare} \mbox{[}26\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a78d7eac58be7f41613a2d4faff0bf5c1}{symfil\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{ATAPE_8c_abf9fc17bab283f506b1c5f1b32191dff}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{ATAPE_8c_a1a31d3ba6c1c6a7262a30aa68488edda}{b} \mbox{[}256\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_a583ff5a67861d749569ad340458545b3}{u} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{ATAPE_8c_af55536577804116861fe726a6276718a}{v} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} \mbox{[}96\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} \mbox{[}16\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} \mbox{[}4\mbox{]}\\
+\} \hyperlink{ATAPE_8c_ab486be345408cca8daf44809908207be}{ssarlm\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{ATAPE_8c_a524f8fe2ba55232d8e0bd8eaf08f375e}{cldfg}\\
+\>integer \hyperlink{ATAPE_8c_a96b6d42a12fa06c5f0a4594d9371f975}{iclcod}\\
+\>integer \hyperlink{ATAPE_8c_adfc59286ff353d2a93137445bd0319c6}{iclcnt}\\
+\>integer \hyperlink{ATAPE_8c_aa4f33c6831488c6fa368e78edcb72d32}{icline}\\
+\>integer \hyperlink{ATAPE_8c_a3e11f7b8c9950ec477bfb47157050b13}{iclblk}\\
+\>integer \hyperlink{ATAPE_8c_af55fa66b7723408392095c92325079ec}{iclrcd}\\
+\>integer \hyperlink{ATAPE_8c_abc42dfd90a67844ecff8143dcb4c7b8d}{icltab} \mbox{[}500\mbox{]}\\
+\>integer \hyperlink{ATAPE_8c_a9ab123dfc3a6e5ff3b91cd1d72a68e15}{iptvec} \mbox{[}9\mbox{]}\\
+\} \hyperlink{ATAPE_8c_ad720eaaa2336cf9be34ab756a079189a}{cldt\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{ATAPE_8c_a21b4d3b67daa089f65066dcd95e488a3}{pntvct} \mbox{[}72\mbox{]}\\
+\} \hyperlink{ATAPE_8c_a1add67923a1ca360c4646846608d7fa8}{chcldt\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{ATAPE_8c_abd005ac575fc378b36b6781bb967a4f2}{c\+\_\+\+\_\+98} = 98
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{ATAPE_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{ATAPE_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 120 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{ATAPE_8c_a2f226f15c00130b05db70054f6514916}{}\label{ATAPE_8c_a2f226f15c00130b05db70054f6514916}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!can@{can}}
+\index{can@{can}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{ATAPE_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{ATAPE_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!canon@{canon}}
+\index{canon@{canon}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{ATAPE_8c_a68d3ba380c16e286247bb69367760615}{}\label{ATAPE_8c_a68d3ba380c16e286247bb69367760615}
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{ATAPE_8c_a5d8742d837dd932468df10068bbc1875}{}\label{ATAPE_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 30 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!chcldt\+\_\+1@{chcldt\+\_\+1}}
+\index{chcldt\+\_\+1@{chcldt\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{chcldt\+\_\+1}{chcldt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define chcldt\+\_\+1~{\bf chcldt\+\_\+}}\hypertarget{ATAPE_8c_a05bf082395441d57807662aa85c64f40}{}\label{ATAPE_8c_a05bf082395441d57807662aa85c64f40}
+
+
+Definition at line 142 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cldt\+\_\+1@{cldt\+\_\+1}}
+\index{cldt\+\_\+1@{cldt\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cldt\+\_\+1}{cldt_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cldt\+\_\+1~{\bf cldt\+\_\+}}\hypertarget{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{}\label{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}
+
+
+Definition at line 136 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+(), and ataper\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!clpont@{clpont}}
+\index{clpont@{clpont}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clpont}{clpont}}]{\setlength{\rightskip}{0pt plus 5cm}\#define clpont~((doublereal $\ast$)\&equiv\+\_\+6)}\hypertarget{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{}\label{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}
+
+
+Referenced by atape\+\_\+(), and ataper\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!clpont@{clpont}}
+\index{clpont@{clpont}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clpont}{clpont}}]{\setlength{\rightskip}{0pt plus 5cm}\#define clpont~(equiv\+\_\+0)}\hypertarget{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{}\label{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{ATAPE_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{ATAPE_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 24 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hblock\+\_\+1@{hblock\+\_\+1}}
+\index{hblock\+\_\+1@{hblock\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hblock\+\_\+1}{hblock_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define hblock\+\_\+1~{\bf hblock\+\_\+}}\hypertarget{ATAPE_8c_a9147c2fab27760493063ab471f6cd5ee}{}\label{ATAPE_8c_a9147c2fab27760493063ab471f6cd5ee}
+
+
+Definition at line 45 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 97 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+(), and ataper\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ilpont@{ilpont}}
+\index{ilpont@{ilpont}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ilpont}{ilpont}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ilpont~((integer $\ast$)\&equiv\+\_\+6)}\hypertarget{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{}\label{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}
+
+
+Referenced by atape\+\_\+(), and ataper\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ilpont@{ilpont}}
+\index{ilpont@{ilpont}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ilpont}{ilpont}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ilpont~((integer $\ast$)equiv\+\_\+0)}\hypertarget{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{}\label{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isv1\+\_\+1@{isv1\+\_\+1}}
+\index{isv1\+\_\+1@{isv1\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+1}{isv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv1\+\_\+1~{\bf isv1\+\_\+}}\hypertarget{ATAPE_8c_abe3545b3957e92e0b5ff211b7d6f7616}{}\label{ATAPE_8c_abe3545b3957e92e0b5ff211b7d6f7616}
+
+
+Definition at line 87 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isv\+\_\+1@{isv\+\_\+1}}
+\index{isv\+\_\+1@{isv\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+1}{isv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv\+\_\+1~{\bf isv\+\_\+}}\hypertarget{ATAPE_8c_acc79429328b703ca60ff76b9028f00fc}{}\label{ATAPE_8c_acc79429328b703ca60ff76b9028f00fc}
+
+
+Definition at line 80 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!knumbr\+\_\+1@{knumbr\+\_\+1}}
+\index{knumbr\+\_\+1@{knumbr\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+1}{knumbr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define knumbr\+\_\+1~{\bf knumbr\+\_\+}}\hypertarget{ATAPE_8c_a21f1c91333ff469374792c606442868b}{}\label{ATAPE_8c_a21f1c91333ff469374792c606442868b}
+
+
+Definition at line 105 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{ATAPE_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{ATAPE_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ssarlm\+\_\+1@{ssarlm\+\_\+1}}
+\index{ssarlm\+\_\+1@{ssarlm\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+1}{ssarlm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssarlm\+\_\+1~{\bf ssarlm\+\_\+}}\hypertarget{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}{}\label{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}
+
+
+Definition at line 128 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{ATAPE_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{ATAPE_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sv1\+\_\+1@{sv1\+\_\+1}}
+\index{sv1\+\_\+1@{sv1\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+1}{sv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv1\+\_\+1~{\bf sv1\+\_\+}}\hypertarget{ATAPE_8c_a7d7892a40c1228c7ca311a419a2f34a6}{}\label{ATAPE_8c_a7d7892a40c1228c7ca311a419a2f34a6}
+
+
+Definition at line 71 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sv\+\_\+1@{sv\+\_\+1}}
+\index{sv\+\_\+1@{sv\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+1}{sv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sv\+\_\+1~{\bf sv\+\_\+}}\hypertarget{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{}\label{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}
+
+
+Definition at line 62 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!symfil\+\_\+1@{symfil\+\_\+1}}
+\index{symfil\+\_\+1@{symfil\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+1}{symfil_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symfil\+\_\+1~{\bf symfil\+\_\+}}\hypertarget{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}{}\label{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}
+
+
+Definition at line 114 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+(), and ataper\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{ATAPE_8c_ac473806d761bac6bbdc70810932acff0}{}\label{ATAPE_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 37 of file A\+T\+A\+P\+E.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!atape\+\_\+@{atape\+\_\+}}
+\index{atape\+\_\+@{atape\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{atape\+\_\+(void)}{atape_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int atape\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}{}\label{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e}
+
+
+Definition at line 179 of file A\+T\+A\+P\+E.\+c.
+
+
+
+References bcdf\+\_\+(), c\+\_\+\+\_\+98, canon, charct\+\_\+1, chcldt\+\_\+1, cldt\+\_\+1, clpont, e\+\_\+2, e\+\_\+4, error\+\_\+(), ewrite\+\_\+(), fill\+\_\+1, fill\+\_\+3, fill\+\_\+5, first, fxcor\+\_\+1, godlta, i\+\_\+\+\_\+, ifxcor\+\_\+1, ilpont, ipow, ir, isize, isv\+\_\+1, j, jj, jmp, knumbr\+\_\+1, ll, ssarlm\+\_\+1, sv\+\_\+1, and symfil\+\_\+1.
+
+
+
+Referenced by aerr2\+\_\+(), aerr\+\_\+(), apt233\+\_\+(), arlm2\+\_\+(), arlm3\+\_\+(), clput\+\_\+(), go2\+\_\+(), gop\+\_\+(), goretr\+\_\+(), intout\+\_\+(), and pocket\+\_\+().
+
+
+\begin{DoxyCode}
+180 \{
+181     \textcolor{comment}{/* Initialized data */}
+182 
+183     \textcolor{keyword}{static} integer \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize} = 3;
+184     \textcolor{keyword}{static} integer kcr = 3;
+185     \textcolor{keyword}{static} integer \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow} = 1308622848;
+186     \textcolor{keyword}{static} integer \hyperlink{SSDEF_8c_a4521a507401ef14efdf22acebba2aa20}{jmp} = 1;
+187     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT301_8c_a14c689e796ae5e587bad643c584e31c8}{godlta}[6] = \textcolor{stringliteral}{"GODLTA"};
+188     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+189     \textcolor{keyword}{static} \textcolor{keyword}{struct }\{
+190     doublereal \hyperlink{BD2ITL_8c_af7747b98e4f16b6d8422db5d15d525c0}{fill\_1}[1];
+191     integer \hyperlink{ABLKDATA_8c_a29258d804ed41f73eca009450d66d856}{e\_2};
+192     integer \hyperlink{APT227_8c_adf6531718c347aa33636ec7e1525822a}{fill\_3}[1];
+193     integer \hyperlink{APT227_8c_a4e287f465781fb8aad21984c13c417f9}{e\_4};
+194     integer \hyperlink{APT227_8c_a87233433cb12ccc18ec1561de266e6a1}{fill\_5}[507];
+195     \} equiv\_6 = \{ \{0\}, 1308622848, \{0\}, 1308622848 \};
+196 
+197 
+198     \textcolor{comment}{/* Builtin functions */}
+199     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+200 
+201     \textcolor{comment}{/* Local variables */}
+202     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, nr, \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, \hyperlink{INTRP_8c_ae1d1ec9482079231e898236e2b23c9ba}{ll}, \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+203 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+204     \textcolor{keyword}{static} integer knb, knr;
+205     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+206 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+207 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+208     \textcolor{keyword}{static} integer isiz2;
+209 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+210 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+211     \textcolor{keyword}{static} integer nsize;
+212     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+213 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+214     \textcolor{keyword}{static} logical errctr;
+215     \textcolor{keyword}{static} integer modsrf[2];
+216 \textcolor{preprocessor}{#define clpont ((doublereal *)&equiv\_6)}
+217 \textcolor{preprocessor}{#define ilpont ((integer *)&equiv\_6)}
+218     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(integer *, integer *, doublereal *, 
+219         integer *, integer *);
+220 
+221 
+222 
+223 
+224 
+225 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+226 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+227 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+228 
+229 
+230 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+231 
+232 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+233 
+234 
+235 
+236 
+237 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+238 
+239 
+240 
+241 
+242 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+243 
+244 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+245 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+246 
+247 
+248 
+249 
+250 
+251 \textcolor{comment}{/*     *** 8.  HOLRTH BLOCK *** */}
+252 
+253 \textcolor{comment}{/*     ALPHA-NUMERIC LITERAL CONSTANTS. */}
+254 
+255 
+256 
+257 
+258 \textcolor{comment}{/*   *** 9.  SV BLOCK *** */}
+259 
+260 \textcolor{comment}{/*   REAL SURFACE VARIABLES */}
+261 
+262 
+263 
+264 
+265 
+266 
+267 \textcolor{comment}{/*   *** 12.  ISV BLOCK  *** */}
+268 
+269 \textcolor{comment}{/*   INTEGER SURFACE VARIABLES */}
+270 
+271 
+272 
+273 
+274 
+275 
+276 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+277 
+278 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+279 
+280 
+281 
+282 
+283 \textcolor{comment}{/* ...            SYSTEM I/O FILE NAMES */}
+284 
+285 
+286 \textcolor{comment}{/*   ***  19.  KNUMBR BLOCK  *** */}
+287 
+288 \textcolor{comment}{/*      INTEGER LITERALS */}
+289 
+290 
+291 
+292 
+293 
+294 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+295 
+296 
+297 
+298 
+299 
+300 \textcolor{comment}{/*     UNLABELLED COMMON */}
+301 
+302 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+303 
+304 
+305 
+306 
+307 
+308 
+309 
+310 
+311 
+312 
+313 
+314 
+315 
+316 \textcolor{comment}{/* ... INITIALIZE CLDAT BUFFER */}
+317     \textcolor{keywordflow}{if} (first) \{
+318     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"CLDA"}, (ftnlen)4);
+319     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"TA  "}, (ftnlen)4);
+320     first = FALSE\_;
+321     \}
+322 
+323 \textcolor{comment}{/* ...     TEST FOR AN ARELEM ERROR OR FOR DNTCUT */}
+324 \textcolor{comment}{/* L185: */}
+325     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iaerr != 0 || \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icut != 0) \{
+326     \textcolor{keywordflow}{goto} L3;
+327     \}
+328     \textcolor{keywordflow}{if} (kcr != 3) \{
+329     \textcolor{keywordflow}{goto} L7;
+330     \}
+331     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.cldfg) \{
+332     \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icline * 5 - 4] += \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt;
+333     \}
+334     \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt = 0;
+335     nsize = 0;
+336     errctr = FALSE\_;
+337 L7:
+338     kcr = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl;
+339     \textcolor{keywordflow}{if} (s\_cmp(\hyperlink{ATAPE_8c_a5d8742d837dd932468df10068bbc1875}{charct\_1}.modfer, godlta, (ftnlen)6, (ftnlen)6) == 0) \{
+340     \textcolor{keywordflow}{goto} L5;
+341     \}
+342     ++\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt;
+343 L5:
+344     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[isize * 2] = \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow};
+345     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[(isize << 1) + 1] = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl;
+346     jmp = 1;
+347     if (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iclcod > 1) \{
+348     \textcolor{keywordflow}{goto} L100;
+349     \}
+350 L6:
+351     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+352     \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize + 1] = \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[i\_\_ - 1];
+353 
+354 \textcolor{comment}{/* ...CHECK IF THERE SHOULD BE NO TOOL AXIS PRINTOUT */}
+355     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout == \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k0) \{
+356         \textcolor{keywordflow}{goto} L1;
+357     \}
+358 
+359     \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize + 4] = \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[i\_\_ - 1];
+360 L1:
+361     isize += \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k1;
+362     \}
+363     isize += \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k4;
+364     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout == \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k0) \{
+365     isize -= \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k3;
+366     \}
+367 L4:
+368     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.icl == \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k2 && isize < 255) \{
+369     \textcolor{keywordflow}{goto} L190;
+370     \}
+371 L2:
+372     nr = 0;
+373     j = isize << 1;
+374     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[3] = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iseqno;
+375     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[5] = isize - 3;
+376     \hyperlink{BDEBUF_8c_a5147f02e3a0a72c4713788f2e786bd5d}{ewrite\_}(&\hyperlink{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &nr, \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}, &j, &ir);
+377     knr = nr;
+378     knb = \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iclblk;
+379     isize = 3;
+380     \textcolor{keywordflow}{switch} (jmp) \{
+381     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L190;
+382     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L5;
+383     \}
+384 L3:
+385     \textcolor{keywordflow}{if} (isize > 3) \{
+386     \textcolor{keywordflow}{goto} L2;
+387     \}
+388 L190:
+389     \textcolor{keywordflow}{return} 0;
+390 
+391 L200:
+392     isize = nsize;
+393     jmp = 2;
+394     \textcolor{keywordflow}{goto} L2;
+395 
+396 \textcolor{comment}{/* ...SPECIAL CLDAT - PRINTOUT REQUESTED */}
+397 
+398 L100:
+399     \textcolor{keywordflow}{if} (errctr) \{
+400     \textcolor{keywordflow}{goto} L119;
+401     \}
+402     errctr = TRUE\_;
+403     modsrf[0] = \hyperlink{ATAPE_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.isfidn[\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips - 1];
+404     modsrf[1] = \hyperlink{ATAPE_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.isfidn[\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ids - 1];
+405 
+406     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 6; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+407     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iclcod % \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iptvec[i\_\_ + 2] != 0) \{
+408         \textcolor{keywordflow}{goto} L120;
+409     \}
+410 \textcolor{comment}{/*          PDS NDS PPS NPS UVPDS UVPPS */}
+411     \textcolor{keywordflow}{switch} (i\_\_) \{
+412         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L111;
+413         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L111;
+414         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L115;
+415         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L115;
+416         \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L113;
+417         \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L117;
+418     \}
+419 L111:
+420     \textcolor{keywordflow}{if} (modsrf[1] > 0 && modsrf[1] < 18) \{
+421         \textcolor{keywordflow}{goto} L120;
+422     \}
+423 L113:
+424     \textcolor{keywordflow}{if} (modsrf[1] == 29) \{
+425         \textcolor{keywordflow}{goto} L120;
+426     \}
+427     \textcolor{keywordflow}{goto} L118;
+428 L115:
+429     \textcolor{keywordflow}{if} (modsrf[0] > 0 && modsrf[0] < 18) \{
+430         \textcolor{keywordflow}{goto} L120;
+431     \}
+432 L117:
+433     \textcolor{keywordflow}{if} (modsrf[0] == 29) \{
+434         \textcolor{keywordflow}{goto} L120;
+435     \}
+436 L118:
+437     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{ATAPE_8c_abd005ac575fc378b36b6781bb967a4f2}{c\_\_98}, \textcolor{stringliteral}{"ATAPE   "}, (ftnlen)8);
+438     \textcolor{keywordflow}{goto} L119;
+439 L120:
+440     ;
+441     \}
+442 
+443 L119:
+444     nsize = \hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize};
+445     \textcolor{keywordflow}{if} (s\_cmp(\hyperlink{ATAPE_8c_a5d8742d837dd932468df10068bbc1875}{charct\_1}.modfer, godlta, (ftnlen)6, (ftnlen)6) == 0) \{
+446     \textcolor{keywordflow}{goto} L6;
+447     \}
+448     isize += \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k1;
+449     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 9; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+450     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iclcod % \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iptvec[i\_\_ - 1] != 0) \{
+451         \textcolor{keywordflow}{goto} L140;
+452     \}
+453     isize += \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k1;
+454     \textcolor{keywordflow}{if} (isize > 253) \{
+455         \textcolor{keywordflow}{goto} L200;
+456     \}
+457     isiz2 = isize << 1;
+458     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[isiz2 - 2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\hyperlink{ATAPE_8c_a05bf082395441d57807662aa85c64f40}{chcldt\_1}.pntvct + (i\_\_ - 1 << 3), (ftnlen)4)
+459         ;
+460     \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[isiz2 - 1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\hyperlink{ATAPE_8c_a05bf082395441d57807662aa85c64f40}{chcldt\_1}.pntvct + ((i\_\_ - 1 << 3) + 4), (
+461         ftnlen)4);
+462     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+463         isize += \hyperlink{ATAPE_8c_a21f1c91333ff469374792c606442868b}{knumbr\_1}.k1;
+464         \textcolor{keywordflow}{switch} (i\_\_) \{
+465         \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L121;
+466         \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L122;
+467         \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L123;
+468         \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L124;
+469         \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L125;
+470         \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L126;
+471         \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L127;
+472         \textcolor{keywordflow}{case} 8:  \textcolor{keywordflow}{goto} L128;
+473         \textcolor{keywordflow}{case} 9:  \textcolor{keywordflow}{goto} L129;
+474         \}
+475 L121:
+476         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.te[j - 1];
+477         \textcolor{keywordflow}{goto} L130;
+478 L122:
+479         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ta[j - 1];
+480         \textcolor{keywordflow}{goto} L130;
+481 L123:
+482         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.ti[j - 1];
+483         \textcolor{keywordflow}{goto} L130;
+484 L124:
+485         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[j + \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ids * 3 - 4];
+486         \textcolor{keywordflow}{goto} L130;
+487 L125:
+488         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[j + \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ids * 3 - 4];
+489         \textcolor{keywordflow}{goto} L130;
+490 L126:
+491         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sp[j + \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips * 3 - 4];
+492         \textcolor{keywordflow}{goto} L130;
+493 L128:
+494         ll = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ids - 1;
+495         \textcolor{keywordflow}{goto} L131;
+496 L129:
+497         ll = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips - 1;
+498 L131:
+499         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = 0.f;
+500         isize += 2;
+501         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = 0.f;
+502         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 2] = 0.f;
+503         \textcolor{keywordflow}{if} (modsrf[ll - 1] != 29) \{
+504         \textcolor{keywordflow}{goto} L140;
+505         \}
+506         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 3] = \hyperlink{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.u[ll - 1];
+507         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 2] = \hyperlink{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.v[ll - 1];
+508         jj = (integer) \hyperlink{ATAPE_8c_a68d3ba380c16e286247bb69367760615}{canon}[(ll - 1) * 10];
+509         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = (doublereal) (jj * 1000 + \hyperlink{ATAPE_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.ipnum[ll - 
+510             1]);
+511         \textcolor{keywordflow}{goto} L140;
+512 L127:
+513         \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[isize - 1] = \hyperlink{ATAPE_8c_a2f6418172e9c14772469fd5c924645ac}{sv\_1}.sn[j + \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips * 3 - 4];
+514 L130:
+515         ;
+516     \}
+517 L140:
+518     ;
+519     \}
+520     \textcolor{keywordflow}{goto} L4;
+521 \} \textcolor{comment}{/* atape\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ATAPE_8c_a79c69e39a4b3469296c55d3fa2b0e10e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ataper\+\_\+@{ataper\+\_\+}}
+\index{ataper\+\_\+@{ataper\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ataper\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, integer $\ast$nn, integer $\ast$jj, integer $\ast$kk, integer $\ast$iee)}{ataper_(doublereal *r__, integer *nn, integer *jj, integer *kk, integer *iee)}}]{\setlength{\rightskip}{0pt plus 5cm}int ataper\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{integer $\ast$}]{nn, }
+\item[{integer $\ast$}]{jj, }
+\item[{integer $\ast$}]{kk, }
+\item[{integer $\ast$}]{iee}
+\end{DoxyParamCaption}
+)}\hypertarget{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{}\label{ATAPE_8c_aef4adce1488c9723677919929ff9149d}
+
+
+Definition at line 536 of file A\+T\+A\+P\+E.\+c.
+
+
+
+References cldt\+\_\+1, clpont, eread\+\_\+(), i1, i2, i\+\_\+\+\_\+, ifxcor\+\_\+1, ilpont, ipow, ir, j, jj, k, l, line, r\+\_\+\+\_\+, and symfil\+\_\+1.
+
+
+
+Referenced by apt105\+\_\+(), cldatf\+\_\+(), and region\+\_\+().
+
+
+\begin{DoxyCode}
+538 \{
+539     \textcolor{comment}{/* Initialized data */}
+540 
+541     \textcolor{keyword}{static} integer \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow} = 1308622848;
+542 
+543     \textcolor{comment}{/* System generated locals */}
+544     integer i\_\_1;
+545     \textcolor{keyword}{static} doublereal equiv\_0[256];
+546 
+547     \textcolor{comment}{/* Local variables */}
+548     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}, \hyperlink{APT088_8c_af963619ce97fcda891257c2a296fc0b9}{i1}, \hyperlink{CUTREG_8c_a5f589bc83e55eecc5b1c372de3376ea9}{i2}, i3, i33, \hyperlink{APT301_8c_a79fbdfd6d18963a5b89c61facf5afdfc}{ir}, nr, nbf, knb, kkf, nrf, 
+549         nrp, nrs, isz, \hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}, ksct;
+550     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BDEBUF_8c_a3c18b841b469844b4b35b192a791a013}{eread\_}(integer *, doublereal *, integer *, 
+551         integer *, integer *, integer *, integer *, integer *);
+552 \textcolor{preprocessor}{#define clpont (equiv\_0)}
+553 \textcolor{preprocessor}{#define ilpont ((integer *)equiv\_0)}
+554 
+555 \textcolor{comment}{/*  PURPOSE  TO RETRIEVE CL POINT FROM CLTAPE. */}
+556 
+557 \textcolor{comment}{/*  LINKAGE  CALL ATAPER (R,NN,JJ,KK,IEE) */}
+558 
+559 \textcolor{comment}{/*  ARGUMENTS   R   ARRAY TO CONTAIN THE CL DATA. */}
+560 \textcolor{comment}{/*              NN  INTEGER INDICATING CL POINT NUMBER */}
+561 \textcolor{comment}{/*              JJ  INTEGER CLDAT SECTION NUMBER */}
+562 \textcolor{comment}{/*              KK  INTEGER DATA TYPE */}
+563 
+564 \textcolor{comment}{/*     CHECK IF THE SPECIFIED POINT NUMBER IN THE SPECIFIED SECTION. */}
+565 
+566 
+567 
+568 
+569 
+570 \textcolor{comment}{/* ...            SYSTEM I/O FILE NAMES */}
+571 
+572 
+573 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+574 
+575 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+576 
+577 
+578 
+579 
+580 
+581 \textcolor{comment}{/* ...                SYSTEM I/O FILES */}
+582 
+583 
+584 
+585 
+586 
+587 
+588 
+589 
+590 
+591 
+592     \textcolor{comment}{/* Parameter adjustments */}
+593     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+594 
+595     \textcolor{comment}{/* Function Body */}
+596     nr = *nn;
+597     \textcolor{keywordflow}{if} (*\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} > 0) \{
+598     \textcolor{keywordflow}{goto} L480;
+599     \}
+600     \textcolor{keywordflow}{if} (nr <= 0 || nr > \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt) \{
+601     \textcolor{keywordflow}{goto} L610;
+602     \}
+603 \textcolor{comment}{/*      IF(NSIZE.GT.0)GOTO 610 */}
+604 
+605 \textcolor{comment}{/*     RETRIEVE A POINT OR A VECTOR OF THE LAST MOTION COMMAND */}
+606 \textcolor{comment}{/*     STORE 0,0,1 AS I,J,K */}
+607 \textcolor{comment}{/* L440: */}
+608     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[4] = 0.f;
+609     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5] = 0.f;
+610     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[6] = 1.f;
+611     isz = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout * 3 + 4;
+612     i\_\_ = 252 / isz;
+613     i1 = (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt - 1) / i\_\_;
+614     i2 = (nr - 1) / i\_\_;
+615     \textcolor{keywordflow}{if} (i1 != i2) \{
+616     \textcolor{keywordflow}{goto} L460;
+617     \}
+618 
+619 \textcolor{comment}{/*     DESIRED POSITION OF MOTION COMMAND IS IN CLPONT */}
+620     j = \hyperlink{ATAPE_8c_a943613f67b9cdbc6c2d3726daae9d7d4}{ilpont}[5] + 5 - isz * (\hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numcnt - nr + 1);
+621     k = j - 2 + isz;
+622     l = 0;
+623     i\_\_1 = \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+624     \textcolor{keywordflow}{for} (i\_\_ = j; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+625     ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+626 \textcolor{comment}{/* L450: */}
+627     \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}] = \hyperlink{ATAPE_8c_ada36cc27210f08dc5bc15ebe8fff938f}{clpont}[i\_\_ - 1];
+628     \}
+629     \textcolor{keywordflow}{goto} L600;
+630 
+631 \textcolor{comment}{/*     FETCH EXFILE BLOCK CONTAINING DESIRED POSITION */}
+632 L460:
+633     nbf = knb - i1 + i2 + 1;
+634     nrp = i\_\_ * (i2 + 1);
+635     i\_\_1 = -isz;
+636     \hyperlink{BDEBUF_8c_a3c18b841b469844b4b35b192a791a013}{eread\_}(&\hyperlink{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1], &nr, &nbf, &nrf, &nrp, &i\_\_1, &ir);
+637     \textcolor{keywordflow}{goto} L600;
+638 
+639 \textcolor{comment}{/*     SEQUENTIAL SEARCH FROM BEGIN OF  'CLDAT/START,..'  REGION */}
+640 L480:
+641     \textcolor{keywordflow}{if} (*\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} == ksct) \{
+642     \textcolor{keywordflow}{goto} L510;
+643     \}
+644     i\_\_1 = \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iclcnt;
+645     \textcolor{keywordflow}{for} (line = 1; line <= i\_\_1; ++\hyperlink{PRO021_8c_a5bdec07ba0f5f220bcb40d5258725d95}{line}) \{
+646     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[line * 5 - 5] == *\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}) \{
+647         \textcolor{keywordflow}{goto} L500;
+648     \}
+649 \textcolor{comment}{/* L490: */}
+650     \}
+651     \textcolor{keywordflow}{goto} L610;
+652 
+653 L500:
+654     kkf = \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow};
+655     i33 = \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow};
+656 L510:
+657     i3 = \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[line * 5 - 3];
+658     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.cldfg || nr <= 0 || nr > \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[line * 5 - 4]) \{
+659     \textcolor{keywordflow}{goto} L610;
+660     \}
+661     \textcolor{keywordflow}{if} (i3 > 1) \{
+662     \textcolor{keywordflow}{goto} L520;
+663     \}
+664     \textcolor{keywordflow}{if} (*kk > 2) \{
+665     \textcolor{keywordflow}{goto} L610;
+666     \}
+667     isz = \hyperlink{ATAPE_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.mulout * 3 + 4;
+668     nrp = 0;
+669     \textcolor{keywordflow}{goto} L540;
+670 
+671 L520:
+672     \textcolor{keywordflow}{if} (i3 % \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iptvec[*kk - 1] != 0) \{
+673     \textcolor{keywordflow}{goto} L610;
+674     \}
+675     \textcolor{keywordflow}{if} (*kk == kkf && i33 == i3) \{
+676     \textcolor{keywordflow}{goto} L550;
+677     \}
+678     nrs = 0;
+679     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 9; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+680     \textcolor{keywordflow}{if} (i3 % \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.iptvec[i\_\_ - 1] == 0) \{
+681         ++nrs;
+682     \}
+683     \textcolor{keywordflow}{if} (*kk == i\_\_) \{
+684         nrp = nrs;
+685     \}
+686 \textcolor{comment}{/* L530: */}
+687     \}
+688     isz = (nrs << 2) + 1;
+689 L540:
+690     ksct = *\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+691     kkf = *kk;
+692     i33 = i3;
+693     nbf = \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[line * 5 - 2];
+694     nrf = \hyperlink{ATAPE_8c_a58ee7ca4d7ca626ddd1ea45060da01d0}{cldt\_1}.icltab[line * 5 - 1];
+695 
+696 \textcolor{comment}{/*  NR             RECORD NUMBER IN THE DESIRED CLDAT SECTION. */}
+697 \textcolor{comment}{/*  NBF            FISRT EXFILE BLOCK  NUMBER OF THE CLDAT SECTION. */}
+698 \textcolor{comment}{/*  NRF            FISRT EXFILE RECORD NUMBER OF THE CLDAT SECTION. */}
+699 \textcolor{comment}{/*  ISZ            CLDAT RECORD SIZE.(DATA OF ONE POSITION = POINT) */}
+700 \textcolor{comment}{/*  NRP            POSITION OF THE DATA WANTED. */}
+701 
+702 L550:
+703     \hyperlink{BDEBUF_8c_a3c18b841b469844b4b35b192a791a013}{eread\_}(&\hyperlink{ATAPE_8c_a9d51adb520527108ebe0ed309f7c0d84}{symfil\_1}.exfile, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[1], &nr, &nbf, &nrf, &nrp, &isz, &ir);
+704 
+705 L600:
+706     *iee = 0;
+707     \textcolor{keywordflow}{return} 0;
+708 L610:
+709     *iee = 1;
+710     ksct = \hyperlink{APT311_8c_a552b7764a12e09b7a9b0cb989ff9c71c}{ipow};
+711     \textcolor{keywordflow}{return} 0;
+712 \} \textcolor{comment}{/* ataper\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ATAPE_8c_aef4adce1488c9723677919929ff9149d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ATAPE_8c_aef4adce1488c9723677919929ff9149d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{ATAPE_8c_abf9fc17bab283f506b1c5f1b32191dff}{}\label{ATAPE_8c_abf9fc17bab283f506b1c5f1b32191dff}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!alp@{alp}}
+\index{alp@{alp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{ATAPE_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{ATAPE_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{ATAPE_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!axfile@{axfile}}
+\index{axfile@{axfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{axfile}{axfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer axfile}\hypertarget{ATAPE_8c_a26df007a15cd7ca7de195d739ac532da}{}\label{ATAPE_8c_a26df007a15cd7ca7de195d739ac532da}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!b@{b}}
+\index{b@{b}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{b}{b}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal b\mbox{[}256\mbox{]}}\hypertarget{ATAPE_8c_a1a31d3ba6c1c6a7262a30aa68488edda}{}\label{ATAPE_8c_a1a31d3ba6c1c6a7262a30aa68488edda}
+
+
+Definition at line 123 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!c\+\_\+\+\_\+98@{c\+\_\+\+\_\+98}}
+\index{c\+\_\+\+\_\+98@{c\+\_\+\+\_\+98}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+98}{c__98}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+98 = 98\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ATAPE_8c_abd005ac575fc378b36b6781bb967a4f2}{}\label{ATAPE_8c_abd005ac575fc378b36b6781bb967a4f2}
+
+
+Definition at line 146 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by atape\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{ATAPE_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{ATAPE_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cc@{cc}}
+\index{cc@{cc}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cc}{cc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cc\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a4a672b1cc1657e411e2094d8631246c2}{}\label{ATAPE_8c_a4a672b1cc1657e411e2094d8631246c2}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{ATAPE_8c_a1d300b69fcdac1cc2e457d23fb270a58}{}\label{ATAPE_8c_a1d300b69fcdac1cc2e457d23fb270a58}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!chcldt\+\_\+@{chcldt\+\_\+}}
+\index{chcldt\+\_\+@{chcldt\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{chcldt\+\_\+}{chcldt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   chcldt\+\_\+}\hypertarget{ATAPE_8c_a1add67923a1ca360c4646846608d7fa8}{}\label{ATAPE_8c_a1add67923a1ca360c4646846608d7fa8}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cldfg@{cldfg}}
+\index{cldfg@{cldfg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cldfg}{cldfg}}]{\setlength{\rightskip}{0pt plus 5cm}logical cldfg}\hypertarget{ATAPE_8c_a524f8fe2ba55232d8e0bd8eaf08f375e}{}\label{ATAPE_8c_a524f8fe2ba55232d8e0bd8eaf08f375e}
+
+
+Definition at line 131 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cldt\+\_\+@{cldt\+\_\+}}
+\index{cldt\+\_\+@{cldt\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cldt\+\_\+}{cldt_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cldt\+\_\+}\hypertarget{ATAPE_8c_ad720eaaa2336cf9be34ab756a079189a}{}\label{ATAPE_8c_ad720eaaa2336cf9be34ab756a079189a}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!clfil3@{clfil3}}
+\index{clfil3@{clfil3}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clfil3}{clfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfil3}\hypertarget{ATAPE_8c_afddbf18370447268640d26c983890fd1}{}\label{ATAPE_8c_afddbf18370447268640d26c983890fd1}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!clfile@{clfile}}
+\index{clfile@{clfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clfile}{clfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfile}\hypertarget{ATAPE_8c_ac5981f10fe76665716d550ce94342ea5}{}\label{ATAPE_8c_ac5981f10fe76665716d550ce94342ea5}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!clfilp@{clfilp}}
+\index{clfilp@{clfilp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clfilp}{clfilp}}]{\setlength{\rightskip}{0pt plus 5cm}integer clfilp}\hypertarget{ATAPE_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}{}\label{ATAPE_8c_acdd7a40d519e2b24c05a45f0c8ac8d6a}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!com@{com}}
+\index{com@{com}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{ATAPE_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{ATAPE_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 117 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{ATAPE_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cos1@{cos1}}
+\index{cos1@{cos1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cos1}{cos1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cos1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aa061b11706c46e4e7299be7f1dd355ef}{}\label{ATAPE_8c_aa061b11706c46e4e7299be7f1dd355ef}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cpfile@{cpfile}}
+\index{cpfile@{cpfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cpfile}{cpfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer cpfile}\hypertarget{ATAPE_8c_ad12b2079fb6c75ea4106f40b49874358}{}\label{ATAPE_8c_ad12b2079fb6c75ea4106f40b49874358}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cplfl@{cplfl}}
+\index{cplfl@{cplfl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cplfl}{cplfl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cplfl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a17ab077f9704191cec3623b32182b8ba}{}\label{ATAPE_8c_a17ab077f9704191cec3623b32182b8ba}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cptst@{cptst}}
+\index{cptst@{cptst}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cptst}{cptst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cptst\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a826f9bb61ad3ef7b009c7631b75374f6}{}\label{ATAPE_8c_a826f9bb61ad3ef7b009c7631b75374f6}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!csd@{csd}}
+\index{csd@{csd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{csd}{csd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal csd\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}{}\label{ATAPE_8c_a2ef293bfc50810bd0ec5fa8d91d40d49}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{ATAPE_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{ATAPE_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!dplan@{dplan}}
+\index{dplan@{dplan}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{dplan}{dplan}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dplan\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a819ff3967ced7fbb549308a6e4b91bcb}{}\label{ATAPE_8c_a819ff3967ced7fbb549308a6e4b91bcb}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{ATAPE_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{ATAPE_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!dpmx1@{dpmx1}}
+\index{dpmx1@{dpmx1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{dpmx1}{dpmx1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmx1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a4360acf0e48136e91364bd7cce121547}{}\label{ATAPE_8c_a4360acf0e48136e91364bd7cce121547}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!elfil1@{elfil1}}
+\index{elfil1@{elfil1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{elfil1}{elfil1}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil1}\hypertarget{ATAPE_8c_aa3182ed0b1cd068d4d5921447939176f}{}\label{ATAPE_8c_aa3182ed0b1cd068d4d5921447939176f}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!elfil2@{elfil2}}
+\index{elfil2@{elfil2}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{elfil2}{elfil2}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil2}\hypertarget{ATAPE_8c_a995bd688c87d82736860b413de2416d4}{}\label{ATAPE_8c_a995bd688c87d82736860b413de2416d4}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!elfil3@{elfil3}}
+\index{elfil3@{elfil3}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{elfil3}{elfil3}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil3}\hypertarget{ATAPE_8c_a9955a1f6e7217021e500540bfebef5ad}{}\label{ATAPE_8c_a9955a1f6e7217021e500540bfebef5ad}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!elfil4@{elfil4}}
+\index{elfil4@{elfil4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{elfil4}{elfil4}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfil4}\hypertarget{ATAPE_8c_a712e8a1a3f49f2f2b82b84e1df44b433}{}\label{ATAPE_8c_a712e8a1a3f49f2f2b82b84e1df44b433}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!elfile@{elfile}}
+\index{elfile@{elfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{elfile}{elfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer elfile}\hypertarget{ATAPE_8c_a2d85cb468e376e5182aa0fad0ac65320}{}\label{ATAPE_8c_a2d85cb468e376e5182aa0fad0ac65320}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps1@{eps1}}
+\index{eps1@{eps1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps1}{eps1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a306d2abf316a42b2d06c636c581fbc05}{}\label{ATAPE_8c_a306d2abf316a42b2d06c636c581fbc05}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps2@{eps2}}
+\index{eps2@{eps2}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps2}{eps2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps2\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a2fd05e25992e6a9456646532a7ed3148}{}\label{ATAPE_8c_a2fd05e25992e6a9456646532a7ed3148}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps3@{eps3}}
+\index{eps3@{eps3}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps3}{eps3}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps3\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a13ab03ebf3099fa722e8584f54a14f94}{}\label{ATAPE_8c_a13ab03ebf3099fa722e8584f54a14f94}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps4@{eps4}}
+\index{eps4@{eps4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps4}{eps4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps4\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ad4286f6c2b33f25799d6156480bd622d}{}\label{ATAPE_8c_ad4286f6c2b33f25799d6156480bd622d}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps6@{eps6}}
+\index{eps6@{eps6}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps6}{eps6}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps6\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a68951ca3ed42d540274e5dd702aa30b2}{}\label{ATAPE_8c_a68951ca3ed42d540274e5dd702aa30b2}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!eps8@{eps8}}
+\index{eps8@{eps8}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{eps8}{eps8}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal eps8\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ab85a8b6ebe95fd76a0fccc74ece19726}{}\label{ATAPE_8c_ab85a8b6ebe95fd76a0fccc74ece19726}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!exfile@{exfile}}
+\index{exfile@{exfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{exfile}{exfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer exfile}\hypertarget{ATAPE_8c_a78f3ee45f9635e3a864294bde4cb46dd}{}\label{ATAPE_8c_a78f3ee45f9635e3a864294bde4cb46dd}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{ATAPE_8c_a932175cf9d5295642165d385ecdc5bba}{}\label{ATAPE_8c_a932175cf9d5295642165d385ecdc5bba}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{ATAPE_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{ATAPE_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!haerr@{haerr}}
+\index{haerr@{haerr}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{haerr}{haerr}}]{\setlength{\rightskip}{0pt plus 5cm}char haerr\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_afa5091ed7bdd3cbec4d0c27ac3112ff8}{}\label{ATAPE_8c_afa5091ed7bdd3cbec4d0c27ac3112ff8}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hback@{hback}}
+\index{hback@{hback}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hback}{hback}}]{\setlength{\rightskip}{0pt plus 5cm}char hback\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_abcec99a15792bcd47fdd612b04c9a930}{}\label{ATAPE_8c_abcec99a15792bcd47fdd612b04c9a930}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hblock\+\_\+@{hblock\+\_\+}}
+\index{hblock\+\_\+@{hblock\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hblock\+\_\+}{hblock_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hblock\+\_\+}\hypertarget{ATAPE_8c_a831c1e6f7cd147c841158b9dff17cd02}{}\label{ATAPE_8c_a831c1e6f7cd147c841158b9dff17cd02}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hcldat@{hcldat}}
+\index{hcldat@{hcldat}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hcldat}{hcldat}}]{\setlength{\rightskip}{0pt plus 5cm}char hcldat\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_ae48ebb6e80eaccc553700d3a15142ccc}{}\label{ATAPE_8c_ae48ebb6e80eaccc553700d3a15142ccc}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hcs@{hcs}}
+\index{hcs@{hcs}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hcs}{hcs}}]{\setlength{\rightskip}{0pt plus 5cm}char hcs\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_ac062932206cb1a1aeb8a6464571276da}{}\label{ATAPE_8c_ac062932206cb1a1aeb8a6464571276da}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hdown@{hdown}}
+\index{hdown@{hdown}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hdown}{hdown}}]{\setlength{\rightskip}{0pt plus 5cm}char hdown\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_add8a35712ff53e00e2e74a057851c256}{}\label{ATAPE_8c_add8a35712ff53e00e2e74a057851c256}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hds@{hds}}
+\index{hds@{hds}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hds}{hds}}]{\setlength{\rightskip}{0pt plus 5cm}char hds\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_aba9876c1de49a02f4cc032f1fda8c312}{}\label{ATAPE_8c_aba9876c1de49a02f4cc032f1fda8c312}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hdynp@{hdynp}}
+\index{hdynp@{hdynp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hdynp}{hdynp}}]{\setlength{\rightskip}{0pt plus 5cm}char hdynp\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_aa780ddcb9f3abc7ca87c882952c6c859}{}\label{ATAPE_8c_aa780ddcb9f3abc7ca87c882952c6c859}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hfwd@{hfwd}}
+\index{hfwd@{hfwd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hfwd}{hfwd}}]{\setlength{\rightskip}{0pt plus 5cm}char hfwd\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a9260c4b8fed529f1c143dbe065d0d760}{}\label{ATAPE_8c_a9260c4b8fed529f1c143dbe065d0d760}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hgerr@{hgerr}}
+\index{hgerr@{hgerr}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hgerr}{hgerr}}]{\setlength{\rightskip}{0pt plus 5cm}char hgerr\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a58f557a4d6a57a39bee689b3ecddb3ce}{}\label{ATAPE_8c_a58f557a4d6a57a39bee689b3ecddb3ce}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hi@{hi}}
+\index{hi@{hi}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{ATAPE_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{ATAPE_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hlft@{hlft}}
+\index{hlft@{hlft}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hlft}{hlft}}]{\setlength{\rightskip}{0pt plus 5cm}char hlft\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_ae9a1fd681cc025cb61b7fee3700d052e}{}\label{ATAPE_8c_ae9a1fd681cc025cb61b7fee3700d052e}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hon@{hon}}
+\index{hon@{hon}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hon}{hon}}]{\setlength{\rightskip}{0pt plus 5cm}char hon\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_aee2b54c464818b79ed18537e24dfa157}{}\label{ATAPE_8c_aee2b54c464818b79ed18537e24dfa157}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hpast@{hpast}}
+\index{hpast@{hpast}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hpast}{hpast}}]{\setlength{\rightskip}{0pt plus 5cm}char hpast\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a89202ef270b0ecad30ef7b2059cc2fc0}{}\label{ATAPE_8c_a89202ef270b0ecad30ef7b2059cc2fc0}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hps@{hps}}
+\index{hps@{hps}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hps}{hps}}]{\setlength{\rightskip}{0pt plus 5cm}char hps\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_ac1d9e4a0b7f26f993445b48296d0be1a}{}\label{ATAPE_8c_ac1d9e4a0b7f26f993445b48296d0be1a}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hpstan@{hpstan}}
+\index{hpstan@{hpstan}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hpstan}{hpstan}}]{\setlength{\rightskip}{0pt plus 5cm}char hpstan\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a09f384e9443026467deed1c15c6e65bc}{}\label{ATAPE_8c_a09f384e9443026467deed1c15c6e65bc}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hrgt@{hrgt}}
+\index{hrgt@{hrgt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hrgt}{hrgt}}]{\setlength{\rightskip}{0pt plus 5cm}char hrgt\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a37c84a4f02dd15e0edd00be755fdd3d3}{}\label{ATAPE_8c_a37c84a4f02dd15e0edd00be755fdd3d3}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!htanto@{htanto}}
+\index{htanto@{htanto}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{htanto}{htanto}}]{\setlength{\rightskip}{0pt plus 5cm}char htanto\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a349aae00d8100573a88dc1d9cbc0ad60}{}\label{ATAPE_8c_a349aae00d8100573a88dc1d9cbc0ad60}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hto@{hto}}
+\index{hto@{hto}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hto}{hto}}]{\setlength{\rightskip}{0pt plus 5cm}char hto\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_aec054589968436f4c6a7860e7c828b68}{}\label{ATAPE_8c_aec054589968436f4c6a7860e7c828b68}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!hup@{hup}}
+\index{hup@{hup}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{hup}{hup}}]{\setlength{\rightskip}{0pt plus 5cm}char hup\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a96294de7ac17108e892d2e2c815b7e3e}{}\label{ATAPE_8c_a96294de7ac17108e892d2e2c815b7e3e}
+
+
+Definition at line 40 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{ATAPE_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{ATAPE_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{ATAPE_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{ATAPE_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iafl@{iafl}}
+\index{iafl@{iafl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iafl}{iafl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iafl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a013f46224a863d563c172ad966d9fe4c}{}\label{ATAPE_8c_a013f46224a863d563c172ad966d9fe4c}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{ATAPE_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{ATAPE_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{ATAPE_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{ATAPE_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ic@{ic}}
+\index{ic@{ic}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{ATAPE_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{ATAPE_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icanon@{icanon}}
+\index{icanon@{icanon}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icanon}{icanon}}]{\setlength{\rightskip}{0pt plus 5cm}integer icanon\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{}\label{ATAPE_8c_af11acb70bb024b32658dd2ce1e2fe8d4}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{ATAPE_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{ATAPE_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icl@{icl}}
+\index{icl@{icl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{ATAPE_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{ATAPE_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iclblk@{iclblk}}
+\index{iclblk@{iclblk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iclblk}{iclblk}}]{\setlength{\rightskip}{0pt plus 5cm}integer iclblk}\hypertarget{ATAPE_8c_a3e11f7b8c9950ec477bfb47157050b13}{}\label{ATAPE_8c_a3e11f7b8c9950ec477bfb47157050b13}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iclcnt@{iclcnt}}
+\index{iclcnt@{iclcnt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iclcnt}{iclcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer iclcnt}\hypertarget{ATAPE_8c_adfc59286ff353d2a93137445bd0319c6}{}\label{ATAPE_8c_adfc59286ff353d2a93137445bd0319c6}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iclcod@{iclcod}}
+\index{iclcod@{iclcod}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iclcod}{iclcod}}]{\setlength{\rightskip}{0pt plus 5cm}integer iclcod}\hypertarget{ATAPE_8c_a96b6d42a12fa06c5f0a4594d9371f975}{}\label{ATAPE_8c_a96b6d42a12fa06c5f0a4594d9371f975}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icline@{icline}}
+\index{icline@{icline}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icline}{icline}}]{\setlength{\rightskip}{0pt plus 5cm}integer icline}\hypertarget{ATAPE_8c_aa4f33c6831488c6fa368e78edcb72d32}{}\label{ATAPE_8c_aa4f33c6831488c6fa368e78edcb72d32}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iclrcd@{iclrcd}}
+\index{iclrcd@{iclrcd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iclrcd}{iclrcd}}]{\setlength{\rightskip}{0pt plus 5cm}integer iclrcd}\hypertarget{ATAPE_8c_af55fa66b7723408392095c92325079ec}{}\label{ATAPE_8c_af55fa66b7723408392095c92325079ec}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icltab@{icltab}}
+\index{icltab@{icltab}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icltab}{icltab}}]{\setlength{\rightskip}{0pt plus 5cm}integer icltab\mbox{[}500\mbox{]}}\hypertarget{ATAPE_8c_abc42dfd90a67844ecff8143dcb4c7b8d}{}\label{ATAPE_8c_abc42dfd90a67844ecff8143dcb4c7b8d}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ics@{ics}}
+\index{ics@{ics}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{ATAPE_8c_a7217a40b82199af56087b578a9bef158}{}\label{ATAPE_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{ATAPE_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{ATAPE_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{ATAPE_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{ATAPE_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!icut@{icut}}
+\index{icut@{icut}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{ATAPE_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{ATAPE_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ids@{ids}}
+\index{ids@{ids}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{ATAPE_8c_a312fee9680413e72b1ed128af2de8822}{}\label{ATAPE_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ier@{ier}}
+\index{ier@{ier}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{ATAPE_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{ATAPE_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ifar@{ifar}}
+\index{ifar@{ifar}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ifar}{ifar}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifar\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ae6268067a45faf1f09717de826908b42}{}\label{ATAPE_8c_ae6268067a45faf1f09717de826908b42}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ifl4@{ifl4}}
+\index{ifl4@{ifl4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ifl4}{ifl4}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifl4\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{}\label{ATAPE_8c_a13b8031b501c6fcb7f2ad94831e58f5f}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iflag@{iflag}}
+\index{iflag@{iflag}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iflag}{iflag}}]{\setlength{\rightskip}{0pt plus 5cm}integer iflag\mbox{[}16\mbox{]}}\hypertarget{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{}\label{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}
+
+
+Definition at line 124 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by apt109\+\_\+(), balloc\+\_\+(), balscn\+\_\+(), balsrf\+\_\+(), bonchk\+\_\+(), cmesh\+\_\+(), cnsurf\+\_\+(), cnsurg\+\_\+(), cnsurh\+\_\+(), curint\+\_\+(), dgeom\+\_\+(), epilog\+\_\+(), evalss\+\_\+(), gop\+\_\+(), lodint\+\_\+(), lodpch\+\_\+(), midpnt\+\_\+(), pchprc\+\_\+(), pro027\+\_\+(), puvloc\+\_\+(), read\+\_\+(), remint\+\_\+(), resred\+\_\+(), srfcom\+\_\+(), and sspict\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{ATAPE_8c_a5da7923ba7177d6fd820734eecc7e602}{}\label{ATAPE_8c_a5da7923ba7177d6fd820734eecc7e602}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!igo@{igo}}
+\index{igo@{igo}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{ATAPE_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{ATAPE_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{ATAPE_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{ATAPE_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{ATAPE_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{ATAPE_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!igs@{igs}}
+\index{igs@{igs}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{ATAPE_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{ATAPE_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!index@{index}}
+\index{index@{index}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}integer index\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{}\label{ATAPE_8c_a117e03aa7ccba9831ef61bf41f8e11a4}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}}
+\index{indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{indir\+\_\+\+\_\+}{indir__}}]{\setlength{\rightskip}{0pt plus 5cm}integer indir\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a367d578680d6741b0eeea4c18126ac85}{}\label{ATAPE_8c_a367d578680d6741b0eeea4c18126ac85}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}}
+\index{infile\+\_\+\+\_\+@{infile\+\_\+\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{infile\+\_\+\+\_\+}{infile__}}]{\setlength{\rightskip}{0pt plus 5cm}integer infile\+\_\+\+\_\+}\hypertarget{ATAPE_8c_a8b614c674a9bc7309b31947e735034a9}{}\label{ATAPE_8c_a8b614c674a9bc7309b31947e735034a9}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!inops@{inops}}
+\index{inops@{inops}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{ATAPE_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{ATAPE_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iop@{iop}}
+\index{iop@{iop}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iop}{iop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iop\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aca4c6ef2418548013d1f0ab199eb5e87}{}\label{ATAPE_8c_aca4c6ef2418548013d1f0ab199eb5e87}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iopset@{iopset}}
+\index{iopset@{iopset}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iopset}{iopset}}]{\setlength{\rightskip}{0pt plus 5cm}integer iopset\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a46fc792e9db2a4119bde6d3c50066efe}{}\label{ATAPE_8c_a46fc792e9db2a4119bde6d3c50066efe}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ipl@{ipl}}
+\index{ipl@{ipl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ipl}{ipl}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{}\label{ATAPE_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ipnum@{ipnum}}
+\index{ipnum@{ipnum}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ipnum}{ipnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipnum\mbox{[}4\mbox{]}}\hypertarget{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}{}\label{ATAPE_8c_ad9ba103b57834a3db27b426fcafa58fe}
+
+
+Definition at line 124 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by apt109\+\_\+(), and pchprc\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ips@{ips}}
+\index{ips@{ips}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{ATAPE_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{ATAPE_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{ATAPE_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{ATAPE_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{ATAPE_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{ATAPE_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iptvec@{iptvec}}
+\index{iptvec@{iptvec}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iptvec}{iptvec}}]{\setlength{\rightskip}{0pt plus 5cm}integer iptvec\mbox{[}9\mbox{]}}\hypertarget{ATAPE_8c_a9ab123dfc3a6e5ff3b91cd1d72a68e15}{}\label{ATAPE_8c_a9ab123dfc3a6e5ff3b91cd1d72a68e15}
+
+
+Definition at line 132 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!is@{is}}
+\index{is@{is}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{ATAPE_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{ATAPE_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{ATAPE_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{ATAPE_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{ATAPE_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{ATAPE_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isfidn@{isfidn}}
+\index{isfidn@{isfidn}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isfidn}{isfidn}}]{\setlength{\rightskip}{0pt plus 5cm}integer isfidn\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a98035b4872e906175c3748d8671bcb41}{}\label{ATAPE_8c_a98035b4872e906175c3748d8671bcb41}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isftyp@{isftyp}}
+\index{isftyp@{isftyp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isftyp}{isftyp}}]{\setlength{\rightskip}{0pt plus 5cm}integer isftyp\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_af06b6af8617105f43da7a0aef4a181d3}{}\label{ATAPE_8c_af06b6af8617105f43da7a0aef4a181d3}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isigcr@{isigcr}}
+\index{isigcr@{isigcr}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isigcr}{isigcr}}]{\setlength{\rightskip}{0pt plus 5cm}integer isigcr\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a96c4543ff4eb51c15078a4a13a13d649}{}\label{ATAPE_8c_a96c4543ff4eb51c15078a4a13a13d649}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ispare@{ispare}}
+\index{ispare@{ispare}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ispare}{ispare}}]{\setlength{\rightskip}{0pt plus 5cm}integer ispare\mbox{[}26\mbox{]}}\hypertarget{ATAPE_8c_a02b62bf5053a971d1e9e3c68c05c46ff}{}\label{ATAPE_8c_a02b62bf5053a971d1e9e3c68c05c46ff}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{ATAPE_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{ATAPE_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{ATAPE_8c_a71eb31c84997c0822663e9391c14d998}{}\label{ATAPE_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isv1\+\_\+@{isv1\+\_\+}}
+\index{isv1\+\_\+@{isv1\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+}{isv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv1\+\_\+}\hypertarget{ATAPE_8c_ac43c2e81755b1366d91efa4cb457a1ce}{}\label{ATAPE_8c_ac43c2e81755b1366d91efa4cb457a1ce}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isv\+\_\+@{isv\+\_\+}}
+\index{isv\+\_\+@{isv\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+}{isv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv\+\_\+}\hypertarget{ATAPE_8c_a4557cee11c7f2a094156e47d77d15ad3}{}\label{ATAPE_8c_a4557cee11c7f2a094156e47d77d15ad3}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!isvfl@{isvfl}}
+\index{isvfl@{isvfl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{isvfl}{isvfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer isvfl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a69d12d072150ac44e875ee991d8977f9}{}\label{ATAPE_8c_a69d12d072150ac44e875ee991d8977f9}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!it@{it}}
+\index{it@{it}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{ATAPE_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{ATAPE_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!itlon@{itlon}}
+\index{itlon@{itlon}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{itlon}{itlon}}]{\setlength{\rightskip}{0pt plus 5cm}integer itlon\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ab9c16758977bf15e0118791ac83246a1}{}\label{ATAPE_8c_ab9c16758977bf15e0118791ac83246a1}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!itop@{itop}}
+\index{itop@{itop}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{itop}{itop}}]{\setlength{\rightskip}{0pt plus 5cm}integer itop\mbox{[}96\mbox{]}}\hypertarget{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{}\label{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}
+
+
+Definition at line 124 of file A\+T\+A\+P\+E.\+c.
+
+
+
+Referenced by apt109\+\_\+(), balscn\+\_\+(), balsrf\+\_\+(), cmesh\+\_\+(), dgeom\+\_\+(), evalss\+\_\+(), gop\+\_\+(), midpnt\+\_\+(), pro027\+\_\+(), srfcom\+\_\+(), sspict\+\_\+(), and topgen\+\_\+().
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!itseg@{itseg}}
+\index{itseg@{itseg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{itseg}{itseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer itseg\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a69f16ad43b2d69c2a5523493a25092a6}{}\label{ATAPE_8c_a69f16ad43b2d69c2a5523493a25092a6}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!itsegk@{itsegk}}
+\index{itsegk@{itsegk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{itsegk}{itsegk}}]{\setlength{\rightskip}{0pt plus 5cm}integer itsegk\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a0365571ddfd59f3b0b636c72a4e09742}{}\label{ATAPE_8c_a0365571ddfd59f3b0b636c72a4e09742}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!iunfl@{iunfl}}
+\index{iunfl@{iunfl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{iunfl}{iunfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iunfl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ad01cb824e786c997cae01775374c6ace}{}\label{ATAPE_8c_ad01cb824e786c997cae01775374c6ace}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j20@{j20}}
+\index{j20@{j20}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j20}{j20}}]{\setlength{\rightskip}{0pt plus 5cm}integer j20\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ab5e196a210774e8188a9adc08fab5675}{}\label{ATAPE_8c_ab5e196a210774e8188a9adc08fab5675}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j21@{j21}}
+\index{j21@{j21}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j21}{j21}}]{\setlength{\rightskip}{0pt plus 5cm}integer j21\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a71bea2c042deec0e209e8c6b819bb7f8}{}\label{ATAPE_8c_a71bea2c042deec0e209e8c6b819bb7f8}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j22@{j22}}
+\index{j22@{j22}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j22}{j22}}]{\setlength{\rightskip}{0pt plus 5cm}integer j22\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{}\label{ATAPE_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j23@{j23}}
+\index{j23@{j23}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j23}{j23}}]{\setlength{\rightskip}{0pt plus 5cm}integer j23\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a8965b32ed9d3092eb5279607f8dc835b}{}\label{ATAPE_8c_a8965b32ed9d3092eb5279607f8dc835b}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j50@{j50}}
+\index{j50@{j50}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j50}{j50}}]{\setlength{\rightskip}{0pt plus 5cm}integer j50\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{}\label{ATAPE_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!j51@{j51}}
+\index{j51@{j51}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{j51}{j51}}]{\setlength{\rightskip}{0pt plus 5cm}integer j51\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aaf9771df39ea6eb440d196395622d970}{}\label{ATAPE_8c_aaf9771df39ea6eb440d196395622d970}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{ATAPE_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{ATAPE_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jent@{jent}}
+\index{jent@{jent}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jent}{jent}}]{\setlength{\rightskip}{0pt plus 5cm}integer jent\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{}\label{ATAPE_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jiops@{jiops}}
+\index{jiops@{jiops}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jiops}{jiops}}]{\setlength{\rightskip}{0pt plus 5cm}integer jiops\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_af70b7cc90fdc72684506b074764f24d3}{}\label{ATAPE_8c_af70b7cc90fdc72684506b074764f24d3}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jph@{jph}}
+\index{jph@{jph}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jph}{jph}}]{\setlength{\rightskip}{0pt plus 5cm}integer jph\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_af639d946bee2fc95e223cbba2f6f6f59}{}\label{ATAPE_8c_af639d946bee2fc95e223cbba2f6f6f59}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{ATAPE_8c_a10effd66f46b95c77726e50c3d371477}{}\label{ATAPE_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jtlflg@{jtlflg}}
+\index{jtlflg@{jtlflg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jtlflg}{jtlflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtlflg\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a9e8f1743a1265c0508b32682a31dbe13}{}\label{ATAPE_8c_a9e8f1743a1265c0508b32682a31dbe13}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!jtn@{jtn}}
+\index{jtn@{jtn}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{jtn}{jtn}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtn\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a27bfdec33da656b3e0afaa8b256d465c}{}\label{ATAPE_8c_a27bfdec33da656b3e0afaa8b256d465c}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ju1@{ju1}}
+\index{ju1@{ju1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ju1}{ju1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ju1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a9d5a9d53b0b600853a83109858c7aa7a}{}\label{ATAPE_8c_a9d5a9d53b0b600853a83109858c7aa7a}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k0@{k0}}
+\index{k0@{k0}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k0}{k0}}]{\setlength{\rightskip}{0pt plus 5cm}integer k0}\hypertarget{ATAPE_8c_a13677e8ba227917ca91f45226e0d3901}{}\label{ATAPE_8c_a13677e8ba227917ca91f45226e0d3901}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k1@{k1}}
+\index{k1@{k1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k1}{k1}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1}\hypertarget{ATAPE_8c_a655a1c80f1168ad6f053d6b007c2c213}{}\label{ATAPE_8c_a655a1c80f1168ad6f053d6b007c2c213}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k10@{k10}}
+\index{k10@{k10}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k10}{k10}}]{\setlength{\rightskip}{0pt plus 5cm}integer k10}\hypertarget{ATAPE_8c_a07f3fe8797e442c47bdf306bd8b35048}{}\label{ATAPE_8c_a07f3fe8797e442c47bdf306bd8b35048}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k1013@{k1013}}
+\index{k1013@{k1013}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k1013}{k1013}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1013}\hypertarget{ATAPE_8c_aec5c3e1b9188ab217a8f279b765ae33e}{}\label{ATAPE_8c_aec5c3e1b9188ab217a8f279b765ae33e}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k12@{k12}}
+\index{k12@{k12}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k12}{k12}}]{\setlength{\rightskip}{0pt plus 5cm}integer k12}\hypertarget{ATAPE_8c_a42e4e1be80d05c7bf76276703d1ffcbf}{}\label{ATAPE_8c_a42e4e1be80d05c7bf76276703d1ffcbf}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k13@{k13}}
+\index{k13@{k13}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k13}{k13}}]{\setlength{\rightskip}{0pt plus 5cm}integer k13}\hypertarget{ATAPE_8c_ac6a9481817364f5859074056e6b72045}{}\label{ATAPE_8c_ac6a9481817364f5859074056e6b72045}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k15@{k15}}
+\index{k15@{k15}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k15}{k15}}]{\setlength{\rightskip}{0pt plus 5cm}integer k15}\hypertarget{ATAPE_8c_a38659ef45de4861b45cfd4278df03219}{}\label{ATAPE_8c_a38659ef45de4861b45cfd4278df03219}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k16@{k16}}
+\index{k16@{k16}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k16}{k16}}]{\setlength{\rightskip}{0pt plus 5cm}integer k16}\hypertarget{ATAPE_8c_ad364fb849a04482c15fcc03b9f881017}{}\label{ATAPE_8c_ad364fb849a04482c15fcc03b9f881017}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k18@{k18}}
+\index{k18@{k18}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k18}{k18}}]{\setlength{\rightskip}{0pt plus 5cm}integer k18}\hypertarget{ATAPE_8c_ab01565338ee1b2e250f1cf4e702c7ec4}{}\label{ATAPE_8c_ab01565338ee1b2e250f1cf4e702c7ec4}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k19@{k19}}
+\index{k19@{k19}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k19}{k19}}]{\setlength{\rightskip}{0pt plus 5cm}integer k19}\hypertarget{ATAPE_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}{}\label{ATAPE_8c_ac3b5525bd8fa196ec1b01aa48bb9e5b6}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k1e4@{k1e4}}
+\index{k1e4@{k1e4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k1e4}{k1e4}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1e4}\hypertarget{ATAPE_8c_a33fee8be0fef4573e4671cddfd9dda7c}{}\label{ATAPE_8c_a33fee8be0fef4573e4671cddfd9dda7c}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k1e6@{k1e6}}
+\index{k1e6@{k1e6}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k1e6}{k1e6}}]{\setlength{\rightskip}{0pt plus 5cm}integer k1e6}\hypertarget{ATAPE_8c_a78581c927af2b13d7b9bbc9dcd710e0a}{}\label{ATAPE_8c_a78581c927af2b13d7b9bbc9dcd710e0a}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k2@{k2}}
+\index{k2@{k2}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k2}{k2}}]{\setlength{\rightskip}{0pt plus 5cm}integer k2}\hypertarget{ATAPE_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}{}\label{ATAPE_8c_a51fff933b2104a0c09f1bdf2b7cd66f1}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k23@{k23}}
+\index{k23@{k23}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k23}{k23}}]{\setlength{\rightskip}{0pt plus 5cm}integer k23}\hypertarget{ATAPE_8c_a67c7f5e745cc5c87641ed7ab6ed03903}{}\label{ATAPE_8c_a67c7f5e745cc5c87641ed7ab6ed03903}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k24@{k24}}
+\index{k24@{k24}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k24}{k24}}]{\setlength{\rightskip}{0pt plus 5cm}integer k24}\hypertarget{ATAPE_8c_a6c8801a0c24128524808626f23c83534}{}\label{ATAPE_8c_a6c8801a0c24128524808626f23c83534}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k25@{k25}}
+\index{k25@{k25}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k25}{k25}}]{\setlength{\rightskip}{0pt plus 5cm}integer k25}\hypertarget{ATAPE_8c_a3972e8edc94bf990b8385833d7773994}{}\label{ATAPE_8c_a3972e8edc94bf990b8385833d7773994}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k26@{k26}}
+\index{k26@{k26}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k26}{k26}}]{\setlength{\rightskip}{0pt plus 5cm}integer k26}\hypertarget{ATAPE_8c_a603cc5680e6e6b99afcc067ab006838e}{}\label{ATAPE_8c_a603cc5680e6e6b99afcc067ab006838e}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k27@{k27}}
+\index{k27@{k27}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k27}{k27}}]{\setlength{\rightskip}{0pt plus 5cm}integer k27}\hypertarget{ATAPE_8c_a3224d57413c1ca0f52246767baaca01e}{}\label{ATAPE_8c_a3224d57413c1ca0f52246767baaca01e}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k29@{k29}}
+\index{k29@{k29}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k29}{k29}}]{\setlength{\rightskip}{0pt plus 5cm}integer k29}\hypertarget{ATAPE_8c_ab54bc0ad9982243ba0e73e713878b659}{}\label{ATAPE_8c_ab54bc0ad9982243ba0e73e713878b659}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k3@{k3}}
+\index{k3@{k3}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k3}{k3}}]{\setlength{\rightskip}{0pt plus 5cm}integer k3}\hypertarget{ATAPE_8c_a3866972f3ea150072127b2201402d9d4}{}\label{ATAPE_8c_a3866972f3ea150072127b2201402d9d4}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k30@{k30}}
+\index{k30@{k30}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k30}{k30}}]{\setlength{\rightskip}{0pt plus 5cm}integer k30}\hypertarget{ATAPE_8c_a0df4216958f1b812fafd7c5aca19f0e2}{}\label{ATAPE_8c_a0df4216958f1b812fafd7c5aca19f0e2}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k31@{k31}}
+\index{k31@{k31}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k31}{k31}}]{\setlength{\rightskip}{0pt plus 5cm}integer k31}\hypertarget{ATAPE_8c_ad095380d9a72dcd452b64020fc4957e0}{}\label{ATAPE_8c_ad095380d9a72dcd452b64020fc4957e0}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k32@{k32}}
+\index{k32@{k32}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k32}{k32}}]{\setlength{\rightskip}{0pt plus 5cm}integer k32}\hypertarget{ATAPE_8c_a86b7e9432a6c1b7f61a88051851b24be}{}\label{ATAPE_8c_a86b7e9432a6c1b7f61a88051851b24be}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k33@{k33}}
+\index{k33@{k33}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k33}{k33}}]{\setlength{\rightskip}{0pt plus 5cm}integer k33}\hypertarget{ATAPE_8c_adf6b3def53640bafe1e81e9c52c28a34}{}\label{ATAPE_8c_adf6b3def53640bafe1e81e9c52c28a34}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k34@{k34}}
+\index{k34@{k34}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k34}{k34}}]{\setlength{\rightskip}{0pt plus 5cm}integer k34}\hypertarget{ATAPE_8c_aec13dcc4a3284eeb2691c803d6054add}{}\label{ATAPE_8c_aec13dcc4a3284eeb2691c803d6054add}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k4@{k4}}
+\index{k4@{k4}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k4}{k4}}]{\setlength{\rightskip}{0pt plus 5cm}integer k4}\hypertarget{ATAPE_8c_acb95ee3962e080a7bd4b1803f0e5b523}{}\label{ATAPE_8c_acb95ee3962e080a7bd4b1803f0e5b523}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k44@{k44}}
+\index{k44@{k44}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k44}{k44}}]{\setlength{\rightskip}{0pt plus 5cm}integer k44}\hypertarget{ATAPE_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}{}\label{ATAPE_8c_aa15ff27f30c8b75b691e4db9fb7b1c2a}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k45@{k45}}
+\index{k45@{k45}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k45}{k45}}]{\setlength{\rightskip}{0pt plus 5cm}integer k45}\hypertarget{ATAPE_8c_a782a3eba88202041c8c249663f4548f3}{}\label{ATAPE_8c_a782a3eba88202041c8c249663f4548f3}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k46@{k46}}
+\index{k46@{k46}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k46}{k46}}]{\setlength{\rightskip}{0pt plus 5cm}integer k46}\hypertarget{ATAPE_8c_ae0697d44870d385f3a5a921e241a6571}{}\label{ATAPE_8c_ae0697d44870d385f3a5a921e241a6571}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k47@{k47}}
+\index{k47@{k47}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k47}{k47}}]{\setlength{\rightskip}{0pt plus 5cm}integer k47}\hypertarget{ATAPE_8c_a9a6acf2b9128519edae03effd959fdce}{}\label{ATAPE_8c_a9a6acf2b9128519edae03effd959fdce}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k48@{k48}}
+\index{k48@{k48}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k48}{k48}}]{\setlength{\rightskip}{0pt plus 5cm}integer k48}\hypertarget{ATAPE_8c_a66c948e011f45b91f275757881efab87}{}\label{ATAPE_8c_a66c948e011f45b91f275757881efab87}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k5@{k5}}
+\index{k5@{k5}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k5}{k5}}]{\setlength{\rightskip}{0pt plus 5cm}integer k5}\hypertarget{ATAPE_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}{}\label{ATAPE_8c_a087d0aedc47af2f1ed5cf7c163ba34bf}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k50@{k50}}
+\index{k50@{k50}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k50}{k50}}]{\setlength{\rightskip}{0pt plus 5cm}integer k50}\hypertarget{ATAPE_8c_a245c8290483ddfb55991fdb8dd2db544}{}\label{ATAPE_8c_a245c8290483ddfb55991fdb8dd2db544}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k51@{k51}}
+\index{k51@{k51}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k51}{k51}}]{\setlength{\rightskip}{0pt plus 5cm}integer k51}\hypertarget{ATAPE_8c_af50475a68a63f0f722752c6ee53e2fa9}{}\label{ATAPE_8c_af50475a68a63f0f722752c6ee53e2fa9}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k52@{k52}}
+\index{k52@{k52}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k52}{k52}}]{\setlength{\rightskip}{0pt plus 5cm}integer k52}\hypertarget{ATAPE_8c_acfe975e1d64237134dbad03554d161fe}{}\label{ATAPE_8c_acfe975e1d64237134dbad03554d161fe}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k6@{k6}}
+\index{k6@{k6}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k6}{k6}}]{\setlength{\rightskip}{0pt plus 5cm}integer k6}\hypertarget{ATAPE_8c_a9d2169cf4480bef94ed0a8314b8db1dd}{}\label{ATAPE_8c_a9d2169cf4480bef94ed0a8314b8db1dd}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k7@{k7}}
+\index{k7@{k7}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k7}{k7}}]{\setlength{\rightskip}{0pt plus 5cm}integer k7}\hypertarget{ATAPE_8c_a24f68e08b66e38de783a4e6b4eceddab}{}\label{ATAPE_8c_a24f68e08b66e38de783a4e6b4eceddab}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k8@{k8}}
+\index{k8@{k8}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k8}{k8}}]{\setlength{\rightskip}{0pt plus 5cm}integer k8}\hypertarget{ATAPE_8c_ab053f60993666d2c1a5b0e9e2bba9046}{}\label{ATAPE_8c_ab053f60993666d2c1a5b0e9e2bba9046}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!k9@{k9}}
+\index{k9@{k9}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{k9}{k9}}]{\setlength{\rightskip}{0pt plus 5cm}integer k9}\hypertarget{ATAPE_8c_a5826c29dac15034ea8d3c4e6e2465665}{}\label{ATAPE_8c_a5826c29dac15034ea8d3c4e6e2465665}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!km1@{km1}}
+\index{km1@{km1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{km1}{km1}}]{\setlength{\rightskip}{0pt plus 5cm}integer km1}\hypertarget{ATAPE_8c_a8df3536c5500bc8b920c38503103b6bd}{}\label{ATAPE_8c_a8df3536c5500bc8b920c38503103b6bd}
+
+
+Definition at line 100 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!knumbr\+\_\+@{knumbr\+\_\+}}
+\index{knumbr\+\_\+@{knumbr\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{knumbr\+\_\+}{knumbr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   knumbr\+\_\+}\hypertarget{ATAPE_8c_a196d91570033f2b9bf96784c36c667ee}{}\label{ATAPE_8c_a196d91570033f2b9bf96784c36c667ee}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ldafil@{ldafil}}
+\index{ldafil@{ldafil}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ldafil}{ldafil}}]{\setlength{\rightskip}{0pt plus 5cm}integer ldafil}\hypertarget{ATAPE_8c_a4cb305c5d8a1eb7821f909e3dc084a61}{}\label{ATAPE_8c_a4cb305c5d8a1eb7821f909e3dc084a61}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!libfil@{libfil}}
+\index{libfil@{libfil}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{libfil}{libfil}}]{\setlength{\rightskip}{0pt plus 5cm}integer libfil}\hypertarget{ATAPE_8c_ad829ddcda53f4e5233c7381f9354668e}{}\label{ATAPE_8c_ad829ddcda53f4e5233c7381f9354668e}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!limfl@{limfl}}
+\index{limfl@{limfl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{limfl}{limfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer limfl\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a7a26ee648d4eb235d68b74eb27698f51}{}\label{ATAPE_8c_a7a26ee648d4eb235d68b74eb27698f51}
+
+
+Definition at line 74 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{ATAPE_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{ATAPE_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{ATAPE_8c_a15ffd813a44621365b809bd790efc487}{}\label{ATAPE_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!mactxt@{mactxt}}
+\index{mactxt@{mactxt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{mactxt}{mactxt}}]{\setlength{\rightskip}{0pt plus 5cm}integer mactxt}\hypertarget{ATAPE_8c_aed8fdcf66fd5c92431e15898d589db20}{}\label{ATAPE_8c_aed8fdcf66fd5c92431e15898d589db20}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{ATAPE_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{ATAPE_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{ATAPE_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{ATAPE_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 27 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{ATAPE_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{ATAPE_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!msav@{msav}}
+\index{msav@{msav}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{ATAPE_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{ATAPE_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{ATAPE_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{ATAPE_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nfil12@{nfil12}}
+\index{nfil12@{nfil12}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nfil12}{nfil12}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil12}\hypertarget{ATAPE_8c_acfa8e75a828f2e7d679bb2754afd830e}{}\label{ATAPE_8c_acfa8e75a828f2e7d679bb2754afd830e}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nfil13@{nfil13}}
+\index{nfil13@{nfil13}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nfil13}{nfil13}}]{\setlength{\rightskip}{0pt plus 5cm}integer nfil13}\hypertarget{ATAPE_8c_a48deaa059b771bd60708ed9dfce4c912}{}\label{ATAPE_8c_a48deaa059b771bd60708ed9dfce4c912}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{ATAPE_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{ATAPE_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{ATAPE_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{ATAPE_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!notan@{notan}}
+\index{notan@{notan}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{notan}{notan}}]{\setlength{\rightskip}{0pt plus 5cm}integer notan\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a3bf651bea75c52977866902524484444}{}\label{ATAPE_8c_a3bf651bea75c52977866902524484444}
+
+
+Definition at line 83 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{ATAPE_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{ATAPE_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!numax@{numax}}
+\index{numax@{numax}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{ATAPE_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{ATAPE_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{ATAPE_8c_a5123b60c8419619c6c2debf212d28208}{}\label{ATAPE_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nump@{nump}}
+\index{nump@{nump}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{ATAPE_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{ATAPE_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{ATAPE_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{ATAPE_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{ATAPE_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{ATAPE_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{ATAPE_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{ATAPE_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nw@{nw}}
+\index{nw@{nw}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{ATAPE_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{ATAPE_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{ATAPE_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{ATAPE_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 90 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!past@{past}}
+\index{past@{past}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{past}{past}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal past\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aae4751b2b0e0fe3b5f62f710ef406288}{}\label{ATAPE_8c_aae4751b2b0e0fe3b5f62f710ef406288}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!plncs@{plncs}}
+\index{plncs@{plncs}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{plncs}{plncs}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plncs\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}{}\label{ATAPE_8c_a8b1c6f6a15eaa5eee893d9d0359422e1}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!plnd@{plnd}}
+\index{plnd@{plnd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{plnd}{plnd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_ae9d5f1bcba61472b35fba9e981c5b18c}{}\label{ATAPE_8c_ae9d5f1bcba61472b35fba9e981c5b18c}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!plnd1@{plnd1}}
+\index{plnd1@{plnd1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{plnd1}{plnd1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnd1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a92d5298997ed1dcb1f9a65bc9126dd52}{}\label{ATAPE_8c_a92d5298997ed1dcb1f9a65bc9126dd52}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!plnv@{plnv}}
+\index{plnv@{plnv}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{plnv}{plnv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal plnv\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_abcbe27eb4ab55c21433ba237b064da23}{}\label{ATAPE_8c_abcbe27eb4ab55c21433ba237b064da23}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pltst@{pltst}}
+\index{pltst@{pltst}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pltst}{pltst}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pltst\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_acc41d3833fec2bd10e8f654e00d49fa6}{}\label{ATAPE_8c_acc41d3833fec2bd10e8f654e00d49fa6}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{ATAPE_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pnchfl@{pnchfl}}
+\index{pnchfl@{pnchfl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pnchfl}{pnchfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer pnchfl}\hypertarget{ATAPE_8c_aa40a3978f58427a7b46a99170d89a14e}{}\label{ATAPE_8c_aa40a3978f58427a7b46a99170d89a14e}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pntvct@{pntvct}}
+\index{pntvct@{pntvct}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pntvct}{pntvct}}]{\setlength{\rightskip}{0pt plus 5cm}char pntvct\mbox{[}72\mbox{]}}\hypertarget{ATAPE_8c_a21b4d3b67daa089f65066dcd95e488a3}{}\label{ATAPE_8c_a21b4d3b67daa089f65066dcd95e488a3}
+
+
+Definition at line 139 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pofile@{pofile}}
+\index{pofile@{pofile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pofile}{pofile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pofile}\hypertarget{ATAPE_8c_af29300e691e97a062da856325402d3e9}{}\label{ATAPE_8c_af29300e691e97a062da856325402d3e9}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!pxfile@{pxfile}}
+\index{pxfile@{pxfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{pxfile}{pxfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer pxfile}\hypertarget{ATAPE_8c_a47b1ab5804a9001f0f191de6fd7c98ab}{}\label{ATAPE_8c_a47b1ab5804a9001f0f191de6fd7c98ab}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ra@{ra}}
+\index{ra@{ra}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{ATAPE_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{ATAPE_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!rc@{rc}}
+\index{rc@{rc}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{rc}{rc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a8fafde5aff46b55bddfc42a93803fffc}{}\label{ATAPE_8c_a8fafde5aff46b55bddfc42a93803fffc}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{ATAPE_8c_abed92b12a9406febedd1333e63fac677}{}\label{ATAPE_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ri@{ri}}
+\index{ri@{ri}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{ATAPE_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!s@{s}}
+\index{s@{s}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal s\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{}\label{ATAPE_8c_a5422687d8f9c4b1da3d7a65d7535fa60}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{ATAPE_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{ATAPE_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!save@{save}}
+\index{save@{save}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{save}{save}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal save\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aade1308b2b48aaa8db461e4665eb7e19}{}\label{ATAPE_8c_aade1308b2b48aaa8db461e4665eb7e19}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sfvct@{sfvct}}
+\index{sfvct@{sfvct}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sfvct}{sfvct}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sfvct\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a6a6f46271f4c2c8e68568b8bee68f673}{}\label{ATAPE_8c_a6a6f46271f4c2c8e68568b8bee68f673}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sk@{sk}}
+\index{sk@{sk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sk}{sk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sk\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a2fa00cfd358735b40f5b16a114238bdc}{}\label{ATAPE_8c_a2fa00cfd358735b40f5b16a114238bdc}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!slx@{slx}}
+\index{slx@{slx}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{slx}{slx}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal slx\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_ad5ff78be6acc9653b09598f6df0c1522}{}\label{ATAPE_8c_ad5ff78be6acc9653b09598f6df0c1522}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sn@{sn}}
+\index{sn@{sn}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sn}{sn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sn\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_affaf74dabdb513fe55fa48a1091a82f0}{}\label{ATAPE_8c_affaf74dabdb513fe55fa48a1091a82f0}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!snk@{snk}}
+\index{snk@{snk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{snk}{snk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snk\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_aa584da8857a16c65bd611d5b5686d8ec}{}\label{ATAPE_8c_aa584da8857a16c65bd611d5b5686d8ec}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!snl@{snl}}
+\index{snl@{snl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{snl}{snl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snl\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a4c96f9ead3daa534244888dd312b3595}{}\label{ATAPE_8c_a4c96f9ead3daa534244888dd312b3595}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sp@{sp}}
+\index{sp@{sp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sp}{sp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sp\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_ae1ea305557352179a5595123e4f7bef9}{}\label{ATAPE_8c_ae1ea305557352179a5595123e4f7bef9}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!spk@{spk}}
+\index{spk@{spk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{spk}{spk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spk\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a5eb35651944d7d53ca1371c8f4403522}{}\label{ATAPE_8c_a5eb35651944d7d53ca1371c8f4403522}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!spl@{spl}}
+\index{spl@{spl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{spl}{spl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spl\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a032b8e76f8a4cec214831255a4b77e7a}{}\label{ATAPE_8c_a032b8e76f8a4cec214831255a4b77e7a}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ssarlm\+\_\+@{ssarlm\+\_\+}}
+\index{ssarlm\+\_\+@{ssarlm\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+}{ssarlm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssarlm\+\_\+}\hypertarget{ATAPE_8c_ab486be345408cca8daf44809908207be}{}\label{ATAPE_8c_ab486be345408cca8daf44809908207be}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!stck@{stck}}
+\index{stck@{stck}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{stck}{stck}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a0c07ccb74eb243d4d456e818d258bce8}{}\label{ATAPE_8c_a0c07ccb74eb243d4d456e818d258bce8}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!stck1@{stck1}}
+\index{stck1@{stck1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{stck1}{stck1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}{}\label{ATAPE_8c_a5870b4df716a6a5f15e382d9cc1bdcd8}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!stck2@{stck2}}
+\index{stck2@{stck2}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{stck2}{stck2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stck2\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a4b0340102da75d0c19859ea11879a4f4}{}\label{ATAPE_8c_a4b0340102da75d0c19859ea11879a4f4}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!stckn@{stckn}}
+\index{stckn@{stckn}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{stckn}{stckn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal stckn\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a94fa54ae2c242297cc118d31155ab356}{}\label{ATAPE_8c_a94fa54ae2c242297cc118d31155ab356}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{ATAPE_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{ATAPE_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!surd@{surd}}
+\index{surd@{surd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{ATAPE_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{ATAPE_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sv1\+\_\+@{sv1\+\_\+}}
+\index{sv1\+\_\+@{sv1\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sv1\+\_\+}{sv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv1\+\_\+}\hypertarget{ATAPE_8c_a36f18f88242aab17736f94979e6f1b3a}{}\label{ATAPE_8c_a36f18f88242aab17736f94979e6f1b3a}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!sv\+\_\+@{sv\+\_\+}}
+\index{sv\+\_\+@{sv\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{sv\+\_\+}{sv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sv\+\_\+}\hypertarget{ATAPE_8c_a7cde9c952b2e0400388110049a63851d}{}\label{ATAPE_8c_a7cde9c952b2e0400388110049a63851d}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!symfil\+\_\+@{symfil\+\_\+}}
+\index{symfil\+\_\+@{symfil\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{symfil\+\_\+}{symfil_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   symfil\+\_\+}\hypertarget{ATAPE_8c_a78d7eac58be7f41613a2d4faff0bf5c1}{}\label{ATAPE_8c_a78d7eac58be7f41613a2d4faff0bf5c1}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ta@{ta}}
+\index{ta@{ta}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_aa38365a06b4e51426459eba3db71f888}{}\label{ATAPE_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tak@{tak}}
+\index{tak@{tak}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{ATAPE_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tal@{tal}}
+\index{tal@{tal}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{ATAPE_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{ATAPE_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{ATAPE_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tau@{tau}}
+\index{tau@{tau}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tau}{tau}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a3ef97769b90b935351a0da2c5c17f1ba}{}\label{ATAPE_8c_a3ef97769b90b935351a0da2c5c17f1ba}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tau1@{tau1}}
+\index{tau1@{tau1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tau1}{tau1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau1\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a3293541b256a7b52a653b554ec1eef71}{}\label{ATAPE_8c_a3293541b256a7b52a653b554ec1eef71}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tau2@{tau2}}
+\index{tau2@{tau2}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tau2}{tau2}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tau2\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a7cc16120d8b89a97df6d011487794d7a}{}\label{ATAPE_8c_a7cc16120d8b89a97df6d011487794d7a}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{ATAPE_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{ATAPE_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!te@{te}}
+\index{te@{te}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{ATAPE_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tee@{tee}}
+\index{tee@{tee}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tee}{tee}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tee\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a5ca1f63566c2594f3e3868b91d997b73}{}\label{ATAPE_8c_a5ca1f63566c2594f3e3868b91d997b73}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tek@{tek}}
+\index{tek@{tek}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{ATAPE_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tel@{tel}}
+\index{tel@{tel}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{ATAPE_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tem@{tem}}
+\index{tem@{tem}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{ATAPE_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{ATAPE_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!temp@{temp}}
+\index{temp@{temp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{ATAPE_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{ATAPE_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!th@{th}}
+\index{th@{th}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{th}{th}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal th\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a5e192eb5193c9ab9e167e2554641adad}{}\label{ATAPE_8c_a5e192eb5193c9ab9e167e2554641adad}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!ti@{ti}}
+\index{ti@{ti}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{ATAPE_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tifile@{tifile}}
+\index{tifile@{tifile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tifile}{tifile}}]{\setlength{\rightskip}{0pt plus 5cm}integer tifile}\hypertarget{ATAPE_8c_a612f7f636c55ad04a9dbd5a4358ce415}{}\label{ATAPE_8c_a612f7f636c55ad04a9dbd5a4358ce415}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tik@{tik}}
+\index{tik@{tik}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{ATAPE_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!til@{til}}
+\index{til@{til}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{ATAPE_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{ATAPE_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{ATAPE_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{ATAPE_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{ATAPE_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{ATAPE_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{ATAPE_8c_a156390938abff3c4799f538f075e03cc}{}\label{ATAPE_8c_a156390938abff3c4799f538f075e03cc}
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tm@{tm}}
+\index{tm@{tm}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{ATAPE_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{ATAPE_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tn@{tn}}
+\index{tn@{tn}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tn}{tn}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tn\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a66b316fa3299925e5c7630d5af6601fd}{}\label{ATAPE_8c_a66b316fa3299925e5c7630d5af6601fd}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tnl@{tnl}}
+\index{tnl@{tnl}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tnl}{tnl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tnl\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a51ea6eff10429675b532a43be770e881}{}\label{ATAPE_8c_a51ea6eff10429675b532a43be770e881}
+
+
+Definition at line 65 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!toolht@{toolht}}
+\index{toolht@{toolht}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{toolht}{toolht}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolht\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_ae71e1021e0fe5c37d631777a82ac9dfe}{}\label{ATAPE_8c_ae71e1021e0fe5c37d631777a82ac9dfe}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!toolwd@{toolwd}}
+\index{toolwd@{toolwd}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{toolwd}{toolwd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal toolwd\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_acfdd4327e78cee83f784e0081fd71ead}{}\label{ATAPE_8c_acfdd4327e78cee83f784e0081fd71ead}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tp@{tp}}
+\index{tp@{tp}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tp}{tp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tp\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}{}\label{ATAPE_8c_af8e40d0258b0b6b5a0da6cd9e63ecd99}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!tpk@{tpk}}
+\index{tpk@{tpk}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{tpk}{tpk}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tpk\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_acd57028107f202bf733ae94db320fd40}{}\label{ATAPE_8c_acd57028107f202bf733ae94db320fd40}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!u@{u}}
+\index{u@{u}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{u}{u}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u\mbox{[}4\mbox{]}}\hypertarget{ATAPE_8c_a583ff5a67861d749569ad340458545b3}{}\label{ATAPE_8c_a583ff5a67861d749569ad340458545b3}
+
+
+Definition at line 123 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!u1@{u1}}
+\index{u1@{u1}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{u1}{u1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a86f48fbc667fd3e391a5a60472a760d9}{}\label{ATAPE_8c_a86f48fbc667fd3e391a5a60472a760d9}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!u1k@{u1k}}
+\index{u1k@{u1k}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{u1k}{u1k}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal u1k\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_aef9f4548d89972753d95640b4cf4c502}{}\label{ATAPE_8c_aef9f4548d89972753d95640b4cf4c502}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!umax@{umax}}
+\index{umax@{umax}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{ATAPE_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{ATAPE_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 33 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!v@{v}}
+\index{v@{v}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{v}{v}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal v\mbox{[}4\mbox{]}}\hypertarget{ATAPE_8c_af55536577804116861fe726a6276718a}{}\label{ATAPE_8c_af55536577804116861fe726a6276718a}
+
+
+Definition at line 123 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!varble@{varble}}
+\index{varble@{varble}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{varble}{varble}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal varble\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_a6587d13eed8675f3bf2284fc673780f2}{}\label{ATAPE_8c_a6587d13eed8675f3bf2284fc673780f2}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!vlfile@{vlfile}}
+\index{vlfile@{vlfile}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{vlfile}{vlfile}}]{\setlength{\rightskip}{0pt plus 5cm}integer vlfile}\hypertarget{ATAPE_8c_a80878dca58769a8039af3f4bf041a2a1}{}\label{ATAPE_8c_a80878dca58769a8039af3f4bf041a2a1}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!vndir@{vndir}}
+\index{vndir@{vndir}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{vndir}{vndir}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vndir\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a76207f20e8ae300641df122e994c2374}{}\label{ATAPE_8c_a76207f20e8ae300641df122e994c2374}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!vt@{vt}}
+\index{vt@{vt}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{vt}{vt}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vt\mbox{[}15\mbox{]}}\hypertarget{ATAPE_8c_a20c7b8bac268c28674d17aa05f813d9f}{}\label{ATAPE_8c_a20c7b8bac268c28674d17aa05f813d9f}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{ATAPE_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{ATAPE_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 18 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!xcan@{xcan}}
+\index{xcan@{xcan}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{xcan}{xcan}}]{\setlength{\rightskip}{0pt plus 5cm}integer xcan}\hypertarget{ATAPE_8c_a25753cd64d8deeee31becd6c6b5cd12f}{}\label{ATAPE_8c_a25753cd64d8deeee31becd6c6b5cd12f}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!xnum@{xnum}}
+\index{xnum@{xnum}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{xnum}{xnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer xnum}\hypertarget{ATAPE_8c_ad0b3f31f2da255a8cb418eb88c42b143}{}\label{ATAPE_8c_ad0b3f31f2da255a8cb418eb88c42b143}
+
+
+Definition at line 108 of file A\+T\+A\+P\+E.\+c.
+
+\index{A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}!z\+\_\+\+\_\+@{z\+\_\+\+\_\+}}
+\index{z\+\_\+\+\_\+@{z\+\_\+\+\_\+}!A\+T\+A\+P\+E.\+c@{A\+T\+A\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{z\+\_\+\+\_\+}{z__}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal z\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{ATAPE_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}{}\label{ATAPE_8c_aab1b0d34bb1ba99f54e0dc0ca969ae83}
+
+
+Definition at line 48 of file A\+T\+A\+P\+E.\+c.
+

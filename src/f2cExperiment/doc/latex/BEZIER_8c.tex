@@ -1,0 +1,201 @@
+\hypertarget{BEZIER_8c}{}\section{B\+E\+Z\+I\+E\+R.\+c File Reference}
+\label{BEZIER_8c}\index{B\+E\+Z\+I\+E\+R.\+c@{B\+E\+Z\+I\+E\+R.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+E\+Z\+I\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{BEZIER_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BEZIER_8c_aba412c45bd506cf989411d0738311f2c}{bezier\+\_\+} (doublereal $\ast$bin, doublereal $\ast$out, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+E\+Z\+I\+E\+R.\+c@{B\+E\+Z\+I\+E\+R.\+c}!bezier\+\_\+@{bezier\+\_\+}}
+\index{bezier\+\_\+@{bezier\+\_\+}!B\+E\+Z\+I\+E\+R.\+c@{B\+E\+Z\+I\+E\+R.\+c}}
+\subsubsection[{\texorpdfstring{bezier\+\_\+(doublereal $\ast$bin, doublereal $\ast$out, integer $\ast$irr)}{bezier_(doublereal *bin, doublereal *out, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int bezier\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{bin, }
+\item[{doublereal $\ast$}]{out, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{BEZIER_8c_aba412c45bd506cf989411d0738311f2c}{}\label{BEZIER_8c_aba412c45bd506cf989411d0738311f2c}
+
+
+Definition at line 18 of file B\+E\+Z\+I\+E\+R.\+c.
+
+
+
+References d\+\_\+\+\_\+, f, i\+\_\+\+\_\+, ia, ib, in, j, k, w, and zero.
+
+
+
+Referenced by apt107\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Initialized data */}
+21 
+22     \textcolor{keyword}{static} doublereal smal = 1e-10;
+23     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+24 
+25     \textcolor{comment}{/* System generated locals */}
+26     doublereal d\_\_1;
+27 
+28     \textcolor{comment}{/* Local variables */}
+29     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+30     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+31     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+32     \textcolor{keyword}{static} integer \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}, \hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}, ja, jb, \hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in};
+33     \textcolor{keyword}{static} doublereal bout[48]  \textcolor{comment}{/* was [3][4][4] */};
+34     \textcolor{keyword}{static} integer icase;
+35 
+36     \textcolor{comment}{/* Parameter adjustments */}
+37     --out;
+38     bin -= 16;
+39 
+40     \textcolor{comment}{/* Function Body */}
+41     *irr = 0;
+42     icase = 1;
+43 \textcolor{comment}{/* ------ BEZIER INPUT IS FOUR PARALLEL STRINGS OF FOUR POINTS EACH */}
+44 \textcolor{comment}{/* -----EACH OF THESE FOUR POINT STRING DEFINES A CHARACTERISTIC POLYGON */}
+45 \textcolor{comment}{/* ------ UNDER CERTAIN CONDITIONS, THIS INPUT WILL DEFAULT TO A ZERO */}
+46 \textcolor{comment}{/* ------ TWIST PATCH (ICASE=2) OR A RULED PATCH(ICASE=3) */}
+47     icase = 1;
+48 \textcolor{comment}{/* ------ FIRST CHECK INPUT TO DETECT A ZERO TWIST DEFAULT */}
+49     \textcolor{keywordflow}{for} (ia = 2; ia <= 3; ++\hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}) \{
+50     \textcolor{keywordflow}{for} (ib = 2; ib <= 3; ++\hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}) \{
+51         \textcolor{keywordflow}{for} (ja = 2; ja <= 3; ++ja) \{
+52         \textcolor{keywordflow}{for} (jb = 2; jb <= 3; ++jb) \{
+53             d\_\_ = 0.f;
+54             \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+55 \textcolor{comment}{/* L20: */}
+56 \textcolor{comment}{/* Computing 2nd power */}
+57             d\_\_1 = bin[k + (ia + (ib << 2)) * 3] - bin[k + (ja + (
+58                 jb << 2)) * 3];
+59             d\_\_ += d\_\_1 * d\_\_1;
+60             \}
+61 \textcolor{comment}{/* ------ IF THE FOUR INTERIOR POINTS ARE IDENTICAL, SETUP ZERO TWISTS */}
+62             \textcolor{keywordflow}{if} (d\_\_ > smal) \{
+63             \textcolor{keywordflow}{goto} L100;
+64             \}
+65 \textcolor{comment}{/* L10: */}
+66         \}
+67         \}
+68     \}
+69     \}
+70     icase = 2;
+71 \textcolor{comment}{/* ------CHECK FURTHER FOR A RULED CONDITION */}
+72     \textcolor{keywordflow}{for} (ia = 1; ia <= 4; ia += 3) \{
+73     \textcolor{keywordflow}{for} (ib = 2; ib <= 3; ++\hyperlink{LDARD_8c_a8ae555962fe1fc188c45ff01dd417905}{ib}) \{
+74         \textcolor{keywordflow}{for} (ja = 1; ja <= 4; ja += 3) \{
+75         \textcolor{keywordflow}{for} (jb = 2; jb <= 3; ++jb) \{
+76             d\_\_ = 0.f;
+77             \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+78 \textcolor{comment}{/* L40: */}
+79 \textcolor{comment}{/* Computing 2nd power */}
+80             d\_\_1 = bin[k + (ia + (ib << 2)) * 3] - bin[k + (ja + (
+81                 jb << 2)) * 3];
+82             d\_\_ += d\_\_1 * d\_\_1;
+83             \}
+84             \textcolor{keywordflow}{if} (d\_\_ > smal) \{
+85             \textcolor{keywordflow}{goto} L100;
+86             \}
+87 \textcolor{comment}{/* L30: */}
+88         \}
+89         \}
+90     \}
+91     \}
+92 \textcolor{comment}{/* ------ 5TH THRY 12TH POINTS ARE IDENTICAL HENCE PATCG IS RULED */}
+93     icase = 3;
+94 L100:
+95 \textcolor{comment}{/* ------ NOW CREATE COONS CANONICAL FORM FOR PATCH */}
+96     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+97 \textcolor{comment}{/* ------ FIRST LOAD CORNER POINTS INTO COONS MATRIX (BOUT) */}
+98     bout[i\_\_ - 1] = bin[i\_\_ + 15];
+99     bout[i\_\_ + 2] = bin[i\_\_ + 24];
+100     bout[i\_\_ + 11] = bin[i\_\_ + 51];
+101     bout[i\_\_ + 14] = bin[i\_\_ + 60];
+102 \textcolor{comment}{/* ------ NOW LOAD FIRST DIRECTION (FD) TANGENTS INTO BOUT */}
+103     bout[i\_\_ + 5] = (bin[i\_\_ + 18] - bin[i\_\_ + 15]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+104     bout[i\_\_ + 8] = (bin[i\_\_ + 24] - bin[i\_\_ + 21]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+105     bout[i\_\_ + 17] = (bin[i\_\_ + 54] - bin[i\_\_ + 51]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+106     bout[i\_\_ + 20] = (bin[i\_\_ + 60] - bin[i\_\_ + 57]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+107     \textcolor{keywordflow}{if} (icase == 3) \{
+108         \textcolor{keywordflow}{goto} L200;
+109     \}
+110 \textcolor{comment}{/* ------ SETUP SECOND DIRECTION TANGENTS (SD) INTO COONS MATRIX(BOUT) */}
+111     bout[i\_\_ + 23] = (bin[i\_\_ + 27] - bin[i\_\_ + 15]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+112     bout[i\_\_ + 26] = (bin[i\_\_ + 36] - bin[i\_\_ + 24]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+113     bout[i\_\_ + 35] = (bin[i\_\_ + 51] - bin[i\_\_ + 39]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+114     bout[i\_\_ + 38] = (bin[i\_\_ + 60] - bin[i\_\_ + 48]) * 3.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+115     \textcolor{keywordflow}{if} (icase == 2) \{
+116         \textcolor{keywordflow}{goto} L130;
+117     \}
+118 \textcolor{comment}{/* ------ FINALLY LOAD TWIST VECTORS */}
+119     bout[i\_\_ + 29] = (bin[i\_\_ + 30] - bin[i\_\_ + 27] - bin[i\_\_ + 18] + bin[
+120         i\_\_ + 15]) * 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+121     bout[i\_\_ + 32] = (bin[i\_\_ + 36] - bin[i\_\_ + 33] - bin[i\_\_ + 24] + bin[
+122         i\_\_ + 21]) * 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+123     bout[i\_\_ + 41] = (bin[i\_\_ + 54] - bin[i\_\_ + 51] - bin[i\_\_ + 42] + bin[
+124         i\_\_ + 39]) * 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+125     bout[i\_\_ + 44] = (bin[i\_\_ + 60] - bin[i\_\_ + 57] - bin[i\_\_ + 48] + bin[
+126         i\_\_ + 45]) * 9.\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f};
+127     \textcolor{keywordflow}{goto} L120;
+128 \textcolor{comment}{/* ------ THE CASE OF ZERO TWISTS */}
+129 L130:
+130     \textcolor{keywordflow}{for} (j = 3; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+131         \textcolor{keywordflow}{for} (k = 3; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+132 \textcolor{comment}{/* L140: */}
+133         bout[i\_\_ + (j + (k << 2)) * 3 - 16] = 0.f;
+134         \}
+135     \}
+136     \textcolor{keywordflow}{goto} L120;
+137 L200:
+138     bout[i\_\_ + 23] = bin[i\_\_ + 51] - bin[i\_\_ + 15];
+139     bout[i\_\_ + 35] = bout[i\_\_ + 23];
+140     bout[i\_\_ + 26] = bin[i\_\_ + 60] - bin[i\_\_ + 24];
+141     bout[i\_\_ + 38] = bout[i\_\_ + 26];
+142     bout[i\_\_ + 29] = bout[i\_\_ + 17] - bout[i\_\_ + 5];
+143     bout[i\_\_ + 41] = bout[i\_\_ + 29];
+144     bout[i\_\_ + 32] = bout[i\_\_ + 20] - bout[i\_\_ + 8];
+145     bout[i\_\_ + 44] = bout[i\_\_ + 32];
+146 L120:
+147     ;
+148     \}
+149     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+150     \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+151         \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+152         in = (i\_\_ - 1 << 4) + (k - 1 << 2) + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+153         out[\hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in}] = bout[i\_\_ + (j + (k << 2)) * 3 - 16];
+154         w = out[\hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in}];
+155         w = abs(w);
+156         \textcolor{keywordflow}{if} (w < smal) \{
+157             out[\hyperlink{INIT_8c_a7cc019ad88e04ddd4d5ed8b80e8bd25d}{in}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+158         \}
+159 \textcolor{comment}{/* L220: */}
+160         \}
+161     \}
+162     \}
+163     \textcolor{keywordflow}{return} 0;
+164 \} \textcolor{comment}{/* bezier\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BEZIER_8c_aba412c45bd506cf989411d0738311f2c_icgraph}
+\end{center}
+\end{figure}
+
+

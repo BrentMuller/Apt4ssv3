@@ -1,0 +1,1761 @@
+\hypertarget{GOLOVO_8c}{}\section{G\+O\+L\+O\+V\+O.\+c File Reference}
+\label{GOLOVO_8c}\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+O\+L\+O\+V\+O.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{GOLOVO_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GOLOVO_8c_acc79429328b703ca60ff76b9028f00fc}{isv\+\_\+1}~\hyperlink{UNITS_8c_ad4fc6b0377370872427a6fbb7b79df28}{isv\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_abe3545b3957e92e0b5ff211b7d6f7616}{isv1\+\_\+1}~\hyperlink{UNITS_8c_a5f27fd0f62d6f96b62ae9fe3ceb00067}{isv1\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\+\_\+1}~\hyperlink{UTILTY_8c_a2a28c8a33355a15c62fcb675820fb9b5}{fxcor\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_a5d8742d837dd932468df10068bbc1875}{charct\+\_\+1}~\hyperlink{UTILTY_8c_a4f68575d3082686186aa602e62a5d127}{charct\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1}~\hyperlink{UTILTY_8c_adeac7642da781d763db60e61c6018f9e}{tlldat\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\+\_\+1}~\hyperlink{UTILTY_8c_ad834698ba51e42b9e5a167bfd8da1b64}{ifxcor\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}~\hyperlink{XNUMBR_8c_a2a3eec0f18d8617877d8210266fba452}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1}~\hyperlink{TLCONV_8c_af2554a06c6606c36c0403398413bc0e9}{plgol\+\_\+}
+\item 
+\#define \hyperlink{GOLOVO_8c_a0c70f3eec569d312526e4a92ee19abf4}{vl}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 4)
+\item 
+\#define \hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 10)
+\item 
+\#define \hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 11)
+\item 
+\#define \hyperlink{GOLOVO_8c_a5ba45740712660000cfa0d00672aea0c}{can}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLOVO_8c_acba14ef7f85d72e63b3471abc1c15236}{uva}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 1)
+\item 
+\#define \hyperlink{GOLOVO_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 2)
+\item 
+\#define \hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 3)
+\item 
+\#define \hyperlink{GOLOVO_8c_ac0a280dfbdae2e88edfbf16561dc7831}{iat}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 17)
+\item 
+\#define \hyperlink{GOLOVO_8c_a14e694bf128a0d68985bc7ba5db00fa5}{ipl1}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 20)
+\item 
+\#define \hyperlink{GOLOVO_8c_aee28fbbb48cac35060082382bb369f86}{ipl2}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 21)
+\item 
+\#define \hyperlink{GOLOVO_8c_ae3ad6cd796b0376a1d506f574e48162c}{incr}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 16)
+\item 
+\#define \hyperlink{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}{iart}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 12)
+\item 
+\#define \hyperlink{GOLOVO_8c_a42cf98e9ca5c149a8814939d05c9c875}{cosl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 16)
+\item 
+\#define \hyperlink{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{jart}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 17)
+\item 
+\#define \hyperlink{GOLOVO_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{sinl}~((doublereal $\ast$)\&\hyperlink{UTILTY_8c_ac473806d761bac6bbdc70810932acff0}{tlldat\+\_\+1} + 8)
+\item 
+\#define \hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word}~(equiv\+\_\+6)
+\item 
+\#define \hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 22)
+\item 
+\#define \hyperlink{GOLOVO_8c_a68d3ba380c16e286247bb69367760615}{canon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})
+\item 
+\#define \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword}~((integer $\ast$)equiv\+\_\+6)
+\item 
+\#define \hyperlink{GOLOVO_8c_a7fc306fc3938b6a40734f61e04446945}{ithru}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 19)
+\item 
+\#define \hyperlink{GOLOVO_8c_ab361c4637a4787c81d2d9059e7379b70}{istrt}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 18)
+\item 
+\#define \hyperlink{GOLOVO_8c_a2f226f15c00130b05db70054f6514916}{bcanon}~((doublereal $\ast$)\&\hyperlink{XNUMBR_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)
+\item 
+\#define \hyperlink{GOLOVO_8c_a149c5e1d9599b0d7e37cd720aa7d0354}{normal}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 15)
+\item 
+\#define \hyperlink{GOLOVO_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 13)
+\item 
+\#define \hyperlink{GOLOVO_8c_ab75be13d6d9ba70e2a9591121b408184}{mirror}~((integer $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1} + 14)
+\item 
+\#define \hyperlink{GOLOVO_8c_aa40a1175bb25725a6a022d07ca71fdc6}{uvcons}~((doublereal $\ast$)\&\hyperlink{TLCONV_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\+\_\+1})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GOLOVO_8c_a3e80c073c3693f10d4938cb41f91ca9d}{golovo\+\_\+} (doublereal $\ast$adress)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLOVO_8c_a013f46224a863d563c172ad966d9fe4c}{iafl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{icanon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{index} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a367d578680d6741b0eeea4c18126ac85}{indir\_\_} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_aca4c6ef2418548013d1f0ab199eb5e87}{iop} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a46fc792e9db2a4119bde6d3c50066efe}{iopset} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{ipl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a98035b4872e906175c3748d8671bcb41}{isfidn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_af06b6af8617105f43da7a0aef4a181d3}{isftyp} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a96c4543ff4eb51c15078a4a13a13d649}{isigcr} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a69d12d072150ac44e875ee991d8977f9}{isvfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_ab9c16758977bf15e0118791ac83246a1}{itlon} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a69f16ad43b2d69c2a5523493a25092a6}{itseg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_ad01cb824e786c997cae01775374c6ace}{iunfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{jent} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_af70b7cc90fdc72684506b074764f24d3}{jiops} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a9e8f1743a1265c0508b32682a31dbe13}{jtlflg} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a27bfdec33da656b3e0afaa8b256d465c}{jtn} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a9d5a9d53b0b600853a83109858c7aa7a}{ju1} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a7a26ee648d4eb235d68b74eb27698f51}{limfl} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a0365571ddfd59f3b0b636c72a4e09742}{itsegk} \mbox{[}5\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_a73d32ffc3a8ac93257f5793d65355f94}{isv\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLOVO_8c_ae6268067a45faf1f09717de826908b42}{ifar} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{ifl4} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_ab5e196a210774e8188a9adc08fab5675}{j20} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a71bea2c042deec0e209e8c6b819bb7f8}{j21} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{j22} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a8965b32ed9d3092eb5279607f8dc835b}{j23} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{j50} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_aaf9771df39ea6eb440d196395622d970}{j51} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_a3bf651bea75c52977866902524484444}{notan} \mbox{[}5\mbox{]}\\
+\>integer \hyperlink{GOLOVO_8c_af639d946bee2fc95e223cbba2f6f6f59}{jph} \mbox{[}5\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_a100af86bfbe03d6cea9017df7f2d9304}{isv1\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLOVO_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{ax4} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_afc3f8cc155039c18014392874c56ddb5}{cagl}\\
+\>doublereal \hyperlink{GOLOVO_8c_a711d4176df1307a457e6df05ebdef7a8}{cutdat} \mbox{[}7\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_afb57818711858bbc9d3ba000a9644aa8}{gamma}\\
+\>doublereal \hyperlink{GOLOVO_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{hi}\\
+\>doublereal \hyperlink{GOLOVO_8c_a783d9d6da37c5df6b6f0a5661e36e188}{pmove} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{ra}\\
+\>doublereal \hyperlink{GOLOVO_8c_abed92b12a9406febedd1333e63fac677}{rc1}\\
+\>doublereal \hyperlink{GOLOVO_8c_a0587446a77bfe08cf06afefa53f295f3}{sagl}\\
+\>doublereal \hyperlink{GOLOVO_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{surd}\\
+\>doublereal \hyperlink{GOLOVO_8c_aa38365a06b4e51426459eba3db71f888}{ta} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a3f4625fb06598c2b4e5a36a3086e9616}{tak} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a0686481467dfdc3abf7ebae1c79db934}{te} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a5d8741a1860502d2a932581e50b021b8}{tek} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a309612b772fb2b1f567da30dac5b825c}{tel} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{tem} \mbox{[}10\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{temp} \mbox{[}24\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_ad52b7211cac11d23db6acf390b61095a}{ti} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a29dae13dc0458def3fe311c0334c5a3f}{tik} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_ade3d26157738d07da2154ab9c7b3e9ef}{til} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_aea8e883c45bc5ecb1a64c035faf2597b}{tm} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a658674d8c6ee58644f5107d7de7be106}{vtem}\\
+\>doublereal \hyperlink{GOLOVO_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{alp}\\
+\>doublereal \hyperlink{GOLOVO_8c_a0a1ab92a468d41071c48870bf40d831d}{tal} \mbox{[}3\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{dpmax}\\
+\>doublereal \hyperlink{GOLOVO_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{strtno}\\
+\>doublereal \hyperlink{GOLOVO_8c_adcb06696b550ef02973cf4cb8abc3671}{tlhit}\\
+\} \hyperlink{GOLOVO_8c_aa2b12923148751632424202000d1c65e}{fxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{GOLOVO_8c_a1f2ac97eb22d6d00503177878559481c}{modfer} \mbox{[}6\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_a5c1fb4b838ac9130141169f97e68401e}{charct\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLOVO_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{tlhite} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_add568523b52eb67de02cfb3c96bc4522}{tanhi} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a474319e7812f0129a9244cdbc8ce367e}{tanlo} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a94e6890329a61867ed59615fc2df0aa9}{umax} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a10ee39de22792cdeadb61b971054f1f5}{ri} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad} \mbox{[}8\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{tcont} \mbox{[}9\mbox{]}\\
+\>doublereal \hyperlink{GOLOVO_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{tlinc} \mbox{[}9\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_afa14e49001229f138ca94a8f5568440e}{tlldat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLOVO_8c_a010d4f1ce1eb235824fb68695e8731a2}{iaerr}\\
+\>integer \hyperlink{GOLOVO_8c_a798c527660f8e4c64394a5583e5d6e4d}{iautps}\\
+\>integer \hyperlink{GOLOVO_8c_ac605907f2ae158cf3ab25fd38e107a92}{ibegin}\\
+\>integer \hyperlink{GOLOVO_8c_a60967d2d50805e00bcb629de153ca16d}{ic}\\
+\>integer \hyperlink{GOLOVO_8c_a8ce08d106f9dced6c61052c7014646af}{icl}\\
+\>integer \hyperlink{GOLOVO_8c_a7217a40b82199af56087b578a9bef158}{ics}\\
+\>integer \hyperlink{GOLOVO_8c_ac77fc463e5cf05af06497ce20c55803d}{icscnt}\\
+\>integer \hyperlink{GOLOVO_8c_a245ecb44f64f71cc9448ddefca334cf2}{ictdef}\\
+\>integer \hyperlink{GOLOVO_8c_a39e7a20b46232cccbd3ae2286fffb24e}{icut}\\
+\>integer \hyperlink{GOLOVO_8c_a312fee9680413e72b1ed128af2de8822}{ids}\\
+\>integer \hyperlink{GOLOVO_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{ier}\\
+\>integer \hyperlink{GOLOVO_8c_aa7adc2c492d44a93e73e15442b7e7992}{igo}\\
+\>integer \hyperlink{GOLOVO_8c_ac3a24534101eee3e4e212549fb8e027f}{igoto}\\
+\>integer \hyperlink{GOLOVO_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{igoug}\\
+\>integer \hyperlink{GOLOVO_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{igs}\\
+\>integer \hyperlink{GOLOVO_8c_affe5906d3d893dc29cc691e904687e1a}{inops}\\
+\>integer \hyperlink{GOLOVO_8c_a492b426d85893a01fe296a4f6b150b0e}{ipsdef}\\
+\>integer \hyperlink{GOLOVO_8c_aa641e7da55a6655cb676af2c3f44fa20}{ips}\\
+\>integer \hyperlink{GOLOVO_8c_a1abebee7c70449be5fc3165d04305e92}{ipt1}\\
+\>integer \hyperlink{GOLOVO_8c_a84a394fcd1f450c6fc68537d4b0c80db}{is}\\
+\>integer \hyperlink{GOLOVO_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{iseqno}\\
+\>integer \hyperlink{GOLOVO_8c_ad28578252ec8ef02d65d15e99608a14e}{isrch}\\
+\>integer \hyperlink{GOLOVO_8c_a71eb31c84997c0822663e9391c14d998}{istrup}\\
+\>integer \hyperlink{GOLOVO_8c_a2fc191e6fd72910e48dd9086f31038ed}{it}\\
+\>integer \hyperlink{GOLOVO_8c_a7097153e8674d60bde6bfdd6e017b23e}{i3dflg}\\
+\>integer \hyperlink{GOLOVO_8c_a432beda8b29f25b2db1ed897b55ebf34}{jbr}\\
+\>integer \hyperlink{GOLOVO_8c_a10effd66f46b95c77726e50c3d371477}{jsw}\\
+\>integer \hyperlink{GOLOVO_8c_ab540c3946b28f797b5b10dbfc6931b7a}{lsv}\\
+\>integer \hyperlink{GOLOVO_8c_a15ffd813a44621365b809bd790efc487}{lsv1}\\
+\>integer \hyperlink{GOLOVO_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{motmod}\\
+\>integer \hyperlink{GOLOVO_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{mulout}\\
+\>integer \hyperlink{GOLOVO_8c_ae474f2d6a64b6f34f64914e57d58111a}{mantax}\\
+\>integer \hyperlink{GOLOVO_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{nmpnts}\\
+\>integer \hyperlink{GOLOVO_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{nrec}\\
+\>integer \hyperlink{GOLOVO_8c_a0d661a6bb3df87af1b762b190bbd38a0}{numax}\\
+\>integer \hyperlink{GOLOVO_8c_a5123b60c8419619c6c2debf212d28208}{numcnt}\\
+\>integer \hyperlink{GOLOVO_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{nump}\\
+\>integer \hyperlink{GOLOVO_8c_a885f90b79b85840ec31a64410ad5a01b}{numpt1}\\
+\>integer \hyperlink{GOLOVO_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{numsfs}\\
+\>integer \hyperlink{GOLOVO_8c_af6698c6ad21fe9eb74b16f3676e1edea}{numsur}\\
+\>integer \hyperlink{GOLOVO_8c_a2f1d53233144f16aa9eff4ddb18331b2}{nw}\\
+\>integer \hyperlink{GOLOVO_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{icheck}\\
+\>integer \hyperlink{GOLOVO_8c_abdc936055e6863ee32f47ab3666ef718}{iseg}\\
+\>integer \hyperlink{GOLOVO_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{nmbseg}\\
+\>integer \hyperlink{GOLOVO_8c_a50cc0d8afaba030713ef4cef3f7b1424}{nwds}\\
+\>integer \hyperlink{GOLOVO_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{msav}\\
+\} \hyperlink{GOLOVO_8c_a34c759c72b17588cd75eda29521ce45f}{ifxcor\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{GOLOVO_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{com} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_a2be72789d04ea666a856cc9ecfe8cdf6}{\_BLNK\_\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOLOVO_8c_a5e675e8faf05d50757cd72ca4442f996}{id} \mbox{[}26\mbox{]}\\
+\} \hyperlink{GOLOVO_8c_a97e2f8a24730d6beaca22b21cf4c7053}{plgol\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\+\_\+\+\_\+6} = 6
+\item 
+static integer \hyperlink{GOLOVO_8c_aa23b1fd4891798d87c85fb9b95ea6ab3}{c\+\_\+\+\_\+5157} = 5157
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1}{_BLNK__1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1~{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}\hypertarget{GOLOVO_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}{}\label{GOLOVO_8c_aa957bf0809cdc5dc0b1ac20f58f60d60}
+
+
+Definition at line 69 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!bcanon@{bcanon}}
+\index{bcanon@{bcanon}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{bcanon}{bcanon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcanon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLOVO_8c_a2f226f15c00130b05db70054f6514916}{}\label{GOLOVO_8c_a2f226f15c00130b05db70054f6514916}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!can@{can}}
+\index{can@{can}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{can}{can}}]{\setlength{\rightskip}{0pt plus 5cm}\#define can~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLOVO_8c_a5ba45740712660000cfa0d00672aea0c}{}\label{GOLOVO_8c_a5ba45740712660000cfa0d00672aea0c}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!canon@{canon}}
+\index{canon@{canon}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{canon}{canon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define canon~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1})}\hypertarget{GOLOVO_8c_a68d3ba380c16e286247bb69367760615}{}\label{GOLOVO_8c_a68d3ba380c16e286247bb69367760615}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!charct\+\_\+1@{charct\+\_\+1}}
+\index{charct\+\_\+1@{charct\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+1}{charct_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define charct\+\_\+1~{\bf charct\+\_\+}}\hypertarget{GOLOVO_8c_a5d8742d837dd932468df10068bbc1875}{}\label{GOLOVO_8c_a5d8742d837dd932468df10068bbc1875}
+
+
+Definition at line 46 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!cosl@{cosl}}
+\index{cosl@{cosl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{cosl}{cosl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cosl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 16)}\hypertarget{GOLOVO_8c_a42cf98e9ca5c149a8814939d05c9c875}{}\label{GOLOVO_8c_a42cf98e9ca5c149a8814939d05c9c875}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!fxcor\+\_\+1@{fxcor\+\_\+1}}
+\index{fxcor\+\_\+1@{fxcor\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+1}{fxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fxcor\+\_\+1~{\bf fxcor\+\_\+}}\hypertarget{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}{}\label{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}
+
+
+Definition at line 40 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iart@{iart}}
+\index{iart@{iart}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iart}{iart}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iart~((integer $\ast$)\&{\bf plgol\+\_\+1} + 12)}\hypertarget{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}{}\label{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iat@{iat}}
+\index{iat@{iat}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iat}{iat}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iat~((integer $\ast$)\&{\bf plgol\+\_\+1} + 17)}\hypertarget{GOLOVO_8c_ac0a280dfbdae2e88edfbf16561dc7831}{}\label{GOLOVO_8c_ac0a280dfbdae2e88edfbf16561dc7831}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ifxcor\+\_\+1@{ifxcor\+\_\+1}}
+\index{ifxcor\+\_\+1@{ifxcor\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+1}{ifxcor_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifxcor\+\_\+1~{\bf ifxcor\+\_\+}}\hypertarget{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{}\label{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}
+
+
+Definition at line 63 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!incr@{incr}}
+\index{incr@{incr}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{incr}{incr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define incr~((integer $\ast$)\&{\bf plgol\+\_\+1} + 16)}\hypertarget{GOLOVO_8c_ae3ad6cd796b0376a1d506f574e48162c}{}\label{GOLOVO_8c_ae3ad6cd796b0376a1d506f574e48162c}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!invers@{invers}}
+\index{invers@{invers}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{invers}{invers}}]{\setlength{\rightskip}{0pt plus 5cm}\#define invers~((integer $\ast$)\&{\bf plgol\+\_\+1} + 13)}\hypertarget{GOLOVO_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{}\label{GOLOVO_8c_aaf5b8443e3144ca42bb8a8140aa92da3}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ipl1@{ipl1}}
+\index{ipl1@{ipl1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ipl1}{ipl1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ipl1~((integer $\ast$)\&{\bf plgol\+\_\+1} + 20)}\hypertarget{GOLOVO_8c_a14e694bf128a0d68985bc7ba5db00fa5}{}\label{GOLOVO_8c_a14e694bf128a0d68985bc7ba5db00fa5}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ipl2@{ipl2}}
+\index{ipl2@{ipl2}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ipl2}{ipl2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ipl2~((integer $\ast$)\&{\bf plgol\+\_\+1} + 21)}\hypertarget{GOLOVO_8c_aee28fbbb48cac35060082382bb369f86}{}\label{GOLOVO_8c_aee28fbbb48cac35060082382bb369f86}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iscan@{iscan}}
+\index{iscan@{iscan}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iscan}{iscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iscan~((integer $\ast$)\&{\bf plgol\+\_\+1} + 22)}\hypertarget{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{}\label{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}
+
+
+Referenced by golovo\+\_\+(), and intnrm\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!istrt@{istrt}}
+\index{istrt@{istrt}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{istrt}{istrt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define istrt~((integer $\ast$)\&{\bf plgol\+\_\+1} + 18)}\hypertarget{GOLOVO_8c_ab361c4637a4787c81d2d9059e7379b70}{}\label{GOLOVO_8c_ab361c4637a4787c81d2d9059e7379b70}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isv1\+\_\+1@{isv1\+\_\+1}}
+\index{isv1\+\_\+1@{isv1\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+1}{isv1_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv1\+\_\+1~{\bf isv1\+\_\+}}\hypertarget{GOLOVO_8c_abe3545b3957e92e0b5ff211b7d6f7616}{}\label{GOLOVO_8c_abe3545b3957e92e0b5ff211b7d6f7616}
+
+
+Definition at line 31 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isv\+\_\+1@{isv\+\_\+1}}
+\index{isv\+\_\+1@{isv\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+1}{isv_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define isv\+\_\+1~{\bf isv\+\_\+}}\hypertarget{GOLOVO_8c_acc79429328b703ca60ff76b9028f00fc}{}\label{GOLOVO_8c_acc79429328b703ca60ff76b9028f00fc}
+
+
+Definition at line 24 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ithru@{ithru}}
+\index{ithru@{ithru}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ithru}{ithru}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ithru~((integer $\ast$)\&{\bf plgol\+\_\+1} + 19)}\hypertarget{GOLOVO_8c_a7fc306fc3938b6a40734f61e04446945}{}\label{GOLOVO_8c_a7fc306fc3938b6a40734f61e04446945}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iword@{iword}}
+\index{iword@{iword}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iword}{iword}}]{\setlength{\rightskip}{0pt plus 5cm}\#define iword~((integer $\ast$)equiv\+\_\+6)}\hypertarget{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{}\label{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}
+
+
+Referenced by badnam\+\_\+(), dnonam\+\_\+(), golovo\+\_\+(), strtsh\+\_\+(), and trash\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jart@{jart}}
+\index{jart@{jart}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jart}{jart}}]{\setlength{\rightskip}{0pt plus 5cm}\#define jart~((integer $\ast$)\&{\bf plgol\+\_\+1} + 17)}\hypertarget{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{}\label{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!mirror@{mirror}}
+\index{mirror@{mirror}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{mirror}{mirror}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mirror~((integer $\ast$)\&{\bf plgol\+\_\+1} + 14)}\hypertarget{GOLOVO_8c_ab75be13d6d9ba70e2a9591121b408184}{}\label{GOLOVO_8c_ab75be13d6d9ba70e2a9591121b408184}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!normal@{normal}}
+\index{normal@{normal}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{normal}{normal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define normal~((integer $\ast$)\&{\bf plgol\+\_\+1} + 15)}\hypertarget{GOLOVO_8c_a149c5e1d9599b0d7e37cd720aa7d0354}{}\label{GOLOVO_8c_a149c5e1d9599b0d7e37cd720aa7d0354}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nu@{nu}}
+\index{nu@{nu}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nu}{nu}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nu~((integer $\ast$)\&{\bf plgol\+\_\+1} + 10)}\hypertarget{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{}\label{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nv@{nv}}
+\index{nv@{nv}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nv}{nv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nv~((integer $\ast$)\&{\bf plgol\+\_\+1} + 11)}\hypertarget{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{}\label{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!plgol\+\_\+1@{plgol\+\_\+1}}
+\index{plgol\+\_\+1@{plgol\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+1}{plgol_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define plgol\+\_\+1~{\bf plgol\+\_\+}}\hypertarget{GOLOVO_8c_ada4eab56c22c6c3ebe764c82d62935f7}{}\label{GOLOVO_8c_ada4eab56c22c6c3ebe764c82d62935f7}
+
+
+Definition at line 75 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!sinl@{sinl}}
+\index{sinl@{sinl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{sinl}{sinl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sinl~((doublereal $\ast$)\&{\bf tlldat\+\_\+1} + 8)}\hypertarget{GOLOVO_8c_a244e77280ccd6fc6c9c21e4d947bd2af}{}\label{GOLOVO_8c_a244e77280ccd6fc6c9c21e4d947bd2af}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!sscan@{sscan}}
+\index{sscan@{sscan}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{sscan}{sscan}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sscan~((doublereal $\ast$)\&{\bf \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+1} + 40)}\hypertarget{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{}\label{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tlldat\+\_\+1@{tlldat\+\_\+1}}
+\index{tlldat\+\_\+1@{tlldat\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+1}{tlldat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tlldat\+\_\+1~{\bf tlldat\+\_\+}}\hypertarget{GOLOVO_8c_ac473806d761bac6bbdc70810932acff0}{}\label{GOLOVO_8c_ac473806d761bac6bbdc70810932acff0}
+
+
+Definition at line 53 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tol@{tol}}
+\index{tol@{tol}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tol}{tol}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tol~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 3)}\hypertarget{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{}\label{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!uva@{uva}}
+\index{uva@{uva}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{uva}{uva}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uva~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 1)}\hypertarget{GOLOVO_8c_acba14ef7f85d72e63b3471abc1c15236}{}\label{GOLOVO_8c_acba14ef7f85d72e63b3471abc1c15236}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!uvcons@{uvcons}}
+\index{uvcons@{uvcons}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{uvcons}{uvcons}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uvcons~((doublereal $\ast$)\&{\bf plgol\+\_\+1})}\hypertarget{GOLOVO_8c_aa40a1175bb25725a6a022d07ca71fdc6}{}\label{GOLOVO_8c_aa40a1175bb25725a6a022d07ca71fdc6}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!uve@{uve}}
+\index{uve@{uve}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{uve}{uve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uve~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 2)}\hypertarget{GOLOVO_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{}\label{GOLOVO_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!vl@{vl}}
+\index{vl@{vl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{vl}{vl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vl~((doublereal $\ast$)\&{\bf plgol\+\_\+1} + 4)}\hypertarget{GOLOVO_8c_a0c70f3eec569d312526e4a92ee19abf4}{}\label{GOLOVO_8c_a0c70f3eec569d312526e4a92ee19abf4}
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!word@{word}}
+\index{word@{word}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{word}{word}}]{\setlength{\rightskip}{0pt plus 5cm}\#define word~(equiv\+\_\+6)}\hypertarget{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{}\label{GOLOVO_8c_a836535f59bf515522a395858a8029d42}
+
+
+Referenced by golovo\+\_\+(), scon\+\_\+(), setbit\+\_\+(), and smil\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!golovo\+\_\+@{golovo\+\_\+}}
+\index{golovo\+\_\+@{golovo\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{golovo\+\_\+(doublereal $\ast$adress)}{golovo_(doublereal *adress)}}]{\setlength{\rightskip}{0pt plus 5cm}int golovo\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{adress}
+\end{DoxyParamCaption}
+)}\hypertarget{GOLOVO_8c_a3e80c073c3693f10d4938cb41f91ca9d}{}\label{GOLOVO_8c_a3e80c073c3693f10d4938cb41f91ca9d}
+
+
+Definition at line 85 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+References aerr\+\_\+(), apt234\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+\+\_\+5157, c\+\_\+\+\_\+6, chord, ckdef\+\_\+(), first, fxcor\+\_\+1, gol\+\_\+(), holfrm\+\_\+(), i\+\_\+\+\_\+, iart, ifxcor\+\_\+1, incr, invers, iscan, isv\+\_\+1, iword, jart, k, mirror, normal, nu, nv, on, param, past, plgol\+\_\+1, sscan, test, to, tol, uva, uvcons, uve, vl, and word.
+
+
+
+Referenced by apt110\+\_\+().
+
+
+\begin{DoxyCode}
+86 \{
+87     \textcolor{comment}{/* Initialized data */}
+88 
+89     \textcolor{keyword}{static} \textcolor{keywordtype}{char} uconst[6] = \textcolor{stringliteral}{"UCONST"};
+90     \textcolor{keyword}{static} \textcolor{keywordtype}{char} vconst[6] = \textcolor{stringliteral}{"VCONST"};
+91     \textcolor{keyword}{static} \textcolor{keywordtype}{char} start[6] = \textcolor{stringliteral}{"START "};
+92     \textcolor{keyword}{static} \textcolor{keywordtype}{char} thru[6] = \textcolor{stringliteral}{"THRU  "};
+93     \textcolor{keyword}{static} \textcolor{keywordtype}{char} at[6] = \textcolor{stringliteral}{"AT    "};
+94     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af6c611b6312d83f13b18d70d156aab8f}{to}[6] = \textcolor{stringliteral}{"TO    "};
+95     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT301_8c_acfca4cf5bc3024657abff167c4f9b387}{on}[6] = \textcolor{stringliteral}{"ON    "};
+96     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{AERR2_8c_aae4751b2b0e0fe3b5f62f710ef406288}{past}[6] = \textcolor{stringliteral}{"PAST  "};
+97     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{APT301_8c_acff701cfc8fab0de8704435ba1462970}{param}[6] = \textcolor{stringliteral}{"PARAM "};
+98     \textcolor{keyword}{static} \textcolor{keywordtype}{char} flow[6] = \textcolor{stringliteral}{"FLOW  "};
+99     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rincr[6] = \textcolor{stringliteral}{"INCR  "};
+100     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{ARLM2_8c_af9da3640450124f9882e3ddea16f45af}{chord}[6] = \textcolor{stringliteral}{"CHORD "};
+101     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rmiror[6] = \textcolor{stringliteral}{"MIRROR"};
+102     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rinvrs[6] = \textcolor{stringliteral}{"INVERS"};
+103     \textcolor{keyword}{static} \textcolor{keywordtype}{char} rlengt[6] = \textcolor{stringliteral}{"LENGTH"};
+104     \textcolor{keyword}{static} doublereal rlw = 21.;
+105     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+106 
+107     \textcolor{comment}{/* System generated locals */}
+108     doublereal d\_\_1;
+109     \textcolor{keyword}{static} doublereal equiv\_6[1];
+110 
+111     \textcolor{comment}{/* Builtin functions */}
+112     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+113 
+114     \textcolor{comment}{/* Local variables */}
+115     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+116 \textcolor{preprocessor}{#define vl ((doublereal *)&plgol\_1 + 4)}
+117 \textcolor{preprocessor}{#define nu ((integer *)&plgol\_1 + 10)}
+118 \textcolor{preprocessor}{#define nv ((integer *)&plgol\_1 + 11)}
+119 \textcolor{preprocessor}{#define can ((doublereal *)&\_BLNK\_\_1 + 40)}
+120 \textcolor{preprocessor}{#define uva ((doublereal *)&plgol\_1 + 1)}
+121 \textcolor{preprocessor}{#define uve ((doublereal *)&plgol\_1 + 2)}
+122 \textcolor{preprocessor}{#define tol ((doublereal *)&plgol\_1 + 3)}
+123 \textcolor{preprocessor}{#define iat ((integer *)&plgol\_1 + 17)}
+124     \textcolor{keyword}{static} integer nwd;
+125     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{GOL_8c_a8123921dfc49266e94ba6a605f8e9d39}{gol\_}(doublereal *);
+126 \textcolor{preprocessor}{#define ipl1 ((integer *)&plgol\_1 + 20)}
+127 \textcolor{preprocessor}{#define ipl2 ((integer *)&plgol\_1 + 21)}
+128     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+129     \textcolor{keyword}{static} doublereal hmod;
+130     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen);
+131 \textcolor{preprocessor}{#define incr ((integer *)&plgol\_1 + 16)}
+132 \textcolor{preprocessor}{#define iart ((integer *)&plgol\_1 + 12)}
+133 \textcolor{preprocessor}{#define cosl ((doublereal *)&tlldat\_1 + 16)}
+134 \textcolor{preprocessor}{#define jart ((integer *)&plgol\_1 + 17)}
+135     \textcolor{keyword}{static} integer icur;
+136 \textcolor{preprocessor}{#define sinl ((doublereal *)&tlldat\_1 + 8)}
+137 \textcolor{preprocessor}{#define word (equiv\_6)}
+138     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af04af1bc6d042a68a2b24d6e1312d253}{test}[6];
+139     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{APT234_8c_ae7d1b162765087350a24b6878ae35aa5}{apt234\_}(doublereal *, doublereal *);
+140     \textcolor{keyword}{extern} logical \hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(doublereal *);
+141 \textcolor{preprocessor}{#define iscan ((integer *)&plgol\_1 + 22)}
+142 \textcolor{preprocessor}{#define canon ((doublereal *)&\_BLNK\_\_1)}
+143 \textcolor{preprocessor}{#define sscan ((doublereal *)&\_BLNK\_\_1 + 40)}
+144 \textcolor{preprocessor}{#define iword ((integer *)equiv\_6)}
+145 \textcolor{preprocessor}{#define ithru ((integer *)&plgol\_1 + 19)}
+146 \textcolor{preprocessor}{#define istrt ((integer *)&plgol\_1 + 18)}
+147 \textcolor{preprocessor}{#define bcanon ((doublereal *)&\_BLNK\_\_1 + 40)}
+148     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+149         integer *, integer *, ftnlen);
+150 \textcolor{preprocessor}{#define normal ((integer *)&plgol\_1 + 15)}
+151 \textcolor{preprocessor}{#define invers ((integer *)&plgol\_1 + 13)}
+152 \textcolor{preprocessor}{#define mirror ((integer *)&plgol\_1 + 14)}
+153 \textcolor{preprocessor}{#define uvcons ((doublereal *)&plgol\_1)}
+154 
+155 
+156 \textcolor{comment}{/* ...  1.MAIN CDE PACKAGE. INCLUDED IN EVERY PROGRAM IN THE SUBROUTINE */}
+157 \textcolor{comment}{/* ...    LIBRARY. */}
+158 
+159 
+160 
+161 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+162 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+163 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+164 
+165 
+166 
+167 \textcolor{comment}{/*   *** 12.  ISV BLOCK  *** */}
+168 
+169 \textcolor{comment}{/*   INTEGER SURFACE VARIABLES */}
+170 
+171 
+172 
+173 
+174 
+175 
+176 
+177 \textcolor{comment}{/*    *** 7.  FXCOR BLOCK  *** */}
+178 
+179 \textcolor{comment}{/*    REAL VARIABLES USED BY ARELEM, WHICH MUST REMAIN INVIOLATE */}
+180 
+181 
+182 
+183 
+184 \textcolor{comment}{/*    SEPARATE /CHARCT/ COMMON BLOCK FOR MODFER, WHICH WAS PART OF FXCOR. */}
+185 
+186 
+187 
+188 
+189 \textcolor{comment}{/*    TOOL DATA STORAGE */}
+190 
+191 \textcolor{comment}{/*    NOTE: 'TANHI' AND 'SINL' SHARE LOCATIONS AS DO 'TANLO' AND 'COSL' */}
+192 \textcolor{comment}{/*           THIS IS DELIBERATE. */}
+193 
+194 
+195 
+196 
+197 
+198 
+199 \textcolor{comment}{/*    *** 15.  IFXCOR BLOCK  *** */}
+200 
+201 \textcolor{comment}{/*    INVIOLATE ARELEM INTEGER VARIABLES */}
+202 
+203 
+204 
+205 
+206 
+207 \textcolor{comment}{/*     UNLABELLED COMMON */}
+208 
+209 \textcolor{comment}{/* ---     SIZE OF BLANK COMMON IS ALLOCATED RIGHT HERE. */}
+210 
+211 
+212 
+213 
+214 
+215 
+216 \textcolor{comment}{/* UVCONS: U-, V- CONSTANTS, GIVEN BY "UCONST,U" OR "VCONST,V" */}
+217 \textcolor{comment}{/*    UVA: START PARAMETER GIVEN BY "START,S" */}
+218 \textcolor{comment}{/*    UVE: END PARAMETER GIVEN BY "THRU,T" */}
+219 \textcolor{comment}{/*    TOL: INCREMENTS BY "INCR,I", ERROR OF CHORD BY "CHORD,C" */}
+220 \textcolor{comment}{/*     VL: LENGTH-PARAMETER GIVEN BY "LENGTH,L" */}
+221 \textcolor{comment}{/*     NU: AMOUNT OF INTERMEDIATE LINES IN DIRECTION    UCONST */}
+222 \textcolor{comment}{/*     NV: AMOUNT OF INTERMEDIATE LINES IN DIRECTION    VCONST */}
+223 \textcolor{comment}{/* IART:      IART = 1   PLOTFT/SCURV,.........,PARAM,.... */}
+224 \textcolor{comment}{/*            IART = 2   PLOTFT/SCURV,.........,FLOW ,.... */}
+225 \textcolor{comment}{/*            IART = 3   PLOTFT/SSURF,UCONST,U,........... */}
+226 \textcolor{comment}{/*            IART = 4   PLOTFT/SSURF,VCONST,V,........... */}
+227 \textcolor{comment}{/*            IART = 5   PLOTFT/SSURF,GRID,............... */}
+228 \textcolor{comment}{/*            IART = 6   GOLOFT/SSURF,UCONST,U,........... */}
+229 \textcolor{comment}{/*            IART = 7   GOLOFT/SSURF,VCONST,V,........... */}
+230 \textcolor{comment}{/* INVERS: INVERT THE TRAVEL DIRECTION IF =1 */}
+231 \textcolor{comment}{/* MIRROR: INVERT NORMAL DIRECTION IF =1 */}
+232 \textcolor{comment}{/* NORMAL: TAKE THE SURFACE NORMAL AS TOOL AXIS IF =1 */}
+233 \textcolor{comment}{/*   INCR: =1 IF "INCR,I", =0 IF "CHORD,C" GIVEN */}
+234 \textcolor{comment}{/*           CURVATURE CALCULATION NECESSARY IF NOT =1 */}
+235 \textcolor{comment}{/*    IAT: IAT   = 0 AT NOT PROGRAMMED */}
+236 \textcolor{comment}{/*         IAT   = 1 AT   "AT,A",        = 2 AT   "AT,TO,PL1" */}
+237 \textcolor{comment}{/*         IAT   = 3 AT   "AT,ON,PL1,    = 4 AT   "AT,PAST,PL1 */}
+238 \textcolor{comment}{/*  ISTRT: ISTRT = 0 START NOT PROGRAMMED */}
+239 \textcolor{comment}{/*         ISTRT = 1 AT   "START,A",     = 2 AT   "START,TO,PL1" */}
+240 \textcolor{comment}{/*         ISTRT = 3 AT   "START,ON,PL1, = 4 AT   "START,PAST,PL1 */}
+241 \textcolor{comment}{/*  ITHRU: ITHRU = 0 THRU NOT PROGRAMMED */}
+242 \textcolor{comment}{/*         ITHRU = 1 AT   "THRU,A",      = 2 AT   "THRU,TO,PL1" */}
+243 \textcolor{comment}{/*         ITHRU = 3 AT   "THRU,ON,PL1,  = 4 AT   "THRU,PAST,PL1 */}
+244 \textcolor{comment}{/*   IPL1: CF-BEGIN OF THE "AT" OR "START" PLANE IN THE ARRAY SSCAN */}
+245 \textcolor{comment}{/*   IPL2: CF-BEGIN OF THE "THRU" PLANE IN THE ARRAY SSCAN */}
+246 \textcolor{comment}{/*  ISCAN: FIRST FREE LOCATION IN SSCAN AFTER GOLOFT DATA */}
+247 
+248 
+249 
+250     \textcolor{comment}{/* Parameter adjustments */}
+251     --adress;
+252 
+253     \textcolor{comment}{/* Function Body */}
+254 
+255     \textcolor{keywordflow}{if} (first) \{
+256     \hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword}[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"TO  "}, (ftnlen)4);
+257     \hyperlink{GOLOVO_8c_a6cf057d290f7f6f8e952739fe4bf8563}{iword}[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"    "}, (ftnlen)4);
+258     hmod = *\hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word};
+259     first = FALSE\_;
+260     \}
+261 
+262     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&adress[1])) \{
+263     \textcolor{keywordflow}{goto} L170;
+264     \}
+265 \textcolor{comment}{/*  INITIALIZE PART SURFACE */}
+266     \hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.is = \hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips;
+267     \hyperlink{APT234_8c_ae7d1b162765087350a24b6878ae35aa5}{apt234\_}(&hmod, &adress[1]);
+268     \hyperlink{GOLOVO_8c_acba14ef7f85d72e63b3471abc1c15236}{uva}[0] = -1e30;
+269     *\hyperlink{GOLOVO_8c_a6a41bc753a7e7ac408de61ad0c4e42c4}{uve} = 1e30;
+270     *\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol} = .05f;
+271 \textcolor{comment}{/*  USE OF MAXDP/DPMAX,... AS DEFAULT */}
+272     *\hyperlink{GOLOVO_8c_a0c70f3eec569d312526e4a92ee19abf4}{vl} = \hyperlink{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.dpmax;
+273     *\hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu} = -1;
+274     *\hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv} = -1;
+275     \textcolor{keywordflow}{for} (i\_\_ = 14; i\_\_ <= 22; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+276 \textcolor{comment}{/* L1: */}
+277     \hyperlink{GOLOVO_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.id[i\_\_ - 1] = 0;
+278     \}
+279     *\hyperlink{GOLOVO_8c_ae3ad6cd796b0376a1d506f574e48162c}{incr} = 1;
+280     \textcolor{keywordflow}{if} (\hyperlink{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.gamma != 0. || \hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.numax != 1) \{
+281     \textcolor{keywordflow}{goto} L5;
+282     \}
+283     \textcolor{keywordflow}{if} (abs(\hyperlink{GOLOVO_8c_af2e9207ca61121972a67bf5ef57dffb2}{fxcor\_1}.alp) == 0.) \{
+284     *\hyperlink{GOLOVO_8c_a149c5e1d9599b0d7e37cd720aa7d0354}{normal} = \hyperlink{GOLOVO_8c_acc79429328b703ca60ff76b9028f00fc}{isv\_1}.jtlflg[\hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.ips - 1];
+285     \}
+286 L5:
+287     *\hyperlink{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} = (integer) \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[0];
+288     *\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan} = (integer) \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[1];
+289     \textcolor{keywordflow}{switch} (*\hyperlink{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}{iart}) \{
+290     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L45;
+291     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L45;
+292     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L20;
+293     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L20;
+294     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L30;
+295     \textcolor{keywordflow}{case} 6:  \textcolor{keywordflow}{goto} L10;
+296     \textcolor{keywordflow}{case} 7:  \textcolor{keywordflow}{goto} L10;
+297     \}
+298 L10:
+299     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[*\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan} - 4], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+300     \textcolor{keywordflow}{if} (s\_cmp(test, rlengt, (ftnlen)6, (ftnlen)6) != 0) \{
+301     \textcolor{keywordflow}{goto} L20;
+302     \}
+303     *\hyperlink{GOLOVO_8c_a0c70f3eec569d312526e4a92ee19abf4}{vl} = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[*\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan} - 2];
+304     *\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan} += -4;
+305 L20:
+306     *\hyperlink{GOLOVO_8c_aa40a1175bb25725a6a022d07ca71fdc6}{uvcons} = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[8];
+307     icur = 11;
+308     \textcolor{keywordflow}{goto} L50;
+309 
+310 L30:
+311     icur = 9;
+312     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+313     \textcolor{keywordflow}{if} (s\_cmp(test, uconst, (ftnlen)6, (ftnlen)6) != 0) \{
+314     \textcolor{keywordflow}{goto} L40;
+315     \}
+316     icur += 2;
+317     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+318     *\hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu} = 1;
+319     \textcolor{keywordflow}{if} (\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 2] != rlw) \{
+320     \textcolor{keywordflow}{goto} L40;
+321     \}
+322     *\hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu} = (d\_\_1 = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], (integer) abs(d\_\_1));
+323     icur += 2;
+324     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+325 L40:
+326     \textcolor{keywordflow}{if} (s\_cmp(test, vconst, (ftnlen)6, (ftnlen)6) != 0) \{
+327     \textcolor{keywordflow}{goto} L140;
+328     \}
+329     icur += 2;
+330     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+331     *\hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv} = 1;
+332     \textcolor{keywordflow}{if} (\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 2] != rlw) \{
+333     \textcolor{keywordflow}{goto} L140;
+334     \}
+335     *\hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv} = (d\_\_1 = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], (integer) abs(d\_\_1));
+336     icur += 2;
+337     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+338     \textcolor{keywordflow}{goto} L140;
+339 
+340 L45:
+341     icur = 7;
+342 L50:
+343     \textcolor{keywordflow}{if} (icur >= *\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan}) \{
+344     \textcolor{keywordflow}{goto} L160;
+345     \}
+346     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+347     \textcolor{keywordflow}{if} (s\_cmp(test, at, (ftnlen)6, (ftnlen)6) != 0) \{
+348     \textcolor{keywordflow}{goto} L60;
+349     \}
+350     k = 1;
+351     \textcolor{keywordflow}{goto} L80;
+352 L60:
+353     \textcolor{keywordflow}{if} (s\_cmp(test, start, (ftnlen)6, (ftnlen)6) != 0) \{
+354     \textcolor{keywordflow}{goto} L70;
+355     \}
+356     k = 2;
+357     \textcolor{keywordflow}{goto} L80;
+358 L70:
+359     \textcolor{keywordflow}{if} (s\_cmp(test, thru, (ftnlen)6, (ftnlen)6) != 0) \{
+360     \textcolor{keywordflow}{goto} L120;
+361     \}
+362     k = 3;
+363 
+364 L80:
+365     icur += 2;
+366     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+367     \hyperlink{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{jart}[k - 1] = 1;
+368     \textcolor{keywordflow}{if} (\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 2] != rlw) \{
+369     \textcolor{keywordflow}{goto} L90;
+370     \}
+371     \hyperlink{GOLOVO_8c_acba14ef7f85d72e63b3471abc1c15236}{uva}[k / 3] = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1];
+372     icur += 2;
+373     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+374     \textcolor{keywordflow}{goto} L110;
+375 L90:
+376     \textcolor{keywordflow}{if} (s\_cmp(test, to, (ftnlen)6, (ftnlen)6) == 0) \{
+377     \hyperlink{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{jart}[k - 1] = 2;
+378     \}
+379     \textcolor{keywordflow}{if} (s\_cmp(test, on, (ftnlen)6, (ftnlen)6) == 0) \{
+380     \hyperlink{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{jart}[k - 1] = 3;
+381     \}
+382     \textcolor{keywordflow}{if} (s\_cmp(test, past, (ftnlen)6, (ftnlen)6) == 0) \{
+383     \hyperlink{GOLOVO_8c_a92881c065ed04ced69544a115b8427d9}{jart}[k - 1] = 4;
+384     \}
+385     icur += 2;
+386     \textcolor{keywordflow}{if} (\hyperlink{CKDEF_8c_a2ea34f7f536ba2c6fd6dddbd0f7bfe57}{ckdef\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1])) \{
+387     \textcolor{keywordflow}{goto} L170;
+388     \}
+389     \hyperlink{GOLOVO_8c_ada4eab56c22c6c3ebe764c82d62935f7}{plgol\_1}.id[k / 3 + 20] = icur;
+390     icur += 5;
+391     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+392 L110:
+393     \textcolor{keywordflow}{if} (k == 2) \{
+394     \textcolor{keywordflow}{goto} L70;
+395     \}
+396 
+397 L120:
+398     \textcolor{keywordflow}{if} (icur > *\hyperlink{GOLOVO_8c_a89a74bf2c1dc917dbc69f74dc6d6fdf9}{iscan}) \{
+399     \textcolor{keywordflow}{goto} L160;
+400     \}
+401     \textcolor{keywordflow}{if} (s\_cmp(test, param, (ftnlen)6, (ftnlen)6) == 0 || s\_cmp(test, flow, (
+402         ftnlen)6, (ftnlen)6) == 0) \{
+403     icur += 2;
+404     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+405     \}
+406     \textcolor{keywordflow}{if} (s\_cmp(test, rinvrs, (ftnlen)6, (ftnlen)6) != 0) \{
+407     \textcolor{keywordflow}{goto} L130;
+408     \}
+409     icur += 2;
+410     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+411     *\hyperlink{GOLOVO_8c_aaf5b8443e3144ca42bb8a8140aa92da3}{invers} = 1;
+412 L130:
+413     \textcolor{keywordflow}{if} (s\_cmp(test, rmiror, (ftnlen)6, (ftnlen)6) != 0) \{
+414     \textcolor{keywordflow}{goto} L140;
+415     \}
+416     icur += 2;
+417     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(&\hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur - 1], test, &\hyperlink{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{c\_\_6}, &nwd, (ftnlen)6);
+418     *\hyperlink{GOLOVO_8c_ab75be13d6d9ba70e2a9591121b408184}{mirror} = 1;
+419 
+420 L140:
+421     \textcolor{keywordflow}{if} (s\_cmp(test, rincr, (ftnlen)6, (ftnlen)6) == 0) \{
+422     \textcolor{keywordflow}{goto} L150;
+423     \}
+424     \textcolor{keywordflow}{if} (s\_cmp(test, chord, (ftnlen)6, (ftnlen)6) != 0) \{
+425     \textcolor{keywordflow}{goto} L160;
+426     \}
+427     *\hyperlink{GOLOVO_8c_ae3ad6cd796b0376a1d506f574e48162c}{incr} = 0;
+428 L150:
+429     *\hyperlink{GOLOVO_8c_ab319cb41d2e6faf11ec8cfbc3e291967}{tol} = \hyperlink{GOLOVO_8c_a046eb84c6e1d8dee3e013f5255c2467d}{sscan}[icur + 1];
+430 
+431 L160:
+432     \textcolor{keywordflow}{if} (*\hyperlink{GOLOVO_8c_a6d92339b9946e3c289c37f1054d1a145}{iart} != 5) \{
+433     \textcolor{keywordflow}{goto} L161;
+434     \}
+435     \textcolor{keywordflow}{if} (*\hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu} != -1 || *\hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv} != -1) \{
+436     \textcolor{keywordflow}{goto} L161;
+437     \}
+438     *\hyperlink{GOLOVO_8c_afb4f6a43e11280d3bad3b676d0f1478e}{nu} = 0;
+439     *\hyperlink{GOLOVO_8c_aa6308b248168eb18f2f38ae606cca6b8}{nv} = 0;
+440 L161:
+441     \hyperlink{GOL_8c_a8123921dfc49266e94ba6a605f8e9d39}{gol\_}(&adress[1]);
+442     \textcolor{keywordflow}{return} 0;
+443 L170:
+444     \hyperlink{AERR_8c_ab0530f1658551458f026bec9693ddf88}{aerr\_}(&\hyperlink{GOLOVO_8c_aa23b1fd4891798d87c85fb9b95ea6ab3}{c\_\_5157}, \textcolor{stringliteral}{"GOLOVO  "}, (ftnlen)8);
+445     \hyperlink{GOLOVO_8c_a0adbded0b8609d86835140bc3a49aebb}{ifxcor\_1}.iaerr = 1;
+446     \textcolor{keywordflow}{return} 0;
+447 \} \textcolor{comment}{/* golovo\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{GOLOVO_8c_a3e80c073c3693f10d4938cb41f91ca9d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GOLOVO_8c_a3e80c073c3693f10d4938cb41f91ca9d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}}
+\index{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+@{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}{_BLNK__}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \+\_\+\+B\+L\+N\+K\+\_\+\+\_\+}\hypertarget{GOLOVO_8c_a2be72789d04ea666a856cc9ecfe8cdf6}{}\label{GOLOVO_8c_a2be72789d04ea666a856cc9ecfe8cdf6}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!alp@{alp}}
+\index{alp@{alp}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{alp}{alp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal alp}\hypertarget{GOLOVO_8c_a5638cdf164ee9278a5a3c4ffbdb48043}{}\label{GOLOVO_8c_a5638cdf164ee9278a5a3c4ffbdb48043}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ax4@{ax4}}
+\index{ax4@{ax4}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ax4}{ax4}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ax4\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}{}\label{GOLOVO_8c_a07ec10d5bbbe213b223f1bbb19a3d6ef}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{GOLOVO_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 79 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!c\+\_\+\+\_\+5157@{c\+\_\+\+\_\+5157}}
+\index{c\+\_\+\+\_\+5157@{c\+\_\+\+\_\+5157}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+5157}{c__5157}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+5157 = 5157\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOLOVO_8c_aa23b1fd4891798d87c85fb9b95ea6ab3}{}\label{GOLOVO_8c_aa23b1fd4891798d87c85fb9b95ea6ab3}
+
+
+Definition at line 81 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}}
+\index{c\+\_\+\+\_\+6@{c\+\_\+\+\_\+6}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+6}{c__6}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+6 = 6\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}{}\label{GOLOVO_8c_a3543660f1ae989ebc88144db7ea3ecfd}
+
+
+Definition at line 80 of file G\+O\+L\+O\+V\+O.\+c.
+
+
+
+Referenced by golovo\+\_\+().
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!cagl@{cagl}}
+\index{cagl@{cagl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{cagl}{cagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cagl}\hypertarget{GOLOVO_8c_afc3f8cc155039c18014392874c56ddb5}{}\label{GOLOVO_8c_afc3f8cc155039c18014392874c56ddb5}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!charct\+\_\+@{charct\+\_\+}}
+\index{charct\+\_\+@{charct\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{charct\+\_\+}{charct_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   charct\+\_\+}\hypertarget{GOLOVO_8c_a5c1fb4b838ac9130141169f97e68401e}{}\label{GOLOVO_8c_a5c1fb4b838ac9130141169f97e68401e}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!com@{com}}
+\index{com@{com}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{com}{com}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal com\mbox{[}36000\mbox{]}}\hypertarget{GOLOVO_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}{}\label{GOLOVO_8c_ac9e1ba82c0ed916fb992cf8f72d92ac0}
+
+
+Definition at line 66 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!corrad@{corrad}}
+\index{corrad@{corrad}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{corrad}{corrad}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal corrad\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_adcb74f3b291d6984fec36f1ecce96e0d}{}\label{GOLOVO_8c_adcb74f3b291d6984fec36f1ecce96e0d}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!cutdat@{cutdat}}
+\index{cutdat@{cutdat}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{cutdat}{cutdat}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cutdat\mbox{[}7\mbox{]}}\hypertarget{GOLOVO_8c_a711d4176df1307a457e6df05ebdef7a8}{}\label{GOLOVO_8c_a711d4176df1307a457e6df05ebdef7a8}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!dpmax@{dpmax}}
+\index{dpmax@{dpmax}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{dpmax}{dpmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dpmax}\hypertarget{GOLOVO_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}{}\label{GOLOVO_8c_a05b41b4fa6a6b266f9f4c51641a7beb7}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!fxcor\+\_\+@{fxcor\+\_\+}}
+\index{fxcor\+\_\+@{fxcor\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{fxcor\+\_\+}{fxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   fxcor\+\_\+}\hypertarget{GOLOVO_8c_aa2b12923148751632424202000d1c65e}{}\label{GOLOVO_8c_aa2b12923148751632424202000d1c65e}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!gamma@{gamma}}
+\index{gamma@{gamma}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{gamma}{gamma}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal gamma}\hypertarget{GOLOVO_8c_afb57818711858bbc9d3ba000a9644aa8}{}\label{GOLOVO_8c_afb57818711858bbc9d3ba000a9644aa8}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!hi@{hi}}
+\index{hi@{hi}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{hi}{hi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal hi}\hypertarget{GOLOVO_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}{}\label{GOLOVO_8c_af0a8d67081ce6bd90779ec46ed2cfbbf}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!i3dflg@{i3dflg}}
+\index{i3dflg@{i3dflg}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{i3dflg}{i3dflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer i3dflg}\hypertarget{GOLOVO_8c_a7097153e8674d60bde6bfdd6e017b23e}{}\label{GOLOVO_8c_a7097153e8674d60bde6bfdd6e017b23e}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iaerr@{iaerr}}
+\index{iaerr@{iaerr}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iaerr}{iaerr}}]{\setlength{\rightskip}{0pt plus 5cm}integer iaerr}\hypertarget{GOLOVO_8c_a010d4f1ce1eb235824fb68695e8731a2}{}\label{GOLOVO_8c_a010d4f1ce1eb235824fb68695e8731a2}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iafl@{iafl}}
+\index{iafl@{iafl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iafl}{iafl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iafl\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a013f46224a863d563c172ad966d9fe4c}{}\label{GOLOVO_8c_a013f46224a863d563c172ad966d9fe4c}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iautps@{iautps}}
+\index{iautps@{iautps}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iautps}{iautps}}]{\setlength{\rightskip}{0pt plus 5cm}integer iautps}\hypertarget{GOLOVO_8c_a798c527660f8e4c64394a5583e5d6e4d}{}\label{GOLOVO_8c_a798c527660f8e4c64394a5583e5d6e4d}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ibegin}{ibegin}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibegin}\hypertarget{GOLOVO_8c_ac605907f2ae158cf3ab25fd38e107a92}{}\label{GOLOVO_8c_ac605907f2ae158cf3ab25fd38e107a92}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ic@{ic}}
+\index{ic@{ic}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ic}{ic}}]{\setlength{\rightskip}{0pt plus 5cm}integer ic}\hypertarget{GOLOVO_8c_a60967d2d50805e00bcb629de153ca16d}{}\label{GOLOVO_8c_a60967d2d50805e00bcb629de153ca16d}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!icanon@{icanon}}
+\index{icanon@{icanon}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{icanon}{icanon}}]{\setlength{\rightskip}{0pt plus 5cm}integer icanon\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_af11acb70bb024b32658dd2ce1e2fe8d4}{}\label{GOLOVO_8c_af11acb70bb024b32658dd2ce1e2fe8d4}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!icheck@{icheck}}
+\index{icheck@{icheck}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{icheck}{icheck}}]{\setlength{\rightskip}{0pt plus 5cm}integer icheck}\hypertarget{GOLOVO_8c_aa2af632f1e93e14a6006d94f9eeadd0d}{}\label{GOLOVO_8c_aa2af632f1e93e14a6006d94f9eeadd0d}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!icl@{icl}}
+\index{icl@{icl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{icl}{icl}}]{\setlength{\rightskip}{0pt plus 5cm}integer icl}\hypertarget{GOLOVO_8c_a8ce08d106f9dced6c61052c7014646af}{}\label{GOLOVO_8c_a8ce08d106f9dced6c61052c7014646af}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ics@{ics}}
+\index{ics@{ics}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ics}{ics}}]{\setlength{\rightskip}{0pt plus 5cm}integer ics}\hypertarget{GOLOVO_8c_a7217a40b82199af56087b578a9bef158}{}\label{GOLOVO_8c_a7217a40b82199af56087b578a9bef158}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!icscnt@{icscnt}}
+\index{icscnt@{icscnt}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{icscnt}{icscnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer icscnt}\hypertarget{GOLOVO_8c_ac77fc463e5cf05af06497ce20c55803d}{}\label{GOLOVO_8c_ac77fc463e5cf05af06497ce20c55803d}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ictdef@{ictdef}}
+\index{ictdef@{ictdef}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ictdef}{ictdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ictdef}\hypertarget{GOLOVO_8c_a245ecb44f64f71cc9448ddefca334cf2}{}\label{GOLOVO_8c_a245ecb44f64f71cc9448ddefca334cf2}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!icut@{icut}}
+\index{icut@{icut}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{icut}{icut}}]{\setlength{\rightskip}{0pt plus 5cm}integer icut}\hypertarget{GOLOVO_8c_a39e7a20b46232cccbd3ae2286fffb24e}{}\label{GOLOVO_8c_a39e7a20b46232cccbd3ae2286fffb24e}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!id@{id}}
+\index{id@{id}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}integer id\mbox{[}26\mbox{]}}\hypertarget{GOLOVO_8c_a5e675e8faf05d50757cd72ca4442f996}{}\label{GOLOVO_8c_a5e675e8faf05d50757cd72ca4442f996}
+
+
+Definition at line 72 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ids@{ids}}
+\index{ids@{ids}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ids}{ids}}]{\setlength{\rightskip}{0pt plus 5cm}integer ids}\hypertarget{GOLOVO_8c_a312fee9680413e72b1ed128af2de8822}{}\label{GOLOVO_8c_a312fee9680413e72b1ed128af2de8822}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ier@{ier}}
+\index{ier@{ier}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ier}{ier}}]{\setlength{\rightskip}{0pt plus 5cm}integer ier}\hypertarget{GOLOVO_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}{}\label{GOLOVO_8c_a96ba25771cb1b76bbe1a5bb00eac6b24}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ifar@{ifar}}
+\index{ifar@{ifar}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ifar}{ifar}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifar\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_ae6268067a45faf1f09717de826908b42}{}\label{GOLOVO_8c_ae6268067a45faf1f09717de826908b42}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ifl4@{ifl4}}
+\index{ifl4@{ifl4}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ifl4}{ifl4}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifl4\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a13b8031b501c6fcb7f2ad94831e58f5f}{}\label{GOLOVO_8c_a13b8031b501c6fcb7f2ad94831e58f5f}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ifxcor\+\_\+@{ifxcor\+\_\+}}
+\index{ifxcor\+\_\+@{ifxcor\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ifxcor\+\_\+}{ifxcor_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ifxcor\+\_\+}\hypertarget{GOLOVO_8c_a34c759c72b17588cd75eda29521ce45f}{}\label{GOLOVO_8c_a34c759c72b17588cd75eda29521ce45f}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!igo@{igo}}
+\index{igo@{igo}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{igo}{igo}}]{\setlength{\rightskip}{0pt plus 5cm}integer igo}\hypertarget{GOLOVO_8c_aa7adc2c492d44a93e73e15442b7e7992}{}\label{GOLOVO_8c_aa7adc2c492d44a93e73e15442b7e7992}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!igoto@{igoto}}
+\index{igoto@{igoto}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{igoto}{igoto}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoto}\hypertarget{GOLOVO_8c_ac3a24534101eee3e4e212549fb8e027f}{}\label{GOLOVO_8c_ac3a24534101eee3e4e212549fb8e027f}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!igoug@{igoug}}
+\index{igoug@{igoug}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{igoug}{igoug}}]{\setlength{\rightskip}{0pt plus 5cm}integer igoug}\hypertarget{GOLOVO_8c_af10c89cf5adb5722f2ab4621bb91cb2a}{}\label{GOLOVO_8c_af10c89cf5adb5722f2ab4621bb91cb2a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!igs@{igs}}
+\index{igs@{igs}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{igs}{igs}}]{\setlength{\rightskip}{0pt plus 5cm}integer igs}\hypertarget{GOLOVO_8c_a87dfef7ae6a112a57e1a091b5b3075fe}{}\label{GOLOVO_8c_a87dfef7ae6a112a57e1a091b5b3075fe}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!index@{index}}
+\index{index@{index}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}integer index\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a117e03aa7ccba9831ef61bf41f8e11a4}{}\label{GOLOVO_8c_a117e03aa7ccba9831ef61bf41f8e11a4}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}}
+\index{indir\+\_\+\+\_\+@{indir\+\_\+\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{indir\+\_\+\+\_\+}{indir__}}]{\setlength{\rightskip}{0pt plus 5cm}integer indir\+\_\+\+\_\+\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a367d578680d6741b0eeea4c18126ac85}{}\label{GOLOVO_8c_a367d578680d6741b0eeea4c18126ac85}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!inops@{inops}}
+\index{inops@{inops}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{inops}{inops}}]{\setlength{\rightskip}{0pt plus 5cm}integer inops}\hypertarget{GOLOVO_8c_affe5906d3d893dc29cc691e904687e1a}{}\label{GOLOVO_8c_affe5906d3d893dc29cc691e904687e1a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iop@{iop}}
+\index{iop@{iop}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iop}{iop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iop\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_aca4c6ef2418548013d1f0ab199eb5e87}{}\label{GOLOVO_8c_aca4c6ef2418548013d1f0ab199eb5e87}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iopset@{iopset}}
+\index{iopset@{iopset}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iopset}{iopset}}]{\setlength{\rightskip}{0pt plus 5cm}integer iopset\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a46fc792e9db2a4119bde6d3c50066efe}{}\label{GOLOVO_8c_a46fc792e9db2a4119bde6d3c50066efe}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ipl@{ipl}}
+\index{ipl@{ipl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ipl}{ipl}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipl\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}{}\label{GOLOVO_8c_a8f9a7ad684acefb5e5abe71ac40f82c5}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ips@{ips}}
+\index{ips@{ips}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ips}{ips}}]{\setlength{\rightskip}{0pt plus 5cm}integer ips}\hypertarget{GOLOVO_8c_aa641e7da55a6655cb676af2c3f44fa20}{}\label{GOLOVO_8c_aa641e7da55a6655cb676af2c3f44fa20}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ipsdef@{ipsdef}}
+\index{ipsdef@{ipsdef}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ipsdef}{ipsdef}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipsdef}\hypertarget{GOLOVO_8c_a492b426d85893a01fe296a4f6b150b0e}{}\label{GOLOVO_8c_a492b426d85893a01fe296a4f6b150b0e}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ipt1@{ipt1}}
+\index{ipt1@{ipt1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ipt1}{ipt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipt1}\hypertarget{GOLOVO_8c_a1abebee7c70449be5fc3165d04305e92}{}\label{GOLOVO_8c_a1abebee7c70449be5fc3165d04305e92}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!is@{is}}
+\index{is@{is}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{is}{is}}]{\setlength{\rightskip}{0pt plus 5cm}integer is}\hypertarget{GOLOVO_8c_a84a394fcd1f450c6fc68537d4b0c80db}{}\label{GOLOVO_8c_a84a394fcd1f450c6fc68537d4b0c80db}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg}\hypertarget{GOLOVO_8c_abdc936055e6863ee32f47ab3666ef718}{}\label{GOLOVO_8c_abdc936055e6863ee32f47ab3666ef718}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iseqno@{iseqno}}
+\index{iseqno@{iseqno}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iseqno}{iseqno}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseqno}\hypertarget{GOLOVO_8c_a5d727d39a96b3a7536d470d60c1e4f1a}{}\label{GOLOVO_8c_a5d727d39a96b3a7536d470d60c1e4f1a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isfidn@{isfidn}}
+\index{isfidn@{isfidn}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isfidn}{isfidn}}]{\setlength{\rightskip}{0pt plus 5cm}integer isfidn\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a98035b4872e906175c3748d8671bcb41}{}\label{GOLOVO_8c_a98035b4872e906175c3748d8671bcb41}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isftyp@{isftyp}}
+\index{isftyp@{isftyp}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isftyp}{isftyp}}]{\setlength{\rightskip}{0pt plus 5cm}integer isftyp\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_af06b6af8617105f43da7a0aef4a181d3}{}\label{GOLOVO_8c_af06b6af8617105f43da7a0aef4a181d3}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isigcr@{isigcr}}
+\index{isigcr@{isigcr}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isigcr}{isigcr}}]{\setlength{\rightskip}{0pt plus 5cm}integer isigcr\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a96c4543ff4eb51c15078a4a13a13d649}{}\label{GOLOVO_8c_a96c4543ff4eb51c15078a4a13a13d649}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isrch@{isrch}}
+\index{isrch@{isrch}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isrch}{isrch}}]{\setlength{\rightskip}{0pt plus 5cm}integer isrch}\hypertarget{GOLOVO_8c_ad28578252ec8ef02d65d15e99608a14e}{}\label{GOLOVO_8c_ad28578252ec8ef02d65d15e99608a14e}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!istrup@{istrup}}
+\index{istrup@{istrup}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{istrup}{istrup}}]{\setlength{\rightskip}{0pt plus 5cm}integer istrup}\hypertarget{GOLOVO_8c_a71eb31c84997c0822663e9391c14d998}{}\label{GOLOVO_8c_a71eb31c84997c0822663e9391c14d998}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isv1\+\_\+@{isv1\+\_\+}}
+\index{isv1\+\_\+@{isv1\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isv1\+\_\+}{isv1_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv1\+\_\+}\hypertarget{GOLOVO_8c_a100af86bfbe03d6cea9017df7f2d9304}{}\label{GOLOVO_8c_a100af86bfbe03d6cea9017df7f2d9304}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isv\+\_\+@{isv\+\_\+}}
+\index{isv\+\_\+@{isv\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isv\+\_\+}{isv_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   isv\+\_\+}\hypertarget{GOLOVO_8c_a73d32ffc3a8ac93257f5793d65355f94}{}\label{GOLOVO_8c_a73d32ffc3a8ac93257f5793d65355f94}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!isvfl@{isvfl}}
+\index{isvfl@{isvfl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{isvfl}{isvfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer isvfl\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a69d12d072150ac44e875ee991d8977f9}{}\label{GOLOVO_8c_a69d12d072150ac44e875ee991d8977f9}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!it@{it}}
+\index{it@{it}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}integer it}\hypertarget{GOLOVO_8c_a2fc191e6fd72910e48dd9086f31038ed}{}\label{GOLOVO_8c_a2fc191e6fd72910e48dd9086f31038ed}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!itlon@{itlon}}
+\index{itlon@{itlon}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{itlon}{itlon}}]{\setlength{\rightskip}{0pt plus 5cm}integer itlon\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_ab9c16758977bf15e0118791ac83246a1}{}\label{GOLOVO_8c_ab9c16758977bf15e0118791ac83246a1}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!itseg@{itseg}}
+\index{itseg@{itseg}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{itseg}{itseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer itseg\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a69f16ad43b2d69c2a5523493a25092a6}{}\label{GOLOVO_8c_a69f16ad43b2d69c2a5523493a25092a6}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!itsegk@{itsegk}}
+\index{itsegk@{itsegk}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{itsegk}{itsegk}}]{\setlength{\rightskip}{0pt plus 5cm}integer itsegk\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a0365571ddfd59f3b0b636c72a4e09742}{}\label{GOLOVO_8c_a0365571ddfd59f3b0b636c72a4e09742}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!iunfl@{iunfl}}
+\index{iunfl@{iunfl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{iunfl}{iunfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer iunfl\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_ad01cb824e786c997cae01775374c6ace}{}\label{GOLOVO_8c_ad01cb824e786c997cae01775374c6ace}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j20@{j20}}
+\index{j20@{j20}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j20}{j20}}]{\setlength{\rightskip}{0pt plus 5cm}integer j20\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_ab5e196a210774e8188a9adc08fab5675}{}\label{GOLOVO_8c_ab5e196a210774e8188a9adc08fab5675}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j21@{j21}}
+\index{j21@{j21}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j21}{j21}}]{\setlength{\rightskip}{0pt plus 5cm}integer j21\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a71bea2c042deec0e209e8c6b819bb7f8}{}\label{GOLOVO_8c_a71bea2c042deec0e209e8c6b819bb7f8}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j22@{j22}}
+\index{j22@{j22}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j22}{j22}}]{\setlength{\rightskip}{0pt plus 5cm}integer j22\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}{}\label{GOLOVO_8c_a81e7c3a602ef4b306b6b3f4dcf9e4fe4}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j23@{j23}}
+\index{j23@{j23}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j23}{j23}}]{\setlength{\rightskip}{0pt plus 5cm}integer j23\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a8965b32ed9d3092eb5279607f8dc835b}{}\label{GOLOVO_8c_a8965b32ed9d3092eb5279607f8dc835b}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j50@{j50}}
+\index{j50@{j50}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j50}{j50}}]{\setlength{\rightskip}{0pt plus 5cm}integer j50\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}{}\label{GOLOVO_8c_afe7b3e81cd0e815ffabd55d7e6aecd23}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!j51@{j51}}
+\index{j51@{j51}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{j51}{j51}}]{\setlength{\rightskip}{0pt plus 5cm}integer j51\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_aaf9771df39ea6eb440d196395622d970}{}\label{GOLOVO_8c_aaf9771df39ea6eb440d196395622d970}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jbr@{jbr}}
+\index{jbr@{jbr}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jbr}{jbr}}]{\setlength{\rightskip}{0pt plus 5cm}integer jbr}\hypertarget{GOLOVO_8c_a432beda8b29f25b2db1ed897b55ebf34}{}\label{GOLOVO_8c_a432beda8b29f25b2db1ed897b55ebf34}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jent@{jent}}
+\index{jent@{jent}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jent}{jent}}]{\setlength{\rightskip}{0pt plus 5cm}integer jent\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}{}\label{GOLOVO_8c_aaf8ddd0afdcffb74d0bfeef809386aa6}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jiops@{jiops}}
+\index{jiops@{jiops}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jiops}{jiops}}]{\setlength{\rightskip}{0pt plus 5cm}integer jiops\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_af70b7cc90fdc72684506b074764f24d3}{}\label{GOLOVO_8c_af70b7cc90fdc72684506b074764f24d3}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jph@{jph}}
+\index{jph@{jph}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jph}{jph}}]{\setlength{\rightskip}{0pt plus 5cm}integer jph\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_af639d946bee2fc95e223cbba2f6f6f59}{}\label{GOLOVO_8c_af639d946bee2fc95e223cbba2f6f6f59}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jsw@{jsw}}
+\index{jsw@{jsw}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jsw}{jsw}}]{\setlength{\rightskip}{0pt plus 5cm}integer jsw}\hypertarget{GOLOVO_8c_a10effd66f46b95c77726e50c3d371477}{}\label{GOLOVO_8c_a10effd66f46b95c77726e50c3d371477}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jtlflg@{jtlflg}}
+\index{jtlflg@{jtlflg}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jtlflg}{jtlflg}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtlflg\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a9e8f1743a1265c0508b32682a31dbe13}{}\label{GOLOVO_8c_a9e8f1743a1265c0508b32682a31dbe13}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!jtn@{jtn}}
+\index{jtn@{jtn}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{jtn}{jtn}}]{\setlength{\rightskip}{0pt plus 5cm}integer jtn\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a27bfdec33da656b3e0afaa8b256d465c}{}\label{GOLOVO_8c_a27bfdec33da656b3e0afaa8b256d465c}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ju1@{ju1}}
+\index{ju1@{ju1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ju1}{ju1}}]{\setlength{\rightskip}{0pt plus 5cm}integer ju1\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a9d5a9d53b0b600853a83109858c7aa7a}{}\label{GOLOVO_8c_a9d5a9d53b0b600853a83109858c7aa7a}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!limfl@{limfl}}
+\index{limfl@{limfl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{limfl}{limfl}}]{\setlength{\rightskip}{0pt plus 5cm}integer limfl\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a7a26ee648d4eb235d68b74eb27698f51}{}\label{GOLOVO_8c_a7a26ee648d4eb235d68b74eb27698f51}
+
+
+Definition at line 18 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!lsv@{lsv}}
+\index{lsv@{lsv}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{lsv}{lsv}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv}\hypertarget{GOLOVO_8c_ab540c3946b28f797b5b10dbfc6931b7a}{}\label{GOLOVO_8c_ab540c3946b28f797b5b10dbfc6931b7a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!lsv1@{lsv1}}
+\index{lsv1@{lsv1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{lsv1}{lsv1}}]{\setlength{\rightskip}{0pt plus 5cm}integer lsv1}\hypertarget{GOLOVO_8c_a15ffd813a44621365b809bd790efc487}{}\label{GOLOVO_8c_a15ffd813a44621365b809bd790efc487}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!mantax@{mantax}}
+\index{mantax@{mantax}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{mantax}{mantax}}]{\setlength{\rightskip}{0pt plus 5cm}integer mantax}\hypertarget{GOLOVO_8c_ae474f2d6a64b6f34f64914e57d58111a}{}\label{GOLOVO_8c_ae474f2d6a64b6f34f64914e57d58111a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!modfer@{modfer}}
+\index{modfer@{modfer}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{modfer}{modfer}}]{\setlength{\rightskip}{0pt plus 5cm}char modfer\mbox{[}6\mbox{]}}\hypertarget{GOLOVO_8c_a1f2ac97eb22d6d00503177878559481c}{}\label{GOLOVO_8c_a1f2ac97eb22d6d00503177878559481c}
+
+
+Definition at line 43 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!motmod@{motmod}}
+\index{motmod@{motmod}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{motmod}{motmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer motmod}\hypertarget{GOLOVO_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}{}\label{GOLOVO_8c_a146ec9f213da9e8f1d9513e8cbc50a3f}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!msav@{msav}}
+\index{msav@{msav}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{msav}{msav}}]{\setlength{\rightskip}{0pt plus 5cm}integer msav}\hypertarget{GOLOVO_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}{}\label{GOLOVO_8c_aa084e5e5a581d19eb1bc58cbf40bf2e7}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!mulout@{mulout}}
+\index{mulout@{mulout}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{mulout}{mulout}}]{\setlength{\rightskip}{0pt plus 5cm}integer mulout}\hypertarget{GOLOVO_8c_abe0d73c1a07d0ca7243fef5bc43edc58}{}\label{GOLOVO_8c_abe0d73c1a07d0ca7243fef5bc43edc58}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nmbseg@{nmbseg}}
+\index{nmbseg@{nmbseg}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nmbseg}{nmbseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmbseg}\hypertarget{GOLOVO_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}{}\label{GOLOVO_8c_ab5cca3eafd3bdcabd27f74e80c47b5e2}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nmpnts@{nmpnts}}
+\index{nmpnts@{nmpnts}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nmpnts}{nmpnts}}]{\setlength{\rightskip}{0pt plus 5cm}integer nmpnts}\hypertarget{GOLOVO_8c_a6d3e07412b36ad6b1a1030daecd9b47a}{}\label{GOLOVO_8c_a6d3e07412b36ad6b1a1030daecd9b47a}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!notan@{notan}}
+\index{notan@{notan}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{notan}{notan}}]{\setlength{\rightskip}{0pt plus 5cm}integer notan\mbox{[}5\mbox{]}}\hypertarget{GOLOVO_8c_a3bf651bea75c52977866902524484444}{}\label{GOLOVO_8c_a3bf651bea75c52977866902524484444}
+
+
+Definition at line 27 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nrec@{nrec}}
+\index{nrec@{nrec}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nrec}{nrec}}]{\setlength{\rightskip}{0pt plus 5cm}integer nrec}\hypertarget{GOLOVO_8c_ae85f852e85ec15ffe7ffd110f4879bc0}{}\label{GOLOVO_8c_ae85f852e85ec15ffe7ffd110f4879bc0}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!numax@{numax}}
+\index{numax@{numax}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{numax}{numax}}]{\setlength{\rightskip}{0pt plus 5cm}integer numax}\hypertarget{GOLOVO_8c_a0d661a6bb3df87af1b762b190bbd38a0}{}\label{GOLOVO_8c_a0d661a6bb3df87af1b762b190bbd38a0}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!numcnt@{numcnt}}
+\index{numcnt@{numcnt}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{numcnt}{numcnt}}]{\setlength{\rightskip}{0pt plus 5cm}integer numcnt}\hypertarget{GOLOVO_8c_a5123b60c8419619c6c2debf212d28208}{}\label{GOLOVO_8c_a5123b60c8419619c6c2debf212d28208}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nump@{nump}}
+\index{nump@{nump}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nump}{nump}}]{\setlength{\rightskip}{0pt plus 5cm}integer nump}\hypertarget{GOLOVO_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}{}\label{GOLOVO_8c_a02bbad4cb4d9a5b7dbe1d081570e0e23}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!numpt1@{numpt1}}
+\index{numpt1@{numpt1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{numpt1}{numpt1}}]{\setlength{\rightskip}{0pt plus 5cm}integer numpt1}\hypertarget{GOLOVO_8c_a885f90b79b85840ec31a64410ad5a01b}{}\label{GOLOVO_8c_a885f90b79b85840ec31a64410ad5a01b}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!numsfs@{numsfs}}
+\index{numsfs@{numsfs}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{numsfs}{numsfs}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsfs}\hypertarget{GOLOVO_8c_a3c4e1b4774aa9eba8a9e701447e7de96}{}\label{GOLOVO_8c_a3c4e1b4774aa9eba8a9e701447e7de96}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!numsur@{numsur}}
+\index{numsur@{numsur}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{numsur}{numsur}}]{\setlength{\rightskip}{0pt plus 5cm}integer numsur}\hypertarget{GOLOVO_8c_af6698c6ad21fe9eb74b16f3676e1edea}{}\label{GOLOVO_8c_af6698c6ad21fe9eb74b16f3676e1edea}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nw@{nw}}
+\index{nw@{nw}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nw}{nw}}]{\setlength{\rightskip}{0pt plus 5cm}integer nw}\hypertarget{GOLOVO_8c_a2f1d53233144f16aa9eff4ddb18331b2}{}\label{GOLOVO_8c_a2f1d53233144f16aa9eff4ddb18331b2}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!nwds@{nwds}}
+\index{nwds@{nwds}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{nwds}{nwds}}]{\setlength{\rightskip}{0pt plus 5cm}integer nwds}\hypertarget{GOLOVO_8c_a50cc0d8afaba030713ef4cef3f7b1424}{}\label{GOLOVO_8c_a50cc0d8afaba030713ef4cef3f7b1424}
+
+
+Definition at line 56 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!plgol\+\_\+@{plgol\+\_\+}}
+\index{plgol\+\_\+@{plgol\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{plgol\+\_\+}{plgol_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   plgol\+\_\+}\hypertarget{GOLOVO_8c_a97e2f8a24730d6beaca22b21cf4c7053}{}\label{GOLOVO_8c_a97e2f8a24730d6beaca22b21cf4c7053}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!pmove@{pmove}}
+\index{pmove@{pmove}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{pmove}{pmove}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal pmove\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a783d9d6da37c5df6b6f0a5661e36e188}{}\label{GOLOVO_8c_a783d9d6da37c5df6b6f0a5661e36e188}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ra@{ra}}
+\index{ra@{ra}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ra}{ra}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ra}\hypertarget{GOLOVO_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}{}\label{GOLOVO_8c_afd7904dc572e69a5db4ddf95d1a2cd5d}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!rc1@{rc1}}
+\index{rc1@{rc1}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{rc1}{rc1}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal rc1}\hypertarget{GOLOVO_8c_abed92b12a9406febedd1333e63fac677}{}\label{GOLOVO_8c_abed92b12a9406febedd1333e63fac677}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ri@{ri}}
+\index{ri@{ri}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ri}{ri}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ri\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_a10ee39de22792cdeadb61b971054f1f5}{}\label{GOLOVO_8c_a10ee39de22792cdeadb61b971054f1f5}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!sagl@{sagl}}
+\index{sagl@{sagl}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{sagl}{sagl}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal sagl}\hypertarget{GOLOVO_8c_a0587446a77bfe08cf06afefa53f295f3}{}\label{GOLOVO_8c_a0587446a77bfe08cf06afefa53f295f3}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!strtno@{strtno}}
+\index{strtno@{strtno}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{strtno}{strtno}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal strtno}\hypertarget{GOLOVO_8c_aab6f63bfee35d26baf5aba9aa96a1bac}{}\label{GOLOVO_8c_aab6f63bfee35d26baf5aba9aa96a1bac}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!surd@{surd}}
+\index{surd@{surd}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{surd}{surd}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal surd}\hypertarget{GOLOVO_8c_aa5510d77e94acdb8ce6f428bbe4b529b}{}\label{GOLOVO_8c_aa5510d77e94acdb8ce6f428bbe4b529b}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ta@{ta}}
+\index{ta@{ta}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ta}{ta}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ta\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_aa38365a06b4e51426459eba3db71f888}{}\label{GOLOVO_8c_aa38365a06b4e51426459eba3db71f888}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tak@{tak}}
+\index{tak@{tak}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tak}{tak}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tak\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a3f4625fb06598c2b4e5a36a3086e9616}{}\label{GOLOVO_8c_a3f4625fb06598c2b4e5a36a3086e9616}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tal@{tal}}
+\index{tal@{tal}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tal}{tal}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tal\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a0a1ab92a468d41071c48870bf40d831d}{}\label{GOLOVO_8c_a0a1ab92a468d41071c48870bf40d831d}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tanhi@{tanhi}}
+\index{tanhi@{tanhi}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tanhi}{tanhi}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanhi\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_add568523b52eb67de02cfb3c96bc4522}{}\label{GOLOVO_8c_add568523b52eb67de02cfb3c96bc4522}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tanlo@{tanlo}}
+\index{tanlo@{tanlo}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tanlo}{tanlo}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tanlo\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_a474319e7812f0129a9244cdbc8ce367e}{}\label{GOLOVO_8c_a474319e7812f0129a9244cdbc8ce367e}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tcont@{tcont}}
+\index{tcont@{tcont}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tcont}{tcont}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tcont\mbox{[}9\mbox{]}}\hypertarget{GOLOVO_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}{}\label{GOLOVO_8c_a5a144bee4f4de9c491cbbbfe2eecc41b}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!te@{te}}
+\index{te@{te}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{te}{te}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal te\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a0686481467dfdc3abf7ebae1c79db934}{}\label{GOLOVO_8c_a0686481467dfdc3abf7ebae1c79db934}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tek@{tek}}
+\index{tek@{tek}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tek}{tek}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tek\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a5d8741a1860502d2a932581e50b021b8}{}\label{GOLOVO_8c_a5d8741a1860502d2a932581e50b021b8}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tel@{tel}}
+\index{tel@{tel}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tel}{tel}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tel\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a309612b772fb2b1f567da30dac5b825c}{}\label{GOLOVO_8c_a309612b772fb2b1f567da30dac5b825c}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tem@{tem}}
+\index{tem@{tem}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tem}{tem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tem\mbox{[}10\mbox{]}}\hypertarget{GOLOVO_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}{}\label{GOLOVO_8c_a8ee04e0b01fcdb9454c5fd80edc61e4c}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!temp@{temp}}
+\index{temp@{temp}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal temp\mbox{[}24\mbox{]}}\hypertarget{GOLOVO_8c_ad1942a932f49b555ac4f104ccc1d8ccc}{}\label{GOLOVO_8c_ad1942a932f49b555ac4f104ccc1d8ccc}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!ti@{ti}}
+\index{ti@{ti}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{ti}{ti}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ti\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_ad52b7211cac11d23db6acf390b61095a}{}\label{GOLOVO_8c_ad52b7211cac11d23db6acf390b61095a}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tik@{tik}}
+\index{tik@{tik}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tik}{tik}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tik\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_a29dae13dc0458def3fe311c0334c5a3f}{}\label{GOLOVO_8c_a29dae13dc0458def3fe311c0334c5a3f}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!til@{til}}
+\index{til@{til}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{til}{til}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal til\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_ade3d26157738d07da2154ab9c7b3e9ef}{}\label{GOLOVO_8c_ade3d26157738d07da2154ab9c7b3e9ef}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tlhit@{tlhit}}
+\index{tlhit@{tlhit}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tlhit}{tlhit}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhit}\hypertarget{GOLOVO_8c_adcb06696b550ef02973cf4cb8abc3671}{}\label{GOLOVO_8c_adcb06696b550ef02973cf4cb8abc3671}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tlhite@{tlhite}}
+\index{tlhite@{tlhite}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tlhite}{tlhite}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlhite\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_a68f886c88961e2dcb5fc8b92fd15cd83}{}\label{GOLOVO_8c_a68f886c88961e2dcb5fc8b92fd15cd83}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tlinc@{tlinc}}
+\index{tlinc@{tlinc}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tlinc}{tlinc}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tlinc\mbox{[}9\mbox{]}}\hypertarget{GOLOVO_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}{}\label{GOLOVO_8c_a4e3e02904b7aa4f3253f2d3170f81f9b}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tlldat\+\_\+@{tlldat\+\_\+}}
+\index{tlldat\+\_\+@{tlldat\+\_\+}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tlldat\+\_\+}{tlldat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   tlldat\+\_\+}\hypertarget{GOLOVO_8c_afa14e49001229f138ca94a8f5568440e}{}\label{GOLOVO_8c_afa14e49001229f138ca94a8f5568440e}
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!tm@{tm}}
+\index{tm@{tm}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{tm}{tm}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tm\mbox{[}3\mbox{]}}\hypertarget{GOLOVO_8c_aea8e883c45bc5ecb1a64c035faf2597b}{}\label{GOLOVO_8c_aea8e883c45bc5ecb1a64c035faf2597b}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!umax@{umax}}
+\index{umax@{umax}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{umax}{umax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal umax\mbox{[}8\mbox{]}}\hypertarget{GOLOVO_8c_a94e6890329a61867ed59615fc2df0aa9}{}\label{GOLOVO_8c_a94e6890329a61867ed59615fc2df0aa9}
+
+
+Definition at line 49 of file G\+O\+L\+O\+V\+O.\+c.
+
+\index{G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}!vtem@{vtem}}
+\index{vtem@{vtem}!G\+O\+L\+O\+V\+O.\+c@{G\+O\+L\+O\+V\+O.\+c}}
+\subsubsection[{\texorpdfstring{vtem}{vtem}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vtem}\hypertarget{GOLOVO_8c_a658674d8c6ee58644f5107d7de7be106}{}\label{GOLOVO_8c_a658674d8c6ee58644f5107d7de7be106}
+
+
+Definition at line 34 of file G\+O\+L\+O\+V\+O.\+c.
+

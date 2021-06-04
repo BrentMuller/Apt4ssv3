@@ -1,0 +1,116 @@
+\hypertarget{ABCDBN_8c}{}\section{A\+B\+C\+D\+B\+N.\+c File Reference}
+\label{ABCDBN_8c}\index{A\+B\+C\+D\+B\+N.\+c@{A\+B\+C\+D\+B\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+B\+C\+D\+B\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{ABCDBN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ABCDBN_8c_a9be4c105dd4ff8f8377b99cbbc76302b}{abcdbn\+\_\+} (char $\ast$str, doublereal $\ast$value, integer $\ast$\hyperlink{SSV3_8c_aa3c72ca6b3be24e62558686312531347}{num}, ftnlen str\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{ABCDBN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+B\+C\+D\+B\+N.\+c@{A\+B\+C\+D\+B\+N.\+c}!abcdbn\+\_\+@{abcdbn\+\_\+}}
+\index{abcdbn\+\_\+@{abcdbn\+\_\+}!A\+B\+C\+D\+B\+N.\+c@{A\+B\+C\+D\+B\+N.\+c}}
+\subsubsection[{\texorpdfstring{abcdbn\+\_\+(char $\ast$str, doublereal $\ast$value, integer $\ast$num, ftnlen str\+\_\+len)}{abcdbn_(char *str, doublereal *value, integer *num, ftnlen str_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int abcdbn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{doublereal $\ast$}]{value, }
+\item[{integer $\ast$}]{num, }
+\item[{ftnlen}]{str\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{ABCDBN_8c_a9be4c105dd4ff8f8377b99cbbc76302b}{}\label{ABCDBN_8c_a9be4c105dd4ff8f8377b99cbbc76302b}
+
+
+Definition at line 39 of file A\+B\+C\+D\+B\+N.\+c.
+
+
+
+References c\+\_\+\+\_\+1, i\+\_\+\+\_\+, j, k, and num.
+
+
+
+Referenced by cilout\+\_\+(), and fread\+\_\+().
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{comment}{/* System generated locals */}
+43     integer i\_\_1;
+44 
+45     \textcolor{comment}{/* Builtin functions */}
+46     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_copy(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+47     integer i\_indx(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen), s\_rsfi(icilist *), do\_fio(
+48         integer *, \textcolor{keywordtype}{char} *, ftnlen), e\_rsfi(\textcolor{keywordtype}{void});
+49 
+50     \textcolor{comment}{/* Local variables */}
+51     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+52     \textcolor{keyword}{static} \textcolor{keywordtype}{char} tstr[12];
+53 
+54     \textcolor{comment}{/* Fortran I/O blocks */}
+55     \textcolor{keyword}{static} icilist io\_\_\_5 = \{ 0, tstr, 0, \textcolor{stringliteral}{"(F12.0)"}, 12, 1 \};
+56 
+57 
+58 
+59 
+60     \textcolor{comment}{/* Parameter adjustments */}
+61     --value;
+62     str -= 12;
+63 
+64     \textcolor{comment}{/* Function Body */}
+65     i\_\_1 = *\hyperlink{APT301_8c_aa3c72ca6b3be24e62558686312531347}{num};
+66     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+67     s\_copy(tstr, str + i\_\_ * 12, (ftnlen)12, (ftnlen)12);
+68     k = i\_indx(tstr, \textcolor{stringliteral}{"."}, (ftnlen)12, (ftnlen)1);
+69     \textcolor{keywordflow}{if} (k == 0) \{
+70         j = i\_indx(tstr, \textcolor{stringliteral}{" "}, (ftnlen)12, (ftnlen)1);
+71         \textcolor{keywordflow}{if} (j != 0) \{
+72         *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&tstr[j - 1] = \textcolor{charliteral}{'.'};
+73         \}
+74     \}
+75     s\_rsfi(&io\_\_\_5);
+76     do\_fio(&\hyperlink{ABCDBN_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, (\textcolor{keywordtype}{char} *)&value[i\_\_], (ftnlen)\textcolor{keyword}{sizeof}(doublereal));
+77     e\_rsfi();
+78 \textcolor{comment}{/* L10: */}
+79     \}
+80     \textcolor{keywordflow}{return} 0;
+81 \} \textcolor{comment}{/* abcdbn\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ABCDBN_8c_a9be4c105dd4ff8f8377b99cbbc76302b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{A\+B\+C\+D\+B\+N.\+c@{A\+B\+C\+D\+B\+N.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!A\+B\+C\+D\+B\+N.\+c@{A\+B\+C\+D\+B\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{ABCDBN_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{ABCDBN_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 17 of file A\+B\+C\+D\+B\+N.\+c.
+
+
+
+Referenced by abcdbn\+\_\+().
+

@@ -1,0 +1,687 @@
+\hypertarget{CURINT_8c}{}\section{C\+U\+R\+I\+N\+T.\+c File Reference}
+\label{CURINT_8c}\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+U\+R\+I\+N\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{CURINT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\+\_\+1}~\hyperlink{REMSCN_8c_a5133904cb53f06da4f30d2740244e601}{inidat\+\_\+}
+\item 
+\#define \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\+\_\+1}~\hyperlink{RESTOR_8c_acc470a2f2ffda339db88c58a4d4c4b61}{interf\+\_\+}
+\item 
+\#define \hyperlink{CURINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CURINT_8c_a728f076f87efaf4d043ebce71f080b4a}{curint\+\_\+} (doublereal $\ast$psurf, integer $\ast$ipsize, doublereal $\ast$\hyperlink{SSV3_8c_a8d070c4193e50b5c7dfdd820229e0e76}{pside}, doublereal $\ast$\hyperlink{SSV3_8c_a023195bc7cbb6070e6cf318dee44980f}{pthick}, doublereal $\ast$tolin, doublereal $\ast$tul, doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$toolax, doublereal $\ast$\hyperlink{UNITS_8c_a8fafde5aff46b55bddfc42a93803fffc}{rc}, integer $\ast$npatch, doublereal $\ast$uc, doublereal $\ast$vc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{CURINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{cxhull} \mbox{[}24000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}{dulim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{dvlim} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_aa23f53bbfcad76998f955271d679887c}{curmax} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a4fbfc91a456d854b82c05cb9394040a3}{curmin} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{ncxhul} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{ngp}\\
+\>integer \hyperlink{CURINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{icursf}\\
+\} \hyperlink{CURINT_8c_a266ce64e64be253d278c111e9a43f171}{inidat\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{CURINT_8c_a5cd6309403a78e065ede916bd522e60b}{dintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a8f83eb4bae3907e86203e233c88c0bec}{uintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}{vintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_ac602c646bdb5e78c0527b4917983c09f}{ldintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a3897bb733794d0587276c494d1dfcd4b}{luintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a4cb55a68cce095e41a7e716d53396c66}{lvintr} \mbox{[}1000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_ae03686076f89124c12a8cba137150b5f}{tpintr} \mbox{[}3000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}{spintr} \mbox{[}3000\mbox{]}\\
+\>doublereal \hyperlink{CURINT_8c_a1cc237173c7457a042ed4b5e1236151e}{snintr} \mbox{[}3000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_a2162b798db7e8645548d1d9edd7951a8}{pintr} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_ac21f87963ba605abb635fec49f22b695}{lpintr} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_a3644bb3caf8c82bebee05596b47ffd50}{iseg} \mbox{[}1000\mbox{]}\\
+\>integer \hyperlink{CURINT_8c_acfb5ad9b5449f50c28bd639363616292}{npintr}\\
+\>integer \hyperlink{CURINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}{lnpint}\\
+\} \hyperlink{CURINT_8c_a57ceb978b0051af5c257068bb12e00d4}{interf\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{CURINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{CURINT_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\>integer \hyperlink{CURINT_8c_ab16df98aac0af928eb1e69b5f3080334}{ipcolm}\\
+\} \hyperlink{CURINT_8c_a3836c4952a3f56e0b968a7e6bd76bdbe}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CURINT_8c_a9e9287f317ef3436252a395791a899f6}{c\+\_\+n1} = -\/1
+\item 
+static integer \hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{CURINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{CURINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 39 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!inidat\+\_\+1@{inidat\+\_\+1}}
+\index{inidat\+\_\+1@{inidat\+\_\+1}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+1}{inidat_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inidat\+\_\+1~{\bf inidat\+\_\+}}\hypertarget{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}{}\label{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}
+
+
+Definition at line 23 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!interf\+\_\+1@{interf\+\_\+1}}
+\index{interf\+\_\+1@{interf\+\_\+1}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{interf\+\_\+1}{interf_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define interf\+\_\+1~{\bf interf\+\_\+}}\hypertarget{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{}\label{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}
+
+
+Definition at line 33 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!curint\+\_\+@{curint\+\_\+}}
+\index{curint\+\_\+@{curint\+\_\+}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{curint\+\_\+(doublereal $\ast$psurf, integer $\ast$ipsize, doublereal $\ast$pside, doublereal $\ast$pthick, doublereal $\ast$tolin, doublereal $\ast$tul, doublereal $\ast$te, doublereal $\ast$toolax, doublereal $\ast$rc, integer $\ast$npatch, doublereal $\ast$uc, doublereal $\ast$vc)}{curint_(doublereal *psurf, integer *ipsize, doublereal *pside, doublereal *pthick, doublereal *tolin, doublereal *tul, doublereal *te, doublereal *toolax, doublereal *rc, integer *npatch, doublereal *uc, doublereal *vc)}}]{\setlength{\rightskip}{0pt plus 5cm}int curint\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{psurf, }
+\item[{integer $\ast$}]{ipsize, }
+\item[{doublereal $\ast$}]{pside, }
+\item[{doublereal $\ast$}]{pthick, }
+\item[{doublereal $\ast$}]{tolin, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{toolax, }
+\item[{doublereal $\ast$}]{rc, }
+\item[{integer $\ast$}]{npatch, }
+\item[{doublereal $\ast$}]{uc, }
+\item[{doublereal $\ast$}]{vc}
+\end{DoxyParamCaption}
+)}\hypertarget{CURINT_8c_a728f076f87efaf4d043ebce71f080b4a}{}\label{CURINT_8c_a728f076f87efaf4d043ebce71f080b4a}
+
+
+Definition at line 49 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+References a, bad\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+n1, corrad, cross\+\_\+(), d1, degsol\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, iflag, inidat\+\_\+1, interf\+\_\+1, j, jmplt2\+\_\+(), k, mixal\+\_\+(), rc, te, txhull\+\_\+(), u, v, v1, v2, v3, and vnorm\+\_\+().
+
+
+
+Referenced by intchk\+\_\+().
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{comment}{/* System generated locals */}
+55     integer i\_\_1;
+56     doublereal d\_\_1, d\_\_2;
+57 
+58     \textcolor{comment}{/* Local variables */}
+59     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+60     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+61     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}, \hyperlink{APT069_8c_a1fe17aa2ff1722c937379044a27da68a}{d1}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3], \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3], \hyperlink{POLPOL_8c_aae03a2f9eb9c3330399111a31c00e2a1}{v3}[3], ct, du, dv, du1, dv1;
+62     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, integer *, 
+63         ftnlen);
+64     \textcolor{keyword}{static} doublereal hrad;
+65     \textcolor{keyword}{static} integer ipen;
+66     \textcolor{keyword}{static} doublereal tlen;
+67     \textcolor{keyword}{static} integer icur, nhit;
+68     \textcolor{keyword}{static} doublereal upen, vpen, cutr3;
+69     \textcolor{keyword}{static} integer iedge, \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+70     \textcolor{keyword}{static} doublereal hcent[3], dumin, dvmin;
+71     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{mixal\_}(integer *, integer *, doublereal *, 
+72         doublereal *, doublereal *, doublereal *, doublereal *, 
+73         doublereal *, doublereal *, doublereal *, doublereal *, 
+74         doublereal *, doublereal *, doublereal *, doublereal *, 
+75         doublereal *, doublereal *, doublereal *, integer *, integer *, 
+76         integer *, integer *);
+77     \textcolor{keyword}{static} integer itool;
+78     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+79         *);
+80     \textcolor{keyword}{static} doublereal pnorm[3];
+81     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+82     \textcolor{keyword}{static} doublereal dumin2, dvmin2;
+83     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{JMPLT2_8c_ae1a759b63e5299c803711a91c3e975f4}{jmplt2\_}(doublereal *, doublereal *, 
+84         doublereal *, doublereal *, integer *);
+85     \textcolor{keyword}{static} doublereal \hyperlink{AERR2_8c_adcb74f3b291d6984fec36f1ecce96e0d}{corrad};
+86     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(doublereal *, doublereal *, 
+87         doublereal *, doublereal *, doublereal *, integer *);
+88     \textcolor{keyword}{static} doublereal cyleng, cutrad, toolce[3];
+89     \textcolor{keyword}{static} integer nitera;
+90     \textcolor{keyword}{static} doublereal penmax, patcur, rcnorm[3], prevdu, ppoint[3], curtol, 
+91         prevdv, tpoint[3];
+92     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c}{txhull\_}(doublereal *, doublereal *, 
+93         doublereal *, doublereal *, doublereal *, doublereal *, 
+94         doublereal *, doublereal *, doublereal *, doublereal *, 
+95         doublereal *, doublereal *);
+96 
+97 
+98 \textcolor{comment}{/*     PURPOSE: TO TEST CURRENT PATCH */}
+99 \textcolor{comment}{/*     FOR BALL-ENDED AND CORNER RADIUS CUTTERS. */}
+100 \textcolor{comment}{/*     USES MIXED ALGORITHM METHOD (MIXAL) */}
+101 
+102 \textcolor{comment}{/*     GIVEN :- */}
+103 \textcolor{comment}{/*     NPATCH      CURRENT PATCH NUMBER */}
+104 \textcolor{comment}{/*     CUTTING POINT DATA (U, V, POSITION, NORMAL AND DERIVATIVES) */}
+105 \textcolor{comment}{/*     TOOL DATA, THEN:- */}
+106 
+107 \textcolor{comment}{/*     TEST SCHEDULE FOR CURRENT PATCH :- */}
+108 \textcolor{comment}{/*     1. TEST FOR PATCH CONVEX. IF TRUE, THEN NO LOCAL INTERFERENCE */}
+109 \textcolor{comment}{/*     2. CALCULATE THE CURVATURE CT OF THE MINIMUM SPHERICAL CONVEX */}
+110 \textcolor{comment}{/*        HULL FOR THE TOOL WITH THE CUTTING POINT AS A DIAMETRAL */}
+111 \textcolor{comment}{/*        POINT.OF CONTACT. TEST AGAINST THE SIGNED MINIMUM CURVATURE */}
+112 \textcolor{comment}{/*        OF THE PATCH CP. THEN IF CP > CT NO LOCAL INTERFERENCE CAN */}
+113 \textcolor{comment}{/*        OCCUR */}
+114 \textcolor{comment}{/*     3. USE MIXAL TO SEARCH FOR INTERFERENCE ON THE PATCH, USING A */}
+115 \textcolor{comment}{/*        A NUMBER OF STARTING POINTS ARRANGED IN A PATTERN ABOUT THE */}
+116 \textcolor{comment}{/*        CUTTING POINT. (THE CUTTING POINT CANNOT BE USED AS A */}
+117 \textcolor{comment}{/*        STARTING POINT FOR THESE SEARCHES, SINCE IT IS A SOLUTION) */}
+118 
+119 \textcolor{comment}{/* .... PATCH DATA */}
+120 \textcolor{comment}{/* .... CUTTING POINT DATA */}
+121 \textcolor{comment}{/* .... SURFACE POINT AND DERIVATIVES */}
+122 \textcolor{comment}{/* .... SECOND DERIVATIVES */}
+123 \textcolor{comment}{/* .... NORMAL AT R */}
+124 
+125 \textcolor{comment}{/* .... POINT OF MAX. PENETRATION FOUND. */}
+126 \textcolor{comment}{/*     NOT NECESSARILY THE FINAL POINT OF ITERATION. */}
+127 \textcolor{comment}{/*     IS TRUE (I.E. EVALUATED, NOT EXTRAPOLATED) SURFACE POINT. */}
+128 \textcolor{comment}{/* .... CORRESPONDING POINT ON TOOL */}
+129 \textcolor{comment}{/* .... NORMAL AT PPOINT */}
+130 \textcolor{comment}{/*     PENMAX          PENETRATION (HIT +VE) */}
+131 \textcolor{comment}{/*     UPEN, VPEN      U,V VALUES */}
+132 
+133 \textcolor{comment}{/* .... TOOL GEOMETRY DATA */}
+134 \textcolor{comment}{/* .... ABS. TOOL TIP COORDS */}
+135 \textcolor{comment}{/* .... TOOL AXES DIRN. COSINES */}
+136 \textcolor{comment}{/* .... TOOL CENTRE */}
+137 
+138 
+139 \textcolor{comment}{/* .... INTERFERENCE CHECKING INITIAL DATA */}
+140 
+141 
+142 
+143 \textcolor{comment}{/* .... SPHERICAL SURFACE ENCLOSURES (HULLS) */}
+144 \textcolor{comment}{/* .... NUMBER OF HULLS */}
+145 \textcolor{comment}{/* .... DU ITERATION LIMIT FOR PATCHES */}
+146 \textcolor{comment}{/* .... DV ITERATION LIMIT FOR PATCHES */}
+147 \textcolor{comment}{/* .... MAXIMUM AND MINIMUM CURVATURE OF PATCHES */}
+148 
+149 \textcolor{comment}{/*     MXNP   -  MAXIMUM NUMBER OF PATCHES PER SURFACE */}
+150 \textcolor{comment}{/*     NGP    -  NUMBER OF PATCHES IN CURRENT SURFACE */}
+151 \textcolor{comment}{/*     ICURSF -  EXTERNAL LDA FILE RECORD NUMBER FOR CURRENT SURFACE */}
+152 
+153 
+154 
+155 \textcolor{comment}{/*    INTERFERENCE TABLE */}
+156 
+157 
+158 
+159 
+160 
+161 
+162 \textcolor{comment}{/* .... WORKSPACE */}
+163 
+164 \textcolor{comment}{/* .... DEBUG FLAGS */}
+165 
+166 
+167 
+168 \textcolor{comment}{/*     CUTTER DEFINITION FOR BALL-ENDED AND CORNER RADIUS CUTTERS */}
+169 
+170 \textcolor{comment}{/*     ITOOL IS CUTTER TYPE: 1 FOR BALL-ENDED, 2 FOR CORNER RADIUS */}
+171 \textcolor{comment}{/*     CUTRAD IS RADIUS OF CYLINDER */}
+172 \textcolor{comment}{/*     CYLENG IS LENGTH OF CYLINDER */}
+173 \textcolor{comment}{/*     CORRAD IS CORNER RADIUS */}
+174 \textcolor{comment}{/*     CUTR3  IS CUTRAD-CORRAD */}
+175 
+176     \textcolor{comment}{/* Parameter adjustments */}
+177     --psurf;
+178     --tul;
+179     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+180     --toolax;
+181     --\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc};
+182 
+183     \textcolor{comment}{/* Function Body */}
+184     corrad = tul[1];
+185     cutrad = tul[2];
+186     cutr3 = tul[3];
+187     tlen = tul[7];
+188     cyleng = tul[7] - tul[4] + tul[1];
+189     \textcolor{keywordflow}{if} ((d\_\_1 = tul[1] - tul[2], abs(d\_\_1)) <= 1e-6) \{
+190     itool = 1;
+191     \} \textcolor{keywordflow}{else} \{
+192     itool = 2;
+193     \}
+194 
+195 \textcolor{comment}{/*     CALC. CURVATURE TOLERANCE CURTOL */}
+196 
+197     \textcolor{keywordflow}{if} (*tolin > 1e-6) \{
+198     d1 = cutrad * 2.;
+199     a = max(cyleng,d1);
+200     curtol = 2 / (*tolin + a * a / *tolin);
+201     \} \textcolor{keywordflow}{else} \{
+202     curtol = 0.;
+203     \}
+204 
+205 \textcolor{comment}{/* .... ADJUST NORMAL AT CONTACT POINT TO POINT TO TOOL SIDE OF SURFACE */}
+206 
+207     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+208     rcnorm[i\_\_ - 1] = *\hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside} * \hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[i\_\_ + 28];
+209 \textcolor{comment}{/* L10: */}
+210     \}
+211 
+212     ipen = 0;
+213     iedge = 0;
+214 
+215 \textcolor{comment}{/*     TEST FOR PATCH CONVEX */}
+216 
+217     patcur = \hyperlink{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.curmax[*npatch - 1];
+218     \textcolor{keywordflow}{if} (patcur > curtol) \{
+219     dumin = \hyperlink{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dulim[*npatch - 1];
+220     dumin2 = dumin * 2;
+221     dvmin = \hyperlink{CURINT_8c_a9ff25d2ea8047e287870096f5289243d}{inidat\_1}.dvlim[*npatch - 1];
+222     dvmin2 = dvmin * 2;
+223 
+224 \textcolor{comment}{/* .... CALCULATE TOOL CENTRE */}
+225     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+226         toolce[i\_\_ - 1] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + (tul[4] + tul[1]) * toolax[i\_\_];
+227 \textcolor{comment}{/* L100: */}
+228     \}
+229 
+230 \textcolor{comment}{/*     TEST AGAINST TOOL CONVEX HULL CURVATURE */}
+231     \hyperlink{TXHULL_8c_a2534a48b4def388a3cf8b924787d1c4c}{txhull\_}(&\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[1], rcnorm, &cutrad, &corrad, &cutr3, &tlen, &toolax[1], &
+232         \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[1], toolce, &ct, &hrad, hcent);
+233 
+234     \textcolor{keywordflow}{if} (ct < patcur) \{
+235 
+236 \textcolor{comment}{/*     SEARCH FOR LOCAL INTERFERENCE */}
+237 \textcolor{comment}{/*     CALC. SEARCH DIRECTIONS IN TANGENT PLANE :- */}
+238         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(rcnorm, &toolax[1], v3);
+239         \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(v3, v1);
+240         \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(v1, rcnorm, v3);
+241         \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(v3, v2);
+242 
+243 \textcolor{comment}{/*     V1 AND V2 ARE UNIT VECTORS IN TANGENT PLANE AT CUTTING POINT */}
+244 \textcolor{comment}{/*     V2 PERPENDICULAR TO TOOL AXIS, V1 PERPENDICULAR TO V2 */}
+245 
+246 \textcolor{comment}{/*     SEARCH AT 5 START POINTS */}
+247 
+248 \textcolor{comment}{/* .... LOCATION IN INTERFERENCE TABLE FOR START OF LOCAL PATCH DATA */}
+249 
+250         icur = \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr;
+251 \textcolor{comment}{/* .... NUMBER OF HITS ON LOCAL PATCH */}
+252         nhit = 0;
+253 
+254         a = cutrad * -.5f;
+255         \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(v1, &\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[5], &\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[9], &du1, &dv1, &i\_\_);
+256         \textcolor{keywordflow}{for} (k = 1; k <= 5; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+257         \textcolor{keywordflow}{if} (k == 3) \{
+258             \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(v2, &\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[5], &\hyperlink{APT331_8c_a9578f88fefb44e6c3f1fb1a83c939855}{rc}[9], &du1, &dv1, &i\_\_);
+259         \}
+260 
+261         \textcolor{keywordflow}{if} (k < 5) \{
+262             a = -\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+263         \} \textcolor{keywordflow}{else} \{
+264             a *= 3;
+265         \}
+266 
+267         du = a * du1;
+268         dv = a * dv1;
+269         \hyperlink{JMPLT2_8c_ae1a759b63e5299c803711a91c3e975f4}{jmplt2\_}(uc, vc, &du, &dv, &i\_\_);
+270         \textcolor{keywordflow}{if} (abs(du) >= dumin || abs(dv) >= dvmin) \{
+271             u = *uc + du;
+272             v = *vc + dv;
+273             penmax = -1e6;
+274             \textcolor{keywordflow}{if} (nitera > 1) \{
+275             prevdu = du1;
+276             prevdv = dv1;
+277             \}
+278 
+279             \hyperlink{MIXAL_8c_ac7c65e965e67061d6db9eb886095040c}{mixal\_}(npatch, ipsize, &psurf[1], \hyperlink{CUTREG_8c_acb9e3edc690233bc201e7d78142faf58}{pside}, \hyperlink{CUTREG_8c_ac71160b270d09ac445746a46dfa651ba}{pthick}, &tul[1], 
+280                 toolce, &toolax[1], &u, &v, &dumin, &dvmin, &upen,
+281                  &vpen, ppoint, tpoint, pnorm, &penmax, &ipen, &
+282                 iflag, &iedge, &nitera);
+283 
+284 \textcolor{comment}{/* .... DEBUG PRINT */}
+285 
+286             \textcolor{keywordflow}{if} (\hyperlink{CURINT_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug == 11) \{
+287             \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CURINT_8c_a9e9287f317ef3436252a395791a899f6}{c\_n1}, &\hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{" "}, &\hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, (ftnlen)1);
+288             \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"NPAT"}, npatch, (ftnlen)4);
+289             \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"K   "}, &k, (ftnlen)4);
+290             \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, \textcolor{stringliteral}{"ITER"}, &nitera, (ftnlen)4);
+291             \}
+292 
+293             \textcolor{keywordflow}{if} (penmax > *tolin) \{
+294 \textcolor{comment}{/* .... PENETRATION DETECTED */}
+295             \textcolor{keywordflow}{if} (nhit > 0) \{
+296                 \textcolor{keywordflow}{if} ((d\_\_1 = *uc - upen, abs(d\_\_1)) > dumin2 || (
+297                     d\_\_2 = *vc - vpen, abs(d\_\_2)) > dvmin2) \{
+298 
+299                 i\_\_1 = nhit;
+300                 \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+301                     \textcolor{keywordflow}{if} ((d\_\_1 = \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.uintr[icur + i\_\_ - 1]
+302                          - upen, abs(d\_\_1)) <= dumin2 && (
+303                         d\_\_2 = \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.vintr[icur + i\_\_ 
+304                         - 1] - vpen, abs(d\_\_2)) <= dvmin2)
+305                          \{
+306                     \textcolor{keywordflow}{goto} L520;
+307                     \}
+308 \textcolor{comment}{/* L550: */}
+309                 \}
+310                 \}
+311             \}
+312 
+313 \textcolor{comment}{/* .... STORE IN INTERFERENCE TABLE */}
+314 
+315             ++nhit;
+316             ++\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr;
+317             \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.uintr[\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = upen;
+318             \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.vintr[\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = vpen;
+319             \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.pintr[\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = *npatch;
+320             \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.dintr[\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = penmax;
+321             \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.iseg[\hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr - 1] = ipen;
+322             \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+323                 \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.spintr[j + \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = 
+324                     ppoint[j - 1];
+325                 \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.tpintr[j + \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = 
+326                     tpoint[j - 1];
+327                 \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.snintr[j + \hyperlink{CURINT_8c_a60661c1c38513f1e17635a56a4e866e9}{interf\_1}.npintr * 3 - 4] = 
+328                     pnorm[j - 1];
+329 \textcolor{comment}{/* L515: */}
+330             \}
+331 
+332             \}
+333 
+334         \}
+335 
+336 L520:
+337         ;
+338         \}
+339 
+340     \}
+341     \} \textcolor{keywordflow}{else} \{
+342 \textcolor{comment}{/* .... PATCH CONVEX OR PSEUDO CONVEX */}
+343     iflag = 0;
+344     \}
+345     \textcolor{keywordflow}{return} 0;
+346 \} \textcolor{comment}{/* curint\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CURINT_8c_a728f076f87efaf4d043ebce71f080b4a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CURINT_8c_a728f076f87efaf4d043ebce71f080b4a_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{CURINT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 44 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CURINT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 45 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!c\+\_\+n1@{c\+\_\+n1}}
+\index{c\+\_\+n1@{c\+\_\+n1}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n1}{c_n1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n1 = -\/1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CURINT_8c_a9e9287f317ef3436252a395791a899f6}{}\label{CURINT_8c_a9e9287f317ef3436252a395791a899f6}
+
+
+Definition at line 43 of file C\+U\+R\+I\+N\+T.\+c.
+
+
+
+Referenced by curint\+\_\+().
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!curmax@{curmax}}
+\index{curmax@{curmax}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{curmax}{curmax}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmax\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_aa23f53bbfcad76998f955271d679887c}{}\label{CURINT_8c_aa23f53bbfcad76998f955271d679887c}
+
+
+Definition at line 18 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!curmin@{curmin}}
+\index{curmin@{curmin}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{curmin}{curmin}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal curmin\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a4fbfc91a456d854b82c05cb9394040a3}{}\label{CURINT_8c_a4fbfc91a456d854b82c05cb9394040a3}
+
+
+Definition at line 18 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!cxhull@{cxhull}}
+\index{cxhull@{cxhull}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{cxhull}{cxhull}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal cxhull\mbox{[}24000\mbox{]}}\hypertarget{CURINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}{}\label{CURINT_8c_a52b80ec09e08e11ef4f0c0f88e4876b6}
+
+
+Definition at line 18 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!dintr@{dintr}}
+\index{dintr@{dintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dintr}{dintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a5cd6309403a78e065ede916bd522e60b}{}\label{CURINT_8c_a5cd6309403a78e065ede916bd522e60b}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!dulim@{dulim}}
+\index{dulim@{dulim}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dulim}{dulim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dulim\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}{}\label{CURINT_8c_a4788dc961e15ca382588a6f41cd0d1c4}
+
+
+Definition at line 18 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!dvlim@{dvlim}}
+\index{dvlim@{dvlim}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{dvlim}{dvlim}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal dvlim\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}{}\label{CURINT_8c_a2ad7fd4434a6687cbee351c9f0a91b85}
+
+
+Definition at line 18 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{CURINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{CURINT_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 36 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{CURINT_8c_a3836c4952a3f56e0b968a7e6bd76bdbe}{}\label{CURINT_8c_a3836c4952a3f56e0b968a7e6bd76bdbe}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!icursf@{icursf}}
+\index{icursf@{icursf}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{icursf}{icursf}}]{\setlength{\rightskip}{0pt plus 5cm}integer icursf}\hypertarget{CURINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}{}\label{CURINT_8c_adf56d9b4708c7bf0eb42d6d0f3a77bc3}
+
+
+Definition at line 20 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!inidat\+\_\+@{inidat\+\_\+}}
+\index{inidat\+\_\+@{inidat\+\_\+}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{inidat\+\_\+}{inidat_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   inidat\+\_\+}\hypertarget{CURINT_8c_a266ce64e64be253d278c111e9a43f171}{}\label{CURINT_8c_a266ce64e64be253d278c111e9a43f171}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!interf\+\_\+@{interf\+\_\+}}
+\index{interf\+\_\+@{interf\+\_\+}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{interf\+\_\+}{interf_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   interf\+\_\+}\hypertarget{CURINT_8c_a57ceb978b0051af5c257068bb12e00d4}{}\label{CURINT_8c_a57ceb978b0051af5c257068bb12e00d4}
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{CURINT_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{CURINT_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 36 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ipcolm@{ipcolm}}
+\index{ipcolm@{ipcolm}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ipcolm}{ipcolm}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolm}\hypertarget{CURINT_8c_ab16df98aac0af928eb1e69b5f3080334}{}\label{CURINT_8c_ab16df98aac0af928eb1e69b5f3080334}
+
+
+Definition at line 36 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!iseg@{iseg}}
+\index{iseg@{iseg}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{iseg}{iseg}}]{\setlength{\rightskip}{0pt plus 5cm}integer iseg\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a3644bb3caf8c82bebee05596b47ffd50}{}\label{CURINT_8c_a3644bb3caf8c82bebee05596b47ffd50}
+
+
+Definition at line 30 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ldintr@{ldintr}}
+\index{ldintr@{ldintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ldintr}{ldintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal ldintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_ac602c646bdb5e78c0527b4917983c09f}{}\label{CURINT_8c_ac602c646bdb5e78c0527b4917983c09f}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!lnpint@{lnpint}}
+\index{lnpint@{lnpint}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lnpint}{lnpint}}]{\setlength{\rightskip}{0pt plus 5cm}integer lnpint}\hypertarget{CURINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}{}\label{CURINT_8c_a3fec1f783d0db6446c2de86c30f5c1b5}
+
+
+Definition at line 30 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!lpintr@{lpintr}}
+\index{lpintr@{lpintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lpintr}{lpintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer lpintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_ac21f87963ba605abb635fec49f22b695}{}\label{CURINT_8c_ac21f87963ba605abb635fec49f22b695}
+
+
+Definition at line 30 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!luintr@{luintr}}
+\index{luintr@{luintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{luintr}{luintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal luintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a3897bb733794d0587276c494d1dfcd4b}{}\label{CURINT_8c_a3897bb733794d0587276c494d1dfcd4b}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!lvintr@{lvintr}}
+\index{lvintr@{lvintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{lvintr}{lvintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal lvintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a4cb55a68cce095e41a7e716d53396c66}{}\label{CURINT_8c_a4cb55a68cce095e41a7e716d53396c66}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ncxhul@{ncxhul}}
+\index{ncxhul@{ncxhul}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ncxhul}{ncxhul}}]{\setlength{\rightskip}{0pt plus 5cm}integer ncxhul\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}{}\label{CURINT_8c_a6af1d3fdc983ce604b95999d82d8ddaf}
+
+
+Definition at line 20 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!ngp@{ngp}}
+\index{ngp@{ngp}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{ngp}{ngp}}]{\setlength{\rightskip}{0pt plus 5cm}integer ngp}\hypertarget{CURINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}{}\label{CURINT_8c_aff4428bb5e4d31d51a2be097fd6cba1b}
+
+
+Definition at line 20 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!npintr@{npintr}}
+\index{npintr@{npintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{npintr}{npintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer npintr}\hypertarget{CURINT_8c_acfb5ad9b5449f50c28bd639363616292}{}\label{CURINT_8c_acfb5ad9b5449f50c28bd639363616292}
+
+
+Definition at line 30 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!pintr@{pintr}}
+\index{pintr@{pintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{pintr}{pintr}}]{\setlength{\rightskip}{0pt plus 5cm}integer pintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a2162b798db7e8645548d1d9edd7951a8}{}\label{CURINT_8c_a2162b798db7e8645548d1d9edd7951a8}
+
+
+Definition at line 30 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!snintr@{snintr}}
+\index{snintr@{snintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{snintr}{snintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal snintr\mbox{[}3000\mbox{]}}\hypertarget{CURINT_8c_a1cc237173c7457a042ed4b5e1236151e}{}\label{CURINT_8c_a1cc237173c7457a042ed4b5e1236151e}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!spintr@{spintr}}
+\index{spintr@{spintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{spintr}{spintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal spintr\mbox{[}3000\mbox{]}}\hypertarget{CURINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}{}\label{CURINT_8c_a2f5f2a8e2631942c9b3aca87732e798d}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!tpintr@{tpintr}}
+\index{tpintr@{tpintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{tpintr}{tpintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal tpintr\mbox{[}3000\mbox{]}}\hypertarget{CURINT_8c_ae03686076f89124c12a8cba137150b5f}{}\label{CURINT_8c_ae03686076f89124c12a8cba137150b5f}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!uintr@{uintr}}
+\index{uintr@{uintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{uintr}{uintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_a8f83eb4bae3907e86203e233c88c0bec}{}\label{CURINT_8c_a8f83eb4bae3907e86203e233c88c0bec}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+
+\index{C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}!vintr@{vintr}}
+\index{vintr@{vintr}!C\+U\+R\+I\+N\+T.\+c@{C\+U\+R\+I\+N\+T.\+c}}
+\subsubsection[{\texorpdfstring{vintr}{vintr}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vintr\mbox{[}1000\mbox{]}}\hypertarget{CURINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}{}\label{CURINT_8c_aeaf3a833268e3b5bdf0217ca148b51b8}
+
+
+Definition at line 26 of file C\+U\+R\+I\+N\+T.\+c.
+

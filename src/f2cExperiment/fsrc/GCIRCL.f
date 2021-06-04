@@ -1,0 +1,60 @@
+**** SOURCE FILE : M0000906.V01   ***
+*
+C...  FORTRAN SUBROUTINE GCIRCL                  7/70      RW
+C
+C  PURPOSE
+C        THIS SUBROUTINE TRANSLATES THE CANONICAL FORMS
+C        OF THE APT GEOMETRY (CIRCLE) INTO THE COEFFICIENTS
+C        OF THE QUADRATIC. COEFFICIENTS ARE STORED
+C        IN "QUADBF" AND THE QUADRATIC OUTPUT
+C        SUBROUTINE IS CALLED.
+C
+C        CANONICAL FORM OF CIRCLE
+C        1. X-COORD OF CENTER          (XC)
+C        2. Y-COORD OF CENTER          (YC)
+C        3. Z-COORD OF CENTER
+C        4. X-COMPONENT OF AXIS VECTOR = 0
+C        5. Y-COMPONENT OF AXIS VECTOR = 0
+C        6. Z-COMPONENT OF AXIS VECTOR = 1
+C        7. RADIUS OF CIRCLE           (R)
+C
+C        EQUATION
+C        X**2 + Y**2 - 2XC*X - 2YC*Y + (XC**2+YC**2-R**2) = 0.
+C
+C     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+C
+      SUBROUTINE GCIRCL(CANON,QUADBF)
+C
+      IMPLICIT DOUBLE PRECISION (A-H), DOUBLE PRECISION (O-Z)
+      DIMENSION CANON(10),QUADBF(10)
+C
+      DO 2 J=1,2
+ 2    QUADBF(J)=1.0
+C
+      DO 3 J=3,6
+ 3    QUADBF(J)=0.0
+C
+      KX=1
+      KY=2
+C        COMPUTE C*X TERM
+C
+      QUADBF(7)=CANON(KX)*(-2.0)
+C
+C        COMPUTE C*Y TERM
+C
+      QUADBF(8)=CANON(KY)*(-2.0)
+C
+C        C*Z TERM EQUAL ZERO
+C
+      QUADBF(9)=0.0
+C
+C        COMPUTE CONSTANT TERM
+C
+      KR=7
+      QUADBF(10)=(CANON(KX)**2)+(CANON(KY)**2)
+      QUADBF(10)=QUADBF(10)-(CANON(KR)**2)
+C
+C        RETURN TO CALLING PROGRAM
+C
+      RETURN
+      END

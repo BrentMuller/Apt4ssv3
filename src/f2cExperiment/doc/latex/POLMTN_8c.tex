@@ -1,0 +1,204 @@
+\hypertarget{POLMTN_8c}{}\section{P\+O\+L\+M\+T\+N.\+c File Reference}
+\label{POLMTN_8c}\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for P\+O\+L\+M\+T\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{POLMTN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{POLMTN_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\+\_\+1}~\hyperlink{SSV3_8c_a0ceef444afd5929ce4d4096c6dfc2f22}{ssarlm\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{POLMTN_8c_adf5105e0cb0cd010908edd32643d5b9b}{polmtn\+\_\+} (integer $\ast$ns, doublereal $\ast$poed, integer $\ast$\hyperlink{APT089_8c_a3d6a160e79abd2d447bd74462fa979b8}{m}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>doublereal \hyperlink{POLMTN_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{bb} \mbox{[}256\mbox{]}\\
+\>doublereal \hyperlink{POLMTN_8c_a92a9ddacaa39a881012df9cfbd55134a}{uu} \mbox{[}4\mbox{]}\\
+\>doublereal \hyperlink{POLMTN_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{vv} \mbox{[}4\mbox{]}\\
+\>integer \hyperlink{POLMTN_8c_ad4159f737847a828654fd6bd050aff25}{iitop} \mbox{[}96\mbox{]}\\
+\>integer \hyperlink{POLMTN_8c_af00895acd217dfa45b2e2e9716ebff70}{iiflag} \mbox{[}16\mbox{]}\\
+\>integer \hyperlink{POLMTN_8c_ad9ba103b57834a3db27b426fcafa58fe}{ipnum} \mbox{[}4\mbox{]}\\
+\} \hyperlink{POLMTN_8c_a991419fbd9f9caaea268fcf9c052a711}{ssarlm\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{POLMTN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!ssarlm\+\_\+1@{ssarlm\+\_\+1}}
+\index{ssarlm\+\_\+1@{ssarlm\+\_\+1}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+1}{ssarlm_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssarlm\+\_\+1~{\bf ssarlm\+\_\+}}\hypertarget{POLMTN_8c_a4c8b5d1a175b60e8225f362516b59daf}{}\label{POLMTN_8c_a4c8b5d1a175b60e8225f362516b59daf}
+
+
+Definition at line 23 of file P\+O\+L\+M\+T\+N.\+c.
+
+
+
+Referenced by polmtn\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!polmtn\+\_\+@{polmtn\+\_\+}}
+\index{polmtn\+\_\+@{polmtn\+\_\+}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{polmtn\+\_\+(integer $\ast$ns, doublereal $\ast$poed, integer $\ast$m, integer $\ast$n)}{polmtn_(integer *ns, doublereal *poed, integer *m, integer *n)}}]{\setlength{\rightskip}{0pt plus 5cm}int polmtn\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ns, }
+\item[{doublereal $\ast$}]{poed, }
+\item[{integer $\ast$}]{m, }
+\item[{integer $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{POLMTN_8c_adf5105e0cb0cd010908edd32643d5b9b}{}\label{POLMTN_8c_adf5105e0cb0cd010908edd32643d5b9b}
+
+
+Definition at line 31 of file P\+O\+L\+M\+T\+N.\+c.
+
+
+
+References c\+\_\+\+\_\+0, cnsurf\+\_\+(), i\+\_\+\+\_\+, j, m, n, ssarlm\+\_\+1, u, and v.
+
+
+
+Referenced by intsec\+\_\+().
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{comment}{/* System generated locals */}
+35     integer poed\_dim2, poed\_offset, i\_\_1, i\_\_2;
+36 
+37     \textcolor{comment}{/* Local variables */}
+38     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+39     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+40     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(doublereal *, doublereal *, 
+41         doublereal *, doublereal *, integer *, integer *);
+42 
+43 
+44 \textcolor{comment}{/*  TO COMPUTE A M*N POLYEDRON TO SEARCH FOR ROUGH INTERSECTION */}
+45 
+46 
+47 \textcolor{comment}{/* SS - ARELEM - COMMON */}
+48 
+49 \textcolor{comment}{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
+50 
+51     \textcolor{comment}{/* Parameter adjustments */}
+52     poed\_dim2 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+53     poed\_offset = 1 + 3 * (1 + poed\_dim2);
+54     poed -= poed\_offset;
+55 
+56     \textcolor{comment}{/* Function Body */}
+57     i\_\_1 = *\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n};
+58     \textcolor{keywordflow}{for} (j = 1; j <= i\_\_1; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+59     v = (doublereal) (j - 1);
+60     v /= 4.;
+61     i\_\_2 = *\hyperlink{APT088_8c_a3d6a160e79abd2d447bd74462fa979b8}{m};
+62     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+63         u = (doublereal) (i\_\_ - 1);
+64         u /= 4.;
+65         \hyperlink{CNSURF_8c_ac78829905fa0a953daade27a36d7111f}{cnsurf\_}(&u, &v, &\hyperlink{POLMTN_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.bb[(*ns << 6) - 64], &poed[(i\_\_ + j * 
+66             poed\_dim2) * 3 + 1], &\hyperlink{POLMTN_8c_a4c8b5d1a175b60e8225f362516b59daf}{ssarlm\_1}.iiflag[(*ns << 2) - 4], &
+67             \hyperlink{POLMTN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0});
+68 \textcolor{comment}{/* L1: */}
+69     \}
+70     \}
+71 
+72     \textcolor{keywordflow}{return} 0;
+73 \} \textcolor{comment}{/* polmtn\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{POLMTN_8c_adf5105e0cb0cd010908edd32643d5b9b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{POLMTN_8c_adf5105e0cb0cd010908edd32643d5b9b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!bb@{bb}}
+\index{bb@{bb}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{bb}{bb}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal bb\mbox{[}256\mbox{]}}\hypertarget{POLMTN_8c_a02df207cc55dd8e5a55b6f9d78d942d6}{}\label{POLMTN_8c_a02df207cc55dd8e5a55b6f9d78d942d6}
+
+
+Definition at line 18 of file P\+O\+L\+M\+T\+N.\+c.
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{POLMTN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{POLMTN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 27 of file P\+O\+L\+M\+T\+N.\+c.
+
+
+
+Referenced by polmtn\+\_\+().
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!iiflag@{iiflag}}
+\index{iiflag@{iiflag}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{iiflag}{iiflag}}]{\setlength{\rightskip}{0pt plus 5cm}integer iiflag\mbox{[}16\mbox{]}}\hypertarget{POLMTN_8c_af00895acd217dfa45b2e2e9716ebff70}{}\label{POLMTN_8c_af00895acd217dfa45b2e2e9716ebff70}
+
+
+Definition at line 19 of file P\+O\+L\+M\+T\+N.\+c.
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!iitop@{iitop}}
+\index{iitop@{iitop}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{iitop}{iitop}}]{\setlength{\rightskip}{0pt plus 5cm}integer iitop\mbox{[}96\mbox{]}}\hypertarget{POLMTN_8c_ad4159f737847a828654fd6bd050aff25}{}\label{POLMTN_8c_ad4159f737847a828654fd6bd050aff25}
+
+
+Definition at line 19 of file P\+O\+L\+M\+T\+N.\+c.
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!ipnum@{ipnum}}
+\index{ipnum@{ipnum}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{ipnum}{ipnum}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipnum\mbox{[}4\mbox{]}}\hypertarget{POLMTN_8c_ad9ba103b57834a3db27b426fcafa58fe}{}\label{POLMTN_8c_ad9ba103b57834a3db27b426fcafa58fe}
+
+
+Definition at line 19 of file P\+O\+L\+M\+T\+N.\+c.
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!ssarlm\+\_\+@{ssarlm\+\_\+}}
+\index{ssarlm\+\_\+@{ssarlm\+\_\+}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{ssarlm\+\_\+}{ssarlm_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ssarlm\+\_\+}\hypertarget{POLMTN_8c_a991419fbd9f9caaea268fcf9c052a711}{}\label{POLMTN_8c_a991419fbd9f9caaea268fcf9c052a711}
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!uu@{uu}}
+\index{uu@{uu}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{uu}{uu}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal uu\mbox{[}4\mbox{]}}\hypertarget{POLMTN_8c_a92a9ddacaa39a881012df9cfbd55134a}{}\label{POLMTN_8c_a92a9ddacaa39a881012df9cfbd55134a}
+
+
+Definition at line 18 of file P\+O\+L\+M\+T\+N.\+c.
+
+\index{P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}!vv@{vv}}
+\index{vv@{vv}!P\+O\+L\+M\+T\+N.\+c@{P\+O\+L\+M\+T\+N.\+c}}
+\subsubsection[{\texorpdfstring{vv}{vv}}]{\setlength{\rightskip}{0pt plus 5cm}doublereal vv\mbox{[}4\mbox{]}}\hypertarget{POLMTN_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}{}\label{POLMTN_8c_a1bc7d5ec2f4a8c77c67292efe261db1f}
+
+
+Definition at line 18 of file P\+O\+L\+M\+T\+N.\+c.
+

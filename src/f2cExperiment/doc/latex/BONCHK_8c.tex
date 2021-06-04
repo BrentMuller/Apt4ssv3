@@ -1,0 +1,205 @@
+\hypertarget{BONCHK_8c}{}\section{B\+O\+N\+C\+H\+K.\+c File Reference}
+\label{BONCHK_8c}\index{B\+O\+N\+C\+H\+K.\+c@{B\+O\+N\+C\+H\+K.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+O\+N\+C\+H\+K.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{BONCHK_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BONCHK_8c_a6630801f161c793500e790423ef68134}{bonchk\+\_\+} (doublereal $\ast$ss, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a628b7f3f5aeb2a45107c95273a05a7bf}{v}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}, integer $\ast$\hyperlink{SSV3_8c_a750904bd141d1d793f993b845f9f069b}{itop}, integer $\ast$inum, integer $\ast$ickbn, integer $\ast$idebug)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{BONCHK_8c_a5e7359f78743350865398325d9155f20}{c\+\_\+\+\_\+3} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{B\+O\+N\+C\+H\+K.\+c@{B\+O\+N\+C\+H\+K.\+c}!bonchk\+\_\+@{bonchk\+\_\+}}
+\index{bonchk\+\_\+@{bonchk\+\_\+}!B\+O\+N\+C\+H\+K.\+c@{B\+O\+N\+C\+H\+K.\+c}}
+\subsubsection[{\texorpdfstring{bonchk\+\_\+(doublereal $\ast$ss, doublereal $\ast$b, doublereal $\ast$u, doublereal $\ast$v, integer $\ast$iflag, integer $\ast$itop, integer $\ast$inum, integer $\ast$ickbn, integer $\ast$idebug)}{bonchk_(doublereal *ss, doublereal *b, doublereal *u, doublereal *v, integer *iflag, integer *itop, integer *inum, integer *ickbn, integer *idebug)}}]{\setlength{\rightskip}{0pt plus 5cm}int bonchk\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{ss, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{v, }
+\item[{integer $\ast$}]{iflag, }
+\item[{integer $\ast$}]{itop, }
+\item[{integer $\ast$}]{inum, }
+\item[{integer $\ast$}]{ickbn, }
+\item[{integer $\ast$}]{idebug}
+\end{DoxyParamCaption}
+)}\hypertarget{BONCHK_8c_a6630801f161c793500e790423ef68134}{}\label{BONCHK_8c_a6630801f161c793500e790423ef68134}
+
+
+Definition at line 21 of file B\+O\+N\+C\+H\+K.\+c.
+
+
+
+References b, c\+\_\+\+\_\+3, i\+\_\+\+\_\+, iflag, jj, k, l, lodpch\+\_\+(), one, t, u, v, and zero.
+
+
+
+Referenced by pchprc\+\_\+().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{comment}{/* Initialized data */}
+26 
+27     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+28     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+29 
+30     \textcolor{comment}{/* System generated locals */}
+31     integer i\_\_1, i\_\_2;
+32 
+33     \textcolor{comment}{/* Local variables */}
+34     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+35     \textcolor{keyword}{static} doublereal \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+36     \textcolor{keyword}{static} integer \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+37     \textcolor{keyword}{static} doublereal bt[64];
+38     \textcolor{keyword}{static} integer kk, np, npt, ncur, nmesh, itopt[24]  \textcolor{comment}{/* was [6][4] */}, 
+39         iflagt[4];
+40     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(doublereal *, doublereal *, integer *,
+41          integer *, integer *, integer *);
+42 
+43 \textcolor{comment}{/* ------ THIS PROGRAM CHECKS FOR A VALID BOUNDARY TRANSITION */}
+44 \textcolor{comment}{/* ------ IF THE TRANSITION IS VALID, THE ROUTINE REPLACES THE */}
+45 \textcolor{comment}{/* ------ CURRENT PATCH WITH A NEW ONE */}
+46 \textcolor{comment}{/* ------ SS IS THE SCULPTURE SURFACE CANON ARRAY */}
+47 \textcolor{comment}{/* ------ B,IFLAG,ITOP IS THE DEFINING DATA FOR THE CURRENT PATCH */}
+48 \textcolor{comment}{/* ------ INUM IS THE NUMBER OF THE CURRENT PATCH RELATIVE TO SS */}
+49 \textcolor{comment}{/* ------ ICKBN IS THE NUMBER OF THE BOUNDARY TO BE CHECKED */}
+50 \textcolor{comment}{/* ------ U,V SHOULD BE PARAMETRIC COORDINATES ON THIS BOUNDARY */}
+51 \textcolor{comment}{/* ------ IF THE TRANSITION IS VALID, ALL DATA EXCEPT SS SHOULD */}
+52 \textcolor{comment}{/* ------ BE REPLACED ON TERMINATION OF THIS PROGRAM. */}
+53 \textcolor{comment}{/* ------      FIRST CHECK TO SEE IF ANY PATCH AT ALL LIES ACROSS */}
+54 \textcolor{comment}{/* ------      THIS BOUNDARY. */}
+55     \textcolor{comment}{/* Parameter adjustments */}
+56     \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop} -= 7;
+57     --\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag};
+58     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+59     --ss;
+60 
+61     \textcolor{comment}{/* Function Body */}
+62 
+63     np = \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[(0 + (0 + (1 + *ickbn * 6 << 2))) / 4];
+64     \textcolor{keywordflow}{if} (\hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[*ickbn * 6 + 2] == 0) \{
+65     \textcolor{keywordflow}{return} 0;
+66     \}
+67 \textcolor{comment}{/* ------ OTHERWISE CHECK EACH PATCH IN THE LIST */}
+68     i\_\_1 = np;
+69     \textcolor{keywordflow}{for} (\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} = 1; \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+70     ncur = \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_} + 1 + *ickbn * 6];
+71     \hyperlink{LOOPCH_8c_aeb83d078ea077b9eb96d6d6555fcb55c}{lodpch\_}(&ss[1], bt, iflagt, itopt, &ncur, &\hyperlink{BONCHK_8c_a5e7359f78743350865398325d9155f20}{c\_\_3});
+72 \textcolor{comment}{/* ------ CHECK THE TOPOLOGY TABLE OF NCUR FOR A MATCH WITH INUM */}
+73     \textcolor{keywordflow}{for} (\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} = 1; \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} <= 4; ++\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l}) \{
+74         npt = itopt[\hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} * 6 - 6];
+75         \textcolor{keywordflow}{if} (npt == 0) \{
+76         \textcolor{keywordflow}{goto} L20;
+77         \}
+78         i\_\_2 = npt;
+79         \textcolor{keywordflow}{for} (\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} = 1; \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} <= i\_\_2; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+80         \textcolor{keywordflow}{if} (itopt[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k} + 1 + \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l} * 6 - 7] == *inum) \{
+81             \textcolor{keywordflow}{goto} L40;
+82         \}
+83 \textcolor{comment}{/* L30: */}
+84         \}
+85         \textcolor{keywordflow}{goto} L20;
+86 \textcolor{comment}{/* ------ IT IS CLEAR THAT PATCH NCUR S LTH BOUNDARY DOES LIE ON */}
+87 \textcolor{comment}{/* ------ PATCH INUM S ICKBN-TH BOUNDARY.  THEREFORE, MAY A DETAILED */}
+88 \textcolor{comment}{/* ------ COMPUTATION IF A CROSSOVER OCCURS AT U,V */}
+89 \textcolor{comment}{/* ------ SPV IS COMPUTED AS THE CROSSOVER SPACE POINT */}
+90 \textcolor{comment}{/* ------ IN CASE OF A MESH SURFACE, SKIP MOST OF THE TRANSFER LOGIC */}
+91 L40:
+92         nmesh = (integer) ss[5];
+93         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u};
+94         \textcolor{keywordflow}{if} ((*ickbn - 1) * (*ickbn - 4) != 0) \{
+95         \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t} = *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v};
+96         \}
+97 \textcolor{comment}{/* ------ THEREFORE GENERATE THE NEW ACTIVE PATCH DATA */}
+98         *inum = ncur;
+99         \textcolor{keywordflow}{for} (kk = 1; kk <= 64; ++kk) \{
+100         \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[kk] = bt[kk - 1];
+101 \textcolor{comment}{/* L200: */}
+102         \}
+103         \textcolor{keywordflow}{for} (kk = 1; kk <= 4; ++kk) \{
+104         \hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag}[kk] = iflagt[kk - 1];
+105         \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[kk * 6 + 1] = itopt[kk * 6 - 6];
+106         npt = \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[kk * 6 + 1];
+107         \textcolor{keywordflow}{for} (\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} = 2; \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} <= 6; ++\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj}) \{
+108             \hyperlink{ATAPE_8c_a750904bd141d1d793f993b845f9f069b}{itop}[\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} + kk * 6] = itopt[\hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj} + kk * 6 - 7];
+109 \textcolor{comment}{/* L210: */}
+110         \}
+111         \}
+112         *ickbn = \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+113         \textcolor{keywordflow}{if} ((*ickbn - 1) * (4 - *ickbn) > 0) \{
+114         \textcolor{keywordflow}{goto} L220;
+115         \}
+116         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+117         \textcolor{keywordflow}{if} (*ickbn == 4) \{
+118         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+119         \}
+120         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+121         \textcolor{keywordflow}{goto} L230;
+122 L220:
+123         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+124         \textcolor{keywordflow}{if} (*ickbn == 3) \{
+125         *\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u} = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+126         \}
+127         *\hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v} = \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+128 L230:
+129         \textcolor{keywordflow}{return} 0;
+130 L20:
+131         ;
+132     \}
+133 \textcolor{comment}{/* L10: */}
+134     \}
+135     \textcolor{keywordflow}{return} 0;
+136 \} \textcolor{comment}{/* bonchk\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BONCHK_8c_a6630801f161c793500e790423ef68134_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BONCHK_8c_a6630801f161c793500e790423ef68134_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{B\+O\+N\+C\+H\+K.\+c@{B\+O\+N\+C\+H\+K.\+c}!c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}}
+\index{c\+\_\+\+\_\+3@{c\+\_\+\+\_\+3}!B\+O\+N\+C\+H\+K.\+c@{B\+O\+N\+C\+H\+K.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+3}{c__3}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+3 = 3\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{BONCHK_8c_a5e7359f78743350865398325d9155f20}{}\label{BONCHK_8c_a5e7359f78743350865398325d9155f20}
+
+
+Definition at line 17 of file B\+O\+N\+C\+H\+K.\+c.
+
+
+
+Referenced by bonchk\+\_\+().
+

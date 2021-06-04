@@ -1,0 +1,80 @@
+\hypertarget{UNPACK_8c}{}\section{U\+N\+P\+A\+C\+K.\+c File Reference}
+\label{UNPACK_8c}\index{U\+N\+P\+A\+C\+K.\+c@{U\+N\+P\+A\+C\+K.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for U\+N\+P\+A\+C\+K.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{UNPACK_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{unpack\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, integer $\ast$imode, integer $\ast$\hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize}, integer $\ast$\hyperlink{APT331_8c_a0d23b6d61c40090519c85873d65b78bd}{isub})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{U\+N\+P\+A\+C\+K.\+c@{U\+N\+P\+A\+C\+K.\+c}!unpack\+\_\+@{unpack\+\_\+}}
+\index{unpack\+\_\+@{unpack\+\_\+}!U\+N\+P\+A\+C\+K.\+c@{U\+N\+P\+A\+C\+K.\+c}}
+\subsubsection[{\texorpdfstring{unpack\+\_\+(doublereal $\ast$result, integer $\ast$imode, integer $\ast$isize, integer $\ast$isub)}{unpack_(doublereal *result, integer *imode, integer *isize, integer *isub)}}]{\setlength{\rightskip}{0pt plus 5cm}int unpack\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{integer $\ast$}]{imode, }
+\item[{integer $\ast$}]{isize, }
+\item[{integer $\ast$}]{isub}
+\end{DoxyParamCaption}
+)}\hypertarget{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}{}\label{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0}
+
+
+Definition at line 33 of file U\+N\+P\+A\+C\+K.\+c.
+
+
+
+References j, and result.
+
+
+
+Referenced by anglb\+\_\+(), anglf\+\_\+(), apt010\+\_\+(), apt033\+\_\+(), apt040\+\_\+(), apt102\+\_\+(), apt103\+\_\+(), apt104\+\_\+(), apt107\+\_\+(), apt108\+\_\+(), apt109\+\_\+(), apt202\+\_\+(), apt234\+\_\+(), canf\+\_\+(), defext\+\_\+(), distf\+\_\+(), gol\+\_\+(), intrp\+\_\+(), intsec\+\_\+(), ldard\+\_\+(), numf1\+\_\+(), numf2\+\_\+(), parmf1\+\_\+(), parmf2\+\_\+(), print\+\_\+(), punch\+\_\+(), spatf\+\_\+(), and transm\+\_\+().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{comment}{/* Initialized data */}
+37 
+38     \textcolor{keyword}{static} integer klit1 = 1000000;
+39     \textcolor{keyword}{static} integer klit2 = 10000;
+40 
+41     \textcolor{comment}{/* System generated locals */}
+42     doublereal d\_\_1;
+43 
+44     \textcolor{comment}{/* Local variables */}
+45     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, ipack;
+46 
+47     \textcolor{comment}{/* Parameter adjustments */}
+48     --\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result};
+49 
+50     \textcolor{comment}{/* Function Body */}
+51     j = 0;
+52 \textcolor{comment}{/* L10: */}
+53     ipack = (d\_\_1 = \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}], (integer) abs(d\_\_1));
+54     *imode = ipack / klit1;
+55     *\hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize} = (ipack - *imode * klit1) / klit2;
+56     *\hyperlink{APT331_8c_a0d23b6d61c40090519c85873d65b78bd}{isub} = ipack - *imode * klit1 - *\hyperlink{APT331_8c_ad6bfaa3f9bef8386dc119f6bd43705e2}{isize} * klit2;
+57     \textcolor{keywordflow}{return} 0;
+58 \} \textcolor{comment}{/* unpack\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{UNPACK_8c_aed2e95d416b53210a150829b0ca8d8c0_icgraph}
+\end{center}
+\end{figure}
+
+

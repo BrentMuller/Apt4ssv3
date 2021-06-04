@@ -1,0 +1,28 @@
+var structsymfil__1__ =
+[
+    [ "axfile", "structsymfil__1__.html#a0d8876710542d9ce037cedfe6d501d23", null ],
+    [ "clfil3", "structsymfil__1__.html#a50d192813f149b8b93f9d708e3f5ef9e", null ],
+    [ "clfile", "structsymfil__1__.html#a0545f935bcab324df9ce805e04cf2be3", null ],
+    [ "clfilp", "structsymfil__1__.html#a03ee4728d8625aca0fa2793bd29d6d59", null ],
+    [ "cpfile", "structsymfil__1__.html#a3a064053ad970c80804b9969a1217396", null ],
+    [ "elfil1", "structsymfil__1__.html#a8608696d9e927d49afe7c2e6cc371824", null ],
+    [ "elfil2", "structsymfil__1__.html#abce64f97383f4f3ea1298b7207619964", null ],
+    [ "elfil3", "structsymfil__1__.html#a8b6348b2bc812d0e7e067f3b51725de8", null ],
+    [ "elfil4", "structsymfil__1__.html#a4954b7af926c97dcbb482f83bb2ffc66", null ],
+    [ "elfile", "structsymfil__1__.html#afbb4371a25fc62d76506e98d02edaa2f", null ],
+    [ "exfile", "structsymfil__1__.html#ab4d28b04f54594b97270b01c1edcc26d", null ],
+    [ "infile__", "structsymfil__1__.html#a4d15d6b3cb973e0dafdba8310f1486e8", null ],
+    [ "ispare", "structsymfil__1__.html#a6ef7d9acc381f44f170506c70924d7da", null ],
+    [ "ldafil", "structsymfil__1__.html#a97356b7e71b6284bda26988d94923827", null ],
+    [ "libfil", "structsymfil__1__.html#a6be01312ddbaea99504000f133539faa", null ],
+    [ "mactxt", "structsymfil__1__.html#a4322c9b3f64c9d4d8548362ce14462b3", null ],
+    [ "nfil12", "structsymfil__1__.html#a39f80c3a07ad0f918875117c9c87cbec", null ],
+    [ "nfil13", "structsymfil__1__.html#a73ff15df000236c1178ce042b7f06cda", null ],
+    [ "pnchfl", "structsymfil__1__.html#ae7aa9085413c6e8d876e4fc5323d0767", null ],
+    [ "pofile", "structsymfil__1__.html#a9436e5c881175ad1541c9d1258b2acb7", null ],
+    [ "pxfile", "structsymfil__1__.html#ac5b3109516e632236038df08884d485e", null ],
+    [ "tifile", "structsymfil__1__.html#acbf3582bafc9b5d4cce43c942c382a50", null ],
+    [ "vlfile", "structsymfil__1__.html#ae403807e27289feefc8d1bdd4f100695", null ],
+    [ "xcan", "structsymfil__1__.html#a5bc6b255c4391a8934cafbfaa97be315", null ],
+    [ "xnum", "structsymfil__1__.html#aaae2bbdc122a638a3729362e02678968", null ]
+];

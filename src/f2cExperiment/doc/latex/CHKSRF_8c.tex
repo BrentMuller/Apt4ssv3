@@ -1,0 +1,210 @@
+\hypertarget{CHKSRF_8c}{}\section{C\+H\+K\+S\+R\+F.\+c File Reference}
+\label{CHKSRF_8c}\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+H\+K\+S\+R\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{CHKSRF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CHKSRF_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\+\_\+1}~\hyperlink{SSPATH_8c_ab2d7525d5b039d62b9078fd9c60458a7}{rmflgs\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CHKSRF_8c_a4426bb44239575d74ceb3d390727f54d}{chksrf\+\_\+} (doublereal $\ast$surf, doublereal $\ast$donoff)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>logical \hyperlink{CHKSRF_8c_a00b7f3cd5ad4fababc11a3060589a4bd}{lgchk}\\
+\>logical \hyperlink{CHKSRF_8c_acc230d34145fd26bef6aa51a20927619}{lintck}\\
+\>logical \hyperlink{CHKSRF_8c_a3ecfdca8cd552de5ca5f0158591044b1}{lavctl}\\
+\>logical \hyperlink{CHKSRF_8c_ac5742e89e268886a777335aba5adbe4b}{lvaxis}\\
+\} \hyperlink{CHKSRF_8c_a8ba69e094aa834477973d569d612485d}{rmflgs\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CHKSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{CHKSRF_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!rmflgs\+\_\+1@{rmflgs\+\_\+1}}
+\index{rmflgs\+\_\+1@{rmflgs\+\_\+1}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{rmflgs\+\_\+1}{rmflgs_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rmflgs\+\_\+1~{\bf rmflgs\+\_\+}}\hypertarget{CHKSRF_8c_afde4b6162223aa26a1fa5c412fc67b94}{}\label{CHKSRF_8c_afde4b6162223aa26a1fa5c412fc67b94}
+
+
+Definition at line 21 of file C\+H\+K\+S\+R\+F.\+c.
+
+
+
+Referenced by chksrf\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!chksrf\+\_\+@{chksrf\+\_\+}}
+\index{chksrf\+\_\+@{chksrf\+\_\+}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{chksrf\+\_\+(doublereal $\ast$surf, doublereal $\ast$donoff)}{chksrf_(doublereal *surf, doublereal *donoff)}}]{\setlength{\rightskip}{0pt plus 5cm}int chksrf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{surf, }
+\item[{doublereal $\ast$}]{donoff}
+\end{DoxyParamCaption}
+)}\hypertarget{CHKSRF_8c_a4426bb44239575d74ceb3d390727f54d}{}\label{CHKSRF_8c_a4426bb44239575d74ceb3d390727f54d}
+
+
+Definition at line 30 of file C\+H\+K\+S\+R\+F.\+c.
+
+
+
+References c\+\_\+\+\_\+1, c\+\_\+\+\_\+2, holfrm\+\_\+(), rmflgs\+\_\+1, and test.
+
+
+
+Referenced by xcall\+\_\+().
+
+
+\begin{DoxyCode}
+31 \{
+32     \textcolor{comment}{/* Builtin functions */}
+33     integer s\_cmp(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+34 
+35     \textcolor{comment}{/* Local variables */}
+36     \textcolor{keyword}{static} integer nwd;
+37     \textcolor{keyword}{static} \textcolor{keywordtype}{char} \hyperlink{MOTION_8c_af04af1bc6d042a68a2b24d6e1312d253}{test}[2];
+38     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(doublereal *, \textcolor{keywordtype}{char} *, integer *, 
+39         integer *, integer *, ftnlen);
+40 
+41 
+42 \textcolor{comment}{/* .... PROCESS CHKSRF STATEMENT */}
+43 
+44 \textcolor{comment}{/*     ARGUMENTS: */}
+45 
+46 \textcolor{comment}{/*        SURF = PS            CHECK FOR INTERFERENCE WITH PART SURFACE */}
+47 \textcolor{comment}{/*             = SURFACE\_NAME  CHECK FOR INTERFERENCE WITH NAMED SURFACE */}
+48 
+49 \textcolor{comment}{/*                             NOTE: ONLY PS IMPLEMENTED */}
+50 
+51 \textcolor{comment}{/*      DONOFF = ON            SET INTERFERENCE CHECKING FLAG */}
+52 \textcolor{comment}{/*             = OFF           CANCEL INTERFERENCE CHECKING FLAG */}
+53 
+54 
+55 
+56 
+57 \textcolor{comment}{/* .... NEW REGIONAL MILLING FLAGS */}
+58 
+59 
+60 
+61 \textcolor{comment}{/*     LGCHK  - GOUGE CHECK FLAG */}
+62 \textcolor{comment}{/*     LINTCK - INTERFERENCE CHECKING FLAG */}
+63 \textcolor{comment}{/*     LAVCTL - AVOIDANCE CONTROL FLAG */}
+64 \textcolor{comment}{/*     LVAXIS - VARIABLE TOOL AXIS FLAG */}
+65 
+66 
+67     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(surf, test, &\hyperlink{CHKSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CHKSRF_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &nwd, (ftnlen)2);
+68 
+69     \textcolor{keywordflow}{if} (s\_cmp(test, \textcolor{stringliteral}{"PS"}, (ftnlen)2, (ftnlen)2) == 0) \{
+70 \textcolor{comment}{/* .... CHKSRF/PS,... */}
+71     \hyperlink{HOLFRM_8c_ad837b853605dc07f300a66c119eb7eb4}{holfrm\_}(donoff, test, &\hyperlink{CHKSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, &\hyperlink{CHKSRF_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, &nwd, (ftnlen)2);
+72     \textcolor{keywordflow}{if} (s\_cmp(test, \textcolor{stringliteral}{"ON"}, (ftnlen)2, (ftnlen)2) == 0) \{
+73         \hyperlink{CHKSRF_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\_1}.lintck = TRUE\_;
+74     \} \textcolor{keywordflow}{else} \{
+75         \hyperlink{CHKSRF_8c_afde4b6162223aa26a1fa5c412fc67b94}{rmflgs\_1}.lintck = FALSE\_;
+76     \}
+77     \} \textcolor{keywordflow}{else} \{
+78 \textcolor{comment}{/* .... CHKSRF/SURFACE\_NAME,... */}
+79     \}
+80 
+81     \textcolor{keywordflow}{return} 0;
+82 \} \textcolor{comment}{/* chksrf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{CHKSRF_8c_a4426bb44239575d74ceb3d390727f54d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CHKSRF_8c_a4426bb44239575d74ceb3d390727f54d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{CHKSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 25 of file C\+H\+K\+S\+R\+F.\+c.
+
+
+
+Referenced by chksrf\+\_\+().
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CHKSRF_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{CHKSRF_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 26 of file C\+H\+K\+S\+R\+F.\+c.
+
+
+
+Referenced by chksrf\+\_\+().
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!lavctl@{lavctl}}
+\index{lavctl@{lavctl}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{lavctl}{lavctl}}]{\setlength{\rightskip}{0pt plus 5cm}logical lavctl}\hypertarget{CHKSRF_8c_a3ecfdca8cd552de5ca5f0158591044b1}{}\label{CHKSRF_8c_a3ecfdca8cd552de5ca5f0158591044b1}
+
+
+Definition at line 18 of file C\+H\+K\+S\+R\+F.\+c.
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!lgchk@{lgchk}}
+\index{lgchk@{lgchk}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{lgchk}{lgchk}}]{\setlength{\rightskip}{0pt plus 5cm}logical lgchk}\hypertarget{CHKSRF_8c_a00b7f3cd5ad4fababc11a3060589a4bd}{}\label{CHKSRF_8c_a00b7f3cd5ad4fababc11a3060589a4bd}
+
+
+Definition at line 18 of file C\+H\+K\+S\+R\+F.\+c.
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!lintck@{lintck}}
+\index{lintck@{lintck}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{lintck}{lintck}}]{\setlength{\rightskip}{0pt plus 5cm}logical lintck}\hypertarget{CHKSRF_8c_acc230d34145fd26bef6aa51a20927619}{}\label{CHKSRF_8c_acc230d34145fd26bef6aa51a20927619}
+
+
+Definition at line 18 of file C\+H\+K\+S\+R\+F.\+c.
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!lvaxis@{lvaxis}}
+\index{lvaxis@{lvaxis}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{lvaxis}{lvaxis}}]{\setlength{\rightskip}{0pt plus 5cm}logical lvaxis}\hypertarget{CHKSRF_8c_ac5742e89e268886a777335aba5adbe4b}{}\label{CHKSRF_8c_ac5742e89e268886a777335aba5adbe4b}
+
+
+Definition at line 18 of file C\+H\+K\+S\+R\+F.\+c.
+
+\index{C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}!rmflgs\+\_\+@{rmflgs\+\_\+}}
+\index{rmflgs\+\_\+@{rmflgs\+\_\+}!C\+H\+K\+S\+R\+F.\+c@{C\+H\+K\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{rmflgs\+\_\+}{rmflgs_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   rmflgs\+\_\+}\hypertarget{CHKSRF_8c_a8ba69e094aa834477973d569d612485d}{}\label{CHKSRF_8c_a8ba69e094aa834477973d569d612485d}

@@ -1,0 +1,1238 @@
+\hypertarget{GOPAT_8c}{}\section{G\+O\+P\+A\+T.\+c File Reference}
+\label{GOPAT_8c}\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+O\+P\+A\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{GOPAT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\+\_\+1}~\hyperlink{VCTPRD_8c_a885ddba18e02bf475c1affc58b2fefb1}{nametb\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{cnamtb\+\_\+1}~\hyperlink{TWOARG_8c_a7658ce034c181b45d2a0817081996035}{cnamtb\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1}~\hyperlink{VCTPRD_8c_accac5e78407945d9e6d608c77ca9ed75}{stklst\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1}~\hyperlink{VCTPRD_8c_aef02e874f1bead88cf95d4fe5519a212}{code\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1}~\hyperlink{TSSMIL_8c_abc2557c634cfcded62395d4b4fa74866}{numptr\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}{gmty\+\_\+1}~\hyperlink{TSSMIL_8c_a7fd11ebfbeb7b03f69ec8de0a75f6074}{gmty\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1}~\hyperlink{TSSMIL_8c_afbe97352b0a7b81f71ad1f9d9b682017}{il\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1}~\hyperlink{TSSMIL_8c_a90cb1ad7bdad1d33f36d4ff1d0975969}{modx\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{opmod\+\_\+1}~\hyperlink{TWOARG_8c_aa06fa10eaee06051b520e98892ffb105}{opmod\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_acbe9fb91999009613a2fe3b01509dcae}{sublst\+\_\+1}~\hyperlink{TSSMIL_8c_a0d9407ee7e0ee1d198641f99beb798ea}{sublst\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1}~\hyperlink{VCTPRD_8c_a2a7549809a5c799d7bf01eeca8818342}{moduli\+\_\+}
+\item 
+\#define \hyperlink{GOPAT_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 2)
+\item 
+\#define \hyperlink{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 60)
+\item 
+\#define \hyperlink{GOPAT_8c_a5d72b24797d1534e4e729b4b59190475}{real\+\_\+\+\_\+}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 20)
+\item 
+\#define \hyperlink{GOPAT_8c_a5905d48604152cf57aa6bfa087b49173}{temp}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 32)
+\item 
+\#define \hyperlink{GOPAT_8c_a00adb2751bf683d55228e0b14f945340}{move}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_abcc19ac3deb5a72995081498826879ac}{il\+\_\+1} + 18)
+\item 
+\#define \hyperlink{GOPAT_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1})
+\item 
+\#define \hyperlink{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 68)
+\item 
+\#define \hyperlink{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1} + 1)
+\item 
+\#define \hyperlink{GOPAT_8c_af1724cb67424440e47e76c7523840ab8}{permid}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 38)
+\item 
+\#define \hyperlink{GOPAT_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{code\+\_\+1} + 26)
+\item 
+\#define \hyperlink{GOPAT_8c_a74c4f509c663c6415e314753f5c03ae6}{patern}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0827be493b63e8b953d7efdff31266fe}{modx\+\_\+1} + 25)
+\item 
+\#define \hyperlink{GOPAT_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 201)
+\item 
+\#define \hyperlink{GOPAT_8c_ae157b988f5222e270f494b81959e9bfc}{argtop}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a3341ad96672b1b8b33fe8a6a195faad0}{stklst\+\_\+1} + 1)
+\item 
+\#define \hyperlink{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo}~((integer $\ast$)\&\hyperlink{VCTPRD_8c_a0449a1b3199621b49aa576a3e8bafc4c}{moduli\+\_\+1})
+\item 
+\#define \hyperlink{GOPAT_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}~((integer $\ast$)\&\hyperlink{TWOARG_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{opmod\+\_\+1} + 5)
+\item 
+\#define \hyperlink{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}{zeropt}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{numptr\+\_\+1} + 1)
+\item 
+\#define \hyperlink{GOPAT_8c_a6c3fa8a41e42716cea6156e1e911d487}{aptxxx}~((integer $\ast$)\&\hyperlink{TSSMIL_8c_acbe9fb91999009613a2fe3b01509dcae}{sublst\+\_\+1})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GOPAT_8c_a63be6f5673a98991d8113106cf6644b5}{gopat\+\_\+} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_a585e4c97f8e0676e57e99895ea3fafd6}{charst}\\
+\>integer \hyperlink{GOPAT_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{charnd}\\
+\>integer \hyperlink{GOPAT_8c_a373010e90fb1cd08bf263255a111920d}{inamst}\\
+\>integer \hyperlink{GOPAT_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{inamnd}\\
+\>integer \hyperlink{GOPAT_8c_ab97202700d22183890e79bc8791f4bff}{namest}\\
+\>integer \hyperlink{GOPAT_8c_a12351fe75bd822dfa233783a24bab726}{nammax}\\
+\>integer \hyperlink{GOPAT_8c_a633664cebfc393fb426ece3c2f989dff}{ifixst}\\
+\>integer \hyperlink{GOPAT_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{ifixnd}\\
+\>integer \hyperlink{GOPAT_8c_a5dda556d4413fc8ab1f131381dc6c19b}{numbst}\\
+\>integer \hyperlink{GOPAT_8c_aa6e3af599f3cc3aa48548c557b1c4136}{numbnd}\\
+\>integer \hyperlink{GOPAT_8c_ab515a7cdce0306e61a7aa102b26d4683}{namtbl} \mbox{[}3000\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a2f50d9504f85ad0185d1f9656c8f490c}{nametb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{GOPAT_8c_a4a8cfd199722f3d62f1340485145d183}{cnamtb} \mbox{[}18000\mbox{]}\\
+\>char \hyperlink{GOPAT_8c_a8a31d8adbaa07781810863de399e0aef}{cnumtb} \mbox{[}36000\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a9f4b6766d019d2d422de3e8e43766b49}{cnamtb\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_ada93478ed3a7b6732d0c4af5a026499f}{stklst} \mbox{[}300\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a47bf3f866954e63669c3f6f961886635}{stklst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_a7c81c7c2009c09d1a9b399eb4340b050}{code} \mbox{[}150\mbox{]}\\
+\} \hyperlink{GOPAT_8c_acd183cf0281a88f9d70f0c3379b94e6b}{code\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_af6c7c8757673aa092837c252bf431adf}{numptr} \mbox{[}12\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a206b8152d5af52217a99c9555a138151}{numptr\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_ad6fb031247fc3732cf47428d6914728c}{geoloc} \mbox{[}50\mbox{]}\\
+\>integer \hyperlink{GOPAT_8c_a3404f51c0b88210918a02f04f2fdbb90}{pmidtb} \mbox{[}250\mbox{]}\\
+\>integer \hyperlink{GOPAT_8c_a6f2a2b7925998bf9006ecc221dc86cb6}{argmxy} \mbox{[}250\mbox{]}\\
+\>integer \hyperlink{GOPAT_8c_a6593ead180fda0156db1d7b8b0abb91f}{geomtb} \mbox{[}2180\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a12b03222a2c6c2a7e701c57a7bc28b74}{gmty\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_a5524c41368cc6530a9c6a9ccab6163db}{il} \mbox{[}21\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a01f1077d564b5523464ab7c6576a6568}{il\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_abd1eef3c1b001e65bada11247921ce11}{modx} \mbox{[}32\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a655e47f824738b8cc670d0adbcb4fd22}{modx\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_aa04120ffc54a13b636597a71b87fedd2}{opmod} \mbox{[}6\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a3ff5dd24a086a7fd2a38d4c9f7954199}{opmod\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_ab607b14b01bf08fe56a3d23c8784386a}{sublst} \mbox{[}136\mbox{]}\\
+\} \hyperlink{GOPAT_8c_af4b1d18111ffbd4faf8b572f12e5f890}{sublst\_}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{GOPAT_8c_ae8a06e8185505bd384595bca0f15299f}{moduli} \mbox{[}2\mbox{]}\\
+\} \hyperlink{GOPAT_8c_a8a71b91834cff4c4e068f266d037e0b3}{moduli\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{GOPAT_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\+\_\+\+\_\+10} = 10
+\item 
+static integer \hyperlink{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{GOPAT_8c_a51f02cbc70ee79cf8bedc6479fc21b7d}{c\+\_\+\+\_\+102} = 102
+\item 
+static integer \hyperlink{GOPAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\item 
+static integer \hyperlink{GOPAT_8c_abd005ac575fc378b36b6781bb967a4f2}{c\+\_\+\+\_\+98} = 98
+\item 
+static integer \hyperlink{GOPAT_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\+\_\+\+\_\+8} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!aptxxx@{aptxxx}}
+\index{aptxxx@{aptxxx}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{aptxxx}{aptxxx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aptxxx~((integer $\ast$)\&{\bf sublst\+\_\+1})}\hypertarget{GOPAT_8c_a6c3fa8a41e42716cea6156e1e911d487}{}\label{GOPAT_8c_a6c3fa8a41e42716cea6156e1e911d487}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!argstk@{argstk}}
+\index{argstk@{argstk}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{argstk}{argstk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argstk~((integer $\ast$)\&{\bf stklst\+\_\+1} + 201)}\hypertarget{GOPAT_8c_ad6c61c6f71063a50b22ae5a47d036a13}{}\label{GOPAT_8c_ad6c61c6f71063a50b22ae5a47d036a13}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!argtop@{argtop}}
+\index{argtop@{argtop}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{argtop}{argtop}}]{\setlength{\rightskip}{0pt plus 5cm}\#define argtop~((integer $\ast$)\&{\bf stklst\+\_\+1} + 1)}\hypertarget{GOPAT_8c_ae157b988f5222e270f494b81959e9bfc}{}\label{GOPAT_8c_ae157b988f5222e270f494b81959e9bfc}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!cnamtb\+\_\+1@{cnamtb\+\_\+1}}
+\index{cnamtb\+\_\+1@{cnamtb\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+1}{cnamtb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cnamtb\+\_\+1~{\bf cnamtb\+\_\+}}\hypertarget{GOPAT_8c_abcc789b2f1b6478016e96d0d4d8a9cee}{}\label{GOPAT_8c_abcc789b2f1b6478016e96d0d4d8a9cee}
+
+
+Definition at line 28 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!code\+\_\+1@{code\+\_\+1}}
+\index{code\+\_\+1@{code\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+1}{code_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define code\+\_\+1~{\bf code\+\_\+}}\hypertarget{GOPAT_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}{}\label{GOPAT_8c_ac37d86978cf2bd44b6b0900b5e2ac82e}
+
+
+Definition at line 40 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!gmty\+\_\+1@{gmty\+\_\+1}}
+\index{gmty\+\_\+1@{gmty\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{gmty\+\_\+1}{gmty_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define gmty\+\_\+1~{\bf gmty\+\_\+}}\hypertarget{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}{}\label{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}
+
+
+Definition at line 52 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!ident@{ident}}
+\index{ident@{ident}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{ident}{ident}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ident~((integer $\ast$)\&{\bf code\+\_\+1} + 68)}\hypertarget{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}{}\label{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!il\+\_\+1@{il\+\_\+1}}
+\index{il\+\_\+1@{il\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+1}{il_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define il\+\_\+1~{\bf il\+\_\+}}\hypertarget{GOPAT_8c_abcc19ac3deb5a72995081498826879ac}{}\label{GOPAT_8c_abcc19ac3deb5a72995081498826879ac}
+
+
+Definition at line 58 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!modhlf@{modhlf}}
+\index{modhlf@{modhlf}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{modhlf}{modhlf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modhlf~((integer $\ast$)\&{\bf moduli\+\_\+1} + 1)}\hypertarget{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}{}\label{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!moduli\+\_\+1@{moduli\+\_\+1}}
+\index{moduli\+\_\+1@{moduli\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+1}{moduli_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define moduli\+\_\+1~{\bf moduli\+\_\+}}\hypertarget{GOPAT_8c_a0449a1b3199621b49aa576a3e8bafc4c}{}\label{GOPAT_8c_a0449a1b3199621b49aa576a3e8bafc4c}
+
+
+Definition at line 82 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!modulo@{modulo}}
+\index{modulo@{modulo}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{modulo}{modulo}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modulo~((integer $\ast$)\&{\bf moduli\+\_\+1})}\hypertarget{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{}\label{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!modx\+\_\+1@{modx\+\_\+1}}
+\index{modx\+\_\+1@{modx\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+1}{modx_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define modx\+\_\+1~{\bf modx\+\_\+}}\hypertarget{GOPAT_8c_a0827be493b63e8b953d7efdff31266fe}{}\label{GOPAT_8c_a0827be493b63e8b953d7efdff31266fe}
+
+
+Definition at line 64 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!move@{move}}
+\index{move@{move}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{move}{move}}]{\setlength{\rightskip}{0pt plus 5cm}\#define move~((integer $\ast$)\&{\bf il\+\_\+1} + 18)}\hypertarget{GOPAT_8c_a00adb2751bf683d55228e0b14f945340}{}\label{GOPAT_8c_a00adb2751bf683d55228e0b14f945340}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!nametb\+\_\+1@{nametb\+\_\+1}}
+\index{nametb\+\_\+1@{nametb\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+1}{nametb_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define nametb\+\_\+1~{\bf nametb\+\_\+}}\hypertarget{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{}\label{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}
+
+
+Definition at line 22 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!number@{number}}
+\index{number@{number}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{number}{number}}]{\setlength{\rightskip}{0pt plus 5cm}\#define number~((integer $\ast$)\&{\bf code\+\_\+1} + 26)}\hypertarget{GOPAT_8c_aa97c1f529dc5a11a78758184c84a39c9}{}\label{GOPAT_8c_aa97c1f529dc5a11a78758184c84a39c9}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!numptr\+\_\+1@{numptr\+\_\+1}}
+\index{numptr\+\_\+1@{numptr\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{numptr\+\_\+1}{numptr_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define numptr\+\_\+1~{\bf numptr\+\_\+}}\hypertarget{GOPAT_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}{}\label{GOPAT_8c_a0c2f4cdd7f3a93dcd5bf3ddfe42ea7f1}
+
+
+Definition at line 46 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!one@{one}}
+\index{one@{one}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{one}{one}}]{\setlength{\rightskip}{0pt plus 5cm}\#define one~((integer $\ast$)\&{\bf numptr\+\_\+1} + 2)}\hypertarget{GOPAT_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{}\label{GOPAT_8c_a7cf126dbeb6f30c606e3b42fea65cfef}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!opmod\+\_\+1@{opmod\+\_\+1}}
+\index{opmod\+\_\+1@{opmod\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{opmod\+\_\+1}{opmod_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define opmod\+\_\+1~{\bf opmod\+\_\+}}\hypertarget{GOPAT_8c_a66e60fa6f09eca77f1c4880e30adbcc9}{}\label{GOPAT_8c_a66e60fa6f09eca77f1c4880e30adbcc9}
+
+
+Definition at line 70 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!patern@{patern}}
+\index{patern@{patern}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{patern}{patern}}]{\setlength{\rightskip}{0pt plus 5cm}\#define patern~((integer $\ast$)\&{\bf modx\+\_\+1} + 25)}\hypertarget{GOPAT_8c_a74c4f509c663c6415e314753f5c03ae6}{}\label{GOPAT_8c_a74c4f509c663c6415e314753f5c03ae6}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!permid@{permid}}
+\index{permid@{permid}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{permid}{permid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define permid~((integer $\ast$)\&{\bf code\+\_\+1} + 38)}\hypertarget{GOPAT_8c_af1724cb67424440e47e76c7523840ab8}{}\label{GOPAT_8c_af1724cb67424440e47e76c7523840ab8}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!quidlr@{quidlr}}
+\index{quidlr@{quidlr}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{quidlr}{quidlr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quidlr~((integer $\ast$)\&{\bf opmod\+\_\+1} + 5)}\hypertarget{GOPAT_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{}\label{GOPAT_8c_a3cdc8a0d13c3091f7a97d984e10dca55}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!real\+\_\+\+\_\+@{real\+\_\+\+\_\+}}
+\index{real\+\_\+\+\_\+@{real\+\_\+\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{real\+\_\+\+\_\+}{real__}}]{\setlength{\rightskip}{0pt plus 5cm}\#define real\+\_\+\+\_\+~((integer $\ast$)\&{\bf modx\+\_\+1} + 20)}\hypertarget{GOPAT_8c_a5d72b24797d1534e4e729b4b59190475}{}\label{GOPAT_8c_a5d72b24797d1534e4e729b4b59190475}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!stklst\+\_\+1@{stklst\+\_\+1}}
+\index{stklst\+\_\+1@{stklst\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+1}{stklst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stklst\+\_\+1~{\bf stklst\+\_\+}}\hypertarget{GOPAT_8c_a3341ad96672b1b8b33fe8a6a195faad0}{}\label{GOPAT_8c_a3341ad96672b1b8b33fe8a6a195faad0}
+
+
+Definition at line 34 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!sublst\+\_\+1@{sublst\+\_\+1}}
+\index{sublst\+\_\+1@{sublst\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{sublst\+\_\+1}{sublst_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sublst\+\_\+1~{\bf sublst\+\_\+}}\hypertarget{GOPAT_8c_acbe9fb91999009613a2fe3b01509dcae}{}\label{GOPAT_8c_acbe9fb91999009613a2fe3b01509dcae}
+
+
+Definition at line 76 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!temp@{temp}}
+\index{temp@{temp}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define temp~((integer $\ast$)\&{\bf code\+\_\+1} + 32)}\hypertarget{GOPAT_8c_a5905d48604152cf57aa6bfa087b49173}{}\label{GOPAT_8c_a5905d48604152cf57aa6bfa087b49173}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!vbl@{vbl}}
+\index{vbl@{vbl}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{vbl}{vbl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vbl~((integer $\ast$)\&{\bf code\+\_\+1} + 60)}\hypertarget{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}{}\label{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!zero@{zero}}
+\index{zero@{zero}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{zero}{zero}}]{\setlength{\rightskip}{0pt plus 5cm}\#define zero~((integer $\ast$)\&{\bf numptr\+\_\+1})}\hypertarget{GOPAT_8c_a361b1d0588e13a7b5994f24b40138ec0}{}\label{GOPAT_8c_a361b1d0588e13a7b5994f24b40138ec0}
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!zeropt@{zeropt}}
+\index{zeropt@{zeropt}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{zeropt}{zeropt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define zeropt~((integer $\ast$)\&{\bf numptr\+\_\+1} + 1)}\hypertarget{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}{}\label{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}
+
+
+Referenced by gopat\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!gopat\+\_\+@{gopat\+\_\+}}
+\index{gopat\+\_\+@{gopat\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{gopat\+\_\+(void)}{gopat_(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int gopat\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{GOPAT_8c_a63be6f5673a98991d8113106cf6644b5}{}\label{GOPAT_8c_a63be6f5673a98991d8113106cf6644b5}
+
+
+Definition at line 112 of file G\+O\+P\+A\+T.\+c.
+
+
+
+References alarm\+\_\+(), aptxxx, argcvt\+\_\+(), argstk, argtop, c\+\_\+\+\_\+0, c\+\_\+\+\_\+1, c\+\_\+\+\_\+10, c\+\_\+\+\_\+102, c\+\_\+\+\_\+8, c\+\_\+\+\_\+98, callzz\+\_\+(), gmty\+\_\+1, i\+\_\+\+\_\+, ia, iarg, ident, ierror, j, modhlf, modulo, move, name\+\_\+(), nametb\+\_\+1, number, one, opcode\+\_\+(), patern, permid, quidlr, real\+\_\+\+\_\+, resrvz\+\_\+(), rlslin\+\_\+(), search\+\_\+(), temp, twoarg\+\_\+(), vbl, zero, and zeropt.
+
+
+
+Referenced by pro026\+\_\+().
+
+
+\begin{DoxyCode}
+113 \{
+114     \textcolor{comment}{/* Initialized data */}
+115 
+116     \textcolor{keyword}{static} integer numrec[5] = \{ 1,5,4,3,2 \};
+117     \textcolor{keyword}{static} integer komit = 64;
+118     \textcolor{keyword}{static} integer kretai = 65;
+119     \textcolor{keyword}{static} integer kinver = 35;
+120     \textcolor{keyword}{static} integer kzigza = 61;
+121     \textcolor{keyword}{static} \textcolor{keywordtype}{char} hdolsc[6] = \textcolor{stringliteral}{"$SCRTH"};
+122     \textcolor{keyword}{static} \textcolor{keywordtype}{char} hdolpc[6] = \textcolor{stringliteral}{"$PCRTH"};
+123 
+124     \textcolor{comment}{/* Format strings */}
+125     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_15[] = \textcolor{stringliteral}{""};
+126     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_40[] = \textcolor{stringliteral}{""};
+127     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_10[] = \textcolor{stringliteral}{""};
+128     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_35[] = \textcolor{stringliteral}{""};
+129     \textcolor{keyword}{static} \textcolor{keywordtype}{char} fmt\_20[] = \textcolor{stringliteral}{""};
+130 
+131     \textcolor{comment}{/* System generated locals */}
+132     integer i\_\_1, i\_\_2;
+133 
+134     \textcolor{comment}{/* Local variables */}
+135     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}, io, iin;
+136 \textcolor{preprocessor}{#define one ((integer *)&numptr\_1 + 2)}
+137 \textcolor{preprocessor}{#define vbl ((integer *)&code\_1 + 60)}
+138     \textcolor{keyword}{static} integer ibig, iend;
+139     \textcolor{keyword}{extern} integer \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(\textcolor{keywordtype}{char} *, ftnlen);
+140     \textcolor{keyword}{static} integer \hyperlink{PRO021_8c_a6618368ddf10328f0524a5f5613177e8}{iarg};
+141 \textcolor{preprocessor}{#define real\_\_ ((integer *)&modx\_1 + 20)}
+142     \textcolor{keyword}{static} integer iget, namx;
+143 \textcolor{preprocessor}{#define temp ((integer *)&code\_1 + 32)}
+144 \textcolor{preprocessor}{#define move ((integer *)&il\_1 + 18)}
+145 \textcolor{preprocessor}{#define zero ((integer *)&numptr\_1)}
+146     \textcolor{keyword}{static} integer iarg1, iarg2, iarg3, iarg4;
+147     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(integer *, integer *, integer *, \textcolor{keywordtype}{char} *
+148         , ftnlen);
+149     \textcolor{keyword}{static} integer kmode;
+150 \textcolor{preprocessor}{#define ident ((integer *)&code\_1 + 68)}
+151     \textcolor{keyword}{static} integer kmova;
+152     \textcolor{keyword}{static} logical lomit;
+153     \textcolor{keyword}{static} integer iiout, kmovo, errpt;
+154     \textcolor{keyword}{extern} integer \hyperlink{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f}{search\_}(integer *, integer *, integer *, integer *);
+155 \textcolor{preprocessor}{#define modhlf ((integer *)&moduli\_1 + 1)}
+156     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(integer *);
+157 \textcolor{preprocessor}{#define permid ((integer *)&code\_1 + 38)}
+158     \textcolor{keyword}{static} integer bigstk[10];
+159     \textcolor{keyword}{static} logical lretai;
+160 \textcolor{preprocessor}{#define number ((integer *)&code\_1 + 26)}
+161 \textcolor{preprocessor}{#define patern ((integer *)&modx\_1 + 25)}
+162 \textcolor{preprocessor}{#define argstk ((integer *)&stklst\_1 + 201)}
+163 \textcolor{preprocessor}{#define argtop ((integer *)&stklst\_1 + 1)}
+164 \textcolor{preprocessor}{#define modulo ((integer *)&moduli\_1)}
+165 \textcolor{preprocessor}{#define quidlr ((integer *)&opmod\_1 + 5)}
+166     \textcolor{keyword}{static} integer avdlst[18], kscrth, kpcrth, isetup, kserch, avdsav;
+167     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(integer *, integer *), \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(
+168         integer *), \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}(\textcolor{keywordtype}{void});
+169     \textcolor{keyword}{static} integer omtlst[18];
+170 \textcolor{preprocessor}{#define zeropt ((integer *)&numptr\_1 + 1)}
+171     \textcolor{keyword}{static} integer kclass;
+172     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CALLZZ_8c_a22340ad3c429feec107b14a590802e21}{callzz\_}(integer *);
+173     \textcolor{keyword}{static} integer \hyperlink{APT001_8c_ae6291c7ad4bbbf5230272398ac66056b}{ierror};
+174     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(integer *, integer *, integer *, 
+175         integer *);
+176 \textcolor{preprocessor}{#define aptxxx ((integer *)&sublst\_1)}
+177 
+178     \textcolor{comment}{/* Assigned format variables */}
+179     \textcolor{keyword}{static} \textcolor{keywordtype}{char} *iend\_fmt, *isetup\_fmt;
+180 
+181 
+182 
+183 \textcolor{comment}{/*        1.    NAME TABLE AND TABLE LIMITS */}
+184 
+185 \textcolor{comment}{/* NAMTBL:      INTEGER CORRESPONDING TO NAME TABLE ENTRY */}
+186 \textcolor{comment}{/* CNAMTB:      NAME TABLE OR DICTIONARY */}
+187 \textcolor{comment}{/* NAMMAX:      NAMTBL INDEX OF END OF THE PART PROGRAM NAME SECTION */}
+188 
+189 \textcolor{comment}{/*        2.    STACK AND POINTER STORAGE */}
+190 
+191 
+192 
+193 
+194 
+195 
+196 
+197 \textcolor{comment}{/* ARGTOP:      POINTER TO LAST ARGSTK ENTRY */}
+198 \textcolor{comment}{/* ARGSTK:      ARGUMENT STACK */}
+199 
+200 \textcolor{comment}{/*        3.    METALINGUISTIC VARIABLE CLASS CODES */}
+201 
+202 \textcolor{comment}{/* NUMBER:      (1)=CODE CLASS 14000,(2)=NAMTBL INDEX OF 'NUMBER' */}
+203 \textcolor{comment}{/* TEMP:        (1)=CODE CLASS 17000,(2)=NAMTBL INDEX OF 'TEMP  ' */}
+204 \textcolor{comment}{/* PERMID:      (1)=CODE CLASS 20000,(2)=NAMTBL INDEX OF 'PERMID' */}
+205 \textcolor{comment}{/* VBL:         (1)=CODE CLASS 31000,(2)=NAMTBL INDEX OF 'VBL   ' */}
+206 \textcolor{comment}{/* IDENT:       (1)=CODE CLASS 35000,(2)=NAMTBL INDEX OF 'IDENT ' */}
+207 
+208 \textcolor{comment}{/*        9.    NAME TABLE POINTERS TO NUMBERS */}
+209 
+210 \textcolor{comment}{/* ZERO:        NAMTBL POINTER TO '0     ' */}
+211 \textcolor{comment}{/* ZEROPT:      NAMTBL POINTER TO '0.    ' */}
+212 \textcolor{comment}{/* ONE:         NAMTBL POINTER TO '1     ' */}
+213 
+214 \textcolor{comment}{/*       10.    TABLE STORAGE FOR GEOMETRIC FUNCTION PROCESSOR */}
+215 
+216 \textcolor{comment}{/* GEOLOC:      GEOMETRIC PRODUCTION STARTING INDEX IN GEOMTB */}
+217 \textcolor{comment}{/* PMIDTB:      INTERNAL BIT REPRESENTATIONS FOR EACH ELEMENT OF GEOMTB */}
+218 \textcolor{comment}{/* GEOMTB:      GEOMETRIC FORMAT PRODUCTIONS ARRANGED BY SURFACE TYPE */}
+219 
+220 \textcolor{comment}{/*       16.    LITERALS FOR I. L. OPERATION CODES */}
+221 
+222 
+223 
+224 
+225 \textcolor{comment}{/* MOVE:        CONTAINS COMMAND CODE (19) FOR MOVE COMMAND */}
+226 
+227 \textcolor{comment}{/*       17.    MODE CODES */}
+228 
+229 \textcolor{comment}{/* REAL:        MODE CODE (24) FOR A SCALAR */}
+230 \textcolor{comment}{/* PATERN:      MODE CODE (26) FOR PATTERN */}
+231 
+232 \textcolor{comment}{/*       27.    OPERAND MODIFIERS */}
+233 
+234 \textcolor{comment}{/* QUIDLR:      CONTAINS OPERAND TYPE CODE 5 */}
+235 
+236 \textcolor{comment}{/*       28.    OPERAND MODIFIERS */}
+237 
+238 \textcolor{comment}{/* APTXXX:      NAMTBL POINTERS FOR XECUTION SUBROUTINE NAMES */}
+239 
+240 \textcolor{comment}{/*       29.    CLASS CODE MODULI */}
+241 
+242 \textcolor{comment}{/* MODULO:      NAMTBL CLASS AND CODE FACTOR 1000 TO DEVIDE OUT CLASS */}
+243 \textcolor{comment}{/* MODHLF:      NORMAL MODE CODE LIMIT 500 */}
+244 \textcolor{comment}{/* * */}
+245 \textcolor{comment}{/* PURPOSE      TO VALIDATE GO/PATERN STATEMENTS AND GENERATE */}
+246 \textcolor{comment}{/*              APPROPRIATE INTERMEDIATE LANGUAGE. */}
+247 
+248 \textcolor{comment}{/*      external alarm */}
+249 \textcolor{comment}{/* ** */}
+250 \textcolor{comment}{/* ......             INITIALIZE */}
+251 
+252     iarg1 = \hyperlink{GOPAT_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}[0];
+253     iarg2 = \hyperlink{GOPAT_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero}[0];
+254     io = 0;
+255     ia = 0;
+256     kmovo = -1;
+257     kmova = -1;
+258     kscrth = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(hdolsc, (ftnlen)6);
+259     kpcrth = \hyperlink{NAME_8c_afaaebbbb8d352daf545c79b40f5129a3}{name\_}(hdolpc, (ftnlen)6);
+260     iend = 0;
+261     iend\_fmt = fmt\_15;
+262 \textcolor{comment}{/*                             POINTER FOR ARGSTK, 1 BELOW PATERN */}
+263     iarg = *\hyperlink{GOPAT_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} - 1;
+264 \textcolor{comment}{/*                             POINTER FOR BIGSTK */}
+265     ibig = 5;
+266 \textcolor{comment}{/*                             FLAGS FOR OMIT AND RETAIN */}
+267     lomit = FALSE\_;
+268     lretai = FALSE\_;
+269 \textcolor{comment}{/*                             NUMBER OF ARGS TO DELETE FROM BIGSTK */}
+270     iget = 5;
+271     \textcolor{keywordflow}{if} (iarg == 0) \{
+272     \textcolor{keywordflow}{goto} L40;
+273     \}
+274 
+275 \textcolor{comment}{/* ......             SETUP BIGSTK CORRESPONDING TO TOP 5 ARGUMENTS OF */}
+276 \textcolor{comment}{/* ......             ARGSTK, IN FORMAT TO BE RECOGNIZED BY PATERN */}
+277 \textcolor{comment}{/* ......             GEOMETRIC PRODUCTIONS */}
+278 
+279     isetup = 0;
+280     isetup\_fmt = fmt\_10;
+281     \textcolor{keywordflow}{goto} L1000;
+282 
+283 \textcolor{comment}{/* ......             LOOK FOR PATERN */}
+284 
+285 L10:
+286     j = \hyperlink{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}{gmty\_1}.geoloc[*\hyperlink{GOPAT_8c_a74c4f509c663c6415e314753f5c03ae6}{patern} - 1];
+287     errpt = ibig;
+288     kserch = \hyperlink{SEARCH_8c_a73fba73a621be059fc21d3e85c02df0f}{search\_}(bigstk, &\hyperlink{GOPAT_8c_aa084e2bf75ab962319da4c4c7dddea02}{c\_\_10}, &\hyperlink{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}{gmty\_1}.geomtb[j - 1], &errpt);
+289 \textcolor{comment}{/* ......             ERROR IF NO MATCH ON CORRECT TYPE */}
+290 
+291     \textcolor{keywordflow}{if} (kserch <= 12 || kserch >= 18) \{
+292     \textcolor{keywordflow}{goto} L1258;
+293     \}
+294 
+295 \textcolor{comment}{/* ......             DETERMINE NUMBER OF ELEMENTS RECOGNIZED */}
+296 
+297     i\_\_ = kserch - 12;
+298     iget = numrec[i\_\_ - 1];
+299 
+300     namx = bigstk[8];
+301     \textcolor{keywordflow}{if} (namx > \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+302     \textcolor{keywordflow}{goto} L12;
+303     \}
+304     kmode = \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] % *\hyperlink{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+305 
+306 \textcolor{comment}{/*                   BRANCH TO PROCESS RECOGNIZED ELEMENTS */}
+307 
+308 L12:
+309     \textcolor{keywordflow}{switch} (i\_\_) \{
+310     \textcolor{keywordflow}{case} 1:  \textcolor{keywordflow}{goto} L100;
+311     \textcolor{keywordflow}{case} 2:  \textcolor{keywordflow}{goto} L210;
+312     \textcolor{keywordflow}{case} 3:  \textcolor{keywordflow}{goto} L300;
+313     \textcolor{keywordflow}{case} 4:  \textcolor{keywordflow}{goto} L200;
+314     \textcolor{keywordflow}{case} 5:  \textcolor{keywordflow}{goto} L300;
+315     \}
+316 
+317 \textcolor{comment}{/*                   INVERS OR ZIGZAG */}
+318 
+319 L100:
+320     \textcolor{keywordflow}{if} (kmode == kinver) \{
+321     iarg1 = *\hyperlink{GOPAT_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+322     \}
+323     \textcolor{keywordflow}{if} (kmode == kzigza) \{
+324     iarg2 = *\hyperlink{GOPAT_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+325     \}
+326     \textcolor{keywordflow}{goto} L15;
+327 
+328 \textcolor{comment}{/*                   AVOID */}
+329 
+330 L200:
+331     avdsav = bigstk[6];
+332 L210:
+333     avdlst[\hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}] = bigstk[6];
+334     avdlst[ia + 1] = bigstk[4];
+335     \textcolor{keywordflow}{if} (kserch != 14) \{
+336     \textcolor{keywordflow}{goto} L215;
+337     \}
+338     avdlst[ia + 2] = bigstk[0];
+339     \textcolor{keywordflow}{goto} L220;
+340 L215:
+341     avdlst[ia + 2] = *\hyperlink{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}{zeropt};
+342 L220:
+343     ia += 3;
+344     \textcolor{keywordflow}{if} (ia < 18) \{
+345     \textcolor{keywordflow}{goto} L15;
+346     \}
+347 \textcolor{comment}{/*                   IF NOT ALREADY DONE,DECLARE ARRAY OF SCRATCH */}
+348 \textcolor{comment}{/*                   STORAGE IN PART PROGRAM.  MOVE AVOID INFORMATION */}
+349 \textcolor{comment}{/*                   INTO LOCATIONS 1 THRU 102 OF THIS ARRAY. */}
+350 L250:
+351     \textcolor{keywordflow}{if} (\hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kscrth - 1] != 0) \{
+352     \textcolor{keywordflow}{goto} L255;
+353     \}
+354     \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kscrth - 1] = \hyperlink{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0];
+355     \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(&kscrth, &\hyperlink{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{GOPAT_8c_a51f02cbc70ee79cf8bedc6479fc21b7d}{c\_\_102}, &\hyperlink{GOPAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+356 L255:
+357     \textcolor{keywordflow}{if} (kmova - ia < -102) \{
+358     \textcolor{keywordflow}{goto} L2010;
+359     \}
+360     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{GOPAT_8c_a00adb2751bf683d55228e0b14f945340}{move});
+361     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&kmova, &kscrth);
+362     i\_\_1 = \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+363     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+364 \textcolor{comment}{/* L260: */}
+365     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&avdlst[i\_\_ - 1]);
+366     \}
+367     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+368     kmova -= \hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia};
+369     ia = 0;
+370     \textcolor{keywordflow}{switch} (iend) \{
+371     \textcolor{keywordflow}{case} 0: \textcolor{keywordflow}{goto} L15;
+372     \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{goto} L35;
+373     \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{goto} L40;
+374     \}
+375 
+376 \textcolor{comment}{/*                   OMIT OR RETAIN */}
+377 
+378 L300:
+379     lomit = kmode == komit || lomit;
+380     lretai = kmode == kretai || lretai;
+381     \textcolor{keywordflow}{if} (lomit && lretai) \{
+382     \textcolor{keywordflow}{goto} L2000;
+383     \}
+384     omtlst[io] = bigstk[6];
+385     \textcolor{keywordflow}{if} (kserch != 15) \{
+386     \textcolor{keywordflow}{goto} L315;
+387     \}
+388     omtlst[io + 1] = bigstk[2];
+389     \textcolor{keywordflow}{goto} L320;
+390 L315:
+391     omtlst[io + 1] = omtlst[io];
+392 L320:
+393     io += 2;
+394     \textcolor{keywordflow}{if} (io < 18) \{
+395     \textcolor{keywordflow}{goto} L15;
+396     \}
+397 \textcolor{comment}{/*                   IF NOT ALREADY DONE, DECLARE ARRAY OF SCRATCH */}
+398 \textcolor{comment}{/*                   STORAGE IN PART PROGRAM.  MOVE OMIT OR RETAIN */}
+399 \textcolor{comment}{/*                   INFORMATION INTO LOCATIONS 1 THRU 98 OF THIS ARRAY. */}
+400 L350:
+401     \textcolor{keywordflow}{if} (\hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kpcrth - 1] != 0) \{
+402     \textcolor{keywordflow}{goto} L355;
+403     \}
+404     \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kpcrth - 1] = \hyperlink{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0];
+405     \hyperlink{RESRVZ_8c_abab436619e4674dbe498e6df5fd5ba7f}{resrvz\_}(&kpcrth, &\hyperlink{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{GOPAT_8c_abd005ac575fc378b36b6781bb967a4f2}{c\_\_98}, &\hyperlink{GOPAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1});
+406 L355:
+407     \textcolor{keywordflow}{if} (kmovo - io < -98) \{
+408     \textcolor{keywordflow}{goto} L2010;
+409     \}
+410     \hyperlink{OPCODE_8c_aba1a5dfe3ed60bd115908f2b72433d11}{opcode\_}(\hyperlink{GOPAT_8c_a00adb2751bf683d55228e0b14f945340}{move});
+411     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&kmovo, &kpcrth);
+412     i\_\_1 = io;
+413     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+414 \textcolor{comment}{/* L360: */}
+415     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&omtlst[i\_\_ - 1]);
+416     \}
+417     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+418     kmovo -= io;
+419     io = 0;
+420     \textcolor{keywordflow}{switch} (iend) \{
+421     \textcolor{keywordflow}{case} 0: \textcolor{keywordflow}{goto} L15;
+422     \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{goto} L35;
+423     \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{goto} L40;
+424     \}
+425 
+426 \textcolor{comment}{/*                   BRANCH IF ARGSTK ALL EXAMINED */}
+427 
+428 L15:
+429     \textcolor{keywordflow}{if} (iarg + ibig - iget == 0) \{
+430     \textcolor{keywordflow}{goto} L30;
+431     \}
+432 
+433 \textcolor{comment}{/*                   RESET BIGSTK */}
+434 
+435     isetup = 1;
+436     isetup\_fmt = fmt\_20;
+437     \textcolor{keywordflow}{goto} L1000;
+438 
+439 \textcolor{comment}{/*                   LOOP IF REAL LIST CANNOT FOLLOW */}
+440 
+441 L20:
+442     \textcolor{keywordflow}{if} (kserch <= 15) \{
+443     \textcolor{keywordflow}{goto} L10;
+444     \}
+445 
+446 \textcolor{comment}{/*                   PROCESS ELEMENT OF REAL LIST IF PRESENT */}
+447 
+448     namx = bigstk[8];
+449     iget = 1;
+450     \textcolor{keywordflow}{if} (namx > \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+451     \textcolor{keywordflow}{goto} L17;
+452     \}
+453     kclass = \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] / *\hyperlink{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo};
+454     \textcolor{keywordflow}{if} (kclass == \hyperlink{GOPAT_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}[0]) \{
+455     \textcolor{keywordflow}{goto} L17;
+456     \}
+457     kmode = \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] % *\hyperlink{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+458     \textcolor{keywordflow}{if} (kmode != *\hyperlink{GOPAT_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_}) \{
+459     \textcolor{keywordflow}{goto} L10;
+460     \}
+461 L17:
+462     \textcolor{keywordflow}{if} (kserch == 17) \{
+463     \textcolor{keywordflow}{goto} L18;
+464     \}
+465 \textcolor{comment}{/*                   ELEMENT OF AVOID LIST */}
+466     avdlst[\hyperlink{ADV_8c_a4e70c76163aa7d3619a36cdf054bf041}{ia}] = avdsav;
+467     avdlst[ia + 1] = bigstk[8];
+468     \textcolor{keywordflow}{goto} L215;
+469 \textcolor{comment}{/*                   ELEMENT OF OMIT OR RETAIN LIST */}
+470 L18:
+471     omtlst[io] = bigstk[8];
+472     \textcolor{keywordflow}{goto} L315;
+473 
+474 \textcolor{comment}{/*                   MOVE ANY ELEMENTS REMAINING IN OMTLST OR */}
+475 \textcolor{comment}{/*                   AVDLST TO $SCRTH */}
+476 
+477 L30:
+478     \textcolor{keywordflow}{if} (io == 0) \{
+479     \textcolor{keywordflow}{goto} L35;
+480     \}
+481     iend = 1;
+482     iend\_fmt = fmt\_35;
+483     \textcolor{keywordflow}{goto} L350;
+484 L35:
+485     \textcolor{keywordflow}{if} (ia == 0) \{
+486     \textcolor{keywordflow}{goto} L40;
+487     \}
+488     iend = 2;
+489     iend\_fmt = fmt\_40;
+490     \textcolor{keywordflow}{goto} L250;
+491 \textcolor{comment}{/*                   DETERMINE NUMBER OF TWO-ELEMENT ENTRIES IN */}
+492 \textcolor{comment}{/*                   OMIT/RETAIN TABLE, OMTLST. */}
+493 \textcolor{comment}{/*                   IF RETAIN, SET NUMBER NEGATIVE. */}
+494 L40:
+495     iarg3 = -(kmovo + 1) / 2;
+496     \textcolor{keywordflow}{if} (lretai) \{
+497     iarg3 += 1000;
+498     \}
+499 \textcolor{comment}{/*                   DETERMINE NUMBER OF THREE-ELEMENT ENTRIES */}
+500 \textcolor{comment}{/*                   IN AVOID TABLE, AVDLST. */}
+501     iarg4 = -(kmova + 1) / 3;
+502 \textcolor{comment}{/*                   GENERATE CALL TO XECUTION SUBROUTINE GOTOPN */}
+503 \textcolor{comment}{/* L50: */}
+504     \hyperlink{CALLZZ_8c_a22340ad3c429feec107b14a590802e21}{callzz\_}(&\hyperlink{GOPAT_8c_a6c3fa8a41e42716cea6156e1e911d487}{aptxxx}[98]);
+505     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&\hyperlink{GOPAT_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[*\hyperlink{GOPAT_8c_ae157b988f5222e270f494b81959e9bfc}{argtop} - 1]);
+506     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&iarg1);
+507     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(&iarg2);
+508     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{GOPAT_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}, &iarg3);
+509     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(\hyperlink{GOPAT_8c_a3cdc8a0d13c3091f7a97d984e10dca55}{quidlr}, &iarg4);
+510     \textcolor{keywordflow}{if} (\hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kpcrth - 1] == 0) \{
+511     \textcolor{keywordflow}{goto} L52;
+512     \}
+513     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&\hyperlink{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &kpcrth);
+514     \textcolor{keywordflow}{goto} L53;
+515 L52:
+516     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(\hyperlink{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}{zeropt});
+517 L53:
+518     \textcolor{keywordflow}{if} (\hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[kscrth - 1] == 0) \{
+519     \textcolor{keywordflow}{goto} L54;
+520     \}
+521     \hyperlink{TWOARG_8c_a37481d78104f669acea1f8cbaaf8417f}{twoarg\_}(&\hyperlink{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &kscrth);
+522     \textcolor{keywordflow}{goto} L60;
+523 L54:
+524     \hyperlink{ARGCVT_8c_ab054ef00212d16dab49a9c368cb42670}{argcvt\_}(\hyperlink{GOPAT_8c_a467913364bc7d3d7ea555fd315187377}{zeropt});
+525 L60:
+526     \hyperlink{RLSLIN_8c_a8f4113df8e1157564dd8c478589eb3c0}{rlslin\_}();
+527 
+528     \textcolor{keywordflow}{return} 0;
+529 \textcolor{comment}{/* ----------------------------------------------------------------------- */}
+530 
+531 \textcolor{comment}{/*     PURPOSE       TO MOVE INTERNAL BIT CONFIGURATIONS CORRESPONDING TO */}
+532 \textcolor{comment}{/*                   ELEMENTS OF ARGSTK INTO BIGSTK, FOR RECOGNITION BY */}
+533 \textcolor{comment}{/*                   PATERN GEOMETRIC PRODUCTIONS */}
+534 
+535 \textcolor{comment}{/*     ARGUMENTS     IARG      INDEX OF NEXT ELEMENT OF ARGSTK. */}
+536 \textcolor{comment}{/*                   IGET      NUMBER OF RECOGNIZED ELEMENTS TO BE POPPED */}
+537 \textcolor{comment}{/*                             FROM BIGSTK. */}
+538 \textcolor{comment}{/*                   ISETUP    RETURN INDEX. */}
+539 
+540 \textcolor{comment}{/*                             POP RECOGNIZED ELEMENTS */}
+541 L1000:
+542     iin = 10;
+543     iiout = 10 - (iget << 1);
+544     ibig -= iget;
+545 L1005:
+546     \textcolor{keywordflow}{if} (iiout == 0) \{
+547     \textcolor{keywordflow}{goto} L1010;
+548     \}
+549     bigstk[iin - 1] = bigstk[iiout - 1];
+550     bigstk[iin - 2] = bigstk[iiout - 2];
+551     iin += -2;
+552     iiout += -2;
+553     \textcolor{keywordflow}{goto} L1005;
+554 \textcolor{comment}{/*                             CONVERT STACK ELEMENTS */}
+555 L1010:
+556     i\_\_1 = iget;
+557     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= i\_\_1; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+558     \textcolor{keywordflow}{if} (iarg != 0) \{
+559         \textcolor{keywordflow}{goto} L1200;
+560     \}
+561     j = 10 - (ibig << 1);
+562     bigstk[j - 1] = -1;
+563     \textcolor{keywordflow}{goto} L1255;
+564 L1200:
+565     namx = \hyperlink{GOPAT_8c_ad6c61c6f71063a50b22ae5a47d036a13}{argstk}[iarg - 1];
+566     errpt = \hyperlink{PRO021_8c_a6618368ddf10328f0524a5f5613177e8}{iarg};
+567     \textcolor{keywordflow}{if} (namx > \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.nammax) \{
+568         \textcolor{keywordflow}{goto} L1205;
+569     \}
+570     kclass = *\hyperlink{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo} * (\hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] / *\hyperlink{GOPAT_8c_a4bf31ea5e89a6cd880ba3fbba317a26f}{modulo});
+571     kmode = \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] - kclass;
+572     \textcolor{keywordflow}{if} (kmode >= *\hyperlink{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf}) \{
+573         kmode -= *\hyperlink{GOPAT_8c_a5b213f3380728905c034848dcc4f4ffb}{modhlf};
+574     \}
+575     \textcolor{keywordflow}{if} (kmode == 0) \{
+576         \textcolor{keywordflow}{goto} L1260;
+577     \}
+578     \textcolor{keywordflow}{if} (kclass == \hyperlink{GOPAT_8c_ad5567d4c306f6b1930705b3f271ef7ff}{vbl}[0] || kclass == \hyperlink{GOPAT_8c_a5905d48604152cf57aa6bfa087b49173}{temp}[0]) \{
+579         \textcolor{keywordflow}{goto} L1220;
+580     \}
+581     \textcolor{keywordflow}{if} (kclass == \hyperlink{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}[0]) \{
+582         \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] = \hyperlink{GOPAT_8c_a2ca8ebe9db37642e8601bc84da07958f}{nametb\_1}.namtbl[namx - 1] - 
+      \hyperlink{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}[0] 
+583             + \hyperlink{GOPAT_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0];
+584     \}
+585     \textcolor{keywordflow}{if} (kclass == \hyperlink{GOPAT_8c_a5d2f1cb80879c49ab774b8e180397ae0}{ident}[0] || kclass == \hyperlink{GOPAT_8c_af1724cb67424440e47e76c7523840ab8}{permid}[0]) \{
+586         \textcolor{keywordflow}{goto} L1210;
+587     \}
+588     \textcolor{keywordflow}{if} (kclass != \hyperlink{GOPAT_8c_aa97c1f529dc5a11a78758184c84a39c9}{number}[0]) \{
+589         \textcolor{keywordflow}{goto} L1260;
+590     \}
+591 L1205:
+592     kmode = *\hyperlink{GOPAT_8c_a5d72b24797d1534e4e729b4b59190475}{real\_\_};
+593     \textcolor{keywordflow}{goto} L1220;
+594 L1210:
+595     kmode += 50;
+596 L1220:
+597     j = 10 - (ibig << 1);
+598     bigstk[j - 1] = \hyperlink{GOPAT_8c_aaaf3783f56dfa9e5490d0b333403d6f0}{gmty\_1}.pmidtb[kmode - 1];
+599     bigstk[j - 2] = namx;
+600     --\hyperlink{PRO021_8c_a6618368ddf10328f0524a5f5613177e8}{iarg};
+601     ++ibig;
+602 \textcolor{comment}{/* L1250: */}
+603     \}
+604 \textcolor{comment}{/*                             RETURN */}
+605 L1255:
+606     \textcolor{keywordflow}{switch} (isetup) \{
+607     \textcolor{keywordflow}{case} 0: \textcolor{keywordflow}{goto} L10;
+608     \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{goto} L20;
+609     \}
+610 \textcolor{comment}{/*                             IMPROPER ARGUMENT IN GOTO/PATERN STATEMENT */}
+611 L1258:
+612 \textcolor{comment}{/* Computing MAX */}
+613     i\_\_1 = iarg + 1, i\_\_2 = iarg + errpt;
+614     errpt = max(i\_\_1,i\_\_2);
+615 L1260:
+616     ierror = 2036;
+617     \textcolor{keywordflow}{goto} L3000;
+618 \textcolor{comment}{/*                             BOTH OMIT AND RETAIN SPECIFIED IN GOTO/ */}
+619 \textcolor{comment}{/*                             PATERN STATEMENT */}
+620 L2000:
+621     ierror = 2037;
+622     errpt = iarg + ibig;
+623     \textcolor{keywordflow}{goto} L3000;
+624 \textcolor{comment}{/*                   TOO MANY OMIT, RETAIN OR AVOID POINTS IN GOTO/ */}
+625 \textcolor{comment}{/*                             PATERN STATEMENT */}
+626 L2010:
+627     ierror = 2038;
+628     errpt = iarg + 1;
+629 L3000:
+630     i\_\_1 = -errpt;
+631     \hyperlink{ALARM_8c_adbc141d1c4eac4b0b9b99c0e93e6b88e}{alarm\_}(&ierror, &i\_\_1, &\hyperlink{GOPAT_8c_a0eeed1e607f74578e1b4643f08de6f36}{c\_\_8}, \textcolor{stringliteral}{"GOPAT   "}, (ftnlen)8);
+632     \textcolor{keywordflow}{return} 0;
+633 
+634 
+635 \} \textcolor{comment}{/* gopat\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GOPAT_8c_a63be6f5673a98991d8113106cf6644b5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GOPAT_8c_a63be6f5673a98991d8113106cf6644b5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!argmxy@{argmxy}}
+\index{argmxy@{argmxy}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{argmxy}{argmxy}}]{\setlength{\rightskip}{0pt plus 5cm}integer argmxy\mbox{[}250\mbox{]}}\hypertarget{GOPAT_8c_a6f2a2b7925998bf9006ecc221dc86cb6}{}\label{GOPAT_8c_a6f2a2b7925998bf9006ecc221dc86cb6}
+
+
+Definition at line 49 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{GOPAT_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 87 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{GOPAT_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 89 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}}
+\index{c\+\_\+\+\_\+10@{c\+\_\+\+\_\+10}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+10}{c__10}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+10 = 10\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_aa084e2bf75ab962319da4c4c7dddea02}{}\label{GOPAT_8c_aa084e2bf75ab962319da4c4c7dddea02}
+
+
+Definition at line 86 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+102@{c\+\_\+\+\_\+102}}
+\index{c\+\_\+\+\_\+102@{c\+\_\+\+\_\+102}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+102}{c__102}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+102 = 102\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_a51f02cbc70ee79cf8bedc6479fc21b7d}{}\label{GOPAT_8c_a51f02cbc70ee79cf8bedc6479fc21b7d}
+
+
+Definition at line 88 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}}
+\index{c\+\_\+\+\_\+8@{c\+\_\+\+\_\+8}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+8}{c__8}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+8 = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_a0eeed1e607f74578e1b4643f08de6f36}{}\label{GOPAT_8c_a0eeed1e607f74578e1b4643f08de6f36}
+
+
+Definition at line 91 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!c\+\_\+\+\_\+98@{c\+\_\+\+\_\+98}}
+\index{c\+\_\+\+\_\+98@{c\+\_\+\+\_\+98}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+98}{c__98}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+98 = 98\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{GOPAT_8c_abd005ac575fc378b36b6781bb967a4f2}{}\label{GOPAT_8c_abd005ac575fc378b36b6781bb967a4f2}
+
+
+Definition at line 90 of file G\+O\+P\+A\+T.\+c.
+
+
+
+Referenced by gopat\+\_\+().
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!charnd@{charnd}}
+\index{charnd@{charnd}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{charnd}{charnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer charnd}\hypertarget{GOPAT_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}{}\label{GOPAT_8c_a67bc1b856b3a4c1a57ea488f4c1c7e77}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!charst@{charst}}
+\index{charst@{charst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{charst}{charst}}]{\setlength{\rightskip}{0pt plus 5cm}integer charst}\hypertarget{GOPAT_8c_a585e4c97f8e0676e57e99895ea3fafd6}{}\label{GOPAT_8c_a585e4c97f8e0676e57e99895ea3fafd6}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!cnamtb@{cnamtb}}
+\index{cnamtb@{cnamtb}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb}{cnamtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnamtb\mbox{[}18000\mbox{]}}\hypertarget{GOPAT_8c_a4a8cfd199722f3d62f1340485145d183}{}\label{GOPAT_8c_a4a8cfd199722f3d62f1340485145d183}
+
+
+Definition at line 25 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!cnamtb\+\_\+@{cnamtb\+\_\+}}
+\index{cnamtb\+\_\+@{cnamtb\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{cnamtb\+\_\+}{cnamtb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   cnamtb\+\_\+}\hypertarget{GOPAT_8c_a9f4b6766d019d2d422de3e8e43766b49}{}\label{GOPAT_8c_a9f4b6766d019d2d422de3e8e43766b49}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!cnumtb@{cnumtb}}
+\index{cnumtb@{cnumtb}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{cnumtb}{cnumtb}}]{\setlength{\rightskip}{0pt plus 5cm}char cnumtb\mbox{[}36000\mbox{]}}\hypertarget{GOPAT_8c_a8a31d8adbaa07781810863de399e0aef}{}\label{GOPAT_8c_a8a31d8adbaa07781810863de399e0aef}
+
+
+Definition at line 25 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!code@{code}}
+\index{code@{code}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}integer code\mbox{[}150\mbox{]}}\hypertarget{GOPAT_8c_a7c81c7c2009c09d1a9b399eb4340b050}{}\label{GOPAT_8c_a7c81c7c2009c09d1a9b399eb4340b050}
+
+
+Definition at line 37 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!code\+\_\+@{code\+\_\+}}
+\index{code\+\_\+@{code\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{code\+\_\+}{code_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   code\+\_\+}\hypertarget{GOPAT_8c_acd183cf0281a88f9d70f0c3379b94e6b}{}\label{GOPAT_8c_acd183cf0281a88f9d70f0c3379b94e6b}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!geoloc@{geoloc}}
+\index{geoloc@{geoloc}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{geoloc}{geoloc}}]{\setlength{\rightskip}{0pt plus 5cm}integer geoloc\mbox{[}50\mbox{]}}\hypertarget{GOPAT_8c_ad6fb031247fc3732cf47428d6914728c}{}\label{GOPAT_8c_ad6fb031247fc3732cf47428d6914728c}
+
+
+Definition at line 49 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!geomtb@{geomtb}}
+\index{geomtb@{geomtb}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{geomtb}{geomtb}}]{\setlength{\rightskip}{0pt plus 5cm}integer geomtb\mbox{[}2180\mbox{]}}\hypertarget{GOPAT_8c_a6593ead180fda0156db1d7b8b0abb91f}{}\label{GOPAT_8c_a6593ead180fda0156db1d7b8b0abb91f}
+
+
+Definition at line 49 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!gmty\+\_\+@{gmty\+\_\+}}
+\index{gmty\+\_\+@{gmty\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{gmty\+\_\+}{gmty_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   gmty\+\_\+}\hypertarget{GOPAT_8c_a12b03222a2c6c2a7e701c57a7bc28b74}{}\label{GOPAT_8c_a12b03222a2c6c2a7e701c57a7bc28b74}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!ifixnd@{ifixnd}}
+\index{ifixnd@{ifixnd}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{ifixnd}{ifixnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixnd}\hypertarget{GOPAT_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}{}\label{GOPAT_8c_a6cceecf327b08c83dcbdf3cb3d761ae6}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!ifixst@{ifixst}}
+\index{ifixst@{ifixst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{ifixst}{ifixst}}]{\setlength{\rightskip}{0pt plus 5cm}integer ifixst}\hypertarget{GOPAT_8c_a633664cebfc393fb426ece3c2f989dff}{}\label{GOPAT_8c_a633664cebfc393fb426ece3c2f989dff}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!il@{il}}
+\index{il@{il}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{il}{il}}]{\setlength{\rightskip}{0pt plus 5cm}integer il\mbox{[}21\mbox{]}}\hypertarget{GOPAT_8c_a5524c41368cc6530a9c6a9ccab6163db}{}\label{GOPAT_8c_a5524c41368cc6530a9c6a9ccab6163db}
+
+
+Definition at line 55 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!il\+\_\+@{il\+\_\+}}
+\index{il\+\_\+@{il\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{il\+\_\+}{il_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   il\+\_\+}\hypertarget{GOPAT_8c_a01f1077d564b5523464ab7c6576a6568}{}\label{GOPAT_8c_a01f1077d564b5523464ab7c6576a6568}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!inamnd@{inamnd}}
+\index{inamnd@{inamnd}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{inamnd}{inamnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamnd}\hypertarget{GOPAT_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}{}\label{GOPAT_8c_a3da32a85f8cf73e9bdb90a58efd69e9e}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!inamst@{inamst}}
+\index{inamst@{inamst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{inamst}{inamst}}]{\setlength{\rightskip}{0pt plus 5cm}integer inamst}\hypertarget{GOPAT_8c_a373010e90fb1cd08bf263255a111920d}{}\label{GOPAT_8c_a373010e90fb1cd08bf263255a111920d}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!moduli@{moduli}}
+\index{moduli@{moduli}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{moduli}{moduli}}]{\setlength{\rightskip}{0pt plus 5cm}integer moduli\mbox{[}2\mbox{]}}\hypertarget{GOPAT_8c_ae8a06e8185505bd384595bca0f15299f}{}\label{GOPAT_8c_ae8a06e8185505bd384595bca0f15299f}
+
+
+Definition at line 79 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!moduli\+\_\+@{moduli\+\_\+}}
+\index{moduli\+\_\+@{moduli\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{moduli\+\_\+}{moduli_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   moduli\+\_\+}\hypertarget{GOPAT_8c_a8a71b91834cff4c4e068f266d037e0b3}{}\label{GOPAT_8c_a8a71b91834cff4c4e068f266d037e0b3}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!modx@{modx}}
+\index{modx@{modx}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{modx}{modx}}]{\setlength{\rightskip}{0pt plus 5cm}integer modx\mbox{[}32\mbox{]}}\hypertarget{GOPAT_8c_abd1eef3c1b001e65bada11247921ce11}{}\label{GOPAT_8c_abd1eef3c1b001e65bada11247921ce11}
+
+
+Definition at line 61 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!modx\+\_\+@{modx\+\_\+}}
+\index{modx\+\_\+@{modx\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{modx\+\_\+}{modx_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   modx\+\_\+}\hypertarget{GOPAT_8c_a655e47f824738b8cc670d0adbcb4fd22}{}\label{GOPAT_8c_a655e47f824738b8cc670d0adbcb4fd22}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!namest@{namest}}
+\index{namest@{namest}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{namest}{namest}}]{\setlength{\rightskip}{0pt plus 5cm}integer namest}\hypertarget{GOPAT_8c_ab97202700d22183890e79bc8791f4bff}{}\label{GOPAT_8c_ab97202700d22183890e79bc8791f4bff}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!nametb\+\_\+@{nametb\+\_\+}}
+\index{nametb\+\_\+@{nametb\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{nametb\+\_\+}{nametb_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   nametb\+\_\+}\hypertarget{GOPAT_8c_a2f50d9504f85ad0185d1f9656c8f490c}{}\label{GOPAT_8c_a2f50d9504f85ad0185d1f9656c8f490c}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!nammax@{nammax}}
+\index{nammax@{nammax}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{nammax}{nammax}}]{\setlength{\rightskip}{0pt plus 5cm}integer nammax}\hypertarget{GOPAT_8c_a12351fe75bd822dfa233783a24bab726}{}\label{GOPAT_8c_a12351fe75bd822dfa233783a24bab726}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!namtbl@{namtbl}}
+\index{namtbl@{namtbl}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{namtbl}{namtbl}}]{\setlength{\rightskip}{0pt plus 5cm}integer namtbl\mbox{[}3000\mbox{]}}\hypertarget{GOPAT_8c_ab515a7cdce0306e61a7aa102b26d4683}{}\label{GOPAT_8c_ab515a7cdce0306e61a7aa102b26d4683}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!numbnd@{numbnd}}
+\index{numbnd@{numbnd}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{numbnd}{numbnd}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbnd}\hypertarget{GOPAT_8c_aa6e3af599f3cc3aa48548c557b1c4136}{}\label{GOPAT_8c_aa6e3af599f3cc3aa48548c557b1c4136}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!numbst@{numbst}}
+\index{numbst@{numbst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{numbst}{numbst}}]{\setlength{\rightskip}{0pt plus 5cm}integer numbst}\hypertarget{GOPAT_8c_a5dda556d4413fc8ab1f131381dc6c19b}{}\label{GOPAT_8c_a5dda556d4413fc8ab1f131381dc6c19b}
+
+
+Definition at line 18 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!numptr@{numptr}}
+\index{numptr@{numptr}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{numptr}{numptr}}]{\setlength{\rightskip}{0pt plus 5cm}integer numptr\mbox{[}12\mbox{]}}\hypertarget{GOPAT_8c_af6c7c8757673aa092837c252bf431adf}{}\label{GOPAT_8c_af6c7c8757673aa092837c252bf431adf}
+
+
+Definition at line 43 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!numptr\+\_\+@{numptr\+\_\+}}
+\index{numptr\+\_\+@{numptr\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{numptr\+\_\+}{numptr_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   numptr\+\_\+}\hypertarget{GOPAT_8c_a206b8152d5af52217a99c9555a138151}{}\label{GOPAT_8c_a206b8152d5af52217a99c9555a138151}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!opmod@{opmod}}
+\index{opmod@{opmod}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{opmod}{opmod}}]{\setlength{\rightskip}{0pt plus 5cm}integer opmod\mbox{[}6\mbox{]}}\hypertarget{GOPAT_8c_aa04120ffc54a13b636597a71b87fedd2}{}\label{GOPAT_8c_aa04120ffc54a13b636597a71b87fedd2}
+
+
+Definition at line 67 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!opmod\+\_\+@{opmod\+\_\+}}
+\index{opmod\+\_\+@{opmod\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{opmod\+\_\+}{opmod_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   opmod\+\_\+}\hypertarget{GOPAT_8c_a3ff5dd24a086a7fd2a38d4c9f7954199}{}\label{GOPAT_8c_a3ff5dd24a086a7fd2a38d4c9f7954199}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!pmidtb@{pmidtb}}
+\index{pmidtb@{pmidtb}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{pmidtb}{pmidtb}}]{\setlength{\rightskip}{0pt plus 5cm}integer pmidtb\mbox{[}250\mbox{]}}\hypertarget{GOPAT_8c_a3404f51c0b88210918a02f04f2fdbb90}{}\label{GOPAT_8c_a3404f51c0b88210918a02f04f2fdbb90}
+
+
+Definition at line 49 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!stklst@{stklst}}
+\index{stklst@{stklst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{stklst}{stklst}}]{\setlength{\rightskip}{0pt plus 5cm}integer stklst\mbox{[}300\mbox{]}}\hypertarget{GOPAT_8c_ada93478ed3a7b6732d0c4af5a026499f}{}\label{GOPAT_8c_ada93478ed3a7b6732d0c4af5a026499f}
+
+
+Definition at line 31 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!stklst\+\_\+@{stklst\+\_\+}}
+\index{stklst\+\_\+@{stklst\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{stklst\+\_\+}{stklst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   stklst\+\_\+}\hypertarget{GOPAT_8c_a47bf3f866954e63669c3f6f961886635}{}\label{GOPAT_8c_a47bf3f866954e63669c3f6f961886635}
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!sublst@{sublst}}
+\index{sublst@{sublst}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{sublst}{sublst}}]{\setlength{\rightskip}{0pt plus 5cm}integer sublst\mbox{[}136\mbox{]}}\hypertarget{GOPAT_8c_ab607b14b01bf08fe56a3d23c8784386a}{}\label{GOPAT_8c_ab607b14b01bf08fe56a3d23c8784386a}
+
+
+Definition at line 73 of file G\+O\+P\+A\+T.\+c.
+
+\index{G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}!sublst\+\_\+@{sublst\+\_\+}}
+\index{sublst\+\_\+@{sublst\+\_\+}!G\+O\+P\+A\+T.\+c@{G\+O\+P\+A\+T.\+c}}
+\subsubsection[{\texorpdfstring{sublst\+\_\+}{sublst_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   sublst\+\_\+}\hypertarget{GOPAT_8c_af4b1d18111ffbd4faf8b572f12e5f890}{}\label{GOPAT_8c_af4b1d18111ffbd4faf8b572f12e5f890}

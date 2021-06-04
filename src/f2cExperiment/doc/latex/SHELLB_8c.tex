@@ -1,0 +1,268 @@
+\hypertarget{SHELLB_8c}{}\section{S\+H\+E\+L\+L\+B.\+c File Reference}
+\label{SHELLB_8c}\index{S\+H\+E\+L\+L\+B.\+c@{S\+H\+E\+L\+L\+B.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+H\+E\+L\+L\+B.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{SHELLB_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375}{shellb\+\_\+} (integer $\ast$nn, integer $\ast$n3, integer $\ast$n4, doublereal $\ast$rcorn1, doublereal $\ast$rcorn2, doublereal $\ast$cv1, doublereal $\ast$cv2, doublereal $\ast$rnet, doublereal $\ast$scent, doublereal $\ast$srad, integer $\ast$nflags)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+H\+E\+L\+L\+B.\+c@{S\+H\+E\+L\+L\+B.\+c}!shellb\+\_\+@{shellb\+\_\+}}
+\index{shellb\+\_\+@{shellb\+\_\+}!S\+H\+E\+L\+L\+B.\+c@{S\+H\+E\+L\+L\+B.\+c}}
+\subsubsection[{\texorpdfstring{shellb\+\_\+(integer $\ast$nn, integer $\ast$n3, integer $\ast$n4, doublereal $\ast$rcorn1, doublereal $\ast$rcorn2, doublereal $\ast$cv1, doublereal $\ast$cv2, doublereal $\ast$rnet, doublereal $\ast$scent, doublereal $\ast$srad, integer $\ast$nflags)}{shellb_(integer *nn, integer *n3, integer *n4, doublereal *rcorn1, doublereal *rcorn2, doublereal *cv1, doublereal *cv2, doublereal *rnet, doublereal *scent, doublereal *srad, integer *nflags)}}]{\setlength{\rightskip}{0pt plus 5cm}int shellb\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{nn, }
+\item[{integer $\ast$}]{n3, }
+\item[{integer $\ast$}]{n4, }
+\item[{doublereal $\ast$}]{rcorn1, }
+\item[{doublereal $\ast$}]{rcorn2, }
+\item[{doublereal $\ast$}]{cv1, }
+\item[{doublereal $\ast$}]{cv2, }
+\item[{doublereal $\ast$}]{rnet, }
+\item[{doublereal $\ast$}]{scent, }
+\item[{doublereal $\ast$}]{srad, }
+\item[{integer $\ast$}]{nflags}
+\end{DoxyParamCaption}
+)}\hypertarget{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375}{}\label{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375}
+
+
+Definition at line 17 of file S\+H\+E\+L\+L\+B.\+c.
+
+
+
+References a, a1, a2, al, d\+\_\+\+\_\+, dotf\+\_\+(), f, i\+\_\+\+\_\+, j, jj, k, v1, v2, and vecmod\+\_\+().
+
+
+
+Referenced by inex\+\_\+().
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{comment}{/* System generated locals */}
+23     integer rcorn1\_dim1, rcorn1\_offset, rcorn2\_dim1, rcorn2\_offset, cv1\_dim1, 
+24         cv1\_offset, cv2\_dim1, cv2\_offset, rnet\_dim1, rnet\_offset, 
+25         scent\_dim1, scent\_offset;
+26 
+27     \textcolor{comment}{/* Builtin functions */}
+28     \textcolor{keywordtype}{double} sqrt(doublereal);
+29 
+30     \textcolor{comment}{/* Local variables */}
+31     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}[3], e[3], \hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}[3];
+32     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+33     \textcolor{keyword}{static} doublereal \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1}, \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2}, \hyperlink{POLPOL_8c_ae6c3ee9933cc50ea02782419401e84f0}{v1}[3], \hyperlink{POLPOL_8c_a6b1b4383fd5955a7a5b1ac13fafb0254}{v2}[3], ab[3], ea[3], cd[3], eb[3], de[3],
+34          ef[3], \hyperlink{APT088_8c_a054ec6e74e7a9485154b9bc803e585ff}{al}, ar;
+35     \textcolor{keyword}{static} integer \hyperlink{GFETCH_8c_a8ccf5dde08cd0f6cfa1133ce508a2414}{jj};
+36     \textcolor{keyword}{static} doublereal am1, am2, amax;
+37     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+38         );
+39     \textcolor{keyword}{static} integer jedge;
+40     \textcolor{keyword}{static} doublereal abmod, efmod;
+41     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *);
+42     \textcolor{keyword}{static} integer ncount;
+43 
+44 
+45 \textcolor{comment}{/*     CALCULATES THE FOUR "EDGE" SHELLS FOR A PATCH SPECIFIED BY RNET, E */}
+46 \textcolor{comment}{/*     ON CALL:- */}
+47 \textcolor{comment}{/*     N3=3 */}
+48 \textcolor{comment}{/*     N4=4 */}
+49 \textcolor{comment}{/*     NN      FIRST DIMENSION OF RNET ARRAY */}
+50 
+51 
+52 
+53 \textcolor{comment}{/* .... CORNER POINTS */}
+54 \textcolor{comment}{/* .... CORNER VECTORS */}
+55 \textcolor{comment}{/* .... NET OF POINTS */}
+56 
+57 
+58 
+59 \textcolor{comment}{/* .... SPHERE CENTRES */}
+60 \textcolor{comment}{/* .... SPHERE RADII */}
+61 \textcolor{comment}{/* .... SET TO 1 IF SPHERE CALCULATED, ELSE 0 */}
+62 
+63 
+64     \textcolor{comment}{/* Parameter adjustments */}
+65     rnet\_dim1 = *nn;
+66     rnet\_offset = 1 + rnet\_dim1;
+67     rnet -= rnet\_offset;
+68     --nflags;
+69     --srad;
+70     scent\_dim1 = *n4;
+71     scent\_offset = 1 + scent\_dim1;
+72     scent -= scent\_offset;
+73     cv2\_dim1 = *n4;
+74     cv2\_offset = 1 + cv2\_dim1;
+75     cv2 -= cv2\_offset;
+76     cv1\_dim1 = *n4;
+77     cv1\_offset = 1 + cv1\_dim1;
+78     cv1 -= cv1\_offset;
+79     rcorn2\_dim1 = *n4;
+80     rcorn2\_offset = 1 + rcorn2\_dim1;
+81     rcorn2 -= rcorn2\_offset;
+82     rcorn1\_dim1 = *n4;
+83     rcorn1\_offset = 1 + rcorn1\_dim1;
+84     rcorn1 -= rcorn1\_offset;
+85 
+86     \textcolor{comment}{/* Function Body */}
+87     jedge = 2;
+88 
+89 \textcolor{comment}{/* .... MAIN LOOP */}
+90     \textcolor{keywordflow}{for} (k = 1; k <= 4; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+91     \textcolor{keywordflow}{if} (k == 3) \{
+92         jedge = -jedge;
+93     \}
+94     nflags[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = 0;
+95     jj = k + jedge;
+96 
+97 \textcolor{comment}{/*     CONSTRUCT VECTORS:- */}
+98     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+99         e[i\_\_ - 1] = (rcorn1[k + i\_\_ * rcorn1\_dim1] + rcorn2[k + i\_\_ * 
+100             rcorn2\_dim1]) / 2.f;
+101         ab[i\_\_ - 1] = rcorn2[k + i\_\_ * rcorn2\_dim1] - rcorn1[k + i\_\_ * 
+102             rcorn1\_dim1];
+103         ea[i\_\_ - 1] = rcorn1[k + i\_\_ * rcorn1\_dim1] - e[i\_\_ - 1];
+104         d\_\_[i\_\_ - 1] = rcorn1[jj + i\_\_ * rcorn1\_dim1];
+105         cd[i\_\_ - 1] = d\_\_[i\_\_ - 1] - rcorn2[jj + i\_\_ * rcorn2\_dim1];
+106         de[i\_\_ - 1] = e[i\_\_ - 1] - d\_\_[i\_\_ - 1];
+107 \textcolor{comment}{/* L20: */}
+108     \}
+109     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(ab, &abmod);
+110     \textcolor{keywordflow}{if} (abmod < .001) \{
+111 \textcolor{comment}{/* .... PATCH EDGE DEGENERATED TO NEAR POINT */}
+112         srad[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = 0.;
+113 \textcolor{comment}{/*                         NO SHELL CALCULATED */}
+114         \textcolor{keywordflow}{goto} L10;
+115     \}
+116 
+117     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a1, de, ab);
+118     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a2, ab, cd);
+119     al = a1 / \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+120     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+121         v1[i\_\_ - 1] = cv1[k + i\_\_ * cv1\_dim1];
+122         v2[i\_\_ - 1] = cv2[k + i\_\_ * cv2\_dim1];
+123         f[i\_\_ - 1] = d\_\_[i\_\_ - 1] + al * cd[i\_\_ - 1];
+124         ef[i\_\_ - 1] = f[i\_\_ - 1] - e[i\_\_ - 1];
+125 \textcolor{comment}{/* L30: */}
+126     \}
+127 
+128     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a1, ea, v1);
+129     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a2, ef, v1);
+130     \textcolor{keywordflow}{if} (abs(a2) < 1e-6) \{
+131         am1 = 1e8;
+132     \} \textcolor{keywordflow}{else} \{
+133         am1 = a1 / \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+134     \}
+135     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a1, eb, v2);
+136     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a2, ef, v2);
+137     \textcolor{keywordflow}{if} (abs(a2) < 1e-6) \{
+138         am2 = 1e8;
+139     \} \textcolor{keywordflow}{else} \{
+140         am2 = a1 / \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+141     \}
+142     \textcolor{keywordflow}{if} (am1 > 0. && am2 > 0. && am2 < am1) \{
+143         am1 = am2;
+144     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (am2 > 0. && am1 <= 0.) \{
+145         am1 = am2;
+146     \}
+147 
+148     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(ef, &efmod);
+149 
+150     a2 = abmod * abmod / 4.;
+151     \textcolor{keywordflow}{if} (am1 <= 0.) \{
+152         ar = 1e5;
+153     \} \textcolor{keywordflow}{else} \{
+154         a1 = am1 * efmod;
+155         ar = sqrt(a1 * a1 + a2);
+156     \}
+157 
+158     \textcolor{keywordflow}{if} (ar >= 1e5) \{
+159         ar = 1e5;
+160         am1 = sqrt(ar * ar - a2) / efmod;
+161     \}
+162 
+163 
+164     srad[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = ar;
+165     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+166         scent[k + i\_\_ * scent\_dim1] = e[i\_\_ - 1] + am1 * ef[i\_\_ - 1];
+167 \textcolor{comment}{/* L60: */}
+168     \}
+169 
+170     ncount = 0;
+171 L100:
+172     ++ncount;
+173 \textcolor{comment}{/*     SPHERE ENCLOSES V1 AND V2. NOW TEST THAT RNET POINTS ARE INCLUDED */}
+174     amax = 0.;
+175     \textcolor{keywordflow}{for} (j = 1; j <= 25; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+176         a1 = 0.;
+177         \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+178         a2 = rnet[j + i\_\_ * rnet\_dim1] - scent[k + i\_\_ * scent\_dim1];
+179         a1 += a2 * \hyperlink{APT088_8c_aa3fd046b2956875cf908d73a51a96b42}{a2};
+180 \textcolor{comment}{/* L120: */}
+181         \}
+182         \textcolor{keywordflow}{if} (a1 > amax) \{
+183         amax = \hyperlink{APT088_8c_ab89a77e63a7226fffaecb2e2c2ab5219}{a1};
+184         \}
+185 \textcolor{comment}{/* L110: */}
+186     \}
+187 \textcolor{comment}{/* .... A IS DIST. FROM CENTRE TO FURTHEST POINT OF RNET */}
+188     a = sqrt(amax);
+189     a1 = a - ar;
+190 \textcolor{comment}{/* .... HULL POINTS INSIDE SPHERE */}
+191     \textcolor{keywordflow}{if} (a1 <= .001) \{
+192 \textcolor{comment}{/* .... CONVEX HULL FOUND - SET FLAG */}
+193         nflags[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = 1;
+194         \textcolor{keywordflow}{goto} L10;
+195     \}
+196     \textcolor{keywordflow}{if} (a1 <= abmod * 1.1f) \{
+197 \textcolor{comment}{/* .... INCREASE RADIUS */}
+198         ar = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+199         srad[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+200 \textcolor{comment}{/* .... TRY FOR FIT */}
+201         \textcolor{keywordflow}{if} (ncount <= 2) \{
+202         \textcolor{keywordflow}{goto} L100;
+203         \}
+204     \} \textcolor{keywordflow}{else} \{
+205         srad[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = 0.;
+206     \}
+207 
+208 L10:
+209     ;
+210     \}
+211 
+212     \textcolor{keywordflow}{return} 0;
+213 \} \textcolor{comment}{/* shellb\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SHELLB_8c_a1a280a5d50fbaddbeca8b8427d9ee375_icgraph}
+\end{center}
+\end{figure}
+
+

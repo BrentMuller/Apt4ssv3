@@ -1,0 +1,175 @@
+\hypertarget{CHKRET_8c}{}\section{C\+H\+K\+R\+E\+T.\+c File Reference}
+\label{CHKRET_8c}\index{C\+H\+K\+R\+E\+T.\+c@{C\+H\+K\+R\+E\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+H\+K\+R\+E\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{CHKRET_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CHKRET_8c_a559da8a99ebb73fedf8456d81746d3ac}{chkret\+\_\+} (integer $\ast$ihu, doublereal $\ast$rad, integer $\ast$intrct, doublereal $\ast$\hyperlink{APT089_8c_a94df4a6e89f6e2db9dd02be6115040f6}{d\+\_\+\+\_\+}, doublereal $\ast$\hyperlink{UNITS_8c_a5422687d8f9c4b1da3d7a65d7535fa60}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+H\+K\+R\+E\+T.\+c@{C\+H\+K\+R\+E\+T.\+c}!chkret\+\_\+@{chkret\+\_\+}}
+\index{chkret\+\_\+@{chkret\+\_\+}!C\+H\+K\+R\+E\+T.\+c@{C\+H\+K\+R\+E\+T.\+c}}
+\subsubsection[{\texorpdfstring{chkret\+\_\+(integer $\ast$ihu, doublereal $\ast$rad, integer $\ast$intrct, doublereal $\ast$d\+\_\+\+\_\+, doublereal $\ast$s)}{chkret_(integer *ihu, doublereal *rad, integer *intrct, doublereal *d__, doublereal *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int chkret\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{ihu, }
+\item[{doublereal $\ast$}]{rad, }
+\item[{integer $\ast$}]{intrct, }
+\item[{doublereal $\ast$}]{d\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{CHKRET_8c_a559da8a99ebb73fedf8456d81746d3ac}{}\label{CHKRET_8c_a559da8a99ebb73fedf8456d81746d3ac}
+
+
+Definition at line 36 of file C\+H\+K\+R\+E\+T.\+c.
+
+
+
+References d\+\_\+\+\_\+, delx, dely, i\+\_\+\+\_\+, minus, px, and s.
+
+
+
+Referenced by apt034\+\_\+().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{comment}{/* System generated locals */}
+40     doublereal d\_\_1;
+41 
+42     \textcolor{comment}{/* Local variables */}
+43     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+44     \textcolor{keyword}{static} doublereal rd, \hyperlink{ACNTRL_8c_a8fbd5864c68da561728726a51fa7d197}{px}[6], py[6], bo1, bo2, bo3, bo4, bo5, bo6, bo7, 
+45         bo8, sl1x, sl1y, sl2y, sl2x, \hyperlink{APT301_8c_a37270ce6bc9f00b712d9fc35702997ae}{delx}, \hyperlink{APT301_8c_a0cdeacb105c1e64fcf6f678bfed677e8}{dely}, dihu4, bplin, value;
+46     \textcolor{keyword}{static} integer \hyperlink{RECOG_8c_aef1cd11c33d3eac48dab369366beb31d}{minus}, iplus;
+47     \textcolor{keyword}{static} doublereal x1plin, y1plin, xpline, ypline, slplin;
+48     \textcolor{keyword}{static} integer ivertl;
+49 
+50     \textcolor{comment}{/* Parameter adjustments */}
+51     --\hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s};
+52     --\hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+53 
+54     \textcolor{comment}{/* Function Body */}
+55     ivertl = 0;
+56     minus = 0;
+57     iplus = 0;
+58 \textcolor{comment}{/* L400: */}
+59     dely = \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}[*ihu + 8] - \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}[*ihu + 1];
+60     delx = d\_\_[*ihu + 7] - d\_\_[*ihu];
+61     dihu4 = d\_\_[*ihu + 4];
+62     \textcolor{keywordflow}{if} (abs(dihu4) < 1e-7) \{
+63     dihu4 = 1e-7;
+64     \}
+65     sl1y = dely / dihu4;
+66     sl1x = delx / dihu4;
+67     sl2y = sl1x;
+68     sl2x = -sl1y;
+69     rd = *rad + 1e-6;
+70     bo1 = rd * sl1x;
+71     bo2 = rd * sl1y;
+72     bo3 = (d\_\_1 = d\_\_[*ihu + 5], abs(d\_\_1)) + rd;
+73     bo4 = bo3 * sl2x;
+74     bo5 = bo3 * sl2y;
+75     bo6 = (d\_\_1 = d\_\_[*ihu + 6], abs(d\_\_1)) + rd;
+76     bo7 = bo6 * sl2x;
+77     bo8 = bo6 * sl2y;
+78     px[4] = d\_\_[*ihu] - bo1;
+79     py[4] = d\_\_[*ihu + 1] - bo2;
+80     px[0] = px[4] + bo4;
+81     py[0] = py[4] + bo5;
+82     px[3] = px[4] - bo7;
+83     py[3] = py[4] - bo8;
+84     px[5] = d\_\_[*ihu + 7] + bo1;
+85     py[5] = d\_\_[*ihu + 8] + bo2;
+86     px[1] = px[5] + bo4;
+87     py[1] = py[5] + bo5;
+88     px[2] = px[5] - bo7;
+89     py[2] = py[5] - bo8;
+90     xpline = \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[1] * \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}[4];
+91     \textcolor{keywordflow}{if} (abs(s[2]) - 1e-7 <= 0.) \{
+92     \textcolor{keywordflow}{goto} L1;
+93     \} \textcolor{keywordflow}{else} \{
+94     \textcolor{keywordflow}{goto} L2;
+95     \}
+96 L1:
+97     ivertl = 1;
+98     \textcolor{keywordflow}{goto} L3;
+99 L2:
+100     slplin = -s[1] / s[2];
+101     x1plin = s[1] * s[4];
+102     y1plin = s[2] * s[4];
+103     bplin = y1plin - slplin * x1plin;
+104 L3:
+105     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 4; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+106     \textcolor{keywordflow}{if} (ivertl <= 0) \{
+107         \textcolor{keywordflow}{goto} L5;
+108     \} \textcolor{keywordflow}{else} \{
+109         \textcolor{keywordflow}{goto} L6;
+110     \}
+111 L5:
+112     ypline = slplin * px[i\_\_ - 1] + bplin;
+113     value = py[i\_\_ - 1] - ypline;
+114     \textcolor{keywordflow}{goto} L4;
+115 L6:
+116     value = px[i\_\_ - 1] - xpline;
+117 L4:
+118     \textcolor{keywordflow}{if} (value < 0.) \{
+119         \textcolor{keywordflow}{goto} L11;
+120     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (value == 0) \{
+121         \textcolor{keywordflow}{goto} L12;
+122     \} \textcolor{keywordflow}{else} \{
+123         \textcolor{keywordflow}{goto} L13;
+124     \}
+125 L11:
+126     minus = 1;
+127     \textcolor{keywordflow}{goto} L10;
+128 L13:
+129     iplus = 1;
+130 L10:
+131     ;
+132     \}
+133 \textcolor{comment}{/* L14: */}
+134     \textcolor{keywordflow}{if} (minus - iplus != 0) \{
+135     \textcolor{keywordflow}{goto} L15;
+136     \} \textcolor{keywordflow}{else} \{
+137     \textcolor{keywordflow}{goto} L12;
+138     \}
+139 
+140 \textcolor{comment}{/*     THE APPROPRIATE LINE, THAT IS,THE ACTUAL LINE FOR TABPNT OR THE */}
+141 \textcolor{comment}{/*     RADIUS PARALLEL LINE FOR TABCIR DOES NOT INTERSECT THE RECTANGLE */}
+142 \textcolor{comment}{/*     THUS THIS INTERVAL IS ELIMINATED FROM FURTHER CONSIDERATION. */}
+143 
+144 L15:
+145     *intrct = 0;
+146     \textcolor{keywordflow}{goto} L16;
+147 
+148 \textcolor{comment}{/*     THE APPROPRIATE LINE DOES INTERSECT THE RECTANGLE SO THIS INTERVAL */}
+149 \textcolor{comment}{/*     MUST BE EXAMINED FURTHER */}
+150 
+151 L12:
+152     *intrct = 1;
+153 L16:
+154     \textcolor{keywordflow}{return} 0;
+155 \} \textcolor{comment}{/* chkret\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CHKRET_8c_a559da8a99ebb73fedf8456d81746d3ac_icgraph}
+\end{center}
+\end{figure}
+
+

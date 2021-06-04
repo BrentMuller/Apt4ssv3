@@ -1,0 +1,108 @@
+\hypertarget{GCIRCL_8c}{}\section{G\+C\+I\+R\+C\+L.\+c File Reference}
+\label{GCIRCL_8c}\index{G\+C\+I\+R\+C\+L.\+c@{G\+C\+I\+R\+C\+L.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for G\+C\+I\+R\+C\+L.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{GCIRCL_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GCIRCL_8c_a7e9a89d6373d8fbb6a03286dbd74aee2}{gcircl\+\_\+} (doublereal $\ast$\hyperlink{XNUMBR_8c_a68d3ba380c16e286247bb69367760615}{canon}, doublereal $\ast$quadbf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+C\+I\+R\+C\+L.\+c@{G\+C\+I\+R\+C\+L.\+c}!gcircl\+\_\+@{gcircl\+\_\+}}
+\index{gcircl\+\_\+@{gcircl\+\_\+}!G\+C\+I\+R\+C\+L.\+c@{G\+C\+I\+R\+C\+L.\+c}}
+\subsubsection[{\texorpdfstring{gcircl\+\_\+(doublereal $\ast$canon, doublereal $\ast$quadbf)}{gcircl_(doublereal *canon, doublereal *quadbf)}}]{\setlength{\rightskip}{0pt plus 5cm}int gcircl\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{canon, }
+\item[{doublereal $\ast$}]{quadbf}
+\end{DoxyParamCaption}
+)}\hypertarget{GCIRCL_8c_a7e9a89d6373d8fbb6a03286dbd74aee2}{}\label{GCIRCL_8c_a7e9a89d6373d8fbb6a03286dbd74aee2}
+
+
+Definition at line 40 of file G\+C\+I\+R\+C\+L.\+c.
+
+
+
+References canon, and j.
+
+
+
+Referenced by gsurf\+\_\+().
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{comment}{/* System generated locals */}
+43     doublereal d\_\_1, d\_\_2;
+44 
+45     \textcolor{comment}{/* Local variables */}
+46     \textcolor{keyword}{static} integer \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, kr, kx, ky;
+47 
+48 
+49 
+50     \textcolor{comment}{/* Parameter adjustments */}
+51     --quadbf;
+52     --\hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon};
+53 
+54     \textcolor{comment}{/* Function Body */}
+55     \textcolor{keywordflow}{for} (j = 1; j <= 2; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+56 \textcolor{comment}{/* L2: */}
+57     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 1.f;
+58     \}
+59 
+60     \textcolor{keywordflow}{for} (j = 3; j <= 6; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+61 \textcolor{comment}{/* L3: */}
+62     quadbf[\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = 0.f;
+63     \}
+64 
+65     kx = 1;
+66     ky = 2;
+67 \textcolor{comment}{/*        COMPUTE C*X TERM */}
+68 
+69     quadbf[7] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kx] * -2.f;
+70 
+71 \textcolor{comment}{/*        COMPUTE C*Y TERM */}
+72 
+73     quadbf[8] = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[ky] * -2.f;
+74 
+75 \textcolor{comment}{/*        C*Z TERM EQUAL ZERO */}
+76 
+77     quadbf[9] = 0.f;
+78 
+79 \textcolor{comment}{/*        COMPUTE CONSTANT TERM */}
+80 
+81     kr = 7;
+82 \textcolor{comment}{/* Computing 2nd power */}
+83     d\_\_1 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kx];
+84 \textcolor{comment}{/* Computing 2nd power */}
+85     d\_\_2 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[ky];
+86     quadbf[10] = d\_\_1 * d\_\_1 + d\_\_2 * d\_\_2;
+87 \textcolor{comment}{/* Computing 2nd power */}
+88     d\_\_1 = \hyperlink{ADV_8c_a68d3ba380c16e286247bb69367760615}{canon}[kr];
+89     quadbf[10] -= d\_\_1 * d\_\_1;
+90 
+91 \textcolor{comment}{/*        RETURN TO CALLING PROGRAM */}
+92 
+93     \textcolor{keywordflow}{return} 0;
+94 \} \textcolor{comment}{/* gcircl\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GCIRCL_8c_a7e9a89d6373d8fbb6a03286dbd74aee2_icgraph}
+\end{center}
+\end{figure}
+
+

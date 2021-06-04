@@ -1,0 +1,71 @@
+\hypertarget{APT308_8c}{}\section{A\+P\+T308.\+c File Reference}
+\label{APT308_8c}\index{A\+P\+T308.\+c@{A\+P\+T308.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+P\+T308.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{APT308_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{APT308_8c_a13eb9a625806ab8fa2fac255730cd5ac}{apt308\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$matrx1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+P\+T308.\+c@{A\+P\+T308.\+c}!apt308\+\_\+@{apt308\+\_\+}}
+\index{apt308\+\_\+@{apt308\+\_\+}!A\+P\+T308.\+c@{A\+P\+T308.\+c}}
+\subsubsection[{\texorpdfstring{apt308\+\_\+(doublereal $\ast$result, doublereal $\ast$matrx1)}{apt308_(doublereal *result, doublereal *matrx1)}}]{\setlength{\rightskip}{0pt plus 5cm}int apt308\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{matrx1}
+\end{DoxyParamCaption}
+)}\hypertarget{APT308_8c_a13eb9a625806ab8fa2fac255730cd5ac}{}\label{APT308_8c_a13eb9a625806ab8fa2fac255730cd5ac}
+
+
+Definition at line 24 of file A\+P\+T308.\+c.
+
+
+
+References i\+\_\+\+\_\+, and j.
+
+
+
+Referenced by apt305\+\_\+(), and apt335\+\_\+().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j};
+27 
+28 \textcolor{comment}{/*      THIS ROUTINE MOVES A 3X4 MATRIX FROM ONE ARRAY IN CORE TO ANOTHER */}
+29     \textcolor{comment}{/* Parameter adjustments */}
+30     matrx1 -= 4;
+31     \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} -= 4;
+32 
+33     \textcolor{comment}{/* Function Body */}
+34     \textcolor{keywordflow}{for} (j = 1; j <= 4; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+35     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+36         \hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}[i\_\_ + j * 3] = matrx1[i\_\_ + j * 3];
+37 \textcolor{comment}{/* L40: */}
+38     \}
+39     \}
+40     \textcolor{keywordflow}{return} 0;
+41 \} \textcolor{comment}{/* apt308\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{APT308_8c_a13eb9a625806ab8fa2fac255730cd5ac_icgraph}
+\end{center}
+\end{figure}
+
+

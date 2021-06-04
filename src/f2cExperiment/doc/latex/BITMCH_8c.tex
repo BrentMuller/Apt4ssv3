@@ -1,0 +1,119 @@
+\hypertarget{BITMCH_8c}{}\section{B\+I\+T\+M\+C\+H.\+c File Reference}
+\label{BITMCH_8c}\index{B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for B\+I\+T\+M\+C\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{BITMCH_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{BITMCH_8c_adc8e707bae53ded47991d5b17fad6d15}{bitcom\+\_\+1}~\hyperlink{SSV3_8c_ab08c88ba2c24fbc1f0d3a210038709ab}{bitcom\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+logical \hyperlink{BITMCH_8c_a98e2ecf4f72108a1409bc0966575e8a7}{bitmch\+\_\+} (integer $\ast$\hyperlink{INTSEC_8c_a836535f59bf515522a395858a8029d42}{word}, integer $\ast$\hyperlink{APT089_8c_a0b8ffa73803ff9e9ea886d4fbe1ea30e}{n})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{BITMCH_8c_ae040d46df234680f7694e5bcb40221e2}{bit} \mbox{[}32\mbox{]}\\
+\} \hyperlink{BITMCH_8c_a419b3ee1ee29b23790afddc0dcdcd7b7}{bitcom\_}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}!bitcom\+\_\+1@{bitcom\+\_\+1}}
+\index{bitcom\+\_\+1@{bitcom\+\_\+1}!B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{bitcom\+\_\+1}{bitcom_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bitcom\+\_\+1~{\bf bitcom\+\_\+}}\hypertarget{BITMCH_8c_adc8e707bae53ded47991d5b17fad6d15}{}\label{BITMCH_8c_adc8e707bae53ded47991d5b17fad6d15}
+
+
+Definition at line 21 of file B\+I\+T\+M\+C\+H.\+c.
+
+
+
+Referenced by bitmch\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}!bitmch\+\_\+@{bitmch\+\_\+}}
+\index{bitmch\+\_\+@{bitmch\+\_\+}!B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{bitmch\+\_\+(integer $\ast$word, integer $\ast$n)}{bitmch_(integer *word, integer *n)}}]{\setlength{\rightskip}{0pt plus 5cm}logical bitmch\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{word, }
+\item[{integer $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{BITMCH_8c_a98e2ecf4f72108a1409bc0966575e8a7}{}\label{BITMCH_8c_a98e2ecf4f72108a1409bc0966575e8a7}
+
+
+Definition at line 34 of file B\+I\+T\+M\+C\+H.\+c.
+
+
+
+References bitcom\+\_\+1.
+
+
+
+Referenced by comstr\+\_\+().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{comment}{/* System generated locals */}
+37     logical ret\_val;
+38 
+39 
+40 
+41 \textcolor{comment}{/*       32.    COMMON BLOCK FOR SETBIT AND BITMCH */}
+42 \textcolor{comment}{/*              CONTAINS ONE WORD FOR EACH BIT WITH ONLY THAT BIT SET */}
+43 \textcolor{comment}{/* * */}
+44 \textcolor{comment}{/* PURPOSE      TO DETERMINE WHETHER THE BIT POSITION DESIGNATED */}
+45 \textcolor{comment}{/*              BY THE SECOND ARGUMENT N IS SET IN THE FIRST */}
+46 \textcolor{comment}{/*              ARGUMENT WORD. */}
+47 
+48 \textcolor{comment}{/* ARGUMENTS    WORD    ELEMENT WHOSE BIT POSITION IS BEING EXAMINED */}
+49 \textcolor{comment}{/*              N       BIT POSITION */}
+50 \textcolor{comment}{/* ** */}
+51     ret\_val = FALSE\_;
+52     \textcolor{keywordflow}{if} (*\hyperlink{GOLOVO_8c_a836535f59bf515522a395858a8029d42}{word} / \hyperlink{BITMCH_8c_adc8e707bae53ded47991d5b17fad6d15}{bitcom\_1}.bit[*\hyperlink{ACNTRL_8c_ad5228cd48403ef9d8b632f5c7c124720}{n}] % 2 == 1) \{
+53     ret\_val = TRUE\_;
+54     \}
+55 \textcolor{comment}{/* L2: */}
+56     \textcolor{keywordflow}{return} ret\_val;
+57 \} \textcolor{comment}{/* bitmch\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BITMCH_8c_a98e2ecf4f72108a1409bc0966575e8a7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}!bit@{bit}}
+\index{bit@{bit}!B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{bit}{bit}}]{\setlength{\rightskip}{0pt plus 5cm}integer bit\mbox{[}32\mbox{]}}\hypertarget{BITMCH_8c_ae040d46df234680f7694e5bcb40221e2}{}\label{BITMCH_8c_ae040d46df234680f7694e5bcb40221e2}
+
+
+Definition at line 18 of file B\+I\+T\+M\+C\+H.\+c.
+
+\index{B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}!bitcom\+\_\+@{bitcom\+\_\+}}
+\index{bitcom\+\_\+@{bitcom\+\_\+}!B\+I\+T\+M\+C\+H.\+c@{B\+I\+T\+M\+C\+H.\+c}}
+\subsubsection[{\texorpdfstring{bitcom\+\_\+}{bitcom_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   bitcom\+\_\+}\hypertarget{BITMCH_8c_a419b3ee1ee29b23790afddc0dcdcd7b7}{}\label{BITMCH_8c_a419b3ee1ee29b23790afddc0dcdcd7b7}

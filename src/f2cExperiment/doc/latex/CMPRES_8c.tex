@@ -1,0 +1,113 @@
+\hypertarget{CMPRES_8c}{}\section{C\+M\+P\+R\+E\+S.\+c File Reference}
+\label{CMPRES_8c}\index{C\+M\+P\+R\+E\+S.\+c@{C\+M\+P\+R\+E\+S.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+M\+P\+R\+E\+S.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{CMPRES_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CMPRES_8c_aaad92e10b4e711fee896c9654efeb00e}{cmpres\+\_\+} (char $\ast$\hyperlink{RECOG_8c_a25093e36e9fb377b246945a84745823f}{string}, integer $\ast$slen, ftnlen string\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{CMPRES_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\+\_\+\+\_\+2} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+M\+P\+R\+E\+S.\+c@{C\+M\+P\+R\+E\+S.\+c}!cmpres\+\_\+@{cmpres\+\_\+}}
+\index{cmpres\+\_\+@{cmpres\+\_\+}!C\+M\+P\+R\+E\+S.\+c@{C\+M\+P\+R\+E\+S.\+c}}
+\subsubsection[{\texorpdfstring{cmpres\+\_\+(char $\ast$string, integer $\ast$slen, ftnlen string\+\_\+len)}{cmpres_(char *string, integer *slen, ftnlen string_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int cmpres\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{integer $\ast$}]{slen, }
+\item[{ftnlen}]{string\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{CMPRES_8c_aaad92e10b4e711fee896c9654efeb00e}{}\label{CMPRES_8c_aaad92e10b4e711fee896c9654efeb00e}
+
+
+Definition at line 43 of file C\+M\+P\+R\+E\+S.\+c.
+
+
+
+References c\+\_\+\+\_\+2, and i\+\_\+\+\_\+.
+
+
+
+Referenced by cprint\+\_\+().
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{comment}{/* System generated locals */}
+46     address a\_\_1[2];
+47     integer i\_\_1, i\_\_2[2];
+48 
+49     \textcolor{comment}{/* Builtin functions */}
+50     integer i\_len(\textcolor{keywordtype}{char} *, ftnlen), i\_indx(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, ftnlen, ftnlen);
+51     \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} s\_cat(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} **, integer *, integer *, ftnlen);
+52 
+53     \textcolor{comment}{/* Local variables */}
+54     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+55 
+56 
+57 
+58     *slen = i\_len(\textcolor{keywordtype}{string}, string\_len);
+59     \textcolor{keywordflow}{for} (i\_\_ = *slen; i\_\_ >= 1; --\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+60     \textcolor{keywordflow}{if} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)&\textcolor{keywordtype}{string}[i\_\_ - 1] != \textcolor{charliteral}{' '}) \{
+61         *slen = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+62         \textcolor{keywordflow}{goto} L20;
+63     \}
+64 \textcolor{comment}{/* L10: */}
+65     \}
+66 
+67 L20:
+68     i\_\_ = i\_indx(\textcolor{keywordtype}{string}, \textcolor{stringliteral}{"  "}, (*slen), (ftnlen)2);
+69     \textcolor{keywordflow}{if} (i\_\_ != 0) \{
+70     i\_\_1 = \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+71 \textcolor{comment}{/* Writing concatenation */}
+72     i\_\_2[0] = *slen - i\_\_1, a\_\_1[0] = \textcolor{keywordtype}{string} + i\_\_1;
+73     i\_\_2[1] = 1, a\_\_1[1] = \textcolor{stringliteral}{" "};
+74     s\_cat(\textcolor{keywordtype}{string} + (i\_\_ - 1), a\_\_1, i\_\_2, &\hyperlink{CMPRES_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{c\_\_2}, string\_len - (i\_\_ - 1));
+75     --(*slen);
+76     \textcolor{keywordflow}{goto} L20;
+77     \} \textcolor{keywordflow}{else} \{
+78     \textcolor{keywordflow}{return} 0;
+79     \}
+80 
+81     \textcolor{keywordflow}{return} 0;
+82 \} \textcolor{comment}{/* cmpres\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{CMPRES_8c_aaad92e10b4e711fee896c9654efeb00e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+M\+P\+R\+E\+S.\+c@{C\+M\+P\+R\+E\+S.\+c}!c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}}
+\index{c\+\_\+\+\_\+2@{c\+\_\+\+\_\+2}!C\+M\+P\+R\+E\+S.\+c@{C\+M\+P\+R\+E\+S.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+2}{c__2}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CMPRES_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}{}\label{CMPRES_8c_a4e8bcb2aadbe17eeff89a0f201645d0a}
+
+
+Definition at line 17 of file C\+M\+P\+R\+E\+S.\+c.
+
+
+
+Referenced by cmpres\+\_\+().
+

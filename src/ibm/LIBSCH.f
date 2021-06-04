@@ -23,7 +23,7 @@
       CHARACTER*(*) MEMBER
       INTEGER FLAG
 C
-      INCLUDE (FILTAB)
+      INCLUDE 'FILTAB.INC'
 C
       CHARACTER*8 MEMNAM
       COMMON/CLIBCM/MEMNAM
@@ -55,10 +55,12 @@ C.....STORE MEMBER NAME AND RESET EOF FLAG
             MEMNAM=MEMBER
             IEOF=0
 C.....DOES FILE EXIST
-            CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'FB',0,JRET)
+c            CALL UOPEN(ID,FLNAME(:NLEN),1,4,80,0,'FB',0,JRET)
+      write(*,*)'TODO: upen command-LIBSCH.f'
                IF (JRET.EQ.0) THEN
 C.....YES
-                 CALL UOPEN(ID,FLNAME(:NLEN),1,1,80,0,'FB',0,JRET)
+c                 CALL UOPEN(ID,FLNAME(:NLEN),1,1,80,0,'FB',0,JRET)
+      write(*,*)'TODO: upen command-LIBSCH.f'
                  IF (JRET.EQ.0) THEN
                    FLAG=0
                  ELSE

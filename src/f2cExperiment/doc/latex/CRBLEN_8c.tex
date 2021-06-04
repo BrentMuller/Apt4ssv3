@@ -1,0 +1,229 @@
+\hypertarget{CRBLEN_8c}{}\section{C\+R\+B\+L\+E\+N.\+c File Reference}
+\label{CRBLEN_8c}\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+R\+B\+L\+E\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{CRBLEN_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CRBLEN_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\+\_\+1}~\hyperlink{XCANON_8c_a01023c467b63fbe7d0676e9952161ec5}{darray\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CRBLEN_8c_a5a4cc6211822994020957320e36846b3}{crblen\+\_\+} (doublereal $\ast$\hyperlink{TAPOP_8c_a1031e94780c31bfd9818821446b757cc}{u}, doublereal $\ast$\hyperlink{ZSURF_8c_a9cae3e36ae5e63785447451b6081dc98}{sc}, doublereal $\ast$cv, integer $\ast$\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \hyperlink{CRBLEN_8c_ad8149129b0ac5c966968e55ba6106146}{darray} \mbox{[}120\mbox{]}\\
+\} \hyperlink{CRBLEN_8c_a0467c4b01a218e7dc000a2f46a68ad30}{darray\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{CRBLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\+\_\+\+\_\+0} = 0
+\item 
+static integer \hyperlink{CRBLEN_8c_abcdb654755813e70b0cfad4c215e0118}{c\+\_\+\+\_\+16} = 16
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!darray\+\_\+1@{darray\+\_\+1}}
+\index{darray\+\_\+1@{darray\+\_\+1}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+1}{darray_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define darray\+\_\+1~{\bf darray\+\_\+}}\hypertarget{CRBLEN_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{}\label{CRBLEN_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}
+
+
+Definition at line 21 of file C\+R\+B\+L\+E\+N.\+c.
+
+
+
+Referenced by crblen\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!crblen\+\_\+@{crblen\+\_\+}}
+\index{crblen\+\_\+@{crblen\+\_\+}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{crblen\+\_\+(doublereal $\ast$u, doublereal $\ast$sc, doublereal $\ast$cv, integer $\ast$mode)}{crblen_(doublereal *u, doublereal *sc, doublereal *cv, integer *mode)}}]{\setlength{\rightskip}{0pt plus 5cm}int crblen\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{u, }
+\item[{doublereal $\ast$}]{sc, }
+\item[{doublereal $\ast$}]{cv, }
+\item[{integer $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{CRBLEN_8c_a5a4cc6211822994020957320e36846b3}{}\label{CRBLEN_8c_a5a4cc6211822994020957320e36846b3}
+
+
+Definition at line 30 of file C\+R\+B\+L\+E\+N.\+c.
+
+
+
+References a, b, blendf\+\_\+(), c\+\_\+\+\_\+0, c\+\_\+\+\_\+16, cform\+\_\+(), cprint\+\_\+(), darray\+\_\+1, i\+\_\+\+\_\+, k, one, sc, ta, tb, temp1, w, wp, and zero.
+
+
+
+Referenced by curflo\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{comment}{/* Initialized data */}
+34 
+35     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+37     \textcolor{keyword}{static} doublereal smal = 1e-15;
+38 
+39     \textcolor{comment}{/* Builtin functions */}
+40     \textcolor{keywordtype}{double} sqrt(doublereal);
+41 
+42     \textcolor{comment}{/* Local variables */}
+43     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+44     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+45     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w}, pa[3], pb[3], \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[3], \hyperlink{APT088_8c_a70597aa9a5baaa4676f9f8cbe306dae0}{tb}[3], fu[12], \hyperlink{DDRLSR_8c_abb2b794b91cebb1f4e80188eca70d112}{wp}, wpp, 
+      \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1}, 
+46         temp2;
+47     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{keywordtype}{char} *, \textcolor{keywordtype}{char} *, integer *, integer *, 
+48         ftnlen, ftnlen), \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(doublereal *, doublereal *), \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(
+49         \textcolor{keywordtype}{char} *, ftnlen);
+50 
+51 \textcolor{comment}{/* ---     CALLING ARGUMENTS ARE ANALAGOUS TO THOSE OF CNCURV */}
+52 \textcolor{comment}{/* ---     HOWEVER , THE BLEND FORMULA IS DESIGNED TO PRSERVE */}
+53 \textcolor{comment}{/* ---     DIRECTIONALITY OF POINTS AS A FUNCTION OF THE NATURAL */}
+54 \textcolor{comment}{/* ---     FLOW PARAMETER */}
+55 
+56 \textcolor{comment}{/*   ***  20.  DARRAY BLOCK  *** */}
+57 
+58 \textcolor{comment}{/*   PRINT BUFFER */}
+59 
+60 
+61 
+62     \textcolor{comment}{/* Parameter adjustments */}
+63     --cv;
+64     --\hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc};
+65 
+66     \textcolor{comment}{/* Function Body */}
+67 
+68     \hyperlink{BLENDF_8c_adcd0358291353ee31352d01d46b864c9}{blendf\_}(\hyperlink{APT088_8c_a1f9aca42e2010bb82488684dee1a66ea}{u}, fu);
+69     a = \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[1] * \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[1] + \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[5] * \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[5] + \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[9] * \hyperlink{APT108_8c_a03ede5fb0d1eb2158dbb5f2aeb7a5066}{sc}[9];
+70     b = sc[2] * sc[2] + sc[6] * sc[6] + sc[10] * sc[10];
+71     a = sqrt(a) + smal;
+72     b = sqrt(b) + smal;
+73 
+74     k = 0;
+75     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 9; i\_\_ += 4) \{
+76     ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+77     pa[k - 1] = sc[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+78     pb[k - 1] = sc[i\_\_ + 1] / \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+79     ta[k - 1] = sc[i\_\_ + 2] / \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+80     tb[k - 1] = sc[i\_\_ + 3] / \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+81 \textcolor{comment}{/* L10: */}
+82     \}
+83 
+84     w = fu[0] * a + fu[1] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+85     wp = fu[4] * a + fu[5] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+86     wpp = fu[8] * a + fu[9] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+87 
+88     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+89     temp1 = fu[0] * pa[i\_\_ - 1] + fu[1] * pb[i\_\_ - 1] + fu[2] * ta[i\_\_ - 
+90         1] + fu[3] * tb[i\_\_ - 1];
+91     cv[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = w * \hyperlink{DDPARA_8c_a2f7c54bc5708326f7974af671551c700}{temp1};
+92     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} < 1) \{
+93         \textcolor{keywordflow}{goto} L20;
+94     \}
+95     temp2 = fu[4] * pa[i\_\_ - 1] + fu[5] * pb[i\_\_ - 1] + fu[6] * ta[i\_\_ - 
+96         1] + fu[7] * tb[i\_\_ - 1];
+97     cv[i\_\_ + 4] = temp1 * wp + temp2 * \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+98     cv[i\_\_ + 8] = wpp * temp1 + temp2 * 2.f * wp + w * (fu[8] * pa[i\_\_ - 
+99         1] + fu[9] * pb[i\_\_ - 1] + fu[10] * ta[i\_\_ - 1] + fu[11] * tb[
+100         i\_\_ - 1]);
+101 L20:
+102     ;
+103     \}
+104     cv[4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+105     cv[8] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+106     cv[12] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+107     cv[16] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+108     \textcolor{keywordflow}{if} (*\hyperlink{APT331_8c_af613cadd5cf49515a2b8790d3bfd56af}{mode} < 1) \{
+109     \textcolor{keywordflow}{goto} L999;
+110     \}
+111     cv[8] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+112     cv[12] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+113     \textcolor{keywordflow}{goto} L999;
+114 
+115 \textcolor{comment}{/* L998: */}
+116     \hyperlink{CFORM_8c_ac1d4f86996388dd43d61bc383e8ecfc4}{cform\_}(\textcolor{stringliteral}{" ERROR IN CRBLEN"}, \hyperlink{CRBLEN_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, &\hyperlink{CRBLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{c\_\_0}, &\hyperlink{CRBLEN_8c_abcdb654755813e70b0cfad4c215e0118}{c\_\_16}, (ftnlen)16, (
+117         ftnlen)120);
+118     \hyperlink{CPRINT_8c_a162e4af07e13f17e2aa965863091b687}{cprint\_}(\hyperlink{CRBLEN_8c_a6a01fdbcd4e9ab45bf32c168785cc8a6}{darray\_1}.darray, (ftnlen)120);
+119     \textcolor{keywordflow}{goto} L999;
+120 
+121 L999:
+122     \textcolor{keywordflow}{return} 0;
+123 \} \textcolor{comment}{/* crblen\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{CRBLEN_8c_a5a4cc6211822994020957320e36846b3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CRBLEN_8c_a5a4cc6211822994020957320e36846b3_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}}
+\index{c\+\_\+\+\_\+0@{c\+\_\+\+\_\+0}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+0}{c__0}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+0 = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRBLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}{}\label{CRBLEN_8c_a6a4ee26669af052a7e7fb5dda2b01f63}
+
+
+Definition at line 25 of file C\+R\+B\+L\+E\+N.\+c.
+
+
+
+Referenced by crblen\+\_\+().
+
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!c\+\_\+\+\_\+16@{c\+\_\+\+\_\+16}}
+\index{c\+\_\+\+\_\+16@{c\+\_\+\+\_\+16}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+16}{c__16}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+16 = 16\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CRBLEN_8c_abcdb654755813e70b0cfad4c215e0118}{}\label{CRBLEN_8c_abcdb654755813e70b0cfad4c215e0118}
+
+
+Definition at line 26 of file C\+R\+B\+L\+E\+N.\+c.
+
+
+
+Referenced by crblen\+\_\+().
+
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!darray@{darray}}
+\index{darray@{darray}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{darray}{darray}}]{\setlength{\rightskip}{0pt plus 5cm}char darray\mbox{[}120\mbox{]}}\hypertarget{CRBLEN_8c_ad8149129b0ac5c966968e55ba6106146}{}\label{CRBLEN_8c_ad8149129b0ac5c966968e55ba6106146}
+
+
+Definition at line 18 of file C\+R\+B\+L\+E\+N.\+c.
+
+\index{C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}!darray\+\_\+@{darray\+\_\+}}
+\index{darray\+\_\+@{darray\+\_\+}!C\+R\+B\+L\+E\+N.\+c@{C\+R\+B\+L\+E\+N.\+c}}
+\subsubsection[{\texorpdfstring{darray\+\_\+}{darray_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   darray\+\_\+}\hypertarget{CRBLEN_8c_a0467c4b01a218e7dc000a2f46a68ad30}{}\label{CRBLEN_8c_a0467c4b01a218e7dc000a2f46a68ad30}

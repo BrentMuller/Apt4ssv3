@@ -1,0 +1,148 @@
+\hypertarget{CLDATF_8c}{}\section{C\+L\+D\+A\+T\+F.\+c File Reference}
+\label{CLDATF_8c}\index{C\+L\+D\+A\+T\+F.\+c@{C\+L\+D\+A\+T\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+D\+A\+T\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{CLDATF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLDATF_8c_af0ede19fcd6e0354ecdb279c4706208c}{cldatf\+\_\+} (doublereal $\ast$\hyperlink{REGION_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result}, doublereal $\ast$\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1}, integer $\ast$\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}, doublereal $\ast$arg3)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static integer \hyperlink{CLDATF_8c_af9966294742df88fe03744c21e98bb95}{c\+\_\+\+\_\+93} = 93
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+L\+D\+A\+T\+F.\+c@{C\+L\+D\+A\+T\+F.\+c}!cldatf\+\_\+@{cldatf\+\_\+}}
+\index{cldatf\+\_\+@{cldatf\+\_\+}!C\+L\+D\+A\+T\+F.\+c@{C\+L\+D\+A\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{cldatf\+\_\+(doublereal $\ast$result, doublereal $\ast$arg1, integer $\ast$arg2, doublereal $\ast$arg3)}{cldatf_(doublereal *result, doublereal *arg1, integer *arg2, doublereal *arg3)}}]{\setlength{\rightskip}{0pt plus 5cm}int cldatf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{result, }
+\item[{doublereal $\ast$}]{arg1, }
+\item[{integer $\ast$}]{arg2, }
+\item[{doublereal $\ast$}]{arg3}
+\end{DoxyParamCaption}
+)}\hypertarget{CLDATF_8c_af0ede19fcd6e0354ecdb279c4706208c}{}\label{CLDATF_8c_af0ede19fcd6e0354ecdb279c4706208c}
+
+
+Definition at line 38 of file C\+L\+D\+A\+T\+F.\+c.
+
+
+
+References ataper\+\_\+(), bcdf\+\_\+(), c\+\_\+\+\_\+93, error\+\_\+(), first, ii, and p.
+
+
+
+Referenced by region\+\_\+(), and xcall\+\_\+().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{/* Initialized data */}
+42 
+43     \textcolor{keyword}{static} logical \hyperlink{PRO021_8c_af1c63dd6fc1527b3a2a602646b8ca178}{first} = TRUE\_;
+44 
+45     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}[6];
+46     \textcolor{keyword}{static} integer \hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}, iee;
+47     \textcolor{keyword}{extern} integer \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{keywordtype}{char} *, ftnlen);
+48     \textcolor{keyword}{static} integer isct, ipnt, ityp, narg2[6];
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(integer *, \textcolor{keywordtype}{char} *, ftnlen), \hyperlink{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{ataper\_}(
+50         doublereal *, integer *, integer *, integer *, integer *);
+51 
+52 
+53 
+54 
+55 \textcolor{comment}{/*    THE ORIGINAL COMMON-DIMENSION-EQUIVALENCE (CDE) PACKAGE TOTAL */}
+56 \textcolor{comment}{/*    HAS BEEN REPLACED BY INDIVIDUAL COMMON BLOCKS, AND EQUIVALENCE */}
+57 \textcolor{comment}{/*    STATEMENTS HAVE BEEN ELIMINATED AS FAR AS POSSIBLE. */}
+58 
+59 
+60 
+61 
+62     \textcolor{keywordflow}{if} (first) \{
+63     narg2[0] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"UDS "}, (ftnlen)4);
+64     narg2[1] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"VDS "}, (ftnlen)4);
+65     narg2[2] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"PDS "}, (ftnlen)4);
+66     narg2[3] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"UPS "}, (ftnlen)4);
+67     narg2[4] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"VPS "}, (ftnlen)4);
+68     narg2[5] = \hyperlink{BCDF_8c_abec7554103b0e64a60886cdc9e139166}{bcdf\_}(\textcolor{stringliteral}{"PPS "}, (ftnlen)4);
+69     first = FALSE\_;
+70     \}
+71 
+72     \textcolor{keywordflow}{for} (ii = 1; ii <= 6; ++\hyperlink{BAD_8c_a42e9a863c1f6c785301bf4664e47fdf3}{ii}) \{
+73     \textcolor{keywordflow}{if} (narg2[ii - 1] == *\hyperlink{RECOG_8c_a3ad2018792b545e1b82249aeb6a16d43}{arg2}) \{
+74         \textcolor{keywordflow}{goto} L20;
+75     \}
+76 \textcolor{comment}{/* L10: */}
+77     \}
+78 
+79 L15:
+80     \hyperlink{ERROR_8c_a5bb40fce8df3b6b0ad823562e349b89e}{error\_}(&\hyperlink{CLDATF_8c_af9966294742df88fe03744c21e98bb95}{c\_\_93}, \textcolor{stringliteral}{"CLDATF  "}, (ftnlen)8);
+81     *\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} = 0.;
+82 
+83     \textcolor{keywordflow}{return} 0;
+84 L20:
+85     ityp = ii / 4 + 8;
+86     isct = (integer) (*\hyperlink{RECOG_8c_a489500f7b5cfd21fa6730e3a56f1c1f7}{arg1});
+87     ipnt = (integer) (*arg3);
+88     \hyperlink{ATAPE_8c_aef4adce1488c9723677919929ff9149d}{ataper\_}(p, &ipnt, &isct, &ityp, &iee);
+89     \textcolor{keywordflow}{if} (iee == 0) \{
+90     \textcolor{keywordflow}{goto} L30;
+91     \}
+92     \textcolor{keywordflow}{goto} L15;
+93 L30:
+94     \textcolor{keywordflow}{if} (ii > 3) \{
+95     ii += -3;
+96     \}
+97     *\hyperlink{APT102_8c_a3ef27f7fe72cfb6b139a9251618cd90f}{result} = p[ii - 1];
+98 \textcolor{comment}{/* L40: */}
+99     \textcolor{keywordflow}{return} 0;
+100 \} \textcolor{comment}{/* cldatf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLDATF_8c_af0ede19fcd6e0354ecdb279c4706208c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLDATF_8c_af0ede19fcd6e0354ecdb279c4706208c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{C\+L\+D\+A\+T\+F.\+c@{C\+L\+D\+A\+T\+F.\+c}!c\+\_\+\+\_\+93@{c\+\_\+\+\_\+93}}
+\index{c\+\_\+\+\_\+93@{c\+\_\+\+\_\+93}!C\+L\+D\+A\+T\+F.\+c@{C\+L\+D\+A\+T\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+93}{c__93}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+93 = 93\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{CLDATF_8c_af9966294742df88fe03744c21e98bb95}{}\label{CLDATF_8c_af9966294742df88fe03744c21e98bb95}
+
+
+Definition at line 17 of file C\+L\+D\+A\+T\+F.\+c.
+
+
+
+Referenced by cldatf\+\_\+().
+

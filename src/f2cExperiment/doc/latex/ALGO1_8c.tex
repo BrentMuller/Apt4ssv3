@@ -1,0 +1,124 @@
+\hypertarget{ALGO1_8c}{}\section{A\+L\+G\+O1.\+c File Reference}
+\label{ALGO1_8c}\index{A\+L\+G\+O1.\+c@{A\+L\+G\+O1.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+G\+O1.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{ALGO1_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ALGO1_8c_a9cd624e99a797244828fd5623514d950}{algo1\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a1f148515a08a71c3280eeb1528f86455}{t}, doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$rn, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$du, doublereal $\ast$dv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+G\+O1.\+c@{A\+L\+G\+O1.\+c}!algo1\+\_\+@{algo1\+\_\+}}
+\index{algo1\+\_\+@{algo1\+\_\+}!A\+L\+G\+O1.\+c@{A\+L\+G\+O1.\+c}}
+\subsubsection[{\texorpdfstring{algo1\+\_\+(doublereal $\ast$t, doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$rn, doublereal $\ast$ru, doublereal $\ast$rv, doublereal $\ast$du, doublereal $\ast$dv)}{algo1_(doublereal *t, doublereal *r__, doublereal *rn, doublereal *ru, doublereal *rv, doublereal *du, doublereal *dv)}}]{\setlength{\rightskip}{0pt plus 5cm}int algo1\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{t, }
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{rn, }
+\item[{doublereal $\ast$}]{ru, }
+\item[{doublereal $\ast$}]{rv, }
+\item[{doublereal $\ast$}]{du, }
+\item[{doublereal $\ast$}]{dv}
+\end{DoxyParamCaption}
+)}\hypertarget{ALGO1_8c_a9cd624e99a797244828fd5623514d950}{}\label{ALGO1_8c_a9cd624e99a797244828fd5623514d950}
+
+
+Definition at line 17 of file A\+L\+G\+O1.\+c.
+
+
+
+References a, degsol\+\_\+(), dotf\+\_\+(), i\+\_\+\+\_\+, r\+\_\+\+\_\+, s, t, and vecmod\+\_\+().
+
+
+
+Referenced by mixal\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+21     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+22     \textcolor{keyword}{static} doublereal \hyperlink{APT331_8c_ac9562ee4ecb3b8aeebeb04656e7e57a9}{s}, v4[3];
+23     \textcolor{keyword}{static} integer isf;
+24     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+25         ), \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *), \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(doublereal *, 
+26         doublereal *, doublereal *, doublereal *, doublereal *, integer *)
+27         ;
+28     \textcolor{keyword}{static} doublereal uvstep[3];
+29 
+30 
+31 \textcolor{comment}{/*     PURPOSE: CALCULATE DU,DV USING ALGORITHM 1 */}
+32 
+33 \textcolor{comment}{/*              GIVEN A SURFACE POINT R AND SURFACE NORMAL RN */}
+34 \textcolor{comment}{/*              AND A POINT ON THE TOOL T WITH SAME NORMAL */}
+35 \textcolor{comment}{/*              CALCULATE POINT B WHERE THIS TOOL NORMAL INTERSECTS */}
+36 \textcolor{comment}{/*              THE TANGENT PLANE AT R. */}
+37 \textcolor{comment}{/*              THE INDUCED PARAMETERIZATION OF THE TANGENT PLANE */}
+38 \textcolor{comment}{/*              IS USED TO DETERINE DU AND DV */}
+39 
+40 
+41 \textcolor{comment}{/*     CALC. UVSTEP AS STEP ON TANGENT PLANE AT POINT R */}
+42 
+43 
+44     \textcolor{comment}{/* Parameter adjustments */}
+45     --rv;
+46     --ru;
+47     --rn;
+48     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+49     --\hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t};
+50 
+51     \textcolor{comment}{/* Function Body */}
+52     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+53     v4[i\_\_ - 1] = \hyperlink{SPRVIS_8c_a1f0cf49f22a9b271d1d9e6e14609faed}{t}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] - \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+54 \textcolor{comment}{/* L100: */}
+55     \}
+56     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, v4, &rn[1]);
+57     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+58     uvstep[i\_\_ - 1] = v4[i\_\_ - 1] - a * rn[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+59 \textcolor{comment}{/* L200: */}
+60     \}
+61 
+62 \textcolor{comment}{/* .... S IS STEP LENGTH */}
+63 
+64     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(uvstep, &s);
+65 
+66 \textcolor{comment}{/* .... COMPUTE DU,DV FROM INDUCED PARAMETERIZATION OF TANGENT PLANE */}
+67 
+68     \hyperlink{DEGSOL_8c_a9c13bb1e481359ae6fc8681a50f386e7}{degsol\_}(uvstep, &ru[1], &rv[1], du, dv, &isf);
+69 
+70     \textcolor{keywordflow}{return} 0;
+71 \} \textcolor{comment}{/* algo1\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ALGO1_8c_a9cd624e99a797244828fd5623514d950_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ALGO1_8c_a9cd624e99a797244828fd5623514d950_icgraph}
+\end{center}
+\end{figure}
+
+

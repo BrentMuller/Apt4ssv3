@@ -1,0 +1,97 @@
+\hypertarget{NORMA_8c}{}\section{N\+O\+R\+M\+A.\+c File Reference}
+\label{NORMA_8c}\index{N\+O\+R\+M\+A.\+c@{N\+O\+R\+M\+A.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for N\+O\+R\+M\+A.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{NORMA_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{norma\+\_\+} (doublereal $\ast$\hyperlink{PUNCH_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, doublereal $\ast$xnorm, doublereal $\ast$xmod)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{N\+O\+R\+M\+A.\+c@{N\+O\+R\+M\+A.\+c}!norma\+\_\+@{norma\+\_\+}}
+\index{norma\+\_\+@{norma\+\_\+}!N\+O\+R\+M\+A.\+c@{N\+O\+R\+M\+A.\+c}}
+\subsubsection[{\texorpdfstring{norma\+\_\+(doublereal $\ast$x, doublereal $\ast$xnorm, doublereal $\ast$xmod)}{norma_(doublereal *x, doublereal *xnorm, doublereal *xmod)}}]{\setlength{\rightskip}{0pt plus 5cm}int norma\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{x, }
+\item[{doublereal $\ast$}]{xnorm, }
+\item[{doublereal $\ast$}]{xmod}
+\end{DoxyParamCaption}
+)}\hypertarget{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}{}\label{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f}
+
+
+Definition at line 17 of file N\+O\+R\+M\+A.\+c.
+
+
+
+References a, f, k, vecmod\+\_\+(), and x.
+
+
+
+Referenced by calct\+\_\+(), and pencut\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+21     \textcolor{keyword}{static} integer \hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k};
+22     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *);
+23 
+24 
+25 \textcolor{comment}{/*     GIVEN 3-D VECTOR X, CALCULATES NORMALISED (UNIT) VECTOR XNORM */}
+26 \textcolor{comment}{/*     AND MODULUS OF X AS XMOD */}
+27 
+28 
+29     \textcolor{comment}{/* Parameter adjustments */}
+30     --xnorm;
+31     --\hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+32 
+33     \textcolor{comment}{/* Function Body */}
+34     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(&\hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[1], xmod);
+35 
+36     \textcolor{keywordflow}{if} (*xmod < 1e-10\hyperlink{APT102_8c_a7a51ed112e9b79f89e3e70beb8db8bf5}{f}) \{
+37     a = 0.;
+38     \} \textcolor{keywordflow}{else} \{
+39     a = 1 / *xmod;
+40     \}
+41 
+42     \textcolor{keywordflow}{for} (k = 1; k <= 3; ++\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}) \{
+43     xnorm[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}] = a * \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[\hyperlink{MOTION_8c_a13b230ea1d237595fb236c951a0849e0}{k}];
+44 \textcolor{comment}{/* L10: */}
+45     \}
+46 
+47     \textcolor{keywordflow}{return} 0;
+48 \} \textcolor{comment}{/* norma\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NORMA_8c_a7a3146b5a2b62d05257d73ae04c4f86f_icgraph}
+\end{center}
+\end{figure}
+
+

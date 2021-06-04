@@ -1,0 +1,303 @@
+\hypertarget{KURSRF_8c}{}\section{K\+U\+R\+S\+R\+F.\+c File Reference}
+\label{KURSRF_8c}\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for K\+U\+R\+S\+R\+F.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{KURSRF_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{KURSRF_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\+\_\+1}~\hyperlink{XTPCAL_8c_a00d42583c036d05afed4d07a03432522}{ibugg\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d}{kursrf\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_a9558e6a71eb747cb923878b14ee3bc8c}{r\+\_\+\+\_\+}, doublereal $\ast$side, doublereal $\ast$\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>integer \hyperlink{KURSRF_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{ibug}\\
+\>integer \hyperlink{KURSRF_8c_a0def98d78ab8101d518729447f28e4e8}{ipcomc}\\
+\>integer \hyperlink{KURSRF_8c_aa7c1d3b50810f4362d609ea905340770}{ipcolc}\\
+\} \hyperlink{KURSRF_8c_ab23633fcf3cb49e7d753889c6ab98eb0}{ibugg\_}\\
+
+\end{tabbing}\item 
+static integer \hyperlink{KURSRF_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\+\_\+n4} = -\/4
+\item 
+static integer \hyperlink{KURSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\+\_\+\+\_\+1} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!ibugg\+\_\+1@{ibugg\+\_\+1}}
+\index{ibugg\+\_\+1@{ibugg\+\_\+1}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+1}{ibugg_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ibugg\+\_\+1~{\bf ibugg\+\_\+}}\hypertarget{KURSRF_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{}\label{KURSRF_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}
+
+
+Definition at line 21 of file K\+U\+R\+S\+R\+F.\+c.
+
+
+
+Referenced by kursrf\+\_\+().
+
+
+
+\subsection{Function Documentation}
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!kursrf\+\_\+@{kursrf\+\_\+}}
+\index{kursrf\+\_\+@{kursrf\+\_\+}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{kursrf\+\_\+(doublereal $\ast$r\+\_\+\+\_\+, doublereal $\ast$side, doublereal $\ast$cx)}{kursrf_(doublereal *r__, doublereal *side, doublereal *cx)}}]{\setlength{\rightskip}{0pt plus 5cm}int kursrf\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{r\+\_\+\+\_\+, }
+\item[{doublereal $\ast$}]{side, }
+\item[{doublereal $\ast$}]{cx}
+\end{DoxyParamCaption}
+)}\hypertarget{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d}{}\label{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d}
+
+
+Definition at line 30 of file K\+U\+R\+S\+R\+F.\+c.
+
+
+
+References a, b, bad\+\_\+(), c\+\_\+\+\_\+1, c\+\_\+n4, cross\+\_\+(), cx, dotv\+\_\+(), i\+\_\+\+\_\+, ibugg\+\_\+1, j, l, one, r\+\_\+\+\_\+, vnorm\+\_\+(), and zero.
+
+
+
+Referenced by avoid\+\_\+(), midkur\+\_\+(), and srfdir\+\_\+().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{comment}{/* Initialized data */}
+34 
+35     \textcolor{keyword}{static} doublereal dvec[3] = \{ .13,.23,.33 \};
+36     \textcolor{keyword}{static} doublereal \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero} = 0.;
+37     \textcolor{keyword}{static} doublereal \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one} = 1.;
+38     \textcolor{keyword}{static} doublereal smal = 1e-19;
+39 
+40     \textcolor{comment}{/* System generated locals */}
+41     doublereal d\_\_1;
+42 
+43     \textcolor{comment}{/* Builtin functions */}
+44     \textcolor{keywordtype}{double} sqrt(doublereal);
+45 
+46     \textcolor{comment}{/* Local variables */}
+47     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+48     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}, \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}, \hyperlink{PRO026_8c_a1cb503ddd20ff3cf9588d2b5abd202d8}{l};
+49     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(integer *, integer *, \textcolor{keywordtype}{char} *, doublereal 
+50         *, ftnlen);
+51     \textcolor{keyword}{static} doublereal disc;
+52     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(doublereal *, doublereal *, doublereal *
+53         );
+54     \textcolor{keyword}{static} integer lnxt;
+55     \textcolor{keyword}{static} doublereal denom;
+56     \textcolor{keyword}{static} integer imiss;
+57     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(doublereal *, doublereal *, doublereal 
+58         *), \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(doublereal *, doublereal *);
+59 
+60 \textcolor{comment}{/*           /-INPUT */}
+61 \textcolor{comment}{/*           /-SURFACE POINT, FIRST AND SECOND DERIVATIVES IN R */}
+62 \textcolor{comment}{/*           /-SIDE(CUTTER SIDE) OF SURFACE =1 OR -1. */}
+63 \textcolor{comment}{/*           /-OUTPUT */}
+64 \textcolor{comment}{/*           /-SURFACE CURVATURE ANALYSIS, ALL DATA STORED IN CX */}
+65 
+66 \textcolor{comment}{/*           /-PURPOSE TO COMPUTE PRINCIPAL CURVATURES AND OTHER QUANTITI */}
+67 \textcolor{comment}{/*           /-RELATED TO SURFACE AT THIS POINT. */}
+68 
+69     \textcolor{comment}{/* Parameter adjustments */}
+70     --\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx};
+71     --\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_};
+72 
+73     \textcolor{comment}{/* Function Body */}
+74 
+75     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 24; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+76 \textcolor{comment}{/* L5: */}
+77     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = \hyperlink{APT301_8c_a361b1d0588e13a7b5994f24b40138ec0}{zero};
+78     \}
+79 
+80 \textcolor{comment}{/*           /-COMPUTE G11,G12,G22 */}
+81     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[13], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5]);
+82     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[14], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[5], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9]);
+83     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[15], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[9]);
+84     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[16] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+85 \textcolor{comment}{/*           /-COMPUTE L11,L12,L22 */}
+86     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[13], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+87     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[18], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[17], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+88     \hyperlink{UTILTY_8c_a657f0ea34a6889bdeb8b3f35b3d9d0b5}{dotv\_}(&\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[19], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[21], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29]);
+89     \textcolor{keywordflow}{for} (i\_\_ = 17; i\_\_ <= 19; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+90 \textcolor{comment}{/* L10: */}
+91     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] = *side * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}];
+92     \}
+93     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[20] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+94 \textcolor{comment}{/*           /-COMPUTE COEFFICIENTS OF CURVATURE EQUATION A.KSQ+B.K+C=0 */}
+95 \textcolor{comment}{/*           /-A=DET(G),B=-(L11*G22-2*L12G12+L22*G11),C=DET(L) */}
+96 \textcolor{comment}{/* Computing 2nd power */}
+97     d\_\_1 = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[14];
+98     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[21] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[13] * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[15] - d\_\_1 * d\_\_1;
+99     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[22] = -(\hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[13] * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[19] - \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[14] * 2.f * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[18] + \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[15] * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17]);
+100 \textcolor{comment}{/* Computing 2nd power */}
+101     d\_\_1 = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[18];
+102     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[23] = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[17] * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[19] - d\_\_1 * d\_\_1;
+103     \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[24] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+104 \textcolor{comment}{/*           /-SOLVE THIS EQUATION TO OBTAIN TWO PRINCIPAL CURVATURES */}
+105 \textcolor{comment}{/* Computing 2nd power */}
+106     d\_\_1 = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[22];
+107     disc = d\_\_1 * d\_\_1 - \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[21] * 4.f * \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[23];
+108     disc = max(zero,disc);
+109     disc = sqrt(disc);
+110     denom = \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[21] + \hyperlink{SPRVIS_8c_a8c3826805b442abb12f3d23eca488a2b}{cx}[21];
+111     cx[1] = (-cx[22] + disc) / denom;
+112     cx[2] = (-cx[22] - disc) / denom;
+113     cx[4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+114 \textcolor{comment}{/*           /-FINALLY DETERMINE SPATIAL DIRECTIONS OF THESE CURVATURES */}
+115 \textcolor{comment}{/*           /- THE DIRECTION OF K IS ACHIEVED BY (-L12+KG12,L11-KG11) */}
+116 \textcolor{comment}{/*           /- IMISS IS THE COUNT OF THE NUMBER OF MISSES */}
+117     imiss = 0;
+118     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 2; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+119     a = -(cx[18] - cx[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cx[14]);
+120     b = cx[17] - cx[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cx[13];
+121     l = i\_\_ << 2;
+122     \textcolor{keywordflow}{if} (abs(a) + abs(b) > smal) \{
+123         \textcolor{keywordflow}{goto} L50;
+124     \}
+125 \textcolor{comment}{/*            /-TRY AGAIN TO OBTAIN A NON ZERO A,B */}
+126     a = -(cx[19] - cx[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cx[15]);
+127     b = cx[18] - cx[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] * cx[14];
+128     \textcolor{keywordflow}{if} (abs(a) + abs(b) > smal) \{
+129         \textcolor{keywordflow}{goto} L50;
+130     \}
+131     ++imiss;
+132     \textcolor{keywordflow}{goto} L20;
+133 L50:
+134     \textcolor{keywordflow}{for} (j = 1; j <= 3; ++\hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}) \{
+135 \textcolor{comment}{/* L30: */}
+136         cx[l + \hyperlink{PRO026_8c_aa8c84707b22bdc99b810d3c7d3ec5d52}{j}] = a * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[j + 4] + b * \hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[j + 8];
+137     \}
+138     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&cx[l + 1], &cx[l + 1]);
+139     cx[l + 4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+140     \textcolor{keywordflow}{goto} L100;
+141 L20:
+142     ;
+143     \}
+144 
+145 L100:
+146     \textcolor{keywordflow}{if} (imiss == 2) \{
+147     \textcolor{keywordflow}{goto} L130;
+148     \}
+149 \textcolor{comment}{/* -- A GOOD VECTOR WAS OBTAINED, COMPUTE THE OTHER BY CROSS PRODUCT */}
+150     lnxt = l + 4;
+151     \textcolor{keywordflow}{if} (l == 8) \{
+152     lnxt = l - 4;
+153     \}
+154     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&cx[l + 1], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], &cx[lnxt + 1]);
+155     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&cx[lnxt + 1], &cx[lnxt + 1]);
+156     cx[lnxt + 4] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+157     \textcolor{keywordflow}{goto} L140;
+158 \textcolor{comment}{/* -- NO GOOD VECTORS AVAILABLE, GENERATE ANY TWO NORMAL TO R(29) */}
+159 L130:
+160     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(dvec, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], &cx[5]);
+161     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&cx[5], &cx[5]);
+162     \hyperlink{UTILTY_8c_a58ae76ce755b09f1dcba2597c6be3859}{cross\_}(&cx[5], &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[29], &cx[9]);
+163     \hyperlink{UTILTY_8c_a46efcd0a33c423bde8c314847c49a645}{vnorm\_}(&cx[9], &cx[9]);
+164     cx[8] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+165     cx[12] = \hyperlink{APT298_8c_a7cf126dbeb6f30c606e3b42fea65cfef}{one};
+166 
+167 L140:
+168 
+169     \textcolor{keywordflow}{if} (\hyperlink{KURSRF_8c_aa2a88aa3f2e858e87f5074fadc0e1d8e}{ibugg\_1}.ibug != 11) \{
+170     \textcolor{keywordflow}{goto} L60;
+171     \}
+172     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 21; i\_\_ += 4) \{
+173     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{KURSRF_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\_n4}, &\hyperlink{KURSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"KRSF"}, &\hyperlink{APT088_8c_aca579bed964c363283f74a80e3dde742}{r\_\_}[i\_\_], (ftnlen)4);
+174 \textcolor{comment}{/* L70: */}
+175     \}
+176     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 9; i\_\_ += 4) \{
+177     \hyperlink{BAD_8c_a4e7ec5852aef8f8487def3a6dc8b71b1}{bad\_}(&\hyperlink{KURSRF_8c_a900642cfb0fdb02c80380e0b73330cb5}{c\_n4}, &\hyperlink{KURSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{c\_\_1}, \textcolor{stringliteral}{"CX  "}, &cx[i\_\_], (ftnlen)4);
+178 \textcolor{comment}{/* L80: */}
+179     \}
+180 
+181 L60:
+182     \textcolor{keywordflow}{return} 0;
+183 \} \textcolor{comment}{/* kursrf\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{KURSRF_8c_ad6d1fc7de4c304f6cae5897f40e46c3d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}}
+\index{c\+\_\+\+\_\+1@{c\+\_\+\+\_\+1}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+\_\+1}{c__1}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+\+\_\+1 = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{KURSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}{}\label{KURSRF_8c_aac061f9822f71d2164eeeaae0e2a342c}
+
+
+Definition at line 26 of file K\+U\+R\+S\+R\+F.\+c.
+
+
+
+Referenced by kursrf\+\_\+().
+
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!c\+\_\+n4@{c\+\_\+n4}}
+\index{c\+\_\+n4@{c\+\_\+n4}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+n4}{c_n4}}]{\setlength{\rightskip}{0pt plus 5cm}integer c\+\_\+n4 = -\/4\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{KURSRF_8c_a900642cfb0fdb02c80380e0b73330cb5}{}\label{KURSRF_8c_a900642cfb0fdb02c80380e0b73330cb5}
+
+
+Definition at line 25 of file K\+U\+R\+S\+R\+F.\+c.
+
+
+
+Referenced by kursrf\+\_\+().
+
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!ibug@{ibug}}
+\index{ibug@{ibug}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{ibug}{ibug}}]{\setlength{\rightskip}{0pt plus 5cm}integer ibug}\hypertarget{KURSRF_8c_acf8cd9aebbc7f97517952bf2f89ed57c}{}\label{KURSRF_8c_acf8cd9aebbc7f97517952bf2f89ed57c}
+
+
+Definition at line 18 of file K\+U\+R\+S\+R\+F.\+c.
+
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!ibugg\+\_\+@{ibugg\+\_\+}}
+\index{ibugg\+\_\+@{ibugg\+\_\+}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{ibugg\+\_\+}{ibugg_}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   ibugg\+\_\+}\hypertarget{KURSRF_8c_ab23633fcf3cb49e7d753889c6ab98eb0}{}\label{KURSRF_8c_ab23633fcf3cb49e7d753889c6ab98eb0}
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!ipcolc@{ipcolc}}
+\index{ipcolc@{ipcolc}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{ipcolc}{ipcolc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcolc}\hypertarget{KURSRF_8c_aa7c1d3b50810f4362d609ea905340770}{}\label{KURSRF_8c_aa7c1d3b50810f4362d609ea905340770}
+
+
+Definition at line 18 of file K\+U\+R\+S\+R\+F.\+c.
+
+\index{K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}!ipcomc@{ipcomc}}
+\index{ipcomc@{ipcomc}!K\+U\+R\+S\+R\+F.\+c@{K\+U\+R\+S\+R\+F.\+c}}
+\subsubsection[{\texorpdfstring{ipcomc}{ipcomc}}]{\setlength{\rightskip}{0pt plus 5cm}integer ipcomc}\hypertarget{KURSRF_8c_a0def98d78ab8101d518729447f28e4e8}{}\label{KURSRF_8c_a0def98d78ab8101d518729447f28e4e8}
+
+
+Definition at line 18 of file K\+U\+R\+S\+R\+F.\+c.
+

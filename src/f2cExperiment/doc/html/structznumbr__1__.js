@@ -1,0 +1,28 @@
+var structznumbr__1__ =
+[
+    [ "degrad", "structznumbr__1__.html#a8a5458be478635e9ae0889ff18e923ae", null ],
+    [ "pi", "structznumbr__1__.html#aee6a3c0e4f0734ccb84894bc03b7ae1f", null ],
+    [ "z0", "structznumbr__1__.html#a5e4bbb5461e3c60cccd1e626da8691c0", null ],
+    [ "z1", "structznumbr__1__.html#a181e31396b67fb3cecfaab10992b1478", null ],
+    [ "z10", "structznumbr__1__.html#a070ec0b04ea56c1ab3b6e41a7f8ea190", null ],
+    [ "z11em1", "structznumbr__1__.html#aedfe3b1a975295602fdab4b9a11e6bd1", null ],
+    [ "z12em1", "structznumbr__1__.html#ab175693663fe459a2d9794a40e1474d1", null ],
+    [ "z1e38", "structznumbr__1__.html#ab937e4448021b398707fbb2974195793", null ],
+    [ "z1e6", "structznumbr__1__.html#a9146191471810501becf0917b6780ba4", null ],
+    [ "z1em1", "structznumbr__1__.html#a3081550e6fc73b82831002c6e61ead15", null ],
+    [ "z1em2", "structznumbr__1__.html#a0756e0657a632811278480411a90a7bf", null ],
+    [ "z1em3", "structznumbr__1__.html#a8b724cf93058a8560a01e03d57eff0cc", null ],
+    [ "z1em5", "structznumbr__1__.html#a1ce9728876d6335656a45f2243cd0c9f", null ],
+    [ "z1em6", "structznumbr__1__.html#af025ed31c05aed9c0f7934947199e949", null ],
+    [ "z1em7", "structznumbr__1__.html#a077de2d2a833f4fbc90b9073a0b45b81", null ],
+    [ "z1em9", "structznumbr__1__.html#aa0ba99d3473098e17785f2deab542751", null ],
+    [ "z2", "structznumbr__1__.html#aee28fd1dd7ff70cc6488cd683235bb1c", null ],
+    [ "z3", "structznumbr__1__.html#a2aa74464a6f57ce24148b804051e0465", null ],
+    [ "z5", "structznumbr__1__.html#aa490154afd464289e2339168a502e476", null ],
+    [ "z5em1", "structznumbr__1__.html#a452fc3e9d17760ceed1497fc42a4fa33", null ],
+    [ "z5em6", "structznumbr__1__.html#ad464dc774032378a5ba1a3409d6d0d33", null ],
+    [ "z6em1", "structznumbr__1__.html#a6fe1518e8616aaade951af3080e07086", null ],
+    [ "z90", "structznumbr__1__.html#a7ee4ceeb04b142d34f799b0e096ccdf9", null ],
+    [ "z9em1", "structznumbr__1__.html#a40528db2b009a5a31b48761b76975eaa", null ],
+    [ "zm1", "structznumbr__1__.html#a1f6fbbb0ee33439c7ad18df0c20c9d80", null ]
+];

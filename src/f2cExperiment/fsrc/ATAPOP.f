@@ -1,0 +1,73 @@
+**** SOURCE FILE : ATAPOP00.ORG   ***
+*
+      SUBROUTINE ATAPOP(NO,N,IRET)
+*
+*  *  ATAPOP  *  VAX-11 VERSION   13.07.82  E.MCLELLAN
+*
+*  PURPOSE     TO PROVIDE FILE POSITIONING CAPABILITY
+*              COMPATABLE WITH APT 111 POST PROCESSOR USAGE
+*
+*  CALLING SEQUENCE
+*              CALL ATAPOP(NO,N,IRET)
+*  ARGUMENTS
+*              NO         FILE NUMBER
+*                         FOR NC 360 HELD IN SECOND HALF
+*                         OF DOUBLE PRECISION WORD
+*              N=1        REWIND FILE
+*               =2        WRITE END OF FILE (CLOSE FILE)
+*               =3        BACKSPACE RECORD
+*              IRET.GT.0  ABNORMAL ERROR CONDITION
+*                  .LT.0  OPERATION SUCCESSFUL
+*
+*  ALTERNATE ENTRY
+*              CALL TAPEOP(NO,N,IRET)
+*
+C
+      INCLUDE 'FILTAB.INC'
+C
+      CHARACTER*12 IACC
+C
+      INTEGER NO(2)
+C
+      INCLUDE 'DARRAY.INC'
+C
+      ENTRY TAPEOP(NO,N,IRET)
+C
+      IRET=-1
+C
+      IFIL=NO(1)
+      IF (NO(1).EQ.0)  IFIL=NO(2)
+      IF ((IFIL.LT.1).OR.(IFIL.GT.50)) THEN
+        CALL CFORM('0 *** FILE NUMBER OUTSIDE RANGE 1-50',DARRAY,1,36)
+        CALL CFORM(' REQUESTED IN CALL TO ATAPOP OR TAPEOP ***',DARRAY,
+     1                37,42)
+        CALL CPRINT(DARRAY)
+        IRET=1
+      ELSE
+C
+       IF (N.EQ.1) THEN
+C.....REWIND
+          CALL TAPOP(IFIL,-2)
+       ELSE IF (N.EQ.2) THEN
+C.....CLOSE FILE
+          CALL TAPOP(IFIL,-3)
+       ELSE IF (N.EQ.3) THEN
+C.....BACKSPACE ONE RECORD
+          ID=U(IFIL)
+          INQUIRE(UNIT=ID,ACCESS=IACC)
+             IF (IACC.EQ.'DIRECT') THEN
+C.....DECREASE NO OF NEXT RECORD TO BE READ BY 1
+                NXTREC(IFIL)=NXTREC(IFIL)-1
+             ELSE
+                BACKSPACE(UNIT=ID)
+             END IF
+C
+        ELSE
+        CALL CFORM(' *** INVALID ARGUMENT IN CALL TO ATAPOP(TAPEOP) ***'
+     1              ,2,51)
+        CALL CPRINT(DARRAY)
+        END IF
+        IRET=1
+      END IF
+      RETURN
+      END

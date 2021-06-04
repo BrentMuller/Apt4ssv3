@@ -1,0 +1,96 @@
+\hypertarget{SOLVE3_8c}{}\section{S\+O\+L\+V\+E3.\+c File Reference}
+\label{SOLVE3_8c}\index{S\+O\+L\+V\+E3.\+c@{S\+O\+L\+V\+E3.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+O\+L\+V\+E3.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{SOLVE3_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SOLVE3_8c_aa4681a25efe13745241edcab321300f2}{solve3\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, doublereal $\ast$\hyperlink{PUNCH_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}, integer $\ast$\hyperlink{SSV3_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+O\+L\+V\+E3.\+c@{S\+O\+L\+V\+E3.\+c}!solve3\+\_\+@{solve3\+\_\+}}
+\index{solve3\+\_\+@{solve3\+\_\+}!S\+O\+L\+V\+E3.\+c@{S\+O\+L\+V\+E3.\+c}}
+\subsubsection[{\texorpdfstring{solve3\+\_\+(doublereal $\ast$a, doublereal $\ast$b, doublereal $\ast$x, integer $\ast$iflag)}{solve3_(doublereal *a, doublereal *b, doublereal *x, integer *iflag)}}]{\setlength{\rightskip}{0pt plus 5cm}int solve3\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{doublereal $\ast$}]{x, }
+\item[{integer $\ast$}]{iflag}
+\end{DoxyParamCaption}
+)}\hypertarget{SOLVE3_8c_aa4681a25efe13745241edcab321300f2}{}\label{SOLVE3_8c_aa4681a25efe13745241edcab321300f2}
+
+
+Definition at line 17 of file S\+O\+L\+V\+E3.\+c.
+
+
+
+References b, d\+\_\+\+\_\+, and x.
+
+
+
+Referenced by shella\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{static} doublereal \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_}, e;
+21 
+22 \textcolor{comment}{/*     GIVEN A, B, SOLVES AX=B */}
+23 
+24 
+25     \textcolor{comment}{/* Parameter adjustments */}
+26     --\hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x};
+27     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+28     \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a} -= 4;
+29 
+30     \textcolor{comment}{/* Function Body */}
+31     d\_\_ = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[4] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9]) - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[7] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - 
+      \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] 
+32         * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]) + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[10] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]);
+33     \textcolor{keywordflow}{if} (abs(d\_\_) < 1e-8) \{
+34     *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 1;
+35     \textcolor{keywordflow}{goto} L100;
+36     \}
+37 
+38     *\hyperlink{ATAPE_8c_ad662923de9cd4e8699f82b58327e3c7b}{iflag} = 0;
+39     d\_\_ = 1. / \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+40 
+41     e = \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9]) - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[7] * (\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] * 
+42         \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3]) + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[10] * (\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3]);
+43     \hyperlink{APT088_8c_a6c4b361d72eb3767ba424ac9a6ecf52b}{x}[1] = e * \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+44 
+45     e = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[4] * (\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3]) - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[12] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[11] * 
+46         \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]) + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[10] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3] - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]);
+47     x[2] = e * \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+48 
+49     e = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[4] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3] - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9]) - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[7] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3] - \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] * 
+      \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]
+50         ) + \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] * (\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[5] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[9] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[8] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[6]);
+51     x[3] = e * \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+52 
+53 L100:
+54 
+55     \textcolor{keywordflow}{return} 0;
+56 \} \textcolor{comment}{/* solve3\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SOLVE3_8c_aa4681a25efe13745241edcab321300f2_icgraph}
+\end{center}
+\end{figure}
+
+

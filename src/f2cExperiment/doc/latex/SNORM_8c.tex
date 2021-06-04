@@ -1,0 +1,78 @@
+\hypertarget{SNORM_8c}{}\section{S\+N\+O\+R\+M.\+c File Reference}
+\label{SNORM_8c}\index{S\+N\+O\+R\+M.\+c@{S\+N\+O\+R\+M.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for S\+N\+O\+R\+M.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{SNORM_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{snorm\+\_\+} (doublereal $\ast$\hyperlink{ZSURF_8c_aa642ece5b446020ed166a3307caf17a6}{a}, doublereal $\ast$\hyperlink{TLNORM_8c_a32dd5c98fee19eac3d7d7737e3482023}{b}, integer $\ast$irr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{S\+N\+O\+R\+M.\+c@{S\+N\+O\+R\+M.\+c}!snorm\+\_\+@{snorm\+\_\+}}
+\index{snorm\+\_\+@{snorm\+\_\+}!S\+N\+O\+R\+M.\+c@{S\+N\+O\+R\+M.\+c}}
+\subsubsection[{\texorpdfstring{snorm\+\_\+(doublereal $\ast$a, doublereal $\ast$b, integer $\ast$irr)}{snorm_(doublereal *a, doublereal *b, integer *irr)}}]{\setlength{\rightskip}{0pt plus 5cm}int snorm\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{a, }
+\item[{doublereal $\ast$}]{b, }
+\item[{integer $\ast$}]{irr}
+\end{DoxyParamCaption}
+)}\hypertarget{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}{}\label{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317}
+
+
+Definition at line 17 of file S\+N\+O\+R\+M.\+c.
+
+
+
+References a, b, and w.
+
+
+
+Referenced by revolv\+\_\+(), scpict\+\_\+(), scurv\+\_\+(), and ssplin\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* Builtin functions */}
+20     \textcolor{keywordtype}{double} sqrt(doublereal);
+21 
+22     \textcolor{comment}{/* Local variables */}
+23     \textcolor{keyword}{static} doublereal \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+24 
+25     \textcolor{comment}{/* Parameter adjustments */}
+26     --\hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b};
+27     --\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+28 
+29     \textcolor{comment}{/* Function Body */}
+30     *irr = 1;
+31     w = sqrt(\hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] + \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3] * \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3]);
+32     \textcolor{keywordflow}{if} (w < 1e-15) \{
+33     \textcolor{keywordflow}{return} 0;
+34     \}
+35     *irr = 0;
+36     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[1] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[1] / \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+37     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[2] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[2] / \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+38     \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}[3] = \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}[3] / \hyperlink{DDRLSR_8c_a6c6772207c061db8f6ca77c2661f497a}{w};
+39     \textcolor{keywordflow}{return} 0;
+40 \} \textcolor{comment}{/* snorm\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SNORM_8c_add0a5a99b58ebd3b2ef4ac55333a9317_icgraph}
+\end{center}
+\end{figure}
+
+

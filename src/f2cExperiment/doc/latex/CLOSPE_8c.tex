@@ -1,0 +1,78 @@
+\hypertarget{CLOSPE_8c}{}\section{C\+L\+O\+S\+P\+E.\+c File Reference}
+\label{CLOSPE_8c}\index{C\+L\+O\+S\+P\+E.\+c@{C\+L\+O\+S\+P\+E.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for C\+L\+O\+S\+P\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{CLOSPE_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CLOSPE_8c_adacf5e697a93a2098210d23a0b11443e}{clospe\+\_\+} (integer $\ast$\hyperlink{GORETR_8c_a787a59b8a72ef092fc411618dc0c257d}{id}, integer $\ast$iret)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+L\+O\+S\+P\+E.\+c@{C\+L\+O\+S\+P\+E.\+c}!clospe\+\_\+@{clospe\+\_\+}}
+\index{clospe\+\_\+@{clospe\+\_\+}!C\+L\+O\+S\+P\+E.\+c@{C\+L\+O\+S\+P\+E.\+c}}
+\subsubsection[{\texorpdfstring{clospe\+\_\+(integer $\ast$id, integer $\ast$iret)}{clospe_(integer *id, integer *iret)}}]{\setlength{\rightskip}{0pt plus 5cm}int clospe\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{integer $\ast$}]{id, }
+\item[{integer $\ast$}]{iret}
+\end{DoxyParamCaption}
+)}\hypertarget{CLOSPE_8c_adacf5e697a93a2098210d23a0b11443e}{}\label{CLOSPE_8c_adacf5e697a93a2098210d23a0b11443e}
+
+
+Definition at line 17 of file C\+L\+O\+S\+P\+E.\+c.
+
+
+
+References id.
+
+
+
+Referenced by pro027\+\_\+(), and punch\+\_\+().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{comment}{/* System generated locals */}
+20     integer i\_\_1;
+21     cllist cl\_\_1;
+22 
+23     \textcolor{comment}{/* Builtin functions */}
+24     integer f\_clos(cllist *);
+25 
+26 
+27 
+28     cl\_\_1.cerr = 1;
+29     cl\_\_1.cunit = *\hyperlink{CPLDST_8c_a787a59b8a72ef092fc411618dc0c257d}{id};
+30     cl\_\_1.csta = \textcolor{stringliteral}{"KEEP"};
+31     i\_\_1 = f\_clos(&cl\_\_1);
+32     \textcolor{keywordflow}{if} (i\_\_1 != 0) \{
+33     \textcolor{keywordflow}{goto} L10;
+34     \}
+35     *iret = 0;
+36     \textcolor{keywordflow}{return} 0;
+37 
+38 L10:
+39     *iret = 1;
+40     \textcolor{keywordflow}{return} 0;
+41 \} \textcolor{comment}{/* clospe\_ */}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CLOSPE_8c_adacf5e697a93a2098210d23a0b11443e_icgraph}
+\end{center}
+\end{figure}
+
+

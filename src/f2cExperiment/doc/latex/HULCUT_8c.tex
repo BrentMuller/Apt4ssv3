@@ -1,0 +1,145 @@
+\hypertarget{HULCUT_8c}{}\section{H\+U\+L\+C\+U\+T.\+c File Reference}
+\label{HULCUT_8c}\index{H\+U\+L\+C\+U\+T.\+c@{H\+U\+L\+C\+U\+T.\+c}}
+{\ttfamily \#include \char`\"{}f2c.\+h\char`\"{}}\\*
+Include dependency graph for H\+U\+L\+C\+U\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{HULCUT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e}{hulcut\+\_\+} (doublereal $\ast$\hyperlink{UTILTY_8c_a0686481467dfdc3abf7ebae1c79db934}{te}, doublereal $\ast$\hyperlink{UTILTY_8c_aa38365a06b4e51426459eba3db71f888}{ta}, doublereal $\ast$tul, doublereal $\ast$sphr, integer $\ast$\hyperlink{UTILTY_8c_abdc936055e6863ee32f47ab3666ef718}{iseg})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{H\+U\+L\+C\+U\+T.\+c@{H\+U\+L\+C\+U\+T.\+c}!hulcut\+\_\+@{hulcut\+\_\+}}
+\index{hulcut\+\_\+@{hulcut\+\_\+}!H\+U\+L\+C\+U\+T.\+c@{H\+U\+L\+C\+U\+T.\+c}}
+\subsubsection[{\texorpdfstring{hulcut\+\_\+(doublereal $\ast$te, doublereal $\ast$ta, doublereal $\ast$tul, doublereal $\ast$sphr, integer $\ast$iseg)}{hulcut_(doublereal *te, doublereal *ta, doublereal *tul, doublereal *sphr, integer *iseg)}}]{\setlength{\rightskip}{0pt plus 5cm}int hulcut\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{doublereal $\ast$}]{te, }
+\item[{doublereal $\ast$}]{ta, }
+\item[{doublereal $\ast$}]{tul, }
+\item[{doublereal $\ast$}]{sphr, }
+\item[{integer $\ast$}]{iseg}
+\end{DoxyParamCaption}
+)}\hypertarget{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e}{}\label{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e}
+
+
+Definition at line 17 of file H\+U\+L\+C\+U\+T.\+c.
+
+
+
+References a, b, c\+\_\+\+\_\+, d\+\_\+\+\_\+, dotf\+\_\+(), i\+\_\+\+\_\+, p, ta, te, v, and vecmod\+\_\+().
+
+
+
+Referenced by remscn\+\_\+().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{/* Builtin functions */}
+21     \textcolor{keywordtype}{double} sqrt(doublereal);
+22 
+23     \textcolor{comment}{/* Local variables */}
+24     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a}, \hyperlink{APT102_8c_ab2d05693952610f937e5acb3c4a8fa1b}{b}, \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+25     \textcolor{keyword}{static} real \hyperlink{APT034_8c_a7f42afa69afcf40f22b6a691c4425d54}{d\_\_};
+26     \textcolor{keyword}{static} integer \hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_};
+27     \textcolor{keyword}{static} doublereal \hyperlink{APT102_8c_ade66e4ccafbc33b117610bbc0d85feb0}{p}, \hyperlink{AERR2_8c_ab44777b30b9087bd3c98cfad93128179}{v}[3];
+28     \textcolor{keyword}{extern} \textcolor{comment}{/* Subroutine */} \textcolor{keywordtype}{int} \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(doublereal *, doublereal *, doublereal *
+29         ), \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(doublereal *, doublereal *);
+30 
+31 
+32 \textcolor{comment}{/*     CALCS. PENETRATION OF CORNER RADIUS CUTTER INTO SPHERICAL CONVEX H */}
+33 \textcolor{comment}{/*     OF RADIUS RAD AND CENTRE CENT */}
+34 \textcolor{comment}{/*     IF NO PENETRATION OCCURS, THEN ISEG = -1, ELSE */}
+35 \textcolor{comment}{/*     ISEG   = 0      BOTTOM FLAT */}
+36 \textcolor{comment}{/*              1      CORNER RADIUS */}
+37 \textcolor{comment}{/*              2      CYLINDER */}
+38 \textcolor{comment}{/*     P IS PENETRATION, -VE FOR MISS */}
+39 
+40 \textcolor{comment}{/*     ARGUMENTS: */}
+41 
+42 \textcolor{comment}{/*     TE      - TOOL END */}
+43 \textcolor{comment}{/*     TA      - TOOL AXIS */}
+44 \textcolor{comment}{/*     TUL     - TOOL GEOMETRY */}
+45 \textcolor{comment}{/*     SPHR    - CENTRE AND RADIUS OF TEST SPHERE */}
+46 
+47 
+48 \textcolor{comment}{/* .... LOCAL VARIABLES */}
+49 
+50 
+51     \textcolor{comment}{/* Parameter adjustments */}
+52     --sphr;
+53     --tul;
+54     --\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta};
+55     --\hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te};
+56 
+57     \textcolor{comment}{/* Function Body */}
+58     *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = -1;
+59     \textcolor{keywordflow}{for} (i\_\_ = 1; i\_\_ <= 3; ++\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}) \{
+60     v[i\_\_ - 1] = \hyperlink{APT331_8c_addecab14a6a9b6fbb62b665d6320a1dd}{te}[\hyperlink{APT088_8c_ae86436b0a8c8a69ba8ece7d58c8ed452}{i\_\_}] + (tul[4] + tul[1]) * \hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[i\_\_] - sphr[i\_\_];
+61 \textcolor{comment}{/* L10: */}
+62     \}
+63     \hyperlink{VECMOD_8c_aab8c049102960dd4dccbc03cb5d9616f}{vecmod\_}(v, &b);
+64     \hyperlink{DOTF_8c_a4a52ac38bab2ce5bcb2e5b79b5750874}{dotf\_}(&a, v, &\hyperlink{APT088_8c_ac56f1181f2a123c57b00a6514e809d02}{ta}[1]);
+65     c\_\_ = sqrt(b * b - a * a);
+66 
+67     \textcolor{keywordflow}{if} (a > 0.) \{
+68 \textcolor{comment}{/* .... CYLINDER CASE */}
+69     p = sphr[4] + tul[2] - \hyperlink{APT102_8c_a08155df95fc9d53ed93911b9a9667d17}{c\_\_};
+70 \textcolor{comment}{/* .... P -VE FOR MISS */}
+71     \textcolor{keywordflow}{if} (p > 0.) \{
+72         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 2;
+73     \}
+74 
+75     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c\_\_ <= tul[3]) \{
+76 \textcolor{comment}{/* .... BOTTOM FLAT CASE */}
+77     p = tul[1] + tul[4] + sphr[4] - \hyperlink{APT102_8c_a8d3c3518d793541417a4845125da1ae1}{a};
+78 \textcolor{comment}{/* .... P -VE FOR MISS */}
+79     \textcolor{keywordflow}{if} (p > 0.) \{
+80         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 0;
+81     \}
+82 
+83     \} \textcolor{keywordflow}{else} \{
+84 \textcolor{comment}{/* .... CORNER RADIUS CASE */}
+85     d\_\_ = c\_\_ - tul[3];
+86     p = tul[1] + sphr[4] - sqrt(d\_\_ * d\_\_ + a * a);
+87 \textcolor{comment}{/* .... P -VE FOR MISS */}
+88     \textcolor{keywordflow}{if} (p > 0.) \{
+89         *\hyperlink{AERR_8c_abdc936055e6863ee32f47ab3666ef718}{iseg} = 1;
+90     \}
+91     \}
+92 
+93     \textcolor{keywordflow}{return} 0;
+94 \} \textcolor{comment}{/* hulcut\_ */}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HULCUT_8c_a8d3c20dc6515b290e6fb932afcfda92e_icgraph}
+\end{center}
+\end{figure}
+
+
