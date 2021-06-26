@@ -4,14 +4,14 @@
       INTEGER HANDL
       EXTERNAL HANDL
 c      CALL LIB$ESTABLISH(HANDL)
-      write(*,*)'vax lib_establish routine'
+      write(*,*)'vax lib_establish routine APT241.f'
       RETURN
       END
 C
 C
       SUBROUTINE APT242
 c      CALL LIB$SIGNAL(%VAL(SS$_ACCVIO))
-      write(*,*)'vax lib_signal routine'
+      write(*,*)'vax lib_signal routine APT241.f'
       RETURN
       END
 C
@@ -24,6 +24,6 @@ c      INCLUDE 'SYS$LIBRARY:SIGDEF'
       RETURN
       END IF
 c      CALL SYS$UNWIND(,)
-      write(*,*)'vax sys_unwind routine'
+      write(*,*)'vax sys_unwind routine APT241.f'
       RETURN
       END

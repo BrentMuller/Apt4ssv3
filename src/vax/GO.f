@@ -10,19 +10,20 @@ C
       INCLUDE 'IFXCOR.INC'
 C
       DIMENSION ADRESS(*)
-c      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
-      if(jds) then
-         dummy= apt211(0,'nocs    ',idum)
-      endif
+      IF(JDS) CALL APT211(0,'NOCS    ',IDUM)
+c      if(jds) then
+c         dummy= apt211(0,'nocs    ',idum)
+c      endif
 C-IBM-      CALL APT241
-      IF(IAERR.EQ.1)GO TO 10
+       CALL APT241
+c      IF(IAERR.EQ.1)GO TO 10
 C-VAX-ESTABLISH CONDITION HANDLER
-      CALL APT241
-   20 IF(ICTDEF.NE.0.AND.IGOTO.EQ.0)CALL AERR(20201,'GO      ')
-      IF (IAERR.EQ.1) GOTO 10
-      CALL GO2(HMOD,ADRESS)
-      IF (IAERR.EQ.1) GOTO 20
+c      CALL APT241
+c   20 IF(ICTDEF.NE.0.AND.IGOTO.EQ.0)CALL AERR(20201,'GO      ')
+c      IF (IAERR.EQ.1) GOTO 10
+c      CALL GO2(HMOD,ADRESS)
+c      IF (IAERR.EQ.1) GOTO 20
 C-VAX- REVERT TO DEFAULT CONDITION HANDLER
-   10 CALL LIB$REVERT
+c   10 CALL LIB$REVERT
       RETURN
       END
